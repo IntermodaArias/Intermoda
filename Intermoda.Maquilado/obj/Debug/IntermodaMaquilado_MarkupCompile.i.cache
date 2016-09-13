@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\VisualStudio\Intermoda\Intermoda.Maquilado\obj\Debug\
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\obj\Debug\
 Intermoda.Maquilado
 none
 false
 DEBUG;TRACE
-C:\VisualStudio\Intermoda\Intermoda.Maquilado\App.xaml
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\App.xaml
 3-759873889
 
 20-337672698
-89767105283
+89537512856
 MainWindow.xaml;View\LoginView.xaml;View\MessageWindow.xaml;
 
-False
+True
 
