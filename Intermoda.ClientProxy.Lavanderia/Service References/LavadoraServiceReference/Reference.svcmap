@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2699ccc5-78c6-4637-90b1-3c3561d0546d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/Lavadora.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Lavadora.xsd" MetadataType="Schema" ID="5ef16be6-032c-4f24-a678-46674f9be838" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Lavadora.svc?xsd=xsd0" />
+    <MetadataFile FileName="Lavadora1.xsd" MetadataType="Schema" ID="5482eae4-45db-49bf-b9df-1c1087af8469" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Lavadora.svc?xsd=xsd2" />
+    <MetadataFile FileName="Lavadora.wsdl" MetadataType="Wsdl" ID="d058f15e-672a-44c1-be99-408c657c569c" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Lavadora.svc?wsdl" />
+    <MetadataFile FileName="Lavadora.disco" MetadataType="Disco" ID="7267ebd4-90bf-46bf-8aaa-e569d4a45b97" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Lavadora.svc?disco" />
+    <MetadataFile FileName="Lavadora2.xsd" MetadataType="Schema" ID="9f97b139-821c-40e8-9fd3-abddcc2d2dd1" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Lavadora.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

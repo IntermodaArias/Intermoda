@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4a44e260-9f65-4f81-8d4c-34677a14f050" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://190.5.95.110/ImDataServiceLb/OrdenProduccionExterno.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OrdenProduccionExterno1.disco" MetadataType="Disco" ID="e9812d8c-7149-4ee7-b0cb-3611bf7655eb" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/OrdenProduccionExterno.svc?disco" />
+    <MetadataFile FileName="OrdenProduccionExterno3.xsd" MetadataType="Schema" ID="5c6dc221-381e-4032-94be-90233ae2f5d9" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/OrdenProduccionExterno.svc?xsd=xsd0" />
+    <MetadataFile FileName="OrdenProduccionExterno31.xsd" MetadataType="Schema" ID="12fd53a8-a7e6-4250-9bb5-d6e6226effd1" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/OrdenProduccionExterno.svc?xsd=xsd2" />
+    <MetadataFile FileName="OrdenProduccionExterno32.xsd" MetadataType="Schema" ID="67cb4eda-eba0-4922-99c9-c375cec3ab0a" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/OrdenProduccionExterno.svc?xsd=xsd1" />
+    <MetadataFile FileName="OrdenProduccionExterno1.wsdl" MetadataType="Wsdl" ID="5761877d-57e1-4e33-9ee2-5f62bc6ae508" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/OrdenProduccionExterno.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,5 @@
+C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Lavanderia\bin\Release\Intermoda.ClientProxy.Lavanderia.dll.config
+C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Lavanderia\bin\Release\Intermoda.ClientProxy.Lavanderia.dll
+C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Lavanderia\bin\Release\Intermoda.ClientProxy.Lavanderia.pdb
+C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Lavanderia\obj\Release\Intermoda.ClientProxy.Lavanderia.dll
+C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Lavanderia\obj\Release\Intermoda.ClientProxy.Lavanderia.pdb

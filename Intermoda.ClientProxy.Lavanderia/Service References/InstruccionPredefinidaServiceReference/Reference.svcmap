@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="54c8f7fa-0912-4973-aa5b-b80541be2b5a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/InstruccionPredefinida.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InstruccionPredefinida1.disco" MetadataType="Disco" ID="4a345ca4-3c2f-4ec1-a2ce-e70f2850d071" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/InstruccionPredefinida.svc?disco" />
+    <MetadataFile FileName="InstruccionPredefinida3.xsd" MetadataType="Schema" ID="099214de-0840-47cb-b0b1-05045da5d7af" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/InstruccionPredefinida.svc?xsd=xsd2" />
+    <MetadataFile FileName="InstruccionPredefinida31.xsd" MetadataType="Schema" ID="d59dfa58-3372-4bfa-bab0-f0d806624aa4" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/InstruccionPredefinida.svc?xsd=xsd0" />
+    <MetadataFile FileName="InstruccionPredefinida32.xsd" MetadataType="Schema" ID="66c923c5-291f-495b-8f02-6992a292b5c0" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/InstruccionPredefinida.svc?xsd=xsd1" />
+    <MetadataFile FileName="InstruccionPredefinida1.wsdl" MetadataType="Wsdl" ID="78f38d94-13ba-45b7-9eed-64311bb5755b" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/InstruccionPredefinida.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

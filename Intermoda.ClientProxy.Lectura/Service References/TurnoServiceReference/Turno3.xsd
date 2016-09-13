@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lecturas" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lecturas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="TurnoBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TurnoBusiness" nillable="true" type="tns:TurnoBusiness" />
+  <xs:complexType name="ArrayOfTurnoBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TurnoBusiness" nillable="true" type="tns:TurnoBusiness" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTurnoBusiness" nillable="true" type="tns:ArrayOfTurnoBusiness" />
+</xs:schema>

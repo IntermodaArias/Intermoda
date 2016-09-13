@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a36d9b1f-9b61-4eee-8579-c791c803b5e8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/Lavado.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Lavado3.xsd" MetadataType="Schema" ID="c9c0ba9d-ca4b-434d-83ab-4972128d162a" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Lavado.svc?xsd=xsd2" />
+    <MetadataFile FileName="Lavado1.disco" MetadataType="Disco" ID="6c178984-bf55-4960-8736-ae3f3aa9adcf" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Lavado.svc?disco" />
+    <MetadataFile FileName="Lavado31.xsd" MetadataType="Schema" ID="71b38d10-071c-4d41-8fe1-0c7e37b4a7c9" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Lavado.svc?xsd=xsd0" />
+    <MetadataFile FileName="Lavado1.wsdl" MetadataType="Wsdl" ID="47f5d5e2-019d-4899-9fa8-937ed13ccea0" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Lavado.svc?wsdl" />
+    <MetadataFile FileName="Lavado32.xsd" MetadataType="Schema" ID="0ee470cf-fbbd-42c8-b88e-61e3ce460ee3" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Lavado.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

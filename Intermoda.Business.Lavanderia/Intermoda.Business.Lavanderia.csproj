@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F02D7C05-76A1-4DD2-8DC3-FC6E0041894A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intermoda.Business.Lavanderia</RootNamespace>
+    <AssemblyName>Intermoda.Business.Lavanderia</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArchivoGlobalBusiness.cs" />
+    <Compile Include="CantidadIngredienteInstruccionBusiness.cs" />
+    <Compile Include="CantidadIngredienteOperacionBusiness.cs" />
+    <Compile Include="CargaLavadoBusiness.cs" />
+    <Compile Include="CentroTrabajoOpcionLavadoOrdenBusiness.cs" />
+    <Compile Include="ClaseBusiness.cs" />
+    <Compile Include="ColorIntermodaBusiness.cs" />
+    <Compile Include="CTrabajoBusiness.cs" />
+    <Compile Include="CentroTrabajoOpcionBusiness.cs" />
+    <Compile Include="ColoresIntermodaBusiness.cs" />
+    <Compile Include="GrupoTelasBusines.cs" />
+    <Compile Include="CatalogoBusiness.cs" />
+    <Compile Include="IngredienteOperacionBusiness.cs" />
+    <Compile Include="IngredientePredefinidoBusiness.cs" />
+    <Compile Include="InstruccionOperacionBusiness.cs" />
+    <Compile Include="InstruccionPredefinidaBusiness.cs" />
+    <Compile Include="LavadoBusiness.cs" />
+    <Compile Include="LavadoraCapacidadBusiness.cs" />
+    <Compile Include="LavadoraBusiness.cs" />
+    <Compile Include="LitrosAguaOperacionBusiness.cs" />
+    <Compile Include="LogLavadoBusiness.cs" />
+    <Compile Include="MaquinaBusiness.cs" />
+    <Compile Include="MaquinaCapacidadBusiness.cs" />
+    <Compile Include="MaterialPorOperacionBusiness.cs" />
+    <Compile Include="ObservacionOperacionBusiness.cs" />
+    <Compile Include="ObservacionPredefinidaBusiness.cs" />
+    <Compile Include="OpcionLavadoBusiness.cs" />
+    <Compile Include="OpcionLavadoOrdenBusiness.cs" />
+    <Compile Include="OperacionBusiness.cs" />
+    <Compile Include="OperacionCentroTrabajoBusiness.cs" />
+    <Compile Include="OperacionPredefinidaBusiness.cs" />
+    <Compile Include="OperacionProcesoBusiness.cs" />
+    <Compile Include="OperacionProcesoOrdenBusiness.cs" />
+    <Compile Include="OrdenProduccionLavanderiaBusiness.cs" />
+    <Compile Include="PlantaBusiness.cs" />
+    <Compile Include="ProcesoBusiness.cs" />
+    <Compile Include="ProcesoCentroTrabajoBusiness.cs" />
+    <Compile Include="ProcesoCentroTrabajoOrdenBusiness.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecadoraBusiness.cs" />
+    <Compile Include="SecadoraCapacidadBusiness.cs" />
+    <Compile Include="SubClaseBusiness.cs" />
+    <Compile Include="TelaBusiness.cs" />
+    <Compile Include="TelaColorIntermodaBusiness.cs" />
+    <Compile Include="TelaComposicionBusiness.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Intermoda.Common\Intermoda.Common.csproj">
+      <Project>{07c1e232-8946-4295-9d30-4f9b45f10ec0}</Project>
+      <Name>Intermoda.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Produccion.Lavanderia\Intermoda.Produccion.Lavanderia.csproj">
+      <Project>{4df85e9a-3064-4d25-9847-56ef34ee9af4}</Project>
+      <Name>Intermoda.Produccion.Lavanderia</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

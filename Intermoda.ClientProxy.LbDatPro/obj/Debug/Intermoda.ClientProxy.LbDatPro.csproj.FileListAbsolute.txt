@@ -1,0 +1,5 @@
+C:\VisualStudio\Intermoda\Intermoda.ClientProxy.LbDatPro\bin\Debug\Intermoda.ClientProxy.LbDatPro.dll.config
+C:\VisualStudio\Intermoda\Intermoda.ClientProxy.LbDatPro\bin\Debug\Intermoda.ClientProxy.LbDatPro.dll
+C:\VisualStudio\Intermoda\Intermoda.ClientProxy.LbDatPro\bin\Debug\Intermoda.ClientProxy.LbDatPro.pdb
+C:\VisualStudio\Intermoda\Intermoda.ClientProxy.LbDatPro\obj\Debug\Intermoda.ClientProxy.LbDatPro.dll
+C:\VisualStudio\Intermoda\Intermoda.ClientProxy.LbDatPro\obj\Debug\Intermoda.ClientProxy.LbDatPro.pdb

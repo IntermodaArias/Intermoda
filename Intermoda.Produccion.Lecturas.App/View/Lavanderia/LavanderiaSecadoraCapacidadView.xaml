@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Intermoda.Produccion.Lecturas.App.View.Lavanderia.LavanderiaSecadoraCapacidadView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:Intermoda.Wpf.Controls;assembly=Intermoda.Wpf.Controls"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:lavanderia="clr-namespace:Intermoda.Produccion.Lecturas.App.View.Lavanderia"
+             mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="600"
+             DataContext="{Binding Source={StaticResource Locator}, Path=LavanderiaSecadoraCapacidadViewModel}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Margin="2" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                   Content="Capacidades" FontSize="14" FontWeight="DemiBold"/>
+            <controls:CrudControl Grid.Row="0" Margin="2" HorizontalAlignment="Right"/>
+            <telerik:RadGridView Grid.Row="1" Margin="2" AutoGenerateColumns="False" ShowGroupPanel="False" IsReadOnly="True"
+                                 ItemsSource="{Binding Path=SecadoraCapacidadList}" 
+                                 SelectedItem="{Binding Path=SecadoraCapacidadSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <telerik:RadGridView.Columns>
+                    <telerik:GridViewDataColumn Width="*" Header="Capacidad" DataMemberBinding="{Binding Capacidad}"/>
+                </telerik:RadGridView.Columns>
+            </telerik:RadGridView>
+        </Grid>
+        <lavanderia:LavanderiaSecadoraView Grid.Column="1" DataContext="{Binding Path=SecadoraDataContext}"/>
+    </Grid>
+</UserControl>

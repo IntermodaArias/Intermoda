@@ -1,0 +1,2526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="LBDATPROModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CATALOG">
+          <Key>
+            <PropertyRef Name="MapCodMat" />
+          </Key>
+          <Property Name="MapCodMat" Type="int" Nullable="false" />
+          <Property Name="CataDesLar" Type="char" MaxLength="35" />
+          <Property Name="CataDesCor" Type="char" MaxLength="15" />
+          <Property Name="MedCompra" Type="char" MaxLength="4" />
+          <Property Name="MedConsum" Type="char" MaxLength="4" />
+          <Property Name="TipRCod" Type="char" MaxLength="4" />
+          <Property Name="CataGru" Type="char" MaxLength="4" />
+          <Property Name="MapCtaCont" Type="char" MaxLength="25" />
+          <Property Name="MapCtaVF" Type="char" MaxLength="1" />
+          <Property Name="MapCtaCon2" Type="char" MaxLength="25" />
+          <Property Name="MapNum1Rep" Type="char" MaxLength="12" />
+          <Property Name="PrdCodTel" Type="char" MaxLength="2" />
+          <Property Name="MatGrpDes" Type="char" MaxLength="35" />
+          <Property Name="MatGrpCod" Type="int" />
+        </EntityType>
+        <EntityType Name="CLASE">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="MprCodCla" />
+          </Key>
+          <Property Name="CIACOD" Type="smallint" Nullable="false" />
+          <Property Name="MprCodCla" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="MprCanInv" Type="char" MaxLength="1" />
+          <Property Name="MprDesCla" Type="char" MaxLength="45" />
+          <Property Name="MprCtaCon" Type="char" MaxLength="25" />
+          <Property Name="MapRotBaj" Type="smallint" />
+          <Property Name="MapRotSin" Type="smallint" />
+          <Property Name="MprClaSts" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="MprClaDet" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="MprClaDia" Type="smallint" Nullable="false" />
+          <Property Name="MprCodAgr" Type="smallint" />
+          <Property Name="MprClaSig" Type="smallmoney" />
+          <Property Name="MprGrpNom" Type="char" MaxLength="45" />
+          <Property Name="MprGrpCla" Type="char" MaxLength="5" />
+          <Property Name="MprClaAX" Type="char" MaxLength="10" />
+          <Property Name="MprClaDL" Type="char" MaxLength="70" />
+        </EntityType>
+        <EntityType Name="CNTPERIO">
+          <Key>
+            <PropertyRef Name="CiaCod" />
+            <PropertyRef Name="CntPANO" />
+            <PropertyRef Name="CntPMes" />
+            <PropertyRef Name="CntPFei" />
+            <PropertyRef Name="CntPFef" />
+          </Key>
+          <Property Name="CiaCod" Type="smallint" Nullable="false" />
+          <Property Name="CntPANO" Type="smallint" Nullable="false" />
+          <Property Name="CntPMes" Type="smallint" Nullable="false" />
+          <Property Name="CntPFei" Type="datetime" Nullable="false" />
+          <Property Name="CntPFef" Type="datetime" Nullable="false" />
+          <Property Name="CntPnome" Type="char" MaxLength="30" />
+          <Property Name="CntEsta" Type="char" MaxLength="1" />
+          <Property Name="CtlCorrAnu" Type="int" />
+          <Property Name="CntReab" Type="char" MaxLength="1" />
+          <Property Name="CntPSEM" Type="smallint" />
+          <Property Name="CntSemSan" Type="smallint" />
+          <Property Name="CntVarBnc" Type="smallint" />
+          <Property Name="CntVarPrv" Type="smallint" />
+          <Property Name="CntVtaStsP" Type="smallint" />
+        </EntityType>
+        <EntityType Name="CORPLA">
+          <Key>
+            <PropertyRef Name="PrdCorFab" />
+          </Key>
+          <Property Name="PrdCorFab" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="PrdCorIni" Type="char" MaxLength="2" />
+          <Property Name="PrdCorDes" Type="char" MaxLength="30" />
+          <Property Name="PrdCorTck" Type="char" MaxLength="1" />
+          <Property Name="PrdCorTip" Type="char" MaxLength="1" />
+          <Property Name="MprCodBod" Type="smallint" />
+          <Property Name="PrdFabSts" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="PrdHabilit" Type="smallint" />
+          <Property Name="PrdFabNew" Type="int" />
+          <Property Name="PrdCiaCod" Type="smallint" />
+          <Property Name="PrdCodPrv" Type="smallint" />
+          <Property Name="PrdPrvCla" Type="char" MaxLength="16" />
+          <Property Name="PrdPrvUsu" Type="char" MaxLength="16" />
+        </EntityType>
+        <EntityType Name="CTPLANTA">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="PrdAnoCor" />
+            <PropertyRef Name="PrdNumCor" />
+            <PropertyRef Name="PrdCtCod" />
+          </Key>
+          <Property Name="CIACOD" Type="smallint" Nullable="false" />
+          <Property Name="PrdAnoCor" Type="smallint" Nullable="false" />
+          <Property Name="PrdNumCor" Type="smallint" Nullable="false" />
+          <Property Name="PrdCtCod" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="PrdCtFPlI" Type="datetime" />
+          <Property Name="PrdCtFPlF" Type="datetime" />
+          <Property Name="PrdCtPlCod" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="PrdCtFOrI" Type="datetime" />
+          <Property Name="PrdCtFOrF" Type="datetime" />
+          <Property Name="PrdCtFPrI" Type="datetime" />
+          <Property Name="PrdCtFPrF" Type="datetime" />
+          <Property Name="PrdCtHrs" Type="smallint" />
+          <Property Name="PrdCtModP" Type="smallint" />
+          <Property Name="PrdCtSecP" Type="smallint" />
+          <Property Name="PrdCtModC" Type="smallint" />
+          <Property Name="PrdCtSecC" Type="smallint" />
+          <Property Name="PrdCtReser" Type="char" MaxLength="1" />
+          <Property Name="PrdCtAuto" Type="char" MaxLength="1" />
+          <Property Name="PrdCtFAuto" Type="datetime" />
+          <Property Name="PrdCtORden" Type="smallint" />
+          <Property Name="PrdCtStsIm" Type="smallint" />
+        </EntityType>
+        <EntityType Name="CTRABAJO">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="PrdCtCod" />
+          </Key>
+          <Property Name="CIACOD" Type="smallint" Nullable="false" />
+          <Property Name="PrdCtCod" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="PrdCtDes" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="PrdCtMod" Type="smallint" Nullable="false" />
+          <Property Name="PrdSecUse" Type="smallint" />
+          <Property Name="PrdCTWor" Type="smallint" />
+          <Property Name="PrdOrdImp" Type="smallint" />
+          <Property Name="PrdTroImp" Type="smallint" />
+          <Property Name="PrdCtOrd" Type="char" MaxLength="1" />
+          <Property Name="PrdCtSts" Type="smallint" />
+          <Property Name="PrdImpCup" Type="smallint" />
+          <Property Name="PrdCtSupCo" Type="char" MaxLength="10" />
+          <Property Name="PrdCtAlias" Type="char" MaxLength="2" />
+          <Property Name="PrdCtTipEn" Type="char" MaxLength="1" />
+          <Property Name="PrdCtTipSa" Type="char" MaxLength="1" />
+          <Property Name="PrdCtEsEnt" Type="char" MaxLength="1" />
+          <Property Name="PrdSalCt" Type="smallint" />
+          <Property Name="PrdProEje" Type="char" MaxLength="1" />
+          <Property Name="PrdCtNew" Type="int" />
+          <Property Name="PrdCtGru" Type="char" MaxLength="2" />
+          <Property Name="PrdCtRFAB" Type="char" MaxLength="25" />
+          <Property Name="PrdCtRMOI" Type="char" MaxLength="25" />
+          <Property Name="PrdCtRMOD" Type="char" MaxLength="25" />
+          <Property Name="CtEsqPago" Type="char" MaxLength="1" />
+          <Property Name="CCCodigo" Type="smallint" />
+          <Property Name="PrdCtTip" Type="char" MaxLength="1" />
+          <Property Name="MOCCosto" Type="smallmoney" />
+        </EntityType>
+        <EntityType Name="CUTARC3">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="PrdNumCor" />
+            <PropertyRef Name="PrdAnoCor" />
+          </Key>
+          <Property Name="CIACOD" Type="smallint" Nullable="false" />
+          <Property Name="PrdNumCor" Type="smallint" Nullable="false" />
+          <Property Name="PrdAnoCor" Type="smallint" Nullable="false" />
+          <Property Name="PrdNumAli" Type="char" MaxLength="7" />
+          <Property Name="FacCodRef" Type="char" MaxLength="3" />
+          <Property Name="FacCodTel" Type="char" MaxLength="2" />
+          <Property Name="FacCCol" Type="char" MaxLength="2" />
+          <Property Name="PrdFecCor" Type="datetime" />
+          <Property Name="PrdFeFCor" Type="datetime" />
+          <Property Name="PrdFecBul" Type="datetime" />
+          <Property Name="PrdFecCos" Type="datetime" />
+          <Property Name="PrdFeFCos" Type="datetime" />
+          <Property Name="PrdFecEsm" Type="datetime" />
+          <Property Name="PrdStsCor" Type="char" MaxLength="1" />
+          <Property Name="PrdStsCos" Type="char" MaxLength="1" />
+          <Property Name="PrdStsLav" Type="char" MaxLength="1" />
+          <Property Name="PrdStsEmp" Type="char" MaxLength="1" />
+          <Property Name="PrdFeILav" Type="datetime" />
+          <Property Name="PrdFeFLav" Type="datetime" />
+          <Property Name="PrdFeIEmp" Type="datetime" />
+          <Property Name="PrdFeFEmp" Type="datetime" />
+          <Property Name="PrdTipCor" Type="char" MaxLength="3" />
+          <Property Name="PrdCodPrd" Type="char" MaxLength="1" />
+          <Property Name="PrdCodRep" Type="char" MaxLength="1" />
+          <Property Name="PrdLotMue" Type="char" MaxLength="1" />
+          <Property Name="PrdFeIDes" Type="datetime" />
+          <Property Name="PrdFeFDes" Type="datetime" />
+          <Property Name="PrdFeIBor" Type="datetime" />
+          <Property Name="PrdFeFBor" Type="datetime" />
+          <Property Name="PrdEstCor" Type="datetime" />
+          <Property Name="PrdEstBor" Type="datetime" />
+          <Property Name="PrdEstCos" Type="datetime" />
+          <Property Name="PrdEstDes" Type="datetime" />
+          <Property Name="PrdEstLav" Type="datetime" />
+          <Property Name="PrdEstEmp" Type="datetime" />
+          <Property Name="PrdRecCos" Type="datetime" />
+          <Property Name="PrdStsDes" Type="char" MaxLength="1" />
+          <Property Name="PrdCorFab" Type="char" MaxLength="2" />
+          <Property Name="PrdCosFab" Type="char" MaxLength="2" />
+          <Property Name="PrdLavFab" Type="char" MaxLength="2" />
+          <Property Name="PrdEmpFab" Type="char" MaxLength="2" />
+          <Property Name="PrdDesFab" Type="char" MaxLength="2" />
+          <Property Name="PrdBorFab" Type="char" MaxLength="2" />
+          <Property Name="PrdClasCo" Type="char" MaxLength="1" />
+          <Property Name="PrdYdsUso" Type="smallmoney" />
+          <Property Name="PrdObsCor" Type="char" MaxLength="50" />
+          <Property Name="PrdUsuPre" Type="char" MaxLength="10" />
+          <Property Name="PrdFecGra" Type="datetime" />
+          <Property Name="PrdUsuVen" Type="char" MaxLength="10" />
+          <Property Name="PrdUsuPrd" Type="char" MaxLength="10" />
+          <Property Name="PrdFecVen" Type="datetime" />
+          <Property Name="PrdFecPrd" Type="datetime" />
+          <Property Name="PrdPesLot" Type="char" MaxLength="9" />
+          <Property Name="PrdAjuste" Type="datetime" />
+          <Property Name="PrdAUser" Type="char" MaxLength="10" />
+          <Property Name="PrdCanApr" Type="smallmoney" />
+          <Property Name="PrdTckCor" Type="char" MaxLength="1" />
+          <Property Name="PrdTckCos" Type="char" MaxLength="1" />
+          <Property Name="PrdTckLav" Type="char" MaxLength="1" />
+          <Property Name="PrdTckEmp" Type="char" MaxLength="1" />
+          <Property Name="PrdTckDes" Type="char" MaxLength="1" />
+          <Property Name="PrdTckBor" Type="char" MaxLength="1" />
+          <Property Name="PrdStsCrt" Type="char" MaxLength="1" />
+          <Property Name="PrdStsDgt" Type="char" MaxLength="1" />
+          <Property Name="PrdStsBor" Type="char" MaxLength="1" />
+          <Property Name="PrdStsPas" Type="char" MaxLength="1" />
+          <Property Name="PrdStPrel" Type="char" MaxLength="1" />
+          <Property Name="PrdFchPre" Type="datetime" />
+          <Property Name="PrdFchLiq" Type="datetime" />
+          <Property Name="PrdAlMac" Type="smallint" />
+          <Property Name="PrdUsrCo" Type="char" MaxLength="10" />
+          <Property Name="PrdCodSem" Type="smallint" />
+          <Property Name="PrdFecCo" Type="datetime" />
+          <Property Name="PrdCodTpo" Type="char" MaxLength="2" />
+          <Property Name="PrdCodEda" Type="char" MaxLength="2" />
+          <Property Name="PrdCodMod" Type="smallmoney" />
+          <Property Name="PrdUndSld" Type="int" />
+          <Property Name="PrdUndFac" Type="int" />
+          <Property Name="PrdPlaLiq" Type="datetime" />
+          <Property Name="PrdFecIns" Type="datetime" />
+          <Property Name="PrdRecBor" Type="datetime" />
+          <Property Name="PrdUsrRecB" Type="char" MaxLength="20" />
+          <Property Name="PrdFSalEns" Type="datetime" />
+          <Property Name="PrdUSalEns" Type="char" MaxLength="20" />
+          <Property Name="PrdFRepLiq" Type="datetime" />
+          <Property Name="PrdURepLiq" Type="char" MaxLength="20" />
+          <Property Name="PrdValida" Type="char" MaxLength="1" />
+          <Property Name="PrdFecVal" Type="datetime" />
+          <Property Name="PrdValida2" Type="char" MaxLength="1" />
+          <Property Name="PrdUsrVal" Type="char" MaxLength="10" />
+          <Property Name="PrdHoBul" Type="char" MaxLength="1" />
+          <Property Name="PrdHBFe" Type="datetime" />
+          <Property Name="PrdConsu" Type="char" MaxLength="1" />
+          <Property Name="PrdConFe" Type="datetime" />
+          <Property Name="PrdFecEnt" Type="datetime" />
+          <Property Name="PrdCodCli" Type="int" />
+          <Property Name="PrdTipOrd" Type="char" MaxLength="1" />
+          <Property Name="PrdOmiNor" Type="char" MaxLength="1" />
+          <Property Name="PrdFecOrd" Type="datetime" />
+          <Property Name="PrdCodEsp" Type="char" MaxLength="1" />
+          <Property Name="PrdSerCaj" Type="smallint" />
+          <Property Name="PrdFchPas" Type="datetime" />
+          <Property Name="PrdHrsPas" Type="char" MaxLength="8" />
+          <Property Name="PrdUsrPas" Type="char" MaxLength="10" />
+          <Property Name="PrdStsReb" Type="char" MaxLength="1" />
+          <Property Name="PrdFchReb" Type="datetime" />
+          <Property Name="PrdHrsReb" Type="char" MaxLength="8" />
+          <Property Name="PrdUsrReb" Type="char" MaxLength="10" />
+          <Property Name="PrdLavCos" Type="smallmoney" />
+          <Property Name="PrdPlaId" Type="smallint" />
+          <Property Name="PrdPlaPl" Type="smallint" />
+          <Property Name="PrdInPla" Type="datetime" />
+          <Property Name="PrdFiPla" Type="datetime" />
+          <Property Name="PrdRIPla" Type="datetime" />
+          <Property Name="PrdRFPla" Type="datetime" />
+          <Property Name="PrdCorId" Type="smallint" />
+          <Property Name="PrdCorPl" Type="smallint" />
+          <Property Name="PrdInCor" Type="datetime" />
+          <Property Name="PrdFiCor" Type="datetime" />
+          <Property Name="PrdCosId" Type="smallint" />
+          <Property Name="PrdCosPl" Type="smallint" />
+          <Property Name="PrdInCos" Type="datetime" />
+          <Property Name="PrdFiCos" Type="datetime" />
+          <Property Name="PrdEmId" Type="smallint" />
+          <Property Name="PrdEmPl" Type="smallint" />
+          <Property Name="PrdInEm" Type="datetime" />
+          <Property Name="PrdFiEm" Type="datetime" />
+          <Property Name="PrdLaId" Type="smallint" />
+          <Property Name="PrdLaPl" Type="smallint" />
+          <Property Name="PrdInLa" Type="datetime" />
+          <Property Name="PrdFiLa" Type="datetime" />
+          <Property Name="PrdDeId" Type="smallint" />
+          <Property Name="PrdDePl" Type="smallint" />
+          <Property Name="PrdInDes" Type="datetime" />
+          <Property Name="PrdFiDes" Type="datetime" />
+          <Property Name="PrdBoId" Type="smallint" />
+          <Property Name="PrdBoPl" Type="smallint" />
+          <Property Name="PrdInBo" Type="datetime" />
+          <Property Name="PrdFiBo" Type="datetime" />
+          <Property Name="PrdLiquid" Type="datetime" />
+          <Property Name="PrdStsPla" Type="char" MaxLength="1" />
+          <Property Name="AmPmPla" Type="char" MaxLength="1" />
+          <Property Name="AmPmCor" Type="char" MaxLength="1" />
+          <Property Name="AmPmCos" Type="char" MaxLength="1" />
+          <Property Name="AmPmBor" Type="char" MaxLength="1" />
+          <Property Name="AmPmDes" Type="char" MaxLength="1" />
+          <Property Name="AmPmLav" Type="char" MaxLength="1" />
+          <Property Name="AmPmEmp" Type="char" MaxLength="1" />
+          <Property Name="WipStsPla" Type="char" MaxLength="1" />
+          <Property Name="WipStsCor" Type="char" MaxLength="1" />
+          <Property Name="WipStsBor" Type="char" MaxLength="1" />
+          <Property Name="WipStsCos" Type="char" MaxLength="1" />
+          <Property Name="WipStsDes" Type="char" MaxLength="1" />
+          <Property Name="WipStsLav" Type="char" MaxLength="1" />
+          <Property Name="WipStsEmp" Type="char" MaxLength="1" />
+          <Property Name="PlaAPPla" Type="char" MaxLength="1" />
+          <Property Name="PlaAPCor" Type="char" MaxLength="1" />
+          <Property Name="PlaAPBor" Type="char" MaxLength="1" />
+          <Property Name="PlaAPCos" Type="char" MaxLength="1" />
+          <Property Name="PlaAPDes" Type="char" MaxLength="1" />
+          <Property Name="PlaAPLav" Type="char" MaxLength="1" />
+          <Property Name="PlaAPEmp" Type="char" MaxLength="1" />
+          <Property Name="ConMarker" Type="smallmoney" />
+          <Property Name="IdealPla" Type="smallint" />
+          <Property Name="IdealCor" Type="smallint" />
+          <Property Name="IdealBor" Type="smallint" />
+          <Property Name="IdealCos" Type="smallint" />
+          <Property Name="IdealDes" Type="smallint" />
+          <Property Name="IdealLav" Type="smallint" />
+          <Property Name="IdealEmp" Type="smallint" />
+          <Property Name="PrdDura" Type="smallint" />
+          <Property Name="PrdStsHM" Type="smallint" />
+          <Property Name="PrdRecTel" Type="datetime" />
+          <Property Name="PrdRecMar" Type="datetime" />
+          <Property Name="PrdTipTon" Type="char" MaxLength="1" />
+          <Property Name="PrdStsOrd" Type="char" MaxLength="1" />
+          <Property Name="PrdSalCor" Type="datetime" />
+          <Property Name="PrdPriorid" Type="smallint" />
+          <Property Name="PrdAutoriz" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="PrdDevSts" Type="smallint" />
+          <Property Name="PrdOrdAct" Type="smallint" Nullable="false" />
+          <Property Name="PrdPuntada" Type="int" />
+          <Property Name="PrdPuntFch" Type="datetime" />
+          <Property Name="PrdPuntUsr" Type="char" MaxLength="10" />
+          <Property Name="PrdMarMan" Type="datetime" />
+          <Property Name="PrdCodArt" Type="char" MaxLength="6" />
+          <Property Name="FacCodMdl" Type="char" MaxLength="2" />
+          <Property Name="PrdFecOri" Type="datetime" />
+          <Property Name="PrdPlaOri" Type="datetime" />
+          <Property Name="PrdTelVal" Type="smallint" />
+          <Property Name="PrdObCon" Type="text" />
+          <Property Name="PrdAnoDep" Type="smallint" />
+          <Property Name="PrdNumDep" Type="smallint" />
+          <Property Name="PrdPriCor" Type="smallint" />
+          <Property Name="PrdUsrOff" Type="char" MaxLength="15" />
+          <Property Name="PrdFecOff" Type="datetime" />
+          <Property Name="PrdOrdCer" Type="smallint" />
+          <Property Name="PrdSegCst" Type="smallint" />
+          <Property Name="PrdSegUsu" Type="char" MaxLength="10" />
+          <Property Name="PrdSegFch" Type="datetime" />
+          <Property Name="OrdRazCod" Type="int" />
+          <Property Name="OrdObserva" Type="text" />
+          <Property Name="OrdUsrAutF" Type="datetime" />
+          <Property Name="OrdUsrAutS" Type="char" MaxLength="10" />
+          <Property Name="OrdStsASeg" Type="char" MaxLength="1" />
+          <Property Name="PrdFecCTel" Type="char" MaxLength="20" />
+          <Property Name="PrdUsuCTel" Type="char" MaxLength="12" />
+          <Property Name="PrdFchCTel" Type="datetime" />
+          <Property Name="OloStiloVe" Type="int" />
+          <Property Name="OrdRcpUsr" Type="char" MaxLength="15" />
+          <Property Name="OrdRcpSts" Type="smallint" />
+          <Property Name="OrdRcpFec" Type="datetime" />
+          <Property Name="OrdLavadoI" Type="int" />
+          <Property Name="PrdTckEti" Type="char" MaxLength="1" />
+          <Property Name="OrdPrePes" Type="money" />
+          <Property Name="OrdFchDifT" Type="datetime" />
+          <Property Name="OrdUsrAutD" Type="char" MaxLength="16" />
+          <Property Name="OrdAutDifT" Type="char" MaxLength="1" />
+          <Property Name="OrdPreCost" Type="money" />
+          <Property Name="OrdFlexibl" Type="smallint" />
+          <Property Name="OrdTotUnd" Type="int" StoreGeneratedPattern="Computed" />
+          <Property Name="FxTelaProduccion" Type="char" MaxLength="2" StoreGeneratedPattern="Computed" />
+          <Property Name="PrdTckEAh" Type="char" MaxLength="1" />
+          <Property Name="OrdFecEnvC" Type="datetime" />
+          <Property Name="OrdStsEnvC" Type="smallint" />
+          <Property Name="OrdPerLec" Type="smallint" />
+        </EntityType>
+        <EntityType Name="FACCOL">
+          <Key>
+            <PropertyRef Name="CiaCod" />
+            <PropertyRef Name="FacCCol" />
+          </Key>
+          <Property Name="CiaCod" Type="smallint" Nullable="false" />
+          <Property Name="FacCCol" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="FacDCol" Type="char" MaxLength="20" />
+          <Property Name="AxColorId01" Type="char" MaxLength="8" />
+          <Property Name="AxColorId02" Type="char" MaxLength="8" />
+          <Property Name="FacIDCol" Type="char" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="GRUTEL">
+          <Key>
+            <PropertyRef Name="FacCodGrut" />
+          </Key>
+          <Property Name="FacCodGrut" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="FacDesGrut" Type="char" MaxLength="44" />
+          <Property Name="FacGruUltN" Type="smallint" />
+          <Property Name="GruSts" Type="smallint" Nullable="false" />
+          <Property Name="FacReposo" Type="smallint" />
+        </EntityType>
+        <EntityType Name="MAEAR6">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="AdpCodEmp" />
+          </Key>
+          <Property Name="CIACOD" Type="smallint" Nullable="false" />
+          <Property Name="AdpCodEmp" Type="int" Nullable="false" />
+          <Property Name="AdpCntEmp" Type="char" MaxLength="1" />
+          <Property Name="AdpNomEmp" Type="char" MaxLength="22" />
+          <Property Name="AdpAplEmp" Type="char" MaxLength="22" />
+          <Property Name="AdpAlias" Type="char" MaxLength="30" />
+          <Property Name="AdpDirEmp" Type="char" MaxLength="45" />
+          <Property Name="AdpDirImp" Type="smallint" />
+          <Property Name="AdpNumTel" Type="char" MaxLength="11" />
+          <Property Name="AdpDirNet" Type="char" MaxLength="40" />
+          <Property Name="AdpFecIng" Type="datetime" />
+          <Property Name="AdpHorIng" Type="char" MaxLength="8" />
+          <Property Name="AdpFecRet" Type="datetime" />
+          <Property Name="AdpFecNac" Type="datetime" />
+          <Property Name="AdpCodDep" Type="smallint" />
+          <Property Name="AdpCodNac" Type="smallint" />
+          <Property Name="AdpCodTip" Type="char" MaxLength="1" />
+          <Property Name="AdpNumCed" Type="decimal" Precision="14" Scale="0" />
+          <Property Name="AdpNumRtn" Type="char" MaxLength="13" />
+          <Property Name="AdpNumIhs" Type="char" MaxLength="15" />
+          <Property Name="AdpNumSol" Type="char" MaxLength="13" />
+          <Property Name="AdpNumRap" Type="char" MaxLength="14" />
+          <Property Name="AdpNumPol" Type="char" MaxLength="5" />
+          <Property Name="AdpNomCyg" Type="char" MaxLength="28" />
+          <Property Name="AdpNomPa1" Type="char" MaxLength="30" />
+          <Property Name="AdpNomPa2" Type="char" MaxLength="25" />
+          <Property Name="AdpCodCiv" Type="char" MaxLength="1" />
+          <Property Name="AdpCodEdu" Type="char" MaxLength="1" />
+          <Property Name="AdpCodFrm" Type="char" MaxLength="1" />
+          <Property Name="AdpEntEmp" Type="char" MaxLength="1" />
+          <Property Name="AdpCodPro" Type="smallint" />
+          <Property Name="AdpCodDe2" Type="char" MaxLength="3" />
+          <Property Name="AdpCodPue" Type="smallint" />
+          <Property Name="AdpCodSex" Type="char" MaxLength="1" />
+          <Property Name="AdpCodSkl" Type="smallint" />
+          <Property Name="AdpCodSup" Type="smallint" />
+          <Property Name="AdpSueBas" Type="money" />
+          <Property Name="AdpStsEmp" Type="char" MaxLength="1" />
+          <Property Name="AdpNumCue" Type="char" MaxLength="20" />
+          <Property Name="AdpCodOcu" Type="smallint" />
+          <Property Name="AdpCodSec" Type="smallint" />
+          <Property Name="AdpCodSub" Type="smallint" />
+          <Property Name="AdpUsrGra" Type="char" MaxLength="10" />
+          <Property Name="AdpFecGra" Type="datetime" />
+          <Property Name="AdpHorGra" Type="char" MaxLength="8" />
+          <Property Name="AdpCodPla" Type="smallint" />
+          <Property Name="AdpUsrRec" Type="char" MaxLength="10" />
+          <Property Name="AdpFecRec" Type="datetime" />
+          <Property Name="AdpHrsRec" Type="int" />
+          <Property Name="AdpEntUsr" Type="char" MaxLength="20" />
+          <Property Name="PlsCodCur" Type="smallint" />
+          <Property Name="AdpPagIhs" Type="char" MaxLength="1" />
+          <Property Name="AdpPagRap" Type="char" MaxLength="1" />
+          <Property Name="AdpFrmVac" Type="char" MaxLength="1" />
+          <Property Name="AdpFecVac" Type="datetime" />
+          <Property Name="AdpValVac" Type="smallmoney" />
+          <Property Name="AdpAntVac" Type="smallmoney" />
+          <Property Name="AdpNomRec" Type="char" MaxLength="34" />
+          <Property Name="AdpPasBmp" Type="char" MaxLength="60" />
+          <Property Name="AdpPasBm1" Type="char" MaxLength="50" />
+          <Property Name="AdpPasBm2" Type="char" MaxLength="50" />
+          <Property Name="AdpPasBm3" Type="char" MaxLength="50" />
+          <Property Name="AdpPasBm4" Type="char" MaxLength="50" />
+          <Property Name="AdpPasBm5" Type="char" MaxLength="50" />
+          <Property Name="AdpPasBm6" Type="char" MaxLength="50" />
+          <Property Name="AdpTipOpr" Type="char" MaxLength="1" />
+          <Property Name="AdpSemIni" Type="smallint" />
+          <Property Name="AdpSemFin" Type="smallint" />
+          <Property Name="AdpBonEsc" Type="char" MaxLength="1" />
+          <Property Name="AdpSueChq" Type="smallmoney" />
+          <Property Name="AdpPreRet" Type="char" MaxLength="1" />
+          <Property Name="AdpDiaVac" Type="smallint" />
+          <Property Name="AdpArea01" Type="char" MaxLength="1" />
+          <Property Name="AdpArea02" Type="char" MaxLength="1" />
+          <Property Name="AdpArea03" Type="char" MaxLength="1" />
+          <Property Name="AdpArea04" Type="char" MaxLength="1" />
+          <Property Name="AdpArea05" Type="char" MaxLength="1" />
+          <Property Name="AdpArea06" Type="char" MaxLength="1" />
+          <Property Name="AdpArea07" Type="char" MaxLength="1" />
+          <Property Name="AdpArea08" Type="char" MaxLength="1" />
+          <Property Name="AdpArea09" Type="char" MaxLength="1" />
+          <Property Name="AdpArea10" Type="char" MaxLength="1" />
+          <Property Name="AdpArea11" Type="char" MaxLength="1" />
+          <Property Name="AdpArea12" Type="char" MaxLength="1" />
+          <Property Name="AdpArea13" Type="char" MaxLength="1" />
+          <Property Name="AdpArea14" Type="char" MaxLength="1" />
+          <Property Name="AdpCodGru" Type="char" MaxLength="1" />
+          <Property Name="AdpFecCon" Type="datetime" />
+          <Property Name="AdpTipPla" Type="char" MaxLength="1" />
+          <Property Name="AdpConUsr" Type="char" MaxLength="20" />
+          <Property Name="AdpUsrVal" Type="char" MaxLength="20" />
+          <Property Name="AdpEfic" Type="smallint" />
+          <Property Name="AdpChange" Type="char" MaxLength="15" />
+          <Property Name="AdpDateC" Type="datetime" />
+          <Property Name="AdpActiv1" Type="char" MaxLength="40" />
+          <Property Name="AdpActiv2" Type="char" MaxLength="40" />
+          <Property Name="CodArea" Type="char" MaxLength="2" />
+          <Property Name="CodSubPro" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ModECalFor" Type="smallint" />
+          <Property Name="ModEmpCal" Type="smallint" />
+          <Property Name="ModECalFin" Type="smallint" />
+          <Property Name="AdpComod" Type="smallint" />
+          <Property Name="AdpTipEmp" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="AdpCamPla" Type="datetime" />
+          <Property Name="AdpCamUsr" Type="char" MaxLength="10" />
+          <Property Name="AdpEmpLiq" Type="char" MaxLength="1" />
+          <Property Name="AdpMdCod" Type="smallint" />
+          <Property Name="AdpCodCiu" Type="smallint" />
+          <Property Name="AdpNoFer" Type="smallint" />
+          <Property Name="BncCod" Type="smallint" />
+          <Property Name="AdpCtaBco" Type="smallint" />
+          <Property Name="AdpUltLinA" Type="smallint" />
+          <Property Name="AdpISRHijo" Type="smallint" />
+          <Property Name="AdpISRCony" Type="smallint" />
+          <Property Name="AdpMonCod" Type="smallint" />
+          <Property Name="AdpCueNum" Type="char" MaxLength="20" />
+          <Property Name="AdpPorCue" Type="smallint" />
+          <Property Name="AdpCuePor" Type="smallint" />
+          <Property Name="AdpMonCue" Type="smallint" />
+          <Property Name="AdpCueMon" Type="smallint" />
+          <Property Name="AdpTurno" Type="smallint" Nullable="false" />
+          <Property Name="NumPatrona" Type="char" MaxLength="30" />
+          <Property Name="AdpRelMar" Type="smallint" />
+          <Property Name="AdpTipFch" Type="datetime" />
+          <Property Name="AdpSMedico" Type="smallint" Nullable="false" />
+          <Property Name="AdpSVida" Type="smallint" Nullable="false" />
+          <Property Name="AdpSVehicu" Type="smallint" Nullable="false" />
+          <Property Name="AdpCodPai" Type="smallint" />
+          <Property Name="AdpEmpCom" Type="smallint" />
+          <Property Name="AdpIncCst" Type="smallint" />
+          <Property Name="PrdCrvId" Type="smallint" />
+          <Property Name="CodEmpReem" Type="int" />
+          <Property Name="PrdCrvSemI" Type="smallint" />
+          <Property Name="AdpEmpLac" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MAEAUS">
+          <Key>
+            <PropertyRef Name="CiaCod" />
+            <PropertyRef Name="AdpCodEmp" />
+            <PropertyRef Name="PlsCodPer" />
+            <PropertyRef Name="PlsTpoPls" />
+            <PropertyRef Name="PlsCodGrs" />
+            <PropertyRef Name="PlsNumSes" />
+            <PropertyRef Name="PlsAnoSes" />
+            <PropertyRef Name="PlsCodDia" />
+            <PropertyRef Name="PlsCodCon" />
+          </Key>
+          <Property Name="CiaCod" Type="smallint" Nullable="false" />
+          <Property Name="AdpCodEmp" Type="int" Nullable="false" />
+          <Property Name="PlsCodPer" Type="smallint" Nullable="false" />
+          <Property Name="PlsTpoPls" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="PlsCodGrs" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="PlsNumSes" Type="smallint" Nullable="false" />
+          <Property Name="PlsAnoSes" Type="smallint" Nullable="false" />
+          <Property Name="PlsCodDia" Type="smallint" Nullable="false" />
+          <Property Name="PlsCodCon" Type="smallint" Nullable="false" />
+          <Property Name="PlsValTem" Type="smallmoney" />
+          <Property Name="PlsTipIng" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="MATMST">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="MapCodMat" />
+          </Key>
+          <Property Name="CIACOD" Type="smallint" Nullable="false" />
+          <Property Name="MapCodMat" Type="int" Nullable="false" />
+          <Property Name="MapCodAlt" Type="int" />
+          <Property Name="FacCodMar" Type="char" MaxLength="2" />
+          <Property Name="FacCodTpo" Type="char" MaxLength="2" />
+          <Property Name="MprCodCla" Type="char" MaxLength="5" />
+          <Property Name="MprCodSCla" Type="char" MaxLength="5" />
+          <Property Name="MprCodRef" Type="char" MaxLength="5" />
+          <Property Name="MprCodCol" Type="char" MaxLength="5" />
+          <Property Name="MprCodTam" Type="char" MaxLength="5" />
+          <Property Name="MapFecMat" Type="datetime" />
+          <Property Name="MatCodTon" Type="char" MaxLength="3" />
+          <Property Name="MapCosProm" Type="decimal" Precision="9" Scale="4" />
+          <Property Name="MapCanExis" Type="money" />
+          <Property Name="MapCanExi1" Type="money" />
+          <Property Name="MapCanExi2" Type="money" />
+          <Property Name="MapCanExi3" Type="money" />
+          <Property Name="MapCanExi4" Type="money" />
+          <Property Name="MapSalAntU" Type="money" />
+          <Property Name="MapEntraU" Type="money" />
+          <Property Name="MapSalidU" Type="decimal" Precision="11" Scale="5" />
+          <Property Name="MapSalActU" Type="money" />
+          <Property Name="MapSalAntV" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="MapEntraV" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="MapSalidV" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="MapSalActV" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="MapRanMin" Type="money" />
+          <Property Name="MapPorDes" Type="smallmoney" />
+          <Property Name="MapPorStd" Type="smallmoney" />
+          <Property Name="MapUbi" Type="char" MaxLength="5" />
+          <Property Name="MapRepTCa" Type="char" MaxLength="10" />
+          <Property Name="RepNumPag" Type="int" />
+          <Property Name="FacCodTel" Type="char" MaxLength="2" />
+          <Property Name="PapLinCod" Type="char" MaxLength="2" />
+          <Property Name="MapNumRep" Type="char" MaxLength="12" />
+          <Property Name="MapRepDia" Type="char" MaxLength="10" />
+          <Property Name="MapRepDie" Type="char" MaxLength="10" />
+          <Property Name="MapRepTam" Type="char" MaxLength="10" />
+          <Property Name="RepCodMar" Type="char" MaxLength="3" />
+          <Property Name="RepTipCat" Type="char" MaxLength="20" />
+          <Property Name="RepTipMaq" Type="char" MaxLength="4" />
+          <Property Name="MapRanMin2" Type="money" />
+          <Property Name="RepBodCod" Type="smallint" />
+          <Property Name="MprUbiEst" Type="char" MaxLength="10" />
+          <Property Name="MprUbiRak" Type="char" MaxLength="5" />
+          <Property Name="MapMatSts" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="PrdCodDis" Type="smallint" />
+          <Property Name="CmpColCod" Type="char" MaxLength="7" />
+          <Property Name="CmpTexCod" Type="char" MaxLength="5" />
+          <Property Name="MapReaSts" Type="char" MaxLength="1" />
+          <Property Name="MapFecIng" Type="datetime" />
+          <Property Name="MapFecCre" Type="datetime" />
+          <Property Name="MapFecCad" Type="datetime" />
+          <Property Name="CmpTelPes" Type="smallmoney" />
+          <Property Name="CmpTelCom" Type="char" MaxLength="20" />
+          <Property Name="MprCodArt" Type="char" MaxLength="12" />
+          <Property Name="MprCodMdl" Type="char" MaxLength="2" />
+          <Property Name="MprCodTel" Type="char" MaxLength="2" />
+          <Property Name="MprCodLav" Type="char" MaxLength="3" />
+          <Property Name="MprCCol" Type="char" MaxLength="2" />
+          <Property Name="MprNumTal" Type="char" MaxLength="3" />
+          <Property Name="MprCodDim" Type="smallint" />
+          <Property Name="MapLoopSiz" Type="smallint" Nullable="false" />
+          <Property Name="MprMatSig" Type="smallmoney" Nullable="false" />
+          <Property Name="TipRCod" Type="char" MaxLength="4" />
+          <Property Name="MapEntAdd" Type="smallmoney" />
+          <Property Name="TelTipCod" Type="smallint" />
+          <Property Name="TelTenCod" Type="smallint" />
+          <Property Name="TelTejCod" Type="smallint" />
+          <Property Name="TelAcbCod" Type="smallint" />
+          <Property Name="TelCmpCod" Type="smallint" />
+          <Property Name="CodigoDyna" Type="char" MaxLength="30" />
+          <Property Name="MprEtgCon" Type="char" MaxLength="1" />
+          <Property Name="MprCodUbi" Type="smallint" />
+          <Property Name="MprCtCod" Type="char" MaxLength="2" />
+          <Property Name="MatCntRes" Type="smallmoney" />
+          <Property Name="MprExcCmp" Type="smallint" />
+          <Property Name="MatUltMov" Type="date" />
+          <Property Name="FacCCol" Type="char" MaxLength="2" />
+          <Property Name="MprSubCod" Type="smallint" />
+        </EntityType>
+        <EntityType Name="MATMST1">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="MapCodMat" />
+            <PropertyRef Name="MprCodBod" />
+          </Key>
+          <Property Name="CIACOD" Type="smallint" Nullable="false" />
+          <Property Name="MapCodMat" Type="int" Nullable="false" />
+          <Property Name="MprCodBod" Type="smallint" Nullable="false" />
+          <Property Name="MprExiBod" Type="decimal" Precision="11" Scale="4" />
+          <Property Name="MprBodCos" Type="decimal" Precision="9" Scale="4" />
+          <Property Name="MprExiMax" Type="smallmoney" />
+          <Property Name="MPrExiReo" Type="smallmoney" />
+          <Property Name="MprExiMin" Type="smallmoney" />
+          <Property Name="MprExiSts" Type="smallint" />
+        </EntityType>
+        <EntityType Name="MPRCOLOR">
+          <Key>
+            <PropertyRef Name="CiaCod" />
+            <PropertyRef Name="MprCodCol" />
+          </Key>
+          <Property Name="CiaCod" Type="smallint" Nullable="false" />
+          <Property Name="MprCodCol" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="MprDesCol" Type="char" MaxLength="45" />
+          <Property Name="MprColAX" Type="char" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="ORDCENTR">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="PrdNumCor" />
+            <PropertyRef Name="PrdAnoCor" />
+            <PropertyRef Name="PrdCtCod" />
+            <PropertyRef Name="PrdSecCod" />
+            <PropertyRef Name="PrdCtBulto" />
+          </Key>
+          <Property Name="CIACOD" Type="smallint" Nullable="false" />
+          <Property Name="PrdNumCor" Type="smallint" Nullable="false" />
+          <Property Name="PrdAnoCor" Type="smallint" Nullable="false" />
+          <Property Name="PrdCtCod" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="PrdSecCod" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="PrdCtBulto" Type="smallint" Nullable="false" />
+          <Property Name="PrdCtSup" Type="char" MaxLength="10" />
+          <Property Name="PrdEstSec" Type="smallint" />
+          <Property Name="PrdCtModu" Type="smallint" />
+          <Property Name="PrdCtFecI" Type="datetime" />
+          <Property Name="PrdCtFecF" Type="datetime" />
+          <Property Name="PrdLecMan" Type="smallint" />
+          <Property Name="PrdCtAud" Type="smallint" />
+          <Property Name="PrdCtRech" Type="smallint" />
+          <Property Name="PrdDesRech" Type="char" MaxLength="60" />
+          <Property Name="PrdFecRech" Type="datetime" />
+          <Property Name="PrdRecUsr" Type="char" MaxLength="10" />
+          <Property Name="PrdCodRec" Type="smallint" />
+          <Property Name="PrdCodGru" Type="char" MaxLength="3" />
+          <Property Name="PrdCodOpr" Type="smallint" />
+          <Property Name="PRdCtUsrSa" Type="char" MaxLength="10" />
+          <Property Name="PrdCtUsrEn" Type="char" MaxLength="10" />
+          <Property Name="PrdCtKanba" Type="smallint" />
+        </EntityType>
+        <EntityType Name="PATRON">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="PrdCodArt" />
+          </Key>
+          <Property Name="CIACOD" Type="smallint" Nullable="false" />
+          <Property Name="PrdCodArt" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="PrdCodDis" Type="smallint" />
+          <Property Name="FacCodEd" Type="char" MaxLength="2" />
+          <Property Name="FacCodTpo" Type="char" MaxLength="2" />
+          <Property Name="PrdDscArt" Type="char" MaxLength="25" Nullable="false" />
+          <Property Name="PatSts" Type="smallint" Nullable="false" />
+          <Property Name="PrdPatU1" Type="smallint" />
+          <Property Name="PrdPatU2" Type="smallint" />
+          <Property Name="PrdPSgrPat" Type="smallmoney" />
+          <Property Name="PrdCodDes" Type="smallint" />
+          <Property Name="PrdPatU3" Type="smallint" />
+          <Property Name="FacCodMar" Type="char" MaxLength="2" />
+          <Property Name="PrdCstMax" Type="smallmoney" />
+          <Property Name="PrdCalPat" Type="smallint" Nullable="false" />
+          <Property Name="PrdPatPier" Type="char" MaxLength="15" />
+          <Property Name="PrdPatRued" Type="char" MaxLength="15" />
+          <Property Name="PrdPatTiro" Type="char" MaxLength="15" />
+          <Property Name="PrdCodAli" Type="char" MaxLength="12" />
+          <Property Name="PatUltLin" Type="smallint" />
+          <Property Name="AxBaseId" Type="char" MaxLength="3" />
+          <Property Name="AxTipoVarianteId" Type="nchar" MaxLength="3" />
+          <Property Name="PatInvSegu" Type="smallint" />
+        </EntityType>
+        <EntityType Name="PRDSTS">
+          <Key>
+            <PropertyRef Name="PrdStsCor" />
+          </Key>
+          <Property Name="PrdStsCor" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="PrdSecSts" Type="smallint" />
+          <Property Name="PrdDesSts" Type="char" MaxLength="20" />
+          <Property Name="PrdAreSts" Type="char" MaxLength="1" />
+          <Property Name="PrdAliCCos" Type="char" MaxLength="5" />
+          <Property Name="PrdCTraba" Type="char" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="PRVMST">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="PrvCod" />
+          </Key>
+          <Property Name="CIACOD" Type="smallint" Nullable="false" />
+          <Property Name="PrvCod" Type="smallint" Nullable="false" />
+          <Property Name="PrvNom" Type="char" MaxLength="55" />
+          <Property Name="PrvForPag" Type="char" MaxLength="1" />
+          <Property Name="PrvNomCor" Type="char" MaxLength="20" />
+          <Property Name="PrvDir1" Type="char" MaxLength="50" />
+          <Property Name="PrvDir2" Type="char" MaxLength="50" />
+          <Property Name="PrvTel1" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="PrvTel2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="PrvFax" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="PrvTip" Type="char" MaxLength="1" />
+          <Property Name="PrvDiasV" Type="smallint" />
+          <Property Name="PrvCtaCont" Type="char" MaxLength="25" />
+          <Property Name="PrvCont" Type="char" MaxLength="40" />
+          <Property Name="PrvCorrEl" Type="char" MaxLength="50" />
+          <Property Name="AdpCodPai" Type="smallint" />
+          <Property Name="AdpCodCiu" Type="smallint" />
+          <Property Name="PrvSaldo" Type="money" />
+          <Property Name="PrvBcoMonC" Type="smallint" />
+          <Property Name="PrvSolChq" Type="char" MaxLength="1" />
+          <Property Name="PrvParVar" Type="char" MaxLength="1" />
+          <Property Name="PrvRTN" Type="char" MaxLength="15" />
+          <Property Name="PrvCtaMTr" Type="char" MaxLength="25" />
+          <Property Name="PrvNRTN" Type="decimal" Precision="14" Scale="0" />
+          <Property Name="PrvCtaCob" Type="char" MaxLength="25" />
+          <Property Name="PrvRefBAC" Type="char" MaxLength="10" />
+          <Property Name="PrvRetPAC" Type="smallint" />
+          <Property Name="PrvRetISV" Type="smallint" />
+          <Property Name="PrvCodAX" Type="char" MaxLength="25" />
+          <Property Name="PrvCodDPI" Type="char" MaxLength="15" />
+          <Property Name="PrvUltTrn" Type="datetime" />
+          <Property Name="PrvCodGru" Type="smallint" />
+          <Property Name="PagBcoMonC" Type="smallint" />
+          <Property Name="BncCod" Type="smallint" />
+          <Property Name="PrvBcoCta" Type="char" MaxLength="30" />
+          <Property Name="PrvCorr2" Type="char" MaxLength="50" />
+          <Property Name="PrvRetA50" Type="smallint" />
+          <Property Name="PrvNoAX" Type="smallint" />
+          <Property Name="PrvREVen" Type="datetime" />
+          <Property Name="PrvResExo" Type="char" MaxLength="30" />
+          <Property Name="PrvCtaPro" Type="char" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="SUBCLASE">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="MprCodSCla" />
+          </Key>
+          <Property Name="CIACOD" Type="smallint" Nullable="false" />
+          <Property Name="MprCodSCla" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="MprDesSCla" Type="char" MaxLength="45" />
+          <Property Name="MprSClaSts" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="MprSClaAX" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TELAR5">
+          <Key>
+            <PropertyRef Name="FacCodTel" />
+          </Key>
+          <Property Name="FacCodTel" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="FacCodGrut" Type="char" MaxLength="2" />
+          <Property Name="FacDesTel" Type="char" MaxLength="44" />
+          <Property Name="FacUltLin" Type="smallint" />
+          <Property Name="FacUltLStr" Type="smallint" />
+          <Property Name="ComposicionId" Type="int" />
+          <Property Name="TelDesVta" Type="char" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="LBDATPROModelStoreContainer">
+          <EntitySet Name="CATALOG" EntityType="Self.CATALOG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CLASE" EntityType="Self.CLASE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CNTPERIO" EntityType="Self.CNTPERIO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CORPLA" EntityType="Self.CORPLA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CTPLANTA" EntityType="Self.CTPLANTA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CTRABAJO" EntityType="Self.CTRABAJO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CUTARC3" EntityType="Self.CUTARC3" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FACCOL" EntityType="Self.FACCOL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GRUTEL" EntityType="Self.GRUTEL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MAEAR6" EntityType="Self.MAEAR6" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MAEAUS" EntityType="Self.MAEAUS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MATMST" EntityType="Self.MATMST" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MATMST1" EntityType="Self.MATMST1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MPRCOLOR" EntityType="Self.MPRCOLOR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ORDCENTR" EntityType="Self.ORDCENTR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PATRON" EntityType="Self.PATRON" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRDSTS" EntityType="Self.PRDSTS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRVMST" EntityType="Self.PRVMST" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SUBCLASE" EntityType="Self.SUBCLASE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TELAR5" EntityType="Self.TELAR5" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LBDATPROModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CATALOG">
+          <Key>
+            <PropertyRef Name="MapCodMat" />
+          </Key>
+          <Property Name="MapCodMat" Type="Int32" Nullable="false" />
+          <Property Name="CataDesLar" Type="String" MaxLength="35" FixedLength="true" Unicode="false" />
+          <Property Name="CataDesCor" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="MedCompra" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="MedConsum" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="TipRCod" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="CataGru" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="MapCtaCont" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="MapCtaVF" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="MapCtaCon2" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="MapNum1Rep" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCodTel" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="MatGrpDes" Type="String" MaxLength="35" FixedLength="true" Unicode="false" />
+          <Property Name="MatGrpCod" Type="Int32" />
+        </EntityType>
+        <EntityType Name="CLASE">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="MprCodCla" />
+          </Key>
+          <Property Name="CIACOD" Type="Int16" Nullable="false" />
+          <Property Name="MprCodCla" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MprCanInv" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="MprDesCla" Type="String" MaxLength="45" FixedLength="true" Unicode="false" />
+          <Property Name="MprCtaCon" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="MapRotBaj" Type="Int16" />
+          <Property Name="MapRotSin" Type="Int16" />
+          <Property Name="MprClaSts" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MprClaDet" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MprClaDia" Type="Int16" Nullable="false" />
+          <Property Name="MprCodAgr" Type="Int16" />
+          <Property Name="MprClaSig" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="MprGrpNom" Type="String" MaxLength="45" FixedLength="true" Unicode="false" />
+          <Property Name="MprGrpCla" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="MprClaAX" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MprClaDL" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FACCOL">
+          <Key>
+            <PropertyRef Name="CiaCod" />
+            <PropertyRef Name="FacCCol" />
+          </Key>
+          <Property Name="CiaCod" Type="Int16" Nullable="false" />
+          <Property Name="FacCCol" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="FacDCol" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="AxColorId01" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="AxColorId02" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="FacIDCol" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="GRUTEL">
+          <Key>
+            <PropertyRef Name="FacCodGrut" />
+          </Key>
+          <Property Name="FacCodGrut" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="FacDesGrut" Type="String" MaxLength="44" FixedLength="true" Unicode="false" />
+          <Property Name="FacGruUltN" Type="Int16" />
+          <Property Name="GruSts" Type="Int16" Nullable="false" />
+          <Property Name="FacReposo" Type="Int16" />
+        </EntityType>
+        <EntityType Name="MATMST">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="MapCodMat" />
+          </Key>
+          <Property Name="CIACOD" Type="Int16" Nullable="false" />
+          <Property Name="MapCodMat" Type="Int32" Nullable="false" />
+          <Property Name="MapCodAlt" Type="Int32" />
+          <Property Name="FacCodMar" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="FacCodTpo" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="MprCodCla" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="MprCodSCla" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="MprCodRef" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="MprCodCol" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="MprCodTam" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="MapFecMat" Type="DateTime" Precision="3" />
+          <Property Name="MatCodTon" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="MapCosProm" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="MapCanExis" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MapCanExi1" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MapCanExi2" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MapCanExi3" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MapCanExi4" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MapSalAntU" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MapEntraU" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MapSalidU" Type="Decimal" Precision="11" Scale="5" />
+          <Property Name="MapSalActU" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MapSalAntV" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="MapEntraV" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="MapSalidV" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="MapSalActV" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="MapRanMin" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MapPorDes" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="MapPorStd" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="MapUbi" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="MapRepTCa" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="RepNumPag" Type="Int32" />
+          <Property Name="FacCodTel" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PapLinCod" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="MapNumRep" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="MapRepDia" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MapRepDie" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MapRepTam" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="RepCodMar" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="RepTipCat" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="RepTipMaq" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="MapRanMin2" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="RepBodCod" Type="Int16" />
+          <Property Name="MprUbiEst" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MprUbiRak" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="MapMatSts" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="PrdCodDis" Type="Int16" />
+          <Property Name="CmpColCod" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+          <Property Name="CmpTexCod" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="MapReaSts" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="MapFecIng" Type="DateTime" Precision="3" />
+          <Property Name="MapFecCre" Type="DateTime" Precision="3" />
+          <Property Name="MapFecCad" Type="DateTime" Precision="3" />
+          <Property Name="CmpTelPes" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="CmpTelCom" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="MprCodArt" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="MprCodMdl" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="MprCodTel" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="MprCodLav" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="MprCCol" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="MprNumTal" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="MprCodDim" Type="Int16" />
+          <Property Name="MapLoopSiz" Type="Int16" Nullable="false" />
+          <Property Name="MprMatSig" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="TipRCod" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="MapEntAdd" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="TelTipCod" Type="Int16" />
+          <Property Name="TelTenCod" Type="Int16" />
+          <Property Name="TelTejCod" Type="Int16" />
+          <Property Name="TelAcbCod" Type="Int16" />
+          <Property Name="TelCmpCod" Type="Int16" />
+          <Property Name="CodigoDyna" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="MprEtgCon" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="MprCodUbi" Type="Int16" />
+          <Property Name="MprCtCod" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="MatCntRes" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="MprExcCmp" Type="Int16" />
+          <Property Name="MatUltMov" Type="DateTime" Precision="0" />
+          <Property Name="FacCCol" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="MprSubCod" Type="Int16" />
+        </EntityType>
+        <EntityType Name="MATMST1">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="MapCodMat" />
+            <PropertyRef Name="MprCodBod" />
+          </Key>
+          <Property Name="CIACOD" Type="Int16" Nullable="false" />
+          <Property Name="MapCodMat" Type="Int32" Nullable="false" />
+          <Property Name="MprCodBod" Type="Int16" Nullable="false" />
+          <Property Name="MprExiBod" Type="Decimal" Precision="11" Scale="4" />
+          <Property Name="MprBodCos" Type="Decimal" Precision="9" Scale="4" />
+          <Property Name="MprExiMax" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="MPrExiReo" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="MprExiMin" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="MprExiSts" Type="Int16" />
+        </EntityType>
+        <EntityType Name="MPRCOLOR">
+          <Key>
+            <PropertyRef Name="CiaCod" />
+            <PropertyRef Name="MprCodCol" />
+          </Key>
+          <Property Name="CiaCod" Type="Int16" Nullable="false" />
+          <Property Name="MprCodCol" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MprDesCol" Type="String" MaxLength="45" FixedLength="true" Unicode="false" />
+          <Property Name="MprColAX" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SUBCLASE">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="MprCodSCla" />
+          </Key>
+          <Property Name="CIACOD" Type="Int16" Nullable="false" />
+          <Property Name="MprCodSCla" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MprDesSCla" Type="String" MaxLength="45" FixedLength="true" Unicode="false" />
+          <Property Name="MprSClaSts" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MprSClaAX" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TELAR5">
+          <Key>
+            <PropertyRef Name="FacCodTel" />
+          </Key>
+          <Property Name="FacCodTel" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="FacCodGrut" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="FacDesTel" Type="String" MaxLength="44" FixedLength="true" Unicode="false" />
+          <Property Name="FacUltLin" Type="Int16" />
+          <Property Name="FacUltLStr" Type="Int16" />
+          <Property Name="ComposicionId" Type="Int32" />
+          <Property Name="TelDesVta" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="LBDATPROEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CATALOGSet" EntityType="Self.CATALOG" />
+          <EntitySet Name="CLASESet" EntityType="Self.CLASE" />
+          <EntitySet Name="FACCOLSet" EntityType="Self.FACCOL" />
+          <EntitySet Name="GRUTELSet" EntityType="Self.GRUTEL" />
+          <EntitySet Name="MATMSTSet" EntityType="Self.MATMST" />
+          <EntitySet Name="MATMST1Set" EntityType="Self.MATMST1" />
+          <EntitySet Name="MPRCOLORSet" EntityType="Self.MPRCOLOR" />
+          <EntitySet Name="SUBCLASESet" EntityType="Self.SUBCLASE" />
+          <EntitySet Name="TELAR5Set" EntityType="Self.TELAR5" />
+          <EntitySet Name="CNTPERIOSet" EntityType="LBDATPROModel.CNTPERIO" />
+          <EntitySet Name="MAEAR6Set" EntityType="LBDATPROModel.MAEAR6" />
+          <EntitySet Name="MAEAUSSet" EntityType="LBDATPROModel.MAEAUS" />
+          <EntitySet Name="CORPLASet" EntityType="LBDATPROModel.CORPLA" />
+          <EntitySet Name="CTPLANTASet" EntityType="LBDATPROModel.CTPLANTA" />
+          <EntitySet Name="CUTARC3Set" EntityType="LBDATPROModel.CUTARC3" />
+          <EntitySet Name="PATRONSet" EntityType="LBDATPROModel.PATRON" />
+          <EntitySet Name="PRDSTSSet" EntityType="LBDATPROModel.PRDSTS" />
+          <EntitySet Name="CTRABAJOSet" EntityType="LBDATPROModel.CTRABAJO" />
+          <EntitySet Name="ORDCENTRSet" EntityType="LBDATPROModel.ORDCENTR" />
+          <EntitySet Name="PRVMSTSet" EntityType="LBDATPROModel.PRVMST" />
+        </EntityContainer>
+        <EntityType Name="CNTPERIO">
+          <Key>
+            <PropertyRef Name="CiaCod" />
+            <PropertyRef Name="CntPANO" />
+            <PropertyRef Name="CntPMes" />
+            <PropertyRef Name="CntPFei" />
+            <PropertyRef Name="CntPFef" />
+          </Key>
+          <Property Name="CiaCod" Type="Int16" Nullable="false" />
+          <Property Name="CntPANO" Type="Int16" Nullable="false" />
+          <Property Name="CntPMes" Type="Int16" Nullable="false" />
+          <Property Name="CntPFei" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CntPFef" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CntPnome" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="CntEsta" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CtlCorrAnu" Type="Int32" />
+          <Property Name="CntReab" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CntPSEM" Type="Int16" />
+          <Property Name="CntSemSan" Type="Int16" />
+          <Property Name="CntVarBnc" Type="Int16" />
+          <Property Name="CntVarPrv" Type="Int16" />
+          <Property Name="CntVtaStsP" Type="Int16" />
+        </EntityType>
+        <EntityType Name="MAEAR6">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="AdpCodEmp" />
+          </Key>
+          <Property Name="CIACOD" Type="Int16" Nullable="false" />
+          <Property Name="AdpCodEmp" Type="Int32" Nullable="false" />
+          <Property Name="AdpCntEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpNomEmp" Type="String" MaxLength="22" FixedLength="true" Unicode="false" />
+          <Property Name="AdpAplEmp" Type="String" MaxLength="22" FixedLength="true" Unicode="false" />
+          <Property Name="AdpAlias" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="AdpDirEmp" Type="String" MaxLength="45" FixedLength="true" Unicode="false" />
+          <Property Name="AdpDirImp" Type="Int16" />
+          <Property Name="AdpNumTel" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="AdpDirNet" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="AdpFecIng" Type="DateTime" Precision="3" />
+          <Property Name="AdpHorIng" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="AdpFecRet" Type="DateTime" Precision="3" />
+          <Property Name="AdpFecNac" Type="DateTime" Precision="3" />
+          <Property Name="AdpCodDep" Type="Int16" />
+          <Property Name="AdpCodNac" Type="Int16" />
+          <Property Name="AdpCodTip" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpNumCed" Type="Decimal" Precision="14" Scale="0" />
+          <Property Name="AdpNumRtn" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+          <Property Name="AdpNumIhs" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="AdpNumSol" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+          <Property Name="AdpNumRap" Type="String" MaxLength="14" FixedLength="true" Unicode="false" />
+          <Property Name="AdpNumPol" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="AdpNomCyg" Type="String" MaxLength="28" FixedLength="true" Unicode="false" />
+          <Property Name="AdpNomPa1" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="AdpNomPa2" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="AdpCodCiv" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpCodEdu" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpCodFrm" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpEntEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpCodPro" Type="Int16" />
+          <Property Name="AdpCodDe2" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="AdpCodPue" Type="Int16" />
+          <Property Name="AdpCodSex" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpCodSkl" Type="Int16" />
+          <Property Name="AdpCodSup" Type="Int16" />
+          <Property Name="AdpSueBas" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="AdpStsEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpNumCue" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="AdpCodOcu" Type="Int16" />
+          <Property Name="AdpCodSec" Type="Int16" />
+          <Property Name="AdpCodSub" Type="Int16" />
+          <Property Name="AdpUsrGra" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="AdpFecGra" Type="DateTime" Precision="3" />
+          <Property Name="AdpHorGra" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="AdpCodPla" Type="Int16" />
+          <Property Name="AdpUsrRec" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="AdpFecRec" Type="DateTime" Precision="3" />
+          <Property Name="AdpHrsRec" Type="Int32" />
+          <Property Name="AdpEntUsr" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="PlsCodCur" Type="Int16" />
+          <Property Name="AdpPagIhs" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpPagRap" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpFrmVac" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpFecVac" Type="DateTime" Precision="3" />
+          <Property Name="AdpValVac" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="AdpAntVac" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="AdpNomRec" Type="String" MaxLength="34" FixedLength="true" Unicode="false" />
+          <Property Name="AdpPasBmp" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="AdpPasBm1" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="AdpPasBm2" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="AdpPasBm3" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="AdpPasBm4" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="AdpPasBm5" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="AdpPasBm6" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="AdpTipOpr" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpSemIni" Type="Int16" />
+          <Property Name="AdpSemFin" Type="Int16" />
+          <Property Name="AdpBonEsc" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpSueChq" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="AdpPreRet" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpDiaVac" Type="Int16" />
+          <Property Name="AdpArea01" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpArea02" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpArea03" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpArea04" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpArea05" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpArea06" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpArea07" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpArea08" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpArea09" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpArea10" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpArea11" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpArea12" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpArea13" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpArea14" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpCodGru" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpFecCon" Type="DateTime" Precision="3" />
+          <Property Name="AdpTipPla" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpConUsr" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="AdpUsrVal" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="AdpEfic" Type="Int16" />
+          <Property Name="AdpChange" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="AdpDateC" Type="DateTime" Precision="3" />
+          <Property Name="AdpActiv1" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="AdpActiv2" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="CodArea" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="CodSubPro" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ModECalFor" Type="Int16" />
+          <Property Name="ModEmpCal" Type="Int16" />
+          <Property Name="ModECalFin" Type="Int16" />
+          <Property Name="AdpComod" Type="Int16" />
+          <Property Name="AdpTipEmp" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpCamPla" Type="DateTime" Precision="3" />
+          <Property Name="AdpCamUsr" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="AdpEmpLiq" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdpMdCod" Type="Int16" />
+          <Property Name="AdpCodCiu" Type="Int16" />
+          <Property Name="AdpNoFer" Type="Int16" />
+          <Property Name="BncCod" Type="Int16" />
+          <Property Name="AdpCtaBco" Type="Int16" />
+          <Property Name="AdpUltLinA" Type="Int16" />
+          <Property Name="AdpISRHijo" Type="Int16" />
+          <Property Name="AdpISRCony" Type="Int16" />
+          <Property Name="AdpMonCod" Type="Int16" />
+          <Property Name="AdpCueNum" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="AdpPorCue" Type="Int16" />
+          <Property Name="AdpCuePor" Type="Int16" />
+          <Property Name="AdpMonCue" Type="Int16" />
+          <Property Name="AdpCueMon" Type="Int16" />
+          <Property Name="AdpTurno" Type="Int16" Nullable="false" />
+          <Property Name="NumPatrona" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="AdpRelMar" Type="Int16" />
+          <Property Name="AdpTipFch" Type="DateTime" Precision="3" />
+          <Property Name="AdpSMedico" Type="Int16" Nullable="false" />
+          <Property Name="AdpSVida" Type="Int16" Nullable="false" />
+          <Property Name="AdpSVehicu" Type="Int16" Nullable="false" />
+          <Property Name="AdpCodPai" Type="Int16" />
+          <Property Name="AdpEmpCom" Type="Int16" />
+          <Property Name="AdpIncCst" Type="Int16" />
+          <Property Name="PrdCrvId" Type="Int16" />
+          <Property Name="CodEmpReem" Type="Int32" />
+          <Property Name="PrdCrvSemI" Type="Int16" />
+          <Property Name="AdpEmpLac" Type="Int16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MAEAUS">
+          <Key>
+            <PropertyRef Name="CiaCod" />
+            <PropertyRef Name="AdpCodEmp" />
+            <PropertyRef Name="PlsCodPer" />
+            <PropertyRef Name="PlsTpoPls" />
+            <PropertyRef Name="PlsCodGrs" />
+            <PropertyRef Name="PlsNumSes" />
+            <PropertyRef Name="PlsAnoSes" />
+            <PropertyRef Name="PlsCodDia" />
+            <PropertyRef Name="PlsCodCon" />
+          </Key>
+          <Property Name="CiaCod" Type="Int16" Nullable="false" />
+          <Property Name="AdpCodEmp" Type="Int32" Nullable="false" />
+          <Property Name="PlsCodPer" Type="Int16" Nullable="false" />
+          <Property Name="PlsTpoPls" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PlsCodGrs" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PlsNumSes" Type="Int16" Nullable="false" />
+          <Property Name="PlsAnoSes" Type="Int16" Nullable="false" />
+          <Property Name="PlsCodDia" Type="Int16" Nullable="false" />
+          <Property Name="PlsCodCon" Type="Int16" Nullable="false" />
+          <Property Name="PlsValTem" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="PlsTipIng" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CORPLA">
+          <Key>
+            <PropertyRef Name="PrdCorFab" />
+          </Key>
+          <Property Name="PrdCorFab" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCorIni" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCorDes" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCorTck" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCorTip" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="MprCodBod" Type="Int16" />
+          <Property Name="PrdFabSts" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdHabilit" Type="Int16" />
+          <Property Name="PrdFabNew" Type="Int32" />
+          <Property Name="PrdCiaCod" Type="Int16" />
+          <Property Name="PrdCodPrv" Type="Int16" />
+          <Property Name="PrdPrvCla" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="PrdPrvUsu" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CTPLANTA">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="PrdAnoCor" />
+            <PropertyRef Name="PrdNumCor" />
+            <PropertyRef Name="PrdCtCod" />
+          </Key>
+          <Property Name="CIACOD" Type="Int16" Nullable="false" />
+          <Property Name="PrdAnoCor" Type="Int16" Nullable="false" />
+          <Property Name="PrdNumCor" Type="Int16" Nullable="false" />
+          <Property Name="PrdCtCod" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtFPlI" Type="DateTime" Precision="3" />
+          <Property Name="PrdCtFPlF" Type="DateTime" Precision="3" />
+          <Property Name="PrdCtPlCod" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtFOrI" Type="DateTime" Precision="3" />
+          <Property Name="PrdCtFOrF" Type="DateTime" Precision="3" />
+          <Property Name="PrdCtFPrI" Type="DateTime" Precision="3" />
+          <Property Name="PrdCtFPrF" Type="DateTime" Precision="3" />
+          <Property Name="PrdCtHrs" Type="Int16" />
+          <Property Name="PrdCtModP" Type="Int16" />
+          <Property Name="PrdCtSecP" Type="Int16" />
+          <Property Name="PrdCtModC" Type="Int16" />
+          <Property Name="PrdCtSecC" Type="Int16" />
+          <Property Name="PrdCtReser" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtAuto" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtFAuto" Type="DateTime" Precision="3" />
+          <Property Name="PrdCtORden" Type="Int16" />
+          <Property Name="PrdCtStsIm" Type="Int16" />
+        </EntityType>
+        <EntityType Name="CUTARC3">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="PrdNumCor" />
+            <PropertyRef Name="PrdAnoCor" />
+          </Key>
+          <Property Name="CIACOD" Type="Int16" Nullable="false" />
+          <Property Name="PrdNumCor" Type="Int16" Nullable="false" />
+          <Property Name="PrdAnoCor" Type="Int16" Nullable="false" />
+          <Property Name="PrdNumAli" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+          <Property Name="FacCodRef" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="FacCodTel" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="FacCCol" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdFecCor" Type="DateTime" Precision="3" />
+          <Property Name="PrdFeFCor" Type="DateTime" Precision="3" />
+          <Property Name="PrdFecBul" Type="DateTime" Precision="3" />
+          <Property Name="PrdFecCos" Type="DateTime" Precision="3" />
+          <Property Name="PrdFeFCos" Type="DateTime" Precision="3" />
+          <Property Name="PrdFecEsm" Type="DateTime" Precision="3" />
+          <Property Name="PrdStsCor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdStsCos" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdStsLav" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdStsEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdFeILav" Type="DateTime" Precision="3" />
+          <Property Name="PrdFeFLav" Type="DateTime" Precision="3" />
+          <Property Name="PrdFeIEmp" Type="DateTime" Precision="3" />
+          <Property Name="PrdFeFEmp" Type="DateTime" Precision="3" />
+          <Property Name="PrdTipCor" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCodPrd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCodRep" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdLotMue" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdFeIDes" Type="DateTime" Precision="3" />
+          <Property Name="PrdFeFDes" Type="DateTime" Precision="3" />
+          <Property Name="PrdFeIBor" Type="DateTime" Precision="3" />
+          <Property Name="PrdFeFBor" Type="DateTime" Precision="3" />
+          <Property Name="PrdEstCor" Type="DateTime" Precision="3" />
+          <Property Name="PrdEstBor" Type="DateTime" Precision="3" />
+          <Property Name="PrdEstCos" Type="DateTime" Precision="3" />
+          <Property Name="PrdEstDes" Type="DateTime" Precision="3" />
+          <Property Name="PrdEstLav" Type="DateTime" Precision="3" />
+          <Property Name="PrdEstEmp" Type="DateTime" Precision="3" />
+          <Property Name="PrdRecCos" Type="DateTime" Precision="3" />
+          <Property Name="PrdStsDes" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCorFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCosFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdLavFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdEmpFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdDesFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdBorFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdClasCo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdYdsUso" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="PrdObsCor" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="PrdUsuPre" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrdFecGra" Type="DateTime" Precision="3" />
+          <Property Name="PrdUsuVen" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrdUsuPrd" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrdFecVen" Type="DateTime" Precision="3" />
+          <Property Name="PrdFecPrd" Type="DateTime" Precision="3" />
+          <Property Name="PrdPesLot" Type="String" MaxLength="9" FixedLength="true" Unicode="false" />
+          <Property Name="PrdAjuste" Type="DateTime" Precision="3" />
+          <Property Name="PrdAUser" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCanApr" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="PrdTckCor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdTckCos" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdTckLav" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdTckEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdTckDes" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdTckBor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdStsCrt" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdStsDgt" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdStsBor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdStsPas" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdStPrel" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdFchPre" Type="DateTime" Precision="3" />
+          <Property Name="PrdFchLiq" Type="DateTime" Precision="3" />
+          <Property Name="PrdAlMac" Type="Int16" />
+          <Property Name="PrdUsrCo" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCodSem" Type="Int16" />
+          <Property Name="PrdFecCo" Type="DateTime" Precision="3" />
+          <Property Name="PrdCodTpo" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCodEda" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCodMod" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="PrdUndSld" Type="Int32" />
+          <Property Name="PrdUndFac" Type="Int32" />
+          <Property Name="PrdPlaLiq" Type="DateTime" Precision="3" />
+          <Property Name="PrdFecIns" Type="DateTime" Precision="3" />
+          <Property Name="PrdRecBor" Type="DateTime" Precision="3" />
+          <Property Name="PrdUsrRecB" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="PrdFSalEns" Type="DateTime" Precision="3" />
+          <Property Name="PrdUSalEns" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="PrdFRepLiq" Type="DateTime" Precision="3" />
+          <Property Name="PrdURepLiq" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="PrdValida" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdFecVal" Type="DateTime" Precision="3" />
+          <Property Name="PrdValida2" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdUsrVal" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrdHoBul" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdHBFe" Type="DateTime" Precision="3" />
+          <Property Name="PrdConsu" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdConFe" Type="DateTime" Precision="3" />
+          <Property Name="PrdFecEnt" Type="DateTime" Precision="3" />
+          <Property Name="PrdCodCli" Type="Int32" />
+          <Property Name="PrdTipOrd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdOmiNor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdFecOrd" Type="DateTime" Precision="3" />
+          <Property Name="PrdCodEsp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdSerCaj" Type="Int16" />
+          <Property Name="PrdFchPas" Type="DateTime" Precision="3" />
+          <Property Name="PrdHrsPas" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="PrdUsrPas" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrdStsReb" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdFchReb" Type="DateTime" Precision="3" />
+          <Property Name="PrdHrsReb" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="PrdUsrReb" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrdLavCos" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="PrdPlaId" Type="Int16" />
+          <Property Name="PrdPlaPl" Type="Int16" />
+          <Property Name="PrdInPla" Type="DateTime" Precision="3" />
+          <Property Name="PrdFiPla" Type="DateTime" Precision="3" />
+          <Property Name="PrdRIPla" Type="DateTime" Precision="3" />
+          <Property Name="PrdRFPla" Type="DateTime" Precision="3" />
+          <Property Name="PrdCorId" Type="Int16" />
+          <Property Name="PrdCorPl" Type="Int16" />
+          <Property Name="PrdInCor" Type="DateTime" Precision="3" />
+          <Property Name="PrdFiCor" Type="DateTime" Precision="3" />
+          <Property Name="PrdCosId" Type="Int16" />
+          <Property Name="PrdCosPl" Type="Int16" />
+          <Property Name="PrdInCos" Type="DateTime" Precision="3" />
+          <Property Name="PrdFiCos" Type="DateTime" Precision="3" />
+          <Property Name="PrdEmId" Type="Int16" />
+          <Property Name="PrdEmPl" Type="Int16" />
+          <Property Name="PrdInEm" Type="DateTime" Precision="3" />
+          <Property Name="PrdFiEm" Type="DateTime" Precision="3" />
+          <Property Name="PrdLaId" Type="Int16" />
+          <Property Name="PrdLaPl" Type="Int16" />
+          <Property Name="PrdInLa" Type="DateTime" Precision="3" />
+          <Property Name="PrdFiLa" Type="DateTime" Precision="3" />
+          <Property Name="PrdDeId" Type="Int16" />
+          <Property Name="PrdDePl" Type="Int16" />
+          <Property Name="PrdInDes" Type="DateTime" Precision="3" />
+          <Property Name="PrdFiDes" Type="DateTime" Precision="3" />
+          <Property Name="PrdBoId" Type="Int16" />
+          <Property Name="PrdBoPl" Type="Int16" />
+          <Property Name="PrdInBo" Type="DateTime" Precision="3" />
+          <Property Name="PrdFiBo" Type="DateTime" Precision="3" />
+          <Property Name="PrdLiquid" Type="DateTime" Precision="3" />
+          <Property Name="PrdStsPla" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AmPmPla" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AmPmCor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AmPmCos" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AmPmBor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AmPmDes" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AmPmLav" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AmPmEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="WipStsPla" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="WipStsCor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="WipStsBor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="WipStsCos" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="WipStsDes" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="WipStsLav" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="WipStsEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PlaAPPla" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PlaAPCor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PlaAPBor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PlaAPCos" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PlaAPDes" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PlaAPLav" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PlaAPEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ConMarker" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="IdealPla" Type="Int16" />
+          <Property Name="IdealCor" Type="Int16" />
+          <Property Name="IdealBor" Type="Int16" />
+          <Property Name="IdealCos" Type="Int16" />
+          <Property Name="IdealDes" Type="Int16" />
+          <Property Name="IdealLav" Type="Int16" />
+          <Property Name="IdealEmp" Type="Int16" />
+          <Property Name="PrdDura" Type="Int16" />
+          <Property Name="PrdStsHM" Type="Int16" />
+          <Property Name="PrdRecTel" Type="DateTime" Precision="3" />
+          <Property Name="PrdRecMar" Type="DateTime" Precision="3" />
+          <Property Name="PrdTipTon" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdStsOrd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdSalCor" Type="DateTime" Precision="3" />
+          <Property Name="PrdPriorid" Type="Int16" />
+          <Property Name="PrdAutoriz" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdDevSts" Type="Int16" />
+          <Property Name="PrdOrdAct" Type="Int16" Nullable="false" />
+          <Property Name="PrdPuntada" Type="Int32" />
+          <Property Name="PrdPuntFch" Type="DateTime" Precision="3" />
+          <Property Name="PrdPuntUsr" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrdMarMan" Type="DateTime" Precision="3" />
+          <Property Name="PrdCodArt" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="FacCodMdl" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdFecOri" Type="DateTime" Precision="3" />
+          <Property Name="PrdPlaOri" Type="DateTime" Precision="3" />
+          <Property Name="PrdTelVal" Type="Int16" />
+          <Property Name="PrdObCon" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PrdAnoDep" Type="Int16" />
+          <Property Name="PrdNumDep" Type="Int16" />
+          <Property Name="PrdPriCor" Type="Int16" />
+          <Property Name="PrdUsrOff" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="PrdFecOff" Type="DateTime" Precision="3" />
+          <Property Name="PrdOrdCer" Type="Int16" />
+          <Property Name="PrdSegCst" Type="Int16" />
+          <Property Name="PrdSegUsu" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrdSegFch" Type="DateTime" Precision="3" />
+          <Property Name="OrdRazCod" Type="Int32" />
+          <Property Name="OrdObserva" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="OrdUsrAutF" Type="DateTime" Precision="3" />
+          <Property Name="OrdUsrAutS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="OrdStsASeg" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdFecCTel" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="PrdUsuCTel" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="PrdFchCTel" Type="DateTime" Precision="3" />
+          <Property Name="OloStiloVe" Type="Int32" />
+          <Property Name="OrdRcpUsr" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="OrdRcpSts" Type="Int16" />
+          <Property Name="OrdRcpFec" Type="DateTime" Precision="3" />
+          <Property Name="OrdLavadoI" Type="Int32" />
+          <Property Name="PrdTckEti" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="OrdPrePes" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="OrdFchDifT" Type="DateTime" Precision="3" />
+          <Property Name="OrdUsrAutD" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="OrdAutDifT" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="OrdPreCost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="OrdFlexibl" Type="Int16" />
+          <Property Name="OrdTotUnd" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="FxTelaProduccion" Type="String" MaxLength="2" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="PrdTckEAh" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="OrdFecEnvC" Type="DateTime" Precision="3" />
+          <Property Name="OrdStsEnvC" Type="Int16" />
+          <Property Name="OrdPerLec" Type="Int16" />
+        </EntityType>
+        <EntityType Name="PATRON">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="PrdCodArt" />
+          </Key>
+          <Property Name="CIACOD" Type="Int16" Nullable="false" />
+          <Property Name="PrdCodArt" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCodDis" Type="Int16" />
+          <Property Name="FacCodEd" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="FacCodTpo" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdDscArt" Type="String" Nullable="false" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="PatSts" Type="Int16" Nullable="false" />
+          <Property Name="PrdPatU1" Type="Int16" />
+          <Property Name="PrdPatU2" Type="Int16" />
+          <Property Name="PrdPSgrPat" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="PrdCodDes" Type="Int16" />
+          <Property Name="PrdPatU3" Type="Int16" />
+          <Property Name="FacCodMar" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCstMax" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="PrdCalPat" Type="Int16" Nullable="false" />
+          <Property Name="PrdPatPier" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="PrdPatRued" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="PrdPatTiro" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCodAli" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="PatUltLin" Type="Int16" />
+          <Property Name="AxBaseId" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="AxTipoVarianteId" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+          <Property Name="PatInvSegu" Type="Int16" />
+        </EntityType>
+        <EntityType Name="PRDSTS">
+          <Key>
+            <PropertyRef Name="PrdStsCor" />
+          </Key>
+          <Property Name="PrdStsCor" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdSecSts" Type="Int16" />
+          <Property Name="PrdDesSts" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="PrdAreSts" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdAliCCos" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCTraba" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CTRABAJO">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="PrdCtCod" />
+          </Key>
+          <Property Name="CIACOD" Type="Int16" Nullable="false" />
+          <Property Name="PrdCtCod" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtDes" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtMod" Type="Int16" Nullable="false" />
+          <Property Name="PrdSecUse" Type="Int16" />
+          <Property Name="PrdCTWor" Type="Int16" />
+          <Property Name="PrdOrdImp" Type="Int16" />
+          <Property Name="PrdTroImp" Type="Int16" />
+          <Property Name="PrdCtOrd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtSts" Type="Int16" />
+          <Property Name="PrdImpCup" Type="Int16" />
+          <Property Name="PrdCtSupCo" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtAlias" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtTipEn" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtTipSa" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtEsEnt" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdSalCt" Type="Int16" />
+          <Property Name="PrdProEje" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtNew" Type="Int32" />
+          <Property Name="PrdCtGru" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtRFAB" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtRMOI" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtRMOD" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="CtEsqPago" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CCCodigo" Type="Int16" />
+          <Property Name="PrdCtTip" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="MOCCosto" Type="Decimal" Precision="10" Scale="4" />
+        </EntityType>
+        <EntityType Name="ORDCENTR">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="PrdNumCor" />
+            <PropertyRef Name="PrdAnoCor" />
+            <PropertyRef Name="PrdCtCod" />
+            <PropertyRef Name="PrdSecCod" />
+            <PropertyRef Name="PrdCtBulto" />
+          </Key>
+          <Property Name="CIACOD" Type="Int16" Nullable="false" />
+          <Property Name="PrdNumCor" Type="Int16" Nullable="false" />
+          <Property Name="PrdAnoCor" Type="Int16" Nullable="false" />
+          <Property Name="PrdCtCod" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PrdSecCod" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtBulto" Type="Int16" Nullable="false" />
+          <Property Name="PrdCtSup" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrdEstSec" Type="Int16" />
+          <Property Name="PrdCtModu" Type="Int16" />
+          <Property Name="PrdCtFecI" Type="DateTime" Precision="3" />
+          <Property Name="PrdCtFecF" Type="DateTime" Precision="3" />
+          <Property Name="PrdLecMan" Type="Int16" />
+          <Property Name="PrdCtAud" Type="Int16" />
+          <Property Name="PrdCtRech" Type="Int16" />
+          <Property Name="PrdDesRech" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="PrdFecRech" Type="DateTime" Precision="3" />
+          <Property Name="PrdRecUsr" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCodRec" Type="Int16" />
+          <Property Name="PrdCodGru" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCodOpr" Type="Int16" />
+          <Property Name="PRdCtUsrSa" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtUsrEn" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrdCtKanba" Type="Int16" />
+        </EntityType>
+        <EntityType Name="PRVMST">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="PrvCod" />
+          </Key>
+          <Property Name="CIACOD" Type="Int16" Nullable="false" />
+          <Property Name="PrvCod" Type="Int16" Nullable="false" />
+          <Property Name="PrvNom" Type="String" MaxLength="55" FixedLength="true" Unicode="false" />
+          <Property Name="PrvForPag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrvNomCor" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="PrvDir1" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="PrvDir2" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="PrvTel1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PrvTel2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PrvFax" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PrvTip" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrvDiasV" Type="Int16" />
+          <Property Name="PrvCtaCont" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="PrvCont" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="PrvCorrEl" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="AdpCodPai" Type="Int16" />
+          <Property Name="AdpCodCiu" Type="Int16" />
+          <Property Name="PrvSaldo" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PrvBcoMonC" Type="Int16" />
+          <Property Name="PrvSolChq" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrvParVar" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PrvRTN" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="PrvCtaMTr" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="PrvNRTN" Type="Decimal" Precision="14" Scale="0" />
+          <Property Name="PrvCtaCob" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="PrvRefBAC" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrvRetPAC" Type="Int16" />
+          <Property Name="PrvRetISV" Type="Int16" />
+          <Property Name="PrvCodAX" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="PrvCodDPI" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="PrvUltTrn" Type="DateTime" Precision="3" />
+          <Property Name="PrvCodGru" Type="Int16" />
+          <Property Name="PagBcoMonC" Type="Int16" />
+          <Property Name="BncCod" Type="Int16" />
+          <Property Name="PrvBcoCta" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="PrvCorr2" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="PrvRetA50" Type="Int16" />
+          <Property Name="PrvNoAX" Type="Int16" />
+          <Property Name="PrvREVen" Type="DateTime" Precision="3" />
+          <Property Name="PrvResExo" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="PrvCtaPro" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LBDATPROModelStoreContainer" CdmEntityContainer="LBDATPROEntities">
+          <EntitySetMapping Name="CATALOGSet">
+            <EntityTypeMapping TypeName="LBDATPROModel.CATALOG">
+              <MappingFragment StoreEntitySet="CATALOG">
+                <ScalarProperty Name="MatGrpCod" ColumnName="MatGrpCod" />
+                <ScalarProperty Name="MatGrpDes" ColumnName="MatGrpDes" />
+                <ScalarProperty Name="MapCodMat" ColumnName="MapCodMat" />
+                <ScalarProperty Name="CataDesLar" ColumnName="CataDesLar" />
+                <ScalarProperty Name="CataDesCor" ColumnName="CataDesCor" />
+                <ScalarProperty Name="MedCompra" ColumnName="MedCompra" />
+                <ScalarProperty Name="MedConsum" ColumnName="MedConsum" />
+                <ScalarProperty Name="TipRCod" ColumnName="TipRCod" />
+                <ScalarProperty Name="CataGru" ColumnName="CataGru" />
+                <ScalarProperty Name="MapCtaCont" ColumnName="MapCtaCont" />
+                <ScalarProperty Name="MapCtaVF" ColumnName="MapCtaVF" />
+                <ScalarProperty Name="MapCtaCon2" ColumnName="MapCtaCon2" />
+                <ScalarProperty Name="MapNum1Rep" ColumnName="MapNum1Rep" />
+                <ScalarProperty Name="PrdCodTel" ColumnName="PrdCodTel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CLASESet">
+            <EntityTypeMapping TypeName="LBDATPROModel.CLASE">
+              <MappingFragment StoreEntitySet="CLASE">
+                <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+                <ScalarProperty Name="MprCodCla" ColumnName="MprCodCla" />
+                <ScalarProperty Name="MprCanInv" ColumnName="MprCanInv" />
+                <ScalarProperty Name="MprDesCla" ColumnName="MprDesCla" />
+                <ScalarProperty Name="MprCtaCon" ColumnName="MprCtaCon" />
+                <ScalarProperty Name="MapRotBaj" ColumnName="MapRotBaj" />
+                <ScalarProperty Name="MapRotSin" ColumnName="MapRotSin" />
+                <ScalarProperty Name="MprClaSts" ColumnName="MprClaSts" />
+                <ScalarProperty Name="MprClaDet" ColumnName="MprClaDet" />
+                <ScalarProperty Name="MprClaDia" ColumnName="MprClaDia" />
+                <ScalarProperty Name="MprCodAgr" ColumnName="MprCodAgr" />
+                <ScalarProperty Name="MprClaSig" ColumnName="MprClaSig" />
+                <ScalarProperty Name="MprGrpNom" ColumnName="MprGrpNom" />
+                <ScalarProperty Name="MprGrpCla" ColumnName="MprGrpCla" />
+                <ScalarProperty Name="MprClaAX" ColumnName="MprClaAX" />
+                <ScalarProperty Name="MprClaDL" ColumnName="MprClaDL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FACCOLSet">
+            <EntityTypeMapping TypeName="LBDATPROModel.FACCOL">
+              <MappingFragment StoreEntitySet="FACCOL">
+                <ScalarProperty Name="FacIDCol" ColumnName="FacIDCol" />
+                <ScalarProperty Name="CiaCod" ColumnName="CiaCod" />
+                <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
+                <ScalarProperty Name="FacDCol" ColumnName="FacDCol" />
+                <ScalarProperty Name="AxColorId01" ColumnName="AxColorId01" />
+                <ScalarProperty Name="AxColorId02" ColumnName="AxColorId02" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRUTELSet">
+            <EntityTypeMapping TypeName="LBDATPROModel.GRUTEL">
+              <MappingFragment StoreEntitySet="GRUTEL">
+                <ScalarProperty Name="FacCodGrut" ColumnName="FacCodGrut" />
+                <ScalarProperty Name="FacDesGrut" ColumnName="FacDesGrut" />
+                <ScalarProperty Name="FacGruUltN" ColumnName="FacGruUltN" />
+                <ScalarProperty Name="GruSts" ColumnName="GruSts" />
+                <ScalarProperty Name="FacReposo" ColumnName="FacReposo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MATMSTSet">
+            <EntityTypeMapping TypeName="LBDATPROModel.MATMST">
+              <MappingFragment StoreEntitySet="MATMST">
+                <ScalarProperty Name="MprSubCod" ColumnName="MprSubCod" />
+                <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+                <ScalarProperty Name="MapCodMat" ColumnName="MapCodMat" />
+                <ScalarProperty Name="MapCodAlt" ColumnName="MapCodAlt" />
+                <ScalarProperty Name="FacCodMar" ColumnName="FacCodMar" />
+                <ScalarProperty Name="FacCodTpo" ColumnName="FacCodTpo" />
+                <ScalarProperty Name="MprCodCla" ColumnName="MprCodCla" />
+                <ScalarProperty Name="MprCodSCla" ColumnName="MprCodSCla" />
+                <ScalarProperty Name="MprCodRef" ColumnName="MprCodRef" />
+                <ScalarProperty Name="MprCodCol" ColumnName="MprCodCol" />
+                <ScalarProperty Name="MprCodTam" ColumnName="MprCodTam" />
+                <ScalarProperty Name="MapFecMat" ColumnName="MapFecMat" />
+                <ScalarProperty Name="MatCodTon" ColumnName="MatCodTon" />
+                <ScalarProperty Name="MapCosProm" ColumnName="MapCosProm" />
+                <ScalarProperty Name="MapCanExis" ColumnName="MapCanExis" />
+                <ScalarProperty Name="MapCanExi1" ColumnName="MapCanExi1" />
+                <ScalarProperty Name="MapCanExi2" ColumnName="MapCanExi2" />
+                <ScalarProperty Name="MapCanExi3" ColumnName="MapCanExi3" />
+                <ScalarProperty Name="MapCanExi4" ColumnName="MapCanExi4" />
+                <ScalarProperty Name="MapSalAntU" ColumnName="MapSalAntU" />
+                <ScalarProperty Name="MapEntraU" ColumnName="MapEntraU" />
+                <ScalarProperty Name="MapSalidU" ColumnName="MapSalidU" />
+                <ScalarProperty Name="MapSalActU" ColumnName="MapSalActU" />
+                <ScalarProperty Name="MapSalAntV" ColumnName="MapSalAntV" />
+                <ScalarProperty Name="MapEntraV" ColumnName="MapEntraV" />
+                <ScalarProperty Name="MapSalidV" ColumnName="MapSalidV" />
+                <ScalarProperty Name="MapSalActV" ColumnName="MapSalActV" />
+                <ScalarProperty Name="MapRanMin" ColumnName="MapRanMin" />
+                <ScalarProperty Name="MapPorDes" ColumnName="MapPorDes" />
+                <ScalarProperty Name="MapPorStd" ColumnName="MapPorStd" />
+                <ScalarProperty Name="MapUbi" ColumnName="MapUbi" />
+                <ScalarProperty Name="MapRepTCa" ColumnName="MapRepTCa" />
+                <ScalarProperty Name="RepNumPag" ColumnName="RepNumPag" />
+                <ScalarProperty Name="FacCodTel" ColumnName="FacCodTel" />
+                <ScalarProperty Name="PapLinCod" ColumnName="PapLinCod" />
+                <ScalarProperty Name="MapNumRep" ColumnName="MapNumRep" />
+                <ScalarProperty Name="MapRepDia" ColumnName="MapRepDia" />
+                <ScalarProperty Name="MapRepDie" ColumnName="MapRepDie" />
+                <ScalarProperty Name="MapRepTam" ColumnName="MapRepTam" />
+                <ScalarProperty Name="RepCodMar" ColumnName="RepCodMar" />
+                <ScalarProperty Name="RepTipCat" ColumnName="RepTipCat" />
+                <ScalarProperty Name="RepTipMaq" ColumnName="RepTipMaq" />
+                <ScalarProperty Name="MapRanMin2" ColumnName="MapRanMin2" />
+                <ScalarProperty Name="RepBodCod" ColumnName="RepBodCod" />
+                <ScalarProperty Name="MprUbiEst" ColumnName="MprUbiEst" />
+                <ScalarProperty Name="MprUbiRak" ColumnName="MprUbiRak" />
+                <ScalarProperty Name="MapMatSts" ColumnName="MapMatSts" />
+                <ScalarProperty Name="PrdCodDis" ColumnName="PrdCodDis" />
+                <ScalarProperty Name="CmpColCod" ColumnName="CmpColCod" />
+                <ScalarProperty Name="CmpTexCod" ColumnName="CmpTexCod" />
+                <ScalarProperty Name="MapReaSts" ColumnName="MapReaSts" />
+                <ScalarProperty Name="MapFecIng" ColumnName="MapFecIng" />
+                <ScalarProperty Name="MapFecCre" ColumnName="MapFecCre" />
+                <ScalarProperty Name="MapFecCad" ColumnName="MapFecCad" />
+                <ScalarProperty Name="CmpTelPes" ColumnName="CmpTelPes" />
+                <ScalarProperty Name="CmpTelCom" ColumnName="CmpTelCom" />
+                <ScalarProperty Name="MprCodArt" ColumnName="MprCodArt" />
+                <ScalarProperty Name="MprCodMdl" ColumnName="MprCodMdl" />
+                <ScalarProperty Name="MprCodTel" ColumnName="MprCodTel" />
+                <ScalarProperty Name="MprCodLav" ColumnName="MprCodLav" />
+                <ScalarProperty Name="MprCCol" ColumnName="MprCCol" />
+                <ScalarProperty Name="MprNumTal" ColumnName="MprNumTal" />
+                <ScalarProperty Name="MprCodDim" ColumnName="MprCodDim" />
+                <ScalarProperty Name="MapLoopSiz" ColumnName="MapLoopSiz" />
+                <ScalarProperty Name="MprMatSig" ColumnName="MprMatSig" />
+                <ScalarProperty Name="TipRCod" ColumnName="TipRCod" />
+                <ScalarProperty Name="MapEntAdd" ColumnName="MapEntAdd" />
+                <ScalarProperty Name="TelTipCod" ColumnName="TelTipCod" />
+                <ScalarProperty Name="TelTenCod" ColumnName="TelTenCod" />
+                <ScalarProperty Name="TelTejCod" ColumnName="TelTejCod" />
+                <ScalarProperty Name="TelAcbCod" ColumnName="TelAcbCod" />
+                <ScalarProperty Name="TelCmpCod" ColumnName="TelCmpCod" />
+                <ScalarProperty Name="CodigoDyna" ColumnName="CodigoDyna" />
+                <ScalarProperty Name="MprEtgCon" ColumnName="MprEtgCon" />
+                <ScalarProperty Name="MprCodUbi" ColumnName="MprCodUbi" />
+                <ScalarProperty Name="MprCtCod" ColumnName="MprCtCod" />
+                <ScalarProperty Name="MatCntRes" ColumnName="MatCntRes" />
+                <ScalarProperty Name="MprExcCmp" ColumnName="MprExcCmp" />
+                <ScalarProperty Name="MatUltMov" ColumnName="MatUltMov" />
+                <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MATMST1Set">
+            <EntityTypeMapping TypeName="LBDATPROModel.MATMST1">
+              <MappingFragment StoreEntitySet="MATMST1">
+                <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+                <ScalarProperty Name="MapCodMat" ColumnName="MapCodMat" />
+                <ScalarProperty Name="MprCodBod" ColumnName="MprCodBod" />
+                <ScalarProperty Name="MprExiBod" ColumnName="MprExiBod" />
+                <ScalarProperty Name="MprBodCos" ColumnName="MprBodCos" />
+                <ScalarProperty Name="MprExiMax" ColumnName="MprExiMax" />
+                <ScalarProperty Name="MPrExiReo" ColumnName="MPrExiReo" />
+                <ScalarProperty Name="MprExiMin" ColumnName="MprExiMin" />
+                <ScalarProperty Name="MprExiSts" ColumnName="MprExiSts" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MPRCOLORSet">
+            <EntityTypeMapping TypeName="LBDATPROModel.MPRCOLOR">
+              <MappingFragment StoreEntitySet="MPRCOLOR">
+                <ScalarProperty Name="CiaCod" ColumnName="CiaCod" />
+                <ScalarProperty Name="MprCodCol" ColumnName="MprCodCol" />
+                <ScalarProperty Name="MprDesCol" ColumnName="MprDesCol" />
+                <ScalarProperty Name="MprColAX" ColumnName="MprColAX" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SUBCLASESet">
+            <EntityTypeMapping TypeName="LBDATPROModel.SUBCLASE">
+              <MappingFragment StoreEntitySet="SUBCLASE">
+                <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+                <ScalarProperty Name="MprCodSCla" ColumnName="MprCodSCla" />
+                <ScalarProperty Name="MprDesSCla" ColumnName="MprDesSCla" />
+                <ScalarProperty Name="MprSClaSts" ColumnName="MprSClaSts" />
+                <ScalarProperty Name="MprSClaAX" ColumnName="MprSClaAX" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TELAR5Set">
+            <EntityTypeMapping TypeName="LBDATPROModel.TELAR5">
+              <MappingFragment StoreEntitySet="TELAR5">
+                <ScalarProperty Name="FacCodTel" ColumnName="FacCodTel" />
+                <ScalarProperty Name="FacCodGrut" ColumnName="FacCodGrut" />
+                <ScalarProperty Name="FacDesTel" ColumnName="FacDesTel" />
+                <ScalarProperty Name="FacUltLin" ColumnName="FacUltLin" />
+                <ScalarProperty Name="FacUltLStr" ColumnName="FacUltLStr" />
+                <ScalarProperty Name="ComposicionId" ColumnName="ComposicionId" />
+                <ScalarProperty Name="TelDesVta" ColumnName="TelDesVta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CNTPERIOSet">
+            <EntityTypeMapping TypeName="LBDATPROModel.CNTPERIO">
+              <MappingFragment StoreEntitySet="CNTPERIO">
+                <ScalarProperty Name="CntVtaStsP" ColumnName="CntVtaStsP" />
+                <ScalarProperty Name="CntVarPrv" ColumnName="CntVarPrv" />
+                <ScalarProperty Name="CntVarBnc" ColumnName="CntVarBnc" />
+                <ScalarProperty Name="CntSemSan" ColumnName="CntSemSan" />
+                <ScalarProperty Name="CntPSEM" ColumnName="CntPSEM" />
+                <ScalarProperty Name="CntReab" ColumnName="CntReab" />
+                <ScalarProperty Name="CtlCorrAnu" ColumnName="CtlCorrAnu" />
+                <ScalarProperty Name="CntEsta" ColumnName="CntEsta" />
+                <ScalarProperty Name="CntPnome" ColumnName="CntPnome" />
+                <ScalarProperty Name="CntPFef" ColumnName="CntPFef" />
+                <ScalarProperty Name="CntPFei" ColumnName="CntPFei" />
+                <ScalarProperty Name="CntPMes" ColumnName="CntPMes" />
+                <ScalarProperty Name="CntPANO" ColumnName="CntPANO" />
+                <ScalarProperty Name="CiaCod" ColumnName="CiaCod" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MAEAR6Set">
+            <EntityTypeMapping TypeName="LBDATPROModel.MAEAR6">
+              <MappingFragment StoreEntitySet="MAEAR6">
+                <ScalarProperty Name="AdpEmpLac" ColumnName="AdpEmpLac" />
+                <ScalarProperty Name="PrdCrvSemI" ColumnName="PrdCrvSemI" />
+                <ScalarProperty Name="CodEmpReem" ColumnName="CodEmpReem" />
+                <ScalarProperty Name="PrdCrvId" ColumnName="PrdCrvId" />
+                <ScalarProperty Name="AdpIncCst" ColumnName="AdpIncCst" />
+                <ScalarProperty Name="AdpEmpCom" ColumnName="AdpEmpCom" />
+                <ScalarProperty Name="AdpCodPai" ColumnName="AdpCodPai" />
+                <ScalarProperty Name="AdpSVehicu" ColumnName="AdpSVehicu" />
+                <ScalarProperty Name="AdpSVida" ColumnName="AdpSVida" />
+                <ScalarProperty Name="AdpSMedico" ColumnName="AdpSMedico" />
+                <ScalarProperty Name="AdpTipFch" ColumnName="AdpTipFch" />
+                <ScalarProperty Name="AdpRelMar" ColumnName="AdpRelMar" />
+                <ScalarProperty Name="NumPatrona" ColumnName="NumPatrona" />
+                <ScalarProperty Name="AdpTurno" ColumnName="AdpTurno" />
+                <ScalarProperty Name="AdpCueMon" ColumnName="AdpCueMon" />
+                <ScalarProperty Name="AdpMonCue" ColumnName="AdpMonCue" />
+                <ScalarProperty Name="AdpCuePor" ColumnName="AdpCuePor" />
+                <ScalarProperty Name="AdpPorCue" ColumnName="AdpPorCue" />
+                <ScalarProperty Name="AdpCueNum" ColumnName="AdpCueNum" />
+                <ScalarProperty Name="AdpMonCod" ColumnName="AdpMonCod" />
+                <ScalarProperty Name="AdpISRCony" ColumnName="AdpISRCony" />
+                <ScalarProperty Name="AdpISRHijo" ColumnName="AdpISRHijo" />
+                <ScalarProperty Name="AdpUltLinA" ColumnName="AdpUltLinA" />
+                <ScalarProperty Name="AdpCtaBco" ColumnName="AdpCtaBco" />
+                <ScalarProperty Name="BncCod" ColumnName="BncCod" />
+                <ScalarProperty Name="AdpNoFer" ColumnName="AdpNoFer" />
+                <ScalarProperty Name="AdpCodCiu" ColumnName="AdpCodCiu" />
+                <ScalarProperty Name="AdpMdCod" ColumnName="AdpMdCod" />
+                <ScalarProperty Name="AdpEmpLiq" ColumnName="AdpEmpLiq" />
+                <ScalarProperty Name="AdpCamUsr" ColumnName="AdpCamUsr" />
+                <ScalarProperty Name="AdpCamPla" ColumnName="AdpCamPla" />
+                <ScalarProperty Name="AdpTipEmp" ColumnName="AdpTipEmp" />
+                <ScalarProperty Name="AdpComod" ColumnName="AdpComod" />
+                <ScalarProperty Name="ModECalFin" ColumnName="ModECalFin" />
+                <ScalarProperty Name="ModEmpCal" ColumnName="ModEmpCal" />
+                <ScalarProperty Name="ModECalFor" ColumnName="ModECalFor" />
+                <ScalarProperty Name="CodSubPro" ColumnName="CodSubPro" />
+                <ScalarProperty Name="CodArea" ColumnName="CodArea" />
+                <ScalarProperty Name="AdpActiv2" ColumnName="AdpActiv2" />
+                <ScalarProperty Name="AdpActiv1" ColumnName="AdpActiv1" />
+                <ScalarProperty Name="AdpDateC" ColumnName="AdpDateC" />
+                <ScalarProperty Name="AdpChange" ColumnName="AdpChange" />
+                <ScalarProperty Name="AdpEfic" ColumnName="AdpEfic" />
+                <ScalarProperty Name="AdpUsrVal" ColumnName="AdpUsrVal" />
+                <ScalarProperty Name="AdpConUsr" ColumnName="AdpConUsr" />
+                <ScalarProperty Name="AdpTipPla" ColumnName="AdpTipPla" />
+                <ScalarProperty Name="AdpFecCon" ColumnName="AdpFecCon" />
+                <ScalarProperty Name="AdpCodGru" ColumnName="AdpCodGru" />
+                <ScalarProperty Name="AdpArea14" ColumnName="AdpArea14" />
+                <ScalarProperty Name="AdpArea13" ColumnName="AdpArea13" />
+                <ScalarProperty Name="AdpArea12" ColumnName="AdpArea12" />
+                <ScalarProperty Name="AdpArea11" ColumnName="AdpArea11" />
+                <ScalarProperty Name="AdpArea10" ColumnName="AdpArea10" />
+                <ScalarProperty Name="AdpArea09" ColumnName="AdpArea09" />
+                <ScalarProperty Name="AdpArea08" ColumnName="AdpArea08" />
+                <ScalarProperty Name="AdpArea07" ColumnName="AdpArea07" />
+                <ScalarProperty Name="AdpArea06" ColumnName="AdpArea06" />
+                <ScalarProperty Name="AdpArea05" ColumnName="AdpArea05" />
+                <ScalarProperty Name="AdpArea04" ColumnName="AdpArea04" />
+                <ScalarProperty Name="AdpArea03" ColumnName="AdpArea03" />
+                <ScalarProperty Name="AdpArea02" ColumnName="AdpArea02" />
+                <ScalarProperty Name="AdpArea01" ColumnName="AdpArea01" />
+                <ScalarProperty Name="AdpDiaVac" ColumnName="AdpDiaVac" />
+                <ScalarProperty Name="AdpPreRet" ColumnName="AdpPreRet" />
+                <ScalarProperty Name="AdpSueChq" ColumnName="AdpSueChq" />
+                <ScalarProperty Name="AdpBonEsc" ColumnName="AdpBonEsc" />
+                <ScalarProperty Name="AdpSemFin" ColumnName="AdpSemFin" />
+                <ScalarProperty Name="AdpSemIni" ColumnName="AdpSemIni" />
+                <ScalarProperty Name="AdpTipOpr" ColumnName="AdpTipOpr" />
+                <ScalarProperty Name="AdpPasBm6" ColumnName="AdpPasBm6" />
+                <ScalarProperty Name="AdpPasBm5" ColumnName="AdpPasBm5" />
+                <ScalarProperty Name="AdpPasBm4" ColumnName="AdpPasBm4" />
+                <ScalarProperty Name="AdpPasBm3" ColumnName="AdpPasBm3" />
+                <ScalarProperty Name="AdpPasBm2" ColumnName="AdpPasBm2" />
+                <ScalarProperty Name="AdpPasBm1" ColumnName="AdpPasBm1" />
+                <ScalarProperty Name="AdpPasBmp" ColumnName="AdpPasBmp" />
+                <ScalarProperty Name="AdpNomRec" ColumnName="AdpNomRec" />
+                <ScalarProperty Name="AdpAntVac" ColumnName="AdpAntVac" />
+                <ScalarProperty Name="AdpValVac" ColumnName="AdpValVac" />
+                <ScalarProperty Name="AdpFecVac" ColumnName="AdpFecVac" />
+                <ScalarProperty Name="AdpFrmVac" ColumnName="AdpFrmVac" />
+                <ScalarProperty Name="AdpPagRap" ColumnName="AdpPagRap" />
+                <ScalarProperty Name="AdpPagIhs" ColumnName="AdpPagIhs" />
+                <ScalarProperty Name="PlsCodCur" ColumnName="PlsCodCur" />
+                <ScalarProperty Name="AdpEntUsr" ColumnName="AdpEntUsr" />
+                <ScalarProperty Name="AdpHrsRec" ColumnName="AdpHrsRec" />
+                <ScalarProperty Name="AdpFecRec" ColumnName="AdpFecRec" />
+                <ScalarProperty Name="AdpUsrRec" ColumnName="AdpUsrRec" />
+                <ScalarProperty Name="AdpCodPla" ColumnName="AdpCodPla" />
+                <ScalarProperty Name="AdpHorGra" ColumnName="AdpHorGra" />
+                <ScalarProperty Name="AdpFecGra" ColumnName="AdpFecGra" />
+                <ScalarProperty Name="AdpUsrGra" ColumnName="AdpUsrGra" />
+                <ScalarProperty Name="AdpCodSub" ColumnName="AdpCodSub" />
+                <ScalarProperty Name="AdpCodSec" ColumnName="AdpCodSec" />
+                <ScalarProperty Name="AdpCodOcu" ColumnName="AdpCodOcu" />
+                <ScalarProperty Name="AdpNumCue" ColumnName="AdpNumCue" />
+                <ScalarProperty Name="AdpStsEmp" ColumnName="AdpStsEmp" />
+                <ScalarProperty Name="AdpSueBas" ColumnName="AdpSueBas" />
+                <ScalarProperty Name="AdpCodSup" ColumnName="AdpCodSup" />
+                <ScalarProperty Name="AdpCodSkl" ColumnName="AdpCodSkl" />
+                <ScalarProperty Name="AdpCodSex" ColumnName="AdpCodSex" />
+                <ScalarProperty Name="AdpCodPue" ColumnName="AdpCodPue" />
+                <ScalarProperty Name="AdpCodDe2" ColumnName="AdpCodDe2" />
+                <ScalarProperty Name="AdpCodPro" ColumnName="AdpCodPro" />
+                <ScalarProperty Name="AdpEntEmp" ColumnName="AdpEntEmp" />
+                <ScalarProperty Name="AdpCodFrm" ColumnName="AdpCodFrm" />
+                <ScalarProperty Name="AdpCodEdu" ColumnName="AdpCodEdu" />
+                <ScalarProperty Name="AdpCodCiv" ColumnName="AdpCodCiv" />
+                <ScalarProperty Name="AdpNomPa2" ColumnName="AdpNomPa2" />
+                <ScalarProperty Name="AdpNomPa1" ColumnName="AdpNomPa1" />
+                <ScalarProperty Name="AdpNomCyg" ColumnName="AdpNomCyg" />
+                <ScalarProperty Name="AdpNumPol" ColumnName="AdpNumPol" />
+                <ScalarProperty Name="AdpNumRap" ColumnName="AdpNumRap" />
+                <ScalarProperty Name="AdpNumSol" ColumnName="AdpNumSol" />
+                <ScalarProperty Name="AdpNumIhs" ColumnName="AdpNumIhs" />
+                <ScalarProperty Name="AdpNumRtn" ColumnName="AdpNumRtn" />
+                <ScalarProperty Name="AdpNumCed" ColumnName="AdpNumCed" />
+                <ScalarProperty Name="AdpCodTip" ColumnName="AdpCodTip" />
+                <ScalarProperty Name="AdpCodNac" ColumnName="AdpCodNac" />
+                <ScalarProperty Name="AdpCodDep" ColumnName="AdpCodDep" />
+                <ScalarProperty Name="AdpFecNac" ColumnName="AdpFecNac" />
+                <ScalarProperty Name="AdpFecRet" ColumnName="AdpFecRet" />
+                <ScalarProperty Name="AdpHorIng" ColumnName="AdpHorIng" />
+                <ScalarProperty Name="AdpFecIng" ColumnName="AdpFecIng" />
+                <ScalarProperty Name="AdpDirNet" ColumnName="AdpDirNet" />
+                <ScalarProperty Name="AdpNumTel" ColumnName="AdpNumTel" />
+                <ScalarProperty Name="AdpDirImp" ColumnName="AdpDirImp" />
+                <ScalarProperty Name="AdpDirEmp" ColumnName="AdpDirEmp" />
+                <ScalarProperty Name="AdpAlias" ColumnName="AdpAlias" />
+                <ScalarProperty Name="AdpAplEmp" ColumnName="AdpAplEmp" />
+                <ScalarProperty Name="AdpNomEmp" ColumnName="AdpNomEmp" />
+                <ScalarProperty Name="AdpCntEmp" ColumnName="AdpCntEmp" />
+                <ScalarProperty Name="AdpCodEmp" ColumnName="AdpCodEmp" />
+                <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MAEAUSSet">
+            <EntityTypeMapping TypeName="LBDATPROModel.MAEAUS">
+              <MappingFragment StoreEntitySet="MAEAUS">
+                <ScalarProperty Name="PlsTipIng" ColumnName="PlsTipIng" />
+                <ScalarProperty Name="PlsValTem" ColumnName="PlsValTem" />
+                <ScalarProperty Name="PlsCodCon" ColumnName="PlsCodCon" />
+                <ScalarProperty Name="PlsCodDia" ColumnName="PlsCodDia" />
+                <ScalarProperty Name="PlsAnoSes" ColumnName="PlsAnoSes" />
+                <ScalarProperty Name="PlsNumSes" ColumnName="PlsNumSes" />
+                <ScalarProperty Name="PlsCodGrs" ColumnName="PlsCodGrs" />
+                <ScalarProperty Name="PlsTpoPls" ColumnName="PlsTpoPls" />
+                <ScalarProperty Name="PlsCodPer" ColumnName="PlsCodPer" />
+                <ScalarProperty Name="AdpCodEmp" ColumnName="AdpCodEmp" />
+                <ScalarProperty Name="CiaCod" ColumnName="CiaCod" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CORPLASet">
+            <EntityTypeMapping TypeName="LBDATPROModel.CORPLA">
+              <MappingFragment StoreEntitySet="CORPLA">
+                <ScalarProperty Name="PrdPrvUsu" ColumnName="PrdPrvUsu" />
+                <ScalarProperty Name="PrdPrvCla" ColumnName="PrdPrvCla" />
+                <ScalarProperty Name="PrdCodPrv" ColumnName="PrdCodPrv" />
+                <ScalarProperty Name="PrdCiaCod" ColumnName="PrdCiaCod" />
+                <ScalarProperty Name="PrdFabNew" ColumnName="PrdFabNew" />
+                <ScalarProperty Name="PrdHabilit" ColumnName="PrdHabilit" />
+                <ScalarProperty Name="PrdFabSts" ColumnName="PrdFabSts" />
+                <ScalarProperty Name="MprCodBod" ColumnName="MprCodBod" />
+                <ScalarProperty Name="PrdCorTip" ColumnName="PrdCorTip" />
+                <ScalarProperty Name="PrdCorTck" ColumnName="PrdCorTck" />
+                <ScalarProperty Name="PrdCorDes" ColumnName="PrdCorDes" />
+                <ScalarProperty Name="PrdCorIni" ColumnName="PrdCorIni" />
+                <ScalarProperty Name="PrdCorFab" ColumnName="PrdCorFab" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CTPLANTASet">
+            <EntityTypeMapping TypeName="LBDATPROModel.CTPLANTA">
+              <MappingFragment StoreEntitySet="CTPLANTA">
+                <ScalarProperty Name="PrdCtStsIm" ColumnName="PrdCtStsIm" />
+                <ScalarProperty Name="PrdCtORden" ColumnName="PrdCtORden" />
+                <ScalarProperty Name="PrdCtFAuto" ColumnName="PrdCtFAuto" />
+                <ScalarProperty Name="PrdCtAuto" ColumnName="PrdCtAuto" />
+                <ScalarProperty Name="PrdCtReser" ColumnName="PrdCtReser" />
+                <ScalarProperty Name="PrdCtSecC" ColumnName="PrdCtSecC" />
+                <ScalarProperty Name="PrdCtModC" ColumnName="PrdCtModC" />
+                <ScalarProperty Name="PrdCtSecP" ColumnName="PrdCtSecP" />
+                <ScalarProperty Name="PrdCtModP" ColumnName="PrdCtModP" />
+                <ScalarProperty Name="PrdCtHrs" ColumnName="PrdCtHrs" />
+                <ScalarProperty Name="PrdCtFPrF" ColumnName="PrdCtFPrF" />
+                <ScalarProperty Name="PrdCtFPrI" ColumnName="PrdCtFPrI" />
+                <ScalarProperty Name="PrdCtFOrF" ColumnName="PrdCtFOrF" />
+                <ScalarProperty Name="PrdCtFOrI" ColumnName="PrdCtFOrI" />
+                <ScalarProperty Name="PrdCtPlCod" ColumnName="PrdCtPlCod" />
+                <ScalarProperty Name="PrdCtFPlF" ColumnName="PrdCtFPlF" />
+                <ScalarProperty Name="PrdCtFPlI" ColumnName="PrdCtFPlI" />
+                <ScalarProperty Name="PrdCtCod" ColumnName="PrdCtCod" />
+                <ScalarProperty Name="PrdNumCor" ColumnName="PrdNumCor" />
+                <ScalarProperty Name="PrdAnoCor" ColumnName="PrdAnoCor" />
+                <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CUTARC3Set">
+            <EntityTypeMapping TypeName="LBDATPROModel.CUTARC3">
+              <MappingFragment StoreEntitySet="CUTARC3">
+                <ScalarProperty Name="OrdPerLec" ColumnName="OrdPerLec" />
+                <ScalarProperty Name="OrdStsEnvC" ColumnName="OrdStsEnvC" />
+                <ScalarProperty Name="OrdFecEnvC" ColumnName="OrdFecEnvC" />
+                <ScalarProperty Name="PrdTckEAh" ColumnName="PrdTckEAh" />
+                <ScalarProperty Name="FxTelaProduccion" ColumnName="FxTelaProduccion" />
+                <ScalarProperty Name="OrdTotUnd" ColumnName="OrdTotUnd" />
+                <ScalarProperty Name="OrdFlexibl" ColumnName="OrdFlexibl" />
+                <ScalarProperty Name="OrdPreCost" ColumnName="OrdPreCost" />
+                <ScalarProperty Name="OrdAutDifT" ColumnName="OrdAutDifT" />
+                <ScalarProperty Name="OrdUsrAutD" ColumnName="OrdUsrAutD" />
+                <ScalarProperty Name="OrdFchDifT" ColumnName="OrdFchDifT" />
+                <ScalarProperty Name="OrdPrePes" ColumnName="OrdPrePes" />
+                <ScalarProperty Name="PrdTckEti" ColumnName="PrdTckEti" />
+                <ScalarProperty Name="OrdLavadoI" ColumnName="OrdLavadoI" />
+                <ScalarProperty Name="OrdRcpFec" ColumnName="OrdRcpFec" />
+                <ScalarProperty Name="OrdRcpSts" ColumnName="OrdRcpSts" />
+                <ScalarProperty Name="OrdRcpUsr" ColumnName="OrdRcpUsr" />
+                <ScalarProperty Name="OloStiloVe" ColumnName="OloStiloVe" />
+                <ScalarProperty Name="PrdFchCTel" ColumnName="PrdFchCTel" />
+                <ScalarProperty Name="PrdUsuCTel" ColumnName="PrdUsuCTel" />
+                <ScalarProperty Name="PrdFecCTel" ColumnName="PrdFecCTel" />
+                <ScalarProperty Name="OrdStsASeg" ColumnName="OrdStsASeg" />
+                <ScalarProperty Name="OrdUsrAutS" ColumnName="OrdUsrAutS" />
+                <ScalarProperty Name="OrdUsrAutF" ColumnName="OrdUsrAutF" />
+                <ScalarProperty Name="OrdObserva" ColumnName="OrdObserva" />
+                <ScalarProperty Name="OrdRazCod" ColumnName="OrdRazCod" />
+                <ScalarProperty Name="PrdSegFch" ColumnName="PrdSegFch" />
+                <ScalarProperty Name="PrdSegUsu" ColumnName="PrdSegUsu" />
+                <ScalarProperty Name="PrdSegCst" ColumnName="PrdSegCst" />
+                <ScalarProperty Name="PrdOrdCer" ColumnName="PrdOrdCer" />
+                <ScalarProperty Name="PrdFecOff" ColumnName="PrdFecOff" />
+                <ScalarProperty Name="PrdUsrOff" ColumnName="PrdUsrOff" />
+                <ScalarProperty Name="PrdPriCor" ColumnName="PrdPriCor" />
+                <ScalarProperty Name="PrdNumDep" ColumnName="PrdNumDep" />
+                <ScalarProperty Name="PrdAnoDep" ColumnName="PrdAnoDep" />
+                <ScalarProperty Name="PrdObCon" ColumnName="PrdObCon" />
+                <ScalarProperty Name="PrdTelVal" ColumnName="PrdTelVal" />
+                <ScalarProperty Name="PrdPlaOri" ColumnName="PrdPlaOri" />
+                <ScalarProperty Name="PrdFecOri" ColumnName="PrdFecOri" />
+                <ScalarProperty Name="FacCodMdl" ColumnName="FacCodMdl" />
+                <ScalarProperty Name="PrdCodArt" ColumnName="PrdCodArt" />
+                <ScalarProperty Name="PrdMarMan" ColumnName="PrdMarMan" />
+                <ScalarProperty Name="PrdPuntUsr" ColumnName="PrdPuntUsr" />
+                <ScalarProperty Name="PrdPuntFch" ColumnName="PrdPuntFch" />
+                <ScalarProperty Name="PrdPuntada" ColumnName="PrdPuntada" />
+                <ScalarProperty Name="PrdOrdAct" ColumnName="PrdOrdAct" />
+                <ScalarProperty Name="PrdDevSts" ColumnName="PrdDevSts" />
+                <ScalarProperty Name="PrdAutoriz" ColumnName="PrdAutoriz" />
+                <ScalarProperty Name="PrdPriorid" ColumnName="PrdPriorid" />
+                <ScalarProperty Name="PrdSalCor" ColumnName="PrdSalCor" />
+                <ScalarProperty Name="PrdStsOrd" ColumnName="PrdStsOrd" />
+                <ScalarProperty Name="PrdTipTon" ColumnName="PrdTipTon" />
+                <ScalarProperty Name="PrdRecMar" ColumnName="PrdRecMar" />
+                <ScalarProperty Name="PrdRecTel" ColumnName="PrdRecTel" />
+                <ScalarProperty Name="PrdStsHM" ColumnName="PrdStsHM" />
+                <ScalarProperty Name="PrdDura" ColumnName="PrdDura" />
+                <ScalarProperty Name="IdealEmp" ColumnName="IdealEmp" />
+                <ScalarProperty Name="IdealLav" ColumnName="IdealLav" />
+                <ScalarProperty Name="IdealDes" ColumnName="IdealDes" />
+                <ScalarProperty Name="IdealCos" ColumnName="IdealCos" />
+                <ScalarProperty Name="IdealBor" ColumnName="IdealBor" />
+                <ScalarProperty Name="IdealCor" ColumnName="IdealCor" />
+                <ScalarProperty Name="IdealPla" ColumnName="IdealPla" />
+                <ScalarProperty Name="ConMarker" ColumnName="ConMarker" />
+                <ScalarProperty Name="PlaAPEmp" ColumnName="PlaAPEmp" />
+                <ScalarProperty Name="PlaAPLav" ColumnName="PlaAPLav" />
+                <ScalarProperty Name="PlaAPDes" ColumnName="PlaAPDes" />
+                <ScalarProperty Name="PlaAPCos" ColumnName="PlaAPCos" />
+                <ScalarProperty Name="PlaAPBor" ColumnName="PlaAPBor" />
+                <ScalarProperty Name="PlaAPCor" ColumnName="PlaAPCor" />
+                <ScalarProperty Name="PlaAPPla" ColumnName="PlaAPPla" />
+                <ScalarProperty Name="WipStsEmp" ColumnName="WipStsEmp" />
+                <ScalarProperty Name="WipStsLav" ColumnName="WipStsLav" />
+                <ScalarProperty Name="WipStsDes" ColumnName="WipStsDes" />
+                <ScalarProperty Name="WipStsCos" ColumnName="WipStsCos" />
+                <ScalarProperty Name="WipStsBor" ColumnName="WipStsBor" />
+                <ScalarProperty Name="WipStsCor" ColumnName="WipStsCor" />
+                <ScalarProperty Name="WipStsPla" ColumnName="WipStsPla" />
+                <ScalarProperty Name="AmPmEmp" ColumnName="AmPmEmp" />
+                <ScalarProperty Name="AmPmLav" ColumnName="AmPmLav" />
+                <ScalarProperty Name="AmPmDes" ColumnName="AmPmDes" />
+                <ScalarProperty Name="AmPmBor" ColumnName="AmPmBor" />
+                <ScalarProperty Name="AmPmCos" ColumnName="AmPmCos" />
+                <ScalarProperty Name="AmPmCor" ColumnName="AmPmCor" />
+                <ScalarProperty Name="AmPmPla" ColumnName="AmPmPla" />
+                <ScalarProperty Name="PrdStsPla" ColumnName="PrdStsPla" />
+                <ScalarProperty Name="PrdLiquid" ColumnName="PrdLiquid" />
+                <ScalarProperty Name="PrdFiBo" ColumnName="PrdFiBo" />
+                <ScalarProperty Name="PrdInBo" ColumnName="PrdInBo" />
+                <ScalarProperty Name="PrdBoPl" ColumnName="PrdBoPl" />
+                <ScalarProperty Name="PrdBoId" ColumnName="PrdBoId" />
+                <ScalarProperty Name="PrdFiDes" ColumnName="PrdFiDes" />
+                <ScalarProperty Name="PrdInDes" ColumnName="PrdInDes" />
+                <ScalarProperty Name="PrdDePl" ColumnName="PrdDePl" />
+                <ScalarProperty Name="PrdDeId" ColumnName="PrdDeId" />
+                <ScalarProperty Name="PrdFiLa" ColumnName="PrdFiLa" />
+                <ScalarProperty Name="PrdInLa" ColumnName="PrdInLa" />
+                <ScalarProperty Name="PrdLaPl" ColumnName="PrdLaPl" />
+                <ScalarProperty Name="PrdLaId" ColumnName="PrdLaId" />
+                <ScalarProperty Name="PrdFiEm" ColumnName="PrdFiEm" />
+                <ScalarProperty Name="PrdInEm" ColumnName="PrdInEm" />
+                <ScalarProperty Name="PrdEmPl" ColumnName="PrdEmPl" />
+                <ScalarProperty Name="PrdEmId" ColumnName="PrdEmId" />
+                <ScalarProperty Name="PrdFiCos" ColumnName="PrdFiCos" />
+                <ScalarProperty Name="PrdInCos" ColumnName="PrdInCos" />
+                <ScalarProperty Name="PrdCosPl" ColumnName="PrdCosPl" />
+                <ScalarProperty Name="PrdCosId" ColumnName="PrdCosId" />
+                <ScalarProperty Name="PrdFiCor" ColumnName="PrdFiCor" />
+                <ScalarProperty Name="PrdInCor" ColumnName="PrdInCor" />
+                <ScalarProperty Name="PrdCorPl" ColumnName="PrdCorPl" />
+                <ScalarProperty Name="PrdCorId" ColumnName="PrdCorId" />
+                <ScalarProperty Name="PrdRFPla" ColumnName="PrdRFPla" />
+                <ScalarProperty Name="PrdRIPla" ColumnName="PrdRIPla" />
+                <ScalarProperty Name="PrdFiPla" ColumnName="PrdFiPla" />
+                <ScalarProperty Name="PrdInPla" ColumnName="PrdInPla" />
+                <ScalarProperty Name="PrdPlaPl" ColumnName="PrdPlaPl" />
+                <ScalarProperty Name="PrdPlaId" ColumnName="PrdPlaId" />
+                <ScalarProperty Name="PrdLavCos" ColumnName="PrdLavCos" />
+                <ScalarProperty Name="PrdUsrReb" ColumnName="PrdUsrReb" />
+                <ScalarProperty Name="PrdHrsReb" ColumnName="PrdHrsReb" />
+                <ScalarProperty Name="PrdFchReb" ColumnName="PrdFchReb" />
+                <ScalarProperty Name="PrdStsReb" ColumnName="PrdStsReb" />
+                <ScalarProperty Name="PrdUsrPas" ColumnName="PrdUsrPas" />
+                <ScalarProperty Name="PrdHrsPas" ColumnName="PrdHrsPas" />
+                <ScalarProperty Name="PrdFchPas" ColumnName="PrdFchPas" />
+                <ScalarProperty Name="PrdSerCaj" ColumnName="PrdSerCaj" />
+                <ScalarProperty Name="PrdCodEsp" ColumnName="PrdCodEsp" />
+                <ScalarProperty Name="PrdFecOrd" ColumnName="PrdFecOrd" />
+                <ScalarProperty Name="PrdOmiNor" ColumnName="PrdOmiNor" />
+                <ScalarProperty Name="PrdTipOrd" ColumnName="PrdTipOrd" />
+                <ScalarProperty Name="PrdCodCli" ColumnName="PrdCodCli" />
+                <ScalarProperty Name="PrdFecEnt" ColumnName="PrdFecEnt" />
+                <ScalarProperty Name="PrdConFe" ColumnName="PrdConFe" />
+                <ScalarProperty Name="PrdConsu" ColumnName="PrdConsu" />
+                <ScalarProperty Name="PrdHBFe" ColumnName="PrdHBFe" />
+                <ScalarProperty Name="PrdHoBul" ColumnName="PrdHoBul" />
+                <ScalarProperty Name="PrdUsrVal" ColumnName="PrdUsrVal" />
+                <ScalarProperty Name="PrdValida2" ColumnName="PrdValida2" />
+                <ScalarProperty Name="PrdFecVal" ColumnName="PrdFecVal" />
+                <ScalarProperty Name="PrdValida" ColumnName="PrdValida" />
+                <ScalarProperty Name="PrdURepLiq" ColumnName="PrdURepLiq" />
+                <ScalarProperty Name="PrdFRepLiq" ColumnName="PrdFRepLiq" />
+                <ScalarProperty Name="PrdUSalEns" ColumnName="PrdUSalEns" />
+                <ScalarProperty Name="PrdFSalEns" ColumnName="PrdFSalEns" />
+                <ScalarProperty Name="PrdUsrRecB" ColumnName="PrdUsrRecB" />
+                <ScalarProperty Name="PrdRecBor" ColumnName="PrdRecBor" />
+                <ScalarProperty Name="PrdFecIns" ColumnName="PrdFecIns" />
+                <ScalarProperty Name="PrdPlaLiq" ColumnName="PrdPlaLiq" />
+                <ScalarProperty Name="PrdUndFac" ColumnName="PrdUndFac" />
+                <ScalarProperty Name="PrdUndSld" ColumnName="PrdUndSld" />
+                <ScalarProperty Name="PrdCodMod" ColumnName="PrdCodMod" />
+                <ScalarProperty Name="PrdCodEda" ColumnName="PrdCodEda" />
+                <ScalarProperty Name="PrdCodTpo" ColumnName="PrdCodTpo" />
+                <ScalarProperty Name="PrdFecCo" ColumnName="PrdFecCo" />
+                <ScalarProperty Name="PrdCodSem" ColumnName="PrdCodSem" />
+                <ScalarProperty Name="PrdUsrCo" ColumnName="PrdUsrCo" />
+                <ScalarProperty Name="PrdAlMac" ColumnName="PrdAlMac" />
+                <ScalarProperty Name="PrdFchLiq" ColumnName="PrdFchLiq" />
+                <ScalarProperty Name="PrdFchPre" ColumnName="PrdFchPre" />
+                <ScalarProperty Name="PrdStPrel" ColumnName="PrdStPrel" />
+                <ScalarProperty Name="PrdStsPas" ColumnName="PrdStsPas" />
+                <ScalarProperty Name="PrdStsBor" ColumnName="PrdStsBor" />
+                <ScalarProperty Name="PrdStsDgt" ColumnName="PrdStsDgt" />
+                <ScalarProperty Name="PrdStsCrt" ColumnName="PrdStsCrt" />
+                <ScalarProperty Name="PrdTckBor" ColumnName="PrdTckBor" />
+                <ScalarProperty Name="PrdTckDes" ColumnName="PrdTckDes" />
+                <ScalarProperty Name="PrdTckEmp" ColumnName="PrdTckEmp" />
+                <ScalarProperty Name="PrdTckLav" ColumnName="PrdTckLav" />
+                <ScalarProperty Name="PrdTckCos" ColumnName="PrdTckCos" />
+                <ScalarProperty Name="PrdTckCor" ColumnName="PrdTckCor" />
+                <ScalarProperty Name="PrdCanApr" ColumnName="PrdCanApr" />
+                <ScalarProperty Name="PrdAUser" ColumnName="PrdAUser" />
+                <ScalarProperty Name="PrdAjuste" ColumnName="PrdAjuste" />
+                <ScalarProperty Name="PrdPesLot" ColumnName="PrdPesLot" />
+                <ScalarProperty Name="PrdFecPrd" ColumnName="PrdFecPrd" />
+                <ScalarProperty Name="PrdFecVen" ColumnName="PrdFecVen" />
+                <ScalarProperty Name="PrdUsuPrd" ColumnName="PrdUsuPrd" />
+                <ScalarProperty Name="PrdUsuVen" ColumnName="PrdUsuVen" />
+                <ScalarProperty Name="PrdFecGra" ColumnName="PrdFecGra" />
+                <ScalarProperty Name="PrdUsuPre" ColumnName="PrdUsuPre" />
+                <ScalarProperty Name="PrdObsCor" ColumnName="PrdObsCor" />
+                <ScalarProperty Name="PrdYdsUso" ColumnName="PrdYdsUso" />
+                <ScalarProperty Name="PrdClasCo" ColumnName="PrdClasCo" />
+                <ScalarProperty Name="PrdBorFab" ColumnName="PrdBorFab" />
+                <ScalarProperty Name="PrdDesFab" ColumnName="PrdDesFab" />
+                <ScalarProperty Name="PrdEmpFab" ColumnName="PrdEmpFab" />
+                <ScalarProperty Name="PrdLavFab" ColumnName="PrdLavFab" />
+                <ScalarProperty Name="PrdCosFab" ColumnName="PrdCosFab" />
+                <ScalarProperty Name="PrdCorFab" ColumnName="PrdCorFab" />
+                <ScalarProperty Name="PrdStsDes" ColumnName="PrdStsDes" />
+                <ScalarProperty Name="PrdRecCos" ColumnName="PrdRecCos" />
+                <ScalarProperty Name="PrdEstEmp" ColumnName="PrdEstEmp" />
+                <ScalarProperty Name="PrdEstLav" ColumnName="PrdEstLav" />
+                <ScalarProperty Name="PrdEstDes" ColumnName="PrdEstDes" />
+                <ScalarProperty Name="PrdEstCos" ColumnName="PrdEstCos" />
+                <ScalarProperty Name="PrdEstBor" ColumnName="PrdEstBor" />
+                <ScalarProperty Name="PrdEstCor" ColumnName="PrdEstCor" />
+                <ScalarProperty Name="PrdFeFBor" ColumnName="PrdFeFBor" />
+                <ScalarProperty Name="PrdFeIBor" ColumnName="PrdFeIBor" />
+                <ScalarProperty Name="PrdFeFDes" ColumnName="PrdFeFDes" />
+                <ScalarProperty Name="PrdFeIDes" ColumnName="PrdFeIDes" />
+                <ScalarProperty Name="PrdLotMue" ColumnName="PrdLotMue" />
+                <ScalarProperty Name="PrdCodRep" ColumnName="PrdCodRep" />
+                <ScalarProperty Name="PrdCodPrd" ColumnName="PrdCodPrd" />
+                <ScalarProperty Name="PrdTipCor" ColumnName="PrdTipCor" />
+                <ScalarProperty Name="PrdFeFEmp" ColumnName="PrdFeFEmp" />
+                <ScalarProperty Name="PrdFeIEmp" ColumnName="PrdFeIEmp" />
+                <ScalarProperty Name="PrdFeFLav" ColumnName="PrdFeFLav" />
+                <ScalarProperty Name="PrdFeILav" ColumnName="PrdFeILav" />
+                <ScalarProperty Name="PrdStsEmp" ColumnName="PrdStsEmp" />
+                <ScalarProperty Name="PrdStsLav" ColumnName="PrdStsLav" />
+                <ScalarProperty Name="PrdStsCos" ColumnName="PrdStsCos" />
+                <ScalarProperty Name="PrdStsCor" ColumnName="PrdStsCor" />
+                <ScalarProperty Name="PrdFecEsm" ColumnName="PrdFecEsm" />
+                <ScalarProperty Name="PrdFeFCos" ColumnName="PrdFeFCos" />
+                <ScalarProperty Name="PrdFecCos" ColumnName="PrdFecCos" />
+                <ScalarProperty Name="PrdFecBul" ColumnName="PrdFecBul" />
+                <ScalarProperty Name="PrdFeFCor" ColumnName="PrdFeFCor" />
+                <ScalarProperty Name="PrdFecCor" ColumnName="PrdFecCor" />
+                <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
+                <ScalarProperty Name="FacCodTel" ColumnName="FacCodTel" />
+                <ScalarProperty Name="FacCodRef" ColumnName="FacCodRef" />
+                <ScalarProperty Name="PrdNumAli" ColumnName="PrdNumAli" />
+                <ScalarProperty Name="PrdAnoCor" ColumnName="PrdAnoCor" />
+                <ScalarProperty Name="PrdNumCor" ColumnName="PrdNumCor" />
+                <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PATRONSet">
+            <EntityTypeMapping TypeName="LBDATPROModel.PATRON">
+              <MappingFragment StoreEntitySet="PATRON">
+                <ScalarProperty Name="PatInvSegu" ColumnName="PatInvSegu" />
+                <ScalarProperty Name="AxTipoVarianteId" ColumnName="AxTipoVarianteId" />
+                <ScalarProperty Name="AxBaseId" ColumnName="AxBaseId" />
+                <ScalarProperty Name="PatUltLin" ColumnName="PatUltLin" />
+                <ScalarProperty Name="PrdCodAli" ColumnName="PrdCodAli" />
+                <ScalarProperty Name="PrdPatTiro" ColumnName="PrdPatTiro" />
+                <ScalarProperty Name="PrdPatRued" ColumnName="PrdPatRued" />
+                <ScalarProperty Name="PrdPatPier" ColumnName="PrdPatPier" />
+                <ScalarProperty Name="PrdCalPat" ColumnName="PrdCalPat" />
+                <ScalarProperty Name="PrdCstMax" ColumnName="PrdCstMax" />
+                <ScalarProperty Name="FacCodMar" ColumnName="FacCodMar" />
+                <ScalarProperty Name="PrdPatU3" ColumnName="PrdPatU3" />
+                <ScalarProperty Name="PrdCodDes" ColumnName="PrdCodDes" />
+                <ScalarProperty Name="PrdPSgrPat" ColumnName="PrdPSgrPat" />
+                <ScalarProperty Name="PrdPatU2" ColumnName="PrdPatU2" />
+                <ScalarProperty Name="PrdPatU1" ColumnName="PrdPatU1" />
+                <ScalarProperty Name="PatSts" ColumnName="PatSts" />
+                <ScalarProperty Name="PrdDscArt" ColumnName="PrdDscArt" />
+                <ScalarProperty Name="FacCodTpo" ColumnName="FacCodTpo" />
+                <ScalarProperty Name="FacCodEd" ColumnName="FacCodEd" />
+                <ScalarProperty Name="PrdCodDis" ColumnName="PrdCodDis" />
+                <ScalarProperty Name="PrdCodArt" ColumnName="PrdCodArt" />
+                <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRDSTSSet">
+            <EntityTypeMapping TypeName="LBDATPROModel.PRDSTS">
+              <MappingFragment StoreEntitySet="PRDSTS">
+                <ScalarProperty Name="PrdCTraba" ColumnName="PrdCTraba" />
+                <ScalarProperty Name="PrdAliCCos" ColumnName="PrdAliCCos" />
+                <ScalarProperty Name="PrdAreSts" ColumnName="PrdAreSts" />
+                <ScalarProperty Name="PrdDesSts" ColumnName="PrdDesSts" />
+                <ScalarProperty Name="PrdSecSts" ColumnName="PrdSecSts" />
+                <ScalarProperty Name="PrdStsCor" ColumnName="PrdStsCor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CTRABAJOSet">
+            <EntityTypeMapping TypeName="LBDATPROModel.CTRABAJO">
+              <MappingFragment StoreEntitySet="CTRABAJO">
+                <ScalarProperty Name="MOCCosto" ColumnName="MOCCosto" />
+                <ScalarProperty Name="PrdCtTip" ColumnName="PrdCtTip" />
+                <ScalarProperty Name="CCCodigo" ColumnName="CCCodigo" />
+                <ScalarProperty Name="CtEsqPago" ColumnName="CtEsqPago" />
+                <ScalarProperty Name="PrdCtRMOD" ColumnName="PrdCtRMOD" />
+                <ScalarProperty Name="PrdCtRMOI" ColumnName="PrdCtRMOI" />
+                <ScalarProperty Name="PrdCtRFAB" ColumnName="PrdCtRFAB" />
+                <ScalarProperty Name="PrdCtGru" ColumnName="PrdCtGru" />
+                <ScalarProperty Name="PrdCtNew" ColumnName="PrdCtNew" />
+                <ScalarProperty Name="PrdProEje" ColumnName="PrdProEje" />
+                <ScalarProperty Name="PrdSalCt" ColumnName="PrdSalCt" />
+                <ScalarProperty Name="PrdCtEsEnt" ColumnName="PrdCtEsEnt" />
+                <ScalarProperty Name="PrdCtTipSa" ColumnName="PrdCtTipSa" />
+                <ScalarProperty Name="PrdCtTipEn" ColumnName="PrdCtTipEn" />
+                <ScalarProperty Name="PrdCtAlias" ColumnName="PrdCtAlias" />
+                <ScalarProperty Name="PrdCtSupCo" ColumnName="PrdCtSupCo" />
+                <ScalarProperty Name="PrdImpCup" ColumnName="PrdImpCup" />
+                <ScalarProperty Name="PrdCtSts" ColumnName="PrdCtSts" />
+                <ScalarProperty Name="PrdCtOrd" ColumnName="PrdCtOrd" />
+                <ScalarProperty Name="PrdTroImp" ColumnName="PrdTroImp" />
+                <ScalarProperty Name="PrdOrdImp" ColumnName="PrdOrdImp" />
+                <ScalarProperty Name="PrdCTWor" ColumnName="PrdCTWor" />
+                <ScalarProperty Name="PrdSecUse" ColumnName="PrdSecUse" />
+                <ScalarProperty Name="PrdCtMod" ColumnName="PrdCtMod" />
+                <ScalarProperty Name="PrdCtDes" ColumnName="PrdCtDes" />
+                <ScalarProperty Name="PrdCtCod" ColumnName="PrdCtCod" />
+                <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ORDCENTRSet">
+            <EntityTypeMapping TypeName="LBDATPROModel.ORDCENTR">
+              <MappingFragment StoreEntitySet="ORDCENTR">
+                <ScalarProperty Name="PrdCtKanba" ColumnName="PrdCtKanba" />
+                <ScalarProperty Name="PrdCtUsrEn" ColumnName="PrdCtUsrEn" />
+                <ScalarProperty Name="PRdCtUsrSa" ColumnName="PRdCtUsrSa" />
+                <ScalarProperty Name="PrdCodOpr" ColumnName="PrdCodOpr" />
+                <ScalarProperty Name="PrdCodGru" ColumnName="PrdCodGru" />
+                <ScalarProperty Name="PrdCodRec" ColumnName="PrdCodRec" />
+                <ScalarProperty Name="PrdRecUsr" ColumnName="PrdRecUsr" />
+                <ScalarProperty Name="PrdFecRech" ColumnName="PrdFecRech" />
+                <ScalarProperty Name="PrdDesRech" ColumnName="PrdDesRech" />
+                <ScalarProperty Name="PrdCtRech" ColumnName="PrdCtRech" />
+                <ScalarProperty Name="PrdCtAud" ColumnName="PrdCtAud" />
+                <ScalarProperty Name="PrdLecMan" ColumnName="PrdLecMan" />
+                <ScalarProperty Name="PrdCtFecF" ColumnName="PrdCtFecF" />
+                <ScalarProperty Name="PrdCtFecI" ColumnName="PrdCtFecI" />
+                <ScalarProperty Name="PrdCtModu" ColumnName="PrdCtModu" />
+                <ScalarProperty Name="PrdEstSec" ColumnName="PrdEstSec" />
+                <ScalarProperty Name="PrdCtSup" ColumnName="PrdCtSup" />
+                <ScalarProperty Name="PrdCtBulto" ColumnName="PrdCtBulto" />
+                <ScalarProperty Name="PrdSecCod" ColumnName="PrdSecCod" />
+                <ScalarProperty Name="PrdCtCod" ColumnName="PrdCtCod" />
+                <ScalarProperty Name="PrdAnoCor" ColumnName="PrdAnoCor" />
+                <ScalarProperty Name="PrdNumCor" ColumnName="PrdNumCor" />
+                <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRVMSTSet">
+            <EntityTypeMapping TypeName="LBDATPROModel.PRVMST">
+              <MappingFragment StoreEntitySet="PRVMST">
+                <ScalarProperty Name="PrvCtaPro" ColumnName="PrvCtaPro" />
+                <ScalarProperty Name="PrvResExo" ColumnName="PrvResExo" />
+                <ScalarProperty Name="PrvREVen" ColumnName="PrvREVen" />
+                <ScalarProperty Name="PrvNoAX" ColumnName="PrvNoAX" />
+                <ScalarProperty Name="PrvRetA50" ColumnName="PrvRetA50" />
+                <ScalarProperty Name="PrvCorr2" ColumnName="PrvCorr2" />
+                <ScalarProperty Name="PrvBcoCta" ColumnName="PrvBcoCta" />
+                <ScalarProperty Name="BncCod" ColumnName="BncCod" />
+                <ScalarProperty Name="PagBcoMonC" ColumnName="PagBcoMonC" />
+                <ScalarProperty Name="PrvCodGru" ColumnName="PrvCodGru" />
+                <ScalarProperty Name="PrvUltTrn" ColumnName="PrvUltTrn" />
+                <ScalarProperty Name="PrvCodDPI" ColumnName="PrvCodDPI" />
+                <ScalarProperty Name="PrvCodAX" ColumnName="PrvCodAX" />
+                <ScalarProperty Name="PrvRetISV" ColumnName="PrvRetISV" />
+                <ScalarProperty Name="PrvRetPAC" ColumnName="PrvRetPAC" />
+                <ScalarProperty Name="PrvRefBAC" ColumnName="PrvRefBAC" />
+                <ScalarProperty Name="PrvCtaCob" ColumnName="PrvCtaCob" />
+                <ScalarProperty Name="PrvNRTN" ColumnName="PrvNRTN" />
+                <ScalarProperty Name="PrvCtaMTr" ColumnName="PrvCtaMTr" />
+                <ScalarProperty Name="PrvRTN" ColumnName="PrvRTN" />
+                <ScalarProperty Name="PrvParVar" ColumnName="PrvParVar" />
+                <ScalarProperty Name="PrvSolChq" ColumnName="PrvSolChq" />
+                <ScalarProperty Name="PrvBcoMonC" ColumnName="PrvBcoMonC" />
+                <ScalarProperty Name="PrvSaldo" ColumnName="PrvSaldo" />
+                <ScalarProperty Name="AdpCodCiu" ColumnName="AdpCodCiu" />
+                <ScalarProperty Name="AdpCodPai" ColumnName="AdpCodPai" />
+                <ScalarProperty Name="PrvCorrEl" ColumnName="PrvCorrEl" />
+                <ScalarProperty Name="PrvCont" ColumnName="PrvCont" />
+                <ScalarProperty Name="PrvCtaCont" ColumnName="PrvCtaCont" />
+                <ScalarProperty Name="PrvDiasV" ColumnName="PrvDiasV" />
+                <ScalarProperty Name="PrvTip" ColumnName="PrvTip" />
+                <ScalarProperty Name="PrvFax" ColumnName="PrvFax" />
+                <ScalarProperty Name="PrvTel2" ColumnName="PrvTel2" />
+                <ScalarProperty Name="PrvTel1" ColumnName="PrvTel1" />
+                <ScalarProperty Name="PrvDir2" ColumnName="PrvDir2" />
+                <ScalarProperty Name="PrvDir1" ColumnName="PrvDir1" />
+                <ScalarProperty Name="PrvNomCor" ColumnName="PrvNomCor" />
+                <ScalarProperty Name="PrvForPag" ColumnName="PrvForPag" />
+                <ScalarProperty Name="PrvNom" ColumnName="PrvNom" />
+                <ScalarProperty Name="PrvCod" ColumnName="PrvCod" />
+                <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

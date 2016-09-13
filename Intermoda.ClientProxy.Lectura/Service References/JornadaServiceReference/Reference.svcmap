@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9497ed13-d90d-4a04-98d2-85802d641b25" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lectura/Jornada.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Jornada1.disco" MetadataType="Disco" ID="e05db483-88d5-4920-be99-afc5de4b9264" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Jornada.svc?disco" />
+    <MetadataFile FileName="Jornada3.xsd" MetadataType="Schema" ID="c48493ef-3664-4e06-9f66-688f2994823d" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Jornada.svc?xsd=xsd0" />
+    <MetadataFile FileName="Jornada31.xsd" MetadataType="Schema" ID="8b193fd0-f572-4dfd-a7c7-1ecba58f34da" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Jornada.svc?xsd=xsd2" />
+    <MetadataFile FileName="Jornada1.wsdl" MetadataType="Wsdl" ID="2dc0a2e5-0f41-4cc1-b9bb-7880a5e0d074" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Jornada.svc?wsdl" />
+    <MetadataFile FileName="Jornada32.xsd" MetadataType="Schema" ID="3f3b3e89-457d-4668-8a3a-cf27a952705e" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Jornada.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

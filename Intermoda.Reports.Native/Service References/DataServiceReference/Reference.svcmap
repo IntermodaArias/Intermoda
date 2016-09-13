@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="333474c1-b70e-4cc8-82f7-ee8bd1bda7db" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/ProduccionLecturas/DataService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataService.xsd" MetadataType="Schema" ID="c2280951-2901-42df-bdf5-274a5091ff4d" SourceId="1" SourceUrl="http://localhost/ProduccionLecturas/DataService.svc?xsd=xsd5" />
+    <MetadataFile FileName="DataService1.xsd" MetadataType="Schema" ID="a5118d49-7580-45c9-9543-d76bf51ac608" SourceId="1" SourceUrl="http://localhost/ProduccionLecturas/DataService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataService2.xsd" MetadataType="Schema" ID="8fffc67a-d264-4d5d-ac70-21e4fe7a0718" SourceId="1" SourceUrl="http://localhost/ProduccionLecturas/DataService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DataService3.xsd" MetadataType="Schema" ID="14713754-adac-433c-9055-f340ef745ae5" SourceId="1" SourceUrl="http://localhost/ProduccionLecturas/DataService.svc?xsd=xsd4" />
+    <MetadataFile FileName="DataService.disco" MetadataType="Disco" ID="3734cb06-08f0-4857-a8fd-1cf2edd70eeb" SourceId="1" SourceUrl="http://localhost/ProduccionLecturas/DataService.svc?disco" />
+    <MetadataFile FileName="DataService4.xsd" MetadataType="Schema" ID="cafe431a-e5e6-41c2-854f-8e228b39fece" SourceId="1" SourceUrl="http://localhost/ProduccionLecturas/DataService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataService.wsdl" MetadataType="Wsdl" ID="812e5653-a97d-4bbb-a89b-2782750d7cbe" SourceId="1" SourceUrl="http://localhost/ProduccionLecturas/DataService.svc?wsdl" />
+    <MetadataFile FileName="DataService5.xsd" MetadataType="Schema" ID="ac6e2b8b-4690-465f-aba8-5cad670d5f83" SourceId="1" SourceUrl="http://localhost/ProduccionLecturas/DataService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

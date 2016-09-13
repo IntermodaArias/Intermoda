@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="917ac371-a602-41a8-be03-8e9c6e81ddd7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/Operacion.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Operacion1.wsdl" MetadataType="Wsdl" ID="f0560f2e-8dd4-46b6-9f60-9dd5149aff95" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Operacion.svc?wsdl" />
+    <MetadataFile FileName="Operacion3.xsd" MetadataType="Schema" ID="194ce60d-ddba-4371-ad8a-f282104a8963" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Operacion.svc?xsd=xsd1" />
+    <MetadataFile FileName="Operacion31.xsd" MetadataType="Schema" ID="50208f8e-d674-4626-9bfa-72b7b1972750" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Operacion.svc?xsd=xsd2" />
+    <MetadataFile FileName="Operacion1.disco" MetadataType="Disco" ID="6bfe0949-cf3a-475d-a268-93d64fb3ae57" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Operacion.svc?disco" />
+    <MetadataFile FileName="Operacion32.xsd" MetadataType="Schema" ID="69804aa1-ca04-4252-9012-c947eda60557" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Operacion.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4DF85E9A-3064-4D25-9847-56EF34EE9AF4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intermoda.Produccion.Lavanderia</RootNamespace>
+    <AssemblyName>Intermoda.Produccion.Lavanderia</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArchivosGlobales.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CantidadIngredientesInstruccion.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CantidadIngredientesOperacion.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CargaLavado.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CATALOG.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CentrosTrabajoOpcion.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CentrosTrabajoOpcionLavadoOrden.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CentrosTrabajos.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLASE.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ColoresIntermoda.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CTRABAJO.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CUTARC3.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoOperaciones.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GRUTEL.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IngredientesOperacion.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IngredientesPreDefinidos.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InstruccionesOperacion.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InstruccionesPreDefinidas.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lavadoras.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LavadorasCapacidad.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lavados.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lavanderia.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lavanderia.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lavanderia.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lavanderia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lavanderia.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="LitrosAguaOperacion.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogsLavado.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialNoRequisableLavanderia.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MATMST.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ObservacionesOperacion.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ObservacionesPreDefinidas.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OpcionesLavados.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OpcionLavadoOrden.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OperacionesCTrabajos.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OperacionesPreDefinidas.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OperacionesProceso.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OperacionesProcesoOrden.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ORDCENTR.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenesProduccionEnProceso.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenesProduccionLavanderia.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Plantas.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcesosCentroTrabajo.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcesosCentroTrabajoOrden.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcesosOperaciones.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Secadoras.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SecadorasCapacidad.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SUBCLASE.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TELAR5.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TelasColorIntermoda.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TelasComposicion.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoOperaciones.cs">
+      <DependentUpon>Lavanderia.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Lavanderia.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Lavanderia.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Lavanderia.edmx.diagram">
+      <DependentUpon>Lavanderia.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lavanderia.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Lavanderia.edmx</DependentUpon>
+      <LastGenOutput>Lavanderia.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Lavanderia.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Lavanderia.edmx</DependentUpon>
+      <LastGenOutput>Lavanderia.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

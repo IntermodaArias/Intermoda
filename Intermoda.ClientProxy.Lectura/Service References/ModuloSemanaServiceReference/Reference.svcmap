@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4edff026-78e8-48c3-acf7-ab65a1c5c07f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lectura/ModuloSemana.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ModuloSemana1.disco" MetadataType="Disco" ID="160fdca2-22ca-4bd9-9e05-a058d9852a74" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/ModuloSemana.svc?disco" />
+    <MetadataFile FileName="ModuloSemana3.xsd" MetadataType="Schema" ID="ff2222fc-3138-4cd0-b893-dc21903f780f" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/ModuloSemana.svc?xsd=xsd2" />
+    <MetadataFile FileName="ModuloSemana31.xsd" MetadataType="Schema" ID="fce1dfae-d299-4865-9270-39d4af0759e7" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/ModuloSemana.svc?xsd=xsd1" />
+    <MetadataFile FileName="ModuloSemana1.wsdl" MetadataType="Wsdl" ID="4c3e9d98-42e8-484c-ad70-f28067fa20f0" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/ModuloSemana.svc?wsdl" />
+    <MetadataFile FileName="ModuloSemana32.xsd" MetadataType="Schema" ID="79a11581-3a46-4eb1-8c79-3169aa09d2c7" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/ModuloSemana.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

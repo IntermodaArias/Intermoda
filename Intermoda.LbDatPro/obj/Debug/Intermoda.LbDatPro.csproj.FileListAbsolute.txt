@@ -1,0 +1,9 @@
+C:\VisualStudio\Intermoda\Intermoda.LbDatPro\bin\Debug\Intermoda.LbDatPro.dll.config
+C:\VisualStudio\Intermoda\Intermoda.LbDatPro\bin\Debug\Intermoda.LbDatPro.dll
+C:\VisualStudio\Intermoda\Intermoda.LbDatPro\bin\Debug\Intermoda.LbDatPro.pdb
+C:\VisualStudio\Intermoda\Intermoda.LbDatPro\bin\Debug\EntityFramework.dll
+C:\VisualStudio\Intermoda\Intermoda.LbDatPro\bin\Debug\EntityFramework.SqlServer.dll
+C:\VisualStudio\Intermoda\Intermoda.LbDatPro\bin\Debug\EntityFramework.xml
+C:\VisualStudio\Intermoda\Intermoda.LbDatPro\bin\Debug\EntityFramework.SqlServer.xml
+C:\VisualStudio\Intermoda\Intermoda.LbDatPro\obj\Debug\Intermoda.LbDatPro.dll
+C:\VisualStudio\Intermoda\Intermoda.LbDatPro\obj\Debug\Intermoda.LbDatPro.pdb

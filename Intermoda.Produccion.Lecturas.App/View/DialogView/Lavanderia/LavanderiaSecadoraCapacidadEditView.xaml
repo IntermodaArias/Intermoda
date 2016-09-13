@@ -1,0 +1,32 @@
+﻿<Window x:Class="Intermoda.Produccion.Lecturas.App.View.DialogView.Lavanderia.LavanderiaSecadoraCapacidadEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:Intermoda.Wpf.Controls;assembly=Intermoda.Wpf.Controls"
+        mc:Ignorable="d" Title="Capacidad de Secadora" Height="150" Width="270"
+        d:DataContext="{Binding Source={StaticResource Locator}, Path=LavanderiaSecadoraCapacidadEditViewModel}">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Margin="2" Content="Capacidad Máxima (Kg): "/>
+            <Label Grid.Row="1" Grid.Column="0" Margin="2" Content="Capacidad Mínima (Kg): "/>
+            <TextBox Grid.Row="0" Grid.Column="1" Margin="2" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Right"
+                     Text="{Binding Path=CapacidadMaximaKg, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="2" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Right"
+                     Text="{Binding Path=CapacidadMinimaKg, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+        </Grid>
+        <controls:CancelConfirmControl Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

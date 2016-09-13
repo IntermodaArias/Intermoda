@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6ab78ab2-f9a4-49fd-aafd-09c969ef50b3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/OrdenProduccionLavanderia.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OrdenProduccionLavanderia.xsd" MetadataType="Schema" ID="fa046366-64c1-451e-955d-8cfec30405ff" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/OrdenProduccionLavanderia.svc?xsd=xsd2" />
+    <MetadataFile FileName="OrdenProduccionLavanderia1.xsd" MetadataType="Schema" ID="3014351b-0bd9-4af8-a1c2-496595d500c0" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/OrdenProduccionLavanderia.svc?xsd=xsd1" />
+    <MetadataFile FileName="OrdenProduccionLavanderia.wsdl" MetadataType="Wsdl" ID="207b32ed-c5af-45d5-b1e7-e4a9eab8bf03" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/OrdenProduccionLavanderia.svc?wsdl" />
+    <MetadataFile FileName="OrdenProduccionLavanderia.disco" MetadataType="Disco" ID="189d4243-7e52-4592-ad5d-7d9430e1e834" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/OrdenProduccionLavanderia.svc?disco" />
+    <MetadataFile FileName="OrdenProduccionLavanderia2.xsd" MetadataType="Schema" ID="26925bff-c66a-476b-819a-e7946470315c" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/OrdenProduccionLavanderia.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

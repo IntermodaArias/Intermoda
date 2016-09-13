@@ -1,0 +1,9 @@
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lavanderia\bin\Debug\Intermoda.Produccion.Lavanderia.dll.config
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lavanderia\bin\Debug\Intermoda.Produccion.Lavanderia.dll
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lavanderia\bin\Debug\Intermoda.Produccion.Lavanderia.pdb
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lavanderia\bin\Debug\EntityFramework.dll
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lavanderia\bin\Debug\EntityFramework.SqlServer.dll
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lavanderia\bin\Debug\EntityFramework.xml
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lavanderia\bin\Debug\EntityFramework.SqlServer.xml
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lavanderia\obj\Debug\Intermoda.Produccion.Lavanderia.dll
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lavanderia\obj\Debug\Intermoda.Produccion.Lavanderia.pdb

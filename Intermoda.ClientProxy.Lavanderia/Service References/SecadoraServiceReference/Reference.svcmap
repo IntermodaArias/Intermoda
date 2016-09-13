@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fa08283d-7bb8-4ce4-88cf-642efb73cd2c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/Secadora.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Secadora.xsd" MetadataType="Schema" ID="081eabca-4165-46e8-922d-2722db8d9723" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Secadora.svc?xsd=xsd0" />
+    <MetadataFile FileName="Secadora1.xsd" MetadataType="Schema" ID="8d9f69ec-c611-455b-a380-49330717ce39" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Secadora.svc?xsd=xsd1" />
+    <MetadataFile FileName="Secadora.disco" MetadataType="Disco" ID="a31dda40-a987-4c39-b8f7-54e58add8270" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Secadora.svc?disco" />
+    <MetadataFile FileName="Secadora2.xsd" MetadataType="Schema" ID="ffceecda-74c8-4809-bf83-78a63887c659" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Secadora.svc?xsd=xsd2" />
+    <MetadataFile FileName="Secadora.wsdl" MetadataType="Wsdl" ID="ba068304-ba63-4ce2-a6a2-9256844e5a7c" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Secadora.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

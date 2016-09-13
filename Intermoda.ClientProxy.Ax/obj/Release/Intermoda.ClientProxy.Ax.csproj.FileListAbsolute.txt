@@ -1,0 +1,5 @@
+C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Ax\bin\Release\Intermoda.ClientProxy.Ax.dll
+C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Ax\bin\Release\Intermoda.ClientProxy.Ax.pdb
+C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Ax\obj\Release\Intermoda.ClientProxy.Ax.csprojResolveAssemblyReference.cache
+C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Ax\obj\Release\Intermoda.ClientProxy.Ax.dll
+C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Ax\obj\Release\Intermoda.ClientProxy.Ax.pdb

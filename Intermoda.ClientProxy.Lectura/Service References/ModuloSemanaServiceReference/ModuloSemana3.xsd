@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lecturas" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lecturas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ModuloSemanaBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentroTrabajo" nillable="true" type="tns:CentroTrabajoBusiness" />
+      <xs:element minOccurs="0" name="CentroTrabajoId" type="xs:int" />
+      <xs:element minOccurs="0" name="Curva" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="MetaPiezasPorHora" type="xs:int" />
+      <xs:element minOccurs="0" name="MetaProduccion" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MinutoUtilitario" type="xs:int" />
+      <xs:element minOccurs="0" name="MinutosBase" type="xs:int" />
+      <xs:element minOccurs="0" name="MinutosEntrenamiento" type="xs:int" />
+      <xs:element minOccurs="0" name="MinutosTitular" type="xs:int" />
+      <xs:element minOccurs="0" name="Modulo" nillable="true" type="tns:ModuloBusiness" />
+      <xs:element minOccurs="0" name="ModuloId" type="xs:int" />
+      <xs:element minOccurs="0" name="TransferenciaMinutos" type="xs:int" />
+      <xs:element minOccurs="0" name="Turno" nillable="true" type="tns:TurnoBusiness" />
+      <xs:element minOccurs="0" name="TurnoId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModuloSemanaBusiness" nillable="true" type="tns:ModuloSemanaBusiness" />
+  <xs:complexType name="CentroTrabajoBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secuencia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CentroTrabajoBusiness" nillable="true" type="tns:CentroTrabajoBusiness" />
+  <xs:complexType name="ModuloBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentroTrabajoId" type="xs:int" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secuencia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModuloBusiness" nillable="true" type="tns:ModuloBusiness" />
+  <xs:complexType name="TurnoBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TurnoBusiness" nillable="true" type="tns:TurnoBusiness" />
+  <xs:complexType name="ArrayOfModuloSemanaBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ModuloSemanaBusiness" nillable="true" type="tns:ModuloSemanaBusiness" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfModuloSemanaBusiness" nillable="true" type="tns:ArrayOfModuloSemanaBusiness" />
+</xs:schema>

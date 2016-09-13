@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="543fd302-891f-4ee5-b136-8137df652d44" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/SubClase.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SubClase3.xsd" MetadataType="Schema" ID="1aa05dea-e939-4895-a6d1-0426875fd6bc" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/SubClase.svc?xsd=xsd0" />
+    <MetadataFile FileName="SubClase31.xsd" MetadataType="Schema" ID="6891a1ec-ed54-419d-8b73-b365a224f33a" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/SubClase.svc?xsd=xsd2" />
+    <MetadataFile FileName="SubClase32.xsd" MetadataType="Schema" ID="748e1181-1cc4-4f9d-83ab-bc0ff0667f89" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/SubClase.svc?xsd=xsd1" />
+    <MetadataFile FileName="SubClase1.disco" MetadataType="Disco" ID="22222179-8940-4aa7-a4ff-1f13b77dfcf5" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/SubClase.svc?disco" />
+    <MetadataFile FileName="SubClase1.wsdl" MetadataType="Wsdl" ID="08ed5418-9757-4f5d-a86c-b976eec17ca0" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/SubClase.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

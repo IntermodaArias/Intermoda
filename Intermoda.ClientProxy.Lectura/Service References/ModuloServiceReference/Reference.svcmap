@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dfae7f15-938b-4e24-b4ce-259923928bfd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lectura/Modulo.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Modulo3.xsd" MetadataType="Schema" ID="db0e860b-a4b0-4ce8-86a3-c2c2cc92b0f9" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Modulo.svc?xsd=xsd1" />
+    <MetadataFile FileName="Modulo31.xsd" MetadataType="Schema" ID="37da1ae5-51ac-4e40-af75-af780bff6f79" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Modulo.svc?xsd=xsd0" />
+    <MetadataFile FileName="Modulo1.disco" MetadataType="Disco" ID="86be21db-521c-45e9-a5f5-535968e17a41" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Modulo.svc?disco" />
+    <MetadataFile FileName="Modulo32.xsd" MetadataType="Schema" ID="7ea0ba1d-02fe-4a61-8e8a-38d2588bae86" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Modulo.svc?xsd=xsd2" />
+    <MetadataFile FileName="Modulo1.wsdl" MetadataType="Wsdl" ID="8173a1d1-705d-4e6f-be53-e9da3fc911f2" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Modulo.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

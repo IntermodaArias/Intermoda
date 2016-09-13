@@ -1,0 +1,42 @@
+﻿<Window x:Class="Intermoda.Produccion.Lecturas.App.View.DialogView.Lavanderia.LavanderiaProcesoCentroTrabajoEditView"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  
+        xmlns:controls="clr-namespace:Intermoda.Wpf.Controls;assembly=Intermoda.Wpf.Controls"  
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Title="Proceso en Centro de Trabajo para Opción de Lavado" Height="220" Width="390" WindowStartupLocation="CenterOwner"
+        d:DataContext="{Binding Source={StaticResource Locator}, Path=LavanderiaProcesoCentroTrabajoEditViewModel}">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Margin="2" Content="Opción de Lavado: "/>
+            <Label Grid.Row="1" Grid.Column="0" Margin="2" Content="Centro de Trabajo: "/>
+            <Label Grid.Row="2" Grid.Column="0" Margin="2" Content="Proceso: "/>
+            <Label Grid.Row="3" Grid.Column="0" Margin="2" Content="Orden: "/>
+            <TextBox Grid.Row="0" Grid.Column="1" Margin="2" Width="250" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     IsReadOnly="True" Text="{Binding Path=OpcionLavado.Nombre}"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="2" Width="250" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     IsReadOnly="True" Text="{Binding Path=CentroTrabajo.Nombre}"/>
+            <telerik:RadComboBox Grid.Row="2" Grid.Column="1" Margin="2" Width="250" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                 ItemsSource="{Binding Path=ProcesoList}" DisplayMemberPath="Nombre" SelectedValuePath="Id"
+                                 SelectedValue="{Binding Path=ProcesoId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Margin="2" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Text="{Binding Path=Orden, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+        </Grid>
+        <controls:CancelConfirmControl Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

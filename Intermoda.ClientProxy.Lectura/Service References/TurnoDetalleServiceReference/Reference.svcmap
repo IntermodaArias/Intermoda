@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="92863627-66bb-4bdc-a4c8-4cb740000ead" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lectura/TurnoDetalle.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TurnoDetalle1.wsdl" MetadataType="Wsdl" ID="64ce70f7-53ef-43af-9d87-36dc22c8badf" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/TurnoDetalle.svc?wsdl" />
+    <MetadataFile FileName="TurnoDetalle1.disco" MetadataType="Disco" ID="f34e0ce8-bba7-427c-98ba-830f45cd99e7" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/TurnoDetalle.svc?disco" />
+    <MetadataFile FileName="TurnoDetalle4.xsd" MetadataType="Schema" ID="9a6a1029-3b79-4bdb-b8d5-661eb364b1d4" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/TurnoDetalle.svc?xsd=xsd0" />
+    <MetadataFile FileName="TurnoDetalle41.xsd" MetadataType="Schema" ID="a84382cb-e654-447c-a9b7-b6afa7bd3c56" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/TurnoDetalle.svc?xsd=xsd1" />
+    <MetadataFile FileName="TurnoDetalle42.xsd" MetadataType="Schema" ID="5c350df4-cd7d-4310-9f83-455fe163b75a" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/TurnoDetalle.svc?xsd=xsd2" />
+    <MetadataFile FileName="TurnoDetalle43.xsd" MetadataType="Schema" ID="38e13492-5328-49fb-be68-91472d5d33a7" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/TurnoDetalle.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

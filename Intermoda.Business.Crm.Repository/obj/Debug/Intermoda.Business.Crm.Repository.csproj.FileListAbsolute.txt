@@ -1,0 +1,16 @@
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm.Repository\bin\Debug\Intermoda.Business.Crm.Repository.dll
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm.Repository\bin\Debug\Intermoda.Business.Crm.Repository.pdb
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm.Repository\bin\Debug\Intermoda.Business.Crm.Entities.dll
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm.Repository\bin\Debug\Intermoda.Common.dll
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm.Repository\bin\Debug\EntityFramework.dll
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm.Repository\bin\Debug\Intermoda.Business.Crm.Entities.pdb
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm.Repository\bin\Debug\Intermoda.Common.pdb
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm.Repository\bin\Debug\EntityFramework.xml
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm.Repository\obj\Debug\Intermoda.Business.Crm.Repository.csprojResolveAssemblyReference.cache
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm.Repository\obj\Debug\Intermoda.Business.Crm.Repository.dll
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm.Repository\obj\Debug\Intermoda.Business.Crm.Repository.pdb
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm.Repository\bin\Debug\Intermoda.Business.Crm.Repository.dll.config
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm.Repository\bin\Debug\IntermodaCrmData.dll
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm.Repository\bin\Debug\IntermodaCrmData.pdb

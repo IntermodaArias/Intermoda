@@ -1,0 +1,9 @@
+C:\VisualStudio\Intermoda\Intermoda.AX.Data\bin\Release\Intermoda.AX.Data.dll.config
+C:\VisualStudio\Intermoda\Intermoda.AX.Data\bin\Release\Intermoda.AX.Data.dll
+C:\VisualStudio\Intermoda\Intermoda.AX.Data\bin\Release\Intermoda.AX.Data.pdb
+C:\VisualStudio\Intermoda\Intermoda.AX.Data\bin\Release\EntityFramework.dll
+C:\VisualStudio\Intermoda\Intermoda.AX.Data\bin\Release\EntityFramework.SqlServer.dll
+C:\VisualStudio\Intermoda\Intermoda.AX.Data\bin\Release\EntityFramework.xml
+C:\VisualStudio\Intermoda\Intermoda.AX.Data\bin\Release\EntityFramework.SqlServer.xml
+C:\VisualStudio\Intermoda\Intermoda.AX.Data\obj\Release\Intermoda.AX.Data.dll
+C:\VisualStudio\Intermoda\Intermoda.AX.Data\obj\Release\Intermoda.AX.Data.pdb

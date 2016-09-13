@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="79a1c250-7e46-4384-b378-1d9bd309736f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/CTrabajo.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CTrabajo3.xsd" MetadataType="Schema" ID="bc2151c8-fdde-4baa-a44c-ebc52bbb91df" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/CTrabajo.svc?xsd=xsd0" />
+    <MetadataFile FileName="CTrabajo1.wsdl" MetadataType="Wsdl" ID="05025f8b-03fb-420b-a8dc-f7856f91b9fb" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/CTrabajo.svc?wsdl" />
+    <MetadataFile FileName="CTrabajo31.xsd" MetadataType="Schema" ID="7b472c41-e999-4aa3-9581-2364d99ea105" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/CTrabajo.svc?xsd=xsd1" />
+    <MetadataFile FileName="CTrabajo1.disco" MetadataType="Disco" ID="f3cf5b4c-a4d4-4d23-b9a0-5a1d1e35a10d" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/CTrabajo.svc?disco" />
+    <MetadataFile FileName="CTrabajo32.xsd" MetadataType="Schema" ID="378ea889-c208-4954-9068-e4979d4b5afe" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/CTrabajo.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

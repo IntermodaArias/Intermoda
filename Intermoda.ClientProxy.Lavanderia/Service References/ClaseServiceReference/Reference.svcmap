@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="42ac4217-778f-4628-a04c-31e322511992" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/Clase.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Clase3.xsd" MetadataType="Schema" ID="34b17ffc-cb82-4761-b468-cc51f6b0aecd" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Clase.svc?xsd=xsd0" />
+    <MetadataFile FileName="Clase1.disco" MetadataType="Disco" ID="97532626-ffb4-4163-9960-71fe8a4dab9f" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Clase.svc?disco" />
+    <MetadataFile FileName="Clase31.xsd" MetadataType="Schema" ID="bf0c0c53-9d52-4c04-87f6-cab723cb9ff4" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Clase.svc?xsd=xsd2" />
+    <MetadataFile FileName="Clase32.xsd" MetadataType="Schema" ID="8784c468-f9bc-4aec-ba3d-44fde014472c" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Clase.svc?xsd=xsd1" />
+    <MetadataFile FileName="Clase1.wsdl" MetadataType="Wsdl" ID="0a4dfcc2-3128-4a72-af3c-502bb034c0a3" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Clase.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

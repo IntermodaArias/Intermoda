@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ed6dbc5e-ccdd-495f-9b32-209c496c3b21" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lectura/CentroTrabajoClasificacion.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CentroTrabajoClasificacion4.xsd" MetadataType="Schema" ID="a9381832-6872-488c-9cd6-01bc618c026d" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/CentroTrabajoClasificacion.svc?xsd=xsd1" />
+    <MetadataFile FileName="CentroTrabajoClasificacion1.wsdl" MetadataType="Wsdl" ID="569c3cb6-29b5-45bc-98fb-57abb34d9ff4" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/CentroTrabajoClasificacion.svc?wsdl" />
+    <MetadataFile FileName="CentroTrabajoClasificacion41.xsd" MetadataType="Schema" ID="83047fab-1c84-45dd-b884-b7b6a2f07c64" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/CentroTrabajoClasificacion.svc?xsd=xsd0" />
+    <MetadataFile FileName="CentroTrabajoClasificacion1.disco" MetadataType="Disco" ID="6d107a91-1f60-40f4-b122-cadb5b600ad8" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/CentroTrabajoClasificacion.svc?disco" />
+    <MetadataFile FileName="CentroTrabajoClasificacion42.xsd" MetadataType="Schema" ID="b28eeaa2-3242-4237-9027-13e9120a672a" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/CentroTrabajoClasificacion.svc?xsd=xsd2" />
+    <MetadataFile FileName="CentroTrabajoClasificacion43.xsd" MetadataType="Schema" ID="f01fa938-ef4b-4191-8168-639855ffca84" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/CentroTrabajoClasificacion.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

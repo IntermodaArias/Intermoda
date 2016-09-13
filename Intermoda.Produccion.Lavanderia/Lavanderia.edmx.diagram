@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b33b16489d1640ada1d0b035cbfbcf2d" Name="Diagram1">
+        <EntityTypeShape EntityType="LavanderiaModel.ArchivosGlobales" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.CentrosTrabajoOpcion" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.CentrosTrabajos" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.ColoresIntermoda" Width="1.5" PointX="4.75" PointY="2.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.GrupoOperaciones" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.IngredientesOperacion" Width="1.5" PointX="6.75" PointY="1.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.IngredientesPreDefinidos" Width="1.5" PointX="0.75" PointY="3" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.InstruccionesOperacion" Width="1.5" PointX="6.75" PointY="2.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.InstruccionesPreDefinidas" Width="1.5" PointX="2.75" PointY="3" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.Lavadoras" Width="1.5" PointX="8.75" PointY="6.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.LavadorasCapacidad" Width="1.5" PointX="10.75" PointY="6.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.Lavados" Width="1.5" PointX="4.75" PointY="3" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.LogsLavado" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.MaterialNoRequisableLavanderia" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.ObservacionesOperacion" Width="1.5" PointX="2.75" PointY="2.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.Operaciones" Width="1.5" PointX="8.875" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.OperacionesCTrabajos" Width="1.5" PointX="11" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.OperacionesPreDefinidas" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.OperacionesProceso" Width="1.5" PointX="4.75" PointY="1.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.ProcesosCentroTrabajo" Width="1.5" PointX="2.75" PointY="1.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.ProcesosOperaciones" Width="1.5" PointX="11" PointY="1.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.TelasColorIntermoda" Width="1.5" PointX="6.75" PointY="3" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.TelasComposicion" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.TipoOperaciones" Width="1.5" PointX="8.875" PointY="1.5" IsExpanded="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_ArchivosGlobales_Lavados" ManuallyRouted="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_ProcesosCentroTrabajo_CentrosTrabajoOpcion" ManuallyRouted="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_Lavados_ColoresIntermoda" ManuallyRouted="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_TelasColorIntermoda_ColoresIntermoda" ManuallyRouted="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_Operaciones_GrupoOperaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_IngredientesOperacion_InstruccionesOperacion" ManuallyRouted="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_IngredientesOperacion_OperacionesProceso" ManuallyRouted="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_IngredientesPreDefinidos_InstruccionesPreDefinidas" ManuallyRouted="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_IngredientesPreDefinidos_OperacionesPreDefinidas" ManuallyRouted="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_InstruccionesOperacion_OperacionesProceso" ManuallyRouted="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_InstruccionesPreDefinidas_OperacionesPreDefinidas" ManuallyRouted="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_Lavadoras_LavadorasCapacidad" ManuallyRouted="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_ObservacionesOperacion_OperacionesProceso" ManuallyRouted="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_Operaciones_TipoOperaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_OperacionesCTrabajos_Operaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_ProcesosOperaciones_OperacionesCTrabajos" ManuallyRouted="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_OperacionesProceso_ProcesosCentroTrabajo" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.OpcionesLavados" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_CentrosTrabajoOpcion_OpcionesLavados" />
+        <AssociationConnector Association="LavanderiaModel.FK_OpcionesLavados_Lavados" />
+        <EntityTypeShape EntityType="LavanderiaModel.Procesos" Width="1.5" PointX="11" PointY="2.25" IsExpanded="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_Procesos_CentrosTrabajos" />
+        <EntityTypeShape EntityType="LavanderiaModel.CATALOG" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.GRUTEL" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.MATMST" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.TELAR5" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.CLASE" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.SUBCLASE" Width="1.5" PointX="10.75" PointY="5.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.ObservacionesPreDefinidas" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_OperacionesPd_ObservacionesPd" />
+        <EntityTypeShape EntityType="LavanderiaModel.Secadoras" Width="1.5" PointX="11" PointY="3.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.SecadorasCapacidad" Width="1.5" PointX="8.875" PointY="3.75" IsExpanded="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_Secadoras_SecadorasCapacidad" />
+        <EntityTypeShape EntityType="LavanderiaModel.Plantas" Width="1.5" PointX="8.875" PointY="3" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.OrdenesProduccionEnProceso" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.CTRABAJO" Width="1.5" PointX="2.75" PointY="6.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.ORDCENTR" Width="1.5" PointX="4.75" PointY="6.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.OrdenesProduccionLavanderia" Width="1.5" PointX="11" PointY="3" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.CargaLavado" Width="1.5" PointX="8.75" PointY="7.25" IsExpanded="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_CargaLavado_Lavadoras" />
+        <AssociationConnector Association="LavanderiaModel.FK_CargaLavado_LavadorasCapacidad" />
+        <EntityTypeShape EntityType="LavanderiaModel.OperacionesProcesoOrden" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.ProcesosCentroTrabajoOrden" Width="1.5" PointX="2.75" PointY="7.25" IsExpanded="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_OperacionesProcesoOrden_ProcesosCentroTrabajoOrden" />
+        <EntityTypeShape EntityType="LavanderiaModel.CentrosTrabajoOpcionLavadoOrden" Width="1.5" PointX="4.75" PointY="7.25" IsExpanded="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_ProcesosCentroTrabajoOrden_CentrosTrabajoOpcionLavadoOrden" />
+        <EntityTypeShape EntityType="LavanderiaModel.OpcionLavadoOrden" Width="1.5" PointX="6.75" PointY="7.25" IsExpanded="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_CargaLavado_OpcionLavadoOrden" />
+        <AssociationConnector Association="LavanderiaModel.FK_CentrosTrabajoOpcionLavadoOrden_OpcionLavadoOrden" />
+        <AssociationConnector Association="LavanderiaModel.FK_OpcionLavadoOrden_Lavados" />
+        <EntityTypeShape EntityType="LavanderiaModel.CUTARC3" Width="1.5" PointX="6.75" PointY="6.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.LitrosAguaOperacion" Width="1.5" PointX="0.75" PointY="8" IsExpanded="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_LitrosAguaOperacion_OpcionLavadoOrden" />
+        <AssociationConnector Association="LavanderiaModel.FK_LitrosAguaOperacion_OperacionesProcesoOrden" />
+        <EntityTypeShape EntityType="LavanderiaModel.CantidadIngredientesInstruccion" Width="1.5" PointX="10.75" PointY="7.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="LavanderiaModel.CantidadIngredientesOperacion" Width="1.5" PointX="10.75" PointY="8.125" IsExpanded="false" />
+        <AssociationConnector Association="LavanderiaModel.FK_CantidadIngredientesOperacion_OpcionLavadoOrden" />
+        <AssociationConnector Association="LavanderiaModel.FK_CantidadIngredientesOperacion_OperacionesProcesoOrden" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

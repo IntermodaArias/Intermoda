@@ -1,0 +1,52 @@
+﻿<Window x:Class="Intermoda.Produccion.Lecturas.App.View.DialogView.Lavanderia.LavanderiaInstruccionOperacionEditView"
+        xmlns:controls="clr-namespace:Intermoda.Wpf.Controls;assembly=Intermoda.Wpf.Controls"  
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Title="Instrucción de Operación" Height="340" Width="380" WindowStartupLocation="CenterOwner"
+        d:DataContext="{Binding Source={StaticResource Locator}, Path=LavanderiaInstruccionOperacionEditViewModel}">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Margin="2" Content="Operación: "/>
+            <Label Grid.Row="1" Grid.Column="0" Margin="2" Content="Descripción: "/>
+            <Label Grid.Row="2" Grid.Column="0" Margin="2" Content="Tiempo Mínimo: "/>
+            <Label Grid.Row="3" Grid.Column="0" Margin="2" Content="Tiempo Máximo: "/>
+            <Label Grid.Row="4" Grid.Column="0" Margin="2" Content="Tiempo Estándar: "/>
+            <Label Grid.Row="5" Grid.Column="0" Margin="2" Content="Temperatura (°C): "/>
+            <Label Grid.Row="6" Grid.Column="0" Margin="2" Content="Orden: "/>
+            <TextBox Grid.Row="0" Grid.Column="1" Margin="2" Width="250" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     IsReadOnly="True" Text="{Binding Path=Operacion.Nombre}"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="2" Width="250" Height="60" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Text="{Binding Path=Descripcion, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Margin="2" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Text="{Binding Path=TiempoMinimo, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Margin="2" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Text="{Binding Path=TiempoMaximo, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+            <TextBox Grid.Row="4" Grid.Column="1" Margin="2" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Text="{Binding Path=TiempoEstandar, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+            <TextBox Grid.Row="5" Grid.Column="1" Margin="2" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Text="{Binding Path=Temperatura, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+            <TextBox Grid.Row="6" Grid.Column="1" Margin="2" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Text="{Binding Path=Orden, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+        </Grid>
+        <controls:CancelConfirmControl Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

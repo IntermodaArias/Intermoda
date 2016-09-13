@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LbDatProModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="MAEAR6">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="AdpCodEmp" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="AdpCodEmp" Type="Int32" Nullable="false" />
+    <Property Name="AdpCntEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNomEmp" Type="String" MaxLength="22" FixedLength="true" Unicode="false" />
+    <Property Name="AdpAplEmp" Type="String" MaxLength="22" FixedLength="true" Unicode="false" />
+    <Property Name="AdpAlias" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="AdpDirEmp" Type="String" MaxLength="45" FixedLength="true" Unicode="false" />
+    <Property Name="AdpDirImp" Type="Int16" />
+    <Property Name="AdpNumTel" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="AdpDirNet" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="AdpFecIng" Type="DateTime" Precision="3" />
+    <Property Name="AdpHorIng" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="AdpFecRet" Type="DateTime" Precision="3" />
+    <Property Name="AdpFecNac" Type="DateTime" Precision="3" />
+    <Property Name="AdpCodDep" Type="Int16" />
+    <Property Name="AdpCodNac" Type="Int16" />
+    <Property Name="AdpCodTip" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNumCed" Type="Decimal" Precision="14" Scale="0" />
+    <Property Name="AdpNumRtn" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNumIhs" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNumSol" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNumRap" Type="String" MaxLength="14" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNumPol" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNomCyg" Type="String" MaxLength="28" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNomPa1" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNomPa2" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodCiv" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodEdu" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodFrm" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpEntEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodPro" Type="Int16" />
+    <Property Name="AdpCodDe2" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodPue" Type="Int16" />
+    <Property Name="AdpCodSex" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodSkl" Type="Int16" />
+    <Property Name="AdpCodSup" Type="Int16" />
+    <Property Name="AdpSueBas" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AdpStsEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNumCue" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodOcu" Type="Int16" />
+    <Property Name="AdpCodSec" Type="Int16" />
+    <Property Name="AdpCodSub" Type="Int16" />
+    <Property Name="AdpUsrGra" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="AdpFecGra" Type="DateTime" Precision="3" />
+    <Property Name="AdpHorGra" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodPla" Type="Int16" />
+    <Property Name="AdpUsrRec" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="AdpFecRec" Type="DateTime" Precision="3" />
+    <Property Name="AdpHrsRec" Type="Int32" />
+    <Property Name="AdpEntUsr" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="PlsCodCur" Type="Int16" />
+    <Property Name="AdpPagIhs" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPagRap" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpFrmVac" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpFecVac" Type="DateTime" Precision="3" />
+    <Property Name="AdpValVac" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="AdpAntVac" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="AdpNomRec" Type="String" MaxLength="34" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPasBmp" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPasBm1" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPasBm2" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPasBm3" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPasBm4" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPasBm5" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPasBm6" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="AdpTipOpr" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpSemIni" Type="Int16" />
+    <Property Name="AdpSemFin" Type="Int16" />
+    <Property Name="AdpBonEsc" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpSueChq" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="AdpPreRet" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpDiaVac" Type="Int16" />
+    <Property Name="AdpArea01" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea02" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea03" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea04" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea05" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea06" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea07" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea08" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea09" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea10" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea11" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea12" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea13" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea14" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodGru" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpFecCon" Type="DateTime" Precision="3" />
+    <Property Name="AdpTipPla" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpConUsr" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="AdpUsrVal" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="AdpEfic" Type="Int16" />
+    <Property Name="AdpChange" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="AdpDateC" Type="DateTime" Precision="3" />
+    <Property Name="AdpActiv1" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="AdpActiv2" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="CodArea" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="CodSubPro" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ModECalFor" Type="Int16" />
+    <Property Name="ModEmpCal" Type="Int16" />
+    <Property Name="ModECalFin" Type="Int16" />
+    <Property Name="AdpComod" Type="Int16" />
+    <Property Name="AdpTipEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="AdpCamPla" Type="DateTime" Precision="3" />
+    <Property Name="AdpCamUsr" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="AdpEmpLiq" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpMdCod" Type="Int16" />
+    <Property Name="AdpCodCiu" Type="Int16" />
+    <Property Name="AdpNoFer" Type="Int16" />
+    <Property Name="BncCod" Type="Int16" />
+    <Property Name="AdpCtaBco" Type="Int16" />
+    <Property Name="AdpUltLinA" Type="Int16" />
+    <Property Name="AdpISRHijo" Type="Int16" />
+    <Property Name="AdpISRCony" Type="Int16" />
+    <Property Name="AdpMonCod" Type="Int16" />
+    <Property Name="AdpCueNum" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPorCue" Type="Int16" />
+    <Property Name="AdpCuePor" Type="Int16" />
+    <Property Name="AdpMonCue" Type="Int16" />
+    <Property Name="AdpCueMon" Type="Int16" />
+    <Property Name="AdpTurno" Type="Int16" Nullable="false" />
+    <Property Name="NumPatrona" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="AdpRelMar" Type="Int16" />
+    <Property Name="AdpTipFch" Type="DateTime" Precision="3" />
+    <Property Name="AdpSMedico" Type="Int16" Nullable="false" />
+    <Property Name="AdpSVida" Type="Int16" Nullable="false" />
+    <Property Name="AdpSVehicu" Type="Int16" Nullable="false" />
+    <Property Name="AdpCodPai" Type="Int16" />
+    <Property Name="AdpEmpCom" Type="Int16" />
+    <Property Name="AdpIncCst" Type="Int16" />
+    <Property Name="PrdCrvId" Type="Int16" />
+  </EntityType>
+  <EntityType Name="MAEAUS">
+    <Key>
+      <PropertyRef Name="CiaCod" />
+      <PropertyRef Name="AdpCodEmp" />
+      <PropertyRef Name="PlsCodPer" />
+      <PropertyRef Name="PlsTpoPls" />
+      <PropertyRef Name="PlsCodGrs" />
+      <PropertyRef Name="PlsNumSes" />
+      <PropertyRef Name="PlsAnoSes" />
+      <PropertyRef Name="PlsCodDia" />
+      <PropertyRef Name="PlsCodCon" />
+    </Key>
+    <Property Name="CiaCod" Type="Int16" Nullable="false" />
+    <Property Name="AdpCodEmp" Type="Int32" Nullable="false" />
+    <Property Name="PlsCodPer" Type="Int16" Nullable="false" />
+    <Property Name="PlsTpoPls" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PlsCodGrs" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PlsNumSes" Type="Int16" Nullable="false" />
+    <Property Name="PlsAnoSes" Type="Int16" Nullable="false" />
+    <Property Name="PlsCodDia" Type="Int16" Nullable="false" />
+    <Property Name="PlsCodCon" Type="Int16" Nullable="false" />
+    <Property Name="PlsValTem" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="PlsTipIng" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="LbDatProEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MAEAR6Set" EntityType="Self.MAEAR6" />
+    <EntitySet Name="MAEAUSSet" EntityType="LbDatProModel.MAEAUS" />
+    <EntitySet Name="CNTPERIOSet" EntityType="LbDatProModel.CNTPERIO" />
+  </EntityContainer>
+  <EntityType Name="CNTPERIO">
+    <Key>
+      <PropertyRef Name="CiaCod" />
+      <PropertyRef Name="CntPANO" />
+      <PropertyRef Name="CntPMes" />
+      <PropertyRef Name="CntPFei" />
+      <PropertyRef Name="CntPFef" />
+    </Key>
+    <Property Name="CiaCod" Type="Int16" Nullable="false" />
+    <Property Name="CntPANO" Type="Int16" Nullable="false" />
+    <Property Name="CntPMes" Type="Int16" Nullable="false" />
+    <Property Name="CntPFei" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CntPFef" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CntPnome" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="CntEsta" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CtlCorrAnu" Type="Int32" />
+    <Property Name="CntReab" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CntPSEM" Type="Int16" />
+    <Property Name="CntSemSan" Type="Int16" />
+    <Property Name="CntVarBnc" Type="Int16" />
+    <Property Name="CntVarPrv" Type="Int16" />
+    <Property Name="CntVtaStsP" Type="Int16" />
+  </EntityType>
+</Schema>

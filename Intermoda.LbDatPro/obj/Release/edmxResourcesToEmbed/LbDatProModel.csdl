@@ -1,0 +1,843 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LBDATPROModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CATALOG">
+    <Key>
+      <PropertyRef Name="MapCodMat" />
+    </Key>
+    <Property Name="MapCodMat" Type="Int32" Nullable="false" />
+    <Property Name="CataDesLar" Type="String" MaxLength="35" FixedLength="true" Unicode="false" />
+    <Property Name="CataDesCor" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="MedCompra" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="MedConsum" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="TipRCod" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="CataGru" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="MapCtaCont" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="MapCtaVF" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MapCtaCon2" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="MapNum1Rep" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodTel" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MatGrpDes" Type="String" MaxLength="35" FixedLength="true" Unicode="false" />
+    <Property Name="MatGrpCod" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CLASE">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="MprCodCla" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="MprCodCla" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MprCanInv" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MprDesCla" Type="String" MaxLength="45" FixedLength="true" Unicode="false" />
+    <Property Name="MprCtaCon" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="MapRotBaj" Type="Int16" />
+    <Property Name="MapRotSin" Type="Int16" />
+    <Property Name="MprClaSts" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MprClaDet" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MprClaDia" Type="Int16" Nullable="false" />
+    <Property Name="MprCodAgr" Type="Int16" />
+    <Property Name="MprClaSig" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MprGrpNom" Type="String" MaxLength="45" FixedLength="true" Unicode="false" />
+    <Property Name="MprGrpCla" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MprClaAX" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MprClaDL" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FACCOL">
+    <Key>
+      <PropertyRef Name="CiaCod" />
+      <PropertyRef Name="FacCCol" />
+    </Key>
+    <Property Name="CiaCod" Type="Int16" Nullable="false" />
+    <Property Name="FacCCol" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="FacDCol" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="AxColorId01" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="AxColorId02" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="FacIDCol" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="GRUTEL">
+    <Key>
+      <PropertyRef Name="FacCodGrut" />
+    </Key>
+    <Property Name="FacCodGrut" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="FacDesGrut" Type="String" MaxLength="44" FixedLength="true" Unicode="false" />
+    <Property Name="FacGruUltN" Type="Int16" />
+    <Property Name="GruSts" Type="Int16" Nullable="false" />
+    <Property Name="FacReposo" Type="Int16" />
+  </EntityType>
+  <EntityType Name="MATMST">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="MapCodMat" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="MapCodMat" Type="Int32" Nullable="false" />
+    <Property Name="MapCodAlt" Type="Int32" />
+    <Property Name="FacCodMar" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="FacCodTpo" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodCla" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodSCla" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodRef" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodCol" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodTam" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MapFecMat" Type="DateTime" Precision="3" />
+    <Property Name="MatCodTon" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="MapCosProm" Type="Decimal" Precision="9" Scale="4" />
+    <Property Name="MapCanExis" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapCanExi1" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapCanExi2" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapCanExi3" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapCanExi4" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapSalAntU" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapEntraU" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapSalidU" Type="Decimal" Precision="11" Scale="5" />
+    <Property Name="MapSalActU" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapSalAntV" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MapEntraV" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MapSalidV" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MapSalActV" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MapRanMin" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapPorDes" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MapPorStd" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MapUbi" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MapRepTCa" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="RepNumPag" Type="Int32" />
+    <Property Name="FacCodTel" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PapLinCod" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MapNumRep" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="MapRepDia" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MapRepDie" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MapRepTam" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="RepCodMar" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="RepTipCat" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="RepTipMaq" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="MapRanMin2" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="RepBodCod" Type="Int16" />
+    <Property Name="MprUbiEst" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MprUbiRak" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MapMatSts" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PrdCodDis" Type="Int16" />
+    <Property Name="CmpColCod" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="CmpTexCod" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MapReaSts" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MapFecIng" Type="DateTime" Precision="3" />
+    <Property Name="MapFecCre" Type="DateTime" Precision="3" />
+    <Property Name="MapFecCad" Type="DateTime" Precision="3" />
+    <Property Name="CmpTelPes" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="CmpTelCom" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodArt" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodMdl" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodTel" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodLav" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="MprCCol" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MprNumTal" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodDim" Type="Int16" />
+    <Property Name="MapLoopSiz" Type="Int16" Nullable="false" />
+    <Property Name="MprMatSig" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="TipRCod" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="MapEntAdd" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="TelTipCod" Type="Int16" />
+    <Property Name="TelTenCod" Type="Int16" />
+    <Property Name="TelTejCod" Type="Int16" />
+    <Property Name="TelAcbCod" Type="Int16" />
+    <Property Name="TelCmpCod" Type="Int16" />
+    <Property Name="CodigoDyna" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="MprEtgCon" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodUbi" Type="Int16" />
+    <Property Name="MprCtCod" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MatCntRes" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MprExcCmp" Type="Int16" />
+    <Property Name="MatUltMov" Type="DateTime" Precision="0" />
+    <Property Name="FacCCol" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MprSubCod" Type="Int16" />
+  </EntityType>
+  <EntityType Name="MATMST1">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="MapCodMat" />
+      <PropertyRef Name="MprCodBod" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="MapCodMat" Type="Int32" Nullable="false" />
+    <Property Name="MprCodBod" Type="Int16" Nullable="false" />
+    <Property Name="MprExiBod" Type="Decimal" Precision="11" Scale="4" />
+    <Property Name="MprBodCos" Type="Decimal" Precision="9" Scale="4" />
+    <Property Name="MprExiMax" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MPrExiReo" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MprExiMin" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MprExiSts" Type="Int16" />
+  </EntityType>
+  <EntityType Name="MPRCOLOR">
+    <Key>
+      <PropertyRef Name="CiaCod" />
+      <PropertyRef Name="MprCodCol" />
+    </Key>
+    <Property Name="CiaCod" Type="Int16" Nullable="false" />
+    <Property Name="MprCodCol" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MprDesCol" Type="String" MaxLength="45" FixedLength="true" Unicode="false" />
+    <Property Name="MprColAX" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SUBCLASE">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="MprCodSCla" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="MprCodSCla" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MprDesSCla" Type="String" MaxLength="45" FixedLength="true" Unicode="false" />
+    <Property Name="MprSClaSts" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MprSClaAX" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TELAR5">
+    <Key>
+      <PropertyRef Name="FacCodTel" />
+    </Key>
+    <Property Name="FacCodTel" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="FacCodGrut" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="FacDesTel" Type="String" MaxLength="44" FixedLength="true" Unicode="false" />
+    <Property Name="FacUltLin" Type="Int16" />
+    <Property Name="FacUltLStr" Type="Int16" />
+    <Property Name="ComposicionId" Type="Int32" />
+    <Property Name="TelDesVta" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="LBDATPROEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CATALOGSet" EntityType="Self.CATALOG" />
+    <EntitySet Name="CLASESet" EntityType="Self.CLASE" />
+    <EntitySet Name="FACCOLSet" EntityType="Self.FACCOL" />
+    <EntitySet Name="GRUTELSet" EntityType="Self.GRUTEL" />
+    <EntitySet Name="MATMSTSet" EntityType="Self.MATMST" />
+    <EntitySet Name="MATMST1Set" EntityType="Self.MATMST1" />
+    <EntitySet Name="MPRCOLORSet" EntityType="Self.MPRCOLOR" />
+    <EntitySet Name="SUBCLASESet" EntityType="Self.SUBCLASE" />
+    <EntitySet Name="TELAR5Set" EntityType="Self.TELAR5" />
+    <EntitySet Name="CNTPERIOSet" EntityType="LBDATPROModel.CNTPERIO" />
+    <EntitySet Name="MAEAR6Set" EntityType="LBDATPROModel.MAEAR6" />
+    <EntitySet Name="MAEAUSSet" EntityType="LBDATPROModel.MAEAUS" />
+    <EntitySet Name="CORPLASet" EntityType="LBDATPROModel.CORPLA" />
+    <EntitySet Name="CTPLANTASet" EntityType="LBDATPROModel.CTPLANTA" />
+    <EntitySet Name="CUTARC3Set" EntityType="LBDATPROModel.CUTARC3" />
+    <EntitySet Name="PATRONSet" EntityType="LBDATPROModel.PATRON" />
+    <EntitySet Name="PRDSTSSet" EntityType="LBDATPROModel.PRDSTS" />
+    <EntitySet Name="CTRABAJOSet" EntityType="LBDATPROModel.CTRABAJO" />
+    <EntitySet Name="ORDCENTRSet" EntityType="LBDATPROModel.ORDCENTR" />
+    <EntitySet Name="PRVMSTSet" EntityType="LBDATPROModel.PRVMST" />
+  </EntityContainer>
+  <EntityType Name="CNTPERIO">
+    <Key>
+      <PropertyRef Name="CiaCod" />
+      <PropertyRef Name="CntPANO" />
+      <PropertyRef Name="CntPMes" />
+      <PropertyRef Name="CntPFei" />
+      <PropertyRef Name="CntPFef" />
+    </Key>
+    <Property Name="CiaCod" Type="Int16" Nullable="false" />
+    <Property Name="CntPANO" Type="Int16" Nullable="false" />
+    <Property Name="CntPMes" Type="Int16" Nullable="false" />
+    <Property Name="CntPFei" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CntPFef" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CntPnome" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="CntEsta" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CtlCorrAnu" Type="Int32" />
+    <Property Name="CntReab" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CntPSEM" Type="Int16" />
+    <Property Name="CntSemSan" Type="Int16" />
+    <Property Name="CntVarBnc" Type="Int16" />
+    <Property Name="CntVarPrv" Type="Int16" />
+    <Property Name="CntVtaStsP" Type="Int16" />
+  </EntityType>
+  <EntityType Name="MAEAR6">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="AdpCodEmp" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="AdpCodEmp" Type="Int32" Nullable="false" />
+    <Property Name="AdpCntEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNomEmp" Type="String" MaxLength="22" FixedLength="true" Unicode="false" />
+    <Property Name="AdpAplEmp" Type="String" MaxLength="22" FixedLength="true" Unicode="false" />
+    <Property Name="AdpAlias" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="AdpDirEmp" Type="String" MaxLength="45" FixedLength="true" Unicode="false" />
+    <Property Name="AdpDirImp" Type="Int16" />
+    <Property Name="AdpNumTel" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="AdpDirNet" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="AdpFecIng" Type="DateTime" Precision="3" />
+    <Property Name="AdpHorIng" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="AdpFecRet" Type="DateTime" Precision="3" />
+    <Property Name="AdpFecNac" Type="DateTime" Precision="3" />
+    <Property Name="AdpCodDep" Type="Int16" />
+    <Property Name="AdpCodNac" Type="Int16" />
+    <Property Name="AdpCodTip" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNumCed" Type="Decimal" Precision="14" Scale="0" />
+    <Property Name="AdpNumRtn" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNumIhs" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNumSol" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNumRap" Type="String" MaxLength="14" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNumPol" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNomCyg" Type="String" MaxLength="28" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNomPa1" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNomPa2" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodCiv" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodEdu" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodFrm" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpEntEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodPro" Type="Int16" />
+    <Property Name="AdpCodDe2" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodPue" Type="Int16" />
+    <Property Name="AdpCodSex" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodSkl" Type="Int16" />
+    <Property Name="AdpCodSup" Type="Int16" />
+    <Property Name="AdpSueBas" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AdpStsEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpNumCue" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodOcu" Type="Int16" />
+    <Property Name="AdpCodSec" Type="Int16" />
+    <Property Name="AdpCodSub" Type="Int16" />
+    <Property Name="AdpUsrGra" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="AdpFecGra" Type="DateTime" Precision="3" />
+    <Property Name="AdpHorGra" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodPla" Type="Int16" />
+    <Property Name="AdpUsrRec" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="AdpFecRec" Type="DateTime" Precision="3" />
+    <Property Name="AdpHrsRec" Type="Int32" />
+    <Property Name="AdpEntUsr" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="PlsCodCur" Type="Int16" />
+    <Property Name="AdpPagIhs" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPagRap" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpFrmVac" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpFecVac" Type="DateTime" Precision="3" />
+    <Property Name="AdpValVac" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="AdpAntVac" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="AdpNomRec" Type="String" MaxLength="34" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPasBmp" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPasBm1" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPasBm2" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPasBm3" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPasBm4" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPasBm5" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPasBm6" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="AdpTipOpr" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpSemIni" Type="Int16" />
+    <Property Name="AdpSemFin" Type="Int16" />
+    <Property Name="AdpBonEsc" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpSueChq" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="AdpPreRet" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpDiaVac" Type="Int16" />
+    <Property Name="AdpArea01" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea02" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea03" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea04" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea05" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea06" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea07" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea08" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea09" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea10" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea11" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea12" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea13" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpArea14" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodGru" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpFecCon" Type="DateTime" Precision="3" />
+    <Property Name="AdpTipPla" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpConUsr" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="AdpUsrVal" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="AdpEfic" Type="Int16" />
+    <Property Name="AdpChange" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="AdpDateC" Type="DateTime" Precision="3" />
+    <Property Name="AdpActiv1" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="AdpActiv2" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="CodArea" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="CodSubPro" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ModECalFor" Type="Int16" />
+    <Property Name="ModEmpCal" Type="Int16" />
+    <Property Name="ModECalFin" Type="Int16" />
+    <Property Name="AdpComod" Type="Int16" />
+    <Property Name="AdpTipEmp" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCamPla" Type="DateTime" Precision="3" />
+    <Property Name="AdpCamUsr" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="AdpEmpLiq" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdpMdCod" Type="Int16" />
+    <Property Name="AdpCodCiu" Type="Int16" />
+    <Property Name="AdpNoFer" Type="Int16" />
+    <Property Name="BncCod" Type="Int16" />
+    <Property Name="AdpCtaBco" Type="Int16" />
+    <Property Name="AdpUltLinA" Type="Int16" />
+    <Property Name="AdpISRHijo" Type="Int16" />
+    <Property Name="AdpISRCony" Type="Int16" />
+    <Property Name="AdpMonCod" Type="Int16" />
+    <Property Name="AdpCueNum" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="AdpPorCue" Type="Int16" />
+    <Property Name="AdpCuePor" Type="Int16" />
+    <Property Name="AdpMonCue" Type="Int16" />
+    <Property Name="AdpCueMon" Type="Int16" />
+    <Property Name="AdpTurno" Type="Int16" Nullable="false" />
+    <Property Name="NumPatrona" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="AdpRelMar" Type="Int16" />
+    <Property Name="AdpTipFch" Type="DateTime" Precision="3" />
+    <Property Name="AdpSMedico" Type="Int16" Nullable="false" />
+    <Property Name="AdpSVida" Type="Int16" Nullable="false" />
+    <Property Name="AdpSVehicu" Type="Int16" Nullable="false" />
+    <Property Name="AdpCodPai" Type="Int16" />
+    <Property Name="AdpEmpCom" Type="Int16" />
+    <Property Name="AdpIncCst" Type="Int16" />
+    <Property Name="PrdCrvId" Type="Int16" />
+    <Property Name="CodEmpReem" Type="Int32" />
+    <Property Name="PrdCrvSemI" Type="Int16" />
+    <Property Name="AdpEmpLac" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MAEAUS">
+    <Key>
+      <PropertyRef Name="CiaCod" />
+      <PropertyRef Name="AdpCodEmp" />
+      <PropertyRef Name="PlsCodPer" />
+      <PropertyRef Name="PlsTpoPls" />
+      <PropertyRef Name="PlsCodGrs" />
+      <PropertyRef Name="PlsNumSes" />
+      <PropertyRef Name="PlsAnoSes" />
+      <PropertyRef Name="PlsCodDia" />
+      <PropertyRef Name="PlsCodCon" />
+    </Key>
+    <Property Name="CiaCod" Type="Int16" Nullable="false" />
+    <Property Name="AdpCodEmp" Type="Int32" Nullable="false" />
+    <Property Name="PlsCodPer" Type="Int16" Nullable="false" />
+    <Property Name="PlsTpoPls" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PlsCodGrs" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PlsNumSes" Type="Int16" Nullable="false" />
+    <Property Name="PlsAnoSes" Type="Int16" Nullable="false" />
+    <Property Name="PlsCodDia" Type="Int16" Nullable="false" />
+    <Property Name="PlsCodCon" Type="Int16" Nullable="false" />
+    <Property Name="PlsValTem" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="PlsTipIng" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CORPLA">
+    <Key>
+      <PropertyRef Name="PrdCorFab" />
+    </Key>
+    <Property Name="PrdCorFab" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCorIni" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCorDes" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCorTck" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCorTip" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodBod" Type="Int16" />
+    <Property Name="PrdFabSts" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdHabilit" Type="Int16" />
+    <Property Name="PrdFabNew" Type="Int32" />
+    <Property Name="PrdCiaCod" Type="Int16" />
+    <Property Name="PrdCodPrv" Type="Int16" />
+    <Property Name="PrdPrvCla" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="PrdPrvUsu" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CTPLANTA">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="PrdAnoCor" />
+      <PropertyRef Name="PrdNumCor" />
+      <PropertyRef Name="PrdCtCod" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="PrdAnoCor" Type="Int16" Nullable="false" />
+    <Property Name="PrdNumCor" Type="Int16" Nullable="false" />
+    <Property Name="PrdCtCod" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtFPlI" Type="DateTime" Precision="3" />
+    <Property Name="PrdCtFPlF" Type="DateTime" Precision="3" />
+    <Property Name="PrdCtPlCod" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtFOrI" Type="DateTime" Precision="3" />
+    <Property Name="PrdCtFOrF" Type="DateTime" Precision="3" />
+    <Property Name="PrdCtFPrI" Type="DateTime" Precision="3" />
+    <Property Name="PrdCtFPrF" Type="DateTime" Precision="3" />
+    <Property Name="PrdCtHrs" Type="Int16" />
+    <Property Name="PrdCtModP" Type="Int16" />
+    <Property Name="PrdCtSecP" Type="Int16" />
+    <Property Name="PrdCtModC" Type="Int16" />
+    <Property Name="PrdCtSecC" Type="Int16" />
+    <Property Name="PrdCtReser" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtAuto" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtFAuto" Type="DateTime" Precision="3" />
+    <Property Name="PrdCtORden" Type="Int16" />
+    <Property Name="PrdCtStsIm" Type="Int16" />
+  </EntityType>
+  <EntityType Name="CUTARC3">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="PrdNumCor" />
+      <PropertyRef Name="PrdAnoCor" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="PrdNumCor" Type="Int16" Nullable="false" />
+    <Property Name="PrdAnoCor" Type="Int16" Nullable="false" />
+    <Property Name="PrdNumAli" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="FacCodRef" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="FacCodTel" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="FacCCol" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecCor" Type="DateTime" Precision="3" />
+    <Property Name="PrdFeFCor" Type="DateTime" Precision="3" />
+    <Property Name="PrdFecBul" Type="DateTime" Precision="3" />
+    <Property Name="PrdFecCos" Type="DateTime" Precision="3" />
+    <Property Name="PrdFeFCos" Type="DateTime" Precision="3" />
+    <Property Name="PrdFecEsm" Type="DateTime" Precision="3" />
+    <Property Name="PrdStsCor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsCos" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsLav" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFeILav" Type="DateTime" Precision="3" />
+    <Property Name="PrdFeFLav" Type="DateTime" Precision="3" />
+    <Property Name="PrdFeIEmp" Type="DateTime" Precision="3" />
+    <Property Name="PrdFeFEmp" Type="DateTime" Precision="3" />
+    <Property Name="PrdTipCor" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodPrd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodRep" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdLotMue" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFeIDes" Type="DateTime" Precision="3" />
+    <Property Name="PrdFeFDes" Type="DateTime" Precision="3" />
+    <Property Name="PrdFeIBor" Type="DateTime" Precision="3" />
+    <Property Name="PrdFeFBor" Type="DateTime" Precision="3" />
+    <Property Name="PrdEstCor" Type="DateTime" Precision="3" />
+    <Property Name="PrdEstBor" Type="DateTime" Precision="3" />
+    <Property Name="PrdEstCos" Type="DateTime" Precision="3" />
+    <Property Name="PrdEstDes" Type="DateTime" Precision="3" />
+    <Property Name="PrdEstLav" Type="DateTime" Precision="3" />
+    <Property Name="PrdEstEmp" Type="DateTime" Precision="3" />
+    <Property Name="PrdRecCos" Type="DateTime" Precision="3" />
+    <Property Name="PrdStsDes" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCorFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCosFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdLavFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdEmpFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdDesFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdBorFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdClasCo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdYdsUso" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="PrdObsCor" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="PrdUsuPre" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecGra" Type="DateTime" Precision="3" />
+    <Property Name="PrdUsuVen" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdUsuPrd" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecVen" Type="DateTime" Precision="3" />
+    <Property Name="PrdFecPrd" Type="DateTime" Precision="3" />
+    <Property Name="PrdPesLot" Type="String" MaxLength="9" FixedLength="true" Unicode="false" />
+    <Property Name="PrdAjuste" Type="DateTime" Precision="3" />
+    <Property Name="PrdAUser" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCanApr" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="PrdTckCor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdTckCos" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdTckLav" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdTckEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdTckDes" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdTckBor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsCrt" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsDgt" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsBor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsPas" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStPrel" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFchPre" Type="DateTime" Precision="3" />
+    <Property Name="PrdFchLiq" Type="DateTime" Precision="3" />
+    <Property Name="PrdAlMac" Type="Int16" />
+    <Property Name="PrdUsrCo" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodSem" Type="Int16" />
+    <Property Name="PrdFecCo" Type="DateTime" Precision="3" />
+    <Property Name="PrdCodTpo" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodEda" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodMod" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="PrdUndSld" Type="Int32" />
+    <Property Name="PrdUndFac" Type="Int32" />
+    <Property Name="PrdPlaLiq" Type="DateTime" Precision="3" />
+    <Property Name="PrdFecIns" Type="DateTime" Precision="3" />
+    <Property Name="PrdRecBor" Type="DateTime" Precision="3" />
+    <Property Name="PrdUsrRecB" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFSalEns" Type="DateTime" Precision="3" />
+    <Property Name="PrdUSalEns" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFRepLiq" Type="DateTime" Precision="3" />
+    <Property Name="PrdURepLiq" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="PrdValida" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecVal" Type="DateTime" Precision="3" />
+    <Property Name="PrdValida2" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdUsrVal" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdHoBul" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdHBFe" Type="DateTime" Precision="3" />
+    <Property Name="PrdConsu" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdConFe" Type="DateTime" Precision="3" />
+    <Property Name="PrdFecEnt" Type="DateTime" Precision="3" />
+    <Property Name="PrdCodCli" Type="Int32" />
+    <Property Name="PrdTipOrd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdOmiNor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecOrd" Type="DateTime" Precision="3" />
+    <Property Name="PrdCodEsp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdSerCaj" Type="Int16" />
+    <Property Name="PrdFchPas" Type="DateTime" Precision="3" />
+    <Property Name="PrdHrsPas" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="PrdUsrPas" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsReb" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFchReb" Type="DateTime" Precision="3" />
+    <Property Name="PrdHrsReb" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="PrdUsrReb" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdLavCos" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="PrdPlaId" Type="Int16" />
+    <Property Name="PrdPlaPl" Type="Int16" />
+    <Property Name="PrdInPla" Type="DateTime" Precision="3" />
+    <Property Name="PrdFiPla" Type="DateTime" Precision="3" />
+    <Property Name="PrdRIPla" Type="DateTime" Precision="3" />
+    <Property Name="PrdRFPla" Type="DateTime" Precision="3" />
+    <Property Name="PrdCorId" Type="Int16" />
+    <Property Name="PrdCorPl" Type="Int16" />
+    <Property Name="PrdInCor" Type="DateTime" Precision="3" />
+    <Property Name="PrdFiCor" Type="DateTime" Precision="3" />
+    <Property Name="PrdCosId" Type="Int16" />
+    <Property Name="PrdCosPl" Type="Int16" />
+    <Property Name="PrdInCos" Type="DateTime" Precision="3" />
+    <Property Name="PrdFiCos" Type="DateTime" Precision="3" />
+    <Property Name="PrdEmId" Type="Int16" />
+    <Property Name="PrdEmPl" Type="Int16" />
+    <Property Name="PrdInEm" Type="DateTime" Precision="3" />
+    <Property Name="PrdFiEm" Type="DateTime" Precision="3" />
+    <Property Name="PrdLaId" Type="Int16" />
+    <Property Name="PrdLaPl" Type="Int16" />
+    <Property Name="PrdInLa" Type="DateTime" Precision="3" />
+    <Property Name="PrdFiLa" Type="DateTime" Precision="3" />
+    <Property Name="PrdDeId" Type="Int16" />
+    <Property Name="PrdDePl" Type="Int16" />
+    <Property Name="PrdInDes" Type="DateTime" Precision="3" />
+    <Property Name="PrdFiDes" Type="DateTime" Precision="3" />
+    <Property Name="PrdBoId" Type="Int16" />
+    <Property Name="PrdBoPl" Type="Int16" />
+    <Property Name="PrdInBo" Type="DateTime" Precision="3" />
+    <Property Name="PrdFiBo" Type="DateTime" Precision="3" />
+    <Property Name="PrdLiquid" Type="DateTime" Precision="3" />
+    <Property Name="PrdStsPla" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AmPmPla" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AmPmCor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AmPmCos" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AmPmBor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AmPmDes" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AmPmLav" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AmPmEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WipStsPla" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WipStsCor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WipStsBor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WipStsCos" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WipStsDes" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WipStsLav" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WipStsEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PlaAPPla" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PlaAPCor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PlaAPBor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PlaAPCos" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PlaAPDes" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PlaAPLav" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PlaAPEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ConMarker" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="IdealPla" Type="Int16" />
+    <Property Name="IdealCor" Type="Int16" />
+    <Property Name="IdealBor" Type="Int16" />
+    <Property Name="IdealCos" Type="Int16" />
+    <Property Name="IdealDes" Type="Int16" />
+    <Property Name="IdealLav" Type="Int16" />
+    <Property Name="IdealEmp" Type="Int16" />
+    <Property Name="PrdDura" Type="Int16" />
+    <Property Name="PrdStsHM" Type="Int16" />
+    <Property Name="PrdRecTel" Type="DateTime" Precision="3" />
+    <Property Name="PrdRecMar" Type="DateTime" Precision="3" />
+    <Property Name="PrdTipTon" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsOrd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdSalCor" Type="DateTime" Precision="3" />
+    <Property Name="PrdPriorid" Type="Int16" />
+    <Property Name="PrdAutoriz" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdDevSts" Type="Int16" />
+    <Property Name="PrdOrdAct" Type="Int16" Nullable="false" />
+    <Property Name="PrdPuntada" Type="Int32" />
+    <Property Name="PrdPuntFch" Type="DateTime" Precision="3" />
+    <Property Name="PrdPuntUsr" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdMarMan" Type="DateTime" Precision="3" />
+    <Property Name="PrdCodArt" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="FacCodMdl" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecOri" Type="DateTime" Precision="3" />
+    <Property Name="PrdPlaOri" Type="DateTime" Precision="3" />
+    <Property Name="PrdTelVal" Type="Int16" />
+    <Property Name="PrdObCon" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PrdAnoDep" Type="Int16" />
+    <Property Name="PrdNumDep" Type="Int16" />
+    <Property Name="PrdPriCor" Type="Int16" />
+    <Property Name="PrdUsrOff" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecOff" Type="DateTime" Precision="3" />
+    <Property Name="PrdOrdCer" Type="Int16" />
+    <Property Name="PrdSegCst" Type="Int16" />
+    <Property Name="PrdSegUsu" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdSegFch" Type="DateTime" Precision="3" />
+    <Property Name="OrdRazCod" Type="Int32" />
+    <Property Name="OrdObserva" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="OrdUsrAutF" Type="DateTime" Precision="3" />
+    <Property Name="OrdUsrAutS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="OrdStsASeg" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecCTel" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="PrdUsuCTel" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFchCTel" Type="DateTime" Precision="3" />
+    <Property Name="OloStiloVe" Type="Int32" />
+    <Property Name="OrdRcpUsr" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="OrdRcpSts" Type="Int16" />
+    <Property Name="OrdRcpFec" Type="DateTime" Precision="3" />
+    <Property Name="OrdLavadoI" Type="Int32" />
+    <Property Name="PrdTckEti" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="OrdPrePes" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OrdFchDifT" Type="DateTime" Precision="3" />
+    <Property Name="OrdUsrAutD" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="OrdAutDifT" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="OrdPreCost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OrdFlexibl" Type="Int16" />
+    <Property Name="OrdTotUnd" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="FxTelaProduccion" Type="String" MaxLength="2" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="PrdTckEAh" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="OrdFecEnvC" Type="DateTime" Precision="3" />
+    <Property Name="OrdStsEnvC" Type="Int16" />
+    <Property Name="OrdPerLec" Type="Int16" />
+  </EntityType>
+  <EntityType Name="PATRON">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="PrdCodArt" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="PrdCodArt" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodDis" Type="Int16" />
+    <Property Name="FacCodEd" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="FacCodTpo" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdDscArt" Type="String" Nullable="false" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="PatSts" Type="Int16" Nullable="false" />
+    <Property Name="PrdPatU1" Type="Int16" />
+    <Property Name="PrdPatU2" Type="Int16" />
+    <Property Name="PrdPSgrPat" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="PrdCodDes" Type="Int16" />
+    <Property Name="PrdPatU3" Type="Int16" />
+    <Property Name="FacCodMar" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCstMax" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="PrdCalPat" Type="Int16" Nullable="false" />
+    <Property Name="PrdPatPier" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="PrdPatRued" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="PrdPatTiro" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodAli" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="PatUltLin" Type="Int16" />
+    <Property Name="AxBaseId" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="AxTipoVarianteId" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="PatInvSegu" Type="Int16" />
+  </EntityType>
+  <EntityType Name="PRDSTS">
+    <Key>
+      <PropertyRef Name="PrdStsCor" />
+    </Key>
+    <Property Name="PrdStsCor" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdSecSts" Type="Int16" />
+    <Property Name="PrdDesSts" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="PrdAreSts" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdAliCCos" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCTraba" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CTRABAJO">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="PrdCtCod" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="PrdCtCod" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtDes" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtMod" Type="Int16" Nullable="false" />
+    <Property Name="PrdSecUse" Type="Int16" />
+    <Property Name="PrdCTWor" Type="Int16" />
+    <Property Name="PrdOrdImp" Type="Int16" />
+    <Property Name="PrdTroImp" Type="Int16" />
+    <Property Name="PrdCtOrd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtSts" Type="Int16" />
+    <Property Name="PrdImpCup" Type="Int16" />
+    <Property Name="PrdCtSupCo" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtAlias" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtTipEn" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtTipSa" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtEsEnt" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdSalCt" Type="Int16" />
+    <Property Name="PrdProEje" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtNew" Type="Int32" />
+    <Property Name="PrdCtGru" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtRFAB" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtRMOI" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtRMOD" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="CtEsqPago" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CCCodigo" Type="Int16" />
+    <Property Name="PrdCtTip" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MOCCosto" Type="Decimal" Precision="10" Scale="4" />
+  </EntityType>
+  <EntityType Name="ORDCENTR">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="PrdNumCor" />
+      <PropertyRef Name="PrdAnoCor" />
+      <PropertyRef Name="PrdCtCod" />
+      <PropertyRef Name="PrdSecCod" />
+      <PropertyRef Name="PrdCtBulto" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="PrdNumCor" Type="Int16" Nullable="false" />
+    <Property Name="PrdAnoCor" Type="Int16" Nullable="false" />
+    <Property Name="PrdCtCod" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdSecCod" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtBulto" Type="Int16" Nullable="false" />
+    <Property Name="PrdCtSup" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdEstSec" Type="Int16" />
+    <Property Name="PrdCtModu" Type="Int16" />
+    <Property Name="PrdCtFecI" Type="DateTime" Precision="3" />
+    <Property Name="PrdCtFecF" Type="DateTime" Precision="3" />
+    <Property Name="PrdLecMan" Type="Int16" />
+    <Property Name="PrdCtAud" Type="Int16" />
+    <Property Name="PrdCtRech" Type="Int16" />
+    <Property Name="PrdDesRech" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecRech" Type="DateTime" Precision="3" />
+    <Property Name="PrdRecUsr" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodRec" Type="Int16" />
+    <Property Name="PrdCodGru" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodOpr" Type="Int16" />
+    <Property Name="PRdCtUsrSa" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtUsrEn" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtKanba" Type="Int16" />
+  </EntityType>
+  <EntityType Name="PRVMST">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="PrvCod" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="PrvCod" Type="Int16" Nullable="false" />
+    <Property Name="PrvNom" Type="String" MaxLength="55" FixedLength="true" Unicode="false" />
+    <Property Name="PrvForPag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrvNomCor" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="PrvDir1" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="PrvDir2" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="PrvTel1" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PrvTel2" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PrvFax" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PrvTip" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrvDiasV" Type="Int16" />
+    <Property Name="PrvCtaCont" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="PrvCont" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="PrvCorrEl" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="AdpCodPai" Type="Int16" />
+    <Property Name="AdpCodCiu" Type="Int16" />
+    <Property Name="PrvSaldo" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PrvBcoMonC" Type="Int16" />
+    <Property Name="PrvSolChq" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrvParVar" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrvRTN" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="PrvCtaMTr" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="PrvNRTN" Type="Decimal" Precision="14" Scale="0" />
+    <Property Name="PrvCtaCob" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="PrvRefBAC" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrvRetPAC" Type="Int16" />
+    <Property Name="PrvRetISV" Type="Int16" />
+    <Property Name="PrvCodAX" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="PrvCodDPI" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="PrvUltTrn" Type="DateTime" Precision="3" />
+    <Property Name="PrvCodGru" Type="Int16" />
+    <Property Name="PagBcoMonC" Type="Int16" />
+    <Property Name="BncCod" Type="Int16" />
+    <Property Name="PrvBcoCta" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="PrvCorr2" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="PrvRetA50" Type="Int16" />
+    <Property Name="PrvNoAX" Type="Int16" />
+    <Property Name="PrvREVen" Type="DateTime" Precision="3" />
+    <Property Name="PrvResExo" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="PrvCtaPro" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+  </EntityType>
+</Schema>

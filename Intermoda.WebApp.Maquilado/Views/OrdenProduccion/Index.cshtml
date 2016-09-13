@@ -1,0 +1,85 @@
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
+@model IEnumerable<Intermoda.WebApp.Maquilado.ViewModels.OrdenProduccionExternoViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OrdenProduccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Referencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ColorDescripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SiguienteLecturaTipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstadoLeyenda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrdenEstadoDescripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CentroTrabajoUltimaLecturaNombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CentroTrabajoSiguienteNombre)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrdenProduccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Referencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColorDescripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SiguienteLecturaTipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoLeyenda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrdenEstadoDescripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CentroTrabajoUltimaLecturaNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CentroTrabajoSiguienteNombre)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {/* id=item.PrimaryKey */}) |
+                @Html.ActionLink("Details", "Details", new {/* id=item.PrimaryKey */}) |
+                @Html.ActionLink("Delete", "Delete", new {/* id=item.PrimaryKey */})
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

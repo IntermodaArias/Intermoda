@@ -1,0 +1,1619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LavanderiaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ArchivosGlobales">
+    <Key>
+      <PropertyRef Name="ArchivoGlobalId" />
+    </Key>
+    <Property Name="ArchivoGlobalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ArchivoGlobalPropietarioId" Type="int" Nullable="false" />
+    <Property Name="ArchivoGlobalNombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ArchivoGlobalTipo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ArchivoGlobalExtension" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ArchivoGlobalOrden" Type="int" Nullable="false" />
+    <Property Name="ArchivoGlobalDescripcion" Type="varchar" MaxLength="500" />
+    <Property Name="ArchivoGlobalBinario" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ArchivoGlobalPropietarioNombre" Type="varchar" MaxLength="50" />
+    <Property Name="ArchivoGlobalFecha" Type="smalldatetime" Nullable="false" />
+    <Property Name="ArchivoGlobalVersion" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CantidadIngredientesInstruccion">
+    <Key>
+      <PropertyRef Name="CantidadIngredienteInstruccionId" />
+    </Key>
+    <Property Name="CantidadIngredienteInstruccionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionCiaCod" Type="int" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionPlantaCod" Type="int" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionAnio" Type="int" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionNumeroOrden" Type="int" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionCargaLavadoNumero" Type="smallint" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionLavadoId" Type="int" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionOpcionLavadoId" Type="int" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionOperacionId" Type="int" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionInstruccionId" Type="int" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionMaterialId" Type="int" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionValor" Type="decimal" Precision="18" Scale="5" />
+  </EntityType>
+  <EntityType Name="CantidadIngredientesOperacion">
+    <Key>
+      <PropertyRef Name="CantidadIngredienteId" />
+    </Key>
+    <Property Name="CantidadIngredienteId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CantidadIngredienteCiaCod" Type="int" Nullable="false" />
+    <Property Name="CantidadIngredientePlantaCod" Type="int" Nullable="false" />
+    <Property Name="CantidadIngredienteAnio" Type="int" Nullable="false" />
+    <Property Name="CantidadIngredienteNumeroOrden" Type="int" Nullable="false" />
+    <Property Name="CantidadIngredienteOperacionId" Type="int" Nullable="false" />
+    <Property Name="CantidadIngredienteValor" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="CantidadIngredienteLavadoId" Type="int" Nullable="false" />
+    <Property Name="CantidadIngredienteOpcionLavadoId" Type="int" Nullable="false" />
+    <Property Name="CantidadIngredienteMaterialId" Type="int" Nullable="false" />
+    <Property Name="CantidadIngredienteCargaLavadoNumero" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CargaLavado">
+    <Key>
+      <PropertyRef Name="CargaLavadoId" />
+    </Key>
+    <Property Name="CargaLavadoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CargaLavadoCiaCod" Type="smallint" Nullable="false" />
+    <Property Name="CargaLavadoNumeroOrden" Type="smallint" Nullable="false" />
+    <Property Name="CargaLavadoAno" Type="smallint" Nullable="false" />
+    <Property Name="CargaLavadoNumero" Type="smallint" Nullable="false" />
+    <Property Name="CargaLavadoUnidades" Type="smallint" Nullable="false" />
+    <Property Name="CargaLavadoEstado" Type="int" />
+    <Property Name="CargaLavadoLavadoId" Type="int" Nullable="false" />
+    <Property Name="CargaLavadoOpcionLavadoId" Type="int" Nullable="false" />
+    <Property Name="CargaLavadoLavadoraTipoId" Type="smallint" Nullable="false" />
+    <Property Name="CargaLavadoLavadoraId" Type="smallint" />
+    <Property Name="CargaLavadoFechaEntrada" Type="datetime" />
+    <Property Name="CargaLavadoFechaSalida" Type="datetime" />
+    <Property Name="CargaLavadoPeso" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CargaLavadoCentroTrabajoId" Type="int" Nullable="false" />
+    <Property Name="CargaLavadoCapacidadUtilizadaLavadora" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CargaLavadoTiempoMinimoProceso" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="CargaLavadoTela" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CargaLavadoNumeroArmado" Type="smallint" Nullable="false" />
+    <Property Name="CargaLavadoTiempoMaximoProceso" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="CargaLavadoNumeroRequisicionQuimicos" Type="int" />
+    <Property Name="CargaLavadoTiempoEstandarProceso" Type="decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="CATALOG">
+    <Key>
+      <PropertyRef Name="MapCodMat" />
+    </Key>
+    <Property Name="MapCodMat" Type="int" Nullable="false" />
+    <Property Name="CataDesLar" Type="char" MaxLength="35" />
+    <Property Name="CataDesCor" Type="char" MaxLength="15" />
+    <Property Name="MedCompra" Type="char" MaxLength="4" />
+    <Property Name="MedConsum" Type="char" MaxLength="4" />
+    <Property Name="TipRCod" Type="char" MaxLength="4" />
+    <Property Name="CataGru" Type="char" MaxLength="4" />
+    <Property Name="MapCtaCont" Type="char" MaxLength="25" />
+    <Property Name="MapCtaVF" Type="char" MaxLength="1" />
+    <Property Name="MapCtaCon2" Type="char" MaxLength="25" />
+    <Property Name="MapNum1Rep" Type="char" MaxLength="12" />
+    <Property Name="PrdCodTel" Type="char" MaxLength="2" />
+    <Property Name="MatGrpDes" Type="char" MaxLength="35" />
+    <Property Name="MatGrpCod" Type="int" />
+  </EntityType>
+  <EntityType Name="CentrosTrabajoOpcion">
+    <Key>
+      <PropertyRef Name="CentroTrabajoOpcionId" />
+    </Key>
+    <Property Name="CentroTrabajoOpcionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CentroTrabajoId" Type="int" Nullable="false" />
+    <Property Name="OpcionId" Type="int" Nullable="false" />
+    <Property Name="CentroTrabajoOpcionOrden" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CentrosTrabajoOpcionLavadoOrden">
+    <Key>
+      <PropertyRef Name="CentrosTrabajoOpcionLavadoOrdenId" />
+    </Key>
+    <Property Name="CentrosTrabajoOpcionLavadoOrdenId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CentrosTrabajoOpcionLavadoOrdenCentroTrabajoId" Type="int" Nullable="false" />
+    <Property Name="CentrosTrabajoOpcionLavadoOrdenOpcionLavadoId" Type="int" Nullable="false" />
+    <Property Name="CentrosTrabajoOpcionLavadoOrden_Orden" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CentrosTrabajos">
+    <Key>
+      <PropertyRef Name="CentroTrabajoCodigo" />
+    </Key>
+    <Property Name="CentroTrabajoCodigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CentroTrabajoNombre" Type="varchar" MaxLength="500" />
+    <Property Name="CentroTrabajoOrdenNumero" Type="int" />
+    <Property Name="CentroTrabajoObservacion" Type="varchar" MaxLength="8000" />
+    <Property Name="CentroTrabajoTiempoEspera" Type="numeric" Precision="12" Scale="0" />
+    <Property Name="CentroTrabajoTiempoProceso" Type="numeric" Precision="12" Scale="0" />
+    <Property Name="LineaProduccionCodigo" Type="int" />
+    <Property Name="CentroTrabajoIsObligatorio" Type="bit" />
+    <Property Name="CentroTrabajoIsActivo" Type="bit" />
+    <Property Name="CentroTrabajoKanbanEntrada" Type="int" />
+    <Property Name="CentroTrabajoKanbanSalida" Type="int" />
+    <Property Name="CentroTrabajoCodigoTipo" Type="int" />
+  </EntityType>
+  <EntityType Name="CLASE">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="MprCodCla" />
+    </Key>
+    <Property Name="CIACOD" Type="smallint" Nullable="false" />
+    <Property Name="MprCodCla" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="MprCanInv" Type="char" MaxLength="1" />
+    <Property Name="MprDesCla" Type="char" MaxLength="45" />
+    <Property Name="MprCtaCon" Type="char" MaxLength="25" />
+    <Property Name="MapRotBaj" Type="smallint" />
+    <Property Name="MapRotSin" Type="smallint" />
+    <Property Name="MprClaSts" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="MprClaDet" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="MprClaDia" Type="smallint" Nullable="false" />
+    <Property Name="MprCodAgr" Type="smallint" />
+    <Property Name="MprClaSig" Type="smallmoney" />
+    <Property Name="MprGrpNom" Type="char" MaxLength="45" />
+    <Property Name="MprGrpCla" Type="char" MaxLength="5" />
+    <Property Name="MprClaAX" Type="char" MaxLength="10" />
+    <Property Name="MprClaDL" Type="char" MaxLength="70" />
+  </EntityType>
+  <EntityType Name="ColoresIntermoda">
+    <Key>
+      <PropertyRef Name="ColorIntermodaId" />
+    </Key>
+    <Property Name="ColorIntermodaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ColorIntermodaNombre" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CTRABAJO">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="PrdCtCod" />
+    </Key>
+    <Property Name="CIACOD" Type="smallint" Nullable="false" />
+    <Property Name="PrdCtCod" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="PrdCtDes" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="PrdCtMod" Type="smallint" Nullable="false" />
+    <Property Name="PrdSecUse" Type="smallint" />
+    <Property Name="PrdCTWor" Type="smallint" />
+    <Property Name="PrdOrdImp" Type="smallint" />
+    <Property Name="PrdTroImp" Type="smallint" />
+    <Property Name="PrdCtOrd" Type="char" MaxLength="1" />
+    <Property Name="PrdCtSts" Type="smallint" />
+    <Property Name="PrdImpCup" Type="smallint" />
+    <Property Name="PrdCtSupCo" Type="char" MaxLength="10" />
+    <Property Name="PrdCtAlias" Type="char" MaxLength="2" />
+    <Property Name="PrdCtTipEn" Type="char" MaxLength="1" />
+    <Property Name="PrdCtTipSa" Type="char" MaxLength="1" />
+    <Property Name="PrdCtEsEnt" Type="char" MaxLength="1" />
+    <Property Name="PrdSalCt" Type="smallint" />
+    <Property Name="PrdProEje" Type="char" MaxLength="1" />
+    <Property Name="PrdCtNew" Type="int" />
+    <Property Name="PrdCtGru" Type="char" MaxLength="2" />
+    <Property Name="PrdCtRFAB" Type="char" MaxLength="25" />
+    <Property Name="PrdCtRMOI" Type="char" MaxLength="25" />
+    <Property Name="PrdCtRMOD" Type="char" MaxLength="25" />
+    <Property Name="CtEsqPago" Type="char" MaxLength="1" />
+    <Property Name="CCCodigo" Type="smallint" />
+    <Property Name="PrdCtTip" Type="char" MaxLength="1" />
+    <Property Name="MOCCosto" Type="smallmoney" />
+  </EntityType>
+  <EntityType Name="CUTARC3">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="PrdNumCor" />
+      <PropertyRef Name="PrdAnoCor" />
+    </Key>
+    <Property Name="CIACOD" Type="smallint" Nullable="false" />
+    <Property Name="PrdNumCor" Type="smallint" Nullable="false" />
+    <Property Name="PrdAnoCor" Type="smallint" Nullable="false" />
+    <Property Name="PrdNumAli" Type="char" MaxLength="7" />
+    <Property Name="FacCodRef" Type="char" MaxLength="3" />
+    <Property Name="FacCodTel" Type="char" MaxLength="2" />
+    <Property Name="FacCCol" Type="char" MaxLength="2" />
+    <Property Name="PrdFecCor" Type="datetime" />
+    <Property Name="PrdFeFCor" Type="datetime" />
+    <Property Name="PrdFecBul" Type="datetime" />
+    <Property Name="PrdFecCos" Type="datetime" />
+    <Property Name="PrdFeFCos" Type="datetime" />
+    <Property Name="PrdFecEsm" Type="datetime" />
+    <Property Name="PrdStsCor" Type="char" MaxLength="1" />
+    <Property Name="PrdStsCos" Type="char" MaxLength="1" />
+    <Property Name="PrdStsLav" Type="char" MaxLength="1" />
+    <Property Name="PrdStsEmp" Type="char" MaxLength="1" />
+    <Property Name="PrdFeILav" Type="datetime" />
+    <Property Name="PrdFeFLav" Type="datetime" />
+    <Property Name="PrdFeIEmp" Type="datetime" />
+    <Property Name="PrdFeFEmp" Type="datetime" />
+    <Property Name="PrdTipCor" Type="char" MaxLength="3" />
+    <Property Name="PrdCodPrd" Type="char" MaxLength="1" />
+    <Property Name="PrdCodRep" Type="char" MaxLength="1" />
+    <Property Name="PrdLotMue" Type="char" MaxLength="1" />
+    <Property Name="PrdFeIDes" Type="datetime" />
+    <Property Name="PrdFeFDes" Type="datetime" />
+    <Property Name="PrdFeIBor" Type="datetime" />
+    <Property Name="PrdFeFBor" Type="datetime" />
+    <Property Name="PrdEstCor" Type="datetime" />
+    <Property Name="PrdEstBor" Type="datetime" />
+    <Property Name="PrdEstCos" Type="datetime" />
+    <Property Name="PrdEstDes" Type="datetime" />
+    <Property Name="PrdEstLav" Type="datetime" />
+    <Property Name="PrdEstEmp" Type="datetime" />
+    <Property Name="PrdRecCos" Type="datetime" />
+    <Property Name="PrdStsDes" Type="char" MaxLength="1" />
+    <Property Name="PrdCorFab" Type="char" MaxLength="2" />
+    <Property Name="PrdCosFab" Type="char" MaxLength="2" />
+    <Property Name="PrdLavFab" Type="char" MaxLength="2" />
+    <Property Name="PrdEmpFab" Type="char" MaxLength="2" />
+    <Property Name="PrdDesFab" Type="char" MaxLength="2" />
+    <Property Name="PrdBorFab" Type="char" MaxLength="2" />
+    <Property Name="PrdClasCo" Type="char" MaxLength="1" />
+    <Property Name="PrdYdsUso" Type="smallmoney" />
+    <Property Name="PrdObsCor" Type="char" MaxLength="50" />
+    <Property Name="PrdUsuPre" Type="char" MaxLength="10" />
+    <Property Name="PrdFecGra" Type="datetime" />
+    <Property Name="PrdUsuVen" Type="char" MaxLength="10" />
+    <Property Name="PrdUsuPrd" Type="char" MaxLength="10" />
+    <Property Name="PrdFecVen" Type="datetime" />
+    <Property Name="PrdFecPrd" Type="datetime" />
+    <Property Name="PrdPesLot" Type="char" MaxLength="9" />
+    <Property Name="PrdAjuste" Type="datetime" />
+    <Property Name="PrdAUser" Type="char" MaxLength="10" />
+    <Property Name="PrdCanApr" Type="smallmoney" />
+    <Property Name="PrdTckCor" Type="char" MaxLength="1" />
+    <Property Name="PrdTckCos" Type="char" MaxLength="1" />
+    <Property Name="PrdTckLav" Type="char" MaxLength="1" />
+    <Property Name="PrdTckEmp" Type="char" MaxLength="1" />
+    <Property Name="PrdTckDes" Type="char" MaxLength="1" />
+    <Property Name="PrdTckBor" Type="char" MaxLength="1" />
+    <Property Name="PrdStsCrt" Type="char" MaxLength="1" />
+    <Property Name="PrdStsDgt" Type="char" MaxLength="1" />
+    <Property Name="PrdStsBor" Type="char" MaxLength="1" />
+    <Property Name="PrdStsPas" Type="char" MaxLength="1" />
+    <Property Name="PrdStPrel" Type="char" MaxLength="1" />
+    <Property Name="PrdFchPre" Type="datetime" />
+    <Property Name="PrdFchLiq" Type="datetime" />
+    <Property Name="PrdAlMac" Type="smallint" />
+    <Property Name="PrdUsrCo" Type="char" MaxLength="10" />
+    <Property Name="PrdCodSem" Type="smallint" />
+    <Property Name="PrdFecCo" Type="datetime" />
+    <Property Name="PrdCodTpo" Type="char" MaxLength="2" />
+    <Property Name="PrdCodEda" Type="char" MaxLength="2" />
+    <Property Name="PrdCodMod" Type="smallmoney" />
+    <Property Name="PrdUndSld" Type="int" />
+    <Property Name="PrdUndFac" Type="int" />
+    <Property Name="PrdPlaLiq" Type="datetime" />
+    <Property Name="PrdFecIns" Type="datetime" />
+    <Property Name="PrdRecBor" Type="datetime" />
+    <Property Name="PrdUsrRecB" Type="char" MaxLength="20" />
+    <Property Name="PrdFSalEns" Type="datetime" />
+    <Property Name="PrdUSalEns" Type="char" MaxLength="20" />
+    <Property Name="PrdFRepLiq" Type="datetime" />
+    <Property Name="PrdURepLiq" Type="char" MaxLength="20" />
+    <Property Name="PrdValida" Type="char" MaxLength="1" />
+    <Property Name="PrdFecVal" Type="datetime" />
+    <Property Name="PrdValida2" Type="char" MaxLength="1" />
+    <Property Name="PrdUsrVal" Type="char" MaxLength="10" />
+    <Property Name="PrdHoBul" Type="char" MaxLength="1" />
+    <Property Name="PrdHBFe" Type="datetime" />
+    <Property Name="PrdConsu" Type="char" MaxLength="1" />
+    <Property Name="PrdConFe" Type="datetime" />
+    <Property Name="PrdFecEnt" Type="datetime" />
+    <Property Name="PrdCodCli" Type="int" />
+    <Property Name="PrdTipOrd" Type="char" MaxLength="1" />
+    <Property Name="PrdOmiNor" Type="char" MaxLength="1" />
+    <Property Name="PrdFecOrd" Type="datetime" />
+    <Property Name="PrdCodEsp" Type="char" MaxLength="1" />
+    <Property Name="PrdSerCaj" Type="smallint" />
+    <Property Name="PrdFchPas" Type="datetime" />
+    <Property Name="PrdHrsPas" Type="char" MaxLength="8" />
+    <Property Name="PrdUsrPas" Type="char" MaxLength="10" />
+    <Property Name="PrdStsReb" Type="char" MaxLength="1" />
+    <Property Name="PrdFchReb" Type="datetime" />
+    <Property Name="PrdHrsReb" Type="char" MaxLength="8" />
+    <Property Name="PrdUsrReb" Type="char" MaxLength="10" />
+    <Property Name="PrdLavCos" Type="smallmoney" />
+    <Property Name="PrdPlaId" Type="smallint" />
+    <Property Name="PrdPlaPl" Type="smallint" />
+    <Property Name="PrdInPla" Type="datetime" />
+    <Property Name="PrdFiPla" Type="datetime" />
+    <Property Name="PrdRIPla" Type="datetime" />
+    <Property Name="PrdRFPla" Type="datetime" />
+    <Property Name="PrdCorId" Type="smallint" />
+    <Property Name="PrdCorPl" Type="smallint" />
+    <Property Name="PrdInCor" Type="datetime" />
+    <Property Name="PrdFiCor" Type="datetime" />
+    <Property Name="PrdCosId" Type="smallint" />
+    <Property Name="PrdCosPl" Type="smallint" />
+    <Property Name="PrdInCos" Type="datetime" />
+    <Property Name="PrdFiCos" Type="datetime" />
+    <Property Name="PrdEmId" Type="smallint" />
+    <Property Name="PrdEmPl" Type="smallint" />
+    <Property Name="PrdInEm" Type="datetime" />
+    <Property Name="PrdFiEm" Type="datetime" />
+    <Property Name="PrdLaId" Type="smallint" />
+    <Property Name="PrdLaPl" Type="smallint" />
+    <Property Name="PrdInLa" Type="datetime" />
+    <Property Name="PrdFiLa" Type="datetime" />
+    <Property Name="PrdDeId" Type="smallint" />
+    <Property Name="PrdDePl" Type="smallint" />
+    <Property Name="PrdInDes" Type="datetime" />
+    <Property Name="PrdFiDes" Type="datetime" />
+    <Property Name="PrdBoId" Type="smallint" />
+    <Property Name="PrdBoPl" Type="smallint" />
+    <Property Name="PrdInBo" Type="datetime" />
+    <Property Name="PrdFiBo" Type="datetime" />
+    <Property Name="PrdLiquid" Type="datetime" />
+    <Property Name="PrdStsPla" Type="char" MaxLength="1" />
+    <Property Name="AmPmPla" Type="char" MaxLength="1" />
+    <Property Name="AmPmCor" Type="char" MaxLength="1" />
+    <Property Name="AmPmCos" Type="char" MaxLength="1" />
+    <Property Name="AmPmBor" Type="char" MaxLength="1" />
+    <Property Name="AmPmDes" Type="char" MaxLength="1" />
+    <Property Name="AmPmLav" Type="char" MaxLength="1" />
+    <Property Name="AmPmEmp" Type="char" MaxLength="1" />
+    <Property Name="WipStsPla" Type="char" MaxLength="1" />
+    <Property Name="WipStsCor" Type="char" MaxLength="1" />
+    <Property Name="WipStsBor" Type="char" MaxLength="1" />
+    <Property Name="WipStsCos" Type="char" MaxLength="1" />
+    <Property Name="WipStsDes" Type="char" MaxLength="1" />
+    <Property Name="WipStsLav" Type="char" MaxLength="1" />
+    <Property Name="WipStsEmp" Type="char" MaxLength="1" />
+    <Property Name="PlaAPPla" Type="char" MaxLength="1" />
+    <Property Name="PlaAPCor" Type="char" MaxLength="1" />
+    <Property Name="PlaAPBor" Type="char" MaxLength="1" />
+    <Property Name="PlaAPCos" Type="char" MaxLength="1" />
+    <Property Name="PlaAPDes" Type="char" MaxLength="1" />
+    <Property Name="PlaAPLav" Type="char" MaxLength="1" />
+    <Property Name="PlaAPEmp" Type="char" MaxLength="1" />
+    <Property Name="ConMarker" Type="smallmoney" />
+    <Property Name="IdealPla" Type="smallint" />
+    <Property Name="IdealCor" Type="smallint" />
+    <Property Name="IdealBor" Type="smallint" />
+    <Property Name="IdealCos" Type="smallint" />
+    <Property Name="IdealDes" Type="smallint" />
+    <Property Name="IdealLav" Type="smallint" />
+    <Property Name="IdealEmp" Type="smallint" />
+    <Property Name="PrdDura" Type="smallint" />
+    <Property Name="PrdStsHM" Type="smallint" />
+    <Property Name="PrdRecTel" Type="datetime" />
+    <Property Name="PrdRecMar" Type="datetime" />
+    <Property Name="PrdTipTon" Type="char" MaxLength="1" />
+    <Property Name="PrdStsOrd" Type="char" MaxLength="1" />
+    <Property Name="PrdSalCor" Type="datetime" />
+    <Property Name="PrdPriorid" Type="smallint" />
+    <Property Name="PrdAutoriz" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="PrdDevSts" Type="smallint" />
+    <Property Name="PrdOrdAct" Type="smallint" Nullable="false" />
+    <Property Name="PrdPuntada" Type="int" />
+    <Property Name="PrdPuntFch" Type="datetime" />
+    <Property Name="PrdPuntUsr" Type="char" MaxLength="10" />
+    <Property Name="PrdMarMan" Type="datetime" />
+    <Property Name="PrdCodArt" Type="char" MaxLength="6" />
+    <Property Name="FacCodMdl" Type="char" MaxLength="2" />
+    <Property Name="PrdFecOri" Type="datetime" />
+    <Property Name="PrdPlaOri" Type="datetime" />
+    <Property Name="PrdTelVal" Type="smallint" />
+    <Property Name="PrdObCon" Type="text" />
+    <Property Name="PrdAnoDep" Type="smallint" />
+    <Property Name="PrdNumDep" Type="smallint" />
+    <Property Name="PrdPriCor" Type="smallint" />
+    <Property Name="PrdUsrOff" Type="char" MaxLength="15" />
+    <Property Name="PrdFecOff" Type="datetime" />
+    <Property Name="PrdOrdCer" Type="smallint" />
+    <Property Name="PrdSegCst" Type="smallint" />
+    <Property Name="PrdSegUsu" Type="char" MaxLength="10" />
+    <Property Name="PrdSegFch" Type="datetime" />
+    <Property Name="OrdRazCod" Type="int" />
+    <Property Name="OrdObserva" Type="text" />
+    <Property Name="OrdUsrAutF" Type="datetime" />
+    <Property Name="OrdUsrAutS" Type="char" MaxLength="10" />
+    <Property Name="OrdStsASeg" Type="char" MaxLength="1" />
+    <Property Name="PrdFecCTel" Type="char" MaxLength="20" />
+    <Property Name="PrdUsuCTel" Type="char" MaxLength="12" />
+    <Property Name="PrdFchCTel" Type="datetime" />
+    <Property Name="OloStiloVe" Type="int" />
+    <Property Name="OrdRcpUsr" Type="char" MaxLength="15" />
+    <Property Name="OrdRcpSts" Type="smallint" />
+    <Property Name="OrdRcpFec" Type="datetime" />
+    <Property Name="OrdLavadoI" Type="int" />
+    <Property Name="PrdTckEti" Type="char" MaxLength="1" />
+    <Property Name="OrdPrePes" Type="money" />
+    <Property Name="OrdFchDifT" Type="datetime" />
+    <Property Name="OrdUsrAutD" Type="char" MaxLength="16" />
+    <Property Name="OrdAutDifT" Type="char" MaxLength="1" />
+    <Property Name="OrdPreCost" Type="money" />
+    <Property Name="OrdFlexibl" Type="smallint" />
+    <Property Name="OrdTotUnd" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="FxTelaProduccion" Type="char" MaxLength="2" StoreGeneratedPattern="Computed" />
+    <Property Name="PrdTckEAh" Type="char" MaxLength="1" />
+    <Property Name="OrdFecEnvC" Type="datetime" />
+    <Property Name="OrdStsEnvC" Type="smallint" />
+    <Property Name="OrdPerLec" Type="smallint" />
+  </EntityType>
+  <EntityType Name="GrupoOperaciones">
+    <Key>
+      <PropertyRef Name="GrupoOperacionesCodigo" />
+    </Key>
+    <Property Name="GrupoOperacionesCodigo" Type="smallint" Nullable="false" />
+    <Property Name="GrupoOperacionesNombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GrupoOperacionesDescipcion" Type="varchar" MaxLength="8000" />
+  </EntityType>
+  <EntityType Name="GRUTEL">
+    <Key>
+      <PropertyRef Name="FacCodGrut" />
+    </Key>
+    <Property Name="FacCodGrut" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="FacDesGrut" Type="char" MaxLength="44" />
+    <Property Name="FacGruUltN" Type="smallint" />
+    <Property Name="GruSts" Type="smallint" Nullable="false" />
+    <Property Name="FacReposo" Type="smallint" />
+  </EntityType>
+  <EntityType Name="IngredientesOperacion">
+    <Key>
+      <PropertyRef Name="IngredienteOperacionId" />
+    </Key>
+    <Property Name="IngredienteOperacionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IngredienteId" Type="int" Nullable="false" />
+    <Property Name="OperacionId" Type="int" Nullable="false" />
+    <Property Name="OperacionProcesoId" Type="int" Nullable="false" />
+    <Property Name="IngredienteOperacionPorcentaje" Type="decimal" Precision="8" Scale="5" />
+    <Property Name="IngredienteOperacionClaseId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IngredienteOperacionSubClaseId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IngredienteOperacionOrden" Type="int" />
+    <Property Name="IngredienteInstruccionesOperacionId" Type="int" />
+  </EntityType>
+  <EntityType Name="IngredientesPreDefinidos">
+    <Key>
+      <PropertyRef Name="IngredientePreDefinidoId" />
+    </Key>
+    <Property Name="IngredientePreDefinidoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IngredienteId" Type="int" Nullable="false" />
+    <Property Name="OperacionId" Type="int" Nullable="false" />
+    <Property Name="IngredientePreDefinidoClaseId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IngredientePreDefinidoSubClaseId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IngredientePreDefinidoPorcentaje" Type="decimal" Precision="8" Scale="5" />
+    <Property Name="IngredientePreDefinidoOrden" Type="int" />
+    <Property Name="IngredientePreDefinidoInstruccionesOperacionId" Type="int" />
+  </EntityType>
+  <EntityType Name="InstruccionesOperacion">
+    <Key>
+      <PropertyRef Name="InstruccionOperacionId" />
+    </Key>
+    <Property Name="InstruccionOperacionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstruccionOperacionDescripcion" Type="varchar" MaxLength="500" />
+    <Property Name="OperacionProcesoId" Type="int" Nullable="false" />
+    <Property Name="InstruccionOperacionOrden" Type="int" Nullable="false" />
+    <Property Name="InstruccionOperacionTiempoMinimo" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="InstruccionOperacionTemperatura" Type="int" />
+    <Property Name="InstruccionOperacionTiempoMaximo" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="InstruccionOperacionTiempoEstandar" Type="decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="InstruccionesPreDefinidas">
+    <Key>
+      <PropertyRef Name="InstruccionPreDefinidaId" />
+    </Key>
+    <Property Name="InstruccionPreDefinidaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstruccionPreDefinidaDescripcion" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="OperacionPreDefinidaId" Type="int" Nullable="false" />
+    <Property Name="InstruccionPreDefinidaOrden" Type="int" Nullable="false" />
+    <Property Name="InstruccionPreDefinidaTiempoMinimo" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="InstruccionPreDefinidaTemperatura" Type="int" />
+    <Property Name="InstruccionPreDefinidaTiempoMaximo" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Lavadoras">
+    <Key>
+      <PropertyRef Name="LavadoraId" />
+    </Key>
+    <Property Name="LavadoraId" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LavadoraNombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LavadorasCapacidadId" Type="smallint" Nullable="false" />
+    <Property Name="LavadoraMarca" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LavadoraModelo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LavadoraEstado" Type="smallint" Nullable="false" />
+    <Property Name="LavadoraNumeroSerie" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LavadoraIP" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LavadoraMAC" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LavadorasCapacidad">
+    <Key>
+      <PropertyRef Name="LavadoraCapacidadId" />
+    </Key>
+    <Property Name="LavadoraCapacidadId" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LavadoraCapacidadKgMax" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="LavadoraCapacidadKgMin" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="LavadoraCapacidadLitroCanasta" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Lavados">
+    <Key>
+      <PropertyRef Name="LavadoId" />
+    </Key>
+    <Property Name="LavadoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LavadoNombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LavadoDescripcion" Type="varchar" MaxLength="250" />
+    <Property Name="ColorIntermodaId" Type="int" Nullable="false" />
+    <Property Name="IsActivo" Type="int" />
+    <Property Name="LavadoFechaCreacion" Type="date" />
+    <Property Name="LavadoFechaActualizacion" Type="date" />
+  </EntityType>
+  <EntityType Name="LitrosAguaOperacion">
+    <Key>
+      <PropertyRef Name="LitrosAguaId" />
+    </Key>
+    <Property Name="LitrosAguaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LitrosAguaCiaCod" Type="int" Nullable="false" />
+    <Property Name="LitrosAguaPlantaCod" Type="int" Nullable="false" />
+    <Property Name="LitrosAguaAnio" Type="int" Nullable="false" />
+    <Property Name="LitrosAguaNumeroOrden" Type="int" Nullable="false" />
+    <Property Name="LitrosAguaLavadoId" Type="int" Nullable="false" />
+    <Property Name="LitrosAguaOpcionLavadoId" Type="int" Nullable="false" />
+    <Property Name="LitrosAguaCantidadOperacionCarga" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="LitrosAguaCantidadOperacionSubCarga" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="LitrosAguaOperacionProcesoId" Type="int" Nullable="false" />
+    <Property Name="LitrosAguaCargaLavadoNumero" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LogsLavado">
+    <Key>
+      <PropertyRef Name="LogLavadoId" />
+    </Key>
+    <Property Name="LogLavadoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LogLavadoFecha" Type="datetime" Nullable="false" />
+    <Property Name="LogLavadoDescripcion" Type="varchar" MaxLength="250" />
+    <Property Name="LogLavadoObjeto" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="LogLavadoUsuario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LogLavadoTipoTransaccion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MaterialNoRequisableLavanderia">
+    <Key>
+      <PropertyRef Name="MaterialNoRequisableLavanderiaId" />
+    </Key>
+    <Property Name="MaterialNoRequisableLavanderiaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodigoMaterial" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PorcentajeUtilizacion" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MATMST">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="MapCodMat" />
+    </Key>
+    <Property Name="CIACOD" Type="smallint" Nullable="false" />
+    <Property Name="MapCodMat" Type="int" Nullable="false" />
+    <Property Name="MapCodAlt" Type="int" />
+    <Property Name="FacCodMar" Type="char" MaxLength="2" />
+    <Property Name="FacCodTpo" Type="char" MaxLength="2" />
+    <Property Name="MprCodCla" Type="char" MaxLength="5" />
+    <Property Name="MprCodSCla" Type="char" MaxLength="5" />
+    <Property Name="MprCodRef" Type="char" MaxLength="5" />
+    <Property Name="MprCodCol" Type="char" MaxLength="5" />
+    <Property Name="MprCodTam" Type="char" MaxLength="5" />
+    <Property Name="MapFecMat" Type="datetime" />
+    <Property Name="MatCodTon" Type="char" MaxLength="3" />
+    <Property Name="MapCosProm" Type="decimal" Precision="9" Scale="4" />
+    <Property Name="MapCanExis" Type="money" />
+    <Property Name="MapCanExi1" Type="money" />
+    <Property Name="MapCanExi2" Type="money" />
+    <Property Name="MapCanExi3" Type="money" />
+    <Property Name="MapCanExi4" Type="money" />
+    <Property Name="MapSalAntU" Type="money" />
+    <Property Name="MapEntraU" Type="money" />
+    <Property Name="MapSalidU" Type="decimal" Precision="11" Scale="5" />
+    <Property Name="MapSalActU" Type="money" />
+    <Property Name="MapSalAntV" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="MapEntraV" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="MapSalidV" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="MapSalActV" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="MapRanMin" Type="money" />
+    <Property Name="MapPorDes" Type="smallmoney" />
+    <Property Name="MapPorStd" Type="smallmoney" />
+    <Property Name="MapUbi" Type="char" MaxLength="5" />
+    <Property Name="MapRepTCa" Type="char" MaxLength="10" />
+    <Property Name="RepNumPag" Type="int" />
+    <Property Name="FacCodTel" Type="char" MaxLength="2" />
+    <Property Name="PapLinCod" Type="char" MaxLength="2" />
+    <Property Name="MapNumRep" Type="char" MaxLength="12" />
+    <Property Name="MapRepDia" Type="char" MaxLength="10" />
+    <Property Name="MapRepDie" Type="char" MaxLength="10" />
+    <Property Name="MapRepTam" Type="char" MaxLength="10" />
+    <Property Name="RepCodMar" Type="char" MaxLength="3" />
+    <Property Name="RepTipCat" Type="char" MaxLength="20" />
+    <Property Name="RepTipMaq" Type="char" MaxLength="4" />
+    <Property Name="MapRanMin2" Type="money" />
+    <Property Name="RepBodCod" Type="smallint" />
+    <Property Name="MprUbiEst" Type="char" MaxLength="10" />
+    <Property Name="MprUbiRak" Type="char" MaxLength="5" />
+    <Property Name="MapMatSts" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="PrdCodDis" Type="smallint" />
+    <Property Name="CmpColCod" Type="char" MaxLength="7" />
+    <Property Name="CmpTexCod" Type="char" MaxLength="5" />
+    <Property Name="MapReaSts" Type="char" MaxLength="1" />
+    <Property Name="MapFecIng" Type="datetime" />
+    <Property Name="MapFecCre" Type="datetime" />
+    <Property Name="MapFecCad" Type="datetime" />
+    <Property Name="CmpTelPes" Type="smallmoney" />
+    <Property Name="CmpTelCom" Type="char" MaxLength="20" />
+    <Property Name="MprCodArt" Type="char" MaxLength="12" />
+    <Property Name="MprCodMdl" Type="char" MaxLength="2" />
+    <Property Name="MprCodTel" Type="char" MaxLength="2" />
+    <Property Name="MprCodLav" Type="char" MaxLength="3" />
+    <Property Name="MprCCol" Type="char" MaxLength="2" />
+    <Property Name="MprNumTal" Type="char" MaxLength="3" />
+    <Property Name="MprCodDim" Type="smallint" />
+    <Property Name="MapLoopSiz" Type="smallint" Nullable="false" />
+    <Property Name="MprMatSig" Type="smallmoney" Nullable="false" />
+    <Property Name="TipRCod" Type="char" MaxLength="4" />
+    <Property Name="MapEntAdd" Type="smallmoney" />
+    <Property Name="TelTipCod" Type="smallint" />
+    <Property Name="TelTenCod" Type="smallint" />
+    <Property Name="TelTejCod" Type="smallint" />
+    <Property Name="TelAcbCod" Type="smallint" />
+    <Property Name="TelCmpCod" Type="smallint" />
+    <Property Name="CodigoDyna" Type="char" MaxLength="30" />
+    <Property Name="MprEtgCon" Type="char" MaxLength="1" />
+    <Property Name="MprCodUbi" Type="smallint" />
+    <Property Name="MprCtCod" Type="char" MaxLength="2" />
+    <Property Name="MatCntRes" Type="smallmoney" />
+    <Property Name="MprExcCmp" Type="smallint" />
+    <Property Name="MatUltMov" Type="date" />
+    <Property Name="FacCCol" Type="char" MaxLength="2" />
+    <Property Name="MprSubCod" Type="smallint" />
+  </EntityType>
+  <EntityType Name="ObservacionesOperacion">
+    <Key>
+      <PropertyRef Name="ObservacionesOperacionId" />
+    </Key>
+    <Property Name="ObservacionesOperacionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ObservacionesOperacionDescripcion" Type="varchar" MaxLength="250" />
+    <Property Name="OperacionProcesoId" Type="int" Nullable="false" />
+    <Property Name="ObservacionesOperacionOrden" Type="int" Nullable="false" />
+    <Property Name="ObservacionesOperacionPosicion" Type="int" />
+  </EntityType>
+  <EntityType Name="ObservacionesPreDefinidas">
+    <Key>
+      <PropertyRef Name="ObservacionesOperacionPdId" />
+    </Key>
+    <Property Name="ObservacionesOperacionPdId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ObservacionesOperacionPdDescripcion" Type="varchar" MaxLength="250" />
+    <Property Name="ObservacionOperacionPdId" Type="int" Nullable="false" />
+    <Property Name="ObservacionesOperacionPdOrden" Type="int" Nullable="false" />
+    <Property Name="ObservacionesOperacionPdPosicion" Type="int" />
+  </EntityType>
+  <EntityType Name="OpcionesLavados">
+    <Key>
+      <PropertyRef Name="OpcionLavadoId" />
+    </Key>
+    <Property Name="OpcionLavadoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OpcionNombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OpcionDescripcion" Type="varchar" MaxLength="250" />
+    <Property Name="LavadoId" Type="int" Nullable="false" />
+    <Property Name="TelaId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IsDefault" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OpcionLavadoOrden">
+    <Key>
+      <PropertyRef Name="OpcionLavadoOrdenId" />
+    </Key>
+    <Property Name="OpcionLavadoOrdenId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OpcionLavadoOrdenNombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OpcionLavadoOrdenDescripcion" Type="varchar" MaxLength="250" />
+    <Property Name="OpcionLavadoOrdenLavadoId" Type="int" />
+    <Property Name="OpcionLavadoOrdenTelaId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="OpcionLavadoOrdenIsDefault" Type="int" />
+    <Property Name="OpcionLavadoOrdenNumeroOrden" Type="int" Nullable="false" />
+    <Property Name="OpcionLavadoOrdenCompaniaId" Type="int" Nullable="false" />
+    <Property Name="OpcionLavadoOrdenPlantaId" Type="int" Nullable="false" />
+    <Property Name="OpcionLavadoOrdenAnio" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Operaciones">
+    <Key>
+      <PropertyRef Name="OperacionCodigo" />
+    </Key>
+    <Property Name="OperacionCodigo" Type="smallint" Nullable="false" />
+    <Property Name="OperacionNombre" Type="nvarchar" MaxLength="200" />
+    <Property Name="OperacionDescripcion" Type="varchar" MaxLength="8000" />
+    <Property Name="TipoOperacionesCodigo" Type="smallint" Nullable="false" />
+    <Property Name="GrupoOperacionesCodigo" Type="smallint" Nullable="false" />
+    <Property Name="LinaPCodigo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OperacionesCTrabajos">
+    <Key>
+      <PropertyRef Name="OperacionesCtCode" />
+    </Key>
+    <Property Name="OperacionesCtCode" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OperacionCodigo" Type="smallint" Nullable="false" />
+    <Property Name="CtrabajoCodigo" Type="int" Nullable="false" />
+    <Property Name="CtrabajoNombre" Type="varchar" MaxLength="50" />
+    <Property Name="EsRepetible" Type="int" />
+  </EntityType>
+  <EntityType Name="OperacionesPreDefinidas">
+    <Key>
+      <PropertyRef Name="OperacionPreDefinidaId" />
+    </Key>
+    <Property Name="OperacionPreDefinidaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OperacionId" Type="int" Nullable="false" />
+    <Property Name="OperacionPreDefinidaTemperatura" Type="int" Nullable="false" />
+    <Property Name="OperacionPreDefinidaPh" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="OperacionPreDefinidaTiempoMinimo" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="OperacionPreDefinidaRelacion" Type="int" Nullable="false" />
+    <Property Name="OperacionPreDefinidaOrden" Type="int" Nullable="false" />
+    <Property Name="OperacionPreDefinidaTiempoMaximo" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OperacionesProceso">
+    <Key>
+      <PropertyRef Name="OperacionProcesoId" />
+    </Key>
+    <Property Name="OperacionProcesoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OperacionId" Type="int" Nullable="false" />
+    <Property Name="ProcesoId" Type="int" Nullable="false" />
+    <Property Name="ProcesoCentroTrabajoId" Type="int" Nullable="false" />
+    <Property Name="OperacionProcesoTemperatura" Type="int" Nullable="false" />
+    <Property Name="OperacionProcesoPh" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="OperacionProcesoTiempoMinimo" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="OperacionProcesoRelacion" Type="int" Nullable="false" />
+    <Property Name="OperacionProcesoOrden" Type="int" Nullable="false" />
+    <Property Name="OperacionProcesoTiempoMaximo" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="OperacionProcesoTiempoEstandar" Type="decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="OperacionesProcesoOrden">
+    <Key>
+      <PropertyRef Name="OperacionesProcesoOrdenId" />
+    </Key>
+    <Property Name="OperacionesProcesoOrdenId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OperacionesProcesoOrdenOperacionId" Type="int" Nullable="false" />
+    <Property Name="OperacionesProcesoOrdenProcesoId" Type="int" Nullable="false" />
+    <Property Name="OperacionesProcesoOrdenProcesoCentroTrabajoId" Type="int" Nullable="false" />
+    <Property Name="OperacionesProcesoOrdenTemperatura" Type="int" Nullable="false" />
+    <Property Name="OperacionesProcesoOrdenPh" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="OperacionesProcesoOrdenTiempoMinimo" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="OperacionesProcesoOrdenRelacion" Type="int" Nullable="false" />
+    <Property Name="OperacionesProcesoOrden_Orden" Type="int" Nullable="false" />
+    <Property Name="OperacionesProcesoOrdenTiempoMaximo" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="OperacionesProcesoOrdenTiempoEstandar" Type="decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="ORDCENTR">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="PrdNumCor" />
+      <PropertyRef Name="PrdAnoCor" />
+      <PropertyRef Name="PrdCtCod" />
+      <PropertyRef Name="PrdSecCod" />
+      <PropertyRef Name="PrdCtBulto" />
+    </Key>
+    <Property Name="CIACOD" Type="smallint" Nullable="false" />
+    <Property Name="PrdNumCor" Type="smallint" Nullable="false" />
+    <Property Name="PrdAnoCor" Type="smallint" Nullable="false" />
+    <Property Name="PrdCtCod" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="PrdSecCod" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="PrdCtBulto" Type="smallint" Nullable="false" />
+    <Property Name="PrdCtSup" Type="char" MaxLength="10" />
+    <Property Name="PrdEstSec" Type="smallint" />
+    <Property Name="PrdCtModu" Type="smallint" />
+    <Property Name="PrdCtFecI" Type="datetime" />
+    <Property Name="PrdCtFecF" Type="datetime" />
+    <Property Name="PrdLecMan" Type="smallint" />
+    <Property Name="PrdCtAud" Type="smallint" />
+    <Property Name="PrdCtRech" Type="smallint" />
+    <Property Name="PrdDesRech" Type="char" MaxLength="60" />
+    <Property Name="PrdFecRech" Type="datetime" />
+    <Property Name="PrdRecUsr" Type="char" MaxLength="10" />
+    <Property Name="PrdCodRec" Type="smallint" />
+    <Property Name="PrdCodGru" Type="char" MaxLength="3" />
+    <Property Name="PrdCodOpr" Type="smallint" />
+    <Property Name="PRdCtUsrSa" Type="char" MaxLength="10" />
+    <Property Name="PrdCtUsrEn" Type="char" MaxLength="10" />
+    <Property Name="PrdCtKanba" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Plantas">
+    <Key>
+      <PropertyRef Name="PlantaCodigo" />
+    </Key>
+    <Property Name="PlantaCodigo" Type="int" Nullable="false" />
+    <Property Name="PlantaNombre" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="PlantaObsevacion" Type="varchar" MaxLength="8000" Nullable="false" />
+    <Property Name="PlantaPropietaria" Type="bit" Nullable="false" />
+    <Property Name="CompañiaCodigo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Procesos">
+    <Key>
+      <PropertyRef Name="ProcesoCodigo" />
+    </Key>
+    <Property Name="ProcesoCodigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProcesoNombre" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="ProcesoDescripcion" Type="varchar" MaxLength="8000" Nullable="false" />
+    <Property Name="ProcesoOrden" Type="int" Nullable="false" />
+    <Property Name="ProcesoIsActivo" Type="bit" Nullable="false" />
+    <Property Name="ProcesoIsObligatorio" Type="bit" Nullable="false" />
+    <Property Name="CentroTrabajoCodigo" Type="int" Nullable="false" />
+    <Property Name="ProcesoTiempoEstandar" Type="numeric" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="ProcesosCentroTrabajo">
+    <Key>
+      <PropertyRef Name="ProcesoCentroTrabajoId" />
+    </Key>
+    <Property Name="ProcesoCentroTrabajoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProcesoId" Type="int" Nullable="false" />
+    <Property Name="CentroTrabajoId" Type="int" Nullable="false" />
+    <Property Name="CentroTrabajoOpcionId" Type="int" Nullable="false" />
+    <Property Name="ProcesoCentroTrabajoOrden" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProcesosCentroTrabajoOrden">
+    <Key>
+      <PropertyRef Name="ProcesosCentroTrabajoOrdenId" />
+    </Key>
+    <Property Name="ProcesosCentroTrabajoOrdenId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProcesosCentroTrabajoOrdenProcesoId" Type="int" Nullable="false" />
+    <Property Name="ProcesosCentroTrabajoOrdenCentroTrabajoId" Type="int" Nullable="false" />
+    <Property Name="ProcesosCentroTrabajoOrdenCentrosTrabajoOpcionLavadoId" Type="int" Nullable="false" />
+    <Property Name="ProcesosCentroTrabajoOrden_Orden" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProcesosOperaciones">
+    <Key>
+      <PropertyRef Name="ProcesoOperacionCodigo" />
+    </Key>
+    <Property Name="ProcesoOperacionCodigo" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProcesoCodigo" Type="smallint" Nullable="false" />
+    <Property Name="OperacionCtCodigo" Type="smallint" Nullable="false" />
+    <Property Name="OperacionCodigo" Type="smallint" Nullable="false" />
+    <Property Name="Orden" Type="int" Nullable="false" />
+    <Property Name="OperacionNombre" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="ProcesoNombre" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Secadoras">
+    <Key>
+      <PropertyRef Name="SecadoraId" />
+    </Key>
+    <Property Name="SecadoraId" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SecadoraNombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SecadorasCapacidadId" Type="smallint" Nullable="false" />
+    <Property Name="SecadoraMarca" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SecadoraModelo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SecadoraEstado" Type="smallint" />
+    <Property Name="SecadoraNumeroSerie" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SecadoraIP" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="secadoraMAC" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SecadorasCapacidad">
+    <Key>
+      <PropertyRef Name="SecadoraCapacidadId" />
+    </Key>
+    <Property Name="SecadoraCapacidadId" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SecadoraCapacidadKgMax" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SecadoraCapacidadKgMin" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SUBCLASE">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="MprCodSCla" />
+    </Key>
+    <Property Name="CIACOD" Type="smallint" Nullable="false" />
+    <Property Name="MprCodSCla" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="MprDesSCla" Type="char" MaxLength="45" />
+    <Property Name="MprSClaSts" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="MprSClaAX" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="TELAR5">
+    <Key>
+      <PropertyRef Name="FacCodTel" />
+    </Key>
+    <Property Name="FacCodTel" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="FacCodGrut" Type="char" MaxLength="2" />
+    <Property Name="FacDesTel" Type="char" MaxLength="44" />
+    <Property Name="FacUltLin" Type="smallint" />
+    <Property Name="FacUltLStr" Type="smallint" />
+    <Property Name="ComposicionId" Type="int" />
+    <Property Name="TelDesVta" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TelasColorIntermoda">
+    <Key>
+      <PropertyRef Name="TelaColorIntermodaId" />
+    </Key>
+    <Property Name="TelaColorIntermodaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ColorIntermodaId" Type="int" Nullable="false" />
+    <Property Name="TelaId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="MaterialTelaId" Type="int" />
+  </EntityType>
+  <EntityType Name="TelasComposicion">
+    <Key>
+      <PropertyRef Name="TelaComposicionId" />
+    </Key>
+    <Property Name="TelaComposicionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TelaComposicionNombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TelaComposicionDescripcion" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoOperaciones">
+    <Key>
+      <PropertyRef Name="TipoOperacionesCodigo" />
+    </Key>
+    <Property Name="TipoOperacionesCodigo" Type="smallint" Nullable="false" />
+    <Property Name="TipoOperacionesNombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TipoOperacionesDescripcion" Type="varchar" MaxLength="8000" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'LBDATPRO.dbo.OrdenesProduccionEnProceso' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OrdenesProduccionEnProceso">
+    <Key>
+      <PropertyRef Name="CodigoCompañia" />
+      <PropertyRef Name="Año" />
+      <PropertyRef Name="NumeroOrden" />
+    </Key>
+    <Property Name="CodigoCompañia" Type="smallint" Nullable="false" />
+    <Property Name="DescripcionCompañia" Type="char" MaxLength="30" />
+    <Property Name="Año" Type="smallint" Nullable="false" />
+    <Property Name="NumeroOrden" Type="smallint" Nullable="false" />
+    <Property Name="Patron" Type="char" MaxLength="6" />
+    <Property Name="Variante" Type="char" MaxLength="2" />
+    <Property Name="Tela" Type="char" MaxLength="2" />
+    <Property Name="EstadoOrden" Type="char" MaxLength="1" />
+    <Property Name="Usuario" Type="char" MaxLength="10" />
+    <Property Name="PrdProTel" Type="char" MaxLength="2" />
+    <Property Name="Cantidad" Type="int" />
+    <Property Name="ModuloEnsamble" Type="smallint" />
+    <Property Name="ConTela" Type="bit" />
+    <Property Name="InicioProgramado" Type="datetime" />
+    <Property Name="FinalProgramado" Type="datetime" />
+    <Property Name="LavadoId" Type="int" />
+    <Property Name="CodigoLavadoViejo" Type="char" MaxLength="3" />
+    <Property Name="PesoUnidad" Type="money" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'LBDATPRO.dbo.OrdenesProduccionLavanderia' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OrdenesProduccionLavanderia">
+    <Key>
+      <PropertyRef Name="CompaniaId" />
+      <PropertyRef Name="PlantaCodigo" />
+      <PropertyRef Name="Ano" />
+      <PropertyRef Name="Numero" />
+    </Key>
+    <Property Name="CompaniaId" Type="smallint" Nullable="false" />
+    <Property Name="PlantaCodigo" Type="int" Nullable="false" />
+    <Property Name="PrdCtNew" Type="int" />
+    <Property Name="Ano" Type="smallint" Nullable="false" />
+    <Property Name="Numero" Type="smallint" Nullable="false" />
+    <Property Name="Patron" Type="char" MaxLength="6" />
+    <Property Name="Variante" Type="char" MaxLength="2" />
+    <Property Name="CodigoLavadoViejo" Type="char" MaxLength="3" />
+    <Property Name="PrdStsCor" Type="char" MaxLength="1" />
+    <Property Name="FinalProgramado" Type="datetime" />
+    <Property Name="InicioProgramado" Type="datetime" />
+    <Property Name="TelaProduccion" Type="char" MaxLength="2" />
+    <Property Name="TelaVenta" Type="char" MaxLength="2" />
+    <Property Name="Usuario" Type="char" MaxLength="10" />
+    <Property Name="Cantidad" Type="int" />
+    <Property Name="UnidadesTerminadasEnsamble" Type="int" />
+    <Property Name="UnidadesIngresadasLavanderia2" Type="int" />
+    <Property Name="LavadoId" Type="int" />
+    <Property Name="LavadoNombre" Type="varchar" MaxLength="50" />
+    <Property Name="PesoUnidad" Type="money" />
+  </EntityType>
+  <Association Name="FK_ArchivosGlobales_Lavados">
+    <End Role="Lavados" Type="Self.Lavados" Multiplicity="1" />
+    <End Role="ArchivosGlobales" Type="Self.ArchivosGlobales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lavados">
+        <PropertyRef Name="LavadoId" />
+      </Principal>
+      <Dependent Role="ArchivosGlobales">
+        <PropertyRef Name="ArchivoGlobalPropietarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CantidadIngredientesOperacion_OpcionLavadoOrden">
+    <End Role="OpcionLavadoOrden" Type="Self.OpcionLavadoOrden" Multiplicity="1" />
+    <End Role="CantidadIngredientesOperacion" Type="Self.CantidadIngredientesOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OpcionLavadoOrden">
+        <PropertyRef Name="OpcionLavadoOrdenId" />
+      </Principal>
+      <Dependent Role="CantidadIngredientesOperacion">
+        <PropertyRef Name="CantidadIngredienteOpcionLavadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CantidadIngredientesOperacion_OperacionesProcesoOrden">
+    <End Role="OperacionesProcesoOrden" Type="Self.OperacionesProcesoOrden" Multiplicity="1" />
+    <End Role="CantidadIngredientesOperacion" Type="Self.CantidadIngredientesOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesProcesoOrden">
+        <PropertyRef Name="OperacionesProcesoOrdenId" />
+      </Principal>
+      <Dependent Role="CantidadIngredientesOperacion">
+        <PropertyRef Name="CantidadIngredienteOperacionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CargaLavado_Lavadoras">
+    <End Role="Lavadoras" Type="Self.Lavadoras" Multiplicity="0..1" />
+    <End Role="CargaLavado" Type="Self.CargaLavado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lavadoras">
+        <PropertyRef Name="LavadoraId" />
+      </Principal>
+      <Dependent Role="CargaLavado">
+        <PropertyRef Name="CargaLavadoLavadoraId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CargaLavado_LavadorasCapacidad">
+    <End Role="LavadorasCapacidad" Type="Self.LavadorasCapacidad" Multiplicity="1" />
+    <End Role="CargaLavado" Type="Self.CargaLavado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LavadorasCapacidad">
+        <PropertyRef Name="LavadoraCapacidadId" />
+      </Principal>
+      <Dependent Role="CargaLavado">
+        <PropertyRef Name="CargaLavadoLavadoraTipoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CargaLavado_OpcionLavadoOrden">
+    <End Role="OpcionLavadoOrden" Type="Self.OpcionLavadoOrden" Multiplicity="1" />
+    <End Role="CargaLavado" Type="Self.CargaLavado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OpcionLavadoOrden">
+        <PropertyRef Name="OpcionLavadoOrdenId" />
+      </Principal>
+      <Dependent Role="CargaLavado">
+        <PropertyRef Name="CargaLavadoOpcionLavadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentrosTrabajoOpcion_OpcionesLavados">
+    <End Role="OpcionesLavados" Type="Self.OpcionesLavados" Multiplicity="1" />
+    <End Role="CentrosTrabajoOpcion" Type="Self.CentrosTrabajoOpcion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OpcionesLavados">
+        <PropertyRef Name="OpcionLavadoId" />
+      </Principal>
+      <Dependent Role="CentrosTrabajoOpcion">
+        <PropertyRef Name="OpcionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentrosTrabajoOpcionLavadoOrden_OpcionLavadoOrden">
+    <End Role="OpcionLavadoOrden" Type="Self.OpcionLavadoOrden" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CentrosTrabajoOpcionLavadoOrden" Type="Self.CentrosTrabajoOpcionLavadoOrden" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OpcionLavadoOrden">
+        <PropertyRef Name="OpcionLavadoOrdenId" />
+      </Principal>
+      <Dependent Role="CentrosTrabajoOpcionLavadoOrden">
+        <PropertyRef Name="CentrosTrabajoOpcionLavadoOrdenOpcionLavadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IngredientesOperacion_InstruccionesOperacion">
+    <End Role="InstruccionesOperacion" Type="Self.InstruccionesOperacion" Multiplicity="0..1" />
+    <End Role="IngredientesOperacion" Type="Self.IngredientesOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstruccionesOperacion">
+        <PropertyRef Name="InstruccionOperacionId" />
+      </Principal>
+      <Dependent Role="IngredientesOperacion">
+        <PropertyRef Name="IngredienteInstruccionesOperacionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IngredientesOperacion_OperacionesProceso">
+    <End Role="OperacionesProceso" Type="Self.OperacionesProceso" Multiplicity="1" />
+    <End Role="IngredientesOperacion" Type="Self.IngredientesOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesProceso">
+        <PropertyRef Name="OperacionProcesoId" />
+      </Principal>
+      <Dependent Role="IngredientesOperacion">
+        <PropertyRef Name="OperacionProcesoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IngredientesPreDefinidos_InstruccionesPreDefinidas">
+    <End Role="InstruccionesPreDefinidas" Type="Self.InstruccionesPreDefinidas" Multiplicity="0..1" />
+    <End Role="IngredientesPreDefinidos" Type="Self.IngredientesPreDefinidos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstruccionesPreDefinidas">
+        <PropertyRef Name="InstruccionPreDefinidaId" />
+      </Principal>
+      <Dependent Role="IngredientesPreDefinidos">
+        <PropertyRef Name="IngredientePreDefinidoInstruccionesOperacionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IngredientesPreDefinidos_OperacionesPreDefinidas">
+    <End Role="OperacionesPreDefinidas" Type="Self.OperacionesPreDefinidas" Multiplicity="1" />
+    <End Role="IngredientesPreDefinidos" Type="Self.IngredientesPreDefinidos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesPreDefinidas">
+        <PropertyRef Name="OperacionPreDefinidaId" />
+      </Principal>
+      <Dependent Role="IngredientesPreDefinidos">
+        <PropertyRef Name="OperacionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InstruccionesOperacion_OperacionesProceso">
+    <End Role="OperacionesProceso" Type="Self.OperacionesProceso" Multiplicity="1" />
+    <End Role="InstruccionesOperacion" Type="Self.InstruccionesOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesProceso">
+        <PropertyRef Name="OperacionProcesoId" />
+      </Principal>
+      <Dependent Role="InstruccionesOperacion">
+        <PropertyRef Name="OperacionProcesoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InstruccionesPreDefinidas_OperacionesPreDefinidas">
+    <End Role="OperacionesPreDefinidas" Type="Self.OperacionesPreDefinidas" Multiplicity="1" />
+    <End Role="InstruccionesPreDefinidas" Type="Self.InstruccionesPreDefinidas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesPreDefinidas">
+        <PropertyRef Name="OperacionPreDefinidaId" />
+      </Principal>
+      <Dependent Role="InstruccionesPreDefinidas">
+        <PropertyRef Name="OperacionPreDefinidaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lavadoras_LavadorasCapacidad">
+    <End Role="LavadorasCapacidad" Type="Self.LavadorasCapacidad" Multiplicity="1" />
+    <End Role="Lavadoras" Type="Self.Lavadoras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LavadorasCapacidad">
+        <PropertyRef Name="LavadoraCapacidadId" />
+      </Principal>
+      <Dependent Role="Lavadoras">
+        <PropertyRef Name="LavadorasCapacidadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lavados_ColoresIntermoda">
+    <End Role="ColoresIntermoda" Type="Self.ColoresIntermoda" Multiplicity="1" />
+    <End Role="Lavados" Type="Self.Lavados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ColoresIntermoda">
+        <PropertyRef Name="ColorIntermodaId" />
+      </Principal>
+      <Dependent Role="Lavados">
+        <PropertyRef Name="ColorIntermodaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LitrosAguaOperacion_OpcionLavadoOrden">
+    <End Role="OpcionLavadoOrden" Type="Self.OpcionLavadoOrden" Multiplicity="1" />
+    <End Role="LitrosAguaOperacion" Type="Self.LitrosAguaOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OpcionLavadoOrden">
+        <PropertyRef Name="OpcionLavadoOrdenId" />
+      </Principal>
+      <Dependent Role="LitrosAguaOperacion">
+        <PropertyRef Name="LitrosAguaOpcionLavadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LitrosAguaOperacion_OperacionesProcesoOrden">
+    <End Role="OperacionesProcesoOrden" Type="Self.OperacionesProcesoOrden" Multiplicity="1" />
+    <End Role="LitrosAguaOperacion" Type="Self.LitrosAguaOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesProcesoOrden">
+        <PropertyRef Name="OperacionesProcesoOrdenId" />
+      </Principal>
+      <Dependent Role="LitrosAguaOperacion">
+        <PropertyRef Name="LitrosAguaOperacionProcesoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObservacionesOperacion_OperacionesProceso">
+    <End Role="OperacionesProceso" Type="Self.OperacionesProceso" Multiplicity="1" />
+    <End Role="ObservacionesOperacion" Type="Self.ObservacionesOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesProceso">
+        <PropertyRef Name="OperacionProcesoId" />
+      </Principal>
+      <Dependent Role="ObservacionesOperacion">
+        <PropertyRef Name="OperacionProcesoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OpcionesLavados_Lavados">
+    <End Role="Lavados" Type="Self.Lavados" Multiplicity="1" />
+    <End Role="OpcionesLavados" Type="Self.OpcionesLavados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lavados">
+        <PropertyRef Name="LavadoId" />
+      </Principal>
+      <Dependent Role="OpcionesLavados">
+        <PropertyRef Name="LavadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OpcionLavadoOrden_Lavados">
+    <End Role="Lavados" Type="Self.Lavados" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OpcionLavadoOrden" Type="Self.OpcionLavadoOrden" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lavados">
+        <PropertyRef Name="LavadoId" />
+      </Principal>
+      <Dependent Role="OpcionLavadoOrden">
+        <PropertyRef Name="OpcionLavadoOrdenLavadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Operaciones_GrupoOperaciones">
+    <End Role="GrupoOperaciones" Type="Self.GrupoOperaciones" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Operaciones" Type="Self.Operaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GrupoOperaciones">
+        <PropertyRef Name="GrupoOperacionesCodigo" />
+      </Principal>
+      <Dependent Role="Operaciones">
+        <PropertyRef Name="GrupoOperacionesCodigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Operaciones_TipoOperaciones">
+    <End Role="TipoOperaciones" Type="Self.TipoOperaciones" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Operaciones" Type="Self.Operaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoOperaciones">
+        <PropertyRef Name="TipoOperacionesCodigo" />
+      </Principal>
+      <Dependent Role="Operaciones">
+        <PropertyRef Name="TipoOperacionesCodigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperacionesCTrabajos_Operaciones">
+    <End Role="Operaciones" Type="Self.Operaciones" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OperacionesCTrabajos" Type="Self.OperacionesCTrabajos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Operaciones">
+        <PropertyRef Name="OperacionCodigo" />
+      </Principal>
+      <Dependent Role="OperacionesCTrabajos">
+        <PropertyRef Name="OperacionCodigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperacionesPd_ObservacionesPd">
+    <End Role="OperacionesPreDefinidas" Type="Self.OperacionesPreDefinidas" Multiplicity="1" />
+    <End Role="ObservacionesPreDefinidas" Type="Self.ObservacionesPreDefinidas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesPreDefinidas">
+        <PropertyRef Name="OperacionPreDefinidaId" />
+      </Principal>
+      <Dependent Role="ObservacionesPreDefinidas">
+        <PropertyRef Name="ObservacionOperacionPdId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperacionesProceso_ProcesosCentroTrabajo">
+    <End Role="ProcesosCentroTrabajo" Type="Self.ProcesosCentroTrabajo" Multiplicity="1" />
+    <End Role="OperacionesProceso" Type="Self.OperacionesProceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProcesosCentroTrabajo">
+        <PropertyRef Name="ProcesoCentroTrabajoId" />
+      </Principal>
+      <Dependent Role="OperacionesProceso">
+        <PropertyRef Name="ProcesoCentroTrabajoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperacionesProcesoOrden_ProcesosCentroTrabajoOrden">
+    <End Role="ProcesosCentroTrabajoOrden" Type="Self.ProcesosCentroTrabajoOrden" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OperacionesProcesoOrden" Type="Self.OperacionesProcesoOrden" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProcesosCentroTrabajoOrden">
+        <PropertyRef Name="ProcesosCentroTrabajoOrdenId" />
+      </Principal>
+      <Dependent Role="OperacionesProcesoOrden">
+        <PropertyRef Name="OperacionesProcesoOrdenProcesoCentroTrabajoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Procesos_CentrosTrabajos">
+    <End Role="CentrosTrabajos" Type="Self.CentrosTrabajos" Multiplicity="1" />
+    <End Role="Procesos" Type="Self.Procesos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentrosTrabajos">
+        <PropertyRef Name="CentroTrabajoCodigo" />
+      </Principal>
+      <Dependent Role="Procesos">
+        <PropertyRef Name="CentroTrabajoCodigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProcesosCentroTrabajo_CentrosTrabajoOpcion">
+    <End Role="CentrosTrabajoOpcion" Type="Self.CentrosTrabajoOpcion" Multiplicity="1" />
+    <End Role="ProcesosCentroTrabajo" Type="Self.ProcesosCentroTrabajo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentrosTrabajoOpcion">
+        <PropertyRef Name="CentroTrabajoOpcionId" />
+      </Principal>
+      <Dependent Role="ProcesosCentroTrabajo">
+        <PropertyRef Name="CentroTrabajoOpcionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProcesosCentroTrabajoOrden_CentrosTrabajoOpcionLavadoOrden">
+    <End Role="CentrosTrabajoOpcionLavadoOrden" Type="Self.CentrosTrabajoOpcionLavadoOrden" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProcesosCentroTrabajoOrden" Type="Self.ProcesosCentroTrabajoOrden" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentrosTrabajoOpcionLavadoOrden">
+        <PropertyRef Name="CentrosTrabajoOpcionLavadoOrdenId" />
+      </Principal>
+      <Dependent Role="ProcesosCentroTrabajoOrden">
+        <PropertyRef Name="ProcesosCentroTrabajoOrdenCentrosTrabajoOpcionLavadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProcesosOperaciones_OperacionesCTrabajos">
+    <End Role="OperacionesCTrabajos" Type="Self.OperacionesCTrabajos" Multiplicity="1" />
+    <End Role="ProcesosOperaciones" Type="Self.ProcesosOperaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesCTrabajos">
+        <PropertyRef Name="OperacionesCtCode" />
+      </Principal>
+      <Dependent Role="ProcesosOperaciones">
+        <PropertyRef Name="OperacionCtCodigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Secadoras_SecadorasCapacidad">
+    <End Role="SecadorasCapacidad" Type="Self.SecadorasCapacidad" Multiplicity="1" />
+    <End Role="Secadoras" Type="Self.Secadoras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SecadorasCapacidad">
+        <PropertyRef Name="SecadoraCapacidadId" />
+      </Principal>
+      <Dependent Role="Secadoras">
+        <PropertyRef Name="SecadorasCapacidadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TelasColorIntermoda_ColoresIntermoda">
+    <End Role="ColoresIntermoda" Type="Self.ColoresIntermoda" Multiplicity="1" />
+    <End Role="TelasColorIntermoda" Type="Self.TelasColorIntermoda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ColoresIntermoda">
+        <PropertyRef Name="ColorIntermodaId" />
+      </Principal>
+      <Dependent Role="TelasColorIntermoda">
+        <PropertyRef Name="ColorIntermodaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LavanderiaModelStoreContainer">
+    <EntitySet Name="ArchivosGlobales" EntityType="Self.ArchivosGlobales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CantidadIngredientesInstruccion" EntityType="Self.CantidadIngredientesInstruccion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CantidadIngredientesOperacion" EntityType="Self.CantidadIngredientesOperacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CargaLavado" EntityType="Self.CargaLavado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CATALOG" EntityType="Self.CATALOG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CentrosTrabajoOpcion" EntityType="Self.CentrosTrabajoOpcion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CentrosTrabajoOpcionLavadoOrden" EntityType="Self.CentrosTrabajoOpcionLavadoOrden" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CentrosTrabajos" EntityType="Self.CentrosTrabajos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLASE" EntityType="Self.CLASE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ColoresIntermoda" EntityType="Self.ColoresIntermoda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTRABAJO" EntityType="Self.CTRABAJO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CUTARC3" EntityType="Self.CUTARC3" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GrupoOperaciones" EntityType="Self.GrupoOperaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GRUTEL" EntityType="Self.GRUTEL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IngredientesOperacion" EntityType="Self.IngredientesOperacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IngredientesPreDefinidos" EntityType="Self.IngredientesPreDefinidos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InstruccionesOperacion" EntityType="Self.InstruccionesOperacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InstruccionesPreDefinidas" EntityType="Self.InstruccionesPreDefinidas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lavadoras" EntityType="Self.Lavadoras" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LavadorasCapacidad" EntityType="Self.LavadorasCapacidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lavados" EntityType="Self.Lavados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LitrosAguaOperacion" EntityType="Self.LitrosAguaOperacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LogsLavado" EntityType="Self.LogsLavado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MaterialNoRequisableLavanderia" EntityType="Self.MaterialNoRequisableLavanderia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MATMST" EntityType="Self.MATMST" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ObservacionesOperacion" EntityType="Self.ObservacionesOperacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ObservacionesPreDefinidas" EntityType="Self.ObservacionesPreDefinidas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OpcionesLavados" EntityType="Self.OpcionesLavados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OpcionLavadoOrden" EntityType="Self.OpcionLavadoOrden" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Operaciones" EntityType="Self.Operaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OperacionesCTrabajos" EntityType="Self.OperacionesCTrabajos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OperacionesPreDefinidas" EntityType="Self.OperacionesPreDefinidas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OperacionesProceso" EntityType="Self.OperacionesProceso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OperacionesProcesoOrden" EntityType="Self.OperacionesProcesoOrden" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDCENTR" EntityType="Self.ORDCENTR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Plantas" EntityType="Self.Plantas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Procesos" EntityType="Self.Procesos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProcesosCentroTrabajo" EntityType="Self.ProcesosCentroTrabajo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProcesosCentroTrabajoOrden" EntityType="Self.ProcesosCentroTrabajoOrden" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProcesosOperaciones" EntityType="Self.ProcesosOperaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Secadoras" EntityType="Self.Secadoras" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SecadorasCapacidad" EntityType="Self.SecadorasCapacidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SUBCLASE" EntityType="Self.SUBCLASE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TELAR5" EntityType="Self.TELAR5" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TelasColorIntermoda" EntityType="Self.TelasColorIntermoda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TelasComposicion" EntityType="Self.TelasComposicion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoOperaciones" EntityType="Self.TipoOperaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrdenesProduccionEnProceso" EntityType="Self.OrdenesProduccionEnProceso" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OrdenesProduccionEnProceso].[CodigoCompañia] AS [CodigoCompañia], 
+    [OrdenesProduccionEnProceso].[DescripcionCompañia] AS [DescripcionCompañia], 
+    [OrdenesProduccionEnProceso].[Año] AS [Año], 
+    [OrdenesProduccionEnProceso].[NumeroOrden] AS [NumeroOrden], 
+    [OrdenesProduccionEnProceso].[Patron] AS [Patron], 
+    [OrdenesProduccionEnProceso].[Variante] AS [Variante], 
+    [OrdenesProduccionEnProceso].[Tela] AS [Tela], 
+    [OrdenesProduccionEnProceso].[EstadoOrden] AS [EstadoOrden], 
+    [OrdenesProduccionEnProceso].[Usuario] AS [Usuario], 
+    [OrdenesProduccionEnProceso].[PrdProTel] AS [PrdProTel], 
+    [OrdenesProduccionEnProceso].[Cantidad] AS [Cantidad], 
+    [OrdenesProduccionEnProceso].[ModuloEnsamble] AS [ModuloEnsamble], 
+    [OrdenesProduccionEnProceso].[ConTela] AS [ConTela], 
+    [OrdenesProduccionEnProceso].[InicioProgramado] AS [InicioProgramado], 
+    [OrdenesProduccionEnProceso].[FinalProgramado] AS [FinalProgramado], 
+    [OrdenesProduccionEnProceso].[LavadoId] AS [LavadoId], 
+    [OrdenesProduccionEnProceso].[CodigoLavadoViejo] AS [CodigoLavadoViejo], 
+    [OrdenesProduccionEnProceso].[PesoUnidad] AS [PesoUnidad]
+    FROM [dbo].[OrdenesProduccionEnProceso] AS [OrdenesProduccionEnProceso]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OrdenesProduccionLavanderia" EntityType="Self.OrdenesProduccionLavanderia" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OrdenesProduccionLavanderia].[CompaniaId] AS [CompaniaId], 
+    [OrdenesProduccionLavanderia].[PlantaCodigo] AS [PlantaCodigo], 
+    [OrdenesProduccionLavanderia].[PrdCtNew] AS [PrdCtNew], 
+    [OrdenesProduccionLavanderia].[Ano] AS [Ano], 
+    [OrdenesProduccionLavanderia].[Numero] AS [Numero], 
+    [OrdenesProduccionLavanderia].[Patron] AS [Patron], 
+    [OrdenesProduccionLavanderia].[Variante] AS [Variante], 
+    [OrdenesProduccionLavanderia].[CodigoLavadoViejo] AS [CodigoLavadoViejo], 
+    [OrdenesProduccionLavanderia].[PrdStsCor] AS [PrdStsCor], 
+    [OrdenesProduccionLavanderia].[FinalProgramado] AS [FinalProgramado], 
+    [OrdenesProduccionLavanderia].[InicioProgramado] AS [InicioProgramado], 
+    [OrdenesProduccionLavanderia].[TelaProduccion] AS [TelaProduccion], 
+    [OrdenesProduccionLavanderia].[TelaVenta] AS [TelaVenta], 
+    [OrdenesProduccionLavanderia].[Usuario] AS [Usuario], 
+    [OrdenesProduccionLavanderia].[Cantidad] AS [Cantidad], 
+    [OrdenesProduccionLavanderia].[UnidadesTerminadasEnsamble] AS [UnidadesTerminadasEnsamble], 
+    [OrdenesProduccionLavanderia].[UnidadesIngresadasLavanderia2] AS [UnidadesIngresadasLavanderia2], 
+    [OrdenesProduccionLavanderia].[LavadoId] AS [LavadoId], 
+    [OrdenesProduccionLavanderia].[LavadoNombre] AS [LavadoNombre], 
+    [OrdenesProduccionLavanderia].[PesoUnidad] AS [PesoUnidad]
+    FROM [dbo].[OrdenesProduccionLavanderia] AS [OrdenesProduccionLavanderia]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_ArchivosGlobales_Lavados" Association="Self.FK_ArchivosGlobales_Lavados">
+      <End Role="Lavados" EntitySet="Lavados" />
+      <End Role="ArchivosGlobales" EntitySet="ArchivosGlobales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CantidadIngredientesOperacion_OpcionLavadoOrden" Association="Self.FK_CantidadIngredientesOperacion_OpcionLavadoOrden">
+      <End Role="OpcionLavadoOrden" EntitySet="OpcionLavadoOrden" />
+      <End Role="CantidadIngredientesOperacion" EntitySet="CantidadIngredientesOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CantidadIngredientesOperacion_OperacionesProcesoOrden" Association="Self.FK_CantidadIngredientesOperacion_OperacionesProcesoOrden">
+      <End Role="OperacionesProcesoOrden" EntitySet="OperacionesProcesoOrden" />
+      <End Role="CantidadIngredientesOperacion" EntitySet="CantidadIngredientesOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CargaLavado_Lavadoras" Association="Self.FK_CargaLavado_Lavadoras">
+      <End Role="Lavadoras" EntitySet="Lavadoras" />
+      <End Role="CargaLavado" EntitySet="CargaLavado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CargaLavado_LavadorasCapacidad" Association="Self.FK_CargaLavado_LavadorasCapacidad">
+      <End Role="LavadorasCapacidad" EntitySet="LavadorasCapacidad" />
+      <End Role="CargaLavado" EntitySet="CargaLavado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CargaLavado_OpcionLavadoOrden" Association="Self.FK_CargaLavado_OpcionLavadoOrden">
+      <End Role="OpcionLavadoOrden" EntitySet="OpcionLavadoOrden" />
+      <End Role="CargaLavado" EntitySet="CargaLavado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentrosTrabajoOpcion_OpcionesLavados" Association="Self.FK_CentrosTrabajoOpcion_OpcionesLavados">
+      <End Role="OpcionesLavados" EntitySet="OpcionesLavados" />
+      <End Role="CentrosTrabajoOpcion" EntitySet="CentrosTrabajoOpcion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentrosTrabajoOpcionLavadoOrden_OpcionLavadoOrden" Association="Self.FK_CentrosTrabajoOpcionLavadoOrden_OpcionLavadoOrden">
+      <End Role="OpcionLavadoOrden" EntitySet="OpcionLavadoOrden" />
+      <End Role="CentrosTrabajoOpcionLavadoOrden" EntitySet="CentrosTrabajoOpcionLavadoOrden" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IngredientesOperacion_InstruccionesOperacion" Association="Self.FK_IngredientesOperacion_InstruccionesOperacion">
+      <End Role="InstruccionesOperacion" EntitySet="InstruccionesOperacion" />
+      <End Role="IngredientesOperacion" EntitySet="IngredientesOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IngredientesOperacion_OperacionesProceso" Association="Self.FK_IngredientesOperacion_OperacionesProceso">
+      <End Role="OperacionesProceso" EntitySet="OperacionesProceso" />
+      <End Role="IngredientesOperacion" EntitySet="IngredientesOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IngredientesPreDefinidos_InstruccionesPreDefinidas" Association="Self.FK_IngredientesPreDefinidos_InstruccionesPreDefinidas">
+      <End Role="InstruccionesPreDefinidas" EntitySet="InstruccionesPreDefinidas" />
+      <End Role="IngredientesPreDefinidos" EntitySet="IngredientesPreDefinidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IngredientesPreDefinidos_OperacionesPreDefinidas" Association="Self.FK_IngredientesPreDefinidos_OperacionesPreDefinidas">
+      <End Role="OperacionesPreDefinidas" EntitySet="OperacionesPreDefinidas" />
+      <End Role="IngredientesPreDefinidos" EntitySet="IngredientesPreDefinidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstruccionesOperacion_OperacionesProceso" Association="Self.FK_InstruccionesOperacion_OperacionesProceso">
+      <End Role="OperacionesProceso" EntitySet="OperacionesProceso" />
+      <End Role="InstruccionesOperacion" EntitySet="InstruccionesOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstruccionesPreDefinidas_OperacionesPreDefinidas" Association="Self.FK_InstruccionesPreDefinidas_OperacionesPreDefinidas">
+      <End Role="OperacionesPreDefinidas" EntitySet="OperacionesPreDefinidas" />
+      <End Role="InstruccionesPreDefinidas" EntitySet="InstruccionesPreDefinidas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lavadoras_LavadorasCapacidad" Association="Self.FK_Lavadoras_LavadorasCapacidad">
+      <End Role="LavadorasCapacidad" EntitySet="LavadorasCapacidad" />
+      <End Role="Lavadoras" EntitySet="Lavadoras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lavados_ColoresIntermoda" Association="Self.FK_Lavados_ColoresIntermoda">
+      <End Role="ColoresIntermoda" EntitySet="ColoresIntermoda" />
+      <End Role="Lavados" EntitySet="Lavados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LitrosAguaOperacion_OpcionLavadoOrden" Association="Self.FK_LitrosAguaOperacion_OpcionLavadoOrden">
+      <End Role="OpcionLavadoOrden" EntitySet="OpcionLavadoOrden" />
+      <End Role="LitrosAguaOperacion" EntitySet="LitrosAguaOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LitrosAguaOperacion_OperacionesProcesoOrden" Association="Self.FK_LitrosAguaOperacion_OperacionesProcesoOrden">
+      <End Role="OperacionesProcesoOrden" EntitySet="OperacionesProcesoOrden" />
+      <End Role="LitrosAguaOperacion" EntitySet="LitrosAguaOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObservacionesOperacion_OperacionesProceso" Association="Self.FK_ObservacionesOperacion_OperacionesProceso">
+      <End Role="OperacionesProceso" EntitySet="OperacionesProceso" />
+      <End Role="ObservacionesOperacion" EntitySet="ObservacionesOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OpcionesLavados_Lavados" Association="Self.FK_OpcionesLavados_Lavados">
+      <End Role="Lavados" EntitySet="Lavados" />
+      <End Role="OpcionesLavados" EntitySet="OpcionesLavados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OpcionLavadoOrden_Lavados" Association="Self.FK_OpcionLavadoOrden_Lavados">
+      <End Role="Lavados" EntitySet="Lavados" />
+      <End Role="OpcionLavadoOrden" EntitySet="OpcionLavadoOrden" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Operaciones_GrupoOperaciones" Association="Self.FK_Operaciones_GrupoOperaciones">
+      <End Role="GrupoOperaciones" EntitySet="GrupoOperaciones" />
+      <End Role="Operaciones" EntitySet="Operaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Operaciones_TipoOperaciones" Association="Self.FK_Operaciones_TipoOperaciones">
+      <End Role="TipoOperaciones" EntitySet="TipoOperaciones" />
+      <End Role="Operaciones" EntitySet="Operaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperacionesCTrabajos_Operaciones" Association="Self.FK_OperacionesCTrabajos_Operaciones">
+      <End Role="Operaciones" EntitySet="Operaciones" />
+      <End Role="OperacionesCTrabajos" EntitySet="OperacionesCTrabajos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperacionesPd_ObservacionesPd" Association="Self.FK_OperacionesPd_ObservacionesPd">
+      <End Role="OperacionesPreDefinidas" EntitySet="OperacionesPreDefinidas" />
+      <End Role="ObservacionesPreDefinidas" EntitySet="ObservacionesPreDefinidas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperacionesProceso_ProcesosCentroTrabajo" Association="Self.FK_OperacionesProceso_ProcesosCentroTrabajo">
+      <End Role="ProcesosCentroTrabajo" EntitySet="ProcesosCentroTrabajo" />
+      <End Role="OperacionesProceso" EntitySet="OperacionesProceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperacionesProcesoOrden_ProcesosCentroTrabajoOrden" Association="Self.FK_OperacionesProcesoOrden_ProcesosCentroTrabajoOrden">
+      <End Role="ProcesosCentroTrabajoOrden" EntitySet="ProcesosCentroTrabajoOrden" />
+      <End Role="OperacionesProcesoOrden" EntitySet="OperacionesProcesoOrden" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Procesos_CentrosTrabajos" Association="Self.FK_Procesos_CentrosTrabajos">
+      <End Role="CentrosTrabajos" EntitySet="CentrosTrabajos" />
+      <End Role="Procesos" EntitySet="Procesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProcesosCentroTrabajo_CentrosTrabajoOpcion" Association="Self.FK_ProcesosCentroTrabajo_CentrosTrabajoOpcion">
+      <End Role="CentrosTrabajoOpcion" EntitySet="CentrosTrabajoOpcion" />
+      <End Role="ProcesosCentroTrabajo" EntitySet="ProcesosCentroTrabajo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProcesosCentroTrabajoOrden_CentrosTrabajoOpcionLavadoOrden" Association="Self.FK_ProcesosCentroTrabajoOrden_CentrosTrabajoOpcionLavadoOrden">
+      <End Role="CentrosTrabajoOpcionLavadoOrden" EntitySet="CentrosTrabajoOpcionLavadoOrden" />
+      <End Role="ProcesosCentroTrabajoOrden" EntitySet="ProcesosCentroTrabajoOrden" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProcesosOperaciones_OperacionesCTrabajos" Association="Self.FK_ProcesosOperaciones_OperacionesCTrabajos">
+      <End Role="OperacionesCTrabajos" EntitySet="OperacionesCTrabajos" />
+      <End Role="ProcesosOperaciones" EntitySet="ProcesosOperaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Secadoras_SecadorasCapacidad" Association="Self.FK_Secadoras_SecadorasCapacidad">
+      <End Role="SecadorasCapacidad" EntitySet="SecadorasCapacidad" />
+      <End Role="Secadoras" EntitySet="Secadoras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TelasColorIntermoda_ColoresIntermoda" Association="Self.FK_TelasColorIntermoda_ColoresIntermoda">
+      <End Role="ColoresIntermoda" EntitySet="ColoresIntermoda" />
+      <End Role="TelasColorIntermoda" EntitySet="TelasColorIntermoda" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

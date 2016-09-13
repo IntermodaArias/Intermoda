@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/IntermodaService/Lavanderia/Maquina.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lavanderia" />
+  <xs:import schemaLocation="http://localhost/IntermodaService/Lavanderia/Maquina.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Intermoda.Common.Enum" />
+  <xs:element name="Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lavanderia" minOccurs="0" name="maquina" nillable="true" type="q1:MaquinaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lavanderia" minOccurs="0" name="UpdateResult" nillable="true" type="q2:MaquinaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Intermoda.Common.Enum" minOccurs="0" name="tipo" type="q3:MaquinaTipo" />
+        <xs:element minOccurs="0" name="maquinaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Get">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Intermoda.Common.Enum" minOccurs="0" name="tipo" type="q4:MaquinaTipo" />
+        <xs:element minOccurs="0" name="maquinaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lavanderia" minOccurs="0" name="GetResult" nillable="true" type="q5:MaquinaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lavanderia" minOccurs="0" name="GetAllResult" nillable="true" type="q6:ArrayOfMaquinaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByTipo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Intermoda.Common.Enum" minOccurs="0" name="tipo" type="q7:MaquinaTipo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByTipoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lavanderia" minOccurs="0" name="GetByTipoResult" nillable="true" type="q8:ArrayOfMaquinaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByTipoCapacidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Intermoda.Common.Enum" minOccurs="0" name="tipo" type="q9:MaquinaTipo" />
+        <xs:element minOccurs="0" name="capacidadId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByTipoCapacidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lavanderia" minOccurs="0" name="GetByTipoCapacidadResult" nillable="true" type="q10:ArrayOfMaquinaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

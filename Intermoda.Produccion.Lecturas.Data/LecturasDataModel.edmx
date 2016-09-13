@@ -1,0 +1,968 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ProduccionLecturasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CentroTrabajo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codigo" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="Secuencia" Type="int" Nullable="false" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CentroTrabajoClasificacion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codigo" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="Secuencia" Type="int" Nullable="false" />
+          <Property Name="Tipo" Type="int" Nullable="false" />
+          <Property Name="CentroTrabajoId" Type="int" Nullable="false" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Grupo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FechaInicio" Type="date" Nullable="false" />
+          <Property Name="FechaFinal" Type="date" Nullable="false" />
+          <Property Name="Codigo" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="Secuencia" Type="int" Nullable="false" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Jornada">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codigo" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="JornadaDetalle">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JornadaId" Type="int" Nullable="false" />
+          <Property Name="EntradaHora" Type="int" Nullable="false" />
+          <Property Name="EntradaMinuto" Type="int" Nullable="false" />
+          <Property Name="SalidaHora" Type="int" Nullable="false" />
+          <Property Name="SalidaMinuto" Type="int" Nullable="false" />
+          <Property Name="Horas" Type="int" Nullable="false" />
+          <Property Name="Minutos" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Linea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codigo" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="Secuencia" Type="int" Nullable="false" />
+          <Property Name="Tipo" Type="int" Nullable="false" />
+          <Property Name="GrupoId" Type="int" Nullable="false" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LineaDetalle">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LineaId" Type="int" Nullable="false" />
+          <Property Name="CentroTrabajoId" Type="int" Nullable="false" />
+          <Property Name="ModuloId" Type="int" Nullable="false" />
+          <Property Name="EsSalidaUnica" Type="bit" Nullable="false" />
+          <Property Name="Secuencia" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Modulo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codigo" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="Secuencia" Type="int" Nullable="false" />
+          <Property Name="CentroTrabajoId" Type="int" Nullable="false" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ModuloSemana">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FechaInicio" Type="date" Nullable="false" />
+          <Property Name="FechaFinal" Type="date" Nullable="false" />
+          <Property Name="CentroTrabajoId" Type="int" Nullable="false" />
+          <Property Name="ModuloId" Type="int" Nullable="false" />
+          <Property Name="TransferenciaMinutos" Type="int" Nullable="false" />
+          <Property Name="MetaPiezasPorHora" Type="int" Nullable="false" />
+          <Property Name="MetaProduccion" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Curva" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="MinutosEntrenamiento" Type="int" Nullable="false" />
+          <Property Name="MinutosTitular" Type="int" Nullable="false" />
+          <Property Name="MinutosUtilitario" Type="int" Nullable="false" />
+          <Property Name="MinutosBase" Type="int" Nullable="false" />
+          <Property Name="TurnoId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ModuloSemanaOperario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ModuloSemanaId" Type="int" Nullable="false" />
+          <Property Name="CompaniaCodigo" Type="smallint" Nullable="false" />
+          <Property Name="OperarioCodigo" Type="int" Nullable="false" />
+          <Property Name="ClasificacionId" Type="int" Nullable="false" />
+          <Property Name="CurvaEntrenamiento" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="SemanaEntrenamiento" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Turno">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codigo" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TurnoDetalle">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TurnoId" Type="int" Nullable="false" />
+          <Property Name="Dia" Type="int" Nullable="false" />
+          <Property Name="JornadaId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_CentroTrabajoClasificacion_CentroTrabajo">
+          <End Role="CentroTrabajo" Type="Self.CentroTrabajo" Multiplicity="1" />
+          <End Role="CentroTrabajoClasificacion" Type="Self.CentroTrabajoClasificacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentroTrabajo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CentroTrabajoClasificacion">
+              <PropertyRef Name="CentroTrabajoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JornadaDetalle_Jornada">
+          <End Role="Jornada" Type="Self.Jornada" Multiplicity="1" />
+          <End Role="JornadaDetalle" Type="Self.JornadaDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jornada">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="JornadaDetalle">
+              <PropertyRef Name="JornadaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Linea_Grupo">
+          <End Role="Grupo" Type="Self.Grupo" Multiplicity="1" />
+          <End Role="Linea" Type="Self.Linea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grupo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Linea">
+              <PropertyRef Name="GrupoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LineaDetalle_CentroTrabajo">
+          <End Role="CentroTrabajo" Type="Self.CentroTrabajo" Multiplicity="1" />
+          <End Role="LineaDetalle" Type="Self.LineaDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentroTrabajo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LineaDetalle">
+              <PropertyRef Name="CentroTrabajoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LineaDetalle_Linea">
+          <End Role="Linea" Type="Self.Linea" Multiplicity="1" />
+          <End Role="LineaDetalle" Type="Self.LineaDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Linea">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LineaDetalle">
+              <PropertyRef Name="LineaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LineaDetalle_Modulo">
+          <End Role="Modulo" Type="Self.Modulo" Multiplicity="1" />
+          <End Role="LineaDetalle" Type="Self.LineaDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modulo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LineaDetalle">
+              <PropertyRef Name="ModuloId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Modulo_CentroTrabajo">
+          <End Role="CentroTrabajo" Type="Self.CentroTrabajo" Multiplicity="1" />
+          <End Role="Modulo" Type="Self.Modulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentroTrabajo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Modulo">
+              <PropertyRef Name="CentroTrabajoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ModuloSemana_CentroTrabajo">
+          <End Role="CentroTrabajo" Type="Self.CentroTrabajo" Multiplicity="1" />
+          <End Role="ModuloSemana" Type="Self.ModuloSemana" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentroTrabajo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ModuloSemana">
+              <PropertyRef Name="CentroTrabajoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ModuloSemana_Modulo">
+          <End Role="Modulo" Type="Self.Modulo" Multiplicity="1" />
+          <End Role="ModuloSemana" Type="Self.ModuloSemana" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modulo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ModuloSemana">
+              <PropertyRef Name="ModuloId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ModuloSemana_Turno">
+          <End Role="Turno" Type="Self.Turno" Multiplicity="1" />
+          <End Role="ModuloSemana" Type="Self.ModuloSemana" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Turno">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ModuloSemana">
+              <PropertyRef Name="TurnoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ModuloSemanaOperario_CentroTrabajoClasificacion">
+          <End Role="CentroTrabajoClasificacion" Type="Self.CentroTrabajoClasificacion" Multiplicity="1" />
+          <End Role="ModuloSemanaOperario" Type="Self.ModuloSemanaOperario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentroTrabajoClasificacion">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ModuloSemanaOperario">
+              <PropertyRef Name="ClasificacionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ModuloSemanaOperario_ModuloSemana">
+          <End Role="ModuloSemana" Type="Self.ModuloSemana" Multiplicity="1" />
+          <End Role="ModuloSemanaOperario" Type="Self.ModuloSemanaOperario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ModuloSemana">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ModuloSemanaOperario">
+              <PropertyRef Name="ModuloSemanaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TurnoDetalle_Jornada">
+          <End Role="Jornada" Type="Self.Jornada" Multiplicity="1" />
+          <End Role="TurnoDetalle" Type="Self.TurnoDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jornada">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TurnoDetalle">
+              <PropertyRef Name="JornadaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TurnoDetalle_Turno">
+          <End Role="Turno" Type="Self.Turno" Multiplicity="1" />
+          <End Role="TurnoDetalle" Type="Self.TurnoDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Turno">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TurnoDetalle">
+              <PropertyRef Name="TurnoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ProduccionLecturasModelStoreContainer">
+          <EntitySet Name="CentroTrabajo" EntityType="Self.CentroTrabajo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CentroTrabajoClasificacion" EntityType="Self.CentroTrabajoClasificacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Grupo" EntityType="Self.Grupo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Jornada" EntityType="Self.Jornada" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="JornadaDetalle" EntityType="Self.JornadaDetalle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Linea" EntityType="Self.Linea" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LineaDetalle" EntityType="Self.LineaDetalle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Modulo" EntityType="Self.Modulo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ModuloSemana" EntityType="Self.ModuloSemana" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ModuloSemanaOperario" EntityType="Self.ModuloSemanaOperario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Turno" EntityType="Self.Turno" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TurnoDetalle" EntityType="Self.TurnoDetalle" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CentroTrabajoClasificacion_CentroTrabajo" Association="Self.FK_CentroTrabajoClasificacion_CentroTrabajo">
+            <End Role="CentroTrabajo" EntitySet="CentroTrabajo" />
+            <End Role="CentroTrabajoClasificacion" EntitySet="CentroTrabajoClasificacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JornadaDetalle_Jornada" Association="Self.FK_JornadaDetalle_Jornada">
+            <End Role="Jornada" EntitySet="Jornada" />
+            <End Role="JornadaDetalle" EntitySet="JornadaDetalle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Linea_Grupo" Association="Self.FK_Linea_Grupo">
+            <End Role="Grupo" EntitySet="Grupo" />
+            <End Role="Linea" EntitySet="Linea" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LineaDetalle_CentroTrabajo" Association="Self.FK_LineaDetalle_CentroTrabajo">
+            <End Role="CentroTrabajo" EntitySet="CentroTrabajo" />
+            <End Role="LineaDetalle" EntitySet="LineaDetalle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LineaDetalle_Linea" Association="Self.FK_LineaDetalle_Linea">
+            <End Role="Linea" EntitySet="Linea" />
+            <End Role="LineaDetalle" EntitySet="LineaDetalle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LineaDetalle_Modulo" Association="Self.FK_LineaDetalle_Modulo">
+            <End Role="Modulo" EntitySet="Modulo" />
+            <End Role="LineaDetalle" EntitySet="LineaDetalle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Modulo_CentroTrabajo" Association="Self.FK_Modulo_CentroTrabajo">
+            <End Role="CentroTrabajo" EntitySet="CentroTrabajo" />
+            <End Role="Modulo" EntitySet="Modulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ModuloSemana_CentroTrabajo" Association="Self.FK_ModuloSemana_CentroTrabajo">
+            <End Role="CentroTrabajo" EntitySet="CentroTrabajo" />
+            <End Role="ModuloSemana" EntitySet="ModuloSemana" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ModuloSemana_Modulo" Association="Self.FK_ModuloSemana_Modulo">
+            <End Role="Modulo" EntitySet="Modulo" />
+            <End Role="ModuloSemana" EntitySet="ModuloSemana" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ModuloSemana_Turno" Association="Self.FK_ModuloSemana_Turno">
+            <End Role="Turno" EntitySet="Turno" />
+            <End Role="ModuloSemana" EntitySet="ModuloSemana" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ModuloSemanaOperario_CentroTrabajoClasificacion" Association="Self.FK_ModuloSemanaOperario_CentroTrabajoClasificacion">
+            <End Role="CentroTrabajoClasificacion" EntitySet="CentroTrabajoClasificacion" />
+            <End Role="ModuloSemanaOperario" EntitySet="ModuloSemanaOperario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ModuloSemanaOperario_ModuloSemana" Association="Self.FK_ModuloSemanaOperario_ModuloSemana">
+            <End Role="ModuloSemana" EntitySet="ModuloSemana" />
+            <End Role="ModuloSemanaOperario" EntitySet="ModuloSemanaOperario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TurnoDetalle_Jornada" Association="Self.FK_TurnoDetalle_Jornada">
+            <End Role="Jornada" EntitySet="Jornada" />
+            <End Role="TurnoDetalle" EntitySet="TurnoDetalle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TurnoDetalle_Turno" Association="Self.FK_TurnoDetalle_Turno">
+            <End Role="Turno" EntitySet="Turno" />
+            <End Role="TurnoDetalle" EntitySet="TurnoDetalle" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProduccionLecturasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CentroTrabajo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Secuencia" Type="Int32" Nullable="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Modulo" Relationship="Self.FK_Modulo_CentroTrabajo" FromRole="CentroTrabajo" ToRole="Modulo" />
+          <NavigationProperty Name="CentroTrabajoClasificacion" Relationship="ProduccionLecturasModel.FK_CentroTrabajoClasificacion_CentroTrabajo" FromRole="CentroTrabajo" ToRole="CentroTrabajoClasificacion" />
+          <NavigationProperty Name="LineaDetalle" Relationship="ProduccionLecturasModel.FK_LineaDetalle_CentroTrabajo" FromRole="CentroTrabajo" ToRole="LineaDetalle" />
+          <NavigationProperty Name="ModuloSemana" Relationship="ProduccionLecturasModel.FK_ModuloSemana_CentroTrabajo" FromRole="CentroTrabajo" ToRole="ModuloSemana" />
+        </EntityType>
+        <EntityType Name="Grupo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Secuencia" Type="Int32" Nullable="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="FechaInicio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="FechaFinal" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Linea" Relationship="ProduccionLecturasModel.FK_Linea_Grupo" FromRole="Grupo" ToRole="Linea" />
+        </EntityType>
+        <EntityType Name="Modulo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Secuencia" Type="Int32" Nullable="false" />
+          <Property Name="CentroTrabajoId" Type="Int32" Nullable="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="CentroTrabajo" Relationship="Self.FK_Modulo_CentroTrabajo" FromRole="Modulo" ToRole="CentroTrabajo" />
+          <NavigationProperty Name="LineaDetalle" Relationship="ProduccionLecturasModel.FK_LineaDetalle_Modulo" FromRole="Modulo" ToRole="LineaDetalle" />
+          <NavigationProperty Name="ModuloSemana" Relationship="ProduccionLecturasModel.FK_ModuloSemana_Modulo" FromRole="Modulo" ToRole="ModuloSemana" />
+        </EntityType>
+        <EntityType Name="ModuloSemanaOperario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ModuloSemanaId" Type="Int32" Nullable="false" />
+          <Property Name="CompaniaCodigo" Type="Int16" Nullable="false" />
+          <Property Name="OperarioCodigo" Type="Int32" Nullable="false" />
+          <Property Name="ClasificacionId" Type="Int32" Nullable="false" />
+          <Property Name="CurvaEntrenamiento" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="SemanaEntrenamiento" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CentroTrabajoClasificacion" Relationship="ProduccionLecturasModel.FK_ModuloSemanaOperario_CentroTrabajoClasificacion" FromRole="ModuloSemanaOperario" ToRole="CentroTrabajoClasificacion" />
+          <NavigationProperty Name="ModuloSemana" Relationship="ProduccionLecturasModel.FK_ModuloSemanaOperario_ModuloSemana" FromRole="ModuloSemanaOperario" ToRole="ModuloSemana" />
+        </EntityType>
+        <Association Name="FK_Modulo_CentroTrabajo">
+          <End Role="CentroTrabajo" Type="Self.CentroTrabajo" Multiplicity="1" />
+          <End Role="Modulo" Type="Self.Modulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentroTrabajo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Modulo">
+              <PropertyRef Name="CentroTrabajoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ProduccionLecturasEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CentroTrabajoSet" EntityType="Self.CentroTrabajo" />
+          <EntitySet Name="GrupoSet" EntityType="Self.Grupo" />
+          <EntitySet Name="ModuloSet" EntityType="Self.Modulo" />
+          <EntitySet Name="ModuloSemanaOperarioSet" EntityType="Self.ModuloSemanaOperario" />
+          <AssociationSet Name="FK_Modulo_CentroTrabajo" Association="Self.FK_Modulo_CentroTrabajo">
+            <End Role="CentroTrabajo" EntitySet="CentroTrabajoSet" />
+            <End Role="Modulo" EntitySet="ModuloSet" />
+          </AssociationSet>
+          <EntitySet Name="CentroTrabajoClasificacionSet" EntityType="ProduccionLecturasModel.CentroTrabajoClasificacion" />
+          <AssociationSet Name="FK_CentroTrabajoClasificacion_CentroTrabajo" Association="ProduccionLecturasModel.FK_CentroTrabajoClasificacion_CentroTrabajo">
+            <End Role="CentroTrabajo" EntitySet="CentroTrabajoSet" />
+            <End Role="CentroTrabajoClasificacion" EntitySet="CentroTrabajoClasificacionSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ModuloSemanaOperario_CentroTrabajoClasificacion" Association="ProduccionLecturasModel.FK_ModuloSemanaOperario_CentroTrabajoClasificacion">
+            <End Role="CentroTrabajoClasificacion" EntitySet="CentroTrabajoClasificacionSet" />
+            <End Role="ModuloSemanaOperario" EntitySet="ModuloSemanaOperarioSet" />
+          </AssociationSet>
+          <EntitySet Name="LineaSet" EntityType="ProduccionLecturasModel.Linea" />
+          <EntitySet Name="LineaDetalleSet" EntityType="ProduccionLecturasModel.LineaDetalle" />
+          <AssociationSet Name="FK_LineaDetalle_CentroTrabajo" Association="ProduccionLecturasModel.FK_LineaDetalle_CentroTrabajo">
+            <End Role="CentroTrabajo" EntitySet="CentroTrabajoSet" />
+            <End Role="LineaDetalle" EntitySet="LineaDetalleSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Linea_Grupo" Association="ProduccionLecturasModel.FK_Linea_Grupo">
+            <End Role="Grupo" EntitySet="GrupoSet" />
+            <End Role="Linea" EntitySet="LineaSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LineaDetalle_Linea" Association="ProduccionLecturasModel.FK_LineaDetalle_Linea">
+            <End Role="Linea" EntitySet="LineaSet" />
+            <End Role="LineaDetalle" EntitySet="LineaDetalleSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LineaDetalle_Modulo" Association="ProduccionLecturasModel.FK_LineaDetalle_Modulo">
+            <End Role="Modulo" EntitySet="ModuloSet" />
+            <End Role="LineaDetalle" EntitySet="LineaDetalleSet" />
+          </AssociationSet>
+          <EntitySet Name="JornadaSet" EntityType="ProduccionLecturasModel.Jornada" />
+          <EntitySet Name="JornadaDetalleSet" EntityType="ProduccionLecturasModel.JornadaDetalle" />
+          <EntitySet Name="ModuloSemanaSet" EntityType="ProduccionLecturasModel.ModuloSemana" />
+          <EntitySet Name="TurnoSet" EntityType="ProduccionLecturasModel.Turno" />
+          <EntitySet Name="TurnoDetalleSet" EntityType="ProduccionLecturasModel.TurnoDetalle" />
+          <AssociationSet Name="FK_ModuloSemana_CentroTrabajo" Association="ProduccionLecturasModel.FK_ModuloSemana_CentroTrabajo">
+            <End Role="CentroTrabajo" EntitySet="CentroTrabajoSet" />
+            <End Role="ModuloSemana" EntitySet="ModuloSemanaSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JornadaDetalle_Jornada" Association="ProduccionLecturasModel.FK_JornadaDetalle_Jornada">
+            <End Role="Jornada" EntitySet="JornadaSet" />
+            <End Role="JornadaDetalle" EntitySet="JornadaDetalleSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TurnoDetalle_Jornada" Association="ProduccionLecturasModel.FK_TurnoDetalle_Jornada">
+            <End Role="Jornada" EntitySet="JornadaSet" />
+            <End Role="TurnoDetalle" EntitySet="TurnoDetalleSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ModuloSemana_Modulo" Association="ProduccionLecturasModel.FK_ModuloSemana_Modulo">
+            <End Role="Modulo" EntitySet="ModuloSet" />
+            <End Role="ModuloSemana" EntitySet="ModuloSemanaSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ModuloSemana_Turno" Association="ProduccionLecturasModel.FK_ModuloSemana_Turno">
+            <End Role="Turno" EntitySet="TurnoSet" />
+            <End Role="ModuloSemana" EntitySet="ModuloSemanaSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ModuloSemanaOperario_ModuloSemana" Association="ProduccionLecturasModel.FK_ModuloSemanaOperario_ModuloSemana">
+            <End Role="ModuloSemana" EntitySet="ModuloSemanaSet" />
+            <End Role="ModuloSemanaOperario" EntitySet="ModuloSemanaOperarioSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TurnoDetalle_Turno" Association="ProduccionLecturasModel.FK_TurnoDetalle_Turno">
+            <End Role="Turno" EntitySet="TurnoSet" />
+            <End Role="TurnoDetalle" EntitySet="TurnoDetalleSet" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="CentroTrabajoClasificacion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Secuencia" Type="Int32" Nullable="false" />
+          <Property Name="Tipo" Type="Int32" Nullable="false" />
+          <Property Name="CentroTrabajoId" Type="Int32" Nullable="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="CentroTrabajo" Relationship="ProduccionLecturasModel.FK_CentroTrabajoClasificacion_CentroTrabajo" FromRole="CentroTrabajoClasificacion" ToRole="CentroTrabajo" />
+          <NavigationProperty Name="ModuloSemanaOperario" Relationship="ProduccionLecturasModel.FK_ModuloSemanaOperario_CentroTrabajoClasificacion" FromRole="CentroTrabajoClasificacion" ToRole="ModuloSemanaOperario" />
+        </EntityType>
+        <Association Name="FK_CentroTrabajoClasificacion_CentroTrabajo">
+          <End Type="ProduccionLecturasModel.CentroTrabajo" Role="CentroTrabajo" Multiplicity="1" />
+          <End Type="ProduccionLecturasModel.CentroTrabajoClasificacion" Role="CentroTrabajoClasificacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentroTrabajo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CentroTrabajoClasificacion">
+              <PropertyRef Name="CentroTrabajoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ModuloSemanaOperario_CentroTrabajoClasificacion">
+          <End Type="ProduccionLecturasModel.CentroTrabajoClasificacion" Role="CentroTrabajoClasificacion" Multiplicity="1" />
+          <End Type="ProduccionLecturasModel.ModuloSemanaOperario" Role="ModuloSemanaOperario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentroTrabajoClasificacion">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ModuloSemanaOperario">
+              <PropertyRef Name="ClasificacionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Linea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Secuencia" Type="Int32" Nullable="false" />
+          <Property Name="Tipo" Type="Int32" Nullable="false" />
+          <Property Name="GrupoId" Type="Int32" Nullable="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Grupo" Relationship="ProduccionLecturasModel.FK_Linea_Grupo" FromRole="Linea" ToRole="Grupo" />
+          <NavigationProperty Name="LineaDetalle" Relationship="ProduccionLecturasModel.FK_LineaDetalle_Linea" FromRole="Linea" ToRole="LineaDetalle" />
+        </EntityType>
+        <EntityType Name="LineaDetalle">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LineaId" Type="Int32" Nullable="false" />
+          <Property Name="CentroTrabajoId" Type="Int32" Nullable="false" />
+          <Property Name="ModuloId" Type="Int32" Nullable="false" />
+          <Property Name="EsSalidaUnica" Type="Boolean" Nullable="false" />
+          <Property Name="Secuencia" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CentroTrabajo" Relationship="ProduccionLecturasModel.FK_LineaDetalle_CentroTrabajo" FromRole="LineaDetalle" ToRole="CentroTrabajo" />
+          <NavigationProperty Name="Linea" Relationship="ProduccionLecturasModel.FK_LineaDetalle_Linea" FromRole="LineaDetalle" ToRole="Linea" />
+          <NavigationProperty Name="Modulo" Relationship="ProduccionLecturasModel.FK_LineaDetalle_Modulo" FromRole="LineaDetalle" ToRole="Modulo" />
+        </EntityType>
+        <Association Name="FK_LineaDetalle_CentroTrabajo">
+          <End Type="ProduccionLecturasModel.CentroTrabajo" Role="CentroTrabajo" Multiplicity="1" />
+          <End Type="ProduccionLecturasModel.LineaDetalle" Role="LineaDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentroTrabajo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LineaDetalle">
+              <PropertyRef Name="CentroTrabajoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Linea_Grupo">
+          <End Type="ProduccionLecturasModel.Grupo" Role="Grupo" Multiplicity="1" />
+          <End Type="ProduccionLecturasModel.Linea" Role="Linea" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grupo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Linea">
+              <PropertyRef Name="GrupoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LineaDetalle_Linea">
+          <End Type="ProduccionLecturasModel.Linea" Role="Linea" Multiplicity="1" />
+          <End Type="ProduccionLecturasModel.LineaDetalle" Role="LineaDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Linea">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LineaDetalle">
+              <PropertyRef Name="LineaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LineaDetalle_Modulo">
+          <End Type="ProduccionLecturasModel.Modulo" Role="Modulo" Multiplicity="1" />
+          <End Type="ProduccionLecturasModel.LineaDetalle" Role="LineaDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modulo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LineaDetalle">
+              <PropertyRef Name="ModuloId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Jornada">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="JornadaDetalle" Relationship="ProduccionLecturasModel.FK_JornadaDetalle_Jornada" FromRole="Jornada" ToRole="JornadaDetalle" />
+          <NavigationProperty Name="TurnoDetalle" Relationship="ProduccionLecturasModel.FK_TurnoDetalle_Jornada" FromRole="Jornada" ToRole="TurnoDetalle" />
+        </EntityType>
+        <EntityType Name="JornadaDetalle">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JornadaId" Type="Int32" Nullable="false" />
+          <Property Name="EntradaHora" Type="Int32" Nullable="false" />
+          <Property Name="EntradaMinuto" Type="Int32" Nullable="false" />
+          <Property Name="SalidaHora" Type="Int32" Nullable="false" />
+          <Property Name="SalidaMinuto" Type="Int32" Nullable="false" />
+          <Property Name="Horas" Type="Int32" Nullable="false" />
+          <Property Name="Minutos" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Jornada" Relationship="ProduccionLecturasModel.FK_JornadaDetalle_Jornada" FromRole="JornadaDetalle" ToRole="Jornada" />
+        </EntityType>
+        <EntityType Name="ModuloSemana">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FechaInicio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="FechaFinal" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CentroTrabajoId" Type="Int32" Nullable="false" />
+          <Property Name="ModuloId" Type="Int32" Nullable="false" />
+          <Property Name="TransferenciaMinutos" Type="Int32" Nullable="false" />
+          <Property Name="MetaPiezasPorHora" Type="Int32" Nullable="false" />
+          <Property Name="MetaProduccion" Type="Decimal" Nullable="false" Precision="6" Scale="2" />
+          <Property Name="Curva" Type="Decimal" Nullable="false" Precision="6" Scale="2" />
+          <Property Name="MinutosEntrenamiento" Type="Int32" Nullable="false" />
+          <Property Name="MinutosTitular" Type="Int32" Nullable="false" />
+          <Property Name="MinutosUtilitario" Type="Int32" Nullable="false" />
+          <Property Name="MinutosBase" Type="Int32" Nullable="false" />
+          <Property Name="TurnoId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CentroTrabajo" Relationship="ProduccionLecturasModel.FK_ModuloSemana_CentroTrabajo" FromRole="ModuloSemana" ToRole="CentroTrabajo" />
+          <NavigationProperty Name="Modulo" Relationship="ProduccionLecturasModel.FK_ModuloSemana_Modulo" FromRole="ModuloSemana" ToRole="Modulo" />
+          <NavigationProperty Name="Turno" Relationship="ProduccionLecturasModel.FK_ModuloSemana_Turno" FromRole="ModuloSemana" ToRole="Turno" />
+          <NavigationProperty Name="ModuloSemanaOperario" Relationship="ProduccionLecturasModel.FK_ModuloSemanaOperario_ModuloSemana" FromRole="ModuloSemana" ToRole="ModuloSemanaOperario" />
+        </EntityType>
+        <EntityType Name="Turno">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ModuloSemana" Relationship="ProduccionLecturasModel.FK_ModuloSemana_Turno" FromRole="Turno" ToRole="ModuloSemana" />
+          <NavigationProperty Name="TurnoDetalle" Relationship="ProduccionLecturasModel.FK_TurnoDetalle_Turno" FromRole="Turno" ToRole="TurnoDetalle" />
+        </EntityType>
+        <EntityType Name="TurnoDetalle">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TurnoId" Type="Int32" Nullable="false" />
+          <Property Name="Dia" Type="Int32" Nullable="false" />
+          <Property Name="JornadaId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Jornada" Relationship="ProduccionLecturasModel.FK_TurnoDetalle_Jornada" FromRole="TurnoDetalle" ToRole="Jornada" />
+          <NavigationProperty Name="Turno" Relationship="ProduccionLecturasModel.FK_TurnoDetalle_Turno" FromRole="TurnoDetalle" ToRole="Turno" />
+        </EntityType>
+        <Association Name="FK_ModuloSemana_CentroTrabajo">
+          <End Type="ProduccionLecturasModel.CentroTrabajo" Role="CentroTrabajo" Multiplicity="1" />
+          <End Type="ProduccionLecturasModel.ModuloSemana" Role="ModuloSemana" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentroTrabajo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ModuloSemana">
+              <PropertyRef Name="CentroTrabajoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JornadaDetalle_Jornada">
+          <End Type="ProduccionLecturasModel.Jornada" Role="Jornada" Multiplicity="1" />
+          <End Type="ProduccionLecturasModel.JornadaDetalle" Role="JornadaDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jornada">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="JornadaDetalle">
+              <PropertyRef Name="JornadaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TurnoDetalle_Jornada">
+          <End Type="ProduccionLecturasModel.Jornada" Role="Jornada" Multiplicity="1" />
+          <End Type="ProduccionLecturasModel.TurnoDetalle" Role="TurnoDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jornada">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TurnoDetalle">
+              <PropertyRef Name="JornadaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ModuloSemana_Modulo">
+          <End Type="ProduccionLecturasModel.Modulo" Role="Modulo" Multiplicity="1" />
+          <End Type="ProduccionLecturasModel.ModuloSemana" Role="ModuloSemana" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modulo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ModuloSemana">
+              <PropertyRef Name="ModuloId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ModuloSemana_Turno">
+          <End Type="ProduccionLecturasModel.Turno" Role="Turno" Multiplicity="1" />
+          <End Type="ProduccionLecturasModel.ModuloSemana" Role="ModuloSemana" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Turno">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ModuloSemana">
+              <PropertyRef Name="TurnoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ModuloSemanaOperario_ModuloSemana">
+          <End Type="ProduccionLecturasModel.ModuloSemana" Role="ModuloSemana" Multiplicity="1" />
+          <End Type="ProduccionLecturasModel.ModuloSemanaOperario" Role="ModuloSemanaOperario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ModuloSemana">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ModuloSemanaOperario">
+              <PropertyRef Name="ModuloSemanaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TurnoDetalle_Turno">
+          <End Type="ProduccionLecturasModel.Turno" Role="Turno" Multiplicity="1" />
+          <End Type="ProduccionLecturasModel.TurnoDetalle" Role="TurnoDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Turno">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TurnoDetalle">
+              <PropertyRef Name="TurnoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ProduccionLecturasModelStoreContainer" CdmEntityContainer="ProduccionLecturasEntities">
+          <EntitySetMapping Name="CentroTrabajoSet">
+            <EntityTypeMapping TypeName="ProduccionLecturasModel.CentroTrabajo">
+              <MappingFragment StoreEntitySet="CentroTrabajo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GrupoSet">
+            <EntityTypeMapping TypeName="ProduccionLecturasModel.Grupo">
+              <MappingFragment StoreEntitySet="Grupo">
+                <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ModuloSet">
+            <EntityTypeMapping TypeName="ProduccionLecturasModel.Modulo">
+              <MappingFragment StoreEntitySet="Modulo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+                <ScalarProperty Name="CentroTrabajoId" ColumnName="CentroTrabajoId" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ModuloSemanaOperarioSet">
+            <EntityTypeMapping TypeName="ProduccionLecturasModel.ModuloSemanaOperario">
+              <MappingFragment StoreEntitySet="ModuloSemanaOperario">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ModuloSemanaId" ColumnName="ModuloSemanaId" />
+                <ScalarProperty Name="CompaniaCodigo" ColumnName="CompaniaCodigo" />
+                <ScalarProperty Name="OperarioCodigo" ColumnName="OperarioCodigo" />
+                <ScalarProperty Name="ClasificacionId" ColumnName="ClasificacionId" />
+                <ScalarProperty Name="CurvaEntrenamiento" ColumnName="CurvaEntrenamiento" />
+                <ScalarProperty Name="SemanaEntrenamiento" ColumnName="SemanaEntrenamiento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CentroTrabajoClasificacionSet">
+            <EntityTypeMapping TypeName="ProduccionLecturasModel.CentroTrabajoClasificacion">
+              <MappingFragment StoreEntitySet="CentroTrabajoClasificacion">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="CentroTrabajoId" ColumnName="CentroTrabajoId" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LineaSet">
+            <EntityTypeMapping TypeName="ProduccionLecturasModel.Linea">
+              <MappingFragment StoreEntitySet="Linea">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="GrupoId" ColumnName="GrupoId" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LineaDetalleSet">
+            <EntityTypeMapping TypeName="ProduccionLecturasModel.LineaDetalle">
+              <MappingFragment StoreEntitySet="LineaDetalle">
+                <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+                <ScalarProperty Name="EsSalidaUnica" ColumnName="EsSalidaUnica" />
+                <ScalarProperty Name="ModuloId" ColumnName="ModuloId" />
+                <ScalarProperty Name="CentroTrabajoId" ColumnName="CentroTrabajoId" />
+                <ScalarProperty Name="LineaId" ColumnName="LineaId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JornadaSet">
+            <EntityTypeMapping TypeName="ProduccionLecturasModel.Jornada">
+              <MappingFragment StoreEntitySet="Jornada">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JornadaDetalleSet">
+            <EntityTypeMapping TypeName="ProduccionLecturasModel.JornadaDetalle">
+              <MappingFragment StoreEntitySet="JornadaDetalle">
+                <ScalarProperty Name="Minutos" ColumnName="Minutos" />
+                <ScalarProperty Name="Horas" ColumnName="Horas" />
+                <ScalarProperty Name="SalidaMinuto" ColumnName="SalidaMinuto" />
+                <ScalarProperty Name="SalidaHora" ColumnName="SalidaHora" />
+                <ScalarProperty Name="EntradaMinuto" ColumnName="EntradaMinuto" />
+                <ScalarProperty Name="EntradaHora" ColumnName="EntradaHora" />
+                <ScalarProperty Name="JornadaId" ColumnName="JornadaId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ModuloSemanaSet">
+            <EntityTypeMapping TypeName="ProduccionLecturasModel.ModuloSemana">
+              <MappingFragment StoreEntitySet="ModuloSemana">
+                <ScalarProperty Name="TurnoId" ColumnName="TurnoId" />
+                <ScalarProperty Name="MinutosBase" ColumnName="MinutosBase" />
+                <ScalarProperty Name="MinutosUtilitario" ColumnName="MinutosUtilitario" />
+                <ScalarProperty Name="MinutosTitular" ColumnName="MinutosTitular" />
+                <ScalarProperty Name="MinutosEntrenamiento" ColumnName="MinutosEntrenamiento" />
+                <ScalarProperty Name="Curva" ColumnName="Curva" />
+                <ScalarProperty Name="MetaProduccion" ColumnName="MetaProduccion" />
+                <ScalarProperty Name="MetaPiezasPorHora" ColumnName="MetaPiezasPorHora" />
+                <ScalarProperty Name="TransferenciaMinutos" ColumnName="TransferenciaMinutos" />
+                <ScalarProperty Name="ModuloId" ColumnName="ModuloId" />
+                <ScalarProperty Name="CentroTrabajoId" ColumnName="CentroTrabajoId" />
+                <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TurnoSet">
+            <EntityTypeMapping TypeName="ProduccionLecturasModel.Turno">
+              <MappingFragment StoreEntitySet="Turno">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TurnoDetalleSet">
+            <EntityTypeMapping TypeName="ProduccionLecturasModel.TurnoDetalle">
+              <MappingFragment StoreEntitySet="TurnoDetalle">
+                <ScalarProperty Name="JornadaId" ColumnName="JornadaId" />
+                <ScalarProperty Name="Dia" ColumnName="Dia" />
+                <ScalarProperty Name="TurnoId" ColumnName="TurnoId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

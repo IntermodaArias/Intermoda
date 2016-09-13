@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="61b10c15-8bc2-44f2-90d1-ecd646e2b76d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/TelaColorIntermoda.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TelaColorIntermoda3.xsd" MetadataType="Schema" ID="222663cf-63b1-4c68-b0d0-bf2beb0aa8bf" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/TelaColorIntermoda.svc?xsd=xsd1" />
+    <MetadataFile FileName="TelaColorIntermoda1.disco" MetadataType="Disco" ID="558622a1-4372-48a4-bd32-b7f93ea38d9f" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/TelaColorIntermoda.svc?disco" />
+    <MetadataFile FileName="TelaColorIntermoda31.xsd" MetadataType="Schema" ID="a2c47f3e-9bce-45fb-b298-a21b45cc144c" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/TelaColorIntermoda.svc?xsd=xsd2" />
+    <MetadataFile FileName="TelaColorIntermoda32.xsd" MetadataType="Schema" ID="48d76215-2803-4f05-84af-4012b389299a" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/TelaColorIntermoda.svc?xsd=xsd0" />
+    <MetadataFile FileName="TelaColorIntermoda1.wsdl" MetadataType="Wsdl" ID="174e867a-ece5-46ca-bab3-6a1ed6584fd1" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/TelaColorIntermoda.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

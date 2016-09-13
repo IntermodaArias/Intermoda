@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="97281a6d-c098-41ac-ad27-cf4c041fc3c2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lectura/Grupo.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Grupo3.xsd" MetadataType="Schema" ID="e3816dd3-e7b7-4eda-ac05-5946b52207f4" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Grupo.svc?xsd=xsd2" />
+    <MetadataFile FileName="Grupo31.xsd" MetadataType="Schema" ID="76469a59-7e21-4d84-ba12-af234b43157b" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Grupo.svc?xsd=xsd1" />
+    <MetadataFile FileName="Grupo1.wsdl" MetadataType="Wsdl" ID="0029907b-612e-4a60-a19f-d1b69be8211b" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Grupo.svc?wsdl" />
+    <MetadataFile FileName="Grupo32.xsd" MetadataType="Schema" ID="6d512882-dbb9-4c2d-98eb-c9421b2d50a5" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Grupo.svc?xsd=xsd0" />
+    <MetadataFile FileName="Grupo1.disco" MetadataType="Disco" ID="ad245d32-9ebe-4550-9923-9a16046a7d47" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Grupo.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

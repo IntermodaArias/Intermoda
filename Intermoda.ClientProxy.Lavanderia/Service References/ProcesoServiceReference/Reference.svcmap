@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="489f844b-8d16-43ea-aff0-ab7efa1131b4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/Proceso.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Proceso1.wsdl" MetadataType="Wsdl" ID="80aa29e3-8643-460e-940f-b822fced7494" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Proceso.svc?wsdl" />
+    <MetadataFile FileName="Proceso3.xsd" MetadataType="Schema" ID="ad88e067-fad5-4293-ab7f-874da6712b46" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Proceso.svc?xsd=xsd1" />
+    <MetadataFile FileName="Proceso31.xsd" MetadataType="Schema" ID="2b5df9b7-172f-449b-8569-aba871eb97ef" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Proceso.svc?xsd=xsd0" />
+    <MetadataFile FileName="Proceso32.xsd" MetadataType="Schema" ID="3369d469-1c1a-49a6-ab56-3048138babc9" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Proceso.svc?xsd=xsd2" />
+    <MetadataFile FileName="Proceso1.disco" MetadataType="Disco" ID="bab9c2a7-7836-4c95-8dd4-116505a3ba9b" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Proceso.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

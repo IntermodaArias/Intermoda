@@ -1,0 +1,1637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LavanderiaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ArchivosGlobales">
+    <Key>
+      <PropertyRef Name="ArchivoGlobalId" />
+    </Key>
+    <Property Name="ArchivoGlobalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ArchivoGlobalPropietarioId" Type="Int32" Nullable="false" />
+    <Property Name="ArchivoGlobalNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ArchivoGlobalTipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ArchivoGlobalExtension" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ArchivoGlobalOrden" Type="Int32" Nullable="false" />
+    <Property Name="ArchivoGlobalDescripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ArchivoGlobalBinario" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ArchivoGlobalPropietarioNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ArchivoGlobalFecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ArchivoGlobalVersion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Lavados" Relationship="Self.FK_ArchivosGlobales_Lavados" FromRole="ArchivosGlobales" ToRole="Lavados" />
+  </EntityType>
+  <EntityType Name="CentrosTrabajoOpcion">
+    <Key>
+      <PropertyRef Name="CentroTrabajoOpcionId" />
+    </Key>
+    <Property Name="CentroTrabajoOpcionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CentroTrabajoId" Type="Int32" Nullable="false" />
+    <Property Name="OpcionId" Type="Int32" Nullable="false" />
+    <Property Name="CentroTrabajoOpcionOrden" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ProcesosCentroTrabajo" Relationship="Self.FK_ProcesosCentroTrabajo_CentrosTrabajoOpcion" FromRole="CentrosTrabajoOpcion" ToRole="ProcesosCentroTrabajo" />
+    <NavigationProperty Name="OpcionesLavados" Relationship="LavanderiaModel.FK_CentrosTrabajoOpcion_OpcionesLavados" FromRole="CentrosTrabajoOpcion" ToRole="OpcionesLavados" />
+  </EntityType>
+  <EntityType Name="CentrosTrabajos">
+    <Key>
+      <PropertyRef Name="CentroTrabajoCodigo" />
+    </Key>
+    <Property Name="CentroTrabajoCodigo" Type="Int32" Nullable="false" />
+    <Property Name="CentroTrabajoNombre" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CentroTrabajoOrdenNumero" Type="Int32" />
+    <Property Name="CentroTrabajoObservacion" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="CentroTrabajoTiempoEspera" Type="Decimal" Precision="12" Scale="0" />
+    <Property Name="CentroTrabajoTiempoProceso" Type="Decimal" Precision="12" Scale="0" />
+    <Property Name="LineaProduccionCodigo" Type="Int32" />
+    <Property Name="CentroTrabajoIsObligatorio" Type="Boolean" />
+    <Property Name="CentroTrabajoIsActivo" Type="Boolean" />
+    <Property Name="CentroTrabajoKanbanEntrada" Type="Int32" />
+    <Property Name="CentroTrabajoKanbanSalida" Type="Int32" />
+    <Property Name="CentroTrabajoCodigoTipo" Type="Int32" />
+    <NavigationProperty Name="Procesos" Relationship="LavanderiaModel.FK_Procesos_CentrosTrabajos" FromRole="CentrosTrabajos" ToRole="Procesos" />
+  </EntityType>
+  <EntityType Name="ColoresIntermoda">
+    <Key>
+      <PropertyRef Name="ColorIntermodaId" />
+    </Key>
+    <Property Name="ColorIntermodaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ColorIntermodaNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Lavados" Relationship="Self.FK_Lavados_ColoresIntermoda" FromRole="ColoresIntermoda" ToRole="Lavados" />
+    <NavigationProperty Name="TelasColorIntermoda" Relationship="Self.FK_TelasColorIntermoda_ColoresIntermoda" FromRole="ColoresIntermoda" ToRole="TelasColorIntermoda" />
+  </EntityType>
+  <EntityType Name="GrupoOperaciones">
+    <Key>
+      <PropertyRef Name="GrupoOperacionesCodigo" />
+    </Key>
+    <Property Name="GrupoOperacionesCodigo" Type="Int16" Nullable="false" />
+    <Property Name="GrupoOperacionesNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GrupoOperacionesDescipcion" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Operaciones" Relationship="Self.FK_Operaciones_GrupoOperaciones" FromRole="GrupoOperaciones" ToRole="Operaciones" />
+  </EntityType>
+  <EntityType Name="IngredientesOperacion">
+    <Key>
+      <PropertyRef Name="IngredienteOperacionId" />
+    </Key>
+    <Property Name="IngredienteOperacionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IngredienteId" Type="Int32" Nullable="false" />
+    <Property Name="OperacionId" Type="Int32" Nullable="false" />
+    <Property Name="OperacionProcesoId" Type="Int32" Nullable="false" />
+    <Property Name="IngredienteOperacionPorcentaje" Type="Decimal" Precision="8" Scale="5" />
+    <Property Name="IngredienteOperacionClaseId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IngredienteOperacionSubClaseId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IngredienteOperacionOrden" Type="Int32" />
+    <Property Name="IngredienteInstruccionesOperacionId" Type="Int32" />
+    <NavigationProperty Name="InstruccionesOperacion" Relationship="Self.FK_IngredientesOperacion_InstruccionesOperacion" FromRole="IngredientesOperacion" ToRole="InstruccionesOperacion" />
+    <NavigationProperty Name="OperacionesProceso" Relationship="Self.FK_IngredientesOperacion_OperacionesProceso" FromRole="IngredientesOperacion" ToRole="OperacionesProceso" />
+  </EntityType>
+  <EntityType Name="IngredientesPreDefinidos">
+    <Key>
+      <PropertyRef Name="IngredientePreDefinidoId" />
+    </Key>
+    <Property Name="IngredientePreDefinidoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IngredienteId" Type="Int32" Nullable="false" />
+    <Property Name="OperacionId" Type="Int32" Nullable="false" />
+    <Property Name="IngredientePreDefinidoClaseId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IngredientePreDefinidoSubClaseId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IngredientePreDefinidoPorcentaje" Type="Decimal" Precision="8" Scale="5" />
+    <Property Name="IngredientePreDefinidoOrden" Type="Int32" />
+    <Property Name="IngredientePreDefinidoInstruccionesOperacionId" Type="Int32" />
+    <NavigationProperty Name="InstruccionesPreDefinidas" Relationship="Self.FK_IngredientesPreDefinidos_InstruccionesPreDefinidas" FromRole="IngredientesPreDefinidos" ToRole="InstruccionesPreDefinidas" />
+    <NavigationProperty Name="OperacionesPreDefinidas" Relationship="Self.FK_IngredientesPreDefinidos_OperacionesPreDefinidas" FromRole="IngredientesPreDefinidos" ToRole="OperacionesPreDefinidas" />
+  </EntityType>
+  <EntityType Name="InstruccionesOperacion">
+    <Key>
+      <PropertyRef Name="InstruccionOperacionId" />
+    </Key>
+    <Property Name="InstruccionOperacionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstruccionOperacionDescripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="OperacionProcesoId" Type="Int32" Nullable="false" />
+    <Property Name="InstruccionOperacionOrden" Type="Int32" Nullable="false" />
+    <Property Name="InstruccionOperacionTiempoMinimo" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="InstruccionOperacionTemperatura" Type="Int32" />
+    <Property Name="InstruccionOperacionTiempoMaximo" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <NavigationProperty Name="IngredientesOperacion" Relationship="Self.FK_IngredientesOperacion_InstruccionesOperacion" FromRole="InstruccionesOperacion" ToRole="IngredientesOperacion" />
+    <NavigationProperty Name="OperacionesProceso" Relationship="Self.FK_InstruccionesOperacion_OperacionesProceso" FromRole="InstruccionesOperacion" ToRole="OperacionesProceso" />
+    <Property Name="InstruccionOperacionTiempoEstandar" Type="Decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="InstruccionesPreDefinidas">
+    <Key>
+      <PropertyRef Name="InstruccionPreDefinidaId" />
+    </Key>
+    <Property Name="InstruccionPreDefinidaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstruccionPreDefinidaDescripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OperacionPreDefinidaId" Type="Int32" Nullable="false" />
+    <Property Name="InstruccionPreDefinidaOrden" Type="Int32" Nullable="false" />
+    <Property Name="InstruccionPreDefinidaTiempoMinimo" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="InstruccionPreDefinidaTemperatura" Type="Int32" />
+    <Property Name="InstruccionPreDefinidaTiempoMaximo" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <NavigationProperty Name="IngredientesPreDefinidos" Relationship="Self.FK_IngredientesPreDefinidos_InstruccionesPreDefinidas" FromRole="InstruccionesPreDefinidas" ToRole="IngredientesPreDefinidos" />
+    <NavigationProperty Name="OperacionesPreDefinidas" Relationship="Self.FK_InstruccionesPreDefinidas_OperacionesPreDefinidas" FromRole="InstruccionesPreDefinidas" ToRole="OperacionesPreDefinidas" />
+  </EntityType>
+  <EntityType Name="Lavadoras">
+    <Key>
+      <PropertyRef Name="LavadoraId" />
+    </Key>
+    <Property Name="LavadoraId" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LavadoraNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LavadorasCapacidadId" Type="Int16" Nullable="false" />
+    <Property Name="LavadoraMarca" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LavadoraModelo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LavadoraEstado" Type="Int16" Nullable="false" />
+    <Property Name="LavadoraNumeroSerie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LavadoraIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LavadoraMAC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="LavadorasCapacidad" Relationship="Self.FK_Lavadoras_LavadorasCapacidad" FromRole="Lavadoras" ToRole="LavadorasCapacidad" />
+    <NavigationProperty Name="CargaLavado" Relationship="LavanderiaModel.FK_CargaLavado_Lavadoras" FromRole="Lavadoras" ToRole="CargaLavado" />
+  </EntityType>
+  <EntityType Name="LavadorasCapacidad">
+    <Key>
+      <PropertyRef Name="LavadoraCapacidadId" />
+    </Key>
+    <Property Name="LavadoraCapacidadId" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LavadoraCapacidadKgMax" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="LavadoraCapacidadKgMin" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="LavadoraCapacidadLitroCanasta" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="Lavadoras" Relationship="Self.FK_Lavadoras_LavadorasCapacidad" FromRole="LavadorasCapacidad" ToRole="Lavadoras" />
+    <NavigationProperty Name="CargaLavado" Relationship="LavanderiaModel.FK_CargaLavado_LavadorasCapacidad" FromRole="LavadorasCapacidad" ToRole="CargaLavado" />
+  </EntityType>
+  <EntityType Name="Lavados">
+    <Key>
+      <PropertyRef Name="LavadoId" />
+    </Key>
+    <Property Name="LavadoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LavadoNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LavadoDescripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ColorIntermodaId" Type="Int32" Nullable="false" />
+    <Property Name="IsActivo" Type="Int32" />
+    <Property Name="LavadoFechaCreacion" Type="DateTime" Precision="0" />
+    <Property Name="LavadoFechaActualizacion" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="ArchivosGlobales" Relationship="Self.FK_ArchivosGlobales_Lavados" FromRole="Lavados" ToRole="ArchivosGlobales" />
+    <NavigationProperty Name="ColoresIntermoda" Relationship="Self.FK_Lavados_ColoresIntermoda" FromRole="Lavados" ToRole="ColoresIntermoda" />
+    <NavigationProperty Name="OpcionesLavados" Relationship="LavanderiaModel.FK_OpcionesLavados_Lavados" FromRole="Lavados" ToRole="OpcionesLavados" />
+    <NavigationProperty Name="OpcionLavadoOrden" Relationship="LavanderiaModel.FK_OpcionLavadoOrden_Lavados" FromRole="Lavados" ToRole="OpcionLavadoOrden" />
+  </EntityType>
+  <EntityType Name="LogsLavado">
+    <Key>
+      <PropertyRef Name="LogLavadoId" />
+    </Key>
+    <Property Name="LogLavadoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LogLavadoFecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LogLavadoDescripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="LogLavadoObjeto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LogLavadoUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LogLavadoTipoTransaccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MaterialNoRequisableLavanderia">
+    <Key>
+      <PropertyRef Name="MaterialNoRequisableLavanderiaId" />
+    </Key>
+    <Property Name="MaterialNoRequisableLavanderiaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodigoMaterial" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PorcentajeUtilizacion" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ObservacionesOperacion">
+    <Key>
+      <PropertyRef Name="ObservacionesOperacionId" />
+    </Key>
+    <Property Name="ObservacionesOperacionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ObservacionesOperacionDescripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="OperacionProcesoId" Type="Int32" Nullable="false" />
+    <Property Name="ObservacionesOperacionOrden" Type="Int32" Nullable="false" />
+    <Property Name="ObservacionesOperacionPosicion" Type="Int32" />
+    <NavigationProperty Name="OperacionesProceso" Relationship="Self.FK_ObservacionesOperacion_OperacionesProceso" FromRole="ObservacionesOperacion" ToRole="OperacionesProceso" />
+  </EntityType>
+  <EntityType Name="Operaciones">
+    <Key>
+      <PropertyRef Name="OperacionCodigo" />
+    </Key>
+    <Property Name="OperacionCodigo" Type="Int16" Nullable="false" />
+    <Property Name="OperacionNombre" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="OperacionDescripcion" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="TipoOperacionesCodigo" Type="Int16" Nullable="false" />
+    <Property Name="GrupoOperacionesCodigo" Type="Int16" Nullable="false" />
+    <Property Name="LinaPCodigo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="GrupoOperaciones" Relationship="Self.FK_Operaciones_GrupoOperaciones" FromRole="Operaciones" ToRole="GrupoOperaciones" />
+    <NavigationProperty Name="TipoOperaciones" Relationship="Self.FK_Operaciones_TipoOperaciones" FromRole="Operaciones" ToRole="TipoOperaciones" />
+    <NavigationProperty Name="OperacionesCTrabajos" Relationship="Self.FK_OperacionesCTrabajos_Operaciones" FromRole="Operaciones" ToRole="OperacionesCTrabajos" />
+  </EntityType>
+  <EntityType Name="OperacionesCTrabajos">
+    <Key>
+      <PropertyRef Name="OperacionesCtCode" />
+    </Key>
+    <Property Name="OperacionesCtCode" Type="Int16" Nullable="false" />
+    <Property Name="OperacionCodigo" Type="Int16" Nullable="false" />
+    <Property Name="CtrabajoCodigo" Type="Int32" Nullable="false" />
+    <Property Name="CtrabajoNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EsRepetible" Type="Int32" />
+    <NavigationProperty Name="Operaciones" Relationship="Self.FK_OperacionesCTrabajos_Operaciones" FromRole="OperacionesCTrabajos" ToRole="Operaciones" />
+    <NavigationProperty Name="ProcesosOperaciones" Relationship="Self.FK_ProcesosOperaciones_OperacionesCTrabajos" FromRole="OperacionesCTrabajos" ToRole="ProcesosOperaciones" />
+  </EntityType>
+  <EntityType Name="OperacionesPreDefinidas">
+    <Key>
+      <PropertyRef Name="OperacionPreDefinidaId" />
+    </Key>
+    <Property Name="OperacionPreDefinidaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OperacionId" Type="Int32" Nullable="false" />
+    <Property Name="OperacionPreDefinidaTemperatura" Type="Int32" Nullable="false" />
+    <Property Name="OperacionPreDefinidaPh" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OperacionPreDefinidaTiempoMinimo" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="OperacionPreDefinidaRelacion" Type="Int32" Nullable="false" />
+    <Property Name="OperacionPreDefinidaOrden" Type="Int32" Nullable="false" />
+    <Property Name="OperacionPreDefinidaTiempoMaximo" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <NavigationProperty Name="IngredientesPreDefinidos" Relationship="Self.FK_IngredientesPreDefinidos_OperacionesPreDefinidas" FromRole="OperacionesPreDefinidas" ToRole="IngredientesPreDefinidos" />
+    <NavigationProperty Name="InstruccionesPreDefinidas" Relationship="Self.FK_InstruccionesPreDefinidas_OperacionesPreDefinidas" FromRole="OperacionesPreDefinidas" ToRole="InstruccionesPreDefinidas" />
+    <NavigationProperty Name="ObservacionesPreDefinidas" Relationship="LavanderiaModel.FK_OperacionesPd_ObservacionesPd" FromRole="OperacionesPreDefinidas" ToRole="ObservacionesPreDefinidas" />
+  </EntityType>
+  <EntityType Name="OperacionesProceso">
+    <Key>
+      <PropertyRef Name="OperacionProcesoId" />
+    </Key>
+    <Property Name="OperacionProcesoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OperacionId" Type="Int32" Nullable="false" />
+    <Property Name="ProcesoId" Type="Int32" Nullable="false" />
+    <Property Name="ProcesoCentroTrabajoId" Type="Int32" Nullable="false" />
+    <Property Name="OperacionProcesoTemperatura" Type="Int32" Nullable="false" />
+    <Property Name="OperacionProcesoPh" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OperacionProcesoTiempoMinimo" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="OperacionProcesoRelacion" Type="Int32" Nullable="false" />
+    <Property Name="OperacionProcesoOrden" Type="Int32" Nullable="false" />
+    <Property Name="OperacionProcesoTiempoMaximo" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <NavigationProperty Name="IngredientesOperacion" Relationship="Self.FK_IngredientesOperacion_OperacionesProceso" FromRole="OperacionesProceso" ToRole="IngredientesOperacion" />
+    <NavigationProperty Name="InstruccionesOperacion" Relationship="Self.FK_InstruccionesOperacion_OperacionesProceso" FromRole="OperacionesProceso" ToRole="InstruccionesOperacion" />
+    <NavigationProperty Name="ObservacionesOperacion" Relationship="Self.FK_ObservacionesOperacion_OperacionesProceso" FromRole="OperacionesProceso" ToRole="ObservacionesOperacion" />
+    <NavigationProperty Name="ProcesosCentroTrabajo" Relationship="Self.FK_OperacionesProceso_ProcesosCentroTrabajo" FromRole="OperacionesProceso" ToRole="ProcesosCentroTrabajo" />
+    <Property Name="OperacionProcesoTiempoEstandar" Type="Decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="ProcesosCentroTrabajo">
+    <Key>
+      <PropertyRef Name="ProcesoCentroTrabajoId" />
+    </Key>
+    <Property Name="ProcesoCentroTrabajoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProcesoId" Type="Int32" Nullable="false" />
+    <Property Name="CentroTrabajoId" Type="Int32" Nullable="false" />
+    <Property Name="CentroTrabajoOpcionId" Type="Int32" Nullable="false" />
+    <Property Name="ProcesoCentroTrabajoOrden" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CentrosTrabajoOpcion" Relationship="Self.FK_ProcesosCentroTrabajo_CentrosTrabajoOpcion" FromRole="ProcesosCentroTrabajo" ToRole="CentrosTrabajoOpcion" />
+    <NavigationProperty Name="OperacionesProceso" Relationship="Self.FK_OperacionesProceso_ProcesosCentroTrabajo" FromRole="ProcesosCentroTrabajo" ToRole="OperacionesProceso" />
+  </EntityType>
+  <EntityType Name="ProcesosOperaciones">
+    <Key>
+      <PropertyRef Name="ProcesoOperacionCodigo" />
+    </Key>
+    <Property Name="ProcesoOperacionCodigo" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProcesoCodigo" Type="Int16" Nullable="false" />
+    <Property Name="OperacionCtCodigo" Type="Int16" Nullable="false" />
+    <Property Name="OperacionCodigo" Type="Int16" Nullable="false" />
+    <Property Name="Orden" Type="Int32" Nullable="false" />
+    <Property Name="OperacionNombre" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProcesoNombre" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="OperacionesCTrabajos" Relationship="Self.FK_ProcesosOperaciones_OperacionesCTrabajos" FromRole="ProcesosOperaciones" ToRole="OperacionesCTrabajos" />
+  </EntityType>
+  <EntityType Name="TelasColorIntermoda">
+    <Key>
+      <PropertyRef Name="TelaColorIntermodaId" />
+    </Key>
+    <Property Name="TelaColorIntermodaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ColorIntermodaId" Type="Int32" Nullable="false" />
+    <Property Name="TelaId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaterialTelaId" Type="Int32" />
+    <NavigationProperty Name="ColoresIntermoda" Relationship="Self.FK_TelasColorIntermoda_ColoresIntermoda" FromRole="TelasColorIntermoda" ToRole="ColoresIntermoda" />
+  </EntityType>
+  <EntityType Name="TelasComposicion">
+    <Key>
+      <PropertyRef Name="TelaComposicionId" />
+    </Key>
+    <Property Name="TelaComposicionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TelaComposicionNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TelaComposicionDescripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoOperaciones">
+    <Key>
+      <PropertyRef Name="TipoOperacionesCodigo" />
+    </Key>
+    <Property Name="TipoOperacionesCodigo" Type="Int16" Nullable="false" />
+    <Property Name="TipoOperacionesNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TipoOperacionesDescripcion" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Operaciones" Relationship="Self.FK_Operaciones_TipoOperaciones" FromRole="TipoOperaciones" ToRole="Operaciones" />
+  </EntityType>
+  <Association Name="FK_ArchivosGlobales_Lavados">
+    <End Role="Lavados" Type="Self.Lavados" Multiplicity="1" />
+    <End Role="ArchivosGlobales" Type="Self.ArchivosGlobales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lavados">
+        <PropertyRef Name="LavadoId" />
+      </Principal>
+      <Dependent Role="ArchivosGlobales">
+        <PropertyRef Name="ArchivoGlobalPropietarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProcesosCentroTrabajo_CentrosTrabajoOpcion">
+    <End Role="CentrosTrabajoOpcion" Type="Self.CentrosTrabajoOpcion" Multiplicity="1" />
+    <End Role="ProcesosCentroTrabajo" Type="Self.ProcesosCentroTrabajo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentrosTrabajoOpcion">
+        <PropertyRef Name="CentroTrabajoOpcionId" />
+      </Principal>
+      <Dependent Role="ProcesosCentroTrabajo">
+        <PropertyRef Name="CentroTrabajoOpcionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lavados_ColoresIntermoda">
+    <End Role="ColoresIntermoda" Type="Self.ColoresIntermoda" Multiplicity="1" />
+    <End Role="Lavados" Type="Self.Lavados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ColoresIntermoda">
+        <PropertyRef Name="ColorIntermodaId" />
+      </Principal>
+      <Dependent Role="Lavados">
+        <PropertyRef Name="ColorIntermodaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TelasColorIntermoda_ColoresIntermoda">
+    <End Role="ColoresIntermoda" Type="Self.ColoresIntermoda" Multiplicity="1" />
+    <End Role="TelasColorIntermoda" Type="Self.TelasColorIntermoda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ColoresIntermoda">
+        <PropertyRef Name="ColorIntermodaId" />
+      </Principal>
+      <Dependent Role="TelasColorIntermoda">
+        <PropertyRef Name="ColorIntermodaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Operaciones_GrupoOperaciones">
+    <End Role="GrupoOperaciones" Type="Self.GrupoOperaciones" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Operaciones" Type="Self.Operaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GrupoOperaciones">
+        <PropertyRef Name="GrupoOperacionesCodigo" />
+      </Principal>
+      <Dependent Role="Operaciones">
+        <PropertyRef Name="GrupoOperacionesCodigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IngredientesOperacion_InstruccionesOperacion">
+    <End Role="InstruccionesOperacion" Type="Self.InstruccionesOperacion" Multiplicity="0..1" />
+    <End Role="IngredientesOperacion" Type="Self.IngredientesOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstruccionesOperacion">
+        <PropertyRef Name="InstruccionOperacionId" />
+      </Principal>
+      <Dependent Role="IngredientesOperacion">
+        <PropertyRef Name="IngredienteInstruccionesOperacionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IngredientesOperacion_OperacionesProceso">
+    <End Role="OperacionesProceso" Type="Self.OperacionesProceso" Multiplicity="1" />
+    <End Role="IngredientesOperacion" Type="Self.IngredientesOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesProceso">
+        <PropertyRef Name="OperacionProcesoId" />
+      </Principal>
+      <Dependent Role="IngredientesOperacion">
+        <PropertyRef Name="OperacionProcesoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IngredientesPreDefinidos_InstruccionesPreDefinidas">
+    <End Role="InstruccionesPreDefinidas" Type="Self.InstruccionesPreDefinidas" Multiplicity="0..1" />
+    <End Role="IngredientesPreDefinidos" Type="Self.IngredientesPreDefinidos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstruccionesPreDefinidas">
+        <PropertyRef Name="InstruccionPreDefinidaId" />
+      </Principal>
+      <Dependent Role="IngredientesPreDefinidos">
+        <PropertyRef Name="IngredientePreDefinidoInstruccionesOperacionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IngredientesPreDefinidos_OperacionesPreDefinidas">
+    <End Role="OperacionesPreDefinidas" Type="Self.OperacionesPreDefinidas" Multiplicity="1" />
+    <End Role="IngredientesPreDefinidos" Type="Self.IngredientesPreDefinidos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesPreDefinidas">
+        <PropertyRef Name="OperacionPreDefinidaId" />
+      </Principal>
+      <Dependent Role="IngredientesPreDefinidos">
+        <PropertyRef Name="OperacionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InstruccionesOperacion_OperacionesProceso">
+    <End Role="OperacionesProceso" Type="Self.OperacionesProceso" Multiplicity="1" />
+    <End Role="InstruccionesOperacion" Type="Self.InstruccionesOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesProceso">
+        <PropertyRef Name="OperacionProcesoId" />
+      </Principal>
+      <Dependent Role="InstruccionesOperacion">
+        <PropertyRef Name="OperacionProcesoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InstruccionesPreDefinidas_OperacionesPreDefinidas">
+    <End Role="OperacionesPreDefinidas" Type="Self.OperacionesPreDefinidas" Multiplicity="1" />
+    <End Role="InstruccionesPreDefinidas" Type="Self.InstruccionesPreDefinidas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesPreDefinidas">
+        <PropertyRef Name="OperacionPreDefinidaId" />
+      </Principal>
+      <Dependent Role="InstruccionesPreDefinidas">
+        <PropertyRef Name="OperacionPreDefinidaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lavadoras_LavadorasCapacidad">
+    <End Role="LavadorasCapacidad" Type="Self.LavadorasCapacidad" Multiplicity="1" />
+    <End Role="Lavadoras" Type="Self.Lavadoras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LavadorasCapacidad">
+        <PropertyRef Name="LavadoraCapacidadId" />
+      </Principal>
+      <Dependent Role="Lavadoras">
+        <PropertyRef Name="LavadorasCapacidadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObservacionesOperacion_OperacionesProceso">
+    <End Role="OperacionesProceso" Type="Self.OperacionesProceso" Multiplicity="1" />
+    <End Role="ObservacionesOperacion" Type="Self.ObservacionesOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesProceso">
+        <PropertyRef Name="OperacionProcesoId" />
+      </Principal>
+      <Dependent Role="ObservacionesOperacion">
+        <PropertyRef Name="OperacionProcesoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Operaciones_TipoOperaciones">
+    <End Role="TipoOperaciones" Type="Self.TipoOperaciones" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Operaciones" Type="Self.Operaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoOperaciones">
+        <PropertyRef Name="TipoOperacionesCodigo" />
+      </Principal>
+      <Dependent Role="Operaciones">
+        <PropertyRef Name="TipoOperacionesCodigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperacionesCTrabajos_Operaciones">
+    <End Role="Operaciones" Type="Self.Operaciones" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OperacionesCTrabajos" Type="Self.OperacionesCTrabajos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Operaciones">
+        <PropertyRef Name="OperacionCodigo" />
+      </Principal>
+      <Dependent Role="OperacionesCTrabajos">
+        <PropertyRef Name="OperacionCodigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProcesosOperaciones_OperacionesCTrabajos">
+    <End Role="OperacionesCTrabajos" Type="Self.OperacionesCTrabajos" Multiplicity="1" />
+    <End Role="ProcesosOperaciones" Type="Self.ProcesosOperaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesCTrabajos">
+        <PropertyRef Name="OperacionesCtCode" />
+      </Principal>
+      <Dependent Role="ProcesosOperaciones">
+        <PropertyRef Name="OperacionCtCodigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperacionesProceso_ProcesosCentroTrabajo">
+    <End Role="ProcesosCentroTrabajo" Type="Self.ProcesosCentroTrabajo" Multiplicity="1" />
+    <End Role="OperacionesProceso" Type="Self.OperacionesProceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProcesosCentroTrabajo">
+        <PropertyRef Name="ProcesoCentroTrabajoId" />
+      </Principal>
+      <Dependent Role="OperacionesProceso">
+        <PropertyRef Name="ProcesoCentroTrabajoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LavanderiaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ArchivosGlobalesSet" EntityType="Self.ArchivosGlobales" />
+    <EntitySet Name="CentrosTrabajoOpcionSet" EntityType="Self.CentrosTrabajoOpcion" />
+    <EntitySet Name="CentrosTrabajosSet" EntityType="Self.CentrosTrabajos" />
+    <EntitySet Name="ColoresIntermodaSet" EntityType="Self.ColoresIntermoda" />
+    <EntitySet Name="GrupoOperacionesSet" EntityType="Self.GrupoOperaciones" />
+    <EntitySet Name="IngredientesOperacionSet" EntityType="Self.IngredientesOperacion" />
+    <EntitySet Name="IngredientesPreDefinidosSet" EntityType="Self.IngredientesPreDefinidos" />
+    <EntitySet Name="InstruccionesOperacionSet" EntityType="Self.InstruccionesOperacion" />
+    <EntitySet Name="InstruccionesPreDefinidasSet" EntityType="Self.InstruccionesPreDefinidas" />
+    <EntitySet Name="LavadorasSet" EntityType="Self.Lavadoras" />
+    <EntitySet Name="LavadorasCapacidadSet" EntityType="Self.LavadorasCapacidad" />
+    <EntitySet Name="LavadosSet" EntityType="Self.Lavados" />
+    <EntitySet Name="LogsLavadoSet" EntityType="Self.LogsLavado" />
+    <EntitySet Name="MaterialNoRequisableLavanderiaSet" EntityType="Self.MaterialNoRequisableLavanderia" />
+    <EntitySet Name="ObservacionesOperacionSet" EntityType="Self.ObservacionesOperacion" />
+    <EntitySet Name="OperacionesSet" EntityType="Self.Operaciones" />
+    <EntitySet Name="OperacionesCTrabajosSet" EntityType="Self.OperacionesCTrabajos" />
+    <EntitySet Name="OperacionesPreDefinidasSet" EntityType="Self.OperacionesPreDefinidas" />
+    <EntitySet Name="OperacionesProcesoSet" EntityType="Self.OperacionesProceso" />
+    <EntitySet Name="ProcesosCentroTrabajoSet" EntityType="Self.ProcesosCentroTrabajo" />
+    <EntitySet Name="ProcesosOperacionesSet" EntityType="Self.ProcesosOperaciones" />
+    <EntitySet Name="TelasColorIntermodaSet" EntityType="Self.TelasColorIntermoda" />
+    <EntitySet Name="TelasComposicionSet" EntityType="Self.TelasComposicion" />
+    <EntitySet Name="TipoOperacionesSet" EntityType="Self.TipoOperaciones" />
+    <AssociationSet Name="FK_ArchivosGlobales_Lavados" Association="Self.FK_ArchivosGlobales_Lavados">
+      <End Role="Lavados" EntitySet="LavadosSet" />
+      <End Role="ArchivosGlobales" EntitySet="ArchivosGlobalesSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProcesosCentroTrabajo_CentrosTrabajoOpcion" Association="Self.FK_ProcesosCentroTrabajo_CentrosTrabajoOpcion">
+      <End Role="CentrosTrabajoOpcion" EntitySet="CentrosTrabajoOpcionSet" />
+      <End Role="ProcesosCentroTrabajo" EntitySet="ProcesosCentroTrabajoSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lavados_ColoresIntermoda" Association="Self.FK_Lavados_ColoresIntermoda">
+      <End Role="ColoresIntermoda" EntitySet="ColoresIntermodaSet" />
+      <End Role="Lavados" EntitySet="LavadosSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TelasColorIntermoda_ColoresIntermoda" Association="Self.FK_TelasColorIntermoda_ColoresIntermoda">
+      <End Role="ColoresIntermoda" EntitySet="ColoresIntermodaSet" />
+      <End Role="TelasColorIntermoda" EntitySet="TelasColorIntermodaSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Operaciones_GrupoOperaciones" Association="Self.FK_Operaciones_GrupoOperaciones">
+      <End Role="GrupoOperaciones" EntitySet="GrupoOperacionesSet" />
+      <End Role="Operaciones" EntitySet="OperacionesSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IngredientesOperacion_InstruccionesOperacion" Association="Self.FK_IngredientesOperacion_InstruccionesOperacion">
+      <End Role="InstruccionesOperacion" EntitySet="InstruccionesOperacionSet" />
+      <End Role="IngredientesOperacion" EntitySet="IngredientesOperacionSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IngredientesOperacion_OperacionesProceso" Association="Self.FK_IngredientesOperacion_OperacionesProceso">
+      <End Role="OperacionesProceso" EntitySet="OperacionesProcesoSet" />
+      <End Role="IngredientesOperacion" EntitySet="IngredientesOperacionSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IngredientesPreDefinidos_InstruccionesPreDefinidas" Association="Self.FK_IngredientesPreDefinidos_InstruccionesPreDefinidas">
+      <End Role="InstruccionesPreDefinidas" EntitySet="InstruccionesPreDefinidasSet" />
+      <End Role="IngredientesPreDefinidos" EntitySet="IngredientesPreDefinidosSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IngredientesPreDefinidos_OperacionesPreDefinidas" Association="Self.FK_IngredientesPreDefinidos_OperacionesPreDefinidas">
+      <End Role="OperacionesPreDefinidas" EntitySet="OperacionesPreDefinidasSet" />
+      <End Role="IngredientesPreDefinidos" EntitySet="IngredientesPreDefinidosSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstruccionesOperacion_OperacionesProceso" Association="Self.FK_InstruccionesOperacion_OperacionesProceso">
+      <End Role="OperacionesProceso" EntitySet="OperacionesProcesoSet" />
+      <End Role="InstruccionesOperacion" EntitySet="InstruccionesOperacionSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstruccionesPreDefinidas_OperacionesPreDefinidas" Association="Self.FK_InstruccionesPreDefinidas_OperacionesPreDefinidas">
+      <End Role="OperacionesPreDefinidas" EntitySet="OperacionesPreDefinidasSet" />
+      <End Role="InstruccionesPreDefinidas" EntitySet="InstruccionesPreDefinidasSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lavadoras_LavadorasCapacidad" Association="Self.FK_Lavadoras_LavadorasCapacidad">
+      <End Role="LavadorasCapacidad" EntitySet="LavadorasCapacidadSet" />
+      <End Role="Lavadoras" EntitySet="LavadorasSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObservacionesOperacion_OperacionesProceso" Association="Self.FK_ObservacionesOperacion_OperacionesProceso">
+      <End Role="OperacionesProceso" EntitySet="OperacionesProcesoSet" />
+      <End Role="ObservacionesOperacion" EntitySet="ObservacionesOperacionSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Operaciones_TipoOperaciones" Association="Self.FK_Operaciones_TipoOperaciones">
+      <End Role="TipoOperaciones" EntitySet="TipoOperacionesSet" />
+      <End Role="Operaciones" EntitySet="OperacionesSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperacionesCTrabajos_Operaciones" Association="Self.FK_OperacionesCTrabajos_Operaciones">
+      <End Role="Operaciones" EntitySet="OperacionesSet" />
+      <End Role="OperacionesCTrabajos" EntitySet="OperacionesCTrabajosSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProcesosOperaciones_OperacionesCTrabajos" Association="Self.FK_ProcesosOperaciones_OperacionesCTrabajos">
+      <End Role="OperacionesCTrabajos" EntitySet="OperacionesCTrabajosSet" />
+      <End Role="ProcesosOperaciones" EntitySet="ProcesosOperacionesSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperacionesProceso_ProcesosCentroTrabajo" Association="Self.FK_OperacionesProceso_ProcesosCentroTrabajo">
+      <End Role="ProcesosCentroTrabajo" EntitySet="ProcesosCentroTrabajoSet" />
+      <End Role="OperacionesProceso" EntitySet="OperacionesProcesoSet" />
+    </AssociationSet>
+    <EntitySet Name="OpcionesLavadosSet" EntityType="LavanderiaModel.OpcionesLavados" />
+    <AssociationSet Name="FK_CentrosTrabajoOpcion_OpcionesLavados" Association="LavanderiaModel.FK_CentrosTrabajoOpcion_OpcionesLavados">
+      <End Role="OpcionesLavados" EntitySet="OpcionesLavadosSet" />
+      <End Role="CentrosTrabajoOpcion" EntitySet="CentrosTrabajoOpcionSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OpcionesLavados_Lavados" Association="LavanderiaModel.FK_OpcionesLavados_Lavados">
+      <End Role="Lavados" EntitySet="LavadosSet" />
+      <End Role="OpcionesLavados" EntitySet="OpcionesLavadosSet" />
+    </AssociationSet>
+    <EntitySet Name="ProcesosSet" EntityType="LavanderiaModel.Procesos" />
+    <AssociationSet Name="FK_Procesos_CentrosTrabajos" Association="LavanderiaModel.FK_Procesos_CentrosTrabajos">
+      <End Role="CentrosTrabajos" EntitySet="CentrosTrabajosSet" />
+      <End Role="Procesos" EntitySet="ProcesosSet" />
+    </AssociationSet>
+    <EntitySet Name="CATALOGSet" EntityType="LavanderiaModel.CATALOG" />
+    <EntitySet Name="GRUTELSet" EntityType="LavanderiaModel.GRUTEL" />
+    <EntitySet Name="MATMSTSet" EntityType="LavanderiaModel.MATMST" />
+    <EntitySet Name="TELAR5Set" EntityType="LavanderiaModel.TELAR5" />
+    <EntitySet Name="CLASESet" EntityType="LavanderiaModel.CLASE" />
+    <EntitySet Name="SUBCLASESet" EntityType="LavanderiaModel.SUBCLASE" />
+    <EntitySet Name="ObservacionesPreDefinidasSet" EntityType="LavanderiaModel.ObservacionesPreDefinidas" />
+    <AssociationSet Name="FK_OperacionesPd_ObservacionesPd" Association="LavanderiaModel.FK_OperacionesPd_ObservacionesPd">
+      <End Role="OperacionesPreDefinidas" EntitySet="OperacionesPreDefinidasSet" />
+      <End Role="ObservacionesPreDefinidas" EntitySet="ObservacionesPreDefinidasSet" />
+    </AssociationSet>
+    <EntitySet Name="SecadorasSet" EntityType="LavanderiaModel.Secadoras" />
+    <EntitySet Name="SecadorasCapacidadSet" EntityType="LavanderiaModel.SecadorasCapacidad" />
+    <AssociationSet Name="FK_Secadoras_SecadorasCapacidad" Association="LavanderiaModel.FK_Secadoras_SecadorasCapacidad">
+      <End Role="SecadorasCapacidad" EntitySet="SecadorasCapacidadSet" />
+      <End Role="Secadoras" EntitySet="SecadorasSet" />
+    </AssociationSet>
+    <EntitySet Name="PlantasSet" EntityType="LavanderiaModel.Plantas" />
+    <EntitySet Name="OrdenesProduccionEnProcesoSet" EntityType="LavanderiaModel.OrdenesProduccionEnProceso" />
+    <EntitySet Name="CTRABAJOSet" EntityType="LavanderiaModel.CTRABAJO" />
+    <EntitySet Name="ORDCENTRSet" EntityType="LavanderiaModel.ORDCENTR" />
+    <EntitySet Name="OrdenesProduccionLavanderiaSet" EntityType="LavanderiaModel.OrdenesProduccionLavanderia" />
+    <EntitySet Name="CargaLavadoSet" EntityType="LavanderiaModel.CargaLavado" />
+    <AssociationSet Name="FK_CargaLavado_Lavadoras" Association="LavanderiaModel.FK_CargaLavado_Lavadoras">
+      <End Role="Lavadoras" EntitySet="LavadorasSet" />
+      <End Role="CargaLavado" EntitySet="CargaLavadoSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CargaLavado_LavadorasCapacidad" Association="LavanderiaModel.FK_CargaLavado_LavadorasCapacidad">
+      <End Role="LavadorasCapacidad" EntitySet="LavadorasCapacidadSet" />
+      <End Role="CargaLavado" EntitySet="CargaLavadoSet" />
+    </AssociationSet>
+    <EntitySet Name="OperacionesProcesoOrdenSet" EntityType="LavanderiaModel.OperacionesProcesoOrden" />
+    <EntitySet Name="ProcesosCentroTrabajoOrdenSet" EntityType="LavanderiaModel.ProcesosCentroTrabajoOrden" />
+    <AssociationSet Name="FK_OperacionesProcesoOrden_ProcesosCentroTrabajoOrden" Association="LavanderiaModel.FK_OperacionesProcesoOrden_ProcesosCentroTrabajoOrden">
+      <End Role="ProcesosCentroTrabajoOrden" EntitySet="ProcesosCentroTrabajoOrdenSet" />
+      <End Role="OperacionesProcesoOrden" EntitySet="OperacionesProcesoOrdenSet" />
+    </AssociationSet>
+    <EntitySet Name="CentrosTrabajoOpcionLavadoOrdenSet" EntityType="LavanderiaModel.CentrosTrabajoOpcionLavadoOrden" />
+    <AssociationSet Name="FK_ProcesosCentroTrabajoOrden_CentrosTrabajoOpcionLavadoOrden" Association="LavanderiaModel.FK_ProcesosCentroTrabajoOrden_CentrosTrabajoOpcionLavadoOrden">
+      <End Role="CentrosTrabajoOpcionLavadoOrden" EntitySet="CentrosTrabajoOpcionLavadoOrdenSet" />
+      <End Role="ProcesosCentroTrabajoOrden" EntitySet="ProcesosCentroTrabajoOrdenSet" />
+    </AssociationSet>
+    <EntitySet Name="OpcionLavadoOrdenSet" EntityType="LavanderiaModel.OpcionLavadoOrden" />
+    <AssociationSet Name="FK_CargaLavado_OpcionLavadoOrden" Association="LavanderiaModel.FK_CargaLavado_OpcionLavadoOrden">
+      <End Role="OpcionLavadoOrden" EntitySet="OpcionLavadoOrdenSet" />
+      <End Role="CargaLavado" EntitySet="CargaLavadoSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentrosTrabajoOpcionLavadoOrden_OpcionLavadoOrden" Association="LavanderiaModel.FK_CentrosTrabajoOpcionLavadoOrden_OpcionLavadoOrden">
+      <End Role="OpcionLavadoOrden" EntitySet="OpcionLavadoOrdenSet" />
+      <End Role="CentrosTrabajoOpcionLavadoOrden" EntitySet="CentrosTrabajoOpcionLavadoOrdenSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OpcionLavadoOrden_Lavados" Association="LavanderiaModel.FK_OpcionLavadoOrden_Lavados">
+      <End Role="Lavados" EntitySet="LavadosSet" />
+      <End Role="OpcionLavadoOrden" EntitySet="OpcionLavadoOrdenSet" />
+    </AssociationSet>
+    <EntitySet Name="CUTARC3Set" EntityType="LavanderiaModel.CUTARC3" />
+    <EntitySet Name="LitrosAguaOperacionSet" EntityType="LavanderiaModel.LitrosAguaOperacion" />
+    <AssociationSet Name="FK_LitrosAguaOperacion_OpcionLavadoOrden" Association="LavanderiaModel.FK_LitrosAguaOperacion_OpcionLavadoOrden">
+      <End Role="OpcionLavadoOrden" EntitySet="OpcionLavadoOrdenSet" />
+      <End Role="LitrosAguaOperacion" EntitySet="LitrosAguaOperacionSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LitrosAguaOperacion_OperacionesProcesoOrden" Association="LavanderiaModel.FK_LitrosAguaOperacion_OperacionesProcesoOrden">
+      <End Role="OperacionesProcesoOrden" EntitySet="OperacionesProcesoOrdenSet" />
+      <End Role="LitrosAguaOperacion" EntitySet="LitrosAguaOperacionSet" />
+    </AssociationSet>
+    <EntitySet Name="CantidadIngredientesInstruccionSet" EntityType="LavanderiaModel.CantidadIngredientesInstruccion" />
+    <EntitySet Name="CantidadIngredientesOperacionSet" EntityType="LavanderiaModel.CantidadIngredientesOperacion" />
+    <AssociationSet Name="FK_CantidadIngredientesOperacion_OpcionLavadoOrden" Association="LavanderiaModel.FK_CantidadIngredientesOperacion_OpcionLavadoOrden">
+      <End Role="OpcionLavadoOrden" EntitySet="OpcionLavadoOrdenSet" />
+      <End Role="CantidadIngredientesOperacion" EntitySet="CantidadIngredientesOperacionSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CantidadIngredientesOperacion_OperacionesProcesoOrden" Association="LavanderiaModel.FK_CantidadIngredientesOperacion_OperacionesProcesoOrden">
+      <End Role="OperacionesProcesoOrden" EntitySet="OperacionesProcesoOrdenSet" />
+      <End Role="CantidadIngredientesOperacion" EntitySet="CantidadIngredientesOperacionSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="OpcionesLavados">
+    <Key>
+      <PropertyRef Name="OpcionLavadoId" />
+    </Key>
+    <Property Name="OpcionLavadoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OpcionNombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OpcionDescripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="LavadoId" Type="Int32" Nullable="false" />
+    <Property Name="TelaId" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IsDefault" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CentrosTrabajoOpcion" Relationship="LavanderiaModel.FK_CentrosTrabajoOpcion_OpcionesLavados" FromRole="OpcionesLavados" ToRole="CentrosTrabajoOpcion" />
+    <NavigationProperty Name="Lavados" Relationship="LavanderiaModel.FK_OpcionesLavados_Lavados" FromRole="OpcionesLavados" ToRole="Lavados" />
+  </EntityType>
+  <Association Name="FK_CentrosTrabajoOpcion_OpcionesLavados">
+    <End Type="LavanderiaModel.OpcionesLavados" Role="OpcionesLavados" Multiplicity="1" />
+    <End Type="LavanderiaModel.CentrosTrabajoOpcion" Role="CentrosTrabajoOpcion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OpcionesLavados">
+        <PropertyRef Name="OpcionLavadoId" />
+      </Principal>
+      <Dependent Role="CentrosTrabajoOpcion">
+        <PropertyRef Name="OpcionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OpcionesLavados_Lavados">
+    <End Type="LavanderiaModel.Lavados" Role="Lavados" Multiplicity="1" />
+    <End Type="LavanderiaModel.OpcionesLavados" Role="OpcionesLavados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lavados">
+        <PropertyRef Name="LavadoId" />
+      </Principal>
+      <Dependent Role="OpcionesLavados">
+        <PropertyRef Name="LavadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Procesos">
+    <Key>
+      <PropertyRef Name="ProcesoCodigo" />
+    </Key>
+    <Property Name="ProcesoCodigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProcesoNombre" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ProcesoDescripcion" Type="String" Nullable="false" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="ProcesoOrden" Type="Int32" Nullable="false" />
+    <Property Name="ProcesoIsActivo" Type="Boolean" Nullable="false" />
+    <Property Name="ProcesoIsObligatorio" Type="Boolean" Nullable="false" />
+    <Property Name="CentroTrabajoCodigo" Type="Int32" Nullable="false" />
+    <Property Name="ProcesoTiempoEstandar" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="CentrosTrabajos" Relationship="LavanderiaModel.FK_Procesos_CentrosTrabajos" FromRole="Procesos" ToRole="CentrosTrabajos" />
+  </EntityType>
+  <Association Name="FK_Procesos_CentrosTrabajos">
+    <End Type="LavanderiaModel.CentrosTrabajos" Role="CentrosTrabajos" Multiplicity="1" />
+    <End Type="LavanderiaModel.Procesos" Role="Procesos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentrosTrabajos">
+        <PropertyRef Name="CentroTrabajoCodigo" />
+      </Principal>
+      <Dependent Role="Procesos">
+        <PropertyRef Name="CentroTrabajoCodigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CATALOG">
+    <Key>
+      <PropertyRef Name="MapCodMat" />
+    </Key>
+    <Property Name="MapCodMat" Type="Int32" Nullable="false" />
+    <Property Name="CataDesLar" Type="String" MaxLength="35" FixedLength="true" Unicode="false" />
+    <Property Name="CataDesCor" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="MedCompra" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="MedConsum" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="TipRCod" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="CataGru" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="MapCtaCont" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="MapCtaVF" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MapCtaCon2" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="MapNum1Rep" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodTel" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MatGrpDes" Type="String" MaxLength="35" FixedLength="true" Unicode="false" />
+    <Property Name="MatGrpCod" Type="Int32" />
+  </EntityType>
+  <EntityType Name="GRUTEL">
+    <Key>
+      <PropertyRef Name="FacCodGrut" />
+    </Key>
+    <Property Name="FacCodGrut" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="FacDesGrut" Type="String" MaxLength="44" FixedLength="true" Unicode="false" />
+    <Property Name="FacGruUltN" Type="Int16" />
+    <Property Name="GruSts" Type="Int16" Nullable="false" />
+    <Property Name="FacReposo" Type="Int16" />
+  </EntityType>
+  <EntityType Name="MATMST">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="MapCodMat" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="MapCodMat" Type="Int32" Nullable="false" />
+    <Property Name="MapCodAlt" Type="Int32" />
+    <Property Name="FacCodMar" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="FacCodTpo" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodCla" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodSCla" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodRef" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodCol" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodTam" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MapFecMat" Type="DateTime" Precision="3" />
+    <Property Name="MatCodTon" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="MapCosProm" Type="Decimal" Precision="9" Scale="4" />
+    <Property Name="MapCanExis" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapCanExi1" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapCanExi2" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapCanExi3" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapCanExi4" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapSalAntU" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapEntraU" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapSalidU" Type="Decimal" Precision="11" Scale="5" />
+    <Property Name="MapSalActU" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapSalAntV" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MapEntraV" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MapSalidV" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MapSalActV" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MapRanMin" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MapPorDes" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MapPorStd" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MapUbi" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MapRepTCa" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="RepNumPag" Type="Int32" />
+    <Property Name="FacCodTel" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PapLinCod" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MapNumRep" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="MapRepDia" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MapRepDie" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MapRepTam" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="RepCodMar" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="RepTipCat" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="RepTipMaq" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="MapRanMin2" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="RepBodCod" Type="Int16" />
+    <Property Name="MprUbiEst" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MprUbiRak" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MapMatSts" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodDis" Type="Int16" />
+    <Property Name="CmpColCod" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="CmpTexCod" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MapReaSts" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MapFecIng" Type="DateTime" Precision="3" />
+    <Property Name="MapFecCre" Type="DateTime" Precision="3" />
+    <Property Name="MapFecCad" Type="DateTime" Precision="3" />
+    <Property Name="CmpTelPes" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="CmpTelCom" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodArt" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodMdl" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodTel" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodLav" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="MprCCol" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MprNumTal" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodDim" Type="Int16" />
+    <Property Name="MapLoopSiz" Type="Int16" Nullable="false" />
+    <Property Name="MprMatSig" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="TipRCod" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="MapEntAdd" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="TelTipCod" Type="Int16" />
+    <Property Name="TelTenCod" Type="Int16" />
+    <Property Name="TelTejCod" Type="Int16" />
+    <Property Name="TelAcbCod" Type="Int16" />
+    <Property Name="TelCmpCod" Type="Int16" />
+    <Property Name="CodigoDyna" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="MprEtgCon" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MprCodUbi" Type="Int16" />
+    <Property Name="MprCtCod" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MatCntRes" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MprExcCmp" Type="Int16" />
+    <Property Name="MatUltMov" Type="DateTime" Precision="0" />
+    <Property Name="FacCCol" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="MprSubCod" Type="Int16" />
+  </EntityType>
+  <EntityType Name="TELAR5">
+    <Key>
+      <PropertyRef Name="FacCodTel" />
+    </Key>
+    <Property Name="FacCodTel" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="FacCodGrut" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="FacDesTel" Type="String" MaxLength="44" FixedLength="true" Unicode="false" />
+    <Property Name="FacUltLin" Type="Int16" />
+    <Property Name="FacUltLStr" Type="Int16" />
+    <Property Name="ComposicionId" Type="Int32" />
+    <Property Name="TelDesVta" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CLASE">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="MprCodCla" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="MprCodCla" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MprCanInv" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MprDesCla" Type="String" MaxLength="45" FixedLength="true" Unicode="false" />
+    <Property Name="MprCtaCon" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="MapRotBaj" Type="Int16" />
+    <Property Name="MapRotSin" Type="Int16" />
+    <Property Name="MprClaSts" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MprClaDet" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MprClaDia" Type="Int16" Nullable="false" />
+    <Property Name="MprCodAgr" Type="Int16" />
+    <Property Name="MprClaSig" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="MprGrpNom" Type="String" MaxLength="45" FixedLength="true" Unicode="false" />
+    <Property Name="MprGrpCla" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MprClaAX" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MprClaDL" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SUBCLASE">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="MprCodSCla" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="MprCodSCla" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MprDesSCla" Type="String" MaxLength="45" FixedLength="true" Unicode="false" />
+    <Property Name="MprSClaSts" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MprSClaAX" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ObservacionesPreDefinidas">
+    <Key>
+      <PropertyRef Name="ObservacionesOperacionPdId" />
+    </Key>
+    <Property Name="ObservacionesOperacionPdId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ObservacionesOperacionPdDescripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ObservacionOperacionPdId" Type="Int32" Nullable="false" />
+    <Property Name="ObservacionesOperacionPdOrden" Type="Int32" Nullable="false" />
+    <Property Name="ObservacionesOperacionPdPosicion" Type="Int32" />
+    <NavigationProperty Name="OperacionesPreDefinidas" Relationship="LavanderiaModel.FK_OperacionesPd_ObservacionesPd" FromRole="ObservacionesPreDefinidas" ToRole="OperacionesPreDefinidas" />
+  </EntityType>
+  <Association Name="FK_OperacionesPd_ObservacionesPd">
+    <End Type="LavanderiaModel.OperacionesPreDefinidas" Role="OperacionesPreDefinidas" Multiplicity="1" />
+    <End Type="LavanderiaModel.ObservacionesPreDefinidas" Role="ObservacionesPreDefinidas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesPreDefinidas">
+        <PropertyRef Name="OperacionPreDefinidaId" />
+      </Principal>
+      <Dependent Role="ObservacionesPreDefinidas">
+        <PropertyRef Name="ObservacionOperacionPdId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Secadoras">
+    <Key>
+      <PropertyRef Name="SecadoraId" />
+    </Key>
+    <Property Name="SecadoraId" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SecadoraNombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SecadorasCapacidadId" Type="Int16" Nullable="false" />
+    <Property Name="SecadoraMarca" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SecadoraModelo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SecadoraEstado" Type="Int16" />
+    <Property Name="SecadoraNumeroSerie" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SecadoraIP" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="secadoraMAC" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SecadorasCapacidad" Relationship="LavanderiaModel.FK_Secadoras_SecadorasCapacidad" FromRole="Secadoras" ToRole="SecadorasCapacidad" />
+  </EntityType>
+  <EntityType Name="SecadorasCapacidad">
+    <Key>
+      <PropertyRef Name="SecadoraCapacidadId" />
+    </Key>
+    <Property Name="SecadoraCapacidadId" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SecadoraCapacidadKgMax" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="SecadoraCapacidadKgMin" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="Secadoras" Relationship="LavanderiaModel.FK_Secadoras_SecadorasCapacidad" FromRole="SecadorasCapacidad" ToRole="Secadoras" />
+  </EntityType>
+  <Association Name="FK_Secadoras_SecadorasCapacidad">
+    <End Type="LavanderiaModel.SecadorasCapacidad" Role="SecadorasCapacidad" Multiplicity="1" />
+    <End Type="LavanderiaModel.Secadoras" Role="Secadoras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SecadorasCapacidad">
+        <PropertyRef Name="SecadoraCapacidadId" />
+      </Principal>
+      <Dependent Role="Secadoras">
+        <PropertyRef Name="SecadorasCapacidadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Plantas">
+    <Key>
+      <PropertyRef Name="PlantaCodigo" />
+    </Key>
+    <Property Name="PlantaCodigo" Type="Int32" Nullable="false" />
+    <Property Name="PlantaNombre" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PlantaObsevacion" Type="String" Nullable="false" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="PlantaPropietaria" Type="Boolean" Nullable="false" />
+    <Property Name="CompañiaCodigo" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrdenesProduccionEnProceso">
+    <Key>
+      <PropertyRef Name="CodigoCompañia" />
+      <PropertyRef Name="Año" />
+      <PropertyRef Name="NumeroOrden" />
+    </Key>
+    <Property Name="CodigoCompañia" Type="Int16" Nullable="false" />
+    <Property Name="DescripcionCompañia" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="Año" Type="Int16" Nullable="false" />
+    <Property Name="NumeroOrden" Type="Int16" Nullable="false" />
+    <Property Name="Patron" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="Variante" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Tela" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="EstadoOrden" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Usuario" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdProTel" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Cantidad" Type="Int32" />
+    <Property Name="ModuloEnsamble" Type="Int16" />
+    <Property Name="ConTela" Type="Boolean" />
+    <Property Name="InicioProgramado" Type="DateTime" Precision="3" />
+    <Property Name="FinalProgramado" Type="DateTime" Precision="3" />
+    <Property Name="LavadoId" Type="Int32" />
+    <Property Name="CodigoLavadoViejo" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="PesoUnidad" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="CTRABAJO">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="PrdCtCod" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="PrdCtCod" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtDes" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtMod" Type="Int16" Nullable="false" />
+    <Property Name="PrdSecUse" Type="Int16" />
+    <Property Name="PrdCTWor" Type="Int16" />
+    <Property Name="PrdOrdImp" Type="Int16" />
+    <Property Name="PrdTroImp" Type="Int16" />
+    <Property Name="PrdCtOrd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtSts" Type="Int16" />
+    <Property Name="PrdImpCup" Type="Int16" />
+    <Property Name="PrdCtSupCo" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtAlias" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtTipEn" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtTipSa" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtEsEnt" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdSalCt" Type="Int16" />
+    <Property Name="PrdProEje" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtNew" Type="Int32" />
+    <Property Name="PrdCtGru" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtRFAB" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtRMOI" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtRMOD" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="CtEsqPago" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CCCodigo" Type="Int16" />
+    <Property Name="PrdCtTip" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MOCCosto" Type="Decimal" Precision="10" Scale="4" />
+  </EntityType>
+  <EntityType Name="ORDCENTR">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="PrdNumCor" />
+      <PropertyRef Name="PrdAnoCor" />
+      <PropertyRef Name="PrdCtCod" />
+      <PropertyRef Name="PrdSecCod" />
+      <PropertyRef Name="PrdCtBulto" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="PrdNumCor" Type="Int16" Nullable="false" />
+    <Property Name="PrdAnoCor" Type="Int16" Nullable="false" />
+    <Property Name="PrdCtCod" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdSecCod" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtBulto" Type="Int16" Nullable="false" />
+    <Property Name="PrdCtSup" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdEstSec" Type="Int16" />
+    <Property Name="PrdCtModu" Type="Int16" />
+    <Property Name="PrdCtFecI" Type="DateTime" Precision="3" />
+    <Property Name="PrdCtFecF" Type="DateTime" Precision="3" />
+    <Property Name="PrdLecMan" Type="Int16" />
+    <Property Name="PrdCtAud" Type="Int16" />
+    <Property Name="PrdCtRech" Type="Int16" />
+    <Property Name="PrdDesRech" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecRech" Type="DateTime" Precision="3" />
+    <Property Name="PrdRecUsr" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodRec" Type="Int16" />
+    <Property Name="PrdCodGru" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodOpr" Type="Int16" />
+    <Property Name="PRdCtUsrSa" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtUsrEn" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCtKanba" Type="Int16" />
+  </EntityType>
+  <EntityType Name="OrdenesProduccionLavanderia">
+    <Key>
+      <PropertyRef Name="CompaniaId" />
+      <PropertyRef Name="PlantaCodigo" />
+      <PropertyRef Name="Ano" />
+      <PropertyRef Name="Numero" />
+    </Key>
+    <Property Name="CompaniaId" Type="Int16" Nullable="false" />
+    <Property Name="PlantaCodigo" Type="Int32" Nullable="false" />
+    <Property Name="PrdCtNew" Type="Int32" />
+    <Property Name="Ano" Type="Int16" Nullable="false" />
+    <Property Name="Numero" Type="Int16" Nullable="false" />
+    <Property Name="Patron" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="Variante" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="CodigoLavadoViejo" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsCor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="FinalProgramado" Type="DateTime" Precision="3" />
+    <Property Name="InicioProgramado" Type="DateTime" Precision="3" />
+    <Property Name="TelaProduccion" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="TelaVenta" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Usuario" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Cantidad" Type="Int32" />
+    <Property Name="UnidadesTerminadasEnsamble" Type="Int32" />
+    <Property Name="UnidadesIngresadasLavanderia2" Type="Int32" />
+    <Property Name="LavadoId" Type="Int32" />
+    <Property Name="LavadoNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PesoUnidad" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="CargaLavado">
+    <Key>
+      <PropertyRef Name="CargaLavadoId" />
+    </Key>
+    <Property Name="CargaLavadoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CargaLavadoCiaCod" Type="Int16" Nullable="false" />
+    <Property Name="CargaLavadoNumeroOrden" Type="Int16" Nullable="false" />
+    <Property Name="CargaLavadoAno" Type="Int16" Nullable="false" />
+    <Property Name="CargaLavadoNumero" Type="Int16" Nullable="false" />
+    <Property Name="CargaLavadoUnidades" Type="Int16" Nullable="false" />
+    <Property Name="CargaLavadoEstado" Type="Int32" />
+    <Property Name="CargaLavadoLavadoId" Type="Int32" Nullable="false" />
+    <Property Name="CargaLavadoOpcionLavadoId" Type="Int32" Nullable="false" />
+    <Property Name="CargaLavadoLavadoraTipoId" Type="Int16" Nullable="false" />
+    <Property Name="CargaLavadoLavadoraId" Type="Int16" />
+    <Property Name="CargaLavadoFechaEntrada" Type="DateTime" Precision="3" />
+    <Property Name="CargaLavadoFechaSalida" Type="DateTime" Precision="3" />
+    <Property Name="CargaLavadoPeso" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="CargaLavadoCentroTrabajoId" Type="Int32" Nullable="false" />
+    <Property Name="CargaLavadoCapacidadUtilizadaLavadora" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="CargaLavadoTiempoMinimoProceso" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+    <Property Name="CargaLavadoTela" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CargaLavadoNumeroArmado" Type="Int16" Nullable="false" />
+    <Property Name="CargaLavadoTiempoMaximoProceso" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+    <Property Name="CargaLavadoNumeroRequisicionQuimicos" Type="Int32" />
+    <NavigationProperty Name="Lavadoras" Relationship="LavanderiaModel.FK_CargaLavado_Lavadoras" FromRole="CargaLavado" ToRole="Lavadoras" />
+    <NavigationProperty Name="LavadorasCapacidad" Relationship="LavanderiaModel.FK_CargaLavado_LavadorasCapacidad" FromRole="CargaLavado" ToRole="LavadorasCapacidad" />
+    <Property Name="CargaLavadoTiempoEstandarProceso" Type="Decimal" Precision="5" Scale="2" />
+    <NavigationProperty Name="OpcionLavadoOrden" Relationship="LavanderiaModel.FK_CargaLavado_OpcionLavadoOrden" FromRole="CargaLavado" ToRole="OpcionLavadoOrden" />
+  </EntityType>
+  <Association Name="FK_CargaLavado_Lavadoras">
+    <End Type="LavanderiaModel.Lavadoras" Role="Lavadoras" Multiplicity="0..1" />
+    <End Type="LavanderiaModel.CargaLavado" Role="CargaLavado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lavadoras">
+        <PropertyRef Name="LavadoraId" />
+      </Principal>
+      <Dependent Role="CargaLavado">
+        <PropertyRef Name="CargaLavadoLavadoraId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CargaLavado_LavadorasCapacidad">
+    <End Type="LavanderiaModel.LavadorasCapacidad" Role="LavadorasCapacidad" Multiplicity="1" />
+    <End Type="LavanderiaModel.CargaLavado" Role="CargaLavado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LavadorasCapacidad">
+        <PropertyRef Name="LavadoraCapacidadId" />
+      </Principal>
+      <Dependent Role="CargaLavado">
+        <PropertyRef Name="CargaLavadoLavadoraTipoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="OperacionesProcesoOrden">
+    <Key>
+      <PropertyRef Name="OperacionesProcesoOrdenId" />
+    </Key>
+    <Property Name="OperacionesProcesoOrdenId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OperacionesProcesoOrdenOperacionId" Type="Int32" Nullable="false" />
+    <Property Name="OperacionesProcesoOrdenProcesoId" Type="Int32" Nullable="false" />
+    <Property Name="OperacionesProcesoOrdenProcesoCentroTrabajoId" Type="Int32" Nullable="false" />
+    <Property Name="OperacionesProcesoOrdenTemperatura" Type="Int32" Nullable="false" />
+    <Property Name="OperacionesProcesoOrdenPh" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OperacionesProcesoOrdenTiempoMinimo" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+    <Property Name="OperacionesProcesoOrdenRelacion" Type="Int32" Nullable="false" />
+    <Property Name="OperacionesProcesoOrden_Orden" Type="Int32" Nullable="false" />
+    <Property Name="OperacionesProcesoOrdenTiempoMaximo" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+    <Property Name="OperacionesProcesoOrdenTiempoEstandar" Type="Decimal" Precision="5" Scale="2" />
+    <NavigationProperty Name="ProcesosCentroTrabajoOrden" Relationship="LavanderiaModel.FK_OperacionesProcesoOrden_ProcesosCentroTrabajoOrden" FromRole="OperacionesProcesoOrden" ToRole="ProcesosCentroTrabajoOrden" />
+    <NavigationProperty Name="LitrosAguaOperacion" Relationship="LavanderiaModel.FK_LitrosAguaOperacion_OperacionesProcesoOrden" FromRole="OperacionesProcesoOrden" ToRole="LitrosAguaOperacion" />
+    <NavigationProperty Name="CantidadIngredientesOperacion" Relationship="LavanderiaModel.FK_CantidadIngredientesOperacion_OperacionesProcesoOrden" FromRole="OperacionesProcesoOrden" ToRole="CantidadIngredientesOperacion" />
+  </EntityType>
+  <EntityType Name="ProcesosCentroTrabajoOrden">
+    <Key>
+      <PropertyRef Name="ProcesosCentroTrabajoOrdenId" />
+    </Key>
+    <Property Name="ProcesosCentroTrabajoOrdenId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProcesosCentroTrabajoOrdenProcesoId" Type="Int32" Nullable="false" />
+    <Property Name="ProcesosCentroTrabajoOrdenCentroTrabajoId" Type="Int32" Nullable="false" />
+    <Property Name="ProcesosCentroTrabajoOrdenCentrosTrabajoOpcionLavadoId" Type="Int32" Nullable="false" />
+    <Property Name="ProcesosCentroTrabajoOrden_Orden" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="OperacionesProcesoOrden" Relationship="LavanderiaModel.FK_OperacionesProcesoOrden_ProcesosCentroTrabajoOrden" FromRole="ProcesosCentroTrabajoOrden" ToRole="OperacionesProcesoOrden" />
+    <NavigationProperty Name="CentrosTrabajoOpcionLavadoOrden" Relationship="LavanderiaModel.FK_ProcesosCentroTrabajoOrden_CentrosTrabajoOpcionLavadoOrden" FromRole="ProcesosCentroTrabajoOrden" ToRole="CentrosTrabajoOpcionLavadoOrden" />
+  </EntityType>
+  <Association Name="FK_OperacionesProcesoOrden_ProcesosCentroTrabajoOrden">
+    <End Type="LavanderiaModel.ProcesosCentroTrabajoOrden" Role="ProcesosCentroTrabajoOrden" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="LavanderiaModel.OperacionesProcesoOrden" Role="OperacionesProcesoOrden" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProcesosCentroTrabajoOrden">
+        <PropertyRef Name="ProcesosCentroTrabajoOrdenId" />
+      </Principal>
+      <Dependent Role="OperacionesProcesoOrden">
+        <PropertyRef Name="OperacionesProcesoOrdenProcesoCentroTrabajoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CentrosTrabajoOpcionLavadoOrden">
+    <Key>
+      <PropertyRef Name="CentrosTrabajoOpcionLavadoOrdenId" />
+    </Key>
+    <Property Name="CentrosTrabajoOpcionLavadoOrdenId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CentrosTrabajoOpcionLavadoOrdenCentroTrabajoId" Type="Int32" Nullable="false" />
+    <Property Name="CentrosTrabajoOpcionLavadoOrdenOpcionLavadoId" Type="Int32" Nullable="false" />
+    <Property Name="CentrosTrabajoOpcionLavadoOrden_Orden" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ProcesosCentroTrabajoOrden" Relationship="LavanderiaModel.FK_ProcesosCentroTrabajoOrden_CentrosTrabajoOpcionLavadoOrden" FromRole="CentrosTrabajoOpcionLavadoOrden" ToRole="ProcesosCentroTrabajoOrden" />
+    <NavigationProperty Name="OpcionLavadoOrden" Relationship="LavanderiaModel.FK_CentrosTrabajoOpcionLavadoOrden_OpcionLavadoOrden" FromRole="CentrosTrabajoOpcionLavadoOrden" ToRole="OpcionLavadoOrden" />
+  </EntityType>
+  <Association Name="FK_ProcesosCentroTrabajoOrden_CentrosTrabajoOpcionLavadoOrden">
+    <End Type="LavanderiaModel.CentrosTrabajoOpcionLavadoOrden" Role="CentrosTrabajoOpcionLavadoOrden" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="LavanderiaModel.ProcesosCentroTrabajoOrden" Role="ProcesosCentroTrabajoOrden" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentrosTrabajoOpcionLavadoOrden">
+        <PropertyRef Name="CentrosTrabajoOpcionLavadoOrdenId" />
+      </Principal>
+      <Dependent Role="ProcesosCentroTrabajoOrden">
+        <PropertyRef Name="ProcesosCentroTrabajoOrdenCentrosTrabajoOpcionLavadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="OpcionLavadoOrden">
+    <Key>
+      <PropertyRef Name="OpcionLavadoOrdenId" />
+    </Key>
+    <Property Name="OpcionLavadoOrdenId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OpcionLavadoOrdenNombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OpcionLavadoOrdenDescripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="OpcionLavadoOrdenLavadoId" Type="Int32" />
+    <Property Name="OpcionLavadoOrdenTelaId" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OpcionLavadoOrdenIsDefault" Type="Int32" />
+    <Property Name="OpcionLavadoOrdenNumeroOrden" Type="Int32" Nullable="false" />
+    <Property Name="OpcionLavadoOrdenCompaniaId" Type="Int32" Nullable="false" />
+    <Property Name="OpcionLavadoOrdenPlantaId" Type="Int32" Nullable="false" />
+    <Property Name="OpcionLavadoOrdenAnio" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CargaLavado" Relationship="LavanderiaModel.FK_CargaLavado_OpcionLavadoOrden" FromRole="OpcionLavadoOrden" ToRole="CargaLavado" />
+    <NavigationProperty Name="CentrosTrabajoOpcionLavadoOrden" Relationship="LavanderiaModel.FK_CentrosTrabajoOpcionLavadoOrden_OpcionLavadoOrden" FromRole="OpcionLavadoOrden" ToRole="CentrosTrabajoOpcionLavadoOrden" />
+    <NavigationProperty Name="Lavados" Relationship="LavanderiaModel.FK_OpcionLavadoOrden_Lavados" FromRole="OpcionLavadoOrden" ToRole="Lavados" />
+    <NavigationProperty Name="LitrosAguaOperacion" Relationship="LavanderiaModel.FK_LitrosAguaOperacion_OpcionLavadoOrden" FromRole="OpcionLavadoOrden" ToRole="LitrosAguaOperacion" />
+    <NavigationProperty Name="CantidadIngredientesOperacion" Relationship="LavanderiaModel.FK_CantidadIngredientesOperacion_OpcionLavadoOrden" FromRole="OpcionLavadoOrden" ToRole="CantidadIngredientesOperacion" />
+  </EntityType>
+  <Association Name="FK_CargaLavado_OpcionLavadoOrden">
+    <End Type="LavanderiaModel.OpcionLavadoOrden" Role="OpcionLavadoOrden" Multiplicity="1" />
+    <End Type="LavanderiaModel.CargaLavado" Role="CargaLavado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OpcionLavadoOrden">
+        <PropertyRef Name="OpcionLavadoOrdenId" />
+      </Principal>
+      <Dependent Role="CargaLavado">
+        <PropertyRef Name="CargaLavadoOpcionLavadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentrosTrabajoOpcionLavadoOrden_OpcionLavadoOrden">
+    <End Type="LavanderiaModel.OpcionLavadoOrden" Role="OpcionLavadoOrden" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="LavanderiaModel.CentrosTrabajoOpcionLavadoOrden" Role="CentrosTrabajoOpcionLavadoOrden" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OpcionLavadoOrden">
+        <PropertyRef Name="OpcionLavadoOrdenId" />
+      </Principal>
+      <Dependent Role="CentrosTrabajoOpcionLavadoOrden">
+        <PropertyRef Name="CentrosTrabajoOpcionLavadoOrdenOpcionLavadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OpcionLavadoOrden_Lavados">
+    <End Type="LavanderiaModel.Lavados" Role="Lavados" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="LavanderiaModel.OpcionLavadoOrden" Role="OpcionLavadoOrden" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lavados">
+        <PropertyRef Name="LavadoId" />
+      </Principal>
+      <Dependent Role="OpcionLavadoOrden">
+        <PropertyRef Name="OpcionLavadoOrdenLavadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CUTARC3">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="PrdNumCor" />
+      <PropertyRef Name="PrdAnoCor" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="PrdNumCor" Type="Int16" Nullable="false" />
+    <Property Name="PrdAnoCor" Type="Int16" Nullable="false" />
+    <Property Name="PrdNumAli" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="FacCodRef" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="FacCodTel" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="FacCCol" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecCor" Type="DateTime" Precision="3" />
+    <Property Name="PrdFeFCor" Type="DateTime" Precision="3" />
+    <Property Name="PrdFecBul" Type="DateTime" Precision="3" />
+    <Property Name="PrdFecCos" Type="DateTime" Precision="3" />
+    <Property Name="PrdFeFCos" Type="DateTime" Precision="3" />
+    <Property Name="PrdFecEsm" Type="DateTime" Precision="3" />
+    <Property Name="PrdStsCor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsCos" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsLav" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFeILav" Type="DateTime" Precision="3" />
+    <Property Name="PrdFeFLav" Type="DateTime" Precision="3" />
+    <Property Name="PrdFeIEmp" Type="DateTime" Precision="3" />
+    <Property Name="PrdFeFEmp" Type="DateTime" Precision="3" />
+    <Property Name="PrdTipCor" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodPrd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodRep" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdLotMue" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFeIDes" Type="DateTime" Precision="3" />
+    <Property Name="PrdFeFDes" Type="DateTime" Precision="3" />
+    <Property Name="PrdFeIBor" Type="DateTime" Precision="3" />
+    <Property Name="PrdFeFBor" Type="DateTime" Precision="3" />
+    <Property Name="PrdEstCor" Type="DateTime" Precision="3" />
+    <Property Name="PrdEstBor" Type="DateTime" Precision="3" />
+    <Property Name="PrdEstCos" Type="DateTime" Precision="3" />
+    <Property Name="PrdEstDes" Type="DateTime" Precision="3" />
+    <Property Name="PrdEstLav" Type="DateTime" Precision="3" />
+    <Property Name="PrdEstEmp" Type="DateTime" Precision="3" />
+    <Property Name="PrdRecCos" Type="DateTime" Precision="3" />
+    <Property Name="PrdStsDes" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCorFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCosFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdLavFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdEmpFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdDesFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdBorFab" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdClasCo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdYdsUso" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="PrdObsCor" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="PrdUsuPre" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecGra" Type="DateTime" Precision="3" />
+    <Property Name="PrdUsuVen" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdUsuPrd" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecVen" Type="DateTime" Precision="3" />
+    <Property Name="PrdFecPrd" Type="DateTime" Precision="3" />
+    <Property Name="PrdPesLot" Type="String" MaxLength="9" FixedLength="true" Unicode="false" />
+    <Property Name="PrdAjuste" Type="DateTime" Precision="3" />
+    <Property Name="PrdAUser" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCanApr" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="PrdTckCor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdTckCos" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdTckLav" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdTckEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdTckDes" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdTckBor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsCrt" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsDgt" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsBor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsPas" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStPrel" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFchPre" Type="DateTime" Precision="3" />
+    <Property Name="PrdFchLiq" Type="DateTime" Precision="3" />
+    <Property Name="PrdAlMac" Type="Int16" />
+    <Property Name="PrdUsrCo" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodSem" Type="Int16" />
+    <Property Name="PrdFecCo" Type="DateTime" Precision="3" />
+    <Property Name="PrdCodTpo" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodEda" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodMod" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="PrdUndSld" Type="Int32" />
+    <Property Name="PrdUndFac" Type="Int32" />
+    <Property Name="PrdPlaLiq" Type="DateTime" Precision="3" />
+    <Property Name="PrdFecIns" Type="DateTime" Precision="3" />
+    <Property Name="PrdRecBor" Type="DateTime" Precision="3" />
+    <Property Name="PrdUsrRecB" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFSalEns" Type="DateTime" Precision="3" />
+    <Property Name="PrdUSalEns" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFRepLiq" Type="DateTime" Precision="3" />
+    <Property Name="PrdURepLiq" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="PrdValida" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecVal" Type="DateTime" Precision="3" />
+    <Property Name="PrdValida2" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdUsrVal" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdHoBul" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdHBFe" Type="DateTime" Precision="3" />
+    <Property Name="PrdConsu" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdConFe" Type="DateTime" Precision="3" />
+    <Property Name="PrdFecEnt" Type="DateTime" Precision="3" />
+    <Property Name="PrdCodCli" Type="Int32" />
+    <Property Name="PrdTipOrd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdOmiNor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecOrd" Type="DateTime" Precision="3" />
+    <Property Name="PrdCodEsp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdSerCaj" Type="Int16" />
+    <Property Name="PrdFchPas" Type="DateTime" Precision="3" />
+    <Property Name="PrdHrsPas" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="PrdUsrPas" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsReb" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFchReb" Type="DateTime" Precision="3" />
+    <Property Name="PrdHrsReb" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="PrdUsrReb" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdLavCos" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="PrdPlaId" Type="Int16" />
+    <Property Name="PrdPlaPl" Type="Int16" />
+    <Property Name="PrdInPla" Type="DateTime" Precision="3" />
+    <Property Name="PrdFiPla" Type="DateTime" Precision="3" />
+    <Property Name="PrdRIPla" Type="DateTime" Precision="3" />
+    <Property Name="PrdRFPla" Type="DateTime" Precision="3" />
+    <Property Name="PrdCorId" Type="Int16" />
+    <Property Name="PrdCorPl" Type="Int16" />
+    <Property Name="PrdInCor" Type="DateTime" Precision="3" />
+    <Property Name="PrdFiCor" Type="DateTime" Precision="3" />
+    <Property Name="PrdCosId" Type="Int16" />
+    <Property Name="PrdCosPl" Type="Int16" />
+    <Property Name="PrdInCos" Type="DateTime" Precision="3" />
+    <Property Name="PrdFiCos" Type="DateTime" Precision="3" />
+    <Property Name="PrdEmId" Type="Int16" />
+    <Property Name="PrdEmPl" Type="Int16" />
+    <Property Name="PrdInEm" Type="DateTime" Precision="3" />
+    <Property Name="PrdFiEm" Type="DateTime" Precision="3" />
+    <Property Name="PrdLaId" Type="Int16" />
+    <Property Name="PrdLaPl" Type="Int16" />
+    <Property Name="PrdInLa" Type="DateTime" Precision="3" />
+    <Property Name="PrdFiLa" Type="DateTime" Precision="3" />
+    <Property Name="PrdDeId" Type="Int16" />
+    <Property Name="PrdDePl" Type="Int16" />
+    <Property Name="PrdInDes" Type="DateTime" Precision="3" />
+    <Property Name="PrdFiDes" Type="DateTime" Precision="3" />
+    <Property Name="PrdBoId" Type="Int16" />
+    <Property Name="PrdBoPl" Type="Int16" />
+    <Property Name="PrdInBo" Type="DateTime" Precision="3" />
+    <Property Name="PrdFiBo" Type="DateTime" Precision="3" />
+    <Property Name="PrdLiquid" Type="DateTime" Precision="3" />
+    <Property Name="PrdStsPla" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AmPmPla" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AmPmCor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AmPmCos" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AmPmBor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AmPmDes" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AmPmLav" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AmPmEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WipStsPla" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WipStsCor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WipStsBor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WipStsCos" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WipStsDes" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WipStsLav" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WipStsEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PlaAPPla" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PlaAPCor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PlaAPBor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PlaAPCos" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PlaAPDes" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PlaAPLav" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PlaAPEmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ConMarker" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="IdealPla" Type="Int16" />
+    <Property Name="IdealCor" Type="Int16" />
+    <Property Name="IdealBor" Type="Int16" />
+    <Property Name="IdealCos" Type="Int16" />
+    <Property Name="IdealDes" Type="Int16" />
+    <Property Name="IdealLav" Type="Int16" />
+    <Property Name="IdealEmp" Type="Int16" />
+    <Property Name="PrdDura" Type="Int16" />
+    <Property Name="PrdStsHM" Type="Int16" />
+    <Property Name="PrdRecTel" Type="DateTime" Precision="3" />
+    <Property Name="PrdRecMar" Type="DateTime" Precision="3" />
+    <Property Name="PrdTipTon" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdStsOrd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdSalCor" Type="DateTime" Precision="3" />
+    <Property Name="PrdPriorid" Type="Int16" />
+    <Property Name="PrdAutoriz" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdDevSts" Type="Int16" />
+    <Property Name="PrdOrdAct" Type="Int16" Nullable="false" />
+    <Property Name="PrdPuntada" Type="Int32" />
+    <Property Name="PrdPuntFch" Type="DateTime" Precision="3" />
+    <Property Name="PrdPuntUsr" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdMarMan" Type="DateTime" Precision="3" />
+    <Property Name="PrdCodArt" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="FacCodMdl" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecOri" Type="DateTime" Precision="3" />
+    <Property Name="PrdPlaOri" Type="DateTime" Precision="3" />
+    <Property Name="PrdTelVal" Type="Int16" />
+    <Property Name="PrdObCon" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PrdAnoDep" Type="Int16" />
+    <Property Name="PrdNumDep" Type="Int16" />
+    <Property Name="PrdPriCor" Type="Int16" />
+    <Property Name="PrdUsrOff" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecOff" Type="DateTime" Precision="3" />
+    <Property Name="PrdOrdCer" Type="Int16" />
+    <Property Name="PrdSegCst" Type="Int16" />
+    <Property Name="PrdSegUsu" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PrdSegFch" Type="DateTime" Precision="3" />
+    <Property Name="OrdRazCod" Type="Int32" />
+    <Property Name="OrdObserva" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="OrdUsrAutF" Type="DateTime" Precision="3" />
+    <Property Name="OrdUsrAutS" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="OrdStsASeg" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFecCTel" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="PrdUsuCTel" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="PrdFchCTel" Type="DateTime" Precision="3" />
+    <Property Name="OloStiloVe" Type="Int32" />
+    <Property Name="OrdRcpUsr" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="OrdRcpSts" Type="Int16" />
+    <Property Name="OrdRcpFec" Type="DateTime" Precision="3" />
+    <Property Name="OrdLavadoI" Type="Int32" />
+    <Property Name="PrdTckEti" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="OrdPrePes" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OrdFchDifT" Type="DateTime" Precision="3" />
+    <Property Name="OrdUsrAutD" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="OrdAutDifT" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="OrdPreCost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OrdFlexibl" Type="Int16" />
+    <Property Name="OrdTotUnd" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="FxTelaProduccion" Type="String" MaxLength="2" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="PrdTckEAh" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="OrdFecEnvC" Type="DateTime" Precision="3" />
+    <Property Name="OrdStsEnvC" Type="Int16" />
+    <Property Name="OrdPerLec" Type="Int16" />
+  </EntityType>
+  <EntityType Name="LitrosAguaOperacion">
+    <Key>
+      <PropertyRef Name="LitrosAguaId" />
+    </Key>
+    <Property Name="LitrosAguaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LitrosAguaCiaCod" Type="Int32" Nullable="false" />
+    <Property Name="LitrosAguaPlantaCod" Type="Int32" Nullable="false" />
+    <Property Name="LitrosAguaAnio" Type="Int32" Nullable="false" />
+    <Property Name="LitrosAguaNumeroOrden" Type="Int32" Nullable="false" />
+    <Property Name="LitrosAguaLavadoId" Type="Int32" Nullable="false" />
+    <Property Name="LitrosAguaOpcionLavadoId" Type="Int32" Nullable="false" />
+    <Property Name="LitrosAguaCantidadOperacionCarga" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="LitrosAguaCantidadOperacionSubCarga" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="LitrosAguaOperacionProcesoId" Type="Int32" Nullable="false" />
+    <Property Name="LitrosAguaCargaLavadoNumero" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="OpcionLavadoOrden" Relationship="LavanderiaModel.FK_LitrosAguaOperacion_OpcionLavadoOrden" FromRole="LitrosAguaOperacion" ToRole="OpcionLavadoOrden" />
+    <NavigationProperty Name="OperacionesProcesoOrden" Relationship="LavanderiaModel.FK_LitrosAguaOperacion_OperacionesProcesoOrden" FromRole="LitrosAguaOperacion" ToRole="OperacionesProcesoOrden" />
+  </EntityType>
+  <Association Name="FK_LitrosAguaOperacion_OpcionLavadoOrden">
+    <End Type="LavanderiaModel.OpcionLavadoOrden" Role="OpcionLavadoOrden" Multiplicity="1" />
+    <End Type="LavanderiaModel.LitrosAguaOperacion" Role="LitrosAguaOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OpcionLavadoOrden">
+        <PropertyRef Name="OpcionLavadoOrdenId" />
+      </Principal>
+      <Dependent Role="LitrosAguaOperacion">
+        <PropertyRef Name="LitrosAguaOpcionLavadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LitrosAguaOperacion_OperacionesProcesoOrden">
+    <End Type="LavanderiaModel.OperacionesProcesoOrden" Role="OperacionesProcesoOrden" Multiplicity="1" />
+    <End Type="LavanderiaModel.LitrosAguaOperacion" Role="LitrosAguaOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesProcesoOrden">
+        <PropertyRef Name="OperacionesProcesoOrdenId" />
+      </Principal>
+      <Dependent Role="LitrosAguaOperacion">
+        <PropertyRef Name="LitrosAguaOperacionProcesoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CantidadIngredientesInstruccion">
+    <Key>
+      <PropertyRef Name="CantidadIngredienteInstruccionId" />
+    </Key>
+    <Property Name="CantidadIngredienteInstruccionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CantidadIngredienteInstruccionCiaCod" Type="Int32" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionPlantaCod" Type="Int32" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionAnio" Type="Int32" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionNumeroOrden" Type="Int32" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionCargaLavadoNumero" Type="Int16" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionLavadoId" Type="Int32" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionOpcionLavadoId" Type="Int32" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionOperacionId" Type="Int32" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionInstruccionId" Type="Int32" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionMaterialId" Type="Int32" Nullable="false" />
+    <Property Name="CantidadIngredienteInstruccionValor" Type="Decimal" Precision="18" Scale="5" />
+  </EntityType>
+  <EntityType Name="CantidadIngredientesOperacion">
+    <Key>
+      <PropertyRef Name="CantidadIngredienteId" />
+    </Key>
+    <Property Name="CantidadIngredienteId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CantidadIngredienteCiaCod" Type="Int32" Nullable="false" />
+    <Property Name="CantidadIngredientePlantaCod" Type="Int32" Nullable="false" />
+    <Property Name="CantidadIngredienteAnio" Type="Int32" Nullable="false" />
+    <Property Name="CantidadIngredienteNumeroOrden" Type="Int32" Nullable="false" />
+    <Property Name="CantidadIngredienteOperacionId" Type="Int32" Nullable="false" />
+    <Property Name="CantidadIngredienteValor" Type="Decimal" Precision="18" Scale="5" />
+    <Property Name="CantidadIngredienteLavadoId" Type="Int32" Nullable="false" />
+    <Property Name="CantidadIngredienteOpcionLavadoId" Type="Int32" Nullable="false" />
+    <Property Name="CantidadIngredienteMaterialId" Type="Int32" Nullable="false" />
+    <Property Name="CantidadIngredienteCargaLavadoNumero" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="OpcionLavadoOrden" Relationship="LavanderiaModel.FK_CantidadIngredientesOperacion_OpcionLavadoOrden" FromRole="CantidadIngredientesOperacion" ToRole="OpcionLavadoOrden" />
+    <NavigationProperty Name="OperacionesProcesoOrden" Relationship="LavanderiaModel.FK_CantidadIngredientesOperacion_OperacionesProcesoOrden" FromRole="CantidadIngredientesOperacion" ToRole="OperacionesProcesoOrden" />
+  </EntityType>
+  <Association Name="FK_CantidadIngredientesOperacion_OpcionLavadoOrden">
+    <End Type="LavanderiaModel.OpcionLavadoOrden" Role="OpcionLavadoOrden" Multiplicity="1" />
+    <End Type="LavanderiaModel.CantidadIngredientesOperacion" Role="CantidadIngredientesOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OpcionLavadoOrden">
+        <PropertyRef Name="OpcionLavadoOrdenId" />
+      </Principal>
+      <Dependent Role="CantidadIngredientesOperacion">
+        <PropertyRef Name="CantidadIngredienteOpcionLavadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CantidadIngredientesOperacion_OperacionesProcesoOrden">
+    <End Type="LavanderiaModel.OperacionesProcesoOrden" Role="OperacionesProcesoOrden" Multiplicity="1" />
+    <End Type="LavanderiaModel.CantidadIngredientesOperacion" Role="CantidadIngredientesOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionesProcesoOrden">
+        <PropertyRef Name="OperacionesProcesoOrdenId" />
+      </Principal>
+      <Dependent Role="CantidadIngredientesOperacion">
+        <PropertyRef Name="CantidadIngredienteOperacionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

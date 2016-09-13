@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f56e7c8f-e7c5-4122-aaaf-b0aed2117a3a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/PlantaService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PlantaService.disco" MetadataType="Disco" ID="ce1fd98d-666b-49b9-9ace-add1e5692f88" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/PlantaService.svc?disco" />
+    <MetadataFile FileName="PlantaService.xsd" MetadataType="Schema" ID="f52760b9-bf93-48d0-a6de-5f628b46d025" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/PlantaService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PlantaService1.xsd" MetadataType="Schema" ID="e6c3d134-f7de-4bd7-b725-127583bc5520" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/PlantaService.svc?xsd=xsd2" />
+    <MetadataFile FileName="Planta.wsdl" MetadataType="Wsdl" ID="90fbdbb4-8d3c-4080-8c3b-e5c9b172fbb5" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/PlantaService.svc?wsdl" />
+    <MetadataFile FileName="PlantaService2.xsd" MetadataType="Schema" ID="5c1f9d4b-d6d7-4393-a592-95d1d6cb5be0" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/PlantaService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

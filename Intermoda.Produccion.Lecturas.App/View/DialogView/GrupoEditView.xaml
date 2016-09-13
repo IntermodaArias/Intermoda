@@ -1,0 +1,43 @@
+﻿<Window xmlns:Controls="clr-namespace:Intermoda.Wpf.Controls;assembly=Intermoda.Wpf.Controls"  xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  x:Class="Intermoda.Produccion.Lecturas.App.View.GrupoEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Title="Grupo" Height="300" Width="300"
+        d:DataContext="{Binding Source={StaticResource Locator}, Path=GrupoEditViewModel}">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Margin="2" Content="Fecha Inicio:"/>
+        <Label Grid.Row="1" Grid.Column="0" Margin="2" Content="Fecha Final:"/>
+        <Label Grid.Row="2" Grid.Column="0" Margin="2" Content="Código:"/>
+        <Label Grid.Row="3" Grid.Column="0" Margin="2" Content="Nombre:"/>
+        <Label Grid.Row="4" Grid.Column="0" Margin="2" Content="Secuencia:"/>
+        <Label Grid.Row="5" Grid.Column="0" Margin="2" Content="Estado:"/>
+        <telerik:RadDatePicker Grid.Row="0" Grid.Column="1" Margin="2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100"
+                               SelectedValue="{Binding Path=FechaInicio, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+        <telerik:RadDatePicker Grid.Row="1" Grid.Column="1" Margin="2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100"
+                               SelectedValue="{Binding Path=FechaFinal, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="60"
+                   Text="{Binding Path=Codigo, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200"
+                   Text="{Binding Path=Nombre, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Margin="2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="60"
+                   Text="{Binding Path=Secuencia, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+        <CheckBox Grid.Row="5" Grid.Column="1" Margin="2" HorizontalAlignment="Left" VerticalAlignment="Center"
+                   IsChecked="{Binding Path=Estado, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+        <Controls:CancelConfirmControl Grid.Row="6" Grid.Column="0" Margin="0,10,0,0" Grid.ColumnSpan="2" 
+                                       HorizontalAlignment="Right" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

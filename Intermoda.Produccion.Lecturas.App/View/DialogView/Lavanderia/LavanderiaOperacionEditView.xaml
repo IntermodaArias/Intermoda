@@ -1,0 +1,52 @@
+﻿<Window xmlns:controls="clr-namespace:Intermoda.Wpf.Controls;assembly=Intermoda.Wpf.Controls"  
+        x:Class="Intermoda.Produccion.Lecturas.App.View.LavanderiaOperacionEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Title="Operación de Lavandería" Height="340" Width="330" WindowStartupLocation="CenterOwner"
+        d:DataContext="{Binding Source={StaticResource Locator}, Path=LavanderiaOperacionEditViewModel}">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Margin="2" Content="Nombre: "/>
+            <Label Grid.Row="1" Grid.Column="0" Margin="2" Content="Descripción: "/>
+            <Label Grid.Row="2" Grid.Column="0" Margin="2" Content="PH: "/>
+            <Label Grid.Row="3" Grid.Column="0" Margin="2" Content="Temperatura: "/>
+            <Label Grid.Row="4" Grid.Column="0" Margin="2" Content="Relación de baño: "/>
+            <Label Grid.Row="5" Grid.Column="0" Margin="2" Content="Tiempo mínimo: "/>
+            <Label Grid.Row="6" Grid.Column="0" Margin="2" Content="Tiempo máximo: "/>
+            <TextBox Grid.Row="0" Grid.Column="1" Margin="2" Width="200" HorizontalAlignment="Left" TextAlignment="Left"
+                     Text="{Binding Path=Nombre}"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="2" Width="200" HorizontalAlignment="Left" TextAlignment="Left" Height="60" TextWrapping="Wrap"
+                     Text="{Binding Path=Descripcion}"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Margin="2" Width="40" HorizontalAlignment="Left" TextAlignment="Right"
+                     Text="{Binding Path=OperacionPreDefinida.Ph}"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Margin="2" Width="60" HorizontalAlignment="Left" TextAlignment="Right"
+                     Text="{Binding Path=OperacionPreDefinida.Temperatura, StringFormat='{}{0:### °C}'}"/>
+            <TextBox Grid.Row="4" Grid.Column="1" Margin="2" Width="40" HorizontalAlignment="Left" TextAlignment="Right"
+                     Text="{Binding Path=OperacionPreDefinida.RelacionBano}"/>
+            <TextBox Grid.Row="5" Grid.Column="1" Margin="2" Width="40" HorizontalAlignment="Left" TextAlignment="Right"
+                     Text="{Binding Path=OperacionPreDefinida.TiempoMinimo}"/>
+            <TextBox Grid.Row="6" Grid.Column="1" Margin="2" Width="40" HorizontalAlignment="Left" TextAlignment="Right"
+                     Text="{Binding Path=OperacionPreDefinida.TiempoMaximo}"/>
+        </Grid>
+        <controls:CancelConfirmControl Grid.Row="1" Margin="0,10,0,0" HorizontalAlignment="Right" VerticalAlignment="Center" />
+    </Grid>
+</Window>

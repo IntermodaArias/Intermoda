@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5c99bca9-41ad-40a2-b8ae-6d5a76d2055c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://190.5.95.110/ImDataServiceLb/Empleado.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Empleado3.xsd" MetadataType="Schema" ID="19ecbaf7-e286-4fa1-a155-5109f3bee35f" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/Empleado.svc?xsd=xsd1" />
+    <MetadataFile FileName="Empleado31.xsd" MetadataType="Schema" ID="60dc3191-e932-4d24-862b-be0db56c099c" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/Empleado.svc?xsd=xsd0" />
+    <MetadataFile FileName="Empleado32.xsd" MetadataType="Schema" ID="2adc1313-4882-4342-87b7-4de11ed7571b" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/Empleado.svc?xsd=xsd2" />
+    <MetadataFile FileName="Empleado1.disco" MetadataType="Disco" ID="81e47663-27e6-45c1-8977-5f579af9a941" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/Empleado.svc?disco" />
+    <MetadataFile FileName="Empleado1.wsdl" MetadataType="Wsdl" ID="202d96a2-f083-4f46-a07b-ffa35e6cc87f" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/Empleado.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

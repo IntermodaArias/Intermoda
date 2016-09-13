@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Intermoda.DataService.LbDatPro.OrdenProduccionExterno" CodeBehind="OrdenProduccionExterno.svc.cs" %>

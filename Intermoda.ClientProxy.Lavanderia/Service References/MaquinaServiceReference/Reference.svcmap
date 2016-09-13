@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6a971e3c-d12d-44d3-a80b-8d17edc29c65" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/Maquina.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Maquina.wsdl" MetadataType="Wsdl" ID="2c9ce8ae-d707-4800-b589-c189cca52da4" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Maquina.svc?wsdl" />
+    <MetadataFile FileName="Maquina.xsd" MetadataType="Schema" ID="21e3f3a5-3156-42f2-8074-c36388d491b1" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Maquina.svc?xsd=xsd1" />
+    <MetadataFile FileName="Maquina1.xsd" MetadataType="Schema" ID="1d81f6da-e248-4499-9b98-c5b77765fdd8" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Maquina.svc?xsd=xsd0" />
+    <MetadataFile FileName="Maquina2.xsd" MetadataType="Schema" ID="d76f1c72-105d-4009-b61c-360695fe5aba" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Maquina.svc?xsd=xsd3" />
+    <MetadataFile FileName="Maquina3.xsd" MetadataType="Schema" ID="8e7512e0-44ed-4ec8-bdd1-37745cb250ee" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Maquina.svc?xsd=xsd2" />
+    <MetadataFile FileName="Maquina.disco" MetadataType="Disco" ID="b906243d-f2a6-4cc2-b4e0-cf2149b2a126" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Maquina.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

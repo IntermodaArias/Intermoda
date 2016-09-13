@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{790BE3F7-F02C-4986-BE21-D353F364DBFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intermoda.ClientProxy.LbDatPro</RootNamespace>
+    <AssemblyName>Intermoda.ClientProxy.LbDatPro</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\EmpleadoServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InasistenciaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OrdenProduccionExternoServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PlantaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmpleadoServiceReference\Empleado1.wsdl" />
+    <None Include="Service References\EmpleadoServiceReference\Empleado3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmpleadoServiceReference\Empleado31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmpleadoServiceReference\Empleado32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmpleadoServiceReference\Intermoda.ClientProxy.LbDatPro.EmpleadoServiceReference.EmpleadoBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InasistenciaServiceReference\Inasistencia1.wsdl" />
+    <None Include="Service References\InasistenciaServiceReference\Inasistencia3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InasistenciaServiceReference\Inasistencia31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InasistenciaServiceReference\Inasistencia32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InasistenciaServiceReference\Intermoda.ClientProxy.LbDatPro.InasistenciaServiceReference.InasistenciaBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrdenProduccionExternoServiceReference\Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.OrdenProduccionExternoBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrdenProduccionExternoServiceReference\OrdenProduccionExterno1.wsdl" />
+    <None Include="Service References\OrdenProduccionExternoServiceReference\OrdenProduccionExterno3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrdenProduccionExternoServiceReference\OrdenProduccionExterno31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrdenProduccionExternoServiceReference\OrdenProduccionExterno32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PlantaServiceReference\Intermoda.ClientProxy.LbDatPro.PlantaServiceReference.PlantaBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EmpleadoServiceReference\" />
+    <WCFMetadataStorage Include="Service References\InasistenciaServiceReference\" />
+    <WCFMetadataStorage Include="Service References\OrdenProduccionExternoServiceReference\" />
+    <WCFMetadataStorage Include="Service References\PlantaServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmpleadoServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmpleadoServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmpleadoServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InasistenciaServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InasistenciaServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InasistenciaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrdenProduccionExternoServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrdenProduccionExternoServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrdenProduccionExternoServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PlantaServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PlantaServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PlantaServiceReference\Planta1.wsdl" />
+    <None Include="Service References\PlantaServiceReference\Planta3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PlantaServiceReference\Planta31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PlantaServiceReference\Planta32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PlantaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmpleadoServiceReference\Empleado1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InasistenciaServiceReference\Inasistencia1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrdenProduccionExternoServiceReference\OrdenProduccionExterno1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PlantaServiceReference\Planta1.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

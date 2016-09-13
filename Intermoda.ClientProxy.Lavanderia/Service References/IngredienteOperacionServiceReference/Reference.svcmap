@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="54479408-dafc-42ec-9c66-b0bc5b2ff0fd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/IngredienteOperacion.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IngredienteOperacion1.disco" MetadataType="Disco" ID="f6185319-030b-4e9d-8bf3-9baff58a9ae1" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/IngredienteOperacion.svc?disco" />
+    <MetadataFile FileName="IngredienteOperacion3.xsd" MetadataType="Schema" ID="a679890a-9178-4fe4-86c5-8834ec5856b2" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/IngredienteOperacion.svc?xsd=xsd0" />
+    <MetadataFile FileName="IngredienteOperacion1.wsdl" MetadataType="Wsdl" ID="bdf46a0d-f8a6-407b-bd35-d97365a4106d" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/IngredienteOperacion.svc?wsdl" />
+    <MetadataFile FileName="IngredienteOperacion31.xsd" MetadataType="Schema" ID="3f94f8fc-7837-4fe0-80f0-25a93661cc17" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/IngredienteOperacion.svc?xsd=xsd1" />
+    <MetadataFile FileName="IngredienteOperacion32.xsd" MetadataType="Schema" ID="d33e60b0-c5a8-4bac-8109-b7643a7e044a" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/IngredienteOperacion.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

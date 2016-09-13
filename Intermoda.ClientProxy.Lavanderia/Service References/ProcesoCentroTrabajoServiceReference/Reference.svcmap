@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a2c86c3c-c8d9-4560-9374-9b98e3e28a2e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/ProcesoCentroTrabajo.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProcesoCentroTrabajo3.xsd" MetadataType="Schema" ID="004263da-eedc-4192-b9ac-45ebccc32579" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/ProcesoCentroTrabajo.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProcesoCentroTrabajo31.xsd" MetadataType="Schema" ID="5a6ec6dd-3034-463a-82cd-eda104ea2898" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/ProcesoCentroTrabajo.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProcesoCentroTrabajo1.disco" MetadataType="Disco" ID="eba76cad-f3d4-4dcb-ae18-a216d4220619" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/ProcesoCentroTrabajo.svc?disco" />
+    <MetadataFile FileName="ProcesoCentroTrabajo1.wsdl" MetadataType="Wsdl" ID="41634342-2677-4215-a6c7-60e905da4318" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/ProcesoCentroTrabajo.svc?wsdl" />
+    <MetadataFile FileName="ProcesoCentroTrabajo32.xsd" MetadataType="Schema" ID="10e4ea64-9a8d-4d8e-9eaa-907aa36c36fb" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/ProcesoCentroTrabajo.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e4b26cd9e4b64f96972968e9c902ef32" Name="Diagram1" ZoomLevel="96">
+        <EntityTypeShape EntityType="MicrosoftDynamicsAXPilModel.INVENTTABLE" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="MicrosoftDynamicsAXPilModel.ECORESPRODUCTTRANSLATION" Width="1.5" PointX="0.5" PointY="1.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="MicrosoftDynamicsAXPilModel.ECORESPRODUCT" Width="1.5" PointX="0.5" PointY="1.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="MicrosoftDynamicsAXPilModel.INVENTDIM" Width="1.5" PointX="2.5" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="MicrosoftDynamicsAXPilModel.KANBAN" Width="1.5" PointX="0.5" PointY="2.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="MicrosoftDynamicsAXPilModel.KANBANCARD" Width="1.5" PointX="2.5" PointY="2.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="MicrosoftDynamicsAXPilModel.KANBANJOB" Width="1.5" PointX="6.5" PointY="2.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="MicrosoftDynamicsAXPilModel.KANBANJOBSCHEDULE" Width="1.5" PointX="4.5" PointY="2.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="MicrosoftDynamicsAXPilModel.KANBANRULE" Width="1.5" PointX="8.5" PointY="2.375" IsExpanded="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

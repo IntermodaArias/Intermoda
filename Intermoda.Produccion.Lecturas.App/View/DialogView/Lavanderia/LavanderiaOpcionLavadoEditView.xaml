@@ -1,0 +1,48 @@
+﻿<Window xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  
+        xmlns:controls="clr-namespace:Intermoda.Wpf.Controls;assembly=Intermoda.Wpf.Controls"  
+        x:Class="Intermoda.Produccion.Lecturas.App.View.LavanderiaOpcionLavadoEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Title="Opción de Lavado" Height="280" Width="380" WindowStartupLocation="CenterOwner"
+        d:DataContext="{Binding Source={StaticResource Locator}, Path=LavanderiaOpcionLavadoEditViewModel}">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Margin="2" Content="Nombre: "/>
+            <Label Grid.Row="1" Grid.Column="0" Margin="2" Content="Descripción: "/>
+            <Label Grid.Row="2" Grid.Column="0" Margin="2" Content="Lavado: "/>
+            <Label Grid.Row="3" Grid.Column="0" Margin="2" Content="Tela: "/>
+            <Label Grid.Row="4" Grid.Column="0" Margin="2" Content="Opción por omisión: "/>
+            <TextBox Grid.Row="0" Grid.Column="1" Margin="2" Width="225" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Text="{Binding Path=Nombre, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="2" Width="225" Height="60" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Text="{Binding Path=Descripcion, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" TextWrapping="Wrap"/>
+            <telerik:RadComboBox Grid.Row="2" Grid.Column="1" Margin="2" Width="225" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                 ItemsSource="{Binding Path=LavadoList}" SelectedValuePath="Id" DisplayMemberPath="Nombre"
+                                 SelectedValue="{Binding Path=LavadoId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 IsReadOnly="{Binding Path=LavadoIsReadOnly}"/>
+            <telerik:RadComboBox Grid.Row="3" Grid.Column="1" Margin="2" Width="225" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                 ItemsSource="{Binding Path=TelaList}" SelectedValuePath="TelaCodigo" DisplayMemberPath="TelaNombre"
+                                 SelectedValue="{Binding Path=TelaId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <CheckBox Grid.Row="4" Grid.Column="1" Margin="2" HorizontalAlignment="Left" VerticalAlignment="Center"
+                      IsChecked="{Binding Path=IsDefault, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </Grid>
+        <controls:CancelConfirmControl Grid.Row="1" Margin="0,10,0,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

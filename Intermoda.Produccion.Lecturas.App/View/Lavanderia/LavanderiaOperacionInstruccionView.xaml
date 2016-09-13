@@ -1,0 +1,48 @@
+﻿<UserControl xmlns:Lavanderia="clr-namespace:Intermoda.Produccion.Lecturas.App.View.Lavanderia"  xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  xmlns:Controls="clr-namespace:Intermoda.Wpf.Controls;assembly=Intermoda.Wpf.Controls"  x:Class="Intermoda.Produccion.Lecturas.App.View.Lavanderia.LavanderiaOperacionInstruccionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" d:DesignHeight="600" d:DesignWidth="800"
+             d:DataContext="{Binding Source={StaticResource Locator}, Path=LavanderiaOperacionInstruccionViewModel}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Margin="2" FontSize="16" FontWeight="DemiBold" HorizontalAlignment="Center" Content="Instrucciones"/>
+        <Label Grid.Row="0" Grid.Column="2" Margin="2" FontSize="16" FontWeight="DemiBold" HorizontalAlignment="Center" Content="Catalogos"/>
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Controls:CrudControl Grid.Row="0" Margin="2" HorizontalAlignment="Right" />
+            <telerik:RadGridView Grid.Row="1" Margin="2" AutoGenerateColumns="False" IsReadOnly="True"
+                                 ShowGroupPanel="False"
+                                 ItemsSource="{Binding Path=InstruccionPredefinidaList}"
+                                 SelectedItem="{Binding Path=InstruccionPredefinidaSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <telerik:RadGridView.Columns>
+                    <telerik:GridViewDataColumn Width="1*" Header="Orden" DataMemberBinding="{Binding Orden}"
+                                                TextAlignment="Right" HeaderTextAlignment="Right" />
+                    <telerik:GridViewDataColumn Width="3*" Header="Descripción"
+                                                DataMemberBinding="{Binding Descripcion}" />
+                    <telerik:GridViewDataColumn Width="1*" Header="Temperarura"
+                                                DataMemberBinding="{Binding Temperatura, StringFormat='{}{0:0 °C}'}"
+                                                TextAlignment="Right" HeaderTextAlignment="Right" />
+                    <telerik:GridViewDataColumn Width="1*" Header="T. Mín." DataMemberBinding="{Binding TiempoMinimo}"
+                                                TextAlignment="Right" HeaderTextAlignment="Right" />
+                    <telerik:GridViewDataColumn Width="1*" Header="T. Máx." DataMemberBinding="{Binding TiempoMaximo}"
+                                                TextAlignment="Right" HeaderTextAlignment="Right" />
+                </telerik:RadGridView.Columns>
+            </telerik:RadGridView></Grid>
+        <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Width="5" VerticalAlignment="Stretch" Background="LightGray"/>
+        <Lavanderia:LavanderiaIngredientePredefinidoView Grid.Row="1" Grid.Column="2" 
+                                                         DataContext="{Binding Path=LavanderiaIngredientePredefinidoDataContext}"/>
+    </Grid>
+</UserControl>

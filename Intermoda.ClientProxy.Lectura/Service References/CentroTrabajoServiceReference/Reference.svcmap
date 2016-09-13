@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bc72b246-8f91-43b2-887c-eaeaf9b25f7d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lectura/CentroTrabajo.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CentroTrabajo3.xsd" MetadataType="Schema" ID="fb34ea8d-02fd-40bb-8519-b5a70c95172e" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/CentroTrabajo.svc?xsd=xsd0" />
+    <MetadataFile FileName="CentroTrabajo31.xsd" MetadataType="Schema" ID="7da6abb2-5a16-4123-9848-5a0e48a6e329" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/CentroTrabajo.svc?xsd=xsd2" />
+    <MetadataFile FileName="CentroTrabajo1.disco" MetadataType="Disco" ID="c92da121-d12e-42aa-a0b0-420ace3dbc63" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/CentroTrabajo.svc?disco" />
+    <MetadataFile FileName="CentroTrabajo1.wsdl" MetadataType="Wsdl" ID="be07cd84-b7ca-453a-8d73-a2c34236d023" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/CentroTrabajo.svc?wsdl" />
+    <MetadataFile FileName="CentroTrabajo32.xsd" MetadataType="Schema" ID="7cd7c008-d500-4ce0-b12b-48e376234257" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/CentroTrabajo.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

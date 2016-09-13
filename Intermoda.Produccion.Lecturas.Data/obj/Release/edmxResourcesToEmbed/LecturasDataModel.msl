@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProduccionLecturasModelStoreContainer" CdmEntityContainer="ProduccionLecturasEntities">
+    <EntitySetMapping Name="CentroTrabajoSet">
+      <EntityTypeMapping TypeName="ProduccionLecturasModel.CentroTrabajo">
+        <MappingFragment StoreEntitySet="CentroTrabajo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GrupoSet">
+      <EntityTypeMapping TypeName="ProduccionLecturasModel.Grupo">
+        <MappingFragment StoreEntitySet="Grupo">
+          <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModuloSet">
+      <EntityTypeMapping TypeName="ProduccionLecturasModel.Modulo">
+        <MappingFragment StoreEntitySet="Modulo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+          <ScalarProperty Name="CentroTrabajoId" ColumnName="CentroTrabajoId" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModuloSemanaOperarioSet">
+      <EntityTypeMapping TypeName="ProduccionLecturasModel.ModuloSemanaOperario">
+        <MappingFragment StoreEntitySet="ModuloSemanaOperario">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ModuloSemanaId" ColumnName="ModuloSemanaId" />
+          <ScalarProperty Name="CompaniaCodigo" ColumnName="CompaniaCodigo" />
+          <ScalarProperty Name="OperarioCodigo" ColumnName="OperarioCodigo" />
+          <ScalarProperty Name="ClasificacionId" ColumnName="ClasificacionId" />
+          <ScalarProperty Name="CurvaEntrenamiento" ColumnName="CurvaEntrenamiento" />
+          <ScalarProperty Name="SemanaEntrenamiento" ColumnName="SemanaEntrenamiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroTrabajoClasificacionSet">
+      <EntityTypeMapping TypeName="ProduccionLecturasModel.CentroTrabajoClasificacion">
+        <MappingFragment StoreEntitySet="CentroTrabajoClasificacion">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="CentroTrabajoId" ColumnName="CentroTrabajoId" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LineaSet">
+      <EntityTypeMapping TypeName="ProduccionLecturasModel.Linea">
+        <MappingFragment StoreEntitySet="Linea">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="GrupoId" ColumnName="GrupoId" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LineaDetalleSet">
+      <EntityTypeMapping TypeName="ProduccionLecturasModel.LineaDetalle">
+        <MappingFragment StoreEntitySet="LineaDetalle">
+          <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+          <ScalarProperty Name="EsSalidaUnica" ColumnName="EsSalidaUnica" />
+          <ScalarProperty Name="ModuloId" ColumnName="ModuloId" />
+          <ScalarProperty Name="CentroTrabajoId" ColumnName="CentroTrabajoId" />
+          <ScalarProperty Name="LineaId" ColumnName="LineaId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JornadaSet">
+      <EntityTypeMapping TypeName="ProduccionLecturasModel.Jornada">
+        <MappingFragment StoreEntitySet="Jornada">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JornadaDetalleSet">
+      <EntityTypeMapping TypeName="ProduccionLecturasModel.JornadaDetalle">
+        <MappingFragment StoreEntitySet="JornadaDetalle">
+          <ScalarProperty Name="Minutos" ColumnName="Minutos" />
+          <ScalarProperty Name="Horas" ColumnName="Horas" />
+          <ScalarProperty Name="SalidaMinuto" ColumnName="SalidaMinuto" />
+          <ScalarProperty Name="SalidaHora" ColumnName="SalidaHora" />
+          <ScalarProperty Name="EntradaMinuto" ColumnName="EntradaMinuto" />
+          <ScalarProperty Name="EntradaHora" ColumnName="EntradaHora" />
+          <ScalarProperty Name="JornadaId" ColumnName="JornadaId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModuloSemanaSet">
+      <EntityTypeMapping TypeName="ProduccionLecturasModel.ModuloSemana">
+        <MappingFragment StoreEntitySet="ModuloSemana">
+          <ScalarProperty Name="TurnoId" ColumnName="TurnoId" />
+          <ScalarProperty Name="MinutosBase" ColumnName="MinutosBase" />
+          <ScalarProperty Name="MinutosUtilitario" ColumnName="MinutosUtilitario" />
+          <ScalarProperty Name="MinutosTitular" ColumnName="MinutosTitular" />
+          <ScalarProperty Name="MinutosEntrenamiento" ColumnName="MinutosEntrenamiento" />
+          <ScalarProperty Name="Curva" ColumnName="Curva" />
+          <ScalarProperty Name="MetaProduccion" ColumnName="MetaProduccion" />
+          <ScalarProperty Name="MetaPiezasPorHora" ColumnName="MetaPiezasPorHora" />
+          <ScalarProperty Name="TransferenciaMinutos" ColumnName="TransferenciaMinutos" />
+          <ScalarProperty Name="ModuloId" ColumnName="ModuloId" />
+          <ScalarProperty Name="CentroTrabajoId" ColumnName="CentroTrabajoId" />
+          <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TurnoSet">
+      <EntityTypeMapping TypeName="ProduccionLecturasModel.Turno">
+        <MappingFragment StoreEntitySet="Turno">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TurnoDetalleSet">
+      <EntityTypeMapping TypeName="ProduccionLecturasModel.TurnoDetalle">
+        <MappingFragment StoreEntitySet="TurnoDetalle">
+          <ScalarProperty Name="JornadaId" ColumnName="JornadaId" />
+          <ScalarProperty Name="Dia" ColumnName="Dia" />
+          <ScalarProperty Name="TurnoId" ColumnName="TurnoId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

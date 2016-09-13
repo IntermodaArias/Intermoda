@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LbDatProModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CNTPERIO">
+    <Key>
+      <PropertyRef Name="CiaCod" />
+      <PropertyRef Name="CntPANO" />
+      <PropertyRef Name="CntPMes" />
+      <PropertyRef Name="CntPFei" />
+      <PropertyRef Name="CntPFef" />
+    </Key>
+    <Property Name="CiaCod" Type="smallint" Nullable="false" />
+    <Property Name="CntPANO" Type="smallint" Nullable="false" />
+    <Property Name="CntPMes" Type="smallint" Nullable="false" />
+    <Property Name="CntPFei" Type="datetime" Nullable="false" />
+    <Property Name="CntPFef" Type="datetime" Nullable="false" />
+    <Property Name="CntPnome" Type="char" MaxLength="30" />
+    <Property Name="CntEsta" Type="char" MaxLength="1" />
+    <Property Name="CtlCorrAnu" Type="int" />
+    <Property Name="CntReab" Type="char" MaxLength="1" />
+    <Property Name="CntPSEM" Type="smallint" />
+    <Property Name="CntSemSan" Type="smallint" />
+    <Property Name="CntVarBnc" Type="smallint" />
+    <Property Name="CntVarPrv" Type="smallint" />
+    <Property Name="CntVtaStsP" Type="smallint" />
+  </EntityType>
+  <EntityType Name="MAEAR6">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="AdpCodEmp" />
+    </Key>
+    <Property Name="CIACOD" Type="smallint" Nullable="false" />
+    <Property Name="AdpCodEmp" Type="int" Nullable="false" />
+    <Property Name="AdpCntEmp" Type="char" MaxLength="1" />
+    <Property Name="AdpNomEmp" Type="char" MaxLength="22" />
+    <Property Name="AdpAplEmp" Type="char" MaxLength="22" />
+    <Property Name="AdpAlias" Type="char" MaxLength="30" />
+    <Property Name="AdpDirEmp" Type="char" MaxLength="45" />
+    <Property Name="AdpDirImp" Type="smallint" />
+    <Property Name="AdpNumTel" Type="char" MaxLength="11" />
+    <Property Name="AdpDirNet" Type="char" MaxLength="40" />
+    <Property Name="AdpFecIng" Type="datetime" />
+    <Property Name="AdpHorIng" Type="char" MaxLength="8" />
+    <Property Name="AdpFecRet" Type="datetime" />
+    <Property Name="AdpFecNac" Type="datetime" />
+    <Property Name="AdpCodDep" Type="smallint" />
+    <Property Name="AdpCodNac" Type="smallint" />
+    <Property Name="AdpCodTip" Type="char" MaxLength="1" />
+    <Property Name="AdpNumCed" Type="decimal" Precision="14" Scale="0" />
+    <Property Name="AdpNumRtn" Type="char" MaxLength="13" />
+    <Property Name="AdpNumIhs" Type="char" MaxLength="15" />
+    <Property Name="AdpNumSol" Type="char" MaxLength="13" />
+    <Property Name="AdpNumRap" Type="char" MaxLength="14" />
+    <Property Name="AdpNumPol" Type="char" MaxLength="5" />
+    <Property Name="AdpNomCyg" Type="char" MaxLength="28" />
+    <Property Name="AdpNomPa1" Type="char" MaxLength="30" />
+    <Property Name="AdpNomPa2" Type="char" MaxLength="25" />
+    <Property Name="AdpCodCiv" Type="char" MaxLength="1" />
+    <Property Name="AdpCodEdu" Type="char" MaxLength="1" />
+    <Property Name="AdpCodFrm" Type="char" MaxLength="1" />
+    <Property Name="AdpEntEmp" Type="char" MaxLength="1" />
+    <Property Name="AdpCodPro" Type="smallint" />
+    <Property Name="AdpCodDe2" Type="char" MaxLength="3" />
+    <Property Name="AdpCodPue" Type="smallint" />
+    <Property Name="AdpCodSex" Type="char" MaxLength="1" />
+    <Property Name="AdpCodSkl" Type="smallint" />
+    <Property Name="AdpCodSup" Type="smallint" />
+    <Property Name="AdpSueBas" Type="money" />
+    <Property Name="AdpStsEmp" Type="char" MaxLength="1" />
+    <Property Name="AdpNumCue" Type="char" MaxLength="20" />
+    <Property Name="AdpCodOcu" Type="smallint" />
+    <Property Name="AdpCodSec" Type="smallint" />
+    <Property Name="AdpCodSub" Type="smallint" />
+    <Property Name="AdpUsrGra" Type="char" MaxLength="10" />
+    <Property Name="AdpFecGra" Type="datetime" />
+    <Property Name="AdpHorGra" Type="char" MaxLength="8" />
+    <Property Name="AdpCodPla" Type="smallint" />
+    <Property Name="AdpUsrRec" Type="char" MaxLength="10" />
+    <Property Name="AdpFecRec" Type="datetime" />
+    <Property Name="AdpHrsRec" Type="int" />
+    <Property Name="AdpEntUsr" Type="char" MaxLength="20" />
+    <Property Name="PlsCodCur" Type="smallint" />
+    <Property Name="AdpPagIhs" Type="char" MaxLength="1" />
+    <Property Name="AdpPagRap" Type="char" MaxLength="1" />
+    <Property Name="AdpFrmVac" Type="char" MaxLength="1" />
+    <Property Name="AdpFecVac" Type="datetime" />
+    <Property Name="AdpValVac" Type="smallmoney" />
+    <Property Name="AdpAntVac" Type="smallmoney" />
+    <Property Name="AdpNomRec" Type="char" MaxLength="34" />
+    <Property Name="AdpPasBmp" Type="char" MaxLength="60" />
+    <Property Name="AdpPasBm1" Type="char" MaxLength="50" />
+    <Property Name="AdpPasBm2" Type="char" MaxLength="50" />
+    <Property Name="AdpPasBm3" Type="char" MaxLength="50" />
+    <Property Name="AdpPasBm4" Type="char" MaxLength="50" />
+    <Property Name="AdpPasBm5" Type="char" MaxLength="50" />
+    <Property Name="AdpPasBm6" Type="char" MaxLength="50" />
+    <Property Name="AdpTipOpr" Type="char" MaxLength="1" />
+    <Property Name="AdpSemIni" Type="smallint" />
+    <Property Name="AdpSemFin" Type="smallint" />
+    <Property Name="AdpBonEsc" Type="char" MaxLength="1" />
+    <Property Name="AdpSueChq" Type="smallmoney" />
+    <Property Name="AdpPreRet" Type="char" MaxLength="1" />
+    <Property Name="AdpDiaVac" Type="smallint" />
+    <Property Name="AdpArea01" Type="char" MaxLength="1" />
+    <Property Name="AdpArea02" Type="char" MaxLength="1" />
+    <Property Name="AdpArea03" Type="char" MaxLength="1" />
+    <Property Name="AdpArea04" Type="char" MaxLength="1" />
+    <Property Name="AdpArea05" Type="char" MaxLength="1" />
+    <Property Name="AdpArea06" Type="char" MaxLength="1" />
+    <Property Name="AdpArea07" Type="char" MaxLength="1" />
+    <Property Name="AdpArea08" Type="char" MaxLength="1" />
+    <Property Name="AdpArea09" Type="char" MaxLength="1" />
+    <Property Name="AdpArea10" Type="char" MaxLength="1" />
+    <Property Name="AdpArea11" Type="char" MaxLength="1" />
+    <Property Name="AdpArea12" Type="char" MaxLength="1" />
+    <Property Name="AdpArea13" Type="char" MaxLength="1" />
+    <Property Name="AdpArea14" Type="char" MaxLength="1" />
+    <Property Name="AdpCodGru" Type="char" MaxLength="1" />
+    <Property Name="AdpFecCon" Type="datetime" />
+    <Property Name="AdpTipPla" Type="char" MaxLength="1" />
+    <Property Name="AdpConUsr" Type="char" MaxLength="20" />
+    <Property Name="AdpUsrVal" Type="char" MaxLength="20" />
+    <Property Name="AdpEfic" Type="smallint" />
+    <Property Name="AdpChange" Type="char" MaxLength="15" />
+    <Property Name="AdpDateC" Type="datetime" />
+    <Property Name="AdpActiv1" Type="char" MaxLength="40" />
+    <Property Name="AdpActiv2" Type="char" MaxLength="40" />
+    <Property Name="CodArea" Type="char" MaxLength="2" />
+    <Property Name="CodSubPro" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="ModECalFor" Type="smallint" />
+    <Property Name="ModEmpCal" Type="smallint" />
+    <Property Name="ModECalFin" Type="smallint" />
+    <Property Name="AdpComod" Type="smallint" />
+    <Property Name="AdpTipEmp" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="AdpCamPla" Type="datetime" />
+    <Property Name="AdpCamUsr" Type="char" MaxLength="10" />
+    <Property Name="AdpEmpLiq" Type="char" MaxLength="1" />
+    <Property Name="AdpMdCod" Type="smallint" />
+    <Property Name="AdpCodCiu" Type="smallint" />
+    <Property Name="AdpNoFer" Type="smallint" />
+    <Property Name="BncCod" Type="smallint" />
+    <Property Name="AdpCtaBco" Type="smallint" />
+    <Property Name="AdpUltLinA" Type="smallint" />
+    <Property Name="AdpISRHijo" Type="smallint" />
+    <Property Name="AdpISRCony" Type="smallint" />
+    <Property Name="AdpMonCod" Type="smallint" />
+    <Property Name="AdpCueNum" Type="char" MaxLength="20" />
+    <Property Name="AdpPorCue" Type="smallint" />
+    <Property Name="AdpCuePor" Type="smallint" />
+    <Property Name="AdpMonCue" Type="smallint" />
+    <Property Name="AdpCueMon" Type="smallint" />
+    <Property Name="AdpTurno" Type="smallint" Nullable="false" />
+    <Property Name="NumPatrona" Type="char" MaxLength="30" />
+    <Property Name="AdpRelMar" Type="smallint" />
+    <Property Name="AdpTipFch" Type="datetime" />
+    <Property Name="AdpSMedico" Type="smallint" Nullable="false" />
+    <Property Name="AdpSVida" Type="smallint" Nullable="false" />
+    <Property Name="AdpSVehicu" Type="smallint" Nullable="false" />
+    <Property Name="AdpCodPai" Type="smallint" />
+    <Property Name="AdpEmpCom" Type="smallint" />
+    <Property Name="AdpIncCst" Type="smallint" />
+    <Property Name="PrdCrvId" Type="smallint" />
+  </EntityType>
+  <EntityType Name="MAEAUS">
+    <Key>
+      <PropertyRef Name="CiaCod" />
+      <PropertyRef Name="AdpCodEmp" />
+      <PropertyRef Name="PlsCodPer" />
+      <PropertyRef Name="PlsTpoPls" />
+      <PropertyRef Name="PlsCodGrs" />
+      <PropertyRef Name="PlsNumSes" />
+      <PropertyRef Name="PlsAnoSes" />
+      <PropertyRef Name="PlsCodDia" />
+      <PropertyRef Name="PlsCodCon" />
+    </Key>
+    <Property Name="CiaCod" Type="smallint" Nullable="false" />
+    <Property Name="AdpCodEmp" Type="int" Nullable="false" />
+    <Property Name="PlsCodPer" Type="smallint" Nullable="false" />
+    <Property Name="PlsTpoPls" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="PlsCodGrs" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="PlsNumSes" Type="smallint" Nullable="false" />
+    <Property Name="PlsAnoSes" Type="smallint" Nullable="false" />
+    <Property Name="PlsCodDia" Type="smallint" Nullable="false" />
+    <Property Name="PlsCodCon" Type="smallint" Nullable="false" />
+    <Property Name="PlsValTem" Type="smallmoney" />
+    <Property Name="PlsTipIng" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityContainer Name="LbDatProModelStoreContainer">
+    <EntitySet Name="CNTPERIO" EntityType="Self.CNTPERIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAEAR6" EntityType="Self.MAEAR6" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAEAUS" EntityType="Self.MAEAUS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

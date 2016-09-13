@@ -1,0 +1,9 @@
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.Data\bin\Debug\Intermoda.Produccion.Lecturas.Data.dll.config
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.Data\bin\Debug\Intermoda.Produccion.Lecturas.Data.dll
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.Data\bin\Debug\Intermoda.Produccion.Lecturas.Data.pdb
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.Data\bin\Debug\EntityFramework.dll
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.Data\bin\Debug\EntityFramework.xml
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.Data\obj\Debug\Intermoda.Produccion.Lecturas.Data.dll
+C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.Data\obj\Debug\Intermoda.Produccion.Lecturas.Data.pdb

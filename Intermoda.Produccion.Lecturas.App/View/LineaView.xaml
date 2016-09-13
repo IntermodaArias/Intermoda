@@ -1,0 +1,40 @@
+﻿<UserControl xmlns:View="clr-namespace:Intermoda.Produccion.Lecturas.App.View"  xmlns:Controls="clr-namespace:Intermoda.Wpf.Controls;assembly=Intermoda.Wpf.Controls"  x:Class="Intermoda.Produccion.Lecturas.App.View.LineaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" d:DesignHeight="600" d:DesignWidth="800"
+             d:DataContext="{Binding Source={StaticResource Locator}, Path=LineaViewModel}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Margin="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Margin="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Líneas"
+                   FontSize="18" FontWeight="DemiBold"/>
+            <Controls:CrudControl Grid.Row="0" Margin="2" HorizontalAlignment="Right"/>
+            <telerik:RadGridView Grid.Row="1" Margin="2" ShowGroupPanel="False" AutoGenerateColumns="False" IsReadOnly="True"
+                                ItemsSource="{Binding Path=LineaList}"
+                                SelectedItem="{Binding Path=LineaSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <telerik:RadGridView.Columns>
+                    <telerik:GridViewDataColumn Width="1*" Header="Secuencia" TextAlignment="Right" HeaderTextAlignment="Right"
+                                                DataMemberBinding="{Binding Secuencia}"/>
+                    <telerik:GridViewDataColumn Width="1*" Header="Código" DataMemberBinding="{Binding Codigo}"/>
+                    <telerik:GridViewDataColumn Width="2*" Header="Nombre" DataMemberBinding="{Binding Nombre}"/>
+                    <telerik:GridViewDataColumn Width="1*" Header="Tipo" DataMemberBinding="{Binding Tipo}"/>
+                    <telerik:GridViewCheckBoxColumn Width="1*" Header="Activa" TextAlignment="Center" HeaderTextAlignment="Center"
+                                                    DataMemberBinding="{Binding Estado}"/>
+                </telerik:RadGridView.Columns>
+            </telerik:RadGridView>
+        </Grid>
+        <GridSplitter Grid.Column="1" VerticalAlignment="Stretch" Background="LightGray" Width="5"/>
+        <View:LineaDetalleView Grid.Column="2" Margin="2" DataContext="{Binding Path=LineaDetalleDataContext}"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,1172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MicrosoftDynamicsAXPilModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ECORESPRODUCT">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="PRODUCTMASTER" Type="bigint" />
+          <Property Name="RETAITOTALWEIGHT" Type="int" />
+          <Property Name="VARIANTCONFIGURATIONTECHNOLOGY" Type="int" />
+          <Property Name="RETAILCOLORGROUPID" Type="nvarchar" MaxLength="10" />
+          <Property Name="RETAILSIZEGROUPID" Type="nvarchar" MaxLength="10" />
+          <Property Name="RETAILSTYLEGROUPID" Type="nvarchar" MaxLength="10" />
+          <Property Name="INSTANCERELATIONTYPE" Type="bigint" Nullable="false" />
+          <Property Name="DISPLAYPRODUCTNUMBER" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="SEARCHNAME" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PRODUCTTYPE" Type="int" Nullable="false" />
+          <Property Name="PDSCWPRODUCT" Type="int" Nullable="false" />
+          <Property Name="RECVERSION" Type="int" Nullable="false" />
+          <Property Name="RELATIONTYPE" Type="bigint" Nullable="false" />
+          <Property Name="PARTITION" Type="bigint" Nullable="false" />
+          <Property Name="RECID" Type="bigint" Nullable="false" />
+          <Property Name="BFPSTRUCTURETYPE" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ECORESPRODUCTTRANSLATION">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="PRODUCT" Type="bigint" Nullable="false" />
+          <Property Name="LANGUAGEID" Type="nvarchar" MaxLength="7" Nullable="false" />
+          <Property Name="RECVERSION" Type="int" Nullable="false" />
+          <Property Name="PARTITION" Type="bigint" Nullable="false" />
+          <Property Name="RECID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="INVENTDIM">
+          <Key>
+            <PropertyRef Name="INVENTDIMID" />
+            <PropertyRef Name="DATAAREAID" />
+            <PropertyRef Name="PARTITION" />
+          </Key>
+          <Property Name="INVENTDIMID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="INVENTBATCHID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="WMSLOCATIONID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="WMSPALLETID" Type="nvarchar" MaxLength="18" Nullable="false" />
+          <Property Name="INVENTSERIALID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="INVENTLOCATIONID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CONFIGID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="INVENTSIZEID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="INVENTCOLORID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="INVENTSITEID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="INVENTGTDID_RU" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="INVENTPROFILEID_RU" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="INVENTOWNERID_RU" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="INVENTSTYLEID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="SHA1HASH" Type="varbinary" MaxLength="28" />
+          <Property Name="MODIFIEDDATETIME" Type="datetime" Nullable="false" />
+          <Property Name="DATAAREAID" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="RECVERSION" Type="int" Nullable="false" />
+          <Property Name="PARTITION" Type="bigint" Nullable="false" />
+          <Property Name="RECID" Type="bigint" Nullable="false" />
+          <Property Name="BFPQUALITYID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="BFPPUTUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="BFPUSERDIM1ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="BFPUSERDIM2ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="INVENTTABLE">
+          <Key>
+            <PropertyRef Name="ITEMID" />
+            <PropertyRef Name="DATAAREAID" />
+            <PropertyRef Name="PARTITION" />
+          </Key>
+          <Property Name="ITEMID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ITEMTYPE" Type="int" Nullable="false" />
+          <Property Name="PURCHMODEL" Type="int" Nullable="false" />
+          <Property Name="HEIGHT" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="WIDTH" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="SALESMODEL" Type="int" Nullable="false" />
+          <Property Name="COSTGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="REQGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="EPCMANAGER" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="PRIMARYVENDORID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NETWEIGHT" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="DEPTH" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="UNITVOLUME" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="BOMUNITID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ITEMPRICETOLERANCEGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="DENSITY" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="COSTMODEL" Type="int" Nullable="false" />
+          <Property Name="USEALTITEMID" Type="int" Nullable="false" />
+          <Property Name="ALTITEMID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MATCHINGPOLICY" Type="int" Nullable="false" />
+          <Property Name="INTRACODE" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="PRODFLUSHINGPRINCIP" Type="int" Nullable="false" />
+          <Property Name="MINIMUMPALLETQUANTITY" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="PBAITEMAUTOGENERATED" Type="int" Nullable="false" />
+          <Property Name="WMSARRIVALHANDLINGTIME" Type="int" Nullable="false" />
+          <Property Name="BOMMANUALRECEIPT" Type="int" Nullable="false" />
+          <Property Name="PHANTOM" Type="int" Nullable="false" />
+          <Property Name="INTRAUNIT" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="BOMLEVEL" Type="int" Nullable="false" />
+          <Property Name="BATCHNUMGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="AUTOREPORTFINISHED" Type="int" Nullable="false" />
+          <Property Name="ORIGCOUNTRYREGIONID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="STATISTICSFACTOR" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="ALTCONFIGID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="STANDARDCONFIGID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="PRODPOOLID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="PROPERTYID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ABCTIEUP" Type="int" Nullable="false" />
+          <Property Name="ABCREVENUE" Type="int" Nullable="false" />
+          <Property Name="ABCVALUE" Type="int" Nullable="false" />
+          <Property Name="ABCCONTRIBUTIONMARGIN" Type="int" Nullable="false" />
+          <Property Name="COMMISSIONGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="SALESPERCENTMARKUP" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="SALESCONTRIBUTIONRATIO" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="SALESPRICEMODELBASIC" Type="int" Nullable="false" />
+          <Property Name="NAMEALIAS" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PRODGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="PROJCATEGORYID" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="GROSSDEPTH" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="GROSSWIDTH" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="GROSSHEIGHT" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="STANDARDPALLETQUANTITY" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="QTYPERLAYER" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="SORTCODE" Type="int" Nullable="false" />
+          <Property Name="SERIALNUMGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ITEMBUYERGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="TAXPACKAGINGQTY" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="WMSPALLETTYPEID" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="ORIGSTATEID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="WMSPICKINGQTYTIME" Type="int" Nullable="false" />
+          <Property Name="TARAWEIGHT" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="PACKAGINGGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="SCRAPVAR" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="SCRAPCONST" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="STANDARDINVENTCOLORID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="STANDARDINVENTSIZEID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ITEMDIMCOSTPRICE" Type="int" Nullable="false" />
+          <Property Name="ALTINVENTSIZEID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ALTINVENTCOLORID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="FORECASTDMPINCLUDE" Type="int" Nullable="false" />
+          <Property Name="PRODUCT" Type="bigint" Nullable="false" />
+          <Property Name="PALLETTAGGING" Type="int" Nullable="false" />
+          <Property Name="ITEMTAGGINGLEVEL" Type="int" Nullable="false" />
+          <Property Name="DEFAULTDIMENSION" Type="bigint" Nullable="false" />
+          <Property Name="FISCALLIFOAVOIDCALC" Type="int" Nullable="false" />
+          <Property Name="FISCALLIFONORMALVALUE" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="FISCALLIFONORMALVALUECALC" Type="int" Nullable="false" />
+          <Property Name="BOMCALCGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="INVENTFISCALLIFOGROUP" Type="bigint" Nullable="false" />
+          <Property Name="NGPCODESTABLE_FR" Type="bigint" Nullable="false" />
+          <Property Name="ORIGCOUNTYID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="TAXFISCALCLASSIFICATION_BR" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="PBAITEMCONFIGURABLE" Type="int" Nullable="false" />
+          <Property Name="PBAINVENTITEMGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="PBAHIDEDIALOG" Type="int" Nullable="false" />
+          <Property Name="PBAHIDEAPPROVAL" Type="int" Nullable="false" />
+          <Property Name="PBAAUTOSTART" Type="int" Nullable="false" />
+          <Property Name="PBAMANDATORYCONFIG" Type="int" Nullable="false" />
+          <Property Name="INVENTPRODUCTTYPE_BR" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="TAXATIONORIGIN_BR" Type="int" Nullable="false" />
+          <Property Name="TAXSERVICECODE_BR" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="EXCISETARIFFCODES_IN" Type="bigint" Nullable="false" />
+          <Property Name="CUSTOMSEXPORTTARIFFCODETABLE_IN" Type="bigint" Nullable="false" />
+          <Property Name="CUSTOMSIMPORTTARIFFCODETABLE_IN" Type="bigint" Nullable="false" />
+          <Property Name="SERVICECODETABLE_IN" Type="bigint" Nullable="false" />
+          <Property Name="EXIMPRODUCTGROUPTABLE_IN" Type="bigint" Nullable="false" />
+          <Property Name="PACKING_RU" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ASSETGROUPID_RU" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ASSETID_RU" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="INTRASTATEXCLUDE" Type="int" Nullable="false" />
+          <Property Name="INTRASTATPROCID_CZ" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="PKWIUCODE_PL" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EXCEPTIONCODE_BR" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ICMSONSERVICE_BR" Type="int" Nullable="false" />
+          <Property Name="PDSCWWMSSTANDARDPALLETQTY" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="PDSCWWMSMINIMUMPALLETQTY" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="PDSCWWMSQTYPERLAYER" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="ALTINVENTSTYLEID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="MARKUPCODE_RU" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="NRTAXGROUP_LV" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="PDSBASEATTRIBUTEID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PDSBESTBEFORE" Type="int" Nullable="false" />
+          <Property Name="PDSFREIGHTALLOCATIONGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="PDSITEMREBATEGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="PDSPOTENCYATTRIBRECORDING" Type="int" Nullable="false" />
+          <Property Name="PDSSHELFADVICE" Type="int" Nullable="false" />
+          <Property Name="PDSSHELFLIFE" Type="int" Nullable="false" />
+          <Property Name="PDSTARGETFACTOR" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="PDSVENDORCHECKITEM" Type="int" Nullable="false" />
+          <Property Name="PMFPLANNINGITEMID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PMFPRODUCTTYPE" Type="int" Nullable="false" />
+          <Property Name="PMFYIELDPCT" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="SADRATECODE_PL" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="SKIPINTRACOMPANYSYNC_RU" Type="int" Nullable="false" />
+          <Property Name="STANDARDINVENTSTYLEID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="DAXINTEGRATIONKEY" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MODIFIEDDATETIME" Type="datetime" Nullable="false" />
+          <Property Name="CREATEDDATETIME" Type="datetime" Nullable="false" />
+          <Property Name="DATAAREAID" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="RECVERSION" Type="int" Nullable="false" />
+          <Property Name="PARTITION" Type="bigint" Nullable="false" />
+          <Property Name="RECID" Type="bigint" Nullable="false" />
+          <Property Name="BFPSTRUCTURETYPE" Type="int" Nullable="false" />
+          <Property Name="BFPSTRUCTUREID" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="BFPBOMSTRUCTUREITEMID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="BFPROUTESTRUCTUREITEMID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="BFPSTRUCTUREGROUPS" Type="int" Nullable="false" />
+          <Property Name="BFPREFITEMID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="BFPITEMTYPE" Type="int" Nullable="false" />
+          <Property Name="BFPBOMTEMPLATECREATED" Type="int" Nullable="false" />
+          <Property Name="BFPROUTETEMPLATECREATED" Type="int" Nullable="false" />
+          <Property Name="BFPAUTOMATICGTIN" Type="int" Nullable="false" />
+          <Property Name="BFPNSDESCGROUPID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="BFPPARENTITEMID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="BFPSERVICEMODELREF" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CRCTYPEPRODUCTSERVICECODE" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="GUAAPLICARETENCIONRENTA" Type="int" Nullable="false" />
+          <Property Name="APCRUDE" Type="int" Nullable="false" />
+          <Property Name="APWASHED" Type="int" Nullable="false" />
+          <Property Name="APCUTWIDTH" Type="int" Nullable="false" />
+          <Property Name="APTORSION" Type="int" Nullable="false" />
+          <Property Name="APSTRETCH" Type="int" Nullable="false" />
+          <Property Name="APSHRINK" Type="int" Nullable="false" />
+          <Property Name="APITEMIDSECOND" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="APITEMIDTHIRD" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="BFPITEMCODE" Type="nvarchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KANBAN">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="KANBANID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="KANBANRULE" Type="bigint" Nullable="false" />
+          <Property Name="ITEMID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="INVENTDIMID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CURRENTJOB" Type="bigint" Nullable="false" />
+          <Property Name="TYPE" Type="int" Nullable="false" />
+          <Property Name="STATUS" Type="int" Nullable="false" />
+          <Property Name="QUANTITYORDERED" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="QUANTITYRECEIVED" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="EXPRESS" Type="int" Nullable="false" />
+          <Property Name="MANUAL" Type="int" Nullable="false" />
+          <Property Name="INVENTTRANSID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DUEDATETIME" Type="datetime" Nullable="false" />
+          <Property Name="DUEDATETIMETZID" Type="int" Nullable="false" />
+          <Property Name="EXPECTEDDATETIME" Type="datetime" Nullable="false" />
+          <Property Name="EXPECTEDDATETIMETZID" Type="int" Nullable="false" />
+          <Property Name="EMPTIEDDATETIME" Type="datetime" Nullable="false" />
+          <Property Name="EMPTIEDDATETIMETZID" Type="int" Nullable="false" />
+          <Property Name="DEFAULTDIMENSION" Type="bigint" Nullable="false" />
+          <Property Name="ITEMDATAAREAID" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="BOMID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="INVENTDIMDATAAREAID" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="BOMDATAAREAID" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="INVENTTRANSDATAAREAID" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="FIRSTPLANACTIVITYNAME" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="LASTPLANACTIVITYNAME" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="KANBANCARDID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="LEGALENTITY" Type="bigint" Nullable="false" />
+          <Property Name="RECVERSION" Type="int" Nullable="false" />
+          <Property Name="PARTITION" Type="bigint" Nullable="false" />
+          <Property Name="RECID" Type="bigint" Nullable="false" />
+          <Property Name="APKANBANCUTSHEETID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="APPARENTKANBANID" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KANBANCARD">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="CARDID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="KANBANRULE" Type="bigint" Nullable="false" />
+          <Property Name="PRINTSTATUS" Type="int" Nullable="false" />
+          <Property Name="CARDTYPE" Type="int" Nullable="false" />
+          <Property Name="KANBAN" Type="bigint" Nullable="false" />
+          <Property Name="RECVERSION" Type="int" Nullable="false" />
+          <Property Name="PARTITION" Type="bigint" Nullable="false" />
+          <Property Name="RECID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KANBANJOB">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="KANBAN" Type="bigint" Nullable="false" />
+          <Property Name="INVENTTRANSID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ISSUEINVENTTRANSID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="INVENTDIMID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ISSUEINVENTDIMID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TYPE" Type="int" Nullable="false" />
+          <Property Name="STATUS" Type="int" Nullable="false" />
+          <Property Name="ACTUALSTARTDATETIME" Type="datetime" Nullable="false" />
+          <Property Name="ACTUALSTARTDATETIMETZID" Type="int" Nullable="false" />
+          <Property Name="ACTUALENDDATETIME" Type="datetime" Nullable="false" />
+          <Property Name="ACTUALENDDATETIMETZID" Type="int" Nullable="false" />
+          <Property Name="QUANTITYORDERED" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="QUANTITYRECEIVED" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="QUANTITYSCRAPPED" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="EXPECTEDDATETIME" Type="datetime" Nullable="false" />
+          <Property Name="EXPECTEDDATETIMETZID" Type="int" Nullable="false" />
+          <Property Name="DUEDATETIME" Type="datetime" Nullable="false" />
+          <Property Name="DUEDATETIMETZID" Type="int" Nullable="false" />
+          <Property Name="INVENTDIMDATAAREAID" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="ISSUEINVENTDIMDATAAREAID" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="INVENTTRANSDATAAREAID" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="ISSUEINVENTTRANSDATAAREAID" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="WMSLOCATIONID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="INVENTLOCATIONID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="INVENTLOCATIONDATAAREAID" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="WMSLOCATIONDATAAREAID" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="LEANPRODUCTIONFLOWACTIVITY" Type="bigint" Nullable="false" />
+          <Property Name="EXECUTABLE" Type="int" Nullable="false" />
+          <Property Name="LEANSCHEDULEGROUPNAME" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="LEANSCHEDULEGROUPCOLOR" Type="nvarchar" MaxLength="9" Nullable="false" />
+          <Property Name="WORKCELL" Type="bigint" Nullable="false" />
+          <Property Name="PLANACTIVITYNAME" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="DEFAULTDIMENSION" Type="bigint" Nullable="false" />
+          <Property Name="SOURCEDOCUMENTHEADER" Type="bigint" Nullable="false" />
+          <Property Name="SEQUENCE" Type="int" Nullable="false" />
+          <Property Name="LEANSCHEDULEITEMRATIO" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="ACTUALPREPAREDDATETIME" Type="datetime" Nullable="false" />
+          <Property Name="ACTUALPREPAREDDATETIMETZID" Type="int" Nullable="false" />
+          <Property Name="RECVERSION" Type="int" Nullable="false" />
+          <Property Name="PARTITION" Type="bigint" Nullable="false" />
+          <Property Name="RECID" Type="bigint" Nullable="false" />
+          <Property Name="APKANBANSENDID" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KANBANJOBSCHEDULE">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="PLANNEDPERIOD" Type="datetime" Nullable="false" />
+          <Property Name="SEQUENCE" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="JOB" Type="bigint" Nullable="false" />
+          <Property Name="EXPECTEDDATETIME" Type="datetime" Nullable="false" />
+          <Property Name="EXPECTEDDATETIMETZID" Type="int" Nullable="false" />
+          <Property Name="WORKCELL" Type="bigint" Nullable="false" />
+          <Property Name="RECVERSION" Type="int" Nullable="false" />
+          <Property Name="PARTITION" Type="bigint" Nullable="false" />
+          <Property Name="RECID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KANBANRULE">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="REPLENISHMENTSTRATEGY" Type="int" Nullable="false" />
+          <Property Name="KANBANFLOW" Type="bigint" Nullable="false" />
+          <Property Name="RULEID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ALLOWDEVIATINGQUANTITY" Type="int" Nullable="false" />
+          <Property Name="MINIMUMDEVIATINGQUANTITY" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="MAXIMUMDEVIATINGQUANTITY" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="MINIMUMALERTLEVEL" Type="int" Nullable="false" />
+          <Property Name="MAXIMUMALERTLEVEL" Type="int" Nullable="false" />
+          <Property Name="PRINTKANBANAUTOMATICALLY" Type="int" Nullable="false" />
+          <Property Name="USESCIRCULATINGCARDS" Type="int" Nullable="false" />
+          <Property Name="REPLACINGKANBANRULE" Type="bigint" Nullable="false" />
+          <Property Name="CARDASSIGNMENTTYPE" Type="int" Nullable="false" />
+          <Property Name="KANBANTYPE" Type="int" Nullable="false" />
+          <Property Name="CARDSNUMBERSEQUENCE" Type="bigint" Nullable="false" />
+          <Property Name="HANDLINGUNITEMPTYPOLICY" Type="int" Nullable="false" />
+          <Property Name="TRIGGERLEVEL" Type="int" Nullable="false" />
+          <Property Name="QUANTITY" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="PRINTINSTRUCTIONSONCARD" Type="int" Nullable="false" />
+          <Property Name="PRINTCARDWITHPICKINGLIST" Type="int" Nullable="false" />
+          <Property Name="LEGALENTITY" Type="bigint" Nullable="false" />
+          <Property Name="URGENCYLEVEL" Type="numeric" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="RECVERSION" Type="int" Nullable="false" />
+          <Property Name="PARTITION" Type="bigint" Nullable="false" />
+          <Property Name="RECID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MicrosoftDynamicsAXPilModelStoreContainer">
+          <EntitySet Name="ECORESPRODUCT" EntityType="Self.ECORESPRODUCT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ECORESPRODUCTTRANSLATION" EntityType="Self.ECORESPRODUCTTRANSLATION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INVENTDIM" EntityType="Self.INVENTDIM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INVENTTABLE" EntityType="Self.INVENTTABLE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KANBAN" EntityType="Self.KANBAN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KANBANCARD" EntityType="Self.KANBANCARD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KANBANJOB" EntityType="Self.KANBANJOB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KANBANJOBSCHEDULE" EntityType="Self.KANBANJOBSCHEDULE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KANBANRULE" EntityType="Self.KANBANRULE" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MicrosoftDynamicsAXPilModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="INVENTTABLE">
+          <Key>
+            <PropertyRef Name="ITEMID" />
+            <PropertyRef Name="DATAAREAID" />
+            <PropertyRef Name="PARTITION" />
+          </Key>
+          <Property Name="ITEMID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ITEMTYPE" Type="Int32" Nullable="false" />
+          <Property Name="PURCHMODEL" Type="Int32" Nullable="false" />
+          <Property Name="HEIGHT" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="WIDTH" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="SALESMODEL" Type="Int32" Nullable="false" />
+          <Property Name="COSTGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="REQGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EPCMANAGER" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="PRIMARYVENDORID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NETWEIGHT" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="DEPTH" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="UNITVOLUME" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="BOMUNITID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ITEMPRICETOLERANCEGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DENSITY" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="COSTMODEL" Type="Int32" Nullable="false" />
+          <Property Name="USEALTITEMID" Type="Int32" Nullable="false" />
+          <Property Name="ALTITEMID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MATCHINGPOLICY" Type="Int32" Nullable="false" />
+          <Property Name="INTRACODE" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PRODFLUSHINGPRINCIP" Type="Int32" Nullable="false" />
+          <Property Name="MINIMUMPALLETQUANTITY" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="PBAITEMAUTOGENERATED" Type="Int32" Nullable="false" />
+          <Property Name="WMSARRIVALHANDLINGTIME" Type="Int32" Nullable="false" />
+          <Property Name="BOMMANUALRECEIPT" Type="Int32" Nullable="false" />
+          <Property Name="PHANTOM" Type="Int32" Nullable="false" />
+          <Property Name="INTRAUNIT" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="BOMLEVEL" Type="Int32" Nullable="false" />
+          <Property Name="BATCHNUMGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AUTOREPORTFINISHED" Type="Int32" Nullable="false" />
+          <Property Name="ORIGCOUNTRYREGIONID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="STATISTICSFACTOR" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="ALTCONFIGID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="STANDARDCONFIGID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PRODPOOLID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PROPERTYID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ABCTIEUP" Type="Int32" Nullable="false" />
+          <Property Name="ABCREVENUE" Type="Int32" Nullable="false" />
+          <Property Name="ABCVALUE" Type="Int32" Nullable="false" />
+          <Property Name="ABCCONTRIBUTIONMARGIN" Type="Int32" Nullable="false" />
+          <Property Name="COMMISSIONGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SALESPERCENTMARKUP" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="SALESCONTRIBUTIONRATIO" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="SALESPRICEMODELBASIC" Type="Int32" Nullable="false" />
+          <Property Name="NAMEALIAS" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PRODGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PROJCATEGORYID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GROSSDEPTH" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="GROSSWIDTH" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="GROSSHEIGHT" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="STANDARDPALLETQUANTITY" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="QTYPERLAYER" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="SORTCODE" Type="Int32" Nullable="false" />
+          <Property Name="SERIALNUMGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ITEMBUYERGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TAXPACKAGINGQTY" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="WMSPALLETTYPEID" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ORIGSTATEID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WMSPICKINGQTYTIME" Type="Int32" Nullable="false" />
+          <Property Name="TARAWEIGHT" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="PACKAGINGGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SCRAPVAR" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="SCRAPCONST" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="STANDARDINVENTCOLORID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="STANDARDINVENTSIZEID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ITEMDIMCOSTPRICE" Type="Int32" Nullable="false" />
+          <Property Name="ALTINVENTSIZEID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ALTINVENTCOLORID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FORECASTDMPINCLUDE" Type="Int32" Nullable="false" />
+          <Property Name="PRODUCT" Type="Int64" Nullable="false" />
+          <Property Name="PALLETTAGGING" Type="Int32" Nullable="false" />
+          <Property Name="ITEMTAGGINGLEVEL" Type="Int32" Nullable="false" />
+          <Property Name="DEFAULTDIMENSION" Type="Int64" Nullable="false" />
+          <Property Name="FISCALLIFOAVOIDCALC" Type="Int32" Nullable="false" />
+          <Property Name="FISCALLIFONORMALVALUE" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="FISCALLIFONORMALVALUECALC" Type="Int32" Nullable="false" />
+          <Property Name="BOMCALCGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="INVENTFISCALLIFOGROUP" Type="Int64" Nullable="false" />
+          <Property Name="NGPCODESTABLE_FR" Type="Int64" Nullable="false" />
+          <Property Name="ORIGCOUNTYID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TAXFISCALCLASSIFICATION_BR" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PBAITEMCONFIGURABLE" Type="Int32" Nullable="false" />
+          <Property Name="PBAINVENTITEMGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PBAHIDEDIALOG" Type="Int32" Nullable="false" />
+          <Property Name="PBAHIDEAPPROVAL" Type="Int32" Nullable="false" />
+          <Property Name="PBAAUTOSTART" Type="Int32" Nullable="false" />
+          <Property Name="PBAMANDATORYCONFIG" Type="Int32" Nullable="false" />
+          <Property Name="INVENTPRODUCTTYPE_BR" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TAXATIONORIGIN_BR" Type="Int32" Nullable="false" />
+          <Property Name="TAXSERVICECODE_BR" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EXCISETARIFFCODES_IN" Type="Int64" Nullable="false" />
+          <Property Name="CUSTOMSEXPORTTARIFFCODETABLE_IN" Type="Int64" Nullable="false" />
+          <Property Name="CUSTOMSIMPORTTARIFFCODETABLE_IN" Type="Int64" Nullable="false" />
+          <Property Name="SERVICECODETABLE_IN" Type="Int64" Nullable="false" />
+          <Property Name="EXIMPRODUCTGROUPTABLE_IN" Type="Int64" Nullable="false" />
+          <Property Name="PACKING_RU" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ASSETGROUPID_RU" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ASSETID_RU" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="INTRASTATEXCLUDE" Type="Int32" Nullable="false" />
+          <Property Name="INTRASTATPROCID_CZ" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PKWIUCODE_PL" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EXCEPTIONCODE_BR" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ICMSONSERVICE_BR" Type="Int32" Nullable="false" />
+          <Property Name="PDSCWWMSSTANDARDPALLETQTY" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="PDSCWWMSMINIMUMPALLETQTY" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="PDSCWWMSQTYPERLAYER" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="ALTINVENTSTYLEID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MARKUPCODE_RU" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NRTAXGROUP_LV" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PDSBASEATTRIBUTEID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PDSBESTBEFORE" Type="Int32" Nullable="false" />
+          <Property Name="PDSFREIGHTALLOCATIONGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PDSITEMREBATEGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PDSPOTENCYATTRIBRECORDING" Type="Int32" Nullable="false" />
+          <Property Name="PDSSHELFADVICE" Type="Int32" Nullable="false" />
+          <Property Name="PDSSHELFLIFE" Type="Int32" Nullable="false" />
+          <Property Name="PDSTARGETFACTOR" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="PDSVENDORCHECKITEM" Type="Int32" Nullable="false" />
+          <Property Name="PMFPLANNINGITEMID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PMFPRODUCTTYPE" Type="Int32" Nullable="false" />
+          <Property Name="PMFYIELDPCT" Type="Decimal" Precision="32" Scale="16" Nullable="false" />
+          <Property Name="SADRATECODE_PL" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SKIPINTRACOMPANYSYNC_RU" Type="Int32" Nullable="false" />
+          <Property Name="STANDARDINVENTSTYLEID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DAXINTEGRATIONKEY" Type="Guid" Nullable="false" />
+          <Property Name="MODIFIEDDATETIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CREATEDDATETIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DATAAREAID" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RECVERSION" Type="Int32" Nullable="false" />
+          <Property Name="PARTITION" Type="Int64" Nullable="false" />
+          <Property Name="RECID" Type="Int64" Nullable="false" />
+          <Property Name="BFPSTRUCTURETYPE" Type="Int32" Nullable="false" />
+          <Property Name="BFPSTRUCTUREID" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BFPBOMSTRUCTUREITEMID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BFPROUTESTRUCTUREITEMID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BFPSTRUCTUREGROUPS" Type="Int32" Nullable="false" />
+          <Property Name="BFPREFITEMID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BFPITEMTYPE" Type="Int32" Nullable="false" />
+          <Property Name="BFPBOMTEMPLATECREATED" Type="Int32" Nullable="false" />
+          <Property Name="BFPROUTETEMPLATECREATED" Type="Int32" Nullable="false" />
+          <Property Name="BFPAUTOMATICGTIN" Type="Int32" Nullable="false" />
+          <Property Name="BFPNSDESCGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BFPPARENTITEMID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BFPSERVICEMODELREF" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CRCTYPEPRODUCTSERVICECODE" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GUAAPLICARETENCIONRENTA" Type="Int32" Nullable="false" />
+          <Property Name="APCRUDE" Type="Int32" Nullable="false" />
+          <Property Name="APWASHED" Type="Int32" Nullable="false" />
+          <Property Name="APCUTWIDTH" Type="Int32" Nullable="false" />
+          <Property Name="APTORSION" Type="Int32" Nullable="false" />
+          <Property Name="APSTRETCH" Type="Int32" Nullable="false" />
+          <Property Name="APSHRINK" Type="Int32" Nullable="false" />
+          <Property Name="APITEMIDSECOND" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="APITEMIDTHIRD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BFPITEMCODE" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Ax2012R2Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="INVENTTABLESet" EntityType="MicrosoftDynamicsAXPilModel.INVENTTABLE" />
+          <EntitySet Name="ECORESPRODUCTTRANSLATIONSet" EntityType="MicrosoftDynamicsAXPilModel.ECORESPRODUCTTRANSLATION" />
+          <EntitySet Name="ECORESPRODUCTSet" EntityType="MicrosoftDynamicsAXPilModel.ECORESPRODUCT" />
+          <EntitySet Name="INVENTDIMSet" EntityType="MicrosoftDynamicsAXPilModel.INVENTDIM" />
+          <EntitySet Name="KANBANSet" EntityType="MicrosoftDynamicsAXPilModel.KANBAN" />
+          <EntitySet Name="KANBANCARDSet" EntityType="MicrosoftDynamicsAXPilModel.KANBANCARD" />
+          <EntitySet Name="KANBANJOBSet" EntityType="MicrosoftDynamicsAXPilModel.KANBANJOB" />
+          <EntitySet Name="KANBANJOBSCHEDULESet" EntityType="MicrosoftDynamicsAXPilModel.KANBANJOBSCHEDULE" />
+          <EntitySet Name="KANBANRULESet" EntityType="MicrosoftDynamicsAXPilModel.KANBANRULE" />
+        </EntityContainer>
+        <EntityType Name="ECORESPRODUCTTRANSLATION">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="DESCRIPTION" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="NAME" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="PRODUCT" Type="Int64" Nullable="false" />
+          <Property Name="LANGUAGEID" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Name="RECVERSION" Type="Int32" Nullable="false" />
+          <Property Name="PARTITION" Type="Int64" Nullable="false" />
+          <Property Name="RECID" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ECORESPRODUCT">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="PRODUCTMASTER" Type="Int64" />
+          <Property Name="RETAITOTALWEIGHT" Type="Int32" />
+          <Property Name="VARIANTCONFIGURATIONTECHNOLOGY" Type="Int32" />
+          <Property Name="RETAILCOLORGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="RETAILSIZEGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="RETAILSTYLEGROUPID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="INSTANCERELATIONTYPE" Type="Int64" Nullable="false" />
+          <Property Name="DISPLAYPRODUCTNUMBER" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="SEARCHNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PRODUCTTYPE" Type="Int32" Nullable="false" />
+          <Property Name="PDSCWPRODUCT" Type="Int32" Nullable="false" />
+          <Property Name="RECVERSION" Type="Int32" Nullable="false" />
+          <Property Name="RELATIONTYPE" Type="Int64" Nullable="false" />
+          <Property Name="PARTITION" Type="Int64" Nullable="false" />
+          <Property Name="RECID" Type="Int64" Nullable="false" />
+          <Property Name="BFPSTRUCTURETYPE" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="INVENTDIM">
+          <Key>
+            <PropertyRef Name="INVENTDIMID" />
+            <PropertyRef Name="DATAAREAID" />
+            <PropertyRef Name="PARTITION" />
+          </Key>
+          <Property Name="INVENTDIMID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="INVENTBATCHID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="WMSLOCATIONID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="WMSPALLETID" Type="String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="true" />
+          <Property Name="INVENTSERIALID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="INVENTLOCATIONID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CONFIGID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="INVENTSIZEID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="INVENTCOLORID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="INVENTSITEID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="INVENTGTDID_RU" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="INVENTPROFILEID_RU" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="INVENTOWNERID_RU" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="INVENTSTYLEID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="SHA1HASH" Type="Binary" MaxLength="28" FixedLength="false" />
+          <Property Name="MODIFIEDDATETIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DATAAREAID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="RECVERSION" Type="Int32" Nullable="false" />
+          <Property Name="PARTITION" Type="Int64" Nullable="false" />
+          <Property Name="RECID" Type="Int64" Nullable="false" />
+          <Property Name="BFPQUALITYID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="BFPPUTUPID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="BFPUSERDIM1ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="BFPUSERDIM2ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="KANBAN">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="KANBANID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="KANBANRULE" Type="Int64" Nullable="false" />
+          <Property Name="ITEMID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="INVENTDIMID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CURRENTJOB" Type="Int64" Nullable="false" />
+          <Property Name="TYPE" Type="Int32" Nullable="false" />
+          <Property Name="STATUS" Type="Int32" Nullable="false" />
+          <Property Name="QUANTITYORDERED" Type="Decimal" Nullable="false" Precision="32" Scale="16" />
+          <Property Name="QUANTITYRECEIVED" Type="Decimal" Nullable="false" Precision="32" Scale="16" />
+          <Property Name="EXPRESS" Type="Int32" Nullable="false" />
+          <Property Name="MANUAL" Type="Int32" Nullable="false" />
+          <Property Name="INVENTTRANSID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DUEDATETIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DUEDATETIMETZID" Type="Int32" Nullable="false" />
+          <Property Name="EXPECTEDDATETIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EXPECTEDDATETIMETZID" Type="Int32" Nullable="false" />
+          <Property Name="EMPTIEDDATETIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EMPTIEDDATETIMETZID" Type="Int32" Nullable="false" />
+          <Property Name="DEFAULTDIMENSION" Type="Int64" Nullable="false" />
+          <Property Name="ITEMDATAAREAID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="BOMID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="INVENTDIMDATAAREAID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="BOMDATAAREAID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="INVENTTRANSDATAAREAID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="FIRSTPLANACTIVITYNAME" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="LASTPLANACTIVITYNAME" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="KANBANCARDID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LEGALENTITY" Type="Int64" Nullable="false" />
+          <Property Name="RECVERSION" Type="Int32" Nullable="false" />
+          <Property Name="PARTITION" Type="Int64" Nullable="false" />
+          <Property Name="RECID" Type="Int64" Nullable="false" />
+          <Property Name="APKANBANCUTSHEETID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="APPARENTKANBANID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="KANBANCARD">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="CARDID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="KANBANRULE" Type="Int64" Nullable="false" />
+          <Property Name="PRINTSTATUS" Type="Int32" Nullable="false" />
+          <Property Name="CARDTYPE" Type="Int32" Nullable="false" />
+          <Property Name="KANBAN" Type="Int64" Nullable="false" />
+          <Property Name="RECVERSION" Type="Int32" Nullable="false" />
+          <Property Name="PARTITION" Type="Int64" Nullable="false" />
+          <Property Name="RECID" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KANBANJOB">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="KANBAN" Type="Int64" Nullable="false" />
+          <Property Name="INVENTTRANSID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ISSUEINVENTTRANSID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="INVENTDIMID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ISSUEINVENTDIMID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TYPE" Type="Int32" Nullable="false" />
+          <Property Name="STATUS" Type="Int32" Nullable="false" />
+          <Property Name="ACTUALSTARTDATETIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ACTUALSTARTDATETIMETZID" Type="Int32" Nullable="false" />
+          <Property Name="ACTUALENDDATETIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ACTUALENDDATETIMETZID" Type="Int32" Nullable="false" />
+          <Property Name="QUANTITYORDERED" Type="Decimal" Nullable="false" Precision="32" Scale="16" />
+          <Property Name="QUANTITYRECEIVED" Type="Decimal" Nullable="false" Precision="32" Scale="16" />
+          <Property Name="QUANTITYSCRAPPED" Type="Decimal" Nullable="false" Precision="32" Scale="16" />
+          <Property Name="EXPECTEDDATETIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EXPECTEDDATETIMETZID" Type="Int32" Nullable="false" />
+          <Property Name="DUEDATETIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DUEDATETIMETZID" Type="Int32" Nullable="false" />
+          <Property Name="INVENTDIMDATAAREAID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="ISSUEINVENTDIMDATAAREAID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="INVENTTRANSDATAAREAID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="ISSUEINVENTTRANSDATAAREAID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="WMSLOCATIONID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="INVENTLOCATIONID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="INVENTLOCATIONDATAAREAID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="WMSLOCATIONDATAAREAID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="LEANPRODUCTIONFLOWACTIVITY" Type="Int64" Nullable="false" />
+          <Property Name="EXECUTABLE" Type="Int32" Nullable="false" />
+          <Property Name="LEANSCHEDULEGROUPNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LEANSCHEDULEGROUPCOLOR" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="WORKCELL" Type="Int64" Nullable="false" />
+          <Property Name="PLANACTIVITYNAME" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="DEFAULTDIMENSION" Type="Int64" Nullable="false" />
+          <Property Name="SOURCEDOCUMENTHEADER" Type="Int64" Nullable="false" />
+          <Property Name="SEQUENCE" Type="Int32" Nullable="false" />
+          <Property Name="LEANSCHEDULEITEMRATIO" Type="Decimal" Nullable="false" Precision="32" Scale="16" />
+          <Property Name="ACTUALPREPAREDDATETIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ACTUALPREPAREDDATETIMETZID" Type="Int32" Nullable="false" />
+          <Property Name="RECVERSION" Type="Int32" Nullable="false" />
+          <Property Name="PARTITION" Type="Int64" Nullable="false" />
+          <Property Name="RECID" Type="Int64" Nullable="false" />
+          <Property Name="APKANBANSENDID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="KANBANJOBSCHEDULE">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="PLANNEDPERIOD" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SEQUENCE" Type="Decimal" Nullable="false" Precision="32" Scale="16" />
+          <Property Name="JOB" Type="Int64" Nullable="false" />
+          <Property Name="EXPECTEDDATETIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EXPECTEDDATETIMETZID" Type="Int32" Nullable="false" />
+          <Property Name="WORKCELL" Type="Int64" Nullable="false" />
+          <Property Name="RECVERSION" Type="Int32" Nullable="false" />
+          <Property Name="PARTITION" Type="Int64" Nullable="false" />
+          <Property Name="RECID" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KANBANRULE">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="REPLENISHMENTSTRATEGY" Type="Int32" Nullable="false" />
+          <Property Name="KANBANFLOW" Type="Int64" Nullable="false" />
+          <Property Name="RULEID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ALLOWDEVIATINGQUANTITY" Type="Int32" Nullable="false" />
+          <Property Name="MINIMUMDEVIATINGQUANTITY" Type="Decimal" Nullable="false" Precision="32" Scale="16" />
+          <Property Name="MAXIMUMDEVIATINGQUANTITY" Type="Decimal" Nullable="false" Precision="32" Scale="16" />
+          <Property Name="MINIMUMALERTLEVEL" Type="Int32" Nullable="false" />
+          <Property Name="MAXIMUMALERTLEVEL" Type="Int32" Nullable="false" />
+          <Property Name="PRINTKANBANAUTOMATICALLY" Type="Int32" Nullable="false" />
+          <Property Name="USESCIRCULATINGCARDS" Type="Int32" Nullable="false" />
+          <Property Name="REPLACINGKANBANRULE" Type="Int64" Nullable="false" />
+          <Property Name="CARDASSIGNMENTTYPE" Type="Int32" Nullable="false" />
+          <Property Name="KANBANTYPE" Type="Int32" Nullable="false" />
+          <Property Name="CARDSNUMBERSEQUENCE" Type="Int64" Nullable="false" />
+          <Property Name="HANDLINGUNITEMPTYPOLICY" Type="Int32" Nullable="false" />
+          <Property Name="TRIGGERLEVEL" Type="Int32" Nullable="false" />
+          <Property Name="QUANTITY" Type="Decimal" Nullable="false" Precision="32" Scale="16" />
+          <Property Name="PRINTINSTRUCTIONSONCARD" Type="Int32" Nullable="false" />
+          <Property Name="PRINTCARDWITHPICKINGLIST" Type="Int32" Nullable="false" />
+          <Property Name="LEGALENTITY" Type="Int64" Nullable="false" />
+          <Property Name="URGENCYLEVEL" Type="Decimal" Nullable="false" Precision="32" Scale="16" />
+          <Property Name="RECVERSION" Type="Int32" Nullable="false" />
+          <Property Name="PARTITION" Type="Int64" Nullable="false" />
+          <Property Name="RECID" Type="Int64" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MicrosoftDynamicsAXPilModelStoreContainer" CdmEntityContainer="Ax2012R2Entities">
+          <EntitySetMapping Name="INVENTTABLESet">
+            <EntityTypeMapping TypeName="MicrosoftDynamicsAXPilModel.INVENTTABLE">
+              <MappingFragment StoreEntitySet="INVENTTABLE">
+                <ScalarProperty Name="ITEMID" ColumnName="ITEMID" />
+                <ScalarProperty Name="ITEMTYPE" ColumnName="ITEMTYPE" />
+                <ScalarProperty Name="PURCHMODEL" ColumnName="PURCHMODEL" />
+                <ScalarProperty Name="HEIGHT" ColumnName="HEIGHT" />
+                <ScalarProperty Name="WIDTH" ColumnName="WIDTH" />
+                <ScalarProperty Name="SALESMODEL" ColumnName="SALESMODEL" />
+                <ScalarProperty Name="COSTGROUPID" ColumnName="COSTGROUPID" />
+                <ScalarProperty Name="REQGROUPID" ColumnName="REQGROUPID" />
+                <ScalarProperty Name="EPCMANAGER" ColumnName="EPCMANAGER" />
+                <ScalarProperty Name="PRIMARYVENDORID" ColumnName="PRIMARYVENDORID" />
+                <ScalarProperty Name="NETWEIGHT" ColumnName="NETWEIGHT" />
+                <ScalarProperty Name="DEPTH" ColumnName="DEPTH" />
+                <ScalarProperty Name="UNITVOLUME" ColumnName="UNITVOLUME" />
+                <ScalarProperty Name="BOMUNITID" ColumnName="BOMUNITID" />
+                <ScalarProperty Name="ITEMPRICETOLERANCEGROUPID" ColumnName="ITEMPRICETOLERANCEGROUPID" />
+                <ScalarProperty Name="DENSITY" ColumnName="DENSITY" />
+                <ScalarProperty Name="COSTMODEL" ColumnName="COSTMODEL" />
+                <ScalarProperty Name="USEALTITEMID" ColumnName="USEALTITEMID" />
+                <ScalarProperty Name="ALTITEMID" ColumnName="ALTITEMID" />
+                <ScalarProperty Name="MATCHINGPOLICY" ColumnName="MATCHINGPOLICY" />
+                <ScalarProperty Name="INTRACODE" ColumnName="INTRACODE" />
+                <ScalarProperty Name="PRODFLUSHINGPRINCIP" ColumnName="PRODFLUSHINGPRINCIP" />
+                <ScalarProperty Name="MINIMUMPALLETQUANTITY" ColumnName="MINIMUMPALLETQUANTITY" />
+                <ScalarProperty Name="PBAITEMAUTOGENERATED" ColumnName="PBAITEMAUTOGENERATED" />
+                <ScalarProperty Name="WMSARRIVALHANDLINGTIME" ColumnName="WMSARRIVALHANDLINGTIME" />
+                <ScalarProperty Name="BOMMANUALRECEIPT" ColumnName="BOMMANUALRECEIPT" />
+                <ScalarProperty Name="PHANTOM" ColumnName="PHANTOM" />
+                <ScalarProperty Name="INTRAUNIT" ColumnName="INTRAUNIT" />
+                <ScalarProperty Name="BOMLEVEL" ColumnName="BOMLEVEL" />
+                <ScalarProperty Name="BATCHNUMGROUPID" ColumnName="BATCHNUMGROUPID" />
+                <ScalarProperty Name="AUTOREPORTFINISHED" ColumnName="AUTOREPORTFINISHED" />
+                <ScalarProperty Name="ORIGCOUNTRYREGIONID" ColumnName="ORIGCOUNTRYREGIONID" />
+                <ScalarProperty Name="STATISTICSFACTOR" ColumnName="STATISTICSFACTOR" />
+                <ScalarProperty Name="ALTCONFIGID" ColumnName="ALTCONFIGID" />
+                <ScalarProperty Name="STANDARDCONFIGID" ColumnName="STANDARDCONFIGID" />
+                <ScalarProperty Name="PRODPOOLID" ColumnName="PRODPOOLID" />
+                <ScalarProperty Name="PROPERTYID" ColumnName="PROPERTYID" />
+                <ScalarProperty Name="ABCTIEUP" ColumnName="ABCTIEUP" />
+                <ScalarProperty Name="ABCREVENUE" ColumnName="ABCREVENUE" />
+                <ScalarProperty Name="ABCVALUE" ColumnName="ABCVALUE" />
+                <ScalarProperty Name="ABCCONTRIBUTIONMARGIN" ColumnName="ABCCONTRIBUTIONMARGIN" />
+                <ScalarProperty Name="COMMISSIONGROUPID" ColumnName="COMMISSIONGROUPID" />
+                <ScalarProperty Name="SALESPERCENTMARKUP" ColumnName="SALESPERCENTMARKUP" />
+                <ScalarProperty Name="SALESCONTRIBUTIONRATIO" ColumnName="SALESCONTRIBUTIONRATIO" />
+                <ScalarProperty Name="SALESPRICEMODELBASIC" ColumnName="SALESPRICEMODELBASIC" />
+                <ScalarProperty Name="NAMEALIAS" ColumnName="NAMEALIAS" />
+                <ScalarProperty Name="PRODGROUPID" ColumnName="PRODGROUPID" />
+                <ScalarProperty Name="PROJCATEGORYID" ColumnName="PROJCATEGORYID" />
+                <ScalarProperty Name="GROSSDEPTH" ColumnName="GROSSDEPTH" />
+                <ScalarProperty Name="GROSSWIDTH" ColumnName="GROSSWIDTH" />
+                <ScalarProperty Name="GROSSHEIGHT" ColumnName="GROSSHEIGHT" />
+                <ScalarProperty Name="STANDARDPALLETQUANTITY" ColumnName="STANDARDPALLETQUANTITY" />
+                <ScalarProperty Name="QTYPERLAYER" ColumnName="QTYPERLAYER" />
+                <ScalarProperty Name="SORTCODE" ColumnName="SORTCODE" />
+                <ScalarProperty Name="SERIALNUMGROUPID" ColumnName="SERIALNUMGROUPID" />
+                <ScalarProperty Name="ITEMBUYERGROUPID" ColumnName="ITEMBUYERGROUPID" />
+                <ScalarProperty Name="TAXPACKAGINGQTY" ColumnName="TAXPACKAGINGQTY" />
+                <ScalarProperty Name="WMSPALLETTYPEID" ColumnName="WMSPALLETTYPEID" />
+                <ScalarProperty Name="ORIGSTATEID" ColumnName="ORIGSTATEID" />
+                <ScalarProperty Name="WMSPICKINGQTYTIME" ColumnName="WMSPICKINGQTYTIME" />
+                <ScalarProperty Name="TARAWEIGHT" ColumnName="TARAWEIGHT" />
+                <ScalarProperty Name="PACKAGINGGROUPID" ColumnName="PACKAGINGGROUPID" />
+                <ScalarProperty Name="SCRAPVAR" ColumnName="SCRAPVAR" />
+                <ScalarProperty Name="SCRAPCONST" ColumnName="SCRAPCONST" />
+                <ScalarProperty Name="STANDARDINVENTCOLORID" ColumnName="STANDARDINVENTCOLORID" />
+                <ScalarProperty Name="STANDARDINVENTSIZEID" ColumnName="STANDARDINVENTSIZEID" />
+                <ScalarProperty Name="ITEMDIMCOSTPRICE" ColumnName="ITEMDIMCOSTPRICE" />
+                <ScalarProperty Name="ALTINVENTSIZEID" ColumnName="ALTINVENTSIZEID" />
+                <ScalarProperty Name="ALTINVENTCOLORID" ColumnName="ALTINVENTCOLORID" />
+                <ScalarProperty Name="FORECASTDMPINCLUDE" ColumnName="FORECASTDMPINCLUDE" />
+                <ScalarProperty Name="PRODUCT" ColumnName="PRODUCT" />
+                <ScalarProperty Name="PALLETTAGGING" ColumnName="PALLETTAGGING" />
+                <ScalarProperty Name="ITEMTAGGINGLEVEL" ColumnName="ITEMTAGGINGLEVEL" />
+                <ScalarProperty Name="DEFAULTDIMENSION" ColumnName="DEFAULTDIMENSION" />
+                <ScalarProperty Name="FISCALLIFOAVOIDCALC" ColumnName="FISCALLIFOAVOIDCALC" />
+                <ScalarProperty Name="FISCALLIFONORMALVALUE" ColumnName="FISCALLIFONORMALVALUE" />
+                <ScalarProperty Name="FISCALLIFONORMALVALUECALC" ColumnName="FISCALLIFONORMALVALUECALC" />
+                <ScalarProperty Name="BOMCALCGROUPID" ColumnName="BOMCALCGROUPID" />
+                <ScalarProperty Name="INVENTFISCALLIFOGROUP" ColumnName="INVENTFISCALLIFOGROUP" />
+                <ScalarProperty Name="NGPCODESTABLE_FR" ColumnName="NGPCODESTABLE_FR" />
+                <ScalarProperty Name="ORIGCOUNTYID" ColumnName="ORIGCOUNTYID" />
+                <ScalarProperty Name="TAXFISCALCLASSIFICATION_BR" ColumnName="TAXFISCALCLASSIFICATION_BR" />
+                <ScalarProperty Name="PBAITEMCONFIGURABLE" ColumnName="PBAITEMCONFIGURABLE" />
+                <ScalarProperty Name="PBAINVENTITEMGROUPID" ColumnName="PBAINVENTITEMGROUPID" />
+                <ScalarProperty Name="PBAHIDEDIALOG" ColumnName="PBAHIDEDIALOG" />
+                <ScalarProperty Name="PBAHIDEAPPROVAL" ColumnName="PBAHIDEAPPROVAL" />
+                <ScalarProperty Name="PBAAUTOSTART" ColumnName="PBAAUTOSTART" />
+                <ScalarProperty Name="PBAMANDATORYCONFIG" ColumnName="PBAMANDATORYCONFIG" />
+                <ScalarProperty Name="INVENTPRODUCTTYPE_BR" ColumnName="INVENTPRODUCTTYPE_BR" />
+                <ScalarProperty Name="TAXATIONORIGIN_BR" ColumnName="TAXATIONORIGIN_BR" />
+                <ScalarProperty Name="TAXSERVICECODE_BR" ColumnName="TAXSERVICECODE_BR" />
+                <ScalarProperty Name="EXCISETARIFFCODES_IN" ColumnName="EXCISETARIFFCODES_IN" />
+                <ScalarProperty Name="CUSTOMSEXPORTTARIFFCODETABLE_IN" ColumnName="CUSTOMSEXPORTTARIFFCODETABLE_IN" />
+                <ScalarProperty Name="CUSTOMSIMPORTTARIFFCODETABLE_IN" ColumnName="CUSTOMSIMPORTTARIFFCODETABLE_IN" />
+                <ScalarProperty Name="SERVICECODETABLE_IN" ColumnName="SERVICECODETABLE_IN" />
+                <ScalarProperty Name="EXIMPRODUCTGROUPTABLE_IN" ColumnName="EXIMPRODUCTGROUPTABLE_IN" />
+                <ScalarProperty Name="PACKING_RU" ColumnName="PACKING_RU" />
+                <ScalarProperty Name="ASSETGROUPID_RU" ColumnName="ASSETGROUPID_RU" />
+                <ScalarProperty Name="ASSETID_RU" ColumnName="ASSETID_RU" />
+                <ScalarProperty Name="INTRASTATEXCLUDE" ColumnName="INTRASTATEXCLUDE" />
+                <ScalarProperty Name="INTRASTATPROCID_CZ" ColumnName="INTRASTATPROCID_CZ" />
+                <ScalarProperty Name="PKWIUCODE_PL" ColumnName="PKWIUCODE_PL" />
+                <ScalarProperty Name="EXCEPTIONCODE_BR" ColumnName="EXCEPTIONCODE_BR" />
+                <ScalarProperty Name="ICMSONSERVICE_BR" ColumnName="ICMSONSERVICE_BR" />
+                <ScalarProperty Name="PDSCWWMSSTANDARDPALLETQTY" ColumnName="PDSCWWMSSTANDARDPALLETQTY" />
+                <ScalarProperty Name="PDSCWWMSMINIMUMPALLETQTY" ColumnName="PDSCWWMSMINIMUMPALLETQTY" />
+                <ScalarProperty Name="PDSCWWMSQTYPERLAYER" ColumnName="PDSCWWMSQTYPERLAYER" />
+                <ScalarProperty Name="ALTINVENTSTYLEID" ColumnName="ALTINVENTSTYLEID" />
+                <ScalarProperty Name="MARKUPCODE_RU" ColumnName="MARKUPCODE_RU" />
+                <ScalarProperty Name="NRTAXGROUP_LV" ColumnName="NRTAXGROUP_LV" />
+                <ScalarProperty Name="PDSBASEATTRIBUTEID" ColumnName="PDSBASEATTRIBUTEID" />
+                <ScalarProperty Name="PDSBESTBEFORE" ColumnName="PDSBESTBEFORE" />
+                <ScalarProperty Name="PDSFREIGHTALLOCATIONGROUPID" ColumnName="PDSFREIGHTALLOCATIONGROUPID" />
+                <ScalarProperty Name="PDSITEMREBATEGROUPID" ColumnName="PDSITEMREBATEGROUPID" />
+                <ScalarProperty Name="PDSPOTENCYATTRIBRECORDING" ColumnName="PDSPOTENCYATTRIBRECORDING" />
+                <ScalarProperty Name="PDSSHELFADVICE" ColumnName="PDSSHELFADVICE" />
+                <ScalarProperty Name="PDSSHELFLIFE" ColumnName="PDSSHELFLIFE" />
+                <ScalarProperty Name="PDSTARGETFACTOR" ColumnName="PDSTARGETFACTOR" />
+                <ScalarProperty Name="PDSVENDORCHECKITEM" ColumnName="PDSVENDORCHECKITEM" />
+                <ScalarProperty Name="PMFPLANNINGITEMID" ColumnName="PMFPLANNINGITEMID" />
+                <ScalarProperty Name="PMFPRODUCTTYPE" ColumnName="PMFPRODUCTTYPE" />
+                <ScalarProperty Name="PMFYIELDPCT" ColumnName="PMFYIELDPCT" />
+                <ScalarProperty Name="SADRATECODE_PL" ColumnName="SADRATECODE_PL" />
+                <ScalarProperty Name="SKIPINTRACOMPANYSYNC_RU" ColumnName="SKIPINTRACOMPANYSYNC_RU" />
+                <ScalarProperty Name="STANDARDINVENTSTYLEID" ColumnName="STANDARDINVENTSTYLEID" />
+                <ScalarProperty Name="DAXINTEGRATIONKEY" ColumnName="DAXINTEGRATIONKEY" />
+                <ScalarProperty Name="MODIFIEDDATETIME" ColumnName="MODIFIEDDATETIME" />
+                <ScalarProperty Name="CREATEDDATETIME" ColumnName="CREATEDDATETIME" />
+                <ScalarProperty Name="DATAAREAID" ColumnName="DATAAREAID" />
+                <ScalarProperty Name="RECVERSION" ColumnName="RECVERSION" />
+                <ScalarProperty Name="PARTITION" ColumnName="PARTITION" />
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+                <ScalarProperty Name="BFPSTRUCTURETYPE" ColumnName="BFPSTRUCTURETYPE" />
+                <ScalarProperty Name="BFPSTRUCTUREID" ColumnName="BFPSTRUCTUREID" />
+                <ScalarProperty Name="BFPBOMSTRUCTUREITEMID" ColumnName="BFPBOMSTRUCTUREITEMID" />
+                <ScalarProperty Name="BFPROUTESTRUCTUREITEMID" ColumnName="BFPROUTESTRUCTUREITEMID" />
+                <ScalarProperty Name="BFPSTRUCTUREGROUPS" ColumnName="BFPSTRUCTUREGROUPS" />
+                <ScalarProperty Name="BFPREFITEMID" ColumnName="BFPREFITEMID" />
+                <ScalarProperty Name="BFPITEMTYPE" ColumnName="BFPITEMTYPE" />
+                <ScalarProperty Name="BFPBOMTEMPLATECREATED" ColumnName="BFPBOMTEMPLATECREATED" />
+                <ScalarProperty Name="BFPROUTETEMPLATECREATED" ColumnName="BFPROUTETEMPLATECREATED" />
+                <ScalarProperty Name="BFPAUTOMATICGTIN" ColumnName="BFPAUTOMATICGTIN" />
+                <ScalarProperty Name="BFPNSDESCGROUPID" ColumnName="BFPNSDESCGROUPID" />
+                <ScalarProperty Name="BFPPARENTITEMID" ColumnName="BFPPARENTITEMID" />
+                <ScalarProperty Name="BFPSERVICEMODELREF" ColumnName="BFPSERVICEMODELREF" />
+                <ScalarProperty Name="CRCTYPEPRODUCTSERVICECODE" ColumnName="CRCTYPEPRODUCTSERVICECODE" />
+                <ScalarProperty Name="GUAAPLICARETENCIONRENTA" ColumnName="GUAAPLICARETENCIONRENTA" />
+                <ScalarProperty Name="APCRUDE" ColumnName="APCRUDE" />
+                <ScalarProperty Name="APWASHED" ColumnName="APWASHED" />
+                <ScalarProperty Name="APCUTWIDTH" ColumnName="APCUTWIDTH" />
+                <ScalarProperty Name="APTORSION" ColumnName="APTORSION" />
+                <ScalarProperty Name="APSTRETCH" ColumnName="APSTRETCH" />
+                <ScalarProperty Name="APSHRINK" ColumnName="APSHRINK" />
+                <ScalarProperty Name="APITEMIDSECOND" ColumnName="APITEMIDSECOND" />
+                <ScalarProperty Name="APITEMIDTHIRD" ColumnName="APITEMIDTHIRD" />
+                <ScalarProperty Name="BFPITEMCODE" ColumnName="BFPITEMCODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ECORESPRODUCTTRANSLATIONSet">
+            <EntityTypeMapping TypeName="MicrosoftDynamicsAXPilModel.ECORESPRODUCTTRANSLATION">
+              <MappingFragment StoreEntitySet="ECORESPRODUCTTRANSLATION">
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+                <ScalarProperty Name="PARTITION" ColumnName="PARTITION" />
+                <ScalarProperty Name="RECVERSION" ColumnName="RECVERSION" />
+                <ScalarProperty Name="LANGUAGEID" ColumnName="LANGUAGEID" />
+                <ScalarProperty Name="PRODUCT" ColumnName="PRODUCT" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ECORESPRODUCTSet">
+            <EntityTypeMapping TypeName="MicrosoftDynamicsAXPilModel.ECORESPRODUCT">
+              <MappingFragment StoreEntitySet="ECORESPRODUCT">
+                <ScalarProperty Name="BFPSTRUCTURETYPE" ColumnName="BFPSTRUCTURETYPE" />
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+                <ScalarProperty Name="PARTITION" ColumnName="PARTITION" />
+                <ScalarProperty Name="RELATIONTYPE" ColumnName="RELATIONTYPE" />
+                <ScalarProperty Name="RECVERSION" ColumnName="RECVERSION" />
+                <ScalarProperty Name="PDSCWPRODUCT" ColumnName="PDSCWPRODUCT" />
+                <ScalarProperty Name="PRODUCTTYPE" ColumnName="PRODUCTTYPE" />
+                <ScalarProperty Name="SEARCHNAME" ColumnName="SEARCHNAME" />
+                <ScalarProperty Name="DISPLAYPRODUCTNUMBER" ColumnName="DISPLAYPRODUCTNUMBER" />
+                <ScalarProperty Name="INSTANCERELATIONTYPE" ColumnName="INSTANCERELATIONTYPE" />
+                <ScalarProperty Name="RETAILSTYLEGROUPID" ColumnName="RETAILSTYLEGROUPID" />
+                <ScalarProperty Name="RETAILSIZEGROUPID" ColumnName="RETAILSIZEGROUPID" />
+                <ScalarProperty Name="RETAILCOLORGROUPID" ColumnName="RETAILCOLORGROUPID" />
+                <ScalarProperty Name="VARIANTCONFIGURATIONTECHNOLOGY" ColumnName="VARIANTCONFIGURATIONTECHNOLOGY" />
+                <ScalarProperty Name="RETAITOTALWEIGHT" ColumnName="RETAITOTALWEIGHT" />
+                <ScalarProperty Name="PRODUCTMASTER" ColumnName="PRODUCTMASTER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INVENTDIMSet">
+            <EntityTypeMapping TypeName="MicrosoftDynamicsAXPilModel.INVENTDIM">
+              <MappingFragment StoreEntitySet="INVENTDIM">
+                <ScalarProperty Name="BFPUSERDIM2ID" ColumnName="BFPUSERDIM2ID" />
+                <ScalarProperty Name="BFPUSERDIM1ID" ColumnName="BFPUSERDIM1ID" />
+                <ScalarProperty Name="BFPPUTUPID" ColumnName="BFPPUTUPID" />
+                <ScalarProperty Name="BFPQUALITYID" ColumnName="BFPQUALITYID" />
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+                <ScalarProperty Name="PARTITION" ColumnName="PARTITION" />
+                <ScalarProperty Name="RECVERSION" ColumnName="RECVERSION" />
+                <ScalarProperty Name="DATAAREAID" ColumnName="DATAAREAID" />
+                <ScalarProperty Name="MODIFIEDDATETIME" ColumnName="MODIFIEDDATETIME" />
+                <ScalarProperty Name="SHA1HASH" ColumnName="SHA1HASH" />
+                <ScalarProperty Name="INVENTSTYLEID" ColumnName="INVENTSTYLEID" />
+                <ScalarProperty Name="INVENTOWNERID_RU" ColumnName="INVENTOWNERID_RU" />
+                <ScalarProperty Name="INVENTPROFILEID_RU" ColumnName="INVENTPROFILEID_RU" />
+                <ScalarProperty Name="INVENTGTDID_RU" ColumnName="INVENTGTDID_RU" />
+                <ScalarProperty Name="INVENTSITEID" ColumnName="INVENTSITEID" />
+                <ScalarProperty Name="INVENTCOLORID" ColumnName="INVENTCOLORID" />
+                <ScalarProperty Name="INVENTSIZEID" ColumnName="INVENTSIZEID" />
+                <ScalarProperty Name="CONFIGID" ColumnName="CONFIGID" />
+                <ScalarProperty Name="INVENTLOCATIONID" ColumnName="INVENTLOCATIONID" />
+                <ScalarProperty Name="INVENTSERIALID" ColumnName="INVENTSERIALID" />
+                <ScalarProperty Name="WMSPALLETID" ColumnName="WMSPALLETID" />
+                <ScalarProperty Name="WMSLOCATIONID" ColumnName="WMSLOCATIONID" />
+                <ScalarProperty Name="INVENTBATCHID" ColumnName="INVENTBATCHID" />
+                <ScalarProperty Name="INVENTDIMID" ColumnName="INVENTDIMID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KANBANSet">
+            <EntityTypeMapping TypeName="MicrosoftDynamicsAXPilModel.KANBAN">
+              <MappingFragment StoreEntitySet="KANBAN">
+                <ScalarProperty Name="APPARENTKANBANID" ColumnName="APPARENTKANBANID" />
+                <ScalarProperty Name="APKANBANCUTSHEETID" ColumnName="APKANBANCUTSHEETID" />
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+                <ScalarProperty Name="PARTITION" ColumnName="PARTITION" />
+                <ScalarProperty Name="RECVERSION" ColumnName="RECVERSION" />
+                <ScalarProperty Name="LEGALENTITY" ColumnName="LEGALENTITY" />
+                <ScalarProperty Name="KANBANCARDID" ColumnName="KANBANCARDID" />
+                <ScalarProperty Name="LASTPLANACTIVITYNAME" ColumnName="LASTPLANACTIVITYNAME" />
+                <ScalarProperty Name="FIRSTPLANACTIVITYNAME" ColumnName="FIRSTPLANACTIVITYNAME" />
+                <ScalarProperty Name="INVENTTRANSDATAAREAID" ColumnName="INVENTTRANSDATAAREAID" />
+                <ScalarProperty Name="BOMDATAAREAID" ColumnName="BOMDATAAREAID" />
+                <ScalarProperty Name="INVENTDIMDATAAREAID" ColumnName="INVENTDIMDATAAREAID" />
+                <ScalarProperty Name="BOMID" ColumnName="BOMID" />
+                <ScalarProperty Name="ITEMDATAAREAID" ColumnName="ITEMDATAAREAID" />
+                <ScalarProperty Name="DEFAULTDIMENSION" ColumnName="DEFAULTDIMENSION" />
+                <ScalarProperty Name="EMPTIEDDATETIMETZID" ColumnName="EMPTIEDDATETIMETZID" />
+                <ScalarProperty Name="EMPTIEDDATETIME" ColumnName="EMPTIEDDATETIME" />
+                <ScalarProperty Name="EXPECTEDDATETIMETZID" ColumnName="EXPECTEDDATETIMETZID" />
+                <ScalarProperty Name="EXPECTEDDATETIME" ColumnName="EXPECTEDDATETIME" />
+                <ScalarProperty Name="DUEDATETIMETZID" ColumnName="DUEDATETIMETZID" />
+                <ScalarProperty Name="DUEDATETIME" ColumnName="DUEDATETIME" />
+                <ScalarProperty Name="INVENTTRANSID" ColumnName="INVENTTRANSID" />
+                <ScalarProperty Name="MANUAL" ColumnName="MANUAL" />
+                <ScalarProperty Name="EXPRESS" ColumnName="EXPRESS" />
+                <ScalarProperty Name="QUANTITYRECEIVED" ColumnName="QUANTITYRECEIVED" />
+                <ScalarProperty Name="QUANTITYORDERED" ColumnName="QUANTITYORDERED" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="CURRENTJOB" ColumnName="CURRENTJOB" />
+                <ScalarProperty Name="INVENTDIMID" ColumnName="INVENTDIMID" />
+                <ScalarProperty Name="ITEMID" ColumnName="ITEMID" />
+                <ScalarProperty Name="KANBANRULE" ColumnName="KANBANRULE" />
+                <ScalarProperty Name="KANBANID" ColumnName="KANBANID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KANBANCARDSet">
+            <EntityTypeMapping TypeName="MicrosoftDynamicsAXPilModel.KANBANCARD">
+              <MappingFragment StoreEntitySet="KANBANCARD">
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+                <ScalarProperty Name="PARTITION" ColumnName="PARTITION" />
+                <ScalarProperty Name="RECVERSION" ColumnName="RECVERSION" />
+                <ScalarProperty Name="KANBAN" ColumnName="KANBAN" />
+                <ScalarProperty Name="CARDTYPE" ColumnName="CARDTYPE" />
+                <ScalarProperty Name="PRINTSTATUS" ColumnName="PRINTSTATUS" />
+                <ScalarProperty Name="KANBANRULE" ColumnName="KANBANRULE" />
+                <ScalarProperty Name="CARDID" ColumnName="CARDID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KANBANJOBSet">
+            <EntityTypeMapping TypeName="MicrosoftDynamicsAXPilModel.KANBANJOB">
+              <MappingFragment StoreEntitySet="KANBANJOB">
+                <ScalarProperty Name="APKANBANSENDID" ColumnName="APKANBANSENDID" />
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+                <ScalarProperty Name="PARTITION" ColumnName="PARTITION" />
+                <ScalarProperty Name="RECVERSION" ColumnName="RECVERSION" />
+                <ScalarProperty Name="ACTUALPREPAREDDATETIMETZID" ColumnName="ACTUALPREPAREDDATETIMETZID" />
+                <ScalarProperty Name="ACTUALPREPAREDDATETIME" ColumnName="ACTUALPREPAREDDATETIME" />
+                <ScalarProperty Name="LEANSCHEDULEITEMRATIO" ColumnName="LEANSCHEDULEITEMRATIO" />
+                <ScalarProperty Name="SEQUENCE" ColumnName="SEQUENCE" />
+                <ScalarProperty Name="SOURCEDOCUMENTHEADER" ColumnName="SOURCEDOCUMENTHEADER" />
+                <ScalarProperty Name="DEFAULTDIMENSION" ColumnName="DEFAULTDIMENSION" />
+                <ScalarProperty Name="PLANACTIVITYNAME" ColumnName="PLANACTIVITYNAME" />
+                <ScalarProperty Name="WORKCELL" ColumnName="WORKCELL" />
+                <ScalarProperty Name="LEANSCHEDULEGROUPCOLOR" ColumnName="LEANSCHEDULEGROUPCOLOR" />
+                <ScalarProperty Name="LEANSCHEDULEGROUPNAME" ColumnName="LEANSCHEDULEGROUPNAME" />
+                <ScalarProperty Name="EXECUTABLE" ColumnName="EXECUTABLE" />
+                <ScalarProperty Name="LEANPRODUCTIONFLOWACTIVITY" ColumnName="LEANPRODUCTIONFLOWACTIVITY" />
+                <ScalarProperty Name="WMSLOCATIONDATAAREAID" ColumnName="WMSLOCATIONDATAAREAID" />
+                <ScalarProperty Name="INVENTLOCATIONDATAAREAID" ColumnName="INVENTLOCATIONDATAAREAID" />
+                <ScalarProperty Name="INVENTLOCATIONID" ColumnName="INVENTLOCATIONID" />
+                <ScalarProperty Name="WMSLOCATIONID" ColumnName="WMSLOCATIONID" />
+                <ScalarProperty Name="ISSUEINVENTTRANSDATAAREAID" ColumnName="ISSUEINVENTTRANSDATAAREAID" />
+                <ScalarProperty Name="INVENTTRANSDATAAREAID" ColumnName="INVENTTRANSDATAAREAID" />
+                <ScalarProperty Name="ISSUEINVENTDIMDATAAREAID" ColumnName="ISSUEINVENTDIMDATAAREAID" />
+                <ScalarProperty Name="INVENTDIMDATAAREAID" ColumnName="INVENTDIMDATAAREAID" />
+                <ScalarProperty Name="DUEDATETIMETZID" ColumnName="DUEDATETIMETZID" />
+                <ScalarProperty Name="DUEDATETIME" ColumnName="DUEDATETIME" />
+                <ScalarProperty Name="EXPECTEDDATETIMETZID" ColumnName="EXPECTEDDATETIMETZID" />
+                <ScalarProperty Name="EXPECTEDDATETIME" ColumnName="EXPECTEDDATETIME" />
+                <ScalarProperty Name="QUANTITYSCRAPPED" ColumnName="QUANTITYSCRAPPED" />
+                <ScalarProperty Name="QUANTITYRECEIVED" ColumnName="QUANTITYRECEIVED" />
+                <ScalarProperty Name="QUANTITYORDERED" ColumnName="QUANTITYORDERED" />
+                <ScalarProperty Name="ACTUALENDDATETIMETZID" ColumnName="ACTUALENDDATETIMETZID" />
+                <ScalarProperty Name="ACTUALENDDATETIME" ColumnName="ACTUALENDDATETIME" />
+                <ScalarProperty Name="ACTUALSTARTDATETIMETZID" ColumnName="ACTUALSTARTDATETIMETZID" />
+                <ScalarProperty Name="ACTUALSTARTDATETIME" ColumnName="ACTUALSTARTDATETIME" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="ISSUEINVENTDIMID" ColumnName="ISSUEINVENTDIMID" />
+                <ScalarProperty Name="INVENTDIMID" ColumnName="INVENTDIMID" />
+                <ScalarProperty Name="ISSUEINVENTTRANSID" ColumnName="ISSUEINVENTTRANSID" />
+                <ScalarProperty Name="INVENTTRANSID" ColumnName="INVENTTRANSID" />
+                <ScalarProperty Name="KANBAN" ColumnName="KANBAN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KANBANJOBSCHEDULESet">
+            <EntityTypeMapping TypeName="MicrosoftDynamicsAXPilModel.KANBANJOBSCHEDULE">
+              <MappingFragment StoreEntitySet="KANBANJOBSCHEDULE">
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+                <ScalarProperty Name="PARTITION" ColumnName="PARTITION" />
+                <ScalarProperty Name="RECVERSION" ColumnName="RECVERSION" />
+                <ScalarProperty Name="WORKCELL" ColumnName="WORKCELL" />
+                <ScalarProperty Name="EXPECTEDDATETIMETZID" ColumnName="EXPECTEDDATETIMETZID" />
+                <ScalarProperty Name="EXPECTEDDATETIME" ColumnName="EXPECTEDDATETIME" />
+                <ScalarProperty Name="JOB" ColumnName="JOB" />
+                <ScalarProperty Name="SEQUENCE" ColumnName="SEQUENCE" />
+                <ScalarProperty Name="PLANNEDPERIOD" ColumnName="PLANNEDPERIOD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KANBANRULESet">
+            <EntityTypeMapping TypeName="MicrosoftDynamicsAXPilModel.KANBANRULE">
+              <MappingFragment StoreEntitySet="KANBANRULE">
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+                <ScalarProperty Name="PARTITION" ColumnName="PARTITION" />
+                <ScalarProperty Name="RECVERSION" ColumnName="RECVERSION" />
+                <ScalarProperty Name="URGENCYLEVEL" ColumnName="URGENCYLEVEL" />
+                <ScalarProperty Name="LEGALENTITY" ColumnName="LEGALENTITY" />
+                <ScalarProperty Name="PRINTCARDWITHPICKINGLIST" ColumnName="PRINTCARDWITHPICKINGLIST" />
+                <ScalarProperty Name="PRINTINSTRUCTIONSONCARD" ColumnName="PRINTINSTRUCTIONSONCARD" />
+                <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+                <ScalarProperty Name="TRIGGERLEVEL" ColumnName="TRIGGERLEVEL" />
+                <ScalarProperty Name="HANDLINGUNITEMPTYPOLICY" ColumnName="HANDLINGUNITEMPTYPOLICY" />
+                <ScalarProperty Name="CARDSNUMBERSEQUENCE" ColumnName="CARDSNUMBERSEQUENCE" />
+                <ScalarProperty Name="KANBANTYPE" ColumnName="KANBANTYPE" />
+                <ScalarProperty Name="CARDASSIGNMENTTYPE" ColumnName="CARDASSIGNMENTTYPE" />
+                <ScalarProperty Name="REPLACINGKANBANRULE" ColumnName="REPLACINGKANBANRULE" />
+                <ScalarProperty Name="USESCIRCULATINGCARDS" ColumnName="USESCIRCULATINGCARDS" />
+                <ScalarProperty Name="PRINTKANBANAUTOMATICALLY" ColumnName="PRINTKANBANAUTOMATICALLY" />
+                <ScalarProperty Name="MAXIMUMALERTLEVEL" ColumnName="MAXIMUMALERTLEVEL" />
+                <ScalarProperty Name="MINIMUMALERTLEVEL" ColumnName="MINIMUMALERTLEVEL" />
+                <ScalarProperty Name="MAXIMUMDEVIATINGQUANTITY" ColumnName="MAXIMUMDEVIATINGQUANTITY" />
+                <ScalarProperty Name="MINIMUMDEVIATINGQUANTITY" ColumnName="MINIMUMDEVIATINGQUANTITY" />
+                <ScalarProperty Name="ALLOWDEVIATINGQUANTITY" ColumnName="ALLOWDEVIATINGQUANTITY" />
+                <ScalarProperty Name="RULEID" ColumnName="RULEID" />
+                <ScalarProperty Name="KANBANFLOW" ColumnName="KANBANFLOW" />
+                <ScalarProperty Name="REPLENISHMENTSTRATEGY" ColumnName="REPLENISHMENTSTRATEGY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

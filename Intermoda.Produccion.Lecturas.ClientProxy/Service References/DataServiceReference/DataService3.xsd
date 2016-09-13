@@ -1,0 +1,1289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/ProduccionLecturas/DataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" />
+  <xs:import schemaLocation="http://localhost/ProduccionLecturas/DataService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.LbDatPro" />
+  <xs:import schemaLocation="http://localhost/ProduccionLecturas/DataService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" />
+  <xs:element name="LavanderiaCentroTrabajoUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="centroTrabajo" nillable="true" type="q1:CentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaCentroTrabajoUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaCentroTrabajoUpdateResult" nillable="true" type="q2:CentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaCentroTrabajoDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centroTrabajoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaCentroTrabajoDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaCentroTrabajoGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centroTrabajoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaCentroTrabajoGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaCentroTrabajoGetResult" nillable="true" type="q3:CentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaCentroTrabajoGetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaCentroTrabajoGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaCentroTrabajoGetAllResult" nillable="true" type="q4:ArrayOfCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaCentroTrabajoGetActivos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaCentroTrabajoGetActivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaCentroTrabajoGetActivosResult" nillable="true" type="q5:ArrayOfCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaCentroTrabajoGetByOperacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="operacionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaCentroTrabajoGetByOperacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaCentroTrabajoGetByOperacionResult" nillable="true" type="q6:ArrayOfCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaCentroTrabajoGetAllLavanderia">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaCentroTrabajoGetAllLavanderiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaCentroTrabajoGetAllLavanderiaResult" nillable="true" type="q7:ArrayOfCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaProcesoUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="proceso" nillable="true" type="q8:ProcesoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaProcesoUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaProcesoUpdateResult" nillable="true" type="q9:ProcesoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaProcesoDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="procesoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaProcesoDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaProcesoGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="procesoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaProcesoGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaProcesoGetResult" nillable="true" type="q10:ProcesoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaProcesoGetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaProcesoGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaProcesoGetAllResult" nillable="true" type="q11:ArrayOfProcesoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaProcesoGetByCentroTrabajo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centroTrabajoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaProcesoGetByCentroTrabajoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaProcesoGetByCentroTrabajoResult" nillable="true" type="q12:ArrayOfProcesoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="operacion" nillable="true" type="q13:OperacionBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaOperacionUpdateResult" nillable="true" type="q14:OperacionBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="operacionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="operacionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaOperacionGetResult" nillable="true" type="q15:OperacionBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionGetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaOperacionGetAllResult" nillable="true" type="q16:ArrayOfOperacionBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionGetAllLavanderia">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionGetAllLavanderiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaOperacionGetAllLavanderiaResult" nillable="true" type="q17:ArrayOfOperacionBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionGetHumedas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centroTrabajoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionGetHumedasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaOperacionGetHumedasResult" nillable="true" type="q18:ArrayOfOperacionBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionCentroTrabajoUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="operacionCentroTrabajo" nillable="true" type="q19:OperacionCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionCentroTrabajoUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaOperacionCentroTrabajoUpdateResult" nillable="true" type="q20:OperacionCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionCentroTrabajoDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="operacionCentroTrabajoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionCentroTrabajoDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionCentroTrabajoGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="operacionCentroTrabajoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionCentroTrabajoGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaOperacionCentroTrabajoGetResult" nillable="true" type="q21:OperacionCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionCentroTrabajoGetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionCentroTrabajoGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaOperacionCentroTrabajoGetAllResult" nillable="true" type="q22:ArrayOfOperacionCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionCentroTrabajoGetByCentroTrabajo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centroTrabajoCodigo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionCentroTrabajoGetByCentroTrabajoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaOperacionCentroTrabajoGetByCentroTrabajoResult" nillable="true" type="q23:ArrayOfOperacionCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionCentroTrabajoGetByOperacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="operacionCodigo" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LavanderiaOperacionCentroTrabajoGetByOperacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lavanderia" minOccurs="0" name="LavanderiaOperacionCentroTrabajoGetByOperacionResult" nillable="true" type="q24:ArrayOfOperacionCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmpleadoGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companiaCodigo" type="xs:short" />
+        <xs:element minOccurs="0" name="empleadoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmpleadoGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.LbDatPro" minOccurs="0" name="EmpleadoGetResult" nillable="true" type="q25:EmpleadoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmpleadoGetAllActivos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmpleadoGetAllActivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.LbDatPro" minOccurs="0" name="EmpleadoGetAllActivosResult" nillable="true" type="q26:ArrayOfEmpleadoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InasistenciaGetByFecha">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InasistenciaGetByFechaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.LbDatPro" minOccurs="0" name="InasistenciaGetByFechaResult" nillable="true" type="q27:ArrayOfInasistenciaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InasistenciaGetByEmpleadoFecha">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companiaCodigo" type="xs:short" />
+        <xs:element minOccurs="0" name="empleadoCodigo" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InasistenciaGetByEmpleadoFechaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.LbDatPro" minOccurs="0" name="InasistenciaGetByEmpleadoFechaResult" nillable="true" type="q28:ArrayOfInasistenciaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="centroTrabajo" nillable="true" type="q29:CentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="CentroTrabajoUpdateResult" nillable="true" type="q30:CentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centroTrabajoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centroTrabajoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="CentroTrabajoGetResult" nillable="true" type="q31:CentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoGetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="CentroTrabajoGetAllResult" nillable="true" type="q32:ArrayOfCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoGetActivos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoGetActivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="CentroTrabajoGetActivosResult" nillable="true" type="q33:ArrayOfCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoClasificacionUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="centroTrabajoClasificacion" nillable="true" type="q34:CentroTrabajoClasificacionBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoClasificacionUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="CentroTrabajoClasificacionUpdateResult" nillable="true" type="q35:CentroTrabajoClasificacionBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoClasificacionDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centroTrabajoClasificacionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoClasificacionDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoClasificacionGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centroTrabajoClasificacionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoClasificacionGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="CentroTrabajoClasificacionGetResult" nillable="true" type="q36:CentroTrabajoClasificacionBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoClasificacionGetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoClasificacionGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="CentroTrabajoClasificacionGetAllResult" nillable="true" type="q37:ArrayOfCentroTrabajoClasificacionBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoClasificacionGetAllActivos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoClasificacionGetAllActivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="CentroTrabajoClasificacionGetAllActivosResult" nillable="true" type="q38:ArrayOfCentroTrabajoClasificacionBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoClasificacionGetByCentroTrabajo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centroTrabajoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoClasificacionGetByCentroTrabajoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="CentroTrabajoClasificacionGetByCentroTrabajoResult" nillable="true" type="q39:ArrayOfCentroTrabajoClasificacionBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoClasificacionGetByCentroTrabajoActivos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centroTrabajoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroTrabajoClasificacionGetByCentroTrabajoActivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="CentroTrabajoClasificacionGetByCentroTrabajoActivosResult" nillable="true" type="q40:ArrayOfCentroTrabajoClasificacionBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrupoUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="grupoBusiness" nillable="true" type="q41:GrupoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrupoUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="GrupoUpdateResult" nillable="true" type="q42:GrupoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrupoDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="grupoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrupoDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrupoGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="grupoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrupoGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="GrupoGetResult" nillable="true" type="q43:GrupoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrupoGetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrupoGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="GrupoGetAllResult" nillable="true" type="q44:ArrayOfGrupoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrupoGetAllActivos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrupoGetAllActivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="GrupoGetAllActivosResult" nillable="true" type="q45:ArrayOfGrupoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrupoGetByLinea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lineaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrupoGetByLineaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="GrupoGetByLineaResult" nillable="true" type="q46:GrupoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrupoCopiarSemana">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="desde" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="hasta" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrupoCopiarSemanaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrupoHayDataSemana">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrupoHayDataSemanaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GrupoHayDataSemanaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="jornada" nillable="true" type="q47:JornadaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="JornadaUpdateResult" nillable="true" type="q48:JornadaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jornadaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jornadaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="JornadaGetResult" nillable="true" type="q49:JornadaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaGetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="JornadaGetAllResult" nillable="true" type="q50:ArrayOfJornadaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaDetalleUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="jornadaDetalle" nillable="true" type="q51:JornadaDetalleBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaDetalleUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="JornadaDetalleUpdateResult" nillable="true" type="q52:JornadaDetalleBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaDetalleDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jornadaDetalleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaDetalleDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaDetalleGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jornadaDetalleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaDetalleGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="JornadaDetalleGetResult" nillable="true" type="q53:JornadaDetalleBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaDetalleGetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaDetalleGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="JornadaDetalleGetAllResult" nillable="true" type="q54:ArrayOfJornadaDetalleBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaDetalleGetByJornada">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jornadaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JornadaDetalleGetByJornadaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="JornadaDetalleGetByJornadaResult" nillable="true" type="q55:ArrayOfJornadaDetalleBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="linea" nillable="true" type="q56:LineaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="LineaUpdateResult" nillable="true" type="q57:LineaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lineaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lineaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="LineaGetResult" nillable="true" type="q58:LineaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaGetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="LineaGetAllResult" nillable="true" type="q59:ArrayOfLineaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaGetAllActivas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaGetAllActivasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="LineaGetAllActivasResult" nillable="true" type="q60:ArrayOfLineaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaGetByGrupo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="grupoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaGetByGrupoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="LineaGetByGrupoResult" nillable="true" type="q61:ArrayOfLineaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaGetByGrupoActivas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="grupoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaGetByGrupoActivasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="LineaGetByGrupoActivasResult" nillable="true" type="q62:ArrayOfLineaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaDetalleUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="lineaDetalle" nillable="true" type="q63:LineaDetalleBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaDetalleUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="LineaDetalleUpdateResult" nillable="true" type="q64:LineaDetalleBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaDetalleDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lineaDetalle" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaDetalleDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaDetalleGetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaDetalleGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="LineaDetalleGetAllResult" nillable="true" type="q65:ArrayOfLineaDetalleBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaDetalleGetByLinea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lineaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaDetalleGetByLineaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="LineaDetalleGetByLineaResult" nillable="true" type="q66:ArrayOfLineaDetalleBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaDetalleGetByLineaModulo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lineaId" type="xs:int" />
+        <xs:element minOccurs="0" name="moduloId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineaDetalleGetByLineaModuloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="LineaDetalleGetByLineaModuloResult" nillable="true" type="q67:ArrayOfLineaDetalleBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="modulo" nillable="true" type="q68:ModuloBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="ModuloUpdateResult" nillable="true" type="q69:ModuloBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="moduloId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="moduloId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="ModuloGetResult" nillable="true" type="q70:ModuloBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloGetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="ModuloGetAllResult" nillable="true" type="q71:ArrayOfModuloBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloGetAllActivos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloGetAllActivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="ModuloGetAllActivosResult" nillable="true" type="q72:ArrayOfModuloBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloGetByCentroTrabajo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centroTrabajoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloGetByCentroTrabajoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="ModuloGetByCentroTrabajoResult" nillable="true" type="q73:ArrayOfModuloBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloGetByCentroTrabajoActivos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centroTrabajoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloGetByCentroTrabajoActivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="ModuloGetByCentroTrabajoActivosResult" nillable="true" type="q74:ArrayOfModuloBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="moduloSemana" nillable="true" type="q75:ModuloSemanaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="ModuloSemanaUpdateResult" nillable="true" type="q76:ModuloSemanaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="moduloSemanaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="moduloSemanaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="ModuloSemanaGetResult" nillable="true" type="q77:ModuloSemanaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaGetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="ModuloSemanaGetAllResult" nillable="true" type="q78:ArrayOfModuloSemanaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaGetByFecha">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaGetByFechaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="ModuloSemanaGetByFechaResult" nillable="true" type="q79:ArrayOfModuloSemanaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaGetByFechaCentroTrabajo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="centroTrabajoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaGetByFechaCentroTrabajoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="ModuloSemanaGetByFechaCentroTrabajoResult" nillable="true" type="q80:ArrayOfModuloSemanaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaGetByFechaModulo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="moduloId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaGetByFechaModuloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="ModuloSemanaGetByFechaModuloResult" nillable="true" type="q81:ArrayOfModuloSemanaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaOperarioUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="moduloSemanaOperario" nillable="true" type="q82:ModuloSemanaOperarioBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaOperarioUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="ModuloSemanaOperarioUpdateResult" nillable="true" type="q83:ModuloSemanaOperarioBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaOperarioDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="moduloSemanaOperarioId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaOperarioDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaOperarioGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="moduloSemanaOperarioId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaOperarioGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="ModuloSemanaOperarioGetResult" nillable="true" type="q84:ModuloSemanaOperarioBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaOperarioGetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaOperarioGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="ModuloSemanaOperarioGetAllResult" nillable="true" type="q85:ArrayOfModuloSemanaOperarioBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaOperarioGetByModuloSemana">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="moduloSemanaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModuloSemanaOperarioGetByModuloSemanaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="ModuloSemanaOperarioGetByModuloSemanaResult" nillable="true" type="q86:ArrayOfModuloSemanaOperarioBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="turno" nillable="true" type="q87:TurnoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="TurnoUpdateResult" nillable="true" type="q88:TurnoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="turnoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="turnoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="TurnoGetResult" nillable="true" type="q89:TurnoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoGetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="TurnoGetAllResult" nillable="true" type="q90:ArrayOfTurnoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoDetalleUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="turnoDetalle" nillable="true" type="q91:TurnoDetalleBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoDetalleUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="TurnoDetalleUpdateResult" nillable="true" type="q92:TurnoDetalleBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoDetalleDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="turnoDetalleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoDetalleDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoDetalleGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="turnoDetalleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoDetalleGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="TurnoDetalleGetResult" nillable="true" type="q93:TurnoDetalleBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoDetalleGetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoDetalleGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="TurnoDetalleGetAllResult" nillable="true" type="q94:ArrayOfTurnoDetalleBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoDetalleGetByTurno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="turnoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TurnoDetalleGetByTurnoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Business.Lecturas" minOccurs="0" name="TurnoDetalleGetByTurnoResult" nillable="true" type="q95:ArrayOfTurnoDetalleBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

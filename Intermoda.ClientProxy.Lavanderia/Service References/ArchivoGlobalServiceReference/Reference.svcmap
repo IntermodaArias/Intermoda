@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ad555f42-3132-4b57-8105-bb16192f2790" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/ArchivoGlobal.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ArchivoGlobal3.xsd" MetadataType="Schema" ID="0dd49400-e1a3-4c0a-820a-c9a10f95ef01" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/ArchivoGlobal.svc?xsd=xsd1" />
+    <MetadataFile FileName="ArchivoGlobal31.xsd" MetadataType="Schema" ID="28b6fc79-1458-4f66-b105-f9074eb7b113" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/ArchivoGlobal.svc?xsd=xsd0" />
+    <MetadataFile FileName="ArchivoGlobal32.xsd" MetadataType="Schema" ID="2339e9e9-3531-455e-9e45-ba4160789dab" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/ArchivoGlobal.svc?xsd=xsd2" />
+    <MetadataFile FileName="ArchivoGlobal1.wsdl" MetadataType="Wsdl" ID="2e215491-7060-4b99-80fd-dd47084c979b" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/ArchivoGlobal.svc?wsdl" />
+    <MetadataFile FileName="ArchivoGlobal1.disco" MetadataType="Disco" ID="ab4128e6-cdb9-4d1a-bbd7-b85cdf65a1e5" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/ArchivoGlobal.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,8 @@
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm\bin\Debug\Intermoda.Business.Crm.dll
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm\bin\Debug\Intermoda.Business.Crm.pdb
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm\obj\Debug\Intermoda.Business.Crm.csprojResolveAssemblyReference.cache
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm\obj\Debug\Intermoda.Business.Crm.dll
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm\obj\Debug\Intermoda.Business.Crm.pdb
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm\bin\Debug\Intermoda.Business.Crm.dll.config
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm\bin\Debug\Intermoda.Common.dll
+C:\VisualStudio\Intermoda\Intermoda.Business.Crm\bin\Debug\Intermoda.Common.pdb

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9370f8dc-e509-4281-9829-d8f3d9d6b415" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/Tela.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Tela3.xsd" MetadataType="Schema" ID="d8606a47-6092-4cb0-951c-1135e93c89dc" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Tela.svc?xsd=xsd1" />
+    <MetadataFile FileName="Tela31.xsd" MetadataType="Schema" ID="cd7fd6f5-8b9a-44ee-98ef-b22c0a9a0e13" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Tela.svc?xsd=xsd2" />
+    <MetadataFile FileName="Tela1.disco" MetadataType="Disco" ID="8af7cb63-074e-4d76-aa0f-f5818de67041" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Tela.svc?disco" />
+    <MetadataFile FileName="Tela1.wsdl" MetadataType="Wsdl" ID="b0d19b97-0465-4a71-93ff-7098dd441327" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Tela.svc?wsdl" />
+    <MetadataFile FileName="Tela32.xsd" MetadataType="Schema" ID="aa593553-3a49-4446-be4e-7e768b067142" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/Tela.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

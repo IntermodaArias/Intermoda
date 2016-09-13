@@ -1,0 +1,1126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B80456D1-2154-4D5F-977E-FD480AD7FDCD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intermoda.ClientProxy.Lavanderia</RootNamespace>
+    <AssemblyName>Intermoda.ClientProxy.Lavanderia</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ArchivoGlobalServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CatalogoServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CentroTrabajoOpcionServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ClaseServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ColorIntermodaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CTrabajoServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\IngredienteOperacionServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\IngredientePredefinidoServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InstruccionOperacionServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InstruccionPredefinidaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LavadoraCapacidadServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LavadoraServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LavadoServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MaquinaCapacidadServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MaquinaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ObservacionOperacionServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ObservacionPredefinidaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OpcionLavadoServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OperacionCentroTrabajoServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OperacionPredefinidaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OperacionProcesoServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OperacionServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OrdenProduccionLavanderiaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PlantaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProcesoCentroTrabajoServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProcesoServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SecadoraCapacidadServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SecadoraServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SubClaseServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TelaColorIntermodaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TelaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArchivoGlobalServiceReference\ArchivoGlobal1.wsdl" />
+    <None Include="Service References\ArchivoGlobalServiceReference\ArchivoGlobal3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArchivoGlobalServiceReference\ArchivoGlobal31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArchivoGlobalServiceReference\ArchivoGlobal32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArchivoGlobalServiceReference\Intermoda.ClientProxy.Lavanderia.ArchivoGlobalServiceReference.ArchivoGlobalBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoServiceReference\Catalogo1.wsdl" />
+    <None Include="Service References\CatalogoServiceReference\Catalogo3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CatalogoServiceReference\Catalogo31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CatalogoServiceReference\Catalogo32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CatalogoServiceReference\Intermoda.ClientProxy.Lavanderia.CatalogoServiceReference.CatalogoBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CentroTrabajoOpcionServiceReference\CentroTrabajoOpcion1.wsdl" />
+    <None Include="Service References\CentroTrabajoOpcionServiceReference\CentroTrabajoOpcion3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CentroTrabajoOpcionServiceReference\CentroTrabajoOpcion31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CentroTrabajoOpcionServiceReference\CentroTrabajoOpcion32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CentroTrabajoOpcionServiceReference\Intermoda.ClientProxy.Lavanderia.CentroTrabajoOpcionServiceReference.CentroTrabajoOpcionBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClaseServiceReference\Clase1.wsdl" />
+    <None Include="Service References\ClaseServiceReference\Clase3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClaseServiceReference\Clase31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClaseServiceReference\Clase32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClaseServiceReference\Intermoda.ClientProxy.Lavanderia.ClaseServiceReference.ClaseBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ColorIntermodaServiceReference\ColorIntermoda1.wsdl" />
+    <None Include="Service References\ColorIntermodaServiceReference\ColorIntermoda3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ColorIntermodaServiceReference\ColorIntermoda31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ColorIntermodaServiceReference\ColorIntermoda32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ColorIntermodaServiceReference\Intermoda.ClientProxy.Lavanderia.ColorIntermodaServiceReference.ColorIntermodaBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CTrabajoServiceReference\CTrabajo1.wsdl" />
+    <None Include="Service References\CTrabajoServiceReference\CTrabajo3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CTrabajoServiceReference\CTrabajo31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CTrabajoServiceReference\CTrabajo32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CTrabajoServiceReference\Intermoda.ClientProxy.Lavanderia.CTrabajoServiceReference.CTrabajoBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IngredienteOperacionServiceReference\IngredienteOperacion1.wsdl" />
+    <None Include="Service References\IngredienteOperacionServiceReference\IngredienteOperacion3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IngredienteOperacionServiceReference\IngredienteOperacion31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IngredienteOperacionServiceReference\IngredienteOperacion32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IngredienteOperacionServiceReference\Intermoda.ClientProxy.Lavanderia.IngredienteOperacionServiceReference.IngredienteOperacionBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IngredientePredefinidoServiceReference\IngredientePredefinido1.wsdl" />
+    <None Include="Service References\IngredientePredefinidoServiceReference\IngredientePredefinido3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IngredientePredefinidoServiceReference\IngredientePredefinido31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IngredientePredefinidoServiceReference\IngredientePredefinido32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IngredientePredefinidoServiceReference\Intermoda.ClientProxy.Lavanderia.IngredientePredefinidoServiceReference.IngredientePredefinidoBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InstruccionOperacionServiceReference\InstruccionOperacion1.wsdl" />
+    <None Include="Service References\InstruccionOperacionServiceReference\InstruccionOperacion3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InstruccionOperacionServiceReference\InstruccionOperacion31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InstruccionOperacionServiceReference\InstruccionOperacion32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InstruccionOperacionServiceReference\Intermoda.ClientProxy.Lavanderia.InstruccionOperacionServiceReference.InstruccionOperacionBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InstruccionPredefinidaServiceReference\InstruccionPredefinida1.wsdl" />
+    <None Include="Service References\InstruccionPredefinidaServiceReference\InstruccionPredefinida3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InstruccionPredefinidaServiceReference\InstruccionPredefinida31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InstruccionPredefinidaServiceReference\InstruccionPredefinida32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InstruccionPredefinidaServiceReference\Intermoda.ClientProxy.Lavanderia.InstruccionPredefinidaServiceReference.InstruccionPredefinidaBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LavadoraCapacidadServiceReference\Intermoda.ClientProxy.Lavanderia.LavadoraCapacidadServiceReference.LavadoraCapacidadBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LavadoraCapacidadServiceReference\LavadoraCapacidad.wsdl" />
+    <None Include="Service References\LavadoraCapacidadServiceReference\LavadoraCapacidad.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LavadoraCapacidadServiceReference\LavadoraCapacidad1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LavadoraCapacidadServiceReference\LavadoraCapacidad2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LavadoraServiceReference\Intermoda.ClientProxy.Lavanderia.LavadoraServiceReference.LavadoraBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LavadoraServiceReference\Lavadora.wsdl" />
+    <None Include="Service References\LavadoraServiceReference\Lavadora.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LavadoraServiceReference\Lavadora1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LavadoraServiceReference\Lavadora2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LavadoServiceReference\Intermoda.ClientProxy.Lavanderia.LavadoServiceReference.LavadoBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LavadoServiceReference\Lavado1.wsdl" />
+    <None Include="Service References\LavadoServiceReference\Lavado3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LavadoServiceReference\Lavado31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LavadoServiceReference\Lavado32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MaquinaCapacidadServiceReference\Intermoda.ClientProxy.Lavanderia.MaquinaCapacidadServiceReference.MaquinaCapacidadBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MaquinaCapacidadServiceReference\MaquinaCapacidad.wsdl" />
+    <None Include="Service References\MaquinaCapacidadServiceReference\MaquinaCapacidad.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MaquinaCapacidadServiceReference\MaquinaCapacidad1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MaquinaCapacidadServiceReference\MaquinaCapacidad2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MaquinaCapacidadServiceReference\MaquinaCapacidad3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MaquinaServiceReference\Intermoda.ClientProxy.Lavanderia.MaquinaServiceReference.MaquinaBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MaquinaServiceReference\Maquina.wsdl" />
+    <None Include="Service References\MaquinaServiceReference\Maquina.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MaquinaServiceReference\Maquina1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MaquinaServiceReference\Maquina2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MaquinaServiceReference\Maquina3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ObservacionOperacionServiceReference\Intermoda.ClientProxy.Lavanderia.ObservacionOperacionServiceReference.ObservacionOperacionBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ObservacionOperacionServiceReference\ObservacionOperacion1.wsdl" />
+    <None Include="Service References\ObservacionOperacionServiceReference\ObservacionOperacion3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ObservacionOperacionServiceReference\ObservacionOperacion31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ObservacionOperacionServiceReference\ObservacionOperacion32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ObservacionPredefinidaServiceReference\Intermoda.ClientProxy.Lavanderia.ObservacionPredefinidaServiceReference.ObservacionPredefinidaBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ObservacionPredefinidaServiceReference\ObservacionPredefinida1.wsdl" />
+    <None Include="Service References\ObservacionPredefinidaServiceReference\ObservacionPredefinida3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ObservacionPredefinidaServiceReference\ObservacionPredefinida31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ObservacionPredefinidaServiceReference\ObservacionPredefinida32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpcionLavadoServiceReference\Intermoda.ClientProxy.Lavanderia.OpcionLavadoServiceReference.OpcionLavadoBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpcionLavadoServiceReference\OpcionLavado1.wsdl" />
+    <None Include="Service References\OpcionLavadoServiceReference\OpcionLavado3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpcionLavadoServiceReference\OpcionLavado31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpcionLavadoServiceReference\OpcionLavado32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OperacionCentroTrabajoServiceReference\Intermoda.ClientProxy.Lavanderia.OperacionCentroTrabajoServiceReference.OperacionCentroTrabajoBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OperacionCentroTrabajoServiceReference\OperacionCentroTrabajo1.wsdl" />
+    <None Include="Service References\OperacionCentroTrabajoServiceReference\OperacionCentroTrabajo3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OperacionCentroTrabajoServiceReference\OperacionCentroTrabajo31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OperacionCentroTrabajoServiceReference\OperacionCentroTrabajo32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OperacionPredefinidaServiceReference\Intermoda.ClientProxy.Lavanderia.OperacionPredefinidaServiceReference.OperacionPredefinidaBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OperacionPredefinidaServiceReference\OperacionPredefinida1.wsdl" />
+    <None Include="Service References\OperacionPredefinidaServiceReference\OperacionPredefinida3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OperacionPredefinidaServiceReference\OperacionPredefinida31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OperacionPredefinidaServiceReference\OperacionPredefinida32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OperacionProcesoServiceReference\Intermoda.ClientProxy.Lavanderia.OperacionProcesoServiceReference.OperacionProcesoBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OperacionProcesoServiceReference\OperacionProceso1.wsdl" />
+    <None Include="Service References\OperacionProcesoServiceReference\OperacionProceso3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OperacionProcesoServiceReference\OperacionProceso31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OperacionProcesoServiceReference\OperacionProceso32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OperacionServiceReference\Intermoda.ClientProxy.Lavanderia.OperacionServiceReference.OperacionBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OperacionServiceReference\Operacion1.wsdl" />
+    <None Include="Service References\OperacionServiceReference\Operacion3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OperacionServiceReference\Operacion31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OperacionServiceReference\Operacion32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrdenProduccionLavanderiaServiceReference\Intermoda.ClientProxy.Lavanderia.OrdenProduccionLavanderiaServiceReference.OrdenProduccionLavanderiaBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrdenProduccionLavanderiaServiceReference\OrdenProduccionLavanderia.wsdl" />
+    <None Include="Service References\OrdenProduccionLavanderiaServiceReference\OrdenProduccionLavanderia.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrdenProduccionLavanderiaServiceReference\OrdenProduccionLavanderia1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrdenProduccionLavanderiaServiceReference\OrdenProduccionLavanderia2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PlantaServiceReference\Intermoda.ClientProxy.Lavanderia.PlantaServiceReference.PlantaBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PlantaServiceReference\Planta.wsdl" />
+    <None Include="Service References\PlantaServiceReference\PlantaService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PlantaServiceReference\PlantaService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PlantaServiceReference\PlantaService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProcesoCentroTrabajoServiceReference\Intermoda.ClientProxy.Lavanderia.ProcesoCentroTrabajoServiceReference.ProcesoCentroTrabajoBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProcesoCentroTrabajoServiceReference\ProcesoCentroTrabajo1.wsdl" />
+    <None Include="Service References\ProcesoCentroTrabajoServiceReference\ProcesoCentroTrabajo3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProcesoCentroTrabajoServiceReference\ProcesoCentroTrabajo31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProcesoCentroTrabajoServiceReference\ProcesoCentroTrabajo32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProcesoServiceReference\Intermoda.ClientProxy.Lavanderia.ProcesoServiceReference.ProcesoBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProcesoServiceReference\Proceso1.wsdl" />
+    <None Include="Service References\ProcesoServiceReference\Proceso3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProcesoServiceReference\Proceso31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProcesoServiceReference\Proceso32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecadoraCapacidadServiceReference\Intermoda.ClientProxy.Lavanderia.SecadoraCapacidadServiceReference.SecadoraCapacidadBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecadoraCapacidadServiceReference\SecadoraCapacidad.wsdl" />
+    <None Include="Service References\SecadoraCapacidadServiceReference\SecadoraCapacidad.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecadoraCapacidadServiceReference\SecadoraCapacidad1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecadoraCapacidadServiceReference\SecadoraCapacidad2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecadoraServiceReference\Intermoda.ClientProxy.Lavanderia.SecadoraServiceReference.SecadoraBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecadoraServiceReference\Secadora.wsdl" />
+    <None Include="Service References\SecadoraServiceReference\Secadora.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecadoraServiceReference\Secadora1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecadoraServiceReference\Secadora2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SubClaseServiceReference\Intermoda.ClientProxy.Lavanderia.SubClaseServiceReference.SubClaseBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SubClaseServiceReference\SubClase1.wsdl" />
+    <None Include="Service References\SubClaseServiceReference\SubClase3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SubClaseServiceReference\SubClase31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SubClaseServiceReference\SubClase32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TelaColorIntermodaServiceReference\Intermoda.ClientProxy.Lavanderia.TelaColorIntermodaServiceReference.TelaColorIntermodaBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TelaColorIntermodaServiceReference\TelaColorIntermoda1.wsdl" />
+    <None Include="Service References\TelaColorIntermodaServiceReference\TelaColorIntermoda3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TelaColorIntermodaServiceReference\TelaColorIntermoda31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TelaColorIntermodaServiceReference\TelaColorIntermoda32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TelaServiceReference\Intermoda.ClientProxy.Lavanderia.TelaServiceReference.TelaBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TelaServiceReference\Tela1.wsdl" />
+    <None Include="Service References\TelaServiceReference\Tela3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TelaServiceReference\Tela31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TelaServiceReference\Tela32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ArchivoGlobalServiceReference\" />
+    <WCFMetadataStorage Include="Service References\CatalogoServiceReference\" />
+    <WCFMetadataStorage Include="Service References\CentroTrabajoOpcionServiceReference\" />
+    <WCFMetadataStorage Include="Service References\ClaseServiceReference\" />
+    <WCFMetadataStorage Include="Service References\ColorIntermodaServiceReference\" />
+    <WCFMetadataStorage Include="Service References\CTrabajoServiceReference\" />
+    <WCFMetadataStorage Include="Service References\IngredienteOperacionServiceReference\" />
+    <WCFMetadataStorage Include="Service References\IngredientePredefinidoServiceReference\" />
+    <WCFMetadataStorage Include="Service References\InstruccionOperacionServiceReference\" />
+    <WCFMetadataStorage Include="Service References\InstruccionPredefinidaServiceReference\" />
+    <WCFMetadataStorage Include="Service References\LavadoraCapacidadServiceReference\" />
+    <WCFMetadataStorage Include="Service References\LavadoraServiceReference\" />
+    <WCFMetadataStorage Include="Service References\LavadoServiceReference\" />
+    <WCFMetadataStorage Include="Service References\MaquinaCapacidadServiceReference\" />
+    <WCFMetadataStorage Include="Service References\MaquinaServiceReference\" />
+    <WCFMetadataStorage Include="Service References\ObservacionOperacionServiceReference\" />
+    <WCFMetadataStorage Include="Service References\ObservacionPredefinidaServiceReference\" />
+    <WCFMetadataStorage Include="Service References\OpcionLavadoServiceReference\" />
+    <WCFMetadataStorage Include="Service References\OperacionCentroTrabajoServiceReference\" />
+    <WCFMetadataStorage Include="Service References\OperacionPredefinidaServiceReference\" />
+    <WCFMetadataStorage Include="Service References\OperacionProcesoServiceReference\" />
+    <WCFMetadataStorage Include="Service References\OperacionServiceReference\" />
+    <WCFMetadataStorage Include="Service References\OrdenProduccionLavanderiaServiceReference\" />
+    <WCFMetadataStorage Include="Service References\PlantaServiceReference\" />
+    <WCFMetadataStorage Include="Service References\ProcesoCentroTrabajoServiceReference\" />
+    <WCFMetadataStorage Include="Service References\ProcesoServiceReference\" />
+    <WCFMetadataStorage Include="Service References\SecadoraCapacidadServiceReference\" />
+    <WCFMetadataStorage Include="Service References\SecadoraServiceReference\" />
+    <WCFMetadataStorage Include="Service References\SubClaseServiceReference\" />
+    <WCFMetadataStorage Include="Service References\TelaColorIntermodaServiceReference\" />
+    <WCFMetadataStorage Include="Service References\TelaServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OperacionServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OperacionServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OperacionServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OperacionCentroTrabajoServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OperacionCentroTrabajoServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OperacionCentroTrabajoServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProcesoServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProcesoServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProcesoServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OperacionPredefinidaServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OperacionPredefinidaServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OperacionPredefinidaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CTrabajoServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CTrabajoServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CTrabajoServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InstruccionPredefinidaServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InstruccionPredefinidaServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InstruccionPredefinidaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IngredientePredefinidoServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IngredientePredefinidoServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IngredientePredefinidoServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClaseServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClaseServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClaseServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SubClaseServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SubClaseServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SubClaseServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ObservacionPredefinidaServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ObservacionPredefinidaServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ObservacionPredefinidaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ColorIntermodaServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ColorIntermodaServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ColorIntermodaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TelaServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TelaServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TelaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TelaColorIntermodaServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TelaColorIntermodaServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TelaColorIntermodaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LavadoServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LavadoServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LavadoServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OpcionLavadoServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OpcionLavadoServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OpcionLavadoServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ArchivoGlobalServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ArchivoGlobalServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ArchivoGlobalServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CentroTrabajoOpcionServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CentroTrabajoOpcionServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CentroTrabajoOpcionServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProcesoCentroTrabajoServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProcesoCentroTrabajoServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProcesoCentroTrabajoServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OperacionProcesoServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OperacionProcesoServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OperacionProcesoServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IngredienteOperacionServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IngredienteOperacionServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IngredienteOperacionServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InstruccionOperacionServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InstruccionOperacionServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InstruccionOperacionServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ObservacionOperacionServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ObservacionOperacionServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ObservacionOperacionServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CatalogoServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CatalogoServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CatalogoServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ArchivoGlobalServiceReference\ArchivoGlobal1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CatalogoServiceReference\Catalogo1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CentroTrabajoOpcionServiceReference\CentroTrabajoOpcion1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClaseServiceReference\Clase1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ColorIntermodaServiceReference\ColorIntermoda1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CTrabajoServiceReference\CTrabajo1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IngredienteOperacionServiceReference\IngredienteOperacion1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IngredientePredefinidoServiceReference\IngredientePredefinido1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InstruccionOperacionServiceReference\InstruccionOperacion1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InstruccionPredefinidaServiceReference\InstruccionPredefinida1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LavadoServiceReference\Lavado1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ObservacionOperacionServiceReference\ObservacionOperacion1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ObservacionPredefinidaServiceReference\ObservacionPredefinida1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OpcionLavadoServiceReference\OpcionLavado1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OperacionCentroTrabajoServiceReference\OperacionCentroTrabajo1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OperacionPredefinidaServiceReference\OperacionPredefinida1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OperacionProcesoServiceReference\OperacionProceso1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OperacionServiceReference\Operacion1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProcesoCentroTrabajoServiceReference\ProcesoCentroTrabajo1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProcesoServiceReference\Proceso1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SubClaseServiceReference\SubClase1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TelaColorIntermodaServiceReference\TelaColorIntermoda1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TelaServiceReference\Tela1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LavadoraServiceReference\Lavadora.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LavadoraServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LavadoraServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LavadoraServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LavadoraCapacidadServiceReference\LavadoraCapacidad.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LavadoraCapacidadServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LavadoraCapacidadServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LavadoraCapacidadServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecadoraServiceReference\Secadora.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecadoraServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecadoraServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecadoraServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecadoraCapacidadServiceReference\SecadoraCapacidad.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecadoraCapacidadServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecadoraCapacidadServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecadoraCapacidadServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MaquinaServiceReference\Maquina.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MaquinaServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MaquinaServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MaquinaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MaquinaCapacidadServiceReference\MaquinaCapacidad.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MaquinaCapacidadServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MaquinaCapacidadServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MaquinaCapacidadServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PlantaServiceReference\PlantaService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PlantaServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PlantaServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PlantaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrdenProduccionLavanderiaServiceReference\OrdenProduccionLavanderia.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrdenProduccionLavanderiaServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrdenProduccionLavanderiaServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrdenProduccionLavanderiaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

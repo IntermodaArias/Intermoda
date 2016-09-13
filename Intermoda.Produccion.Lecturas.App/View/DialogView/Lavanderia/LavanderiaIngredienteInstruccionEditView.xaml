@@ -1,0 +1,59 @@
+﻿<Window x:Class="Intermoda.Produccion.Lecturas.App.View.DialogView.Lavanderia.LavanderiaIngredienteInstruccionEditView"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  
+        xmlns:Controls="clr-namespace:Intermoda.Wpf.Controls;assembly=Intermoda.Wpf.Controls"  
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Title="Ingredientes" Height="370" Width="360" WindowStartupLocation="CenterOwner"
+        d:DataContext="{Binding Source={StaticResource Locator}, Path=LavanderiaIngredienteInstruccionEditViewModel}">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Margin="2" Content="Proceso: "/>
+            <Label Grid.Row="1" Grid.Column="0" Margin="2" Content="Operación: "/>
+            <Label Grid.Row="2" Grid.Column="0" Margin="2" Content="Instrucción: "/>
+            <Label Grid.Row="3" Grid.Column="0" Margin="2" Content="Ingrediente: "/>
+            <Label Grid.Row="4" Grid.Column="0" Margin="2" Content="Clase: "/>
+            <Label Grid.Row="5" Grid.Column="0" Margin="2" Content="Sub Clase: "/>
+            <Label Grid.Row="6" Grid.Column="0" Margin="2" Content="Porcentaje: "/>
+            <Label Grid.Row="7" Grid.Column="0" Margin="2" Content="Orden: "/>
+            <TextBox Grid.Row="0" Grid.Column="1" Margin="2" Width="250" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     IsReadOnly="True" Text="{Binding Path=OperacionProceso.Proceso.Nombre}"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="2" Width="250" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     IsReadOnly="True" Text="{Binding Path=OperacionProceso.Operacion.Nombre}"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Margin="2" Width="250" Height="60" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     IsReadOnly="True" TextWrapping="Wrap" Text="{Binding Path=OperacionProceso.Proceso.Nombre}"/>
+            <telerik:RadComboBox Grid.Row="3" Grid.Column="1" Margin="2" Width="250" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                 ItemsSource="{Binding Path=IngredienteList}" DisplayMemberPath="Id" SelectedValuePath="Nombre"
+                                 SelectedItem="{Binding Path=IngredienteSeleccionado, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 SelectedValue="{Binding Path=IngredienteId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBox Grid.Row="4" Grid.Column="1" Margin="2" Width="250" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     IsReadOnly="True" Text="{Binding Path=Clase.Descripcion}"/>
+            <TextBox Grid.Row="5" Grid.Column="1" Margin="2" Width="250" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     IsReadOnly="True" Text="{Binding Path=SubClase.Descripcion}"/>
+            <TextBox Grid.Row="6" Grid.Column="1" Margin="2" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Text="{Binding Path=Porcentaje}"/>
+            <TextBox Grid.Row="7" Grid.Column="1" Margin="2" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Text="{Binding Path=Orden}"/>
+        </Grid>
+        <Controls:CancelConfirmControl Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

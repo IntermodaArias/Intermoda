@@ -1,0 +1,79 @@
+{
+  "version": 2,
+  "exports": {
+    "Intermoda.Business.LbDatPro/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5.2",
+      "compile": {
+        "bin/Debug/Intermoda.Business.LbDatPro.dll": {}
+      },
+      "runtime": {
+        "../packages/EntityFramework.6.1.3/lib/net45/EntityFramework.SqlServer.dll": {},
+        "../packages/EntityFramework.6.1.3/lib/net45/EntityFramework.dll": {},
+        "bin/Debug/Intermoda.Business.LbDatPro.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/Intermoda.Business.LbDatPro.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "Intermoda.DataService.LbDatPro/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5.2",
+      "compile": {
+        "bin/Intermoda.DataService.LbDatPro.dll": {}
+      },
+      "runtime": {
+        "../packages/EntityFramework.6.1.3/lib/net45/EntityFramework.SqlServer.dll": {},
+        "../packages/EntityFramework.6.1.3/lib/net45/EntityFramework.dll": {},
+        "bin/Intermoda.DataService.LbDatPro.dll": {}
+      },
+      "contentFiles": {
+        "bin/Intermoda.DataService.LbDatPro.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "Intermoda.Common/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5.2",
+      "compile": {
+        "bin/Debug/Intermoda.Common.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/Intermoda.Common.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/Intermoda.Common.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "Intermoda.LbDatPro/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5.2",
+      "compile": {
+        "bin/Debug/Intermoda.LbDatPro.dll": {}
+      },
+      "runtime": {
+        "../packages/EntityFramework.6.1.3/lib/net45/EntityFramework.SqlServer.dll": {},
+        "../packages/EntityFramework.6.1.3/lib/net45/EntityFramework.dll": {},
+        "bin/Debug/Intermoda.LbDatPro.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/Intermoda.LbDatPro.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    }
+  }
+}

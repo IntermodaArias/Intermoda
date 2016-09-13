@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8b33108d-1228-4800-a08c-dc97a7cd6421" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lectura/JornadaDetalle.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="JornadaDetalle1.wsdl" MetadataType="Wsdl" ID="c7fed56d-708b-47be-9a06-f54244e2e6fb" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/JornadaDetalle.svc?wsdl" />
+    <MetadataFile FileName="JornadaDetalle3.xsd" MetadataType="Schema" ID="a8465fa0-09d5-43ad-b7bd-4867259ab061" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/JornadaDetalle.svc?xsd=xsd1" />
+    <MetadataFile FileName="JornadaDetalle31.xsd" MetadataType="Schema" ID="d5dd2295-1a79-4752-a45a-24e3445ca264" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/JornadaDetalle.svc?xsd=xsd0" />
+    <MetadataFile FileName="JornadaDetalle32.xsd" MetadataType="Schema" ID="726d2e3d-fa8b-44d9-96e0-dd781589923d" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/JornadaDetalle.svc?xsd=xsd2" />
+    <MetadataFile FileName="JornadaDetalle1.disco" MetadataType="Disco" ID="e09e7c58-810a-4ce4-9c8f-567d108a8dda" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/JornadaDetalle.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

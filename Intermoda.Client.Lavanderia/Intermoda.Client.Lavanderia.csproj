@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C61FDFF7-45E8-4000-B44D-07969BE92383}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intermoda.Client.Lavanderia</RootNamespace>
+    <AssemblyName>Intermoda.Client.Lavanderia</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.2.0.37222, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.2.0.37222, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.2.0.37226, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArchivoGlobal.cs" />
+    <Compile Include="CentroTrabajo.cs" />
+    <Compile Include="CentroTrabajoOpcion.cs" />
+    <Compile Include="Clase.cs" />
+    <Compile Include="Catalogo.cs" />
+    <Compile Include="ColorIntermoda.cs" />
+    <Compile Include="IngredienteOperacion.cs" />
+    <Compile Include="IngredientePredefinido.cs" />
+    <Compile Include="InstruccionOperacion.cs" />
+    <Compile Include="InstruccionPredefinida.cs" />
+    <Compile Include="Lavado.cs" />
+    <Compile Include="Lavadora.cs" />
+    <Compile Include="LavadoraCapacidad.cs" />
+    <Compile Include="Maquina.cs" />
+    <Compile Include="MaquinaCapacidad.cs" />
+    <Compile Include="ObservacionOperacion.cs" />
+    <Compile Include="ObservacionPredefinida.cs" />
+    <Compile Include="OpcionLavado.cs" />
+    <Compile Include="Operacion.cs" />
+    <Compile Include="OperacionCentroTrabajo.cs" />
+    <Compile Include="OperacionPredefinida.cs" />
+    <Compile Include="OperacionProceso.cs" />
+    <Compile Include="OrdenProduccionLavanderia.cs" />
+    <Compile Include="Planta.cs" />
+    <Compile Include="Proceso.cs" />
+    <Compile Include="ProcesoCentroTrabajo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Secadora.cs" />
+    <Compile Include="SecadoraCapacidad.cs" />
+    <Compile Include="SubClase.cs" />
+    <Compile Include="Tela.cs" />
+    <Compile Include="TelaColorIntermoda.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Intermoda.ClientProxy.Lavanderia\Intermoda.ClientProxy.Lavanderia.csproj">
+      <Project>{b80456d1-2154-4d5f-977e-fd480ad7fdcd}</Project>
+      <Name>Intermoda.ClientProxy.Lavanderia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Common\Intermoda.Common.csproj">
+      <Project>{07c1e232-8946-4295-9d30-4f9b45f10ec0}</Project>
+      <Name>Intermoda.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

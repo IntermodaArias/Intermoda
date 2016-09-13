@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cb150a96-11e6-4eea-b0d6-635a1e944fdf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/ColorIntermoda.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ColorIntermoda3.xsd" MetadataType="Schema" ID="433d72ae-546b-430f-a484-8ca04bec0b78" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/ColorIntermoda.svc?xsd=xsd2" />
+    <MetadataFile FileName="ColorIntermoda1.disco" MetadataType="Disco" ID="38d45613-dc94-4175-84d0-719401f5cda3" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/ColorIntermoda.svc?disco" />
+    <MetadataFile FileName="ColorIntermoda31.xsd" MetadataType="Schema" ID="0b6bd6bd-605c-46fb-9219-ed5951ba71ac" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/ColorIntermoda.svc?xsd=xsd0" />
+    <MetadataFile FileName="ColorIntermoda1.wsdl" MetadataType="Wsdl" ID="838f1b50-178f-4c63-a865-9bd251ecd139" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/ColorIntermoda.svc?wsdl" />
+    <MetadataFile FileName="ColorIntermoda32.xsd" MetadataType="Schema" ID="a3dfbe8a-afb5-40b6-820e-7054c963bcf1" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/ColorIntermoda.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

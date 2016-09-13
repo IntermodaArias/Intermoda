@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F90415F-FCDD-4BED-9E5E-1F36CD484971}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intermoda.ClientProxy.Lectura</RootNamespace>
+    <AssemblyName>Intermoda.ClientProxy.Lectura</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\CentroTrabajoClasificacionServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CentroTrabajoServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GrupoServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\JornadaDetalleServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\JornadaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LineaDetalleServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LineaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ModuloSemanaOperarioServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ModuloSemanaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ModuloServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TurnoDetalleServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TurnoServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\CentroTrabajoClasificacionServiceReference\CentroTrabajoClasificacion1.wsdl" />
+    <None Include="Service References\CentroTrabajoClasificacionServiceReference\CentroTrabajoClasificacion4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CentroTrabajoClasificacionServiceReference\CentroTrabajoClasificacion41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CentroTrabajoClasificacionServiceReference\CentroTrabajoClasificacion42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CentroTrabajoClasificacionServiceReference\CentroTrabajoClasificacion43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CentroTrabajoClasificacionServiceReference\Intermoda.ClientProxy.Lectura.CentroTrabajoClasificacionServiceReference.CentroTrabajoClasificacionBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CentroTrabajoServiceReference\CentroTrabajo1.wsdl" />
+    <None Include="Service References\CentroTrabajoServiceReference\CentroTrabajo3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CentroTrabajoServiceReference\CentroTrabajo31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CentroTrabajoServiceReference\CentroTrabajo32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CentroTrabajoServiceReference\Intermoda.ClientProxy.Lectura.CentroTrabajoServiceReference.CentroTrabajoBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GrupoServiceReference\Grupo1.wsdl" />
+    <None Include="Service References\GrupoServiceReference\Grupo3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GrupoServiceReference\Grupo31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GrupoServiceReference\Grupo32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GrupoServiceReference\Intermoda.ClientProxy.Lectura.GrupoServiceReference.GrupoBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JornadaDetalleServiceReference\Intermoda.ClientProxy.Lectura.JornadaDetalleServiceReference.JornadaDetalleBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JornadaDetalleServiceReference\JornadaDetalle1.wsdl" />
+    <None Include="Service References\JornadaDetalleServiceReference\JornadaDetalle3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\JornadaDetalleServiceReference\JornadaDetalle31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\JornadaDetalleServiceReference\JornadaDetalle32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\JornadaServiceReference\Intermoda.ClientProxy.Lectura.JornadaServiceReference.JornadaBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JornadaServiceReference\Jornada1.wsdl" />
+    <None Include="Service References\JornadaServiceReference\Jornada3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\JornadaServiceReference\Jornada31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\JornadaServiceReference\Jornada32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LineaDetalleServiceReference\Intermoda.ClientProxy.Lectura.LineaDetalleServiceReference.LineaDetalleBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LineaDetalleServiceReference\LineaDetalle1.wsdl" />
+    <None Include="Service References\LineaDetalleServiceReference\LineaDetalle4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LineaDetalleServiceReference\LineaDetalle41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LineaDetalleServiceReference\LineaDetalle42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LineaDetalleServiceReference\LineaDetalle43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LineaServiceReference\Intermoda.ClientProxy.Lectura.LineaServiceReference.LineaBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LineaServiceReference\Linea1.wsdl" />
+    <None Include="Service References\LineaServiceReference\Linea4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LineaServiceReference\Linea41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LineaServiceReference\Linea42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LineaServiceReference\Linea43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModuloSemanaOperarioServiceReference\Intermoda.ClientProxy.Lectura.ModuloSemanaOperarioServiceReference.ModuloSemanaOperarioBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ModuloSemanaOperarioServiceReference\ModuloSemanaOperario1.wsdl" />
+    <None Include="Service References\ModuloSemanaOperarioServiceReference\ModuloSemanaOperario5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModuloSemanaOperarioServiceReference\ModuloSemanaOperario51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModuloSemanaOperarioServiceReference\ModuloSemanaOperario52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModuloSemanaOperarioServiceReference\ModuloSemanaOperario53.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModuloSemanaOperarioServiceReference\ModuloSemanaOperario54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModuloSemanaServiceReference\Intermoda.ClientProxy.Lectura.ModuloSemanaServiceReference.ModuloSemanaBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ModuloSemanaServiceReference\ModuloSemana1.wsdl" />
+    <None Include="Service References\ModuloSemanaServiceReference\ModuloSemana3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModuloSemanaServiceReference\ModuloSemana31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModuloSemanaServiceReference\ModuloSemana32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModuloServiceReference\Intermoda.ClientProxy.Lectura.ModuloServiceReference.ModuloBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ModuloServiceReference\Modulo1.wsdl" />
+    <None Include="Service References\ModuloServiceReference\Modulo3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModuloServiceReference\Modulo31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ModuloServiceReference\Modulo32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurnoDetalleServiceReference\Intermoda.ClientProxy.Lectura.TurnoDetalleServiceReference.TurnoDetalleBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurnoDetalleServiceReference\TurnoDetalle1.wsdl" />
+    <None Include="Service References\TurnoDetalleServiceReference\TurnoDetalle4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurnoDetalleServiceReference\TurnoDetalle41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurnoDetalleServiceReference\TurnoDetalle42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurnoDetalleServiceReference\TurnoDetalle43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurnoServiceReference\Intermoda.ClientProxy.Lectura.TurnoServiceReference.TurnoBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurnoServiceReference\Turno1.wsdl" />
+    <None Include="Service References\TurnoServiceReference\Turno3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurnoServiceReference\Turno31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurnoServiceReference\Turno32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CentroTrabajoClasificacionServiceReference\" />
+    <WCFMetadataStorage Include="Service References\CentroTrabajoServiceReference\" />
+    <WCFMetadataStorage Include="Service References\GrupoServiceReference\" />
+    <WCFMetadataStorage Include="Service References\JornadaDetalleServiceReference\" />
+    <WCFMetadataStorage Include="Service References\JornadaServiceReference\" />
+    <WCFMetadataStorage Include="Service References\LineaDetalleServiceReference\" />
+    <WCFMetadataStorage Include="Service References\LineaServiceReference\" />
+    <WCFMetadataStorage Include="Service References\ModuloSemanaOperarioServiceReference\" />
+    <WCFMetadataStorage Include="Service References\ModuloSemanaServiceReference\" />
+    <WCFMetadataStorage Include="Service References\ModuloServiceReference\" />
+    <WCFMetadataStorage Include="Service References\TurnoDetalleServiceReference\" />
+    <WCFMetadataStorage Include="Service References\TurnoServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CentroTrabajoServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CentroTrabajoServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CentroTrabajoServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CentroTrabajoClasificacionServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CentroTrabajoClasificacionServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CentroTrabajoClasificacionServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GrupoServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GrupoServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GrupoServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JornadaServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JornadaServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JornadaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JornadaDetalleServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JornadaDetalleServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JornadaDetalleServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LineaServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LineaServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LineaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LineaDetalleServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LineaDetalleServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LineaDetalleServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModuloServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModuloServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModuloServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModuloSemanaServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModuloSemanaServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModuloSemanaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModuloSemanaOperarioServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModuloSemanaOperarioServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModuloSemanaOperarioServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurnoServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurnoServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurnoServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurnoDetalleServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurnoDetalleServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurnoDetalleServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CentroTrabajoClasificacionServiceReference\CentroTrabajoClasificacion1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CentroTrabajoServiceReference\CentroTrabajo1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GrupoServiceReference\Grupo1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JornadaDetalleServiceReference\JornadaDetalle1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JornadaServiceReference\Jornada1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LineaDetalleServiceReference\LineaDetalle1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LineaServiceReference\Linea1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModuloSemanaOperarioServiceReference\ModuloSemanaOperario1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModuloSemanaServiceReference\ModuloSemana1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ModuloServiceReference\Modulo1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurnoDetalleServiceReference\TurnoDetalle1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurnoServiceReference\Turno1.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

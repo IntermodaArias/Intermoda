@@ -1,0 +1,4 @@
+C:\VisualStudio\Intermoda\Intermoda.Common\bin\Debug\Intermoda.Common.dll
+C:\VisualStudio\Intermoda\Intermoda.Common\bin\Debug\Intermoda.Common.pdb
+C:\VisualStudio\Intermoda\Intermoda.Common\obj\Debug\Intermoda.Common.dll
+C:\VisualStudio\Intermoda\Intermoda.Common\obj\Debug\Intermoda.Common.pdb

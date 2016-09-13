@@ -1,0 +1,102 @@
+﻿<Window xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  x:Class="Intermoda.Maquilado.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:converter="clr-namespace:Intermoda.Maquilado.Converter"
+        mc:Ignorable="d" Title="Control de Avance de Producción" d:DesignHeight="768" d:DesignWidth="1024"
+        WindowStartupLocation="CenterOwner" WindowState="Normal" 
+        DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
+    <Window.Resources>
+        <DataTemplate x:Key="GroupFooterTemplate">
+            <TextBlock Text="Total"/>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid.Resources>
+            <converter:OrdenEstadoToColorConverter x:Key="EstadoConverter"/>
+            <Style TargetType="telerik:GridViewCell" x:Key="EstadoCell">
+                <Setter Property="Background" Value="{Binding EstadoLeyenda, Converter={StaticResource EstadoConverter}}"/>
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="3" HorizontalAlignment="Center" FontSize="28" FontWeight="DemiBold"
+               Content="{Binding Path=Planta.Descripcion}"/>
+        <telerik:RadButton Grid.Row="0" Grid.Column="1" Margin="5" Command="{Binding Path=LoginCommand}"
+                           Visibility="{Binding Path=LoginVisibility}" telerik:StyleManager.Theme="Windows8Touch">
+            <telerik:RadButton.Content>
+                <StackPanel Orientation="Horizontal">
+                    <Image Margin="2" Source="Images/key-black.png"/>
+                    <TextBlock Margin="2" Text="Login"/>
+                </StackPanel>
+            </telerik:RadButton.Content>
+        </telerik:RadButton>
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+            <TextBlock Margin="5,5,5,5" VerticalAlignment="Center" Text="Orden de Producción:" FontSize="15" FontFamily="Segoe UI"/>
+            <TextBox Margin="5,5,15,5" VerticalAlignment="Center" Width="60" FontSize="15" FontFamily="Segoe UI"
+                     Text="{Binding Path=OrdenBusqueda, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBlock Margin="5,5,5,5" VerticalAlignment="Center" Text="Referencia:" FontSize="15" FontFamily="Segoe UI"/>
+            <TextBox Margin="5,5,15,5" VerticalAlignment="Center" Width="175" FontSize="15" FontFamily="Segoe UI"
+                     Text="{Binding Path=ReferenciaBusqueda, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBlock Margin="5,5,5,5" VerticalAlignment="Center" Text="Color:" FontSize="15" FontFamily="Segoe UI"/>
+            <TextBox Margin="5,5,15,5" VerticalAlignment="Center" Width="175" FontSize="15" FontFamily="Segoe UI"
+                     Text="{Binding Path=Color, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+        <telerik:RadButton Grid.Row="1" Grid.Column="1" Margin="5" Command="{Binding Path=RefreshCommand}"
+                           telerik:StyleManager.Theme="Windows8Touch">
+            <telerik:RadButton.Content>
+                <StackPanel Orientation="Horizontal">
+                    <Image Margin="2" Source="Images/refresh.png"/>
+                    <TextBlock Margin="2" Text="Cargar Data"/>
+                </StackPanel>
+            </telerik:RadButton.Content>
+        </telerik:RadButton>
+        <StackPanel Grid.Row="2" Grid.Column="1" Margin="5" Orientation="Vertical" VerticalAlignment="Top">
+            <telerik:RadButton Margin="0,0,0,5" Content="Iniciar" Visibility="{Binding Path=IniciarVisibility}"
+                               Command="{Binding Path=IniciarCentroTrabajoCommand}"
+                               telerik:StyleManager.Theme="Windows8Touch"/>
+            <telerik:RadButton Margin="0,0,0,5" Content="Finalizar" Visibility="{Binding Path=FinalizarVisibility}"
+                               Command="{Binding Path=FinalizarCentroTrabajoCommand}"
+                               telerik:StyleManager.Theme="Windows8Touch"/>
+            <telerik:RadButton Margin="0,0,0,5" Content="Enviar a Intermoda" Visibility="{Binding Path=EnviarVisibility}"
+                               Command="{Binding Path=EnviarIntermodaCommand}"
+                               telerik:StyleManager.Theme="Windows8Touch"/>
+        </StackPanel>
+        <telerik:RadGridView Grid.Row="2" Grid.Column="0" Margin="5" AutoGenerateColumns="False" ShowGroupPanel="True" IsReadOnly="True"
+                             telerik:StyleManager.Theme="Windows8Touch" ItemsSource="{Binding Path=OrdenList}"
+                             SelectedItem="{Binding Path=OrdenSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn Header="Orden" Width="1*" DataMemberBinding="{Binding OrdenProduccion}" IsFilterable="False" IsGroupable="False"
+                                            GroupFooterTemplate="{StaticResource GroupFooterTemplate}"/>
+                <telerik:GridViewDataColumn Header="Referencia" Width="2*" DataMemberBinding="{Binding Referencia}" IsFilterable="False"/>
+                <telerik:GridViewDataColumn Header="Color" Width="1*" DataMemberBinding="{Binding Color}" IsFilterable="False"/>
+                <telerik:GridViewDataColumn Header="Cantidad" Width="1*" DataMemberBinding="{Binding Cantidad, StringFormat='{}{0:#,0  }'}" IsFilterable="False"
+                                            IsGroupable="False" HeaderTextAlignment="Right" TextAlignment="Right">
+                    <telerik:GridViewDataColumn.AggregateFunctions>
+                        <telerik:CountFunction Caption="Ordenes: " ResultFormatString="{}{0:#,0}"/>
+                        <telerik:SumFunction Caption="Unidades: " ResultFormatString="{}{0:#,0}"/>
+                    </telerik:GridViewDataColumn.AggregateFunctions>
+                </telerik:GridViewDataColumn>
+                <telerik:GridViewDataColumn Header="Centro de Trabajo" Width="3*" DataMemberBinding="{Binding CentroTrabajoSiguiente.Nombre}" IsFilterable="False"/>
+                <telerik:GridViewDataColumn Header="Estado" Width="2*" DataMemberBinding="{Binding EstadoLeyenda}" IsFilterable="False" IsGroupable="False"
+                                            CellStyle="{StaticResource EstadoCell}"/>
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+        <StackPanel Grid.Row="3" Grid.Column="0" Margin="5" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Label Margin="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Cantidad Total: "
+                   FontWeight="DemiBold" FontSize="16"/>
+            <TextBlock Margin="3" Width="90" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding Path=Total, StringFormat='{}{0:#,0 }'}"
+                       FontWeight="DemiBold" FontSize="16" TextAlignment="Right"/>
+        </StackPanel>
+        <Grid Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="2" Visibility="{Binding Path=NoLoginVisibility}" Background="#BFFFFFFF"/>
+    </Grid>
+</Window>

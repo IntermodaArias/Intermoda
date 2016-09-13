@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9344f691-06fb-4da4-89ee-aa49aaca7a2b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lavanderia/MaquinaCapacidad.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MaquinaCapacidad.xsd" MetadataType="Schema" ID="275dc93b-ec68-4075-a84a-eb1c995b4056" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/MaquinaCapacidad.svc?xsd=xsd0" />
+    <MetadataFile FileName="MaquinaCapacidad.wsdl" MetadataType="Wsdl" ID="ae9963c4-3f5a-49e4-b9e8-540457cca26e" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/MaquinaCapacidad.svc?wsdl" />
+    <MetadataFile FileName="MaquinaCapacidad.disco" MetadataType="Disco" ID="6187fdfb-3d5b-42c5-abd1-77746460f635" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/MaquinaCapacidad.svc?disco" />
+    <MetadataFile FileName="MaquinaCapacidad1.xsd" MetadataType="Schema" ID="6cdfcfdc-1497-4a60-ab51-b402d5121ae1" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/MaquinaCapacidad.svc?xsd=xsd3" />
+    <MetadataFile FileName="MaquinaCapacidad2.xsd" MetadataType="Schema" ID="dea89458-3e7a-451a-967b-cb6fcd7434cd" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/MaquinaCapacidad.svc?xsd=xsd2" />
+    <MetadataFile FileName="MaquinaCapacidad3.xsd" MetadataType="Schema" ID="ec82ab23-9dde-41c8-a947-4f590b8f688c" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lavanderia/MaquinaCapacidad.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

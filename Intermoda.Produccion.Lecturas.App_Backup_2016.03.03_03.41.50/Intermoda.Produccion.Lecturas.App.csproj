@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE35EBCD-FC4F-4A23-A947-2EA85B9DFC84}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intermoda.Produccion.Lecturas.App</RootNamespace>
+    <AssemblyName>Intermoda.Produccion.Lecturas.App</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.2.0.37222, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.2.0.37222, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.2.0.37226, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls, Version=2015.3.930.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.GridView, Version=2015.3.930.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Input, Version=2015.3.930.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2015.3.930.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Data, Version=2015.3.930.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Dialog\MessageWindow.xaml.cs">
+      <DependentUpon>MessageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\DialogService.cs" />
+    <Compile Include="Helpers\IDialogService.cs" />
+    <Compile Include="Messages\TablItemCloseMessage.cs" />
+    <Compile Include="ViewModel\CentroTrabajoClasificacionViewModel.cs" />
+    <Compile Include="ViewModel\CentroTrabajoViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\CentroTrabajoClasificacionEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\CentroTrabajoEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\GrupoEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\LineaEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\MessageWindowViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\ModuloEditViewModel.cs" />
+    <Compile Include="ViewModel\GrupoViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\LineaDetalleEditViewModel.cs" />
+    <Compile Include="ViewModel\LineaDetalleViewModel.cs" />
+    <Compile Include="ViewModel\LineaViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\ModuloViewModel.cs" />
+    <Compile Include="ViewModel\TabItem\TabItemHeaderViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\DialogView\CentroTrabajoClasificacionEditView.xaml.cs">
+      <DependentUpon>CentroTrabajoClasificacionEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CentroTrabajoClasificacionView.xaml.cs">
+      <DependentUpon>CentroTrabajoClasificacionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\CentroTrabajoEditView.xaml.cs">
+      <DependentUpon>CentroTrabajoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CentroTrabajoView.xaml.cs">
+      <DependentUpon>CentroTrabajoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\GrupoEditView.xaml.cs">
+      <DependentUpon>GrupoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\LineaDetalleEditView.xaml.cs">
+      <DependentUpon>LineaDetalleEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\LineaEditView.xaml.cs">
+      <DependentUpon>LineaEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\ModuloEditView.xaml.cs">
+      <DependentUpon>ModuloEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModuloView.xaml.cs">
+      <DependentUpon>ModuloView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Dialog\MessageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\DialogView\CentroTrabajoClasificacionEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CentroTrabajoClasificacionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\CentroTrabajoEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CentroTrabajoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\GrupoEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\LineaDetalleEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\LineaEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\ModuloEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ModuloView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Intermoda.Common\Intermoda.Common.csproj">
+      <Project>{07c1e232-8946-4295-9d30-4f9b45f10ec0}</Project>
+      <Name>Intermoda.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Porduccion.Lecturas.Client\Intermoda.Produccion.Lecturas.Client.csproj">
+      <Project>{f581b7f5-a152-4656-8669-b0e12552ba66}</Project>
+      <Name>Intermoda.Produccion.Lecturas.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Produccion.Lecturas.Client.DataServices\Intermoda.Produccion.Lecturas.Client.DataServices.csproj">
+      <Project>{77962e08-ad67-4c16-bd69-d7eee9f0b8eb}</Project>
+      <Name>Intermoda.Produccion.Lecturas.Client.DataServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Produccion.Lecturas.ClientProxy\Intermoda.Produccion.Lecturas.ClientProxy.csproj">
+      <Project>{f1a1b40f-de9b-47cb-9fde-099c3762cc85}</Project>
+      <Name>Intermoda.Produccion.Lecturas.ClientProxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Wpf.Controls\Intermoda.Wpf.Controls.csproj">
+      <Project>{149a1f21-2852-41fd-ada0-7114913bacf5}</Project>
+      <Name>Intermoda.Wpf.Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banktrans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clips24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\confirm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\edit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\eye24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CancelRed.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

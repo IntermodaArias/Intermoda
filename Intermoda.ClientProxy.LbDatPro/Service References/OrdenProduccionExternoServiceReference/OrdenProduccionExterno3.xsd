@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://190.5.95.110/ImDataServiceLb/OrdenProduccionExterno.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Intermoda.Business.LbDatPro" />
+  <xs:element name="GetByUsuarioPlanta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByUsuarioPlantaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Intermoda.Business.LbDatPro" minOccurs="0" name="GetByUsuarioPlantaResult" nillable="true" type="q1:ArrayOfOrdenProduccionExternoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companiaId" type="xs:short" />
+        <xs:element minOccurs="0" name="ordenAno" type="xs:short" />
+        <xs:element minOccurs="0" name="ordenNumero" type="xs:short" />
+        <xs:element minOccurs="0" name="estadoId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetEstadoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrabarLectura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companiaId" type="xs:short" />
+        <xs:element minOccurs="0" name="ordenAno" type="xs:short" />
+        <xs:element minOccurs="0" name="ordenNumero" type="xs:short" />
+        <xs:element minOccurs="0" name="centroTrabajoId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrabarLecturaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetEstadoEnviarIntermoda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companiaId" type="xs:short" />
+        <xs:element minOccurs="0" name="ordenAno" type="xs:short" />
+        <xs:element minOccurs="0" name="ordenNumero" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetEstadoEnviarIntermodaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

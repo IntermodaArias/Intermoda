@@ -1,0 +1,355 @@
+﻿<Window xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  
+        x:Class="Intermoda.Produccion.Lecturas.App.View.Lavanderia.LavanderiaLavadoRecetaView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Title="LavanderiaLavadoRecetaView" Height="800" Width="1024" WindowStartupLocation="CenterOwner"
+        d:DataContext="{Binding Source={StaticResource Locator}, Path=LavanderiaLavadoRecetaViewModel}">
+    <Grid Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1.25*"/>
+            <RowDefinition Height="1.25*"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="3.00*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Background="LightCyan" BorderBrush="Blue" BorderThickness="2" CornerRadius="4">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*" />
+                    <ColumnDefinition Width="4*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Label Margin="2" Content="Opción Lavado: " />
+                    <TextBlock Margin="2" VerticalAlignment="Center" FontWeight="DemiBold"
+                               Text="{Binding Path=OpcionLavado.Nombre}" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Label Margin="2" Content="Tela: " />
+                    <TextBlock Margin="2" VerticalAlignment="Center" FontWeight="DemiBold"
+                               Text="{Binding Path=OpcionLavado.Tela.TelaCodigo}" />
+                    <TextBlock Margin="2" VerticalAlignment="Center" FontWeight="DemiBold"
+                               Text="{Binding Path=OpcionLavado.Tela.TelaNombre}" />
+                </StackPanel>
+                <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Label Margin="2" Content="Estándar: " />
+                    <CheckBox Margin="2" VerticalAlignment="Center" FontWeight="DemiBold"
+                              IsChecked="{Binding Path=OpcionLavado.IsDefault}" />
+                </StackPanel></Grid>
+        </Border>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Margin="2" FontWeight="DemiBold" FontSize="14" Content="Centros de Trabajo"/>
+            <Label Grid.Row="0" Grid.Column="2" Margin="2" FontWeight="DemiBold" FontSize="14" Content="Procesos"/>
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Orientation="Vertical">
+                    <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Agregar un nuevo Centro de Trabajo"
+                           Command="{Binding Path=InsertCentroTrabajoCommand}">
+                        <telerik:RadButton.Content>
+                            <Image Source="../../Images/add.png" Stretch="Uniform"/>
+                        </telerik:RadButton.Content>
+                    </telerik:RadButton>
+                    <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Editar el Centro de Trabajo seleccionado"
+                           Command="{Binding Path=EditCentroTrabajoCommand}">
+                        <telerik:RadButton.Content>
+                            <Image Source="../../Images/edit.png" Stretch="Uniform"/>
+                        </telerik:RadButton.Content>
+                    </telerik:RadButton>
+                    <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Eliminar el Centro de Trabajo seleccionado"
+                           Command="{Binding Path=DeleteCentroTrabajoCommand}">
+                        <telerik:RadButton.Content>
+                            <Image Source="../../Images/delete.png" Stretch="Uniform"/>
+                        </telerik:RadButton.Content>
+                    </telerik:RadButton>
+                    <telerik:RadButton Margin="2,10,2,2" Height="24" Width="24" ToolTip="Renovar datos"
+                           Command="{Binding Path=RefreshCentroTrabajoCommand}">
+                        <telerik:RadButton.Content>
+                            <Image Source="../../Images/refresh.png" Stretch="Uniform"/>
+                        </telerik:RadButton.Content>
+                    </telerik:RadButton>
+                </StackPanel>
+                <telerik:RadGridView Grid.Column="1" Margin="2" AutoGenerateColumns="False"
+                                     ShowGroupPanel="False" IsReadOnly="True"
+                                     ItemsSource="{Binding Path=CentroTrabajoOpcionList}"
+                                     SelectedItem="{Binding Path=CentroTrabajoOpcionSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                    <telerik:RadGridView.Columns>
+                        <telerik:GridViewDataColumn Width="*" Header="Nombre"
+                                                    DataMemberBinding="{Binding CentroTrabajoNombre}" />
+                    </telerik:RadGridView.Columns>
+                </telerik:RadGridView>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Orientation="Vertical">
+                    <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Agregar un nuevo Proceso"
+                           Command="{Binding Path=InsertProcesoCommand}">
+                        <telerik:RadButton.Content>
+                            <Image Source="../../Images/add.png" Stretch="Uniform"/>
+                        </telerik:RadButton.Content>
+                    </telerik:RadButton>
+                    <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Editar el Proceso seleccionado"
+                           Command="{Binding Path=EditProcesoCommand}">
+                        <telerik:RadButton.Content>
+                            <Image Source="../../Images/edit.png" Stretch="Uniform"/>
+                        </telerik:RadButton.Content>
+                    </telerik:RadButton>
+                    <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Eliminar el Proceso seleccionado"
+                           Command="{Binding Path=DeleteProcesoCommand}">
+                        <telerik:RadButton.Content>
+                            <Image Source="../../Images/delete.png" Stretch="Uniform"/>
+                        </telerik:RadButton.Content>
+                    </telerik:RadButton>
+                    <telerik:RadButton Margin="2,10,2,2" Height="24" Width="24" ToolTip="Renovar datos"
+                           Command="{Binding Path=RefreshProcesoCommand}">
+                        <telerik:RadButton.Content>
+                            <Image Source="../../Images/refresh.png" Stretch="Uniform"/>
+                        </telerik:RadButton.Content>
+                    </telerik:RadButton>
+                </StackPanel>
+                <telerik:RadGridView Grid.Column="1" Margin="2" AutoGenerateColumns="False"
+                                     ShowGroupPanel="False" IsReadOnly="True"
+                                     ItemsSource="{Binding Path=ProcesoCentroTrabajoList}"
+                                     SelectedItem="{Binding Path=ProcesoCentroTrabajoSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                    <telerik:RadGridView.Columns>
+                        <telerik:GridViewDataColumn Width="*" Header="Nombre"
+                                                    DataMemberBinding="{Binding Path=Proceso.Nombre}" />
+                    </telerik:RadGridView.Columns>
+                </telerik:RadGridView>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Margin="2" FontWeight="DemiBold" FontSize="14" Content="Operaciones"/>
+            <StackPanel Grid.Row="0" Margin="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Agregar una nueva Operacion"
+                           Command="{Binding Path=InsertOperacionCommand}">
+                    <telerik:RadButton.Content>
+                        <Image Source="../../Images/add.png" Stretch="Uniform"/>
+                    </telerik:RadButton.Content>
+                </telerik:RadButton>
+                <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Editar la operacion seleccionada"
+                           Command="{Binding Path=EditOperacionCommand}">
+                    <telerik:RadButton.Content>
+                        <Image Source="../../Images/edit.png" Stretch="Uniform"/>
+                    </telerik:RadButton.Content>
+                </telerik:RadButton>
+                <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Eliminar la operacion seleccionada"
+                           Command="{Binding Path=DeleteOperacionCommand}">
+                    <telerik:RadButton.Content>
+                        <Image Source="../../Images/delete.png" Stretch="Uniform"/>
+                    </telerik:RadButton.Content>
+                </telerik:RadButton>
+                <telerik:RadButton Margin="10,2,2,2" Height="24" Width="24" ToolTip="Renovar datos"
+                           Command="{Binding Path=RefreshOperacionCommand}">
+                    <telerik:RadButton.Content>
+                        <Image Source="../../Images/refresh.png" Stretch="Uniform"/>
+                    </telerik:RadButton.Content>
+                </telerik:RadButton>
+            </StackPanel>
+            <telerik:RadGridView Grid.Row="1" Margin="2" AutoGenerateColumns="False" ShowGroupPanel="False" IsReadOnly="True"
+                                 ItemsSource="{Binding Path=OperacionProcesoList}"
+                                 SelectedItem="{Binding Path=OperacionProcesoSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <telerik:RadGridView.Columns>
+                    <telerik:GridViewDataColumn Width="1*" Header="Orden" TextAlignment="Right"
+                                                HeaderTextAlignment="Right"
+                                                DataMemberBinding="{Binding Orden}" />
+                    <telerik:GridViewDataColumn Width="3*" Header="Operación" TextAlignment="Left"
+                                                HeaderTextAlignment="Left"
+                                                DataMemberBinding="{Binding Operacion.Nombre}" />
+                    <telerik:GridViewDataColumn Width="1*" Header="PH" TextAlignment="Center"
+                                                HeaderTextAlignment="Center"
+                                                DataMemberBinding="{Binding Ph}" />
+                    <telerik:GridViewDataColumn Width="1*" Header="Temp. °C" TextAlignment="Right"
+                                                HeaderTextAlignment="Right"
+                                                DataMemberBinding="{Binding Temperatura}" />
+                    <telerik:GridViewDataColumn Width="1*" Header="T. Mín." TextAlignment="Right"
+                                                HeaderTextAlignment="Right"
+                                                DataMemberBinding="{Binding TiempoMinimo}" />
+                    <telerik:GridViewDataColumn Width="1*" Header="T. Máx." TextAlignment="Right"
+                                                HeaderTextAlignment="Right"
+                                                DataMemberBinding="{Binding TiempoMaximo}" />
+                    <telerik:GridViewDataColumn Width="1*" Header="T. Est." TextAlignment="Right"
+                                                HeaderTextAlignment="Right"
+                                                DataMemberBinding="{Binding TiempoEstandar}" />
+                    <telerik:GridViewDataColumn Width="1*" Header="Rel. Baño" TextAlignment="Right"
+                                                HeaderTextAlignment="Right"
+                                                DataMemberBinding="{Binding RelacionBano}" />
+                </telerik:RadGridView.Columns>
+            </telerik:RadGridView>
+            </Grid>        
+        <GridSplitter Grid.Row="3" HorizontalAlignment="Stretch" Background="LightGray"/>
+        <telerik:RadTabControl Grid.Row="4" Margin="2">
+            <telerik:RadTabItem Header="Instrucciones">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right">
+                        <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Agregar una nueva Instruccion"
+                           Command="{Binding Path=InsertInstruccionCommand}">
+                            <telerik:RadButton.Content>
+                                <Image Source="../../Images/add.png" Stretch="Uniform"/>
+                            </telerik:RadButton.Content>
+                        </telerik:RadButton>
+                        <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Editar la Instruccion seleccionada"
+                           Command="{Binding Path=EditInstruccionCommand}">
+                            <telerik:RadButton.Content>
+                                <Image Source="../../Images/edit.png" Stretch="Uniform"/>
+                            </telerik:RadButton.Content>
+                        </telerik:RadButton>
+                        <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Eliminar la Instruccion seleccionada"
+                           Command="{Binding Path=DeleteInstruccionCommand}">
+                            <telerik:RadButton.Content>
+                                <Image Source="../../Images/delete.png" Stretch="Uniform"/>
+                            </telerik:RadButton.Content>
+                        </telerik:RadButton>
+                        <telerik:RadButton Margin="10,2,2,2" Height="24" Width="24" ToolTip="Renovar datos"
+                           Command="{Binding Path=RefreshInstruccionCommand}">
+                            <telerik:RadButton.Content>
+                                <Image Source="../../Images/refresh.png" Stretch="Uniform"/>
+                            </telerik:RadButton.Content>
+                        </telerik:RadButton>
+                    </StackPanel>
+                    <telerik:RadGridView Grid.Row="1" Margin="2" AutoGenerateColumns="False" ShowGroupPanel="False" IsReadOnly="True"
+                                         ItemsSource="{Binding Path=InstruccionOperacionList}"
+                                         SelectedItem="{Binding Path=InstruccionOperacionSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <telerik:RadGridView.Columns>
+                            <telerik:GridViewDataColumn Width="1*" Header="Orden" TextAlignment="Right" HeaderTextAlignment="Right"
+                                                        DataMemberBinding="{Binding Orden}"/>
+                            <telerik:GridViewDataColumn Width="4*" Header="Instrucción" TextAlignment="Left" HeaderTextAlignment="Left"
+                                                        DataMemberBinding="{Binding Descripcion}"/>
+                            <telerik:GridViewDataColumn Width="1*" Header="Temp. °C" TextAlignment="Right" HeaderTextAlignment="Right"
+                                                        DataMemberBinding="{Binding Temperatura}"/>
+                            <telerik:GridViewDataColumn Width="1*" Header="T. Mín." TextAlignment="Right" HeaderTextAlignment="Right"
+                                                        DataMemberBinding="{Binding TiempoMinimo}"/>
+                            <telerik:GridViewDataColumn Width="1*" Header="T. Máx." TextAlignment="Right" HeaderTextAlignment="Right"
+                                                        DataMemberBinding="{Binding TiempoMaximo}"/>
+                            <telerik:GridViewDataColumn Width="1*" Header="T. Est." TextAlignment="Right" HeaderTextAlignment="Right"
+                                                        DataMemberBinding="{Binding TiempoEstandar}"/>
+                        </telerik:RadGridView.Columns>
+                    </telerik:RadGridView>
+                </Grid>
+            </telerik:RadTabItem>
+            <telerik:RadTabItem Header="Ingredientes">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right">
+                        <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Agregar un nuevo material"
+                           Command="{Binding Path=InsertMaterialCommand}">
+                            <telerik:RadButton.Content>
+                                <Image Source="../../Images/add.png" Stretch="Uniform"/>
+                            </telerik:RadButton.Content>
+                        </telerik:RadButton>
+                        <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Editar el material seleccionado"
+                           Command="{Binding Path=EditMaterialCommand}">
+                            <telerik:RadButton.Content>
+                                <Image Source="../../Images/edit.png" Stretch="Uniform"/>
+                            </telerik:RadButton.Content>
+                        </telerik:RadButton>
+                        <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Eliminar el material seleccionado"
+                           Command="{Binding Path=DeleteMaterialCommand}">
+                            <telerik:RadButton.Content>
+                                <Image Source="../../Images/delete.png" Stretch="Uniform"/>
+                            </telerik:RadButton.Content>
+                        </telerik:RadButton>
+                        <telerik:RadButton Margin="10,2,2,2" Height="24" Width="24" ToolTip="Renovar datos"
+                           Command="{Binding Path=RefreshMaterialCommand}">
+                            <telerik:RadButton.Content>
+                                <Image Source="../../Images/refresh.png" Stretch="Uniform"/>
+                            </telerik:RadButton.Content>
+                        </telerik:RadButton>
+                    </StackPanel>
+                    <telerik:RadGridView Grid.Row="1" Margin="2" AutoGenerateColumns="False" ShowGroupPanel="False" IsReadOnly="True"
+                                         ItemsSource="{Binding Path=IngredienteOperacionList}"
+                                         SelectedItem="{Binding Path=IngredienteOperacionSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <telerik:RadGridView.Columns>
+                            <telerik:GridViewDataColumn Width="1*" Header="Orden" TextAlignment="Right" HeaderTextAlignment="Right"
+                                                        DataMemberBinding="{Binding Orden}"/>
+                            <telerik:GridViewDataColumn Width="3*" Header="Clase" TextAlignment="Left" HeaderTextAlignment="Left"
+                                                        DataMemberBinding="{Binding Path=Clase.Descripcion}"/>
+                            <telerik:GridViewDataColumn Width="3*" Header="Sub-Clase" TextAlignment="Left" HeaderTextAlignment="Left"
+                                                        DataMemberBinding="{Binding Path=SubClase.Descripcion}"/>
+                            <telerik:GridViewDataColumn Width="3*" Header="Ingrediente" TextAlignment="Left" HeaderTextAlignment="Left"
+                                                        DataMemberBinding="{Binding Path=Ingrediente.Nombre}"/>
+                            <telerik:GridViewDataColumn Width="1*" Header="Porcentaje" TextAlignment="Right" HeaderTextAlignment="Right"
+                                                        DataMemberBinding="{Binding Path=Porcentaje}"/>
+                        </telerik:RadGridView.Columns>
+                    </telerik:RadGridView>
+                </Grid>
+            </telerik:RadTabItem>
+            <telerik:RadTabItem Header="Observaciones">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right">
+                        <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Agregar una nueva Observacion"
+                           Command="{Binding Path=InsertObservacionCommand}">
+                            <telerik:RadButton.Content>
+                                <Image Source="../../Images/add.png" Stretch="Uniform"/>
+                            </telerik:RadButton.Content>
+                        </telerik:RadButton>
+                        <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Editar la Observacion seleccionado"
+                           Command="{Binding Path=EditObservacionCommand}">
+                            <telerik:RadButton.Content>
+                                <Image Source="../../Images/edit.png" Stretch="Uniform"/>
+                            </telerik:RadButton.Content>
+                        </telerik:RadButton>
+                        <telerik:RadButton Margin="2" Height="24" Width="24" ToolTip="Eliminar la Observacion seleccionado"
+                           Command="{Binding Path=DeleteObservacionCommand}">
+                            <telerik:RadButton.Content>
+                                <Image Source="../../Images/delete.png" Stretch="Uniform"/>
+                            </telerik:RadButton.Content>
+                        </telerik:RadButton>
+                        <telerik:RadButton Margin="10,2,2,2" Height="24" Width="24" ToolTip="Renovar datos"
+                           Command="{Binding Path=RefreshObservacionCommand}">
+                            <telerik:RadButton.Content>
+                                <Image Source="../../Images/refresh.png" Stretch="Uniform"/>
+                            </telerik:RadButton.Content>
+                        </telerik:RadButton>
+                    </StackPanel>
+                    <telerik:RadGridView Grid.Row="1" Margin="2" AutoGenerateColumns="False" ShowGroupPanel="False" IsReadOnly="True"
+                                         ItemsSource="{Binding Path=ObservacionOperacionList}"
+                                         SelectedItem="{Binding Path=ObservacionOperacionSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="2">
+                        <telerik:RadGridView.Columns>
+                            <telerik:GridViewDataColumn Width="1*" Header="Orden" TextAlignment="Right" HeaderTextAlignment="Right"
+                                                        DataMemberBinding="{Binding Path=Orden}"/>
+                            <telerik:GridViewDataColumn Width="1*" Header="Posición" TextAlignment="Right" HeaderTextAlignment="Right"
+                                                        DataMemberBinding="{Binding Path=Posicion}"/>
+                            <telerik:GridViewDataColumn Width="7*" Header="Observación" TextAlignment="Left" HeaderTextAlignment="Left"
+                                                        DataMemberBinding="{Binding Path=Descripcion}"/>
+                        </telerik:RadGridView.Columns>
+                    </telerik:RadGridView>
+                </Grid>
+            </telerik:RadTabItem>
+        </telerik:RadTabControl>
+        <telerik:RadButton Grid.Row="5" Margin="2,10,2,2" HorizontalAlignment="Right" VerticalAlignment="Center" Width="60" Height="24"
+                           Content="Cerrar" Command="{Binding Path=CancelCommand}"/>
+    </Grid>
+</Window>

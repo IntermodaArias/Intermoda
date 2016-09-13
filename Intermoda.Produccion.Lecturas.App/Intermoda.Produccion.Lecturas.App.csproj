@@ -1,0 +1,795 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE35EBCD-FC4F-4A23-A947-2EA85B9DFC84}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intermoda.Produccion.Lecturas.App</RootNamespace>
+    <AssemblyName>Intermoda</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.2.0.37222, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.2.0.37222, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.2.0.37226, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.2.0.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Telerik.Reporting, Version=10.0.16.113, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.ReportViewer.Wpf, Version=10.0.16.113, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.Input.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.Navigation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Dialog\MessageWindow.xaml.cs">
+      <DependentUpon>MessageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\DialogService.cs" />
+    <Compile Include="Helpers\IDialogService.cs" />
+    <Compile Include="Messages\TablItemCloseMessage.cs" />
+    <Compile Include="Reports\TestReport01.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TestReport01.Designer.cs">
+      <DependentUpon>TestReport01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\CentroTrabajoClasificacionViewModel.cs" />
+    <Compile Include="ViewModel\CentroTrabajoViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\CentroTrabajoClasificacionEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\CentroTrabajoEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\GrupoCopiaSemanaViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\GrupoEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\JornadaDetalleEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaCentroTrabajoEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaCentroTrabajoOpcionEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaColoresEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaIngredienteInstruccionEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaIngredientePredefinidoEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaInstruccionEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaInstruccionOperacionEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaInstruccionPredefinidaEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaLavadoEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaLavadoraCapacidadEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaLavadoraEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaObservacionOperacionEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaOpcionLavadoEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaOperacionCentroTrabajoEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaOperacionEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaOperacionObservacionEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaOperacionProcesoEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaProcesoCentroTrabajoEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaProcesoEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaSecadoraCapacidadEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaSecadoraEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\Lavanderia\LavanderiaTelaColorIntermodaEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\TurnoDetalleEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\TurnoEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\JornadaEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\LineaEditViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\MessageWindowViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\ModuloEditViewModel.cs" />
+    <Compile Include="ViewModel\GrupoViewModel.cs" />
+    <Compile Include="ViewModel\DialogViewModel\LineaDetalleEditViewModel.cs" />
+    <Compile Include="ViewModel\JornadaDetalleViewModel.cs" />
+    <Compile Include="ViewModel\JornadaViewModel.cs" />
+    <Compile Include="ViewModel\Lavanderia\LavanderiaCentroTrabajoViewModel.cs" />
+    <Compile Include="ViewModel\Lavanderia\LavanderiaColoresViewModel.cs" />
+    <Compile Include="ViewModel\Lavanderia\LavanderiaIngredientePredefinidoViewModel.cs" />
+    <Compile Include="ViewModel\Lavanderia\LavanderiaLavadoraCapacidadViewModel.cs" />
+    <Compile Include="ViewModel\Lavanderia\LavanderiaLavadoraViewModel.cs" />
+    <Compile Include="ViewModel\Lavanderia\LavanderiaLavadoRecetaViewModel.cs" />
+    <Compile Include="ViewModel\Lavanderia\LavanderiaLavadoViewModel.cs" />
+    <Compile Include="ViewModel\Lavanderia\LavanderiaOpcionLavadoViewModel.cs" />
+    <Compile Include="ViewModel\Lavanderia\LavanderiaOperacionCentroTrabajoViewModel.cs" />
+    <Compile Include="ViewModel\Lavanderia\LavanderiaOperacionInstruccionViewModel.cs" />
+    <Compile Include="ViewModel\Lavanderia\LavanderiaOperacionObservacionViewModel.cs" />
+    <Compile Include="ViewModel\Lavanderia\LavanderiaOperacionViewModel.cs" />
+    <Compile Include="ViewModel\Lavanderia\LavanderiaOrdenProduccionViewModel.cs" />
+    <Compile Include="ViewModel\Lavanderia\LavanderiaProcesoViewModel.cs" />
+    <Compile Include="ViewModel\Lavanderia\LavanderiaSecadoraCapacidadViewModel.cs" />
+    <Compile Include="ViewModel\Lavanderia\LavanderiaSecadoraViewModel.cs" />
+    <Compile Include="ViewModel\Lavanderia\LavanderiaTelaColorViewModel.cs" />
+    <Compile Include="ViewModel\LineaDetalleViewModel.cs" />
+    <Compile Include="ViewModel\LineaViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\ModuloViewModel.cs" />
+    <Compile Include="ViewModel\ReportTestViewModel.cs" />
+    <Compile Include="ViewModel\TabItem\TabItemHeaderViewModel.cs" />
+    <Compile Include="ViewModel\TurnoDetalleViewModel.cs" />
+    <Compile Include="ViewModel\TurnoViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\DialogView\CentroTrabajoClasificacionEditView.xaml.cs">
+      <DependentUpon>CentroTrabajoClasificacionEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CentroTrabajoClasificacionView.xaml.cs">
+      <DependentUpon>CentroTrabajoClasificacionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\CentroTrabajoEditView.xaml.cs">
+      <DependentUpon>CentroTrabajoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CentroTrabajoView.xaml.cs">
+      <DependentUpon>CentroTrabajoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\GrupoCopiarSemanaView.xaml.cs">
+      <DependentUpon>GrupoCopiarSemanaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\GrupoEditView.xaml.cs">
+      <DependentUpon>GrupoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\JornadaDetalleEditView.xaml.cs">
+      <DependentUpon>JornadaDetalleEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\JornadaEditView.xaml.cs">
+      <DependentUpon>JornadaEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaCentroTrabajoEditView.xaml.cs">
+      <DependentUpon>LavanderiaCentroTrabajoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaCentroTrabajoOpcionEditView.xaml.cs">
+      <DependentUpon>LavanderiaCentroTrabajoOpcionEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaColoresEditView.xaml.cs">
+      <DependentUpon>LavanderiaColoresEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaIngredienteInstruccionEditView.xaml.cs">
+      <DependentUpon>LavanderiaIngredienteInstruccionEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaIngredientePredefinidoEditView.xaml.cs">
+      <DependentUpon>LavanderiaIngredientePredefinidoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaIngredientePredefinidoView.xaml.cs">
+      <DependentUpon>LavanderiaIngredientePredefinidoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaInstruccionOperacionEditView.xaml.cs">
+      <DependentUpon>LavanderiaInstruccionOperacionEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaInstruccionPredefinidaEditView.xaml.cs">
+      <DependentUpon>LavanderiaInstruccionPredefinidaEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaLavadoEditView.xaml.cs">
+      <DependentUpon>LavanderiaLavadoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaLavadoraCapacidadEditView.xaml.cs">
+      <DependentUpon>LavanderiaLavadoraCapacidadEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaLavadoraEditView.xaml.cs">
+      <DependentUpon>LavanderiaLavadoraEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaObservacionOperacionEditView.xaml.cs">
+      <DependentUpon>LavanderiaObservacionOperacionEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaOpcionLavadoEditView.xaml.cs">
+      <DependentUpon>LavanderiaOpcionLavadoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaOperacionCentroTrabajoEditView.xaml.cs">
+      <DependentUpon>LavanderiaOperacionCentroTrabajoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaOperacionObservacionEditView.xaml.cs">
+      <DependentUpon>LavanderiaOperacionObservacionEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaOperacionProcesoEditView.xaml.cs">
+      <DependentUpon>LavanderiaOperacionProcesoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaProcesoCentroTrabajoEditView.xaml.cs">
+      <DependentUpon>LavanderiaProcesoCentroTrabajoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaProcesoEditView.xaml.cs">
+      <DependentUpon>LavanderiaProcesoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaSecadoraCapacidadEditView.xaml.cs">
+      <DependentUpon>LavanderiaSecadoraCapacidadEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaSecadoraEditView.xaml.cs">
+      <DependentUpon>LavanderiaSecadoraEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaTelaColorIntermodaEditView.xaml.cs">
+      <DependentUpon>LavanderiaTelaColorIntermodaEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\LineaDetalleEditView.xaml.cs">
+      <DependentUpon>LineaDetalleEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\LineaEditView.xaml.cs">
+      <DependentUpon>LineaEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\ModuloEditView.xaml.cs">
+      <DependentUpon>ModuloEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\TurnoDetalleEditView.xaml.cs">
+      <DependentUpon>TurnoDetalleEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\TurnoEditView.xaml.cs">
+      <DependentUpon>TurnoEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\GrupoView.xaml.cs">
+      <DependentUpon>GrupoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\JornadaDetalleView.xaml.cs">
+      <DependentUpon>JornadaDetalleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\JornadaView.xaml.cs">
+      <DependentUpon>JornadaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lavanderia\LavanderiaCentroTrabajoView.xaml.cs">
+      <DependentUpon>LavanderiaCentroTrabajoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogView\Lavanderia\LavanderiaOperacionEditView.xaml.cs">
+      <DependentUpon>LavanderiaOperacionEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lavanderia\LavanderiaColoresView.xaml.cs">
+      <DependentUpon>LavanderiaColoresView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lavanderia\LavanderiaIngredientePredefinidoView.xaml.cs">
+      <DependentUpon>LavanderiaIngredientePredefinidoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lavanderia\LavanderiaLavadoraCapacidadView.xaml.cs">
+      <DependentUpon>LavanderiaLavadoraCapacidadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lavanderia\LavanderiaLavadoraView.xaml.cs">
+      <DependentUpon>LavanderiaLavadoraView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lavanderia\LavanderiaLavadoRecetaView.xaml.cs">
+      <DependentUpon>LavanderiaLavadoRecetaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lavanderia\LavanderiaLavadoView.xaml.cs">
+      <DependentUpon>LavanderiaLavadoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lavanderia\LavanderiaOpcionLavadoView.xaml.cs">
+      <DependentUpon>LavanderiaOpcionLavadoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lavanderia\LavanderiaOperacionCentroTrabajoView.xaml.cs">
+      <DependentUpon>LavanderiaOperacionCentroTrabajoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lavanderia\LavanderiaOperacionInstruccionView.xaml.cs">
+      <DependentUpon>LavanderiaOperacionInstruccionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lavanderia\LavanderiaOperacionObservacionView.xaml.cs">
+      <DependentUpon>LavanderiaOperacionObservacionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lavanderia\LavanderiaOperacionView.xaml.cs">
+      <DependentUpon>LavanderiaOperacionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lavanderia\LavanderiaProcesoView.xaml.cs">
+      <DependentUpon>LavanderiaProcesoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lavanderia\LavanderiaSecadoraCapacidadView.xaml.cs">
+      <DependentUpon>LavanderiaSecadoraCapacidadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lavanderia\LavanderiaSecadoraView.xaml.cs">
+      <DependentUpon>LavanderiaSecadoraView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Lavanderia\LavanderiaTelaColorView.xaml.cs">
+      <DependentUpon>LavanderiaTelaColorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LineaDetalleView.xaml.cs">
+      <DependentUpon>LineaDetalleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LineaView.xaml.cs">
+      <DependentUpon>LineaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModuloView.xaml.cs">
+      <DependentUpon>ModuloView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReportTest.xaml.cs">
+      <DependentUpon>ReportTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TurnoDetalleView.xaml.cs">
+      <DependentUpon>TurnoDetalleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TurnoView.xaml.cs">
+      <DependentUpon>TurnoView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Dialog\MessageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Themes\System.Windows.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Telerik.ReportViewer.Wpf.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Telerik.Windows.Controls.Input.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Telerik.Windows.Controls.Navigation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Telerik.Windows.Controls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\DialogView\CentroTrabajoClasificacionEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CentroTrabajoClasificacionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\CentroTrabajoEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CentroTrabajoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\GrupoCopiarSemanaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\GrupoEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\JornadaDetalleEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\JornadaEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaCentroTrabajoEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaCentroTrabajoOpcionEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaColoresEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaIngredienteInstruccionEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaIngredientePredefinidoEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaIngredientePredefinidoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaInstruccionOperacionEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaInstruccionPredefinidaEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaLavadoEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaLavadoraCapacidadEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaLavadoraEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaObservacionOperacionEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaOpcionLavadoEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaOperacionCentroTrabajoEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaOperacionObservacionEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaOperacionProcesoEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaProcesoCentroTrabajoEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaProcesoEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaSecadoraCapacidadEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaSecadoraEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaTelaColorIntermodaEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\LineaDetalleEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\LineaEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\ModuloEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\TurnoDetalleEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\TurnoEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\GrupoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\JornadaDetalleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\JornadaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Lavanderia\LavanderiaCentroTrabajoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DialogView\Lavanderia\LavanderiaOperacionEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Lavanderia\LavanderiaColoresView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Lavanderia\LavanderiaIngredientePredefinidoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Lavanderia\LavanderiaLavadoraCapacidadView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Lavanderia\LavanderiaLavadoraView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Lavanderia\LavanderiaLavadoRecetaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Lavanderia\LavanderiaLavadoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Lavanderia\LavanderiaOpcionLavadoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Lavanderia\LavanderiaOperacionCentroTrabajoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Lavanderia\LavanderiaOperacionInstruccionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Lavanderia\LavanderiaOperacionObservacionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Lavanderia\LavanderiaOperacionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Lavanderia\LavanderiaProcesoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Lavanderia\LavanderiaSecadoraCapacidadView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Lavanderia\LavanderiaSecadoraView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Lavanderia\LavanderiaTelaColorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LineaDetalleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LineaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ModuloView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ReportTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TurnoDetalleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TurnoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TestReport01.resx">
+      <DependentUpon>TestReport01.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Intermoda.Client.Lavanderia.LavadoraCapacidad.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Intermoda.Client.Ax\Intermoda.Client.Ax.csproj">
+      <Project>{dce7d388-da24-403a-8e88-87b100dff7fa}</Project>
+      <Name>Intermoda.Client.Ax</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Client.DataService.Ax\Intermoda.Client.DataService.Ax.csproj">
+      <Project>{7b081675-6910-4fec-9508-de211eae4093}</Project>
+      <Name>Intermoda.Client.DataService.Ax</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Client.DataService.Lavanderia\Intermoda.Client.DataService.Lavanderia.csproj">
+      <Project>{59435e8c-0d3b-49c4-8bd7-7bdae6a641b9}</Project>
+      <Name>Intermoda.Client.DataService.Lavanderia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Client.DataService.LbDatPro\Intermoda.Client.DataService.LbDatPro.csproj">
+      <Project>{0e7c5132-dba0-4c5b-b8ec-ccbb860aa217}</Project>
+      <Name>Intermoda.Client.DataService.LbDatPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Client.DataService.Lectura\Intermoda.Client.DataService.Lectura.csproj">
+      <Project>{1dd5b64b-665b-434f-9180-656a66d83c1b}</Project>
+      <Name>Intermoda.Client.DataService.Lectura</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Client.Lavanderia\Intermoda.Client.Lavanderia.csproj">
+      <Project>{c61fdff7-45e8-4000-b44d-07969be92383}</Project>
+      <Name>Intermoda.Client.Lavanderia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Client.LbDatPro\Intermoda.Client.LbDatPro.csproj">
+      <Project>{d93c5d0c-40d3-4e34-b5c9-5fb8af761f3f}</Project>
+      <Name>Intermoda.Client.LbDatPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Client.Lectura\Intermoda.Client.Lectura.csproj">
+      <Project>{4e05db18-b8da-468a-acf2-c364617cad9c}</Project>
+      <Name>Intermoda.Client.Lectura</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.ClientProxy.Ax\Intermoda.ClientProxy.Ax.csproj">
+      <Project>{1102679d-5f1b-40d2-94f4-a1c4be44747d}</Project>
+      <Name>Intermoda.ClientProxy.Ax</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.ClientProxy.Lavanderia\Intermoda.ClientProxy.Lavanderia.csproj">
+      <Project>{b80456d1-2154-4d5f-977e-fd480ad7fdcd}</Project>
+      <Name>Intermoda.ClientProxy.Lavanderia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.ClientProxy.LbDatPro\Intermoda.ClientProxy.LbDatPro.csproj">
+      <Project>{790be3f7-f02c-4986-be21-d353f364dbfa}</Project>
+      <Name>Intermoda.ClientProxy.LbDatPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.ClientProxy.Lectura\Intermoda.ClientProxy.Lectura.csproj">
+      <Project>{2f90415f-fcdd-4bed-9e5e-1f36cd484971}</Project>
+      <Name>Intermoda.ClientProxy.Lectura</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Common\Intermoda.Common.csproj">
+      <Project>{07c1e232-8946-4295-9d30-4f9b45f10ec0}</Project>
+      <Name>Intermoda.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Reports\Intermoda.Reports.csproj">
+      <Project>{b64bd533-25b9-4280-bedd-0506a455c60c}</Project>
+      <Name>Intermoda.Reports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Wpf.Controls\Intermoda.Wpf.Controls.csproj">
+      <Project>{149a1f21-2852-41fd-ada0-7114913bacf5}</Project>
+      <Name>Intermoda.Wpf.Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banktrans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clips24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\confirm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\edit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\eye24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CancelRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\IntermodaLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cogs3.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

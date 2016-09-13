@@ -1,0 +1,14 @@
+C:\VisualStudio\Intermoda\Intermoda.Business.Lavanderia\bin\Release\Intermoda.Business.Lavanderia.dll.config
+C:\VisualStudio\Intermoda\Intermoda.Business.Lavanderia\bin\Release\Intermoda.Business.Lavanderia.dll
+C:\VisualStudio\Intermoda\Intermoda.Business.Lavanderia\bin\Release\Intermoda.Business.Lavanderia.pdb
+C:\VisualStudio\Intermoda\Intermoda.Business.Lavanderia\bin\Release\EntityFramework.dll
+C:\VisualStudio\Intermoda\Intermoda.Business.Lavanderia\bin\Release\EntityFramework.SqlServer.dll
+C:\VisualStudio\Intermoda\Intermoda.Business.Lavanderia\bin\Release\Intermoda.Common.dll
+C:\VisualStudio\Intermoda\Intermoda.Business.Lavanderia\bin\Release\Intermoda.Produccion.Lavanderia.dll
+C:\VisualStudio\Intermoda\Intermoda.Business.Lavanderia\bin\Release\Intermoda.Common.pdb
+C:\VisualStudio\Intermoda\Intermoda.Business.Lavanderia\bin\Release\Intermoda.Produccion.Lavanderia.pdb
+C:\VisualStudio\Intermoda\Intermoda.Business.Lavanderia\bin\Release\EntityFramework.xml
+C:\VisualStudio\Intermoda\Intermoda.Business.Lavanderia\bin\Release\EntityFramework.SqlServer.xml
+C:\VisualStudio\Intermoda\Intermoda.Business.Lavanderia\obj\Release\Intermoda.Business.Lavanderia.csprojResolveAssemblyReference.cache
+C:\VisualStudio\Intermoda\Intermoda.Business.Lavanderia\obj\Release\Intermoda.Business.Lavanderia.dll
+C:\VisualStudio\Intermoda\Intermoda.Business.Lavanderia\obj\Release\Intermoda.Business.Lavanderia.pdb

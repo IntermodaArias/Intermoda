@@ -1,0 +1,4 @@
+C:\VisualStudio\Intermoda\Intermoda.Client.Ax\bin\Release\Intermoda.Client.Ax.dll
+C:\VisualStudio\Intermoda\Intermoda.Client.Ax\bin\Release\Intermoda.Client.Ax.pdb
+C:\VisualStudio\Intermoda\Intermoda.Client.Ax\obj\Release\Intermoda.Client.Ax.dll
+C:\VisualStudio\Intermoda\Intermoda.Client.Ax\obj\Release\Intermoda.Client.Ax.pdb

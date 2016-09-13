@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Intermoda.DataService.Lavanderia.ObservacionPredefinida" CodeBehind="ObservacionPredefinida.svc.cs" %>

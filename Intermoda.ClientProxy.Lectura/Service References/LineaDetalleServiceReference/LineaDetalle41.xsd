@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lecturas" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lecturas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/IntermodaService/Lectura/LineaDetalle.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Data" />
+  <xs:complexType name="LineaDetalleBusiness">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Data" minOccurs="0" name="CentroTrabajo" nillable="true" type="q1:CentroTrabajo" />
+      <xs:element minOccurs="0" name="CentroTrabajoId" type="xs:int" />
+      <xs:element minOccurs="0" name="EsSalidaUnica" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LineaId" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Data" minOccurs="0" name="Modulo" nillable="true" type="q2:Modulo" />
+      <xs:element minOccurs="0" name="ModuloId" type="xs:int" />
+      <xs:element minOccurs="0" name="Secuencia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LineaDetalleBusiness" nillable="true" type="tns:LineaDetalleBusiness" />
+  <xs:complexType name="ArrayOfLineaDetalleBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LineaDetalleBusiness" nillable="true" type="tns:LineaDetalleBusiness" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLineaDetalleBusiness" nillable="true" type="tns:ArrayOfLineaDetalleBusiness" />
+</xs:schema>

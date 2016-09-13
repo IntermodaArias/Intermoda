@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Intermoda.Produccion.Lecturas.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CentroTrabajo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentroTrabajoClasificacion" nillable="true" type="tns:ArrayOfCentroTrabajoClasificacion" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LineaDetalle" nillable="true" type="tns:ArrayOfLineaDetalle" />
+      <xs:element minOccurs="0" name="Modulo" nillable="true" type="tns:ArrayOfModulo" />
+      <xs:element minOccurs="0" name="ModuloSemana" nillable="true" type="tns:ArrayOfModuloSemana" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secuencia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CentroTrabajo" nillable="true" type="tns:CentroTrabajo" />
+  <xs:complexType name="ArrayOfCentroTrabajoClasificacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CentroTrabajoClasificacion" nillable="true" type="tns:CentroTrabajoClasificacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCentroTrabajoClasificacion" nillable="true" type="tns:ArrayOfCentroTrabajoClasificacion" />
+  <xs:complexType name="CentroTrabajoClasificacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentroTrabajo" nillable="true" type="tns:CentroTrabajo" />
+      <xs:element minOccurs="0" name="CentroTrabajoId" type="xs:int" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ModuloSemanaOperario" nillable="true" type="tns:ArrayOfModuloSemanaOperario" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secuencia" type="xs:int" />
+      <xs:element minOccurs="0" name="Tipo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CentroTrabajoClasificacion" nillable="true" type="tns:CentroTrabajoClasificacion" />
+  <xs:complexType name="ArrayOfModuloSemanaOperario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ModuloSemanaOperario" nillable="true" type="tns:ModuloSemanaOperario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfModuloSemanaOperario" nillable="true" type="tns:ArrayOfModuloSemanaOperario" />
+  <xs:complexType name="ModuloSemanaOperario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentroTrabajoClasificacion" nillable="true" type="tns:CentroTrabajoClasificacion" />
+      <xs:element minOccurs="0" name="ClasificacionId" type="xs:int" />
+      <xs:element minOccurs="0" name="CompaniaCodigo" type="xs:short" />
+      <xs:element minOccurs="0" name="CurvaEntrenamiento" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ModuloSemana" nillable="true" type="tns:ModuloSemana" />
+      <xs:element minOccurs="0" name="ModuloSemanaId" type="xs:int" />
+      <xs:element minOccurs="0" name="OperarioCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="SemanaEntrenamiento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModuloSemanaOperario" nillable="true" type="tns:ModuloSemanaOperario" />
+  <xs:complexType name="ModuloSemana">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentroTrabajo" nillable="true" type="tns:CentroTrabajo" />
+      <xs:element minOccurs="0" name="CentroTrabajoId" type="xs:int" />
+      <xs:element minOccurs="0" name="Curva" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="MetaPiezasPorHora" type="xs:int" />
+      <xs:element minOccurs="0" name="MetaProduccion" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MinutosBase" type="xs:int" />
+      <xs:element minOccurs="0" name="MinutosEntrenamiento" type="xs:int" />
+      <xs:element minOccurs="0" name="MinutosTitular" type="xs:int" />
+      <xs:element minOccurs="0" name="MinutosUtilitario" type="xs:int" />
+      <xs:element minOccurs="0" name="Modulo" nillable="true" type="tns:Modulo" />
+      <xs:element minOccurs="0" name="ModuloId" type="xs:int" />
+      <xs:element minOccurs="0" name="ModuloSemanaOperario" nillable="true" type="tns:ArrayOfModuloSemanaOperario" />
+      <xs:element minOccurs="0" name="TransferenciaMinutos" type="xs:int" />
+      <xs:element minOccurs="0" name="Turno" nillable="true" type="tns:Turno" />
+      <xs:element minOccurs="0" name="TurnoId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModuloSemana" nillable="true" type="tns:ModuloSemana" />
+  <xs:complexType name="Modulo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentroTrabajo" nillable="true" type="tns:CentroTrabajo" />
+      <xs:element minOccurs="0" name="CentroTrabajoId" type="xs:int" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LineaDetalle" nillable="true" type="tns:ArrayOfLineaDetalle" />
+      <xs:element minOccurs="0" name="ModuloSemana" nillable="true" type="tns:ArrayOfModuloSemana" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secuencia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Modulo" nillable="true" type="tns:Modulo" />
+  <xs:complexType name="ArrayOfLineaDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LineaDetalle" nillable="true" type="tns:LineaDetalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLineaDetalle" nillable="true" type="tns:ArrayOfLineaDetalle" />
+  <xs:complexType name="LineaDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentroTrabajo" nillable="true" type="tns:CentroTrabajo" />
+      <xs:element minOccurs="0" name="CentroTrabajoId" type="xs:int" />
+      <xs:element minOccurs="0" name="EsSalidaUnica" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Linea" nillable="true" type="tns:Linea" />
+      <xs:element minOccurs="0" name="LineaId" type="xs:int" />
+      <xs:element minOccurs="0" name="Modulo" nillable="true" type="tns:Modulo" />
+      <xs:element minOccurs="0" name="ModuloId" type="xs:int" />
+      <xs:element minOccurs="0" name="Secuencia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LineaDetalle" nillable="true" type="tns:LineaDetalle" />
+  <xs:complexType name="Linea">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Grupo" nillable="true" type="tns:Grupo" />
+      <xs:element minOccurs="0" name="GrupoId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LineaDetalle" nillable="true" type="tns:ArrayOfLineaDetalle" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secuencia" type="xs:int" />
+      <xs:element minOccurs="0" name="Tipo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Linea" nillable="true" type="tns:Linea" />
+  <xs:complexType name="Grupo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Linea" nillable="true" type="tns:ArrayOfLinea" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secuencia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Grupo" nillable="true" type="tns:Grupo" />
+  <xs:complexType name="ArrayOfLinea">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Linea" nillable="true" type="tns:Linea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLinea" nillable="true" type="tns:ArrayOfLinea" />
+  <xs:complexType name="ArrayOfModuloSemana">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ModuloSemana" nillable="true" type="tns:ModuloSemana" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfModuloSemana" nillable="true" type="tns:ArrayOfModuloSemana" />
+  <xs:complexType name="Turno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ModuloSemana" nillable="true" type="tns:ArrayOfModuloSemana" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TurnoDetalle" nillable="true" type="tns:ArrayOfTurnoDetalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Turno" nillable="true" type="tns:Turno" />
+  <xs:complexType name="ArrayOfTurnoDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TurnoDetalle" nillable="true" type="tns:TurnoDetalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTurnoDetalle" nillable="true" type="tns:ArrayOfTurnoDetalle" />
+  <xs:complexType name="TurnoDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dia" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Jornada" nillable="true" type="tns:Jornada" />
+      <xs:element minOccurs="0" name="JornadaId" type="xs:int" />
+      <xs:element minOccurs="0" name="Turno" nillable="true" type="tns:Turno" />
+      <xs:element minOccurs="0" name="TurnoId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TurnoDetalle" nillable="true" type="tns:TurnoDetalle" />
+  <xs:complexType name="Jornada">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="JornadaDetalle" nillable="true" type="tns:ArrayOfJornadaDetalle" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TurnoDetalle" nillable="true" type="tns:ArrayOfTurnoDetalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Jornada" nillable="true" type="tns:Jornada" />
+  <xs:complexType name="ArrayOfJornadaDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JornadaDetalle" nillable="true" type="tns:JornadaDetalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJornadaDetalle" nillable="true" type="tns:ArrayOfJornadaDetalle" />
+  <xs:complexType name="JornadaDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EntradaHora" type="xs:int" />
+      <xs:element minOccurs="0" name="EntradaMinuto" type="xs:int" />
+      <xs:element minOccurs="0" name="Horas" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Jornada" nillable="true" type="tns:Jornada" />
+      <xs:element minOccurs="0" name="JornadaId" type="xs:int" />
+      <xs:element minOccurs="0" name="Minutos" type="xs:int" />
+      <xs:element minOccurs="0" name="SalidaHora" type="xs:int" />
+      <xs:element minOccurs="0" name="SalidaMinuto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JornadaDetalle" nillable="true" type="tns:JornadaDetalle" />
+  <xs:complexType name="ArrayOfModulo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Modulo" nillable="true" type="tns:Modulo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfModulo" nillable="true" type="tns:ArrayOfModulo" />
+</xs:schema>

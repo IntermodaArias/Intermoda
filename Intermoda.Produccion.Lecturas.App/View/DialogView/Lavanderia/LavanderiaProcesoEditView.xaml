@@ -1,0 +1,55 @@
+﻿<Window xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  
+        xmlns:controls="clr-namespace:Intermoda.Wpf.Controls;assembly=Intermoda.Wpf.Controls"  
+        x:Class="Intermoda.Produccion.Lecturas.App.View.LavanderiaProcesoEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Title="Proceso de Lavandería" Height="310" Width="330" WindowStartupLocation="CenterOwner"
+        d:DataContext="{Binding Source={StaticResource Locator}, Path=LavanderiaProcesoEditViewModel}">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Margin="2" Content="Nombre: "/>
+            <Label Grid.Row="1" Grid.Column="0" Margin="2" Content="Descripción: "/>
+            <Label Grid.Row="2" Grid.Column="0" Margin="2" Content="Secuencia: "/>
+            <Label Grid.Row="3" Grid.Column="0" Margin="2" Content="Centro de Trabajo: "/>
+            <Label Grid.Row="4" Grid.Column="0" Margin="2" Content="Tiempo Estándar: "/>
+            <Label Grid.Row="5" Grid.Column="0" Margin="2" Content="¿Está Activo?: "/>
+            <Label Grid.Row="6" Grid.Column="0" Margin="2" Content="¿Es obligatorio?: "/>
+            <TextBox Grid.Row="0" Grid.Column="1" Margin="2" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Text="{Binding Path=Nombre, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="2" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Text="{Binding Path=Descripcion, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Margin="2" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Text="{Binding Path=Secuencia, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+            <telerik:RadComboBox Grid.Row="3" Grid.Column="1" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                 ItemsSource="{Binding Path=CentroTrabajoList}" SelectedValuePath="Codigo" DisplayMemberPath="Nombre"
+                                 SelectedValue="{Binding Path=CentroTrabajoId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 IsEnabled="{Binding Path=EsCentroTrabajoEnabled}"/>
+            <TextBox Grid.Row="4" Grid.Column="1" Margin="2" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Text="{Binding Path=TiempoEstandar, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
+            <CheckBox Grid.Row="5" Grid.Column="1" Margin="2" HorizontalAlignment="Left" VerticalAlignment="Center"
+                      IsChecked="{Binding Path=EsActivo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <CheckBox Grid.Row="6" Grid.Column="1" Margin="2" HorizontalAlignment="Left" VerticalAlignment="Center"
+                      IsChecked="{Binding Path=EsObligatorio, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </Grid>
+        <controls:CancelConfirmControl Grid.Row="1" Margin="0,10,0,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

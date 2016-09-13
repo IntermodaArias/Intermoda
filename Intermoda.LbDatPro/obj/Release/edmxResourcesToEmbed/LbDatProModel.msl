@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LBDATPROModelStoreContainer" CdmEntityContainer="LBDATPROEntities">
+    <EntitySetMapping Name="CATALOGSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.CATALOG">
+        <MappingFragment StoreEntitySet="CATALOG">
+          <ScalarProperty Name="MatGrpCod" ColumnName="MatGrpCod" />
+          <ScalarProperty Name="MatGrpDes" ColumnName="MatGrpDes" />
+          <ScalarProperty Name="MapCodMat" ColumnName="MapCodMat" />
+          <ScalarProperty Name="CataDesLar" ColumnName="CataDesLar" />
+          <ScalarProperty Name="CataDesCor" ColumnName="CataDesCor" />
+          <ScalarProperty Name="MedCompra" ColumnName="MedCompra" />
+          <ScalarProperty Name="MedConsum" ColumnName="MedConsum" />
+          <ScalarProperty Name="TipRCod" ColumnName="TipRCod" />
+          <ScalarProperty Name="CataGru" ColumnName="CataGru" />
+          <ScalarProperty Name="MapCtaCont" ColumnName="MapCtaCont" />
+          <ScalarProperty Name="MapCtaVF" ColumnName="MapCtaVF" />
+          <ScalarProperty Name="MapCtaCon2" ColumnName="MapCtaCon2" />
+          <ScalarProperty Name="MapNum1Rep" ColumnName="MapNum1Rep" />
+          <ScalarProperty Name="PrdCodTel" ColumnName="PrdCodTel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLASESet">
+      <EntityTypeMapping TypeName="LBDATPROModel.CLASE">
+        <MappingFragment StoreEntitySet="CLASE">
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+          <ScalarProperty Name="MprCodCla" ColumnName="MprCodCla" />
+          <ScalarProperty Name="MprCanInv" ColumnName="MprCanInv" />
+          <ScalarProperty Name="MprDesCla" ColumnName="MprDesCla" />
+          <ScalarProperty Name="MprCtaCon" ColumnName="MprCtaCon" />
+          <ScalarProperty Name="MapRotBaj" ColumnName="MapRotBaj" />
+          <ScalarProperty Name="MapRotSin" ColumnName="MapRotSin" />
+          <ScalarProperty Name="MprClaSts" ColumnName="MprClaSts" />
+          <ScalarProperty Name="MprClaDet" ColumnName="MprClaDet" />
+          <ScalarProperty Name="MprClaDia" ColumnName="MprClaDia" />
+          <ScalarProperty Name="MprCodAgr" ColumnName="MprCodAgr" />
+          <ScalarProperty Name="MprClaSig" ColumnName="MprClaSig" />
+          <ScalarProperty Name="MprGrpNom" ColumnName="MprGrpNom" />
+          <ScalarProperty Name="MprGrpCla" ColumnName="MprGrpCla" />
+          <ScalarProperty Name="MprClaAX" ColumnName="MprClaAX" />
+          <ScalarProperty Name="MprClaDL" ColumnName="MprClaDL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FACCOLSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.FACCOL">
+        <MappingFragment StoreEntitySet="FACCOL">
+          <ScalarProperty Name="FacIDCol" ColumnName="FacIDCol" />
+          <ScalarProperty Name="CiaCod" ColumnName="CiaCod" />
+          <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
+          <ScalarProperty Name="FacDCol" ColumnName="FacDCol" />
+          <ScalarProperty Name="AxColorId01" ColumnName="AxColorId01" />
+          <ScalarProperty Name="AxColorId02" ColumnName="AxColorId02" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GRUTELSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.GRUTEL">
+        <MappingFragment StoreEntitySet="GRUTEL">
+          <ScalarProperty Name="FacCodGrut" ColumnName="FacCodGrut" />
+          <ScalarProperty Name="FacDesGrut" ColumnName="FacDesGrut" />
+          <ScalarProperty Name="FacGruUltN" ColumnName="FacGruUltN" />
+          <ScalarProperty Name="GruSts" ColumnName="GruSts" />
+          <ScalarProperty Name="FacReposo" ColumnName="FacReposo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MATMSTSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.MATMST">
+        <MappingFragment StoreEntitySet="MATMST">
+          <ScalarProperty Name="MprSubCod" ColumnName="MprSubCod" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+          <ScalarProperty Name="MapCodMat" ColumnName="MapCodMat" />
+          <ScalarProperty Name="MapCodAlt" ColumnName="MapCodAlt" />
+          <ScalarProperty Name="FacCodMar" ColumnName="FacCodMar" />
+          <ScalarProperty Name="FacCodTpo" ColumnName="FacCodTpo" />
+          <ScalarProperty Name="MprCodCla" ColumnName="MprCodCla" />
+          <ScalarProperty Name="MprCodSCla" ColumnName="MprCodSCla" />
+          <ScalarProperty Name="MprCodRef" ColumnName="MprCodRef" />
+          <ScalarProperty Name="MprCodCol" ColumnName="MprCodCol" />
+          <ScalarProperty Name="MprCodTam" ColumnName="MprCodTam" />
+          <ScalarProperty Name="MapFecMat" ColumnName="MapFecMat" />
+          <ScalarProperty Name="MatCodTon" ColumnName="MatCodTon" />
+          <ScalarProperty Name="MapCosProm" ColumnName="MapCosProm" />
+          <ScalarProperty Name="MapCanExis" ColumnName="MapCanExis" />
+          <ScalarProperty Name="MapCanExi1" ColumnName="MapCanExi1" />
+          <ScalarProperty Name="MapCanExi2" ColumnName="MapCanExi2" />
+          <ScalarProperty Name="MapCanExi3" ColumnName="MapCanExi3" />
+          <ScalarProperty Name="MapCanExi4" ColumnName="MapCanExi4" />
+          <ScalarProperty Name="MapSalAntU" ColumnName="MapSalAntU" />
+          <ScalarProperty Name="MapEntraU" ColumnName="MapEntraU" />
+          <ScalarProperty Name="MapSalidU" ColumnName="MapSalidU" />
+          <ScalarProperty Name="MapSalActU" ColumnName="MapSalActU" />
+          <ScalarProperty Name="MapSalAntV" ColumnName="MapSalAntV" />
+          <ScalarProperty Name="MapEntraV" ColumnName="MapEntraV" />
+          <ScalarProperty Name="MapSalidV" ColumnName="MapSalidV" />
+          <ScalarProperty Name="MapSalActV" ColumnName="MapSalActV" />
+          <ScalarProperty Name="MapRanMin" ColumnName="MapRanMin" />
+          <ScalarProperty Name="MapPorDes" ColumnName="MapPorDes" />
+          <ScalarProperty Name="MapPorStd" ColumnName="MapPorStd" />
+          <ScalarProperty Name="MapUbi" ColumnName="MapUbi" />
+          <ScalarProperty Name="MapRepTCa" ColumnName="MapRepTCa" />
+          <ScalarProperty Name="RepNumPag" ColumnName="RepNumPag" />
+          <ScalarProperty Name="FacCodTel" ColumnName="FacCodTel" />
+          <ScalarProperty Name="PapLinCod" ColumnName="PapLinCod" />
+          <ScalarProperty Name="MapNumRep" ColumnName="MapNumRep" />
+          <ScalarProperty Name="MapRepDia" ColumnName="MapRepDia" />
+          <ScalarProperty Name="MapRepDie" ColumnName="MapRepDie" />
+          <ScalarProperty Name="MapRepTam" ColumnName="MapRepTam" />
+          <ScalarProperty Name="RepCodMar" ColumnName="RepCodMar" />
+          <ScalarProperty Name="RepTipCat" ColumnName="RepTipCat" />
+          <ScalarProperty Name="RepTipMaq" ColumnName="RepTipMaq" />
+          <ScalarProperty Name="MapRanMin2" ColumnName="MapRanMin2" />
+          <ScalarProperty Name="RepBodCod" ColumnName="RepBodCod" />
+          <ScalarProperty Name="MprUbiEst" ColumnName="MprUbiEst" />
+          <ScalarProperty Name="MprUbiRak" ColumnName="MprUbiRak" />
+          <ScalarProperty Name="MapMatSts" ColumnName="MapMatSts" />
+          <ScalarProperty Name="PrdCodDis" ColumnName="PrdCodDis" />
+          <ScalarProperty Name="CmpColCod" ColumnName="CmpColCod" />
+          <ScalarProperty Name="CmpTexCod" ColumnName="CmpTexCod" />
+          <ScalarProperty Name="MapReaSts" ColumnName="MapReaSts" />
+          <ScalarProperty Name="MapFecIng" ColumnName="MapFecIng" />
+          <ScalarProperty Name="MapFecCre" ColumnName="MapFecCre" />
+          <ScalarProperty Name="MapFecCad" ColumnName="MapFecCad" />
+          <ScalarProperty Name="CmpTelPes" ColumnName="CmpTelPes" />
+          <ScalarProperty Name="CmpTelCom" ColumnName="CmpTelCom" />
+          <ScalarProperty Name="MprCodArt" ColumnName="MprCodArt" />
+          <ScalarProperty Name="MprCodMdl" ColumnName="MprCodMdl" />
+          <ScalarProperty Name="MprCodTel" ColumnName="MprCodTel" />
+          <ScalarProperty Name="MprCodLav" ColumnName="MprCodLav" />
+          <ScalarProperty Name="MprCCol" ColumnName="MprCCol" />
+          <ScalarProperty Name="MprNumTal" ColumnName="MprNumTal" />
+          <ScalarProperty Name="MprCodDim" ColumnName="MprCodDim" />
+          <ScalarProperty Name="MapLoopSiz" ColumnName="MapLoopSiz" />
+          <ScalarProperty Name="MprMatSig" ColumnName="MprMatSig" />
+          <ScalarProperty Name="TipRCod" ColumnName="TipRCod" />
+          <ScalarProperty Name="MapEntAdd" ColumnName="MapEntAdd" />
+          <ScalarProperty Name="TelTipCod" ColumnName="TelTipCod" />
+          <ScalarProperty Name="TelTenCod" ColumnName="TelTenCod" />
+          <ScalarProperty Name="TelTejCod" ColumnName="TelTejCod" />
+          <ScalarProperty Name="TelAcbCod" ColumnName="TelAcbCod" />
+          <ScalarProperty Name="TelCmpCod" ColumnName="TelCmpCod" />
+          <ScalarProperty Name="CodigoDyna" ColumnName="CodigoDyna" />
+          <ScalarProperty Name="MprEtgCon" ColumnName="MprEtgCon" />
+          <ScalarProperty Name="MprCodUbi" ColumnName="MprCodUbi" />
+          <ScalarProperty Name="MprCtCod" ColumnName="MprCtCod" />
+          <ScalarProperty Name="MatCntRes" ColumnName="MatCntRes" />
+          <ScalarProperty Name="MprExcCmp" ColumnName="MprExcCmp" />
+          <ScalarProperty Name="MatUltMov" ColumnName="MatUltMov" />
+          <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MATMST1Set">
+      <EntityTypeMapping TypeName="LBDATPROModel.MATMST1">
+        <MappingFragment StoreEntitySet="MATMST1">
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+          <ScalarProperty Name="MapCodMat" ColumnName="MapCodMat" />
+          <ScalarProperty Name="MprCodBod" ColumnName="MprCodBod" />
+          <ScalarProperty Name="MprExiBod" ColumnName="MprExiBod" />
+          <ScalarProperty Name="MprBodCos" ColumnName="MprBodCos" />
+          <ScalarProperty Name="MprExiMax" ColumnName="MprExiMax" />
+          <ScalarProperty Name="MPrExiReo" ColumnName="MPrExiReo" />
+          <ScalarProperty Name="MprExiMin" ColumnName="MprExiMin" />
+          <ScalarProperty Name="MprExiSts" ColumnName="MprExiSts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MPRCOLORSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.MPRCOLOR">
+        <MappingFragment StoreEntitySet="MPRCOLOR">
+          <ScalarProperty Name="CiaCod" ColumnName="CiaCod" />
+          <ScalarProperty Name="MprCodCol" ColumnName="MprCodCol" />
+          <ScalarProperty Name="MprDesCol" ColumnName="MprDesCol" />
+          <ScalarProperty Name="MprColAX" ColumnName="MprColAX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUBCLASESet">
+      <EntityTypeMapping TypeName="LBDATPROModel.SUBCLASE">
+        <MappingFragment StoreEntitySet="SUBCLASE">
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+          <ScalarProperty Name="MprCodSCla" ColumnName="MprCodSCla" />
+          <ScalarProperty Name="MprDesSCla" ColumnName="MprDesSCla" />
+          <ScalarProperty Name="MprSClaSts" ColumnName="MprSClaSts" />
+          <ScalarProperty Name="MprSClaAX" ColumnName="MprSClaAX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TELAR5Set">
+      <EntityTypeMapping TypeName="LBDATPROModel.TELAR5">
+        <MappingFragment StoreEntitySet="TELAR5">
+          <ScalarProperty Name="FacCodTel" ColumnName="FacCodTel" />
+          <ScalarProperty Name="FacCodGrut" ColumnName="FacCodGrut" />
+          <ScalarProperty Name="FacDesTel" ColumnName="FacDesTel" />
+          <ScalarProperty Name="FacUltLin" ColumnName="FacUltLin" />
+          <ScalarProperty Name="FacUltLStr" ColumnName="FacUltLStr" />
+          <ScalarProperty Name="ComposicionId" ColumnName="ComposicionId" />
+          <ScalarProperty Name="TelDesVta" ColumnName="TelDesVta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CNTPERIOSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.CNTPERIO">
+        <MappingFragment StoreEntitySet="CNTPERIO">
+          <ScalarProperty Name="CntVtaStsP" ColumnName="CntVtaStsP" />
+          <ScalarProperty Name="CntVarPrv" ColumnName="CntVarPrv" />
+          <ScalarProperty Name="CntVarBnc" ColumnName="CntVarBnc" />
+          <ScalarProperty Name="CntSemSan" ColumnName="CntSemSan" />
+          <ScalarProperty Name="CntPSEM" ColumnName="CntPSEM" />
+          <ScalarProperty Name="CntReab" ColumnName="CntReab" />
+          <ScalarProperty Name="CtlCorrAnu" ColumnName="CtlCorrAnu" />
+          <ScalarProperty Name="CntEsta" ColumnName="CntEsta" />
+          <ScalarProperty Name="CntPnome" ColumnName="CntPnome" />
+          <ScalarProperty Name="CntPFef" ColumnName="CntPFef" />
+          <ScalarProperty Name="CntPFei" ColumnName="CntPFei" />
+          <ScalarProperty Name="CntPMes" ColumnName="CntPMes" />
+          <ScalarProperty Name="CntPANO" ColumnName="CntPANO" />
+          <ScalarProperty Name="CiaCod" ColumnName="CiaCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAEAR6Set">
+      <EntityTypeMapping TypeName="LBDATPROModel.MAEAR6">
+        <MappingFragment StoreEntitySet="MAEAR6">
+          <ScalarProperty Name="AdpEmpLac" ColumnName="AdpEmpLac" />
+          <ScalarProperty Name="PrdCrvSemI" ColumnName="PrdCrvSemI" />
+          <ScalarProperty Name="CodEmpReem" ColumnName="CodEmpReem" />
+          <ScalarProperty Name="PrdCrvId" ColumnName="PrdCrvId" />
+          <ScalarProperty Name="AdpIncCst" ColumnName="AdpIncCst" />
+          <ScalarProperty Name="AdpEmpCom" ColumnName="AdpEmpCom" />
+          <ScalarProperty Name="AdpCodPai" ColumnName="AdpCodPai" />
+          <ScalarProperty Name="AdpSVehicu" ColumnName="AdpSVehicu" />
+          <ScalarProperty Name="AdpSVida" ColumnName="AdpSVida" />
+          <ScalarProperty Name="AdpSMedico" ColumnName="AdpSMedico" />
+          <ScalarProperty Name="AdpTipFch" ColumnName="AdpTipFch" />
+          <ScalarProperty Name="AdpRelMar" ColumnName="AdpRelMar" />
+          <ScalarProperty Name="NumPatrona" ColumnName="NumPatrona" />
+          <ScalarProperty Name="AdpTurno" ColumnName="AdpTurno" />
+          <ScalarProperty Name="AdpCueMon" ColumnName="AdpCueMon" />
+          <ScalarProperty Name="AdpMonCue" ColumnName="AdpMonCue" />
+          <ScalarProperty Name="AdpCuePor" ColumnName="AdpCuePor" />
+          <ScalarProperty Name="AdpPorCue" ColumnName="AdpPorCue" />
+          <ScalarProperty Name="AdpCueNum" ColumnName="AdpCueNum" />
+          <ScalarProperty Name="AdpMonCod" ColumnName="AdpMonCod" />
+          <ScalarProperty Name="AdpISRCony" ColumnName="AdpISRCony" />
+          <ScalarProperty Name="AdpISRHijo" ColumnName="AdpISRHijo" />
+          <ScalarProperty Name="AdpUltLinA" ColumnName="AdpUltLinA" />
+          <ScalarProperty Name="AdpCtaBco" ColumnName="AdpCtaBco" />
+          <ScalarProperty Name="BncCod" ColumnName="BncCod" />
+          <ScalarProperty Name="AdpNoFer" ColumnName="AdpNoFer" />
+          <ScalarProperty Name="AdpCodCiu" ColumnName="AdpCodCiu" />
+          <ScalarProperty Name="AdpMdCod" ColumnName="AdpMdCod" />
+          <ScalarProperty Name="AdpEmpLiq" ColumnName="AdpEmpLiq" />
+          <ScalarProperty Name="AdpCamUsr" ColumnName="AdpCamUsr" />
+          <ScalarProperty Name="AdpCamPla" ColumnName="AdpCamPla" />
+          <ScalarProperty Name="AdpTipEmp" ColumnName="AdpTipEmp" />
+          <ScalarProperty Name="AdpComod" ColumnName="AdpComod" />
+          <ScalarProperty Name="ModECalFin" ColumnName="ModECalFin" />
+          <ScalarProperty Name="ModEmpCal" ColumnName="ModEmpCal" />
+          <ScalarProperty Name="ModECalFor" ColumnName="ModECalFor" />
+          <ScalarProperty Name="CodSubPro" ColumnName="CodSubPro" />
+          <ScalarProperty Name="CodArea" ColumnName="CodArea" />
+          <ScalarProperty Name="AdpActiv2" ColumnName="AdpActiv2" />
+          <ScalarProperty Name="AdpActiv1" ColumnName="AdpActiv1" />
+          <ScalarProperty Name="AdpDateC" ColumnName="AdpDateC" />
+          <ScalarProperty Name="AdpChange" ColumnName="AdpChange" />
+          <ScalarProperty Name="AdpEfic" ColumnName="AdpEfic" />
+          <ScalarProperty Name="AdpUsrVal" ColumnName="AdpUsrVal" />
+          <ScalarProperty Name="AdpConUsr" ColumnName="AdpConUsr" />
+          <ScalarProperty Name="AdpTipPla" ColumnName="AdpTipPla" />
+          <ScalarProperty Name="AdpFecCon" ColumnName="AdpFecCon" />
+          <ScalarProperty Name="AdpCodGru" ColumnName="AdpCodGru" />
+          <ScalarProperty Name="AdpArea14" ColumnName="AdpArea14" />
+          <ScalarProperty Name="AdpArea13" ColumnName="AdpArea13" />
+          <ScalarProperty Name="AdpArea12" ColumnName="AdpArea12" />
+          <ScalarProperty Name="AdpArea11" ColumnName="AdpArea11" />
+          <ScalarProperty Name="AdpArea10" ColumnName="AdpArea10" />
+          <ScalarProperty Name="AdpArea09" ColumnName="AdpArea09" />
+          <ScalarProperty Name="AdpArea08" ColumnName="AdpArea08" />
+          <ScalarProperty Name="AdpArea07" ColumnName="AdpArea07" />
+          <ScalarProperty Name="AdpArea06" ColumnName="AdpArea06" />
+          <ScalarProperty Name="AdpArea05" ColumnName="AdpArea05" />
+          <ScalarProperty Name="AdpArea04" ColumnName="AdpArea04" />
+          <ScalarProperty Name="AdpArea03" ColumnName="AdpArea03" />
+          <ScalarProperty Name="AdpArea02" ColumnName="AdpArea02" />
+          <ScalarProperty Name="AdpArea01" ColumnName="AdpArea01" />
+          <ScalarProperty Name="AdpDiaVac" ColumnName="AdpDiaVac" />
+          <ScalarProperty Name="AdpPreRet" ColumnName="AdpPreRet" />
+          <ScalarProperty Name="AdpSueChq" ColumnName="AdpSueChq" />
+          <ScalarProperty Name="AdpBonEsc" ColumnName="AdpBonEsc" />
+          <ScalarProperty Name="AdpSemFin" ColumnName="AdpSemFin" />
+          <ScalarProperty Name="AdpSemIni" ColumnName="AdpSemIni" />
+          <ScalarProperty Name="AdpTipOpr" ColumnName="AdpTipOpr" />
+          <ScalarProperty Name="AdpPasBm6" ColumnName="AdpPasBm6" />
+          <ScalarProperty Name="AdpPasBm5" ColumnName="AdpPasBm5" />
+          <ScalarProperty Name="AdpPasBm4" ColumnName="AdpPasBm4" />
+          <ScalarProperty Name="AdpPasBm3" ColumnName="AdpPasBm3" />
+          <ScalarProperty Name="AdpPasBm2" ColumnName="AdpPasBm2" />
+          <ScalarProperty Name="AdpPasBm1" ColumnName="AdpPasBm1" />
+          <ScalarProperty Name="AdpPasBmp" ColumnName="AdpPasBmp" />
+          <ScalarProperty Name="AdpNomRec" ColumnName="AdpNomRec" />
+          <ScalarProperty Name="AdpAntVac" ColumnName="AdpAntVac" />
+          <ScalarProperty Name="AdpValVac" ColumnName="AdpValVac" />
+          <ScalarProperty Name="AdpFecVac" ColumnName="AdpFecVac" />
+          <ScalarProperty Name="AdpFrmVac" ColumnName="AdpFrmVac" />
+          <ScalarProperty Name="AdpPagRap" ColumnName="AdpPagRap" />
+          <ScalarProperty Name="AdpPagIhs" ColumnName="AdpPagIhs" />
+          <ScalarProperty Name="PlsCodCur" ColumnName="PlsCodCur" />
+          <ScalarProperty Name="AdpEntUsr" ColumnName="AdpEntUsr" />
+          <ScalarProperty Name="AdpHrsRec" ColumnName="AdpHrsRec" />
+          <ScalarProperty Name="AdpFecRec" ColumnName="AdpFecRec" />
+          <ScalarProperty Name="AdpUsrRec" ColumnName="AdpUsrRec" />
+          <ScalarProperty Name="AdpCodPla" ColumnName="AdpCodPla" />
+          <ScalarProperty Name="AdpHorGra" ColumnName="AdpHorGra" />
+          <ScalarProperty Name="AdpFecGra" ColumnName="AdpFecGra" />
+          <ScalarProperty Name="AdpUsrGra" ColumnName="AdpUsrGra" />
+          <ScalarProperty Name="AdpCodSub" ColumnName="AdpCodSub" />
+          <ScalarProperty Name="AdpCodSec" ColumnName="AdpCodSec" />
+          <ScalarProperty Name="AdpCodOcu" ColumnName="AdpCodOcu" />
+          <ScalarProperty Name="AdpNumCue" ColumnName="AdpNumCue" />
+          <ScalarProperty Name="AdpStsEmp" ColumnName="AdpStsEmp" />
+          <ScalarProperty Name="AdpSueBas" ColumnName="AdpSueBas" />
+          <ScalarProperty Name="AdpCodSup" ColumnName="AdpCodSup" />
+          <ScalarProperty Name="AdpCodSkl" ColumnName="AdpCodSkl" />
+          <ScalarProperty Name="AdpCodSex" ColumnName="AdpCodSex" />
+          <ScalarProperty Name="AdpCodPue" ColumnName="AdpCodPue" />
+          <ScalarProperty Name="AdpCodDe2" ColumnName="AdpCodDe2" />
+          <ScalarProperty Name="AdpCodPro" ColumnName="AdpCodPro" />
+          <ScalarProperty Name="AdpEntEmp" ColumnName="AdpEntEmp" />
+          <ScalarProperty Name="AdpCodFrm" ColumnName="AdpCodFrm" />
+          <ScalarProperty Name="AdpCodEdu" ColumnName="AdpCodEdu" />
+          <ScalarProperty Name="AdpCodCiv" ColumnName="AdpCodCiv" />
+          <ScalarProperty Name="AdpNomPa2" ColumnName="AdpNomPa2" />
+          <ScalarProperty Name="AdpNomPa1" ColumnName="AdpNomPa1" />
+          <ScalarProperty Name="AdpNomCyg" ColumnName="AdpNomCyg" />
+          <ScalarProperty Name="AdpNumPol" ColumnName="AdpNumPol" />
+          <ScalarProperty Name="AdpNumRap" ColumnName="AdpNumRap" />
+          <ScalarProperty Name="AdpNumSol" ColumnName="AdpNumSol" />
+          <ScalarProperty Name="AdpNumIhs" ColumnName="AdpNumIhs" />
+          <ScalarProperty Name="AdpNumRtn" ColumnName="AdpNumRtn" />
+          <ScalarProperty Name="AdpNumCed" ColumnName="AdpNumCed" />
+          <ScalarProperty Name="AdpCodTip" ColumnName="AdpCodTip" />
+          <ScalarProperty Name="AdpCodNac" ColumnName="AdpCodNac" />
+          <ScalarProperty Name="AdpCodDep" ColumnName="AdpCodDep" />
+          <ScalarProperty Name="AdpFecNac" ColumnName="AdpFecNac" />
+          <ScalarProperty Name="AdpFecRet" ColumnName="AdpFecRet" />
+          <ScalarProperty Name="AdpHorIng" ColumnName="AdpHorIng" />
+          <ScalarProperty Name="AdpFecIng" ColumnName="AdpFecIng" />
+          <ScalarProperty Name="AdpDirNet" ColumnName="AdpDirNet" />
+          <ScalarProperty Name="AdpNumTel" ColumnName="AdpNumTel" />
+          <ScalarProperty Name="AdpDirImp" ColumnName="AdpDirImp" />
+          <ScalarProperty Name="AdpDirEmp" ColumnName="AdpDirEmp" />
+          <ScalarProperty Name="AdpAlias" ColumnName="AdpAlias" />
+          <ScalarProperty Name="AdpAplEmp" ColumnName="AdpAplEmp" />
+          <ScalarProperty Name="AdpNomEmp" ColumnName="AdpNomEmp" />
+          <ScalarProperty Name="AdpCntEmp" ColumnName="AdpCntEmp" />
+          <ScalarProperty Name="AdpCodEmp" ColumnName="AdpCodEmp" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAEAUSSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.MAEAUS">
+        <MappingFragment StoreEntitySet="MAEAUS">
+          <ScalarProperty Name="PlsTipIng" ColumnName="PlsTipIng" />
+          <ScalarProperty Name="PlsValTem" ColumnName="PlsValTem" />
+          <ScalarProperty Name="PlsCodCon" ColumnName="PlsCodCon" />
+          <ScalarProperty Name="PlsCodDia" ColumnName="PlsCodDia" />
+          <ScalarProperty Name="PlsAnoSes" ColumnName="PlsAnoSes" />
+          <ScalarProperty Name="PlsNumSes" ColumnName="PlsNumSes" />
+          <ScalarProperty Name="PlsCodGrs" ColumnName="PlsCodGrs" />
+          <ScalarProperty Name="PlsTpoPls" ColumnName="PlsTpoPls" />
+          <ScalarProperty Name="PlsCodPer" ColumnName="PlsCodPer" />
+          <ScalarProperty Name="AdpCodEmp" ColumnName="AdpCodEmp" />
+          <ScalarProperty Name="CiaCod" ColumnName="CiaCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CORPLASet">
+      <EntityTypeMapping TypeName="LBDATPROModel.CORPLA">
+        <MappingFragment StoreEntitySet="CORPLA">
+          <ScalarProperty Name="PrdPrvUsu" ColumnName="PrdPrvUsu" />
+          <ScalarProperty Name="PrdPrvCla" ColumnName="PrdPrvCla" />
+          <ScalarProperty Name="PrdCodPrv" ColumnName="PrdCodPrv" />
+          <ScalarProperty Name="PrdCiaCod" ColumnName="PrdCiaCod" />
+          <ScalarProperty Name="PrdFabNew" ColumnName="PrdFabNew" />
+          <ScalarProperty Name="PrdHabilit" ColumnName="PrdHabilit" />
+          <ScalarProperty Name="PrdFabSts" ColumnName="PrdFabSts" />
+          <ScalarProperty Name="MprCodBod" ColumnName="MprCodBod" />
+          <ScalarProperty Name="PrdCorTip" ColumnName="PrdCorTip" />
+          <ScalarProperty Name="PrdCorTck" ColumnName="PrdCorTck" />
+          <ScalarProperty Name="PrdCorDes" ColumnName="PrdCorDes" />
+          <ScalarProperty Name="PrdCorIni" ColumnName="PrdCorIni" />
+          <ScalarProperty Name="PrdCorFab" ColumnName="PrdCorFab" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CTPLANTASet">
+      <EntityTypeMapping TypeName="LBDATPROModel.CTPLANTA">
+        <MappingFragment StoreEntitySet="CTPLANTA">
+          <ScalarProperty Name="PrdCtStsIm" ColumnName="PrdCtStsIm" />
+          <ScalarProperty Name="PrdCtORden" ColumnName="PrdCtORden" />
+          <ScalarProperty Name="PrdCtFAuto" ColumnName="PrdCtFAuto" />
+          <ScalarProperty Name="PrdCtAuto" ColumnName="PrdCtAuto" />
+          <ScalarProperty Name="PrdCtReser" ColumnName="PrdCtReser" />
+          <ScalarProperty Name="PrdCtSecC" ColumnName="PrdCtSecC" />
+          <ScalarProperty Name="PrdCtModC" ColumnName="PrdCtModC" />
+          <ScalarProperty Name="PrdCtSecP" ColumnName="PrdCtSecP" />
+          <ScalarProperty Name="PrdCtModP" ColumnName="PrdCtModP" />
+          <ScalarProperty Name="PrdCtHrs" ColumnName="PrdCtHrs" />
+          <ScalarProperty Name="PrdCtFPrF" ColumnName="PrdCtFPrF" />
+          <ScalarProperty Name="PrdCtFPrI" ColumnName="PrdCtFPrI" />
+          <ScalarProperty Name="PrdCtFOrF" ColumnName="PrdCtFOrF" />
+          <ScalarProperty Name="PrdCtFOrI" ColumnName="PrdCtFOrI" />
+          <ScalarProperty Name="PrdCtPlCod" ColumnName="PrdCtPlCod" />
+          <ScalarProperty Name="PrdCtFPlF" ColumnName="PrdCtFPlF" />
+          <ScalarProperty Name="PrdCtFPlI" ColumnName="PrdCtFPlI" />
+          <ScalarProperty Name="PrdCtCod" ColumnName="PrdCtCod" />
+          <ScalarProperty Name="PrdNumCor" ColumnName="PrdNumCor" />
+          <ScalarProperty Name="PrdAnoCor" ColumnName="PrdAnoCor" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUTARC3Set">
+      <EntityTypeMapping TypeName="LBDATPROModel.CUTARC3">
+        <MappingFragment StoreEntitySet="CUTARC3">
+          <ScalarProperty Name="OrdPerLec" ColumnName="OrdPerLec" />
+          <ScalarProperty Name="OrdStsEnvC" ColumnName="OrdStsEnvC" />
+          <ScalarProperty Name="OrdFecEnvC" ColumnName="OrdFecEnvC" />
+          <ScalarProperty Name="PrdTckEAh" ColumnName="PrdTckEAh" />
+          <ScalarProperty Name="FxTelaProduccion" ColumnName="FxTelaProduccion" />
+          <ScalarProperty Name="OrdTotUnd" ColumnName="OrdTotUnd" />
+          <ScalarProperty Name="OrdFlexibl" ColumnName="OrdFlexibl" />
+          <ScalarProperty Name="OrdPreCost" ColumnName="OrdPreCost" />
+          <ScalarProperty Name="OrdAutDifT" ColumnName="OrdAutDifT" />
+          <ScalarProperty Name="OrdUsrAutD" ColumnName="OrdUsrAutD" />
+          <ScalarProperty Name="OrdFchDifT" ColumnName="OrdFchDifT" />
+          <ScalarProperty Name="OrdPrePes" ColumnName="OrdPrePes" />
+          <ScalarProperty Name="PrdTckEti" ColumnName="PrdTckEti" />
+          <ScalarProperty Name="OrdLavadoI" ColumnName="OrdLavadoI" />
+          <ScalarProperty Name="OrdRcpFec" ColumnName="OrdRcpFec" />
+          <ScalarProperty Name="OrdRcpSts" ColumnName="OrdRcpSts" />
+          <ScalarProperty Name="OrdRcpUsr" ColumnName="OrdRcpUsr" />
+          <ScalarProperty Name="OloStiloVe" ColumnName="OloStiloVe" />
+          <ScalarProperty Name="PrdFchCTel" ColumnName="PrdFchCTel" />
+          <ScalarProperty Name="PrdUsuCTel" ColumnName="PrdUsuCTel" />
+          <ScalarProperty Name="PrdFecCTel" ColumnName="PrdFecCTel" />
+          <ScalarProperty Name="OrdStsASeg" ColumnName="OrdStsASeg" />
+          <ScalarProperty Name="OrdUsrAutS" ColumnName="OrdUsrAutS" />
+          <ScalarProperty Name="OrdUsrAutF" ColumnName="OrdUsrAutF" />
+          <ScalarProperty Name="OrdObserva" ColumnName="OrdObserva" />
+          <ScalarProperty Name="OrdRazCod" ColumnName="OrdRazCod" />
+          <ScalarProperty Name="PrdSegFch" ColumnName="PrdSegFch" />
+          <ScalarProperty Name="PrdSegUsu" ColumnName="PrdSegUsu" />
+          <ScalarProperty Name="PrdSegCst" ColumnName="PrdSegCst" />
+          <ScalarProperty Name="PrdOrdCer" ColumnName="PrdOrdCer" />
+          <ScalarProperty Name="PrdFecOff" ColumnName="PrdFecOff" />
+          <ScalarProperty Name="PrdUsrOff" ColumnName="PrdUsrOff" />
+          <ScalarProperty Name="PrdPriCor" ColumnName="PrdPriCor" />
+          <ScalarProperty Name="PrdNumDep" ColumnName="PrdNumDep" />
+          <ScalarProperty Name="PrdAnoDep" ColumnName="PrdAnoDep" />
+          <ScalarProperty Name="PrdObCon" ColumnName="PrdObCon" />
+          <ScalarProperty Name="PrdTelVal" ColumnName="PrdTelVal" />
+          <ScalarProperty Name="PrdPlaOri" ColumnName="PrdPlaOri" />
+          <ScalarProperty Name="PrdFecOri" ColumnName="PrdFecOri" />
+          <ScalarProperty Name="FacCodMdl" ColumnName="FacCodMdl" />
+          <ScalarProperty Name="PrdCodArt" ColumnName="PrdCodArt" />
+          <ScalarProperty Name="PrdMarMan" ColumnName="PrdMarMan" />
+          <ScalarProperty Name="PrdPuntUsr" ColumnName="PrdPuntUsr" />
+          <ScalarProperty Name="PrdPuntFch" ColumnName="PrdPuntFch" />
+          <ScalarProperty Name="PrdPuntada" ColumnName="PrdPuntada" />
+          <ScalarProperty Name="PrdOrdAct" ColumnName="PrdOrdAct" />
+          <ScalarProperty Name="PrdDevSts" ColumnName="PrdDevSts" />
+          <ScalarProperty Name="PrdAutoriz" ColumnName="PrdAutoriz" />
+          <ScalarProperty Name="PrdPriorid" ColumnName="PrdPriorid" />
+          <ScalarProperty Name="PrdSalCor" ColumnName="PrdSalCor" />
+          <ScalarProperty Name="PrdStsOrd" ColumnName="PrdStsOrd" />
+          <ScalarProperty Name="PrdTipTon" ColumnName="PrdTipTon" />
+          <ScalarProperty Name="PrdRecMar" ColumnName="PrdRecMar" />
+          <ScalarProperty Name="PrdRecTel" ColumnName="PrdRecTel" />
+          <ScalarProperty Name="PrdStsHM" ColumnName="PrdStsHM" />
+          <ScalarProperty Name="PrdDura" ColumnName="PrdDura" />
+          <ScalarProperty Name="IdealEmp" ColumnName="IdealEmp" />
+          <ScalarProperty Name="IdealLav" ColumnName="IdealLav" />
+          <ScalarProperty Name="IdealDes" ColumnName="IdealDes" />
+          <ScalarProperty Name="IdealCos" ColumnName="IdealCos" />
+          <ScalarProperty Name="IdealBor" ColumnName="IdealBor" />
+          <ScalarProperty Name="IdealCor" ColumnName="IdealCor" />
+          <ScalarProperty Name="IdealPla" ColumnName="IdealPla" />
+          <ScalarProperty Name="ConMarker" ColumnName="ConMarker" />
+          <ScalarProperty Name="PlaAPEmp" ColumnName="PlaAPEmp" />
+          <ScalarProperty Name="PlaAPLav" ColumnName="PlaAPLav" />
+          <ScalarProperty Name="PlaAPDes" ColumnName="PlaAPDes" />
+          <ScalarProperty Name="PlaAPCos" ColumnName="PlaAPCos" />
+          <ScalarProperty Name="PlaAPBor" ColumnName="PlaAPBor" />
+          <ScalarProperty Name="PlaAPCor" ColumnName="PlaAPCor" />
+          <ScalarProperty Name="PlaAPPla" ColumnName="PlaAPPla" />
+          <ScalarProperty Name="WipStsEmp" ColumnName="WipStsEmp" />
+          <ScalarProperty Name="WipStsLav" ColumnName="WipStsLav" />
+          <ScalarProperty Name="WipStsDes" ColumnName="WipStsDes" />
+          <ScalarProperty Name="WipStsCos" ColumnName="WipStsCos" />
+          <ScalarProperty Name="WipStsBor" ColumnName="WipStsBor" />
+          <ScalarProperty Name="WipStsCor" ColumnName="WipStsCor" />
+          <ScalarProperty Name="WipStsPla" ColumnName="WipStsPla" />
+          <ScalarProperty Name="AmPmEmp" ColumnName="AmPmEmp" />
+          <ScalarProperty Name="AmPmLav" ColumnName="AmPmLav" />
+          <ScalarProperty Name="AmPmDes" ColumnName="AmPmDes" />
+          <ScalarProperty Name="AmPmBor" ColumnName="AmPmBor" />
+          <ScalarProperty Name="AmPmCos" ColumnName="AmPmCos" />
+          <ScalarProperty Name="AmPmCor" ColumnName="AmPmCor" />
+          <ScalarProperty Name="AmPmPla" ColumnName="AmPmPla" />
+          <ScalarProperty Name="PrdStsPla" ColumnName="PrdStsPla" />
+          <ScalarProperty Name="PrdLiquid" ColumnName="PrdLiquid" />
+          <ScalarProperty Name="PrdFiBo" ColumnName="PrdFiBo" />
+          <ScalarProperty Name="PrdInBo" ColumnName="PrdInBo" />
+          <ScalarProperty Name="PrdBoPl" ColumnName="PrdBoPl" />
+          <ScalarProperty Name="PrdBoId" ColumnName="PrdBoId" />
+          <ScalarProperty Name="PrdFiDes" ColumnName="PrdFiDes" />
+          <ScalarProperty Name="PrdInDes" ColumnName="PrdInDes" />
+          <ScalarProperty Name="PrdDePl" ColumnName="PrdDePl" />
+          <ScalarProperty Name="PrdDeId" ColumnName="PrdDeId" />
+          <ScalarProperty Name="PrdFiLa" ColumnName="PrdFiLa" />
+          <ScalarProperty Name="PrdInLa" ColumnName="PrdInLa" />
+          <ScalarProperty Name="PrdLaPl" ColumnName="PrdLaPl" />
+          <ScalarProperty Name="PrdLaId" ColumnName="PrdLaId" />
+          <ScalarProperty Name="PrdFiEm" ColumnName="PrdFiEm" />
+          <ScalarProperty Name="PrdInEm" ColumnName="PrdInEm" />
+          <ScalarProperty Name="PrdEmPl" ColumnName="PrdEmPl" />
+          <ScalarProperty Name="PrdEmId" ColumnName="PrdEmId" />
+          <ScalarProperty Name="PrdFiCos" ColumnName="PrdFiCos" />
+          <ScalarProperty Name="PrdInCos" ColumnName="PrdInCos" />
+          <ScalarProperty Name="PrdCosPl" ColumnName="PrdCosPl" />
+          <ScalarProperty Name="PrdCosId" ColumnName="PrdCosId" />
+          <ScalarProperty Name="PrdFiCor" ColumnName="PrdFiCor" />
+          <ScalarProperty Name="PrdInCor" ColumnName="PrdInCor" />
+          <ScalarProperty Name="PrdCorPl" ColumnName="PrdCorPl" />
+          <ScalarProperty Name="PrdCorId" ColumnName="PrdCorId" />
+          <ScalarProperty Name="PrdRFPla" ColumnName="PrdRFPla" />
+          <ScalarProperty Name="PrdRIPla" ColumnName="PrdRIPla" />
+          <ScalarProperty Name="PrdFiPla" ColumnName="PrdFiPla" />
+          <ScalarProperty Name="PrdInPla" ColumnName="PrdInPla" />
+          <ScalarProperty Name="PrdPlaPl" ColumnName="PrdPlaPl" />
+          <ScalarProperty Name="PrdPlaId" ColumnName="PrdPlaId" />
+          <ScalarProperty Name="PrdLavCos" ColumnName="PrdLavCos" />
+          <ScalarProperty Name="PrdUsrReb" ColumnName="PrdUsrReb" />
+          <ScalarProperty Name="PrdHrsReb" ColumnName="PrdHrsReb" />
+          <ScalarProperty Name="PrdFchReb" ColumnName="PrdFchReb" />
+          <ScalarProperty Name="PrdStsReb" ColumnName="PrdStsReb" />
+          <ScalarProperty Name="PrdUsrPas" ColumnName="PrdUsrPas" />
+          <ScalarProperty Name="PrdHrsPas" ColumnName="PrdHrsPas" />
+          <ScalarProperty Name="PrdFchPas" ColumnName="PrdFchPas" />
+          <ScalarProperty Name="PrdSerCaj" ColumnName="PrdSerCaj" />
+          <ScalarProperty Name="PrdCodEsp" ColumnName="PrdCodEsp" />
+          <ScalarProperty Name="PrdFecOrd" ColumnName="PrdFecOrd" />
+          <ScalarProperty Name="PrdOmiNor" ColumnName="PrdOmiNor" />
+          <ScalarProperty Name="PrdTipOrd" ColumnName="PrdTipOrd" />
+          <ScalarProperty Name="PrdCodCli" ColumnName="PrdCodCli" />
+          <ScalarProperty Name="PrdFecEnt" ColumnName="PrdFecEnt" />
+          <ScalarProperty Name="PrdConFe" ColumnName="PrdConFe" />
+          <ScalarProperty Name="PrdConsu" ColumnName="PrdConsu" />
+          <ScalarProperty Name="PrdHBFe" ColumnName="PrdHBFe" />
+          <ScalarProperty Name="PrdHoBul" ColumnName="PrdHoBul" />
+          <ScalarProperty Name="PrdUsrVal" ColumnName="PrdUsrVal" />
+          <ScalarProperty Name="PrdValida2" ColumnName="PrdValida2" />
+          <ScalarProperty Name="PrdFecVal" ColumnName="PrdFecVal" />
+          <ScalarProperty Name="PrdValida" ColumnName="PrdValida" />
+          <ScalarProperty Name="PrdURepLiq" ColumnName="PrdURepLiq" />
+          <ScalarProperty Name="PrdFRepLiq" ColumnName="PrdFRepLiq" />
+          <ScalarProperty Name="PrdUSalEns" ColumnName="PrdUSalEns" />
+          <ScalarProperty Name="PrdFSalEns" ColumnName="PrdFSalEns" />
+          <ScalarProperty Name="PrdUsrRecB" ColumnName="PrdUsrRecB" />
+          <ScalarProperty Name="PrdRecBor" ColumnName="PrdRecBor" />
+          <ScalarProperty Name="PrdFecIns" ColumnName="PrdFecIns" />
+          <ScalarProperty Name="PrdPlaLiq" ColumnName="PrdPlaLiq" />
+          <ScalarProperty Name="PrdUndFac" ColumnName="PrdUndFac" />
+          <ScalarProperty Name="PrdUndSld" ColumnName="PrdUndSld" />
+          <ScalarProperty Name="PrdCodMod" ColumnName="PrdCodMod" />
+          <ScalarProperty Name="PrdCodEda" ColumnName="PrdCodEda" />
+          <ScalarProperty Name="PrdCodTpo" ColumnName="PrdCodTpo" />
+          <ScalarProperty Name="PrdFecCo" ColumnName="PrdFecCo" />
+          <ScalarProperty Name="PrdCodSem" ColumnName="PrdCodSem" />
+          <ScalarProperty Name="PrdUsrCo" ColumnName="PrdUsrCo" />
+          <ScalarProperty Name="PrdAlMac" ColumnName="PrdAlMac" />
+          <ScalarProperty Name="PrdFchLiq" ColumnName="PrdFchLiq" />
+          <ScalarProperty Name="PrdFchPre" ColumnName="PrdFchPre" />
+          <ScalarProperty Name="PrdStPrel" ColumnName="PrdStPrel" />
+          <ScalarProperty Name="PrdStsPas" ColumnName="PrdStsPas" />
+          <ScalarProperty Name="PrdStsBor" ColumnName="PrdStsBor" />
+          <ScalarProperty Name="PrdStsDgt" ColumnName="PrdStsDgt" />
+          <ScalarProperty Name="PrdStsCrt" ColumnName="PrdStsCrt" />
+          <ScalarProperty Name="PrdTckBor" ColumnName="PrdTckBor" />
+          <ScalarProperty Name="PrdTckDes" ColumnName="PrdTckDes" />
+          <ScalarProperty Name="PrdTckEmp" ColumnName="PrdTckEmp" />
+          <ScalarProperty Name="PrdTckLav" ColumnName="PrdTckLav" />
+          <ScalarProperty Name="PrdTckCos" ColumnName="PrdTckCos" />
+          <ScalarProperty Name="PrdTckCor" ColumnName="PrdTckCor" />
+          <ScalarProperty Name="PrdCanApr" ColumnName="PrdCanApr" />
+          <ScalarProperty Name="PrdAUser" ColumnName="PrdAUser" />
+          <ScalarProperty Name="PrdAjuste" ColumnName="PrdAjuste" />
+          <ScalarProperty Name="PrdPesLot" ColumnName="PrdPesLot" />
+          <ScalarProperty Name="PrdFecPrd" ColumnName="PrdFecPrd" />
+          <ScalarProperty Name="PrdFecVen" ColumnName="PrdFecVen" />
+          <ScalarProperty Name="PrdUsuPrd" ColumnName="PrdUsuPrd" />
+          <ScalarProperty Name="PrdUsuVen" ColumnName="PrdUsuVen" />
+          <ScalarProperty Name="PrdFecGra" ColumnName="PrdFecGra" />
+          <ScalarProperty Name="PrdUsuPre" ColumnName="PrdUsuPre" />
+          <ScalarProperty Name="PrdObsCor" ColumnName="PrdObsCor" />
+          <ScalarProperty Name="PrdYdsUso" ColumnName="PrdYdsUso" />
+          <ScalarProperty Name="PrdClasCo" ColumnName="PrdClasCo" />
+          <ScalarProperty Name="PrdBorFab" ColumnName="PrdBorFab" />
+          <ScalarProperty Name="PrdDesFab" ColumnName="PrdDesFab" />
+          <ScalarProperty Name="PrdEmpFab" ColumnName="PrdEmpFab" />
+          <ScalarProperty Name="PrdLavFab" ColumnName="PrdLavFab" />
+          <ScalarProperty Name="PrdCosFab" ColumnName="PrdCosFab" />
+          <ScalarProperty Name="PrdCorFab" ColumnName="PrdCorFab" />
+          <ScalarProperty Name="PrdStsDes" ColumnName="PrdStsDes" />
+          <ScalarProperty Name="PrdRecCos" ColumnName="PrdRecCos" />
+          <ScalarProperty Name="PrdEstEmp" ColumnName="PrdEstEmp" />
+          <ScalarProperty Name="PrdEstLav" ColumnName="PrdEstLav" />
+          <ScalarProperty Name="PrdEstDes" ColumnName="PrdEstDes" />
+          <ScalarProperty Name="PrdEstCos" ColumnName="PrdEstCos" />
+          <ScalarProperty Name="PrdEstBor" ColumnName="PrdEstBor" />
+          <ScalarProperty Name="PrdEstCor" ColumnName="PrdEstCor" />
+          <ScalarProperty Name="PrdFeFBor" ColumnName="PrdFeFBor" />
+          <ScalarProperty Name="PrdFeIBor" ColumnName="PrdFeIBor" />
+          <ScalarProperty Name="PrdFeFDes" ColumnName="PrdFeFDes" />
+          <ScalarProperty Name="PrdFeIDes" ColumnName="PrdFeIDes" />
+          <ScalarProperty Name="PrdLotMue" ColumnName="PrdLotMue" />
+          <ScalarProperty Name="PrdCodRep" ColumnName="PrdCodRep" />
+          <ScalarProperty Name="PrdCodPrd" ColumnName="PrdCodPrd" />
+          <ScalarProperty Name="PrdTipCor" ColumnName="PrdTipCor" />
+          <ScalarProperty Name="PrdFeFEmp" ColumnName="PrdFeFEmp" />
+          <ScalarProperty Name="PrdFeIEmp" ColumnName="PrdFeIEmp" />
+          <ScalarProperty Name="PrdFeFLav" ColumnName="PrdFeFLav" />
+          <ScalarProperty Name="PrdFeILav" ColumnName="PrdFeILav" />
+          <ScalarProperty Name="PrdStsEmp" ColumnName="PrdStsEmp" />
+          <ScalarProperty Name="PrdStsLav" ColumnName="PrdStsLav" />
+          <ScalarProperty Name="PrdStsCos" ColumnName="PrdStsCos" />
+          <ScalarProperty Name="PrdStsCor" ColumnName="PrdStsCor" />
+          <ScalarProperty Name="PrdFecEsm" ColumnName="PrdFecEsm" />
+          <ScalarProperty Name="PrdFeFCos" ColumnName="PrdFeFCos" />
+          <ScalarProperty Name="PrdFecCos" ColumnName="PrdFecCos" />
+          <ScalarProperty Name="PrdFecBul" ColumnName="PrdFecBul" />
+          <ScalarProperty Name="PrdFeFCor" ColumnName="PrdFeFCor" />
+          <ScalarProperty Name="PrdFecCor" ColumnName="PrdFecCor" />
+          <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
+          <ScalarProperty Name="FacCodTel" ColumnName="FacCodTel" />
+          <ScalarProperty Name="FacCodRef" ColumnName="FacCodRef" />
+          <ScalarProperty Name="PrdNumAli" ColumnName="PrdNumAli" />
+          <ScalarProperty Name="PrdAnoCor" ColumnName="PrdAnoCor" />
+          <ScalarProperty Name="PrdNumCor" ColumnName="PrdNumCor" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PATRONSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.PATRON">
+        <MappingFragment StoreEntitySet="PATRON">
+          <ScalarProperty Name="PatInvSegu" ColumnName="PatInvSegu" />
+          <ScalarProperty Name="AxTipoVarianteId" ColumnName="AxTipoVarianteId" />
+          <ScalarProperty Name="AxBaseId" ColumnName="AxBaseId" />
+          <ScalarProperty Name="PatUltLin" ColumnName="PatUltLin" />
+          <ScalarProperty Name="PrdCodAli" ColumnName="PrdCodAli" />
+          <ScalarProperty Name="PrdPatTiro" ColumnName="PrdPatTiro" />
+          <ScalarProperty Name="PrdPatRued" ColumnName="PrdPatRued" />
+          <ScalarProperty Name="PrdPatPier" ColumnName="PrdPatPier" />
+          <ScalarProperty Name="PrdCalPat" ColumnName="PrdCalPat" />
+          <ScalarProperty Name="PrdCstMax" ColumnName="PrdCstMax" />
+          <ScalarProperty Name="FacCodMar" ColumnName="FacCodMar" />
+          <ScalarProperty Name="PrdPatU3" ColumnName="PrdPatU3" />
+          <ScalarProperty Name="PrdCodDes" ColumnName="PrdCodDes" />
+          <ScalarProperty Name="PrdPSgrPat" ColumnName="PrdPSgrPat" />
+          <ScalarProperty Name="PrdPatU2" ColumnName="PrdPatU2" />
+          <ScalarProperty Name="PrdPatU1" ColumnName="PrdPatU1" />
+          <ScalarProperty Name="PatSts" ColumnName="PatSts" />
+          <ScalarProperty Name="PrdDscArt" ColumnName="PrdDscArt" />
+          <ScalarProperty Name="FacCodTpo" ColumnName="FacCodTpo" />
+          <ScalarProperty Name="FacCodEd" ColumnName="FacCodEd" />
+          <ScalarProperty Name="PrdCodDis" ColumnName="PrdCodDis" />
+          <ScalarProperty Name="PrdCodArt" ColumnName="PrdCodArt" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRDSTSSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.PRDSTS">
+        <MappingFragment StoreEntitySet="PRDSTS">
+          <ScalarProperty Name="PrdCTraba" ColumnName="PrdCTraba" />
+          <ScalarProperty Name="PrdAliCCos" ColumnName="PrdAliCCos" />
+          <ScalarProperty Name="PrdAreSts" ColumnName="PrdAreSts" />
+          <ScalarProperty Name="PrdDesSts" ColumnName="PrdDesSts" />
+          <ScalarProperty Name="PrdSecSts" ColumnName="PrdSecSts" />
+          <ScalarProperty Name="PrdStsCor" ColumnName="PrdStsCor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CTRABAJOSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.CTRABAJO">
+        <MappingFragment StoreEntitySet="CTRABAJO">
+          <ScalarProperty Name="MOCCosto" ColumnName="MOCCosto" />
+          <ScalarProperty Name="PrdCtTip" ColumnName="PrdCtTip" />
+          <ScalarProperty Name="CCCodigo" ColumnName="CCCodigo" />
+          <ScalarProperty Name="CtEsqPago" ColumnName="CtEsqPago" />
+          <ScalarProperty Name="PrdCtRMOD" ColumnName="PrdCtRMOD" />
+          <ScalarProperty Name="PrdCtRMOI" ColumnName="PrdCtRMOI" />
+          <ScalarProperty Name="PrdCtRFAB" ColumnName="PrdCtRFAB" />
+          <ScalarProperty Name="PrdCtGru" ColumnName="PrdCtGru" />
+          <ScalarProperty Name="PrdCtNew" ColumnName="PrdCtNew" />
+          <ScalarProperty Name="PrdProEje" ColumnName="PrdProEje" />
+          <ScalarProperty Name="PrdSalCt" ColumnName="PrdSalCt" />
+          <ScalarProperty Name="PrdCtEsEnt" ColumnName="PrdCtEsEnt" />
+          <ScalarProperty Name="PrdCtTipSa" ColumnName="PrdCtTipSa" />
+          <ScalarProperty Name="PrdCtTipEn" ColumnName="PrdCtTipEn" />
+          <ScalarProperty Name="PrdCtAlias" ColumnName="PrdCtAlias" />
+          <ScalarProperty Name="PrdCtSupCo" ColumnName="PrdCtSupCo" />
+          <ScalarProperty Name="PrdImpCup" ColumnName="PrdImpCup" />
+          <ScalarProperty Name="PrdCtSts" ColumnName="PrdCtSts" />
+          <ScalarProperty Name="PrdCtOrd" ColumnName="PrdCtOrd" />
+          <ScalarProperty Name="PrdTroImp" ColumnName="PrdTroImp" />
+          <ScalarProperty Name="PrdOrdImp" ColumnName="PrdOrdImp" />
+          <ScalarProperty Name="PrdCTWor" ColumnName="PrdCTWor" />
+          <ScalarProperty Name="PrdSecUse" ColumnName="PrdSecUse" />
+          <ScalarProperty Name="PrdCtMod" ColumnName="PrdCtMod" />
+          <ScalarProperty Name="PrdCtDes" ColumnName="PrdCtDes" />
+          <ScalarProperty Name="PrdCtCod" ColumnName="PrdCtCod" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDCENTRSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.ORDCENTR">
+        <MappingFragment StoreEntitySet="ORDCENTR">
+          <ScalarProperty Name="PrdCtKanba" ColumnName="PrdCtKanba" />
+          <ScalarProperty Name="PrdCtUsrEn" ColumnName="PrdCtUsrEn" />
+          <ScalarProperty Name="PRdCtUsrSa" ColumnName="PRdCtUsrSa" />
+          <ScalarProperty Name="PrdCodOpr" ColumnName="PrdCodOpr" />
+          <ScalarProperty Name="PrdCodGru" ColumnName="PrdCodGru" />
+          <ScalarProperty Name="PrdCodRec" ColumnName="PrdCodRec" />
+          <ScalarProperty Name="PrdRecUsr" ColumnName="PrdRecUsr" />
+          <ScalarProperty Name="PrdFecRech" ColumnName="PrdFecRech" />
+          <ScalarProperty Name="PrdDesRech" ColumnName="PrdDesRech" />
+          <ScalarProperty Name="PrdCtRech" ColumnName="PrdCtRech" />
+          <ScalarProperty Name="PrdCtAud" ColumnName="PrdCtAud" />
+          <ScalarProperty Name="PrdLecMan" ColumnName="PrdLecMan" />
+          <ScalarProperty Name="PrdCtFecF" ColumnName="PrdCtFecF" />
+          <ScalarProperty Name="PrdCtFecI" ColumnName="PrdCtFecI" />
+          <ScalarProperty Name="PrdCtModu" ColumnName="PrdCtModu" />
+          <ScalarProperty Name="PrdEstSec" ColumnName="PrdEstSec" />
+          <ScalarProperty Name="PrdCtSup" ColumnName="PrdCtSup" />
+          <ScalarProperty Name="PrdCtBulto" ColumnName="PrdCtBulto" />
+          <ScalarProperty Name="PrdSecCod" ColumnName="PrdSecCod" />
+          <ScalarProperty Name="PrdCtCod" ColumnName="PrdCtCod" />
+          <ScalarProperty Name="PrdAnoCor" ColumnName="PrdAnoCor" />
+          <ScalarProperty Name="PrdNumCor" ColumnName="PrdNumCor" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRVMSTSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.PRVMST">
+        <MappingFragment StoreEntitySet="PRVMST">
+          <ScalarProperty Name="PrvCtaPro" ColumnName="PrvCtaPro" />
+          <ScalarProperty Name="PrvResExo" ColumnName="PrvResExo" />
+          <ScalarProperty Name="PrvREVen" ColumnName="PrvREVen" />
+          <ScalarProperty Name="PrvNoAX" ColumnName="PrvNoAX" />
+          <ScalarProperty Name="PrvRetA50" ColumnName="PrvRetA50" />
+          <ScalarProperty Name="PrvCorr2" ColumnName="PrvCorr2" />
+          <ScalarProperty Name="PrvBcoCta" ColumnName="PrvBcoCta" />
+          <ScalarProperty Name="BncCod" ColumnName="BncCod" />
+          <ScalarProperty Name="PagBcoMonC" ColumnName="PagBcoMonC" />
+          <ScalarProperty Name="PrvCodGru" ColumnName="PrvCodGru" />
+          <ScalarProperty Name="PrvUltTrn" ColumnName="PrvUltTrn" />
+          <ScalarProperty Name="PrvCodDPI" ColumnName="PrvCodDPI" />
+          <ScalarProperty Name="PrvCodAX" ColumnName="PrvCodAX" />
+          <ScalarProperty Name="PrvRetISV" ColumnName="PrvRetISV" />
+          <ScalarProperty Name="PrvRetPAC" ColumnName="PrvRetPAC" />
+          <ScalarProperty Name="PrvRefBAC" ColumnName="PrvRefBAC" />
+          <ScalarProperty Name="PrvCtaCob" ColumnName="PrvCtaCob" />
+          <ScalarProperty Name="PrvNRTN" ColumnName="PrvNRTN" />
+          <ScalarProperty Name="PrvCtaMTr" ColumnName="PrvCtaMTr" />
+          <ScalarProperty Name="PrvRTN" ColumnName="PrvRTN" />
+          <ScalarProperty Name="PrvParVar" ColumnName="PrvParVar" />
+          <ScalarProperty Name="PrvSolChq" ColumnName="PrvSolChq" />
+          <ScalarProperty Name="PrvBcoMonC" ColumnName="PrvBcoMonC" />
+          <ScalarProperty Name="PrvSaldo" ColumnName="PrvSaldo" />
+          <ScalarProperty Name="AdpCodCiu" ColumnName="AdpCodCiu" />
+          <ScalarProperty Name="AdpCodPai" ColumnName="AdpCodPai" />
+          <ScalarProperty Name="PrvCorrEl" ColumnName="PrvCorrEl" />
+          <ScalarProperty Name="PrvCont" ColumnName="PrvCont" />
+          <ScalarProperty Name="PrvCtaCont" ColumnName="PrvCtaCont" />
+          <ScalarProperty Name="PrvDiasV" ColumnName="PrvDiasV" />
+          <ScalarProperty Name="PrvTip" ColumnName="PrvTip" />
+          <ScalarProperty Name="PrvFax" ColumnName="PrvFax" />
+          <ScalarProperty Name="PrvTel2" ColumnName="PrvTel2" />
+          <ScalarProperty Name="PrvTel1" ColumnName="PrvTel1" />
+          <ScalarProperty Name="PrvDir2" ColumnName="PrvDir2" />
+          <ScalarProperty Name="PrvDir1" ColumnName="PrvDir1" />
+          <ScalarProperty Name="PrvNomCor" ColumnName="PrvNomCor" />
+          <ScalarProperty Name="PrvForPag" ColumnName="PrvForPag" />
+          <ScalarProperty Name="PrvNom" ColumnName="PrvNom" />
+          <ScalarProperty Name="PrvCod" ColumnName="PrvCod" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

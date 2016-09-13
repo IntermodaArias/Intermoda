@@ -1,0 +1,1 @@
+C:\VisualStudio\Intermoda\Intermoda.DataServices\obj\Debug\Intermoda.DataServices.csprojResolveAssemblyReference.cache

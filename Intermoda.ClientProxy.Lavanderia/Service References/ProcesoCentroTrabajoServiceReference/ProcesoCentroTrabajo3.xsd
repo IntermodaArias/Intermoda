@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/IntermodaService/Lavanderia/ProcesoCentroTrabajo.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lavanderia" />
+  <xs:element name="Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lavanderia" minOccurs="0" name="procesoCentroTrabajo" nillable="true" type="q1:ProcesoCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lavanderia" minOccurs="0" name="UpdateResult" nillable="true" type="q2:ProcesoCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="procesoCentroTrabajoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Get">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="procesoCentroTrabajoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lavanderia" minOccurs="0" name="GetResult" nillable="true" type="q3:ProcesoCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lavanderia" minOccurs="0" name="GetAllResult" nillable="true" type="q4:ArrayOfProcesoCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetbyProceso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="procesoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetbyProcesoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lavanderia" minOccurs="0" name="GetbyProcesoResult" nillable="true" type="q5:ArrayOfProcesoCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByCentroTrabajo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centroTrabajoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByCentroTrabajoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lavanderia" minOccurs="0" name="GetByCentroTrabajoResult" nillable="true" type="q6:ArrayOfProcesoCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByCentroTrabajoOpcion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centroTrabajoOpcionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByCentroTrabajoOpcionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lavanderia" minOccurs="0" name="GetByCentroTrabajoOpcionResult" nillable="true" type="q7:ArrayOfProcesoCentroTrabajoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

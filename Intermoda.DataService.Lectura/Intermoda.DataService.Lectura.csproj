@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{74A7520A-101F-4FF2-818E-E6DD245F6BD2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intermoda.DataService.Lectura</RootNamespace>
+    <AssemblyName>Intermoda.DataService.Lectura</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CentroTrabajo.svc" />
+    <Content Include="CentroTrabajoClasificacion.svc" />
+    <Content Include="Grupo.svc" />
+    <Content Include="Jornada.svc" />
+    <Content Include="JornadaDetalle.svc" />
+    <Content Include="Linea.svc" />
+    <Content Include="LineaDetalle.svc" />
+    <Content Include="Modulo.svc" />
+    <Content Include="ModuloSemana.svc" />
+    <Content Include="ModuloSemanaOperario.svc" />
+    <Content Include="Turno.svc" />
+    <Content Include="TurnoDetalle.svc" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CentroTrabajo.svc.cs">
+      <DependentUpon>CentroTrabajo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CentroTrabajoClasificacion.svc.cs">
+      <DependentUpon>CentroTrabajoClasificacion.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Grupo.svc.cs">
+      <DependentUpon>Grupo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts\ICentroTrabajo.cs" />
+    <Compile Include="Contracts\ICentroTrabajoClasificacion.cs" />
+    <Compile Include="Contracts\IGrupo.cs" />
+    <Compile Include="Contracts\IJornada.cs" />
+    <Compile Include="Contracts\IJornadaDetalle.cs" />
+    <Compile Include="Contracts\ILinea.cs" />
+    <Compile Include="Contracts\ILineaDetalle.cs" />
+    <Compile Include="Contracts\IModulo.cs" />
+    <Compile Include="Contracts\IModuloSemana.cs" />
+    <Compile Include="Contracts\IModuloSemanaOperario.cs" />
+    <Compile Include="Contracts\ITurno.cs" />
+    <Compile Include="Contracts\ITurnoDetalle.cs" />
+    <Compile Include="Jornada.svc.cs">
+      <DependentUpon>Jornada.svc</DependentUpon>
+    </Compile>
+    <Compile Include="JornadaDetalle.svc.cs">
+      <DependentUpon>JornadaDetalle.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Linea.svc.cs">
+      <DependentUpon>Linea.svc</DependentUpon>
+    </Compile>
+    <Compile Include="LineaDetalle.svc.cs">
+      <DependentUpon>LineaDetalle.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo.svc.cs">
+      <DependentUpon>Modulo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloSemana.svc.cs">
+      <DependentUpon>ModuloSemana.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloSemanaOperario.svc.cs">
+      <DependentUpon>ModuloSemanaOperario.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Turno.svc.cs">
+      <DependentUpon>Turno.svc</DependentUpon>
+    </Compile>
+    <Compile Include="TurnoDetalle.svc.cs">
+      <DependentUpon>TurnoDetalle.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Intermoda.Business.Lecturas\Intermoda.Business.Lecturas.csproj">
+      <Project>{0a42eeba-d076-41c8-880d-df18666229ea}</Project>
+      <Name>Intermoda.Business.Lecturas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3449</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/IntermodaService/Lectura</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

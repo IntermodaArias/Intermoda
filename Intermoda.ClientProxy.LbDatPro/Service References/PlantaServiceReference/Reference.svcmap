@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b38b41ba-7e52-46a5-914b-f07fd92539a4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://190.5.95.110/ImDataServiceLb/Planta.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Planta1.wsdl" MetadataType="Wsdl" ID="315a9ba6-2954-492b-bfa7-dc23eff5445a" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/Planta.svc?wsdl" />
+    <MetadataFile FileName="Planta3.xsd" MetadataType="Schema" ID="11551ca4-0521-4cb3-87ad-7ed765e46e6c" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/Planta.svc?xsd=xsd2" />
+    <MetadataFile FileName="Planta31.xsd" MetadataType="Schema" ID="1ac0a812-517f-4fb2-a716-f799f2a04f78" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/Planta.svc?xsd=xsd1" />
+    <MetadataFile FileName="Planta32.xsd" MetadataType="Schema" ID="e9cde181-b210-4b3b-bcfe-3dfca1071f92" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/Planta.svc?xsd=xsd0" />
+    <MetadataFile FileName="Planta1.disco" MetadataType="Disco" ID="edba461c-2ca6-4c67-a399-783acaff48b0" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/Planta.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

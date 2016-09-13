@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lecturas" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lecturas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/IntermodaService/Lectura/ModuloSemanaOperario.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Intermoda.Business.LbDatPro" />
+  <xs:import schemaLocation="http://localhost/IntermodaService/Lectura/ModuloSemanaOperario.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Intermoda.Common.Enum" />
+  <xs:complexType name="ModuloSemanaOperarioBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clasificacion" nillable="true" type="tns:CentroTrabajoClasificacionBusiness" />
+      <xs:element minOccurs="0" name="ClasificacionId" type="xs:int" />
+      <xs:element minOccurs="0" name="CompaniaCodigo" type="xs:short" />
+      <xs:element minOccurs="0" name="CurvaEntrenamiento" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Intermoda.Business.LbDatPro" minOccurs="0" name="Inasistencias" nillable="true" type="q1:ArrayOfInasistenciaBusiness" />
+      <xs:element minOccurs="0" name="ModuloSemanaId" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Intermoda.Business.LbDatPro" minOccurs="0" name="Operario" nillable="true" type="q2:EmpleadoBusiness" />
+      <xs:element minOccurs="0" name="OperarioCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="SemanaEntrenamiento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModuloSemanaOperarioBusiness" nillable="true" type="tns:ModuloSemanaOperarioBusiness" />
+  <xs:complexType name="CentroTrabajoClasificacionBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentroTrabajoId" type="xs:int" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secuencia" type="xs:int" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Intermoda.Common.Enum" minOccurs="0" name="Tipo" type="q3:CentroTrabajoClasificacionTipo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CentroTrabajoClasificacionBusiness" nillable="true" type="tns:CentroTrabajoClasificacionBusiness" />
+  <xs:complexType name="ArrayOfModuloSemanaOperarioBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ModuloSemanaOperarioBusiness" nillable="true" type="tns:ModuloSemanaOperarioBusiness" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfModuloSemanaOperarioBusiness" nillable="true" type="tns:ArrayOfModuloSemanaOperarioBusiness" />
+</xs:schema>

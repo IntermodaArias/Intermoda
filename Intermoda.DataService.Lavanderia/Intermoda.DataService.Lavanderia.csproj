@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{970CC690-41F5-4CFD-9865-66C9A0E20AF6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intermoda.DataService.Lavanderia</RootNamespace>
+    <AssemblyName>Intermoda.DataService.Lavanderia</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ArchivoGlobal.svc" />
+    <Content Include="CentroTrabajoOpcion.svc" />
+    <Content Include="Clase.svc" />
+    <Content Include="ColorIntermoda.svc" />
+    <Content Include="CTrabajo.svc" />
+    <Content Include="Catalogo.svc" />
+    <Content Include="IngredienteOperacion.svc" />
+    <Content Include="IngredientePredefinido.svc" />
+    <Content Include="InstruccionOperacion.svc" />
+    <Content Include="InstruccionPredefinida.svc" />
+    <Content Include="Lavadora.svc" />
+    <Content Include="LavadoraCapacidad.svc" />
+    <Content Include="Maquina.svc" />
+    <Content Include="MaquinaCapacidad.svc" />
+    <Content Include="OrdenProduccionLavanderia.svc" />
+    <Content Include="PlantaService.svc" />
+    <Content Include="ProcesoCentroTrabajo.svc" />
+    <Content Include="Lavado.svc" />
+    <Content Include="ObservacionOperacion.svc" />
+    <Content Include="ObservacionPredefinida.svc" />
+    <Content Include="OpcionLavado.svc" />
+    <Content Include="Operacion.svc" />
+    <Content Include="OperacionCentroTrabajo.svc" />
+    <Content Include="OperacionPredefinida.svc" />
+    <Content Include="OperacionProceso.svc" />
+    <Content Include="Proceso.svc" />
+    <Content Include="Secadora.svc" />
+    <Content Include="SecadoraCapacidad.svc" />
+    <Content Include="SubClase.svc" />
+    <Content Include="Tela.svc" />
+    <Content Include="TelaColorIntermoda.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArchivoGlobal.svc.cs">
+      <DependentUpon>ArchivoGlobal.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CentroTrabajoOpcion.svc.cs">
+      <DependentUpon>CentroTrabajoOpcion.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Clase.svc.cs">
+      <DependentUpon>Clase.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ColorIntermoda.svc.cs">
+      <DependentUpon>ColorIntermoda.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CTrabajo.svc.cs">
+      <DependentUpon>CTrabajo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts\ICTrabajo.cs" />
+    <Compile Include="Contracts\IProceso.cs" />
+    <Compile Include="Contracts\IOperacion.cs" />
+    <Compile Include="Contracts\IOperacionCentroTrabajo.cs" />
+    <Compile Include="Contracts\IOperacionPredefinida.cs" />
+    <Compile Include="Contracts\IInstruccionPredefinida.cs" />
+    <Compile Include="Contracts\IIngredientePredefinido.cs" />
+    <Compile Include="Contracts\ICatalogo.cs" />
+    <Compile Include="Contracts\IClase.cs" />
+    <Compile Include="Catalogo.svc.cs">
+      <DependentUpon>Catalogo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts\IColorIntermoda.cs" />
+    <Compile Include="Contracts\ILavado.cs" />
+    <Compile Include="Contracts\IArchivoGlobal.cs" />
+    <Compile Include="Contracts\ICentroTrabajoOpcion.cs" />
+    <Compile Include="Contracts\IIngredienteOperacion.cs" />
+    <Compile Include="Contracts\IInstruccionOperacion.cs" />
+    <Compile Include="Contracts\IProcesoCentroTrabajo.cs" />
+    <Compile Include="Contracts\ILavadora.cs" />
+    <Compile Include="Contracts\ILavadoraCapacidad.cs" />
+    <Compile Include="Contracts\IMaquina.cs" />
+    <Compile Include="Contracts\IMaquinaCapacidad.cs" />
+    <Compile Include="IngredienteOperacion.svc.cs">
+      <DependentUpon>IngredienteOperacion.svc</DependentUpon>
+    </Compile>
+    <Compile Include="IngredientePredefinido.svc.cs">
+      <DependentUpon>IngredientePredefinido.svc</DependentUpon>
+    </Compile>
+    <Compile Include="InstruccionOperacion.svc.cs">
+      <DependentUpon>InstruccionOperacion.svc</DependentUpon>
+    </Compile>
+    <Compile Include="InstruccionPredefinida.svc.cs">
+      <DependentUpon>InstruccionPredefinida.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts\ISubClase.cs" />
+    <Compile Include="Contracts\IObservacionPredefinida.cs" />
+    <Compile Include="Contracts\ITela.cs" />
+    <Compile Include="Contracts\ITelaColorIntermoda.cs" />
+    <Compile Include="Contracts\IOpcionLavado.cs" />
+    <Compile Include="Contracts\IObservacionOperacion.cs" />
+    <Compile Include="Contracts\IOperacionProceso.cs" />
+    <Compile Include="Contracts\ISecadora.cs" />
+    <Compile Include="Contracts\ISecadoraCapacidad.cs" />
+    <Compile Include="Contracts\IPlanta.cs" />
+    <Compile Include="Contracts\IOrdenProduccionLavanderia.cs" />
+    <Compile Include="Lavadora.svc.cs">
+      <DependentUpon>Lavadora.svc</DependentUpon>
+    </Compile>
+    <Compile Include="LavadoraCapacidad.svc.cs">
+      <DependentUpon>LavadoraCapacidad.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Maquina.svc.cs">
+      <DependentUpon>Maquina.svc</DependentUpon>
+    </Compile>
+    <Compile Include="MaquinaCapacidad.svc.cs">
+      <DependentUpon>MaquinaCapacidad.svc</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenProduccionLavanderia.svc.cs">
+      <DependentUpon>OrdenProduccionLavanderia.svc</DependentUpon>
+    </Compile>
+    <Compile Include="PlantaService.svc.cs">
+      <DependentUpon>PlantaService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ProcesoCentroTrabajo.svc.cs">
+      <DependentUpon>ProcesoCentroTrabajo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Lavado.svc.cs">
+      <DependentUpon>Lavado.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ObservacionOperacion.svc.cs">
+      <DependentUpon>ObservacionOperacion.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ObservacionPredefinida.svc.cs">
+      <DependentUpon>ObservacionPredefinida.svc</DependentUpon>
+    </Compile>
+    <Compile Include="OpcionLavado.svc.cs">
+      <DependentUpon>OpcionLavado.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Operacion.svc.cs">
+      <DependentUpon>Operacion.svc</DependentUpon>
+    </Compile>
+    <Compile Include="OperacionCentroTrabajo.svc.cs">
+      <DependentUpon>OperacionCentroTrabajo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="OperacionPredefinida.svc.cs">
+      <DependentUpon>OperacionPredefinida.svc</DependentUpon>
+    </Compile>
+    <Compile Include="OperacionProceso.svc.cs">
+      <DependentUpon>OperacionProceso.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Proceso.svc.cs">
+      <DependentUpon>Proceso.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Secadora.svc.cs">
+      <DependentUpon>Secadora.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SecadoraCapacidad.svc.cs">
+      <DependentUpon>SecadoraCapacidad.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SubClase.svc.cs">
+      <DependentUpon>SubClase.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Tela.svc.cs">
+      <DependentUpon>Tela.svc</DependentUpon>
+    </Compile>
+    <Compile Include="TelaColorIntermoda.svc.cs">
+      <DependentUpon>TelaColorIntermoda.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Intermoda.Business.Lavanderia\Intermoda.Business.Lavanderia.csproj">
+      <Project>{f02d7c05-76a1-4dd2-8dc3-fc6e0041894a}</Project>
+      <Name>Intermoda.Business.Lavanderia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Common\Intermoda.Common.csproj">
+      <Project>{07c1e232-8946-4295-9d30-4f9b45f10ec0}</Project>
+      <Name>Intermoda.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5288</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/IntermodaService/Lavanderia</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lecturas" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Intermoda.Business.Lecturas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/IntermodaService/Lectura/TurnoDetalle.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Intermoda.Common.Enum" />
+  <xs:complexType name="TurnoDetalleBusiness">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Intermoda.Common.Enum" minOccurs="0" name="Dia" type="q1:DiaSemana" />
+      <xs:element minOccurs="0" name="Horas" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Jornada" nillable="true" type="tns:JornadaBusiness" />
+      <xs:element minOccurs="0" name="JornadaId" type="xs:int" />
+      <xs:element minOccurs="0" name="Minutos" type="xs:int" />
+      <xs:element minOccurs="0" name="TurnoId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TurnoDetalleBusiness" nillable="true" type="tns:TurnoDetalleBusiness" />
+  <xs:complexType name="JornadaBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JornadaBusiness" nillable="true" type="tns:JornadaBusiness" />
+  <xs:complexType name="ArrayOfTurnoDetalleBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TurnoDetalleBusiness" nillable="true" type="tns:TurnoDetalleBusiness" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTurnoDetalleBusiness" nillable="true" type="tns:ArrayOfTurnoDetalleBusiness" />
+</xs:schema>

@@ -1,0 +1,1013 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LavanderiaModelStoreContainer" CdmEntityContainer="LavanderiaEntities">
+    <EntitySetMapping Name="ArchivosGlobalesSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.ArchivosGlobales">
+        <MappingFragment StoreEntitySet="ArchivosGlobales">
+          <ScalarProperty Name="ArchivoGlobalId" ColumnName="ArchivoGlobalId" />
+          <ScalarProperty Name="ArchivoGlobalPropietarioId" ColumnName="ArchivoGlobalPropietarioId" />
+          <ScalarProperty Name="ArchivoGlobalNombre" ColumnName="ArchivoGlobalNombre" />
+          <ScalarProperty Name="ArchivoGlobalTipo" ColumnName="ArchivoGlobalTipo" />
+          <ScalarProperty Name="ArchivoGlobalExtension" ColumnName="ArchivoGlobalExtension" />
+          <ScalarProperty Name="ArchivoGlobalOrden" ColumnName="ArchivoGlobalOrden" />
+          <ScalarProperty Name="ArchivoGlobalDescripcion" ColumnName="ArchivoGlobalDescripcion" />
+          <ScalarProperty Name="ArchivoGlobalBinario" ColumnName="ArchivoGlobalBinario" />
+          <ScalarProperty Name="ArchivoGlobalPropietarioNombre" ColumnName="ArchivoGlobalPropietarioNombre" />
+          <ScalarProperty Name="ArchivoGlobalFecha" ColumnName="ArchivoGlobalFecha" />
+          <ScalarProperty Name="ArchivoGlobalVersion" ColumnName="ArchivoGlobalVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentrosTrabajoOpcionSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.CentrosTrabajoOpcion">
+        <MappingFragment StoreEntitySet="CentrosTrabajoOpcion">
+          <ScalarProperty Name="CentroTrabajoOpcionId" ColumnName="CentroTrabajoOpcionId" />
+          <ScalarProperty Name="CentroTrabajoId" ColumnName="CentroTrabajoId" />
+          <ScalarProperty Name="OpcionId" ColumnName="OpcionId" />
+          <ScalarProperty Name="CentroTrabajoOpcionOrden" ColumnName="CentroTrabajoOpcionOrden" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentrosTrabajosSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.CentrosTrabajos">
+        <MappingFragment StoreEntitySet="CentrosTrabajos">
+          <ScalarProperty Name="CentroTrabajoCodigo" ColumnName="CentroTrabajoCodigo" />
+          <ScalarProperty Name="CentroTrabajoNombre" ColumnName="CentroTrabajoNombre" />
+          <ScalarProperty Name="CentroTrabajoOrdenNumero" ColumnName="CentroTrabajoOrdenNumero" />
+          <ScalarProperty Name="CentroTrabajoObservacion" ColumnName="CentroTrabajoObservacion" />
+          <ScalarProperty Name="CentroTrabajoTiempoEspera" ColumnName="CentroTrabajoTiempoEspera" />
+          <ScalarProperty Name="CentroTrabajoTiempoProceso" ColumnName="CentroTrabajoTiempoProceso" />
+          <ScalarProperty Name="LineaProduccionCodigo" ColumnName="LineaProduccionCodigo" />
+          <ScalarProperty Name="CentroTrabajoIsObligatorio" ColumnName="CentroTrabajoIsObligatorio" />
+          <ScalarProperty Name="CentroTrabajoIsActivo" ColumnName="CentroTrabajoIsActivo" />
+          <ScalarProperty Name="CentroTrabajoKanbanEntrada" ColumnName="CentroTrabajoKanbanEntrada" />
+          <ScalarProperty Name="CentroTrabajoKanbanSalida" ColumnName="CentroTrabajoKanbanSalida" />
+          <ScalarProperty Name="CentroTrabajoCodigoTipo" ColumnName="CentroTrabajoCodigoTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ColoresIntermodaSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.ColoresIntermoda">
+        <MappingFragment StoreEntitySet="ColoresIntermoda">
+          <ScalarProperty Name="ColorIntermodaId" ColumnName="ColorIntermodaId" />
+          <ScalarProperty Name="ColorIntermodaNombre" ColumnName="ColorIntermodaNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GrupoOperacionesSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.GrupoOperaciones">
+        <MappingFragment StoreEntitySet="GrupoOperaciones">
+          <ScalarProperty Name="GrupoOperacionesCodigo" ColumnName="GrupoOperacionesCodigo" />
+          <ScalarProperty Name="GrupoOperacionesNombre" ColumnName="GrupoOperacionesNombre" />
+          <ScalarProperty Name="GrupoOperacionesDescipcion" ColumnName="GrupoOperacionesDescipcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IngredientesOperacionSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.IngredientesOperacion">
+        <MappingFragment StoreEntitySet="IngredientesOperacion">
+          <ScalarProperty Name="IngredienteOperacionId" ColumnName="IngredienteOperacionId" />
+          <ScalarProperty Name="IngredienteId" ColumnName="IngredienteId" />
+          <ScalarProperty Name="OperacionId" ColumnName="OperacionId" />
+          <ScalarProperty Name="OperacionProcesoId" ColumnName="OperacionProcesoId" />
+          <ScalarProperty Name="IngredienteOperacionPorcentaje" ColumnName="IngredienteOperacionPorcentaje" />
+          <ScalarProperty Name="IngredienteOperacionClaseId" ColumnName="IngredienteOperacionClaseId" />
+          <ScalarProperty Name="IngredienteOperacionSubClaseId" ColumnName="IngredienteOperacionSubClaseId" />
+          <ScalarProperty Name="IngredienteOperacionOrden" ColumnName="IngredienteOperacionOrden" />
+          <ScalarProperty Name="IngredienteInstruccionesOperacionId" ColumnName="IngredienteInstruccionesOperacionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IngredientesPreDefinidosSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.IngredientesPreDefinidos">
+        <MappingFragment StoreEntitySet="IngredientesPreDefinidos">
+          <ScalarProperty Name="IngredientePreDefinidoId" ColumnName="IngredientePreDefinidoId" />
+          <ScalarProperty Name="IngredienteId" ColumnName="IngredienteId" />
+          <ScalarProperty Name="OperacionId" ColumnName="OperacionId" />
+          <ScalarProperty Name="IngredientePreDefinidoClaseId" ColumnName="IngredientePreDefinidoClaseId" />
+          <ScalarProperty Name="IngredientePreDefinidoSubClaseId" ColumnName="IngredientePreDefinidoSubClaseId" />
+          <ScalarProperty Name="IngredientePreDefinidoPorcentaje" ColumnName="IngredientePreDefinidoPorcentaje" />
+          <ScalarProperty Name="IngredientePreDefinidoOrden" ColumnName="IngredientePreDefinidoOrden" />
+          <ScalarProperty Name="IngredientePreDefinidoInstruccionesOperacionId" ColumnName="IngredientePreDefinidoInstruccionesOperacionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstruccionesOperacionSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.InstruccionesOperacion">
+        <MappingFragment StoreEntitySet="InstruccionesOperacion">
+          <ScalarProperty Name="InstruccionOperacionTiempoEstandar" ColumnName="InstruccionOperacionTiempoEstandar" />
+          <ScalarProperty Name="InstruccionOperacionId" ColumnName="InstruccionOperacionId" />
+          <ScalarProperty Name="InstruccionOperacionDescripcion" ColumnName="InstruccionOperacionDescripcion" />
+          <ScalarProperty Name="OperacionProcesoId" ColumnName="OperacionProcesoId" />
+          <ScalarProperty Name="InstruccionOperacionOrden" ColumnName="InstruccionOperacionOrden" />
+          <ScalarProperty Name="InstruccionOperacionTiempoMinimo" ColumnName="InstruccionOperacionTiempoMinimo" />
+          <ScalarProperty Name="InstruccionOperacionTemperatura" ColumnName="InstruccionOperacionTemperatura" />
+          <ScalarProperty Name="InstruccionOperacionTiempoMaximo" ColumnName="InstruccionOperacionTiempoMaximo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstruccionesPreDefinidasSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.InstruccionesPreDefinidas">
+        <MappingFragment StoreEntitySet="InstruccionesPreDefinidas">
+          <ScalarProperty Name="InstruccionPreDefinidaId" ColumnName="InstruccionPreDefinidaId" />
+          <ScalarProperty Name="InstruccionPreDefinidaDescripcion" ColumnName="InstruccionPreDefinidaDescripcion" />
+          <ScalarProperty Name="OperacionPreDefinidaId" ColumnName="OperacionPreDefinidaId" />
+          <ScalarProperty Name="InstruccionPreDefinidaOrden" ColumnName="InstruccionPreDefinidaOrden" />
+          <ScalarProperty Name="InstruccionPreDefinidaTiempoMinimo" ColumnName="InstruccionPreDefinidaTiempoMinimo" />
+          <ScalarProperty Name="InstruccionPreDefinidaTemperatura" ColumnName="InstruccionPreDefinidaTemperatura" />
+          <ScalarProperty Name="InstruccionPreDefinidaTiempoMaximo" ColumnName="InstruccionPreDefinidaTiempoMaximo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LavadorasSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.Lavadoras">
+        <MappingFragment StoreEntitySet="Lavadoras">
+          <ScalarProperty Name="LavadoraId" ColumnName="LavadoraId" />
+          <ScalarProperty Name="LavadoraNombre" ColumnName="LavadoraNombre" />
+          <ScalarProperty Name="LavadorasCapacidadId" ColumnName="LavadorasCapacidadId" />
+          <ScalarProperty Name="LavadoraMarca" ColumnName="LavadoraMarca" />
+          <ScalarProperty Name="LavadoraModelo" ColumnName="LavadoraModelo" />
+          <ScalarProperty Name="LavadoraEstado" ColumnName="LavadoraEstado" />
+          <ScalarProperty Name="LavadoraNumeroSerie" ColumnName="LavadoraNumeroSerie" />
+          <ScalarProperty Name="LavadoraIP" ColumnName="LavadoraIP" />
+          <ScalarProperty Name="LavadoraMAC" ColumnName="LavadoraMAC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LavadorasCapacidadSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.LavadorasCapacidad">
+        <MappingFragment StoreEntitySet="LavadorasCapacidad">
+          <ScalarProperty Name="LavadoraCapacidadId" ColumnName="LavadoraCapacidadId" />
+          <ScalarProperty Name="LavadoraCapacidadKgMax" ColumnName="LavadoraCapacidadKgMax" />
+          <ScalarProperty Name="LavadoraCapacidadKgMin" ColumnName="LavadoraCapacidadKgMin" />
+          <ScalarProperty Name="LavadoraCapacidadLitroCanasta" ColumnName="LavadoraCapacidadLitroCanasta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LavadosSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.Lavados">
+        <MappingFragment StoreEntitySet="Lavados">
+          <ScalarProperty Name="LavadoId" ColumnName="LavadoId" />
+          <ScalarProperty Name="LavadoNombre" ColumnName="LavadoNombre" />
+          <ScalarProperty Name="LavadoDescripcion" ColumnName="LavadoDescripcion" />
+          <ScalarProperty Name="ColorIntermodaId" ColumnName="ColorIntermodaId" />
+          <ScalarProperty Name="IsActivo" ColumnName="IsActivo" />
+          <ScalarProperty Name="LavadoFechaCreacion" ColumnName="LavadoFechaCreacion" />
+          <ScalarProperty Name="LavadoFechaActualizacion" ColumnName="LavadoFechaActualizacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogsLavadoSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.LogsLavado">
+        <MappingFragment StoreEntitySet="LogsLavado">
+          <ScalarProperty Name="LogLavadoId" ColumnName="LogLavadoId" />
+          <ScalarProperty Name="LogLavadoFecha" ColumnName="LogLavadoFecha" />
+          <ScalarProperty Name="LogLavadoDescripcion" ColumnName="LogLavadoDescripcion" />
+          <ScalarProperty Name="LogLavadoObjeto" ColumnName="LogLavadoObjeto" />
+          <ScalarProperty Name="LogLavadoUsuario" ColumnName="LogLavadoUsuario" />
+          <ScalarProperty Name="LogLavadoTipoTransaccion" ColumnName="LogLavadoTipoTransaccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaterialNoRequisableLavanderiaSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.MaterialNoRequisableLavanderia">
+        <MappingFragment StoreEntitySet="MaterialNoRequisableLavanderia">
+          <ScalarProperty Name="MaterialNoRequisableLavanderiaId" ColumnName="MaterialNoRequisableLavanderiaId" />
+          <ScalarProperty Name="CodigoMaterial" ColumnName="CodigoMaterial" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="PorcentajeUtilizacion" ColumnName="PorcentajeUtilizacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObservacionesOperacionSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.ObservacionesOperacion">
+        <MappingFragment StoreEntitySet="ObservacionesOperacion">
+          <ScalarProperty Name="ObservacionesOperacionId" ColumnName="ObservacionesOperacionId" />
+          <ScalarProperty Name="ObservacionesOperacionDescripcion" ColumnName="ObservacionesOperacionDescripcion" />
+          <ScalarProperty Name="OperacionProcesoId" ColumnName="OperacionProcesoId" />
+          <ScalarProperty Name="ObservacionesOperacionOrden" ColumnName="ObservacionesOperacionOrden" />
+          <ScalarProperty Name="ObservacionesOperacionPosicion" ColumnName="ObservacionesOperacionPosicion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperacionesSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.Operaciones">
+        <MappingFragment StoreEntitySet="Operaciones">
+          <ScalarProperty Name="OperacionCodigo" ColumnName="OperacionCodigo" />
+          <ScalarProperty Name="OperacionNombre" ColumnName="OperacionNombre" />
+          <ScalarProperty Name="OperacionDescripcion" ColumnName="OperacionDescripcion" />
+          <ScalarProperty Name="TipoOperacionesCodigo" ColumnName="TipoOperacionesCodigo" />
+          <ScalarProperty Name="GrupoOperacionesCodigo" ColumnName="GrupoOperacionesCodigo" />
+          <ScalarProperty Name="LinaPCodigo" ColumnName="LinaPCodigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperacionesCTrabajosSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.OperacionesCTrabajos">
+        <MappingFragment StoreEntitySet="OperacionesCTrabajos">
+          <ScalarProperty Name="OperacionesCtCode" ColumnName="OperacionesCtCode" />
+          <ScalarProperty Name="OperacionCodigo" ColumnName="OperacionCodigo" />
+          <ScalarProperty Name="CtrabajoCodigo" ColumnName="CtrabajoCodigo" />
+          <ScalarProperty Name="CtrabajoNombre" ColumnName="CtrabajoNombre" />
+          <ScalarProperty Name="EsRepetible" ColumnName="EsRepetible" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperacionesPreDefinidasSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.OperacionesPreDefinidas">
+        <MappingFragment StoreEntitySet="OperacionesPreDefinidas">
+          <ScalarProperty Name="OperacionPreDefinidaId" ColumnName="OperacionPreDefinidaId" />
+          <ScalarProperty Name="OperacionId" ColumnName="OperacionId" />
+          <ScalarProperty Name="OperacionPreDefinidaTemperatura" ColumnName="OperacionPreDefinidaTemperatura" />
+          <ScalarProperty Name="OperacionPreDefinidaPh" ColumnName="OperacionPreDefinidaPh" />
+          <ScalarProperty Name="OperacionPreDefinidaTiempoMinimo" ColumnName="OperacionPreDefinidaTiempoMinimo" />
+          <ScalarProperty Name="OperacionPreDefinidaRelacion" ColumnName="OperacionPreDefinidaRelacion" />
+          <ScalarProperty Name="OperacionPreDefinidaOrden" ColumnName="OperacionPreDefinidaOrden" />
+          <ScalarProperty Name="OperacionPreDefinidaTiempoMaximo" ColumnName="OperacionPreDefinidaTiempoMaximo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperacionesProcesoSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.OperacionesProceso">
+        <MappingFragment StoreEntitySet="OperacionesProceso">
+          <ScalarProperty Name="OperacionProcesoTiempoEstandar" ColumnName="OperacionProcesoTiempoEstandar" />
+          <ScalarProperty Name="OperacionProcesoId" ColumnName="OperacionProcesoId" />
+          <ScalarProperty Name="OperacionId" ColumnName="OperacionId" />
+          <ScalarProperty Name="ProcesoId" ColumnName="ProcesoId" />
+          <ScalarProperty Name="ProcesoCentroTrabajoId" ColumnName="ProcesoCentroTrabajoId" />
+          <ScalarProperty Name="OperacionProcesoTemperatura" ColumnName="OperacionProcesoTemperatura" />
+          <ScalarProperty Name="OperacionProcesoPh" ColumnName="OperacionProcesoPh" />
+          <ScalarProperty Name="OperacionProcesoTiempoMinimo" ColumnName="OperacionProcesoTiempoMinimo" />
+          <ScalarProperty Name="OperacionProcesoRelacion" ColumnName="OperacionProcesoRelacion" />
+          <ScalarProperty Name="OperacionProcesoOrden" ColumnName="OperacionProcesoOrden" />
+          <ScalarProperty Name="OperacionProcesoTiempoMaximo" ColumnName="OperacionProcesoTiempoMaximo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcesosCentroTrabajoSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.ProcesosCentroTrabajo">
+        <MappingFragment StoreEntitySet="ProcesosCentroTrabajo">
+          <ScalarProperty Name="ProcesoCentroTrabajoId" ColumnName="ProcesoCentroTrabajoId" />
+          <ScalarProperty Name="ProcesoId" ColumnName="ProcesoId" />
+          <ScalarProperty Name="CentroTrabajoId" ColumnName="CentroTrabajoId" />
+          <ScalarProperty Name="CentroTrabajoOpcionId" ColumnName="CentroTrabajoOpcionId" />
+          <ScalarProperty Name="ProcesoCentroTrabajoOrden" ColumnName="ProcesoCentroTrabajoOrden" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcesosOperacionesSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.ProcesosOperaciones">
+        <MappingFragment StoreEntitySet="ProcesosOperaciones">
+          <ScalarProperty Name="ProcesoOperacionCodigo" ColumnName="ProcesoOperacionCodigo" />
+          <ScalarProperty Name="ProcesoCodigo" ColumnName="ProcesoCodigo" />
+          <ScalarProperty Name="OperacionCtCodigo" ColumnName="OperacionCtCodigo" />
+          <ScalarProperty Name="OperacionCodigo" ColumnName="OperacionCodigo" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="OperacionNombre" ColumnName="OperacionNombre" />
+          <ScalarProperty Name="ProcesoNombre" ColumnName="ProcesoNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TelasColorIntermodaSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.TelasColorIntermoda">
+        <MappingFragment StoreEntitySet="TelasColorIntermoda">
+          <ScalarProperty Name="TelaColorIntermodaId" ColumnName="TelaColorIntermodaId" />
+          <ScalarProperty Name="ColorIntermodaId" ColumnName="ColorIntermodaId" />
+          <ScalarProperty Name="TelaId" ColumnName="TelaId" />
+          <ScalarProperty Name="MaterialTelaId" ColumnName="MaterialTelaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TelasComposicionSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.TelasComposicion">
+        <MappingFragment StoreEntitySet="TelasComposicion">
+          <ScalarProperty Name="TelaComposicionId" ColumnName="TelaComposicionId" />
+          <ScalarProperty Name="TelaComposicionNombre" ColumnName="TelaComposicionNombre" />
+          <ScalarProperty Name="TelaComposicionDescripcion" ColumnName="TelaComposicionDescripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoOperacionesSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.TipoOperaciones">
+        <MappingFragment StoreEntitySet="TipoOperaciones">
+          <ScalarProperty Name="TipoOperacionesCodigo" ColumnName="TipoOperacionesCodigo" />
+          <ScalarProperty Name="TipoOperacionesNombre" ColumnName="TipoOperacionesNombre" />
+          <ScalarProperty Name="TipoOperacionesDescripcion" ColumnName="TipoOperacionesDescripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpcionesLavadosSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.OpcionesLavados">
+        <MappingFragment StoreEntitySet="OpcionesLavados">
+          <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+          <ScalarProperty Name="TelaId" ColumnName="TelaId" />
+          <ScalarProperty Name="LavadoId" ColumnName="LavadoId" />
+          <ScalarProperty Name="OpcionDescripcion" ColumnName="OpcionDescripcion" />
+          <ScalarProperty Name="OpcionNombre" ColumnName="OpcionNombre" />
+          <ScalarProperty Name="OpcionLavadoId" ColumnName="OpcionLavadoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcesosSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.Procesos">
+        <MappingFragment StoreEntitySet="Procesos">
+          <ScalarProperty Name="ProcesoTiempoEstandar" ColumnName="ProcesoTiempoEstandar" />
+          <ScalarProperty Name="CentroTrabajoCodigo" ColumnName="CentroTrabajoCodigo" />
+          <ScalarProperty Name="ProcesoIsObligatorio" ColumnName="ProcesoIsObligatorio" />
+          <ScalarProperty Name="ProcesoIsActivo" ColumnName="ProcesoIsActivo" />
+          <ScalarProperty Name="ProcesoOrden" ColumnName="ProcesoOrden" />
+          <ScalarProperty Name="ProcesoDescripcion" ColumnName="ProcesoDescripcion" />
+          <ScalarProperty Name="ProcesoNombre" ColumnName="ProcesoNombre" />
+          <ScalarProperty Name="ProcesoCodigo" ColumnName="ProcesoCodigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATALOGSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.CATALOG">
+        <MappingFragment StoreEntitySet="CATALOG">
+          <ScalarProperty Name="MatGrpCod" ColumnName="MatGrpCod" />
+          <ScalarProperty Name="MatGrpDes" ColumnName="MatGrpDes" />
+          <ScalarProperty Name="PrdCodTel" ColumnName="PrdCodTel" />
+          <ScalarProperty Name="MapNum1Rep" ColumnName="MapNum1Rep" />
+          <ScalarProperty Name="MapCtaCon2" ColumnName="MapCtaCon2" />
+          <ScalarProperty Name="MapCtaVF" ColumnName="MapCtaVF" />
+          <ScalarProperty Name="MapCtaCont" ColumnName="MapCtaCont" />
+          <ScalarProperty Name="CataGru" ColumnName="CataGru" />
+          <ScalarProperty Name="TipRCod" ColumnName="TipRCod" />
+          <ScalarProperty Name="MedConsum" ColumnName="MedConsum" />
+          <ScalarProperty Name="MedCompra" ColumnName="MedCompra" />
+          <ScalarProperty Name="CataDesCor" ColumnName="CataDesCor" />
+          <ScalarProperty Name="CataDesLar" ColumnName="CataDesLar" />
+          <ScalarProperty Name="MapCodMat" ColumnName="MapCodMat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GRUTELSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.GRUTEL">
+        <MappingFragment StoreEntitySet="GRUTEL">
+          <ScalarProperty Name="FacReposo" ColumnName="FacReposo" />
+          <ScalarProperty Name="GruSts" ColumnName="GruSts" />
+          <ScalarProperty Name="FacGruUltN" ColumnName="FacGruUltN" />
+          <ScalarProperty Name="FacDesGrut" ColumnName="FacDesGrut" />
+          <ScalarProperty Name="FacCodGrut" ColumnName="FacCodGrut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MATMSTSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.MATMST">
+        <MappingFragment StoreEntitySet="MATMST">
+          <ScalarProperty Name="MprSubCod" ColumnName="MprSubCod" />
+          <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
+          <ScalarProperty Name="MatUltMov" ColumnName="MatUltMov" />
+          <ScalarProperty Name="MprExcCmp" ColumnName="MprExcCmp" />
+          <ScalarProperty Name="MatCntRes" ColumnName="MatCntRes" />
+          <ScalarProperty Name="MprCtCod" ColumnName="MprCtCod" />
+          <ScalarProperty Name="MprCodUbi" ColumnName="MprCodUbi" />
+          <ScalarProperty Name="MprEtgCon" ColumnName="MprEtgCon" />
+          <ScalarProperty Name="CodigoDyna" ColumnName="CodigoDyna" />
+          <ScalarProperty Name="TelCmpCod" ColumnName="TelCmpCod" />
+          <ScalarProperty Name="TelAcbCod" ColumnName="TelAcbCod" />
+          <ScalarProperty Name="TelTejCod" ColumnName="TelTejCod" />
+          <ScalarProperty Name="TelTenCod" ColumnName="TelTenCod" />
+          <ScalarProperty Name="TelTipCod" ColumnName="TelTipCod" />
+          <ScalarProperty Name="MapEntAdd" ColumnName="MapEntAdd" />
+          <ScalarProperty Name="TipRCod" ColumnName="TipRCod" />
+          <ScalarProperty Name="MprMatSig" ColumnName="MprMatSig" />
+          <ScalarProperty Name="MapLoopSiz" ColumnName="MapLoopSiz" />
+          <ScalarProperty Name="MprCodDim" ColumnName="MprCodDim" />
+          <ScalarProperty Name="MprNumTal" ColumnName="MprNumTal" />
+          <ScalarProperty Name="MprCCol" ColumnName="MprCCol" />
+          <ScalarProperty Name="MprCodLav" ColumnName="MprCodLav" />
+          <ScalarProperty Name="MprCodTel" ColumnName="MprCodTel" />
+          <ScalarProperty Name="MprCodMdl" ColumnName="MprCodMdl" />
+          <ScalarProperty Name="MprCodArt" ColumnName="MprCodArt" />
+          <ScalarProperty Name="CmpTelCom" ColumnName="CmpTelCom" />
+          <ScalarProperty Name="CmpTelPes" ColumnName="CmpTelPes" />
+          <ScalarProperty Name="MapFecCad" ColumnName="MapFecCad" />
+          <ScalarProperty Name="MapFecCre" ColumnName="MapFecCre" />
+          <ScalarProperty Name="MapFecIng" ColumnName="MapFecIng" />
+          <ScalarProperty Name="MapReaSts" ColumnName="MapReaSts" />
+          <ScalarProperty Name="CmpTexCod" ColumnName="CmpTexCod" />
+          <ScalarProperty Name="CmpColCod" ColumnName="CmpColCod" />
+          <ScalarProperty Name="PrdCodDis" ColumnName="PrdCodDis" />
+          <ScalarProperty Name="MapMatSts" ColumnName="MapMatSts" />
+          <ScalarProperty Name="MprUbiRak" ColumnName="MprUbiRak" />
+          <ScalarProperty Name="MprUbiEst" ColumnName="MprUbiEst" />
+          <ScalarProperty Name="RepBodCod" ColumnName="RepBodCod" />
+          <ScalarProperty Name="MapRanMin2" ColumnName="MapRanMin2" />
+          <ScalarProperty Name="RepTipMaq" ColumnName="RepTipMaq" />
+          <ScalarProperty Name="RepTipCat" ColumnName="RepTipCat" />
+          <ScalarProperty Name="RepCodMar" ColumnName="RepCodMar" />
+          <ScalarProperty Name="MapRepTam" ColumnName="MapRepTam" />
+          <ScalarProperty Name="MapRepDie" ColumnName="MapRepDie" />
+          <ScalarProperty Name="MapRepDia" ColumnName="MapRepDia" />
+          <ScalarProperty Name="MapNumRep" ColumnName="MapNumRep" />
+          <ScalarProperty Name="PapLinCod" ColumnName="PapLinCod" />
+          <ScalarProperty Name="FacCodTel" ColumnName="FacCodTel" />
+          <ScalarProperty Name="RepNumPag" ColumnName="RepNumPag" />
+          <ScalarProperty Name="MapRepTCa" ColumnName="MapRepTCa" />
+          <ScalarProperty Name="MapUbi" ColumnName="MapUbi" />
+          <ScalarProperty Name="MapPorStd" ColumnName="MapPorStd" />
+          <ScalarProperty Name="MapPorDes" ColumnName="MapPorDes" />
+          <ScalarProperty Name="MapRanMin" ColumnName="MapRanMin" />
+          <ScalarProperty Name="MapSalActV" ColumnName="MapSalActV" />
+          <ScalarProperty Name="MapSalidV" ColumnName="MapSalidV" />
+          <ScalarProperty Name="MapEntraV" ColumnName="MapEntraV" />
+          <ScalarProperty Name="MapSalAntV" ColumnName="MapSalAntV" />
+          <ScalarProperty Name="MapSalActU" ColumnName="MapSalActU" />
+          <ScalarProperty Name="MapSalidU" ColumnName="MapSalidU" />
+          <ScalarProperty Name="MapEntraU" ColumnName="MapEntraU" />
+          <ScalarProperty Name="MapSalAntU" ColumnName="MapSalAntU" />
+          <ScalarProperty Name="MapCanExi4" ColumnName="MapCanExi4" />
+          <ScalarProperty Name="MapCanExi3" ColumnName="MapCanExi3" />
+          <ScalarProperty Name="MapCanExi2" ColumnName="MapCanExi2" />
+          <ScalarProperty Name="MapCanExi1" ColumnName="MapCanExi1" />
+          <ScalarProperty Name="MapCanExis" ColumnName="MapCanExis" />
+          <ScalarProperty Name="MapCosProm" ColumnName="MapCosProm" />
+          <ScalarProperty Name="MatCodTon" ColumnName="MatCodTon" />
+          <ScalarProperty Name="MapFecMat" ColumnName="MapFecMat" />
+          <ScalarProperty Name="MprCodTam" ColumnName="MprCodTam" />
+          <ScalarProperty Name="MprCodCol" ColumnName="MprCodCol" />
+          <ScalarProperty Name="MprCodRef" ColumnName="MprCodRef" />
+          <ScalarProperty Name="MprCodSCla" ColumnName="MprCodSCla" />
+          <ScalarProperty Name="MprCodCla" ColumnName="MprCodCla" />
+          <ScalarProperty Name="FacCodTpo" ColumnName="FacCodTpo" />
+          <ScalarProperty Name="FacCodMar" ColumnName="FacCodMar" />
+          <ScalarProperty Name="MapCodAlt" ColumnName="MapCodAlt" />
+          <ScalarProperty Name="MapCodMat" ColumnName="MapCodMat" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TELAR5Set">
+      <EntityTypeMapping TypeName="LavanderiaModel.TELAR5">
+        <MappingFragment StoreEntitySet="TELAR5">
+          <ScalarProperty Name="TelDesVta" ColumnName="TelDesVta" />
+          <ScalarProperty Name="ComposicionId" ColumnName="ComposicionId" />
+          <ScalarProperty Name="FacUltLStr" ColumnName="FacUltLStr" />
+          <ScalarProperty Name="FacUltLin" ColumnName="FacUltLin" />
+          <ScalarProperty Name="FacDesTel" ColumnName="FacDesTel" />
+          <ScalarProperty Name="FacCodGrut" ColumnName="FacCodGrut" />
+          <ScalarProperty Name="FacCodTel" ColumnName="FacCodTel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLASESet">
+      <EntityTypeMapping TypeName="LavanderiaModel.CLASE">
+        <MappingFragment StoreEntitySet="CLASE">
+          <ScalarProperty Name="MprClaDL" ColumnName="MprClaDL" />
+          <ScalarProperty Name="MprClaAX" ColumnName="MprClaAX" />
+          <ScalarProperty Name="MprGrpCla" ColumnName="MprGrpCla" />
+          <ScalarProperty Name="MprGrpNom" ColumnName="MprGrpNom" />
+          <ScalarProperty Name="MprClaSig" ColumnName="MprClaSig" />
+          <ScalarProperty Name="MprCodAgr" ColumnName="MprCodAgr" />
+          <ScalarProperty Name="MprClaDia" ColumnName="MprClaDia" />
+          <ScalarProperty Name="MprClaDet" ColumnName="MprClaDet" />
+          <ScalarProperty Name="MprClaSts" ColumnName="MprClaSts" />
+          <ScalarProperty Name="MapRotSin" ColumnName="MapRotSin" />
+          <ScalarProperty Name="MapRotBaj" ColumnName="MapRotBaj" />
+          <ScalarProperty Name="MprCtaCon" ColumnName="MprCtaCon" />
+          <ScalarProperty Name="MprDesCla" ColumnName="MprDesCla" />
+          <ScalarProperty Name="MprCanInv" ColumnName="MprCanInv" />
+          <ScalarProperty Name="MprCodCla" ColumnName="MprCodCla" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUBCLASESet">
+      <EntityTypeMapping TypeName="LavanderiaModel.SUBCLASE">
+        <MappingFragment StoreEntitySet="SUBCLASE">
+          <ScalarProperty Name="MprSClaAX" ColumnName="MprSClaAX" />
+          <ScalarProperty Name="MprSClaSts" ColumnName="MprSClaSts" />
+          <ScalarProperty Name="MprDesSCla" ColumnName="MprDesSCla" />
+          <ScalarProperty Name="MprCodSCla" ColumnName="MprCodSCla" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObservacionesPreDefinidasSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.ObservacionesPreDefinidas">
+        <MappingFragment StoreEntitySet="ObservacionesPreDefinidas">
+          <ScalarProperty Name="ObservacionesOperacionPdPosicion" ColumnName="ObservacionesOperacionPdPosicion" />
+          <ScalarProperty Name="ObservacionesOperacionPdOrden" ColumnName="ObservacionesOperacionPdOrden" />
+          <ScalarProperty Name="ObservacionOperacionPdId" ColumnName="ObservacionOperacionPdId" />
+          <ScalarProperty Name="ObservacionesOperacionPdDescripcion" ColumnName="ObservacionesOperacionPdDescripcion" />
+          <ScalarProperty Name="ObservacionesOperacionPdId" ColumnName="ObservacionesOperacionPdId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SecadorasSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.Secadoras">
+        <MappingFragment StoreEntitySet="Secadoras">
+          <ScalarProperty Name="secadoraMAC" ColumnName="secadoraMAC" />
+          <ScalarProperty Name="SecadoraIP" ColumnName="SecadoraIP" />
+          <ScalarProperty Name="SecadoraNumeroSerie" ColumnName="SecadoraNumeroSerie" />
+          <ScalarProperty Name="SecadoraEstado" ColumnName="SecadoraEstado" />
+          <ScalarProperty Name="SecadoraModelo" ColumnName="SecadoraModelo" />
+          <ScalarProperty Name="SecadoraMarca" ColumnName="SecadoraMarca" />
+          <ScalarProperty Name="SecadorasCapacidadId" ColumnName="SecadorasCapacidadId" />
+          <ScalarProperty Name="SecadoraNombre" ColumnName="SecadoraNombre" />
+          <ScalarProperty Name="SecadoraId" ColumnName="SecadoraId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SecadorasCapacidadSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.SecadorasCapacidad">
+        <MappingFragment StoreEntitySet="SecadorasCapacidad">
+          <ScalarProperty Name="SecadoraCapacidadKgMin" ColumnName="SecadoraCapacidadKgMin" />
+          <ScalarProperty Name="SecadoraCapacidadKgMax" ColumnName="SecadoraCapacidadKgMax" />
+          <ScalarProperty Name="SecadoraCapacidadId" ColumnName="SecadoraCapacidadId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlantasSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.Plantas">
+        <MappingFragment StoreEntitySet="Plantas">
+          <ScalarProperty Name="CompañiaCodigo" ColumnName="CompañiaCodigo" />
+          <ScalarProperty Name="PlantaPropietaria" ColumnName="PlantaPropietaria" />
+          <ScalarProperty Name="PlantaObsevacion" ColumnName="PlantaObsevacion" />
+          <ScalarProperty Name="PlantaNombre" ColumnName="PlantaNombre" />
+          <ScalarProperty Name="PlantaCodigo" ColumnName="PlantaCodigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrdenesProduccionEnProcesoSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.OrdenesProduccionEnProceso">
+        <MappingFragment StoreEntitySet="OrdenesProduccionEnProceso">
+          <ScalarProperty Name="PesoUnidad" ColumnName="PesoUnidad" />
+          <ScalarProperty Name="CodigoLavadoViejo" ColumnName="CodigoLavadoViejo" />
+          <ScalarProperty Name="LavadoId" ColumnName="LavadoId" />
+          <ScalarProperty Name="FinalProgramado" ColumnName="FinalProgramado" />
+          <ScalarProperty Name="InicioProgramado" ColumnName="InicioProgramado" />
+          <ScalarProperty Name="ConTela" ColumnName="ConTela" />
+          <ScalarProperty Name="ModuloEnsamble" ColumnName="ModuloEnsamble" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="PrdProTel" ColumnName="PrdProTel" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="EstadoOrden" ColumnName="EstadoOrden" />
+          <ScalarProperty Name="Tela" ColumnName="Tela" />
+          <ScalarProperty Name="Variante" ColumnName="Variante" />
+          <ScalarProperty Name="Patron" ColumnName="Patron" />
+          <ScalarProperty Name="NumeroOrden" ColumnName="NumeroOrden" />
+          <ScalarProperty Name="Año" ColumnName="Año" />
+          <ScalarProperty Name="DescripcionCompañia" ColumnName="DescripcionCompañia" />
+          <ScalarProperty Name="CodigoCompañia" ColumnName="CodigoCompañia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CTRABAJOSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.CTRABAJO">
+        <MappingFragment StoreEntitySet="CTRABAJO">
+          <ScalarProperty Name="MOCCosto" ColumnName="MOCCosto" />
+          <ScalarProperty Name="PrdCtTip" ColumnName="PrdCtTip" />
+          <ScalarProperty Name="CCCodigo" ColumnName="CCCodigo" />
+          <ScalarProperty Name="CtEsqPago" ColumnName="CtEsqPago" />
+          <ScalarProperty Name="PrdCtRMOD" ColumnName="PrdCtRMOD" />
+          <ScalarProperty Name="PrdCtRMOI" ColumnName="PrdCtRMOI" />
+          <ScalarProperty Name="PrdCtRFAB" ColumnName="PrdCtRFAB" />
+          <ScalarProperty Name="PrdCtGru" ColumnName="PrdCtGru" />
+          <ScalarProperty Name="PrdCtNew" ColumnName="PrdCtNew" />
+          <ScalarProperty Name="PrdProEje" ColumnName="PrdProEje" />
+          <ScalarProperty Name="PrdSalCt" ColumnName="PrdSalCt" />
+          <ScalarProperty Name="PrdCtEsEnt" ColumnName="PrdCtEsEnt" />
+          <ScalarProperty Name="PrdCtTipSa" ColumnName="PrdCtTipSa" />
+          <ScalarProperty Name="PrdCtTipEn" ColumnName="PrdCtTipEn" />
+          <ScalarProperty Name="PrdCtAlias" ColumnName="PrdCtAlias" />
+          <ScalarProperty Name="PrdCtSupCo" ColumnName="PrdCtSupCo" />
+          <ScalarProperty Name="PrdImpCup" ColumnName="PrdImpCup" />
+          <ScalarProperty Name="PrdCtSts" ColumnName="PrdCtSts" />
+          <ScalarProperty Name="PrdCtOrd" ColumnName="PrdCtOrd" />
+          <ScalarProperty Name="PrdTroImp" ColumnName="PrdTroImp" />
+          <ScalarProperty Name="PrdOrdImp" ColumnName="PrdOrdImp" />
+          <ScalarProperty Name="PrdCTWor" ColumnName="PrdCTWor" />
+          <ScalarProperty Name="PrdSecUse" ColumnName="PrdSecUse" />
+          <ScalarProperty Name="PrdCtMod" ColumnName="PrdCtMod" />
+          <ScalarProperty Name="PrdCtDes" ColumnName="PrdCtDes" />
+          <ScalarProperty Name="PrdCtCod" ColumnName="PrdCtCod" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDCENTRSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.ORDCENTR">
+        <MappingFragment StoreEntitySet="ORDCENTR">
+          <ScalarProperty Name="PrdCtKanba" ColumnName="PrdCtKanba" />
+          <ScalarProperty Name="PrdCtUsrEn" ColumnName="PrdCtUsrEn" />
+          <ScalarProperty Name="PRdCtUsrSa" ColumnName="PRdCtUsrSa" />
+          <ScalarProperty Name="PrdCodOpr" ColumnName="PrdCodOpr" />
+          <ScalarProperty Name="PrdCodGru" ColumnName="PrdCodGru" />
+          <ScalarProperty Name="PrdCodRec" ColumnName="PrdCodRec" />
+          <ScalarProperty Name="PrdRecUsr" ColumnName="PrdRecUsr" />
+          <ScalarProperty Name="PrdFecRech" ColumnName="PrdFecRech" />
+          <ScalarProperty Name="PrdDesRech" ColumnName="PrdDesRech" />
+          <ScalarProperty Name="PrdCtRech" ColumnName="PrdCtRech" />
+          <ScalarProperty Name="PrdCtAud" ColumnName="PrdCtAud" />
+          <ScalarProperty Name="PrdLecMan" ColumnName="PrdLecMan" />
+          <ScalarProperty Name="PrdCtFecF" ColumnName="PrdCtFecF" />
+          <ScalarProperty Name="PrdCtFecI" ColumnName="PrdCtFecI" />
+          <ScalarProperty Name="PrdCtModu" ColumnName="PrdCtModu" />
+          <ScalarProperty Name="PrdEstSec" ColumnName="PrdEstSec" />
+          <ScalarProperty Name="PrdCtSup" ColumnName="PrdCtSup" />
+          <ScalarProperty Name="PrdCtBulto" ColumnName="PrdCtBulto" />
+          <ScalarProperty Name="PrdSecCod" ColumnName="PrdSecCod" />
+          <ScalarProperty Name="PrdCtCod" ColumnName="PrdCtCod" />
+          <ScalarProperty Name="PrdAnoCor" ColumnName="PrdAnoCor" />
+          <ScalarProperty Name="PrdNumCor" ColumnName="PrdNumCor" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrdenesProduccionLavanderiaSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.OrdenesProduccionLavanderia">
+        <MappingFragment StoreEntitySet="OrdenesProduccionLavanderia">
+          <ScalarProperty Name="PesoUnidad" ColumnName="PesoUnidad" />
+          <ScalarProperty Name="LavadoNombre" ColumnName="LavadoNombre" />
+          <ScalarProperty Name="LavadoId" ColumnName="LavadoId" />
+          <ScalarProperty Name="UnidadesIngresadasLavanderia2" ColumnName="UnidadesIngresadasLavanderia2" />
+          <ScalarProperty Name="UnidadesTerminadasEnsamble" ColumnName="UnidadesTerminadasEnsamble" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="TelaVenta" ColumnName="TelaVenta" />
+          <ScalarProperty Name="TelaProduccion" ColumnName="TelaProduccion" />
+          <ScalarProperty Name="InicioProgramado" ColumnName="InicioProgramado" />
+          <ScalarProperty Name="FinalProgramado" ColumnName="FinalProgramado" />
+          <ScalarProperty Name="PrdStsCor" ColumnName="PrdStsCor" />
+          <ScalarProperty Name="CodigoLavadoViejo" ColumnName="CodigoLavadoViejo" />
+          <ScalarProperty Name="Variante" ColumnName="Variante" />
+          <ScalarProperty Name="Patron" ColumnName="Patron" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="PrdCtNew" ColumnName="PrdCtNew" />
+          <ScalarProperty Name="PlantaCodigo" ColumnName="PlantaCodigo" />
+          <ScalarProperty Name="CompaniaId" ColumnName="CompaniaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CargaLavadoSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.CargaLavado">
+        <MappingFragment StoreEntitySet="CargaLavado">
+          <ScalarProperty Name="CargaLavadoTiempoEstandarProceso" ColumnName="CargaLavadoTiempoEstandarProceso" />
+          <ScalarProperty Name="CargaLavadoNumeroRequisicionQuimicos" ColumnName="CargaLavadoNumeroRequisicionQuimicos" />
+          <ScalarProperty Name="CargaLavadoTiempoMaximoProceso" ColumnName="CargaLavadoTiempoMaximoProceso" />
+          <ScalarProperty Name="CargaLavadoNumeroArmado" ColumnName="CargaLavadoNumeroArmado" />
+          <ScalarProperty Name="CargaLavadoTela" ColumnName="CargaLavadoTela" />
+          <ScalarProperty Name="CargaLavadoTiempoMinimoProceso" ColumnName="CargaLavadoTiempoMinimoProceso" />
+          <ScalarProperty Name="CargaLavadoCapacidadUtilizadaLavadora" ColumnName="CargaLavadoCapacidadUtilizadaLavadora" />
+          <ScalarProperty Name="CargaLavadoCentroTrabajoId" ColumnName="CargaLavadoCentroTrabajoId" />
+          <ScalarProperty Name="CargaLavadoPeso" ColumnName="CargaLavadoPeso" />
+          <ScalarProperty Name="CargaLavadoFechaSalida" ColumnName="CargaLavadoFechaSalida" />
+          <ScalarProperty Name="CargaLavadoFechaEntrada" ColumnName="CargaLavadoFechaEntrada" />
+          <ScalarProperty Name="CargaLavadoLavadoraId" ColumnName="CargaLavadoLavadoraId" />
+          <ScalarProperty Name="CargaLavadoLavadoraTipoId" ColumnName="CargaLavadoLavadoraTipoId" />
+          <ScalarProperty Name="CargaLavadoOpcionLavadoId" ColumnName="CargaLavadoOpcionLavadoId" />
+          <ScalarProperty Name="CargaLavadoLavadoId" ColumnName="CargaLavadoLavadoId" />
+          <ScalarProperty Name="CargaLavadoEstado" ColumnName="CargaLavadoEstado" />
+          <ScalarProperty Name="CargaLavadoUnidades" ColumnName="CargaLavadoUnidades" />
+          <ScalarProperty Name="CargaLavadoNumero" ColumnName="CargaLavadoNumero" />
+          <ScalarProperty Name="CargaLavadoAno" ColumnName="CargaLavadoAno" />
+          <ScalarProperty Name="CargaLavadoNumeroOrden" ColumnName="CargaLavadoNumeroOrden" />
+          <ScalarProperty Name="CargaLavadoCiaCod" ColumnName="CargaLavadoCiaCod" />
+          <ScalarProperty Name="CargaLavadoId" ColumnName="CargaLavadoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperacionesProcesoOrdenSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.OperacionesProcesoOrden">
+        <MappingFragment StoreEntitySet="OperacionesProcesoOrden">
+          <ScalarProperty Name="OperacionesProcesoOrdenTiempoEstandar" ColumnName="OperacionesProcesoOrdenTiempoEstandar" />
+          <ScalarProperty Name="OperacionesProcesoOrdenTiempoMaximo" ColumnName="OperacionesProcesoOrdenTiempoMaximo" />
+          <ScalarProperty Name="OperacionesProcesoOrden_Orden" ColumnName="OperacionesProcesoOrden_Orden" />
+          <ScalarProperty Name="OperacionesProcesoOrdenRelacion" ColumnName="OperacionesProcesoOrdenRelacion" />
+          <ScalarProperty Name="OperacionesProcesoOrdenTiempoMinimo" ColumnName="OperacionesProcesoOrdenTiempoMinimo" />
+          <ScalarProperty Name="OperacionesProcesoOrdenPh" ColumnName="OperacionesProcesoOrdenPh" />
+          <ScalarProperty Name="OperacionesProcesoOrdenTemperatura" ColumnName="OperacionesProcesoOrdenTemperatura" />
+          <ScalarProperty Name="OperacionesProcesoOrdenProcesoCentroTrabajoId" ColumnName="OperacionesProcesoOrdenProcesoCentroTrabajoId" />
+          <ScalarProperty Name="OperacionesProcesoOrdenProcesoId" ColumnName="OperacionesProcesoOrdenProcesoId" />
+          <ScalarProperty Name="OperacionesProcesoOrdenOperacionId" ColumnName="OperacionesProcesoOrdenOperacionId" />
+          <ScalarProperty Name="OperacionesProcesoOrdenId" ColumnName="OperacionesProcesoOrdenId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcesosCentroTrabajoOrdenSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.ProcesosCentroTrabajoOrden">
+        <MappingFragment StoreEntitySet="ProcesosCentroTrabajoOrden">
+          <ScalarProperty Name="ProcesosCentroTrabajoOrden_Orden" ColumnName="ProcesosCentroTrabajoOrden_Orden" />
+          <ScalarProperty Name="ProcesosCentroTrabajoOrdenCentrosTrabajoOpcionLavadoId" ColumnName="ProcesosCentroTrabajoOrdenCentrosTrabajoOpcionLavadoId" />
+          <ScalarProperty Name="ProcesosCentroTrabajoOrdenCentroTrabajoId" ColumnName="ProcesosCentroTrabajoOrdenCentroTrabajoId" />
+          <ScalarProperty Name="ProcesosCentroTrabajoOrdenProcesoId" ColumnName="ProcesosCentroTrabajoOrdenProcesoId" />
+          <ScalarProperty Name="ProcesosCentroTrabajoOrdenId" ColumnName="ProcesosCentroTrabajoOrdenId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentrosTrabajoOpcionLavadoOrdenSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.CentrosTrabajoOpcionLavadoOrden">
+        <MappingFragment StoreEntitySet="CentrosTrabajoOpcionLavadoOrden">
+          <ScalarProperty Name="CentrosTrabajoOpcionLavadoOrden_Orden" ColumnName="CentrosTrabajoOpcionLavadoOrden_Orden" />
+          <ScalarProperty Name="CentrosTrabajoOpcionLavadoOrdenOpcionLavadoId" ColumnName="CentrosTrabajoOpcionLavadoOrdenOpcionLavadoId" />
+          <ScalarProperty Name="CentrosTrabajoOpcionLavadoOrdenCentroTrabajoId" ColumnName="CentrosTrabajoOpcionLavadoOrdenCentroTrabajoId" />
+          <ScalarProperty Name="CentrosTrabajoOpcionLavadoOrdenId" ColumnName="CentrosTrabajoOpcionLavadoOrdenId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpcionLavadoOrdenSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.OpcionLavadoOrden">
+        <MappingFragment StoreEntitySet="OpcionLavadoOrden">
+          <ScalarProperty Name="OpcionLavadoOrdenAnio" ColumnName="OpcionLavadoOrdenAnio" />
+          <ScalarProperty Name="OpcionLavadoOrdenPlantaId" ColumnName="OpcionLavadoOrdenPlantaId" />
+          <ScalarProperty Name="OpcionLavadoOrdenCompaniaId" ColumnName="OpcionLavadoOrdenCompaniaId" />
+          <ScalarProperty Name="OpcionLavadoOrdenNumeroOrden" ColumnName="OpcionLavadoOrdenNumeroOrden" />
+          <ScalarProperty Name="OpcionLavadoOrdenIsDefault" ColumnName="OpcionLavadoOrdenIsDefault" />
+          <ScalarProperty Name="OpcionLavadoOrdenTelaId" ColumnName="OpcionLavadoOrdenTelaId" />
+          <ScalarProperty Name="OpcionLavadoOrdenLavadoId" ColumnName="OpcionLavadoOrdenLavadoId" />
+          <ScalarProperty Name="OpcionLavadoOrdenDescripcion" ColumnName="OpcionLavadoOrdenDescripcion" />
+          <ScalarProperty Name="OpcionLavadoOrdenNombre" ColumnName="OpcionLavadoOrdenNombre" />
+          <ScalarProperty Name="OpcionLavadoOrdenId" ColumnName="OpcionLavadoOrdenId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUTARC3Set">
+      <EntityTypeMapping TypeName="LavanderiaModel.CUTARC3">
+        <MappingFragment StoreEntitySet="CUTARC3">
+          <ScalarProperty Name="OrdPerLec" ColumnName="OrdPerLec" />
+          <ScalarProperty Name="OrdStsEnvC" ColumnName="OrdStsEnvC" />
+          <ScalarProperty Name="OrdFecEnvC" ColumnName="OrdFecEnvC" />
+          <ScalarProperty Name="PrdTckEAh" ColumnName="PrdTckEAh" />
+          <ScalarProperty Name="FxTelaProduccion" ColumnName="FxTelaProduccion" />
+          <ScalarProperty Name="OrdTotUnd" ColumnName="OrdTotUnd" />
+          <ScalarProperty Name="OrdFlexibl" ColumnName="OrdFlexibl" />
+          <ScalarProperty Name="OrdPreCost" ColumnName="OrdPreCost" />
+          <ScalarProperty Name="OrdAutDifT" ColumnName="OrdAutDifT" />
+          <ScalarProperty Name="OrdUsrAutD" ColumnName="OrdUsrAutD" />
+          <ScalarProperty Name="OrdFchDifT" ColumnName="OrdFchDifT" />
+          <ScalarProperty Name="OrdPrePes" ColumnName="OrdPrePes" />
+          <ScalarProperty Name="PrdTckEti" ColumnName="PrdTckEti" />
+          <ScalarProperty Name="OrdLavadoI" ColumnName="OrdLavadoI" />
+          <ScalarProperty Name="OrdRcpFec" ColumnName="OrdRcpFec" />
+          <ScalarProperty Name="OrdRcpSts" ColumnName="OrdRcpSts" />
+          <ScalarProperty Name="OrdRcpUsr" ColumnName="OrdRcpUsr" />
+          <ScalarProperty Name="OloStiloVe" ColumnName="OloStiloVe" />
+          <ScalarProperty Name="PrdFchCTel" ColumnName="PrdFchCTel" />
+          <ScalarProperty Name="PrdUsuCTel" ColumnName="PrdUsuCTel" />
+          <ScalarProperty Name="PrdFecCTel" ColumnName="PrdFecCTel" />
+          <ScalarProperty Name="OrdStsASeg" ColumnName="OrdStsASeg" />
+          <ScalarProperty Name="OrdUsrAutS" ColumnName="OrdUsrAutS" />
+          <ScalarProperty Name="OrdUsrAutF" ColumnName="OrdUsrAutF" />
+          <ScalarProperty Name="OrdObserva" ColumnName="OrdObserva" />
+          <ScalarProperty Name="OrdRazCod" ColumnName="OrdRazCod" />
+          <ScalarProperty Name="PrdSegFch" ColumnName="PrdSegFch" />
+          <ScalarProperty Name="PrdSegUsu" ColumnName="PrdSegUsu" />
+          <ScalarProperty Name="PrdSegCst" ColumnName="PrdSegCst" />
+          <ScalarProperty Name="PrdOrdCer" ColumnName="PrdOrdCer" />
+          <ScalarProperty Name="PrdFecOff" ColumnName="PrdFecOff" />
+          <ScalarProperty Name="PrdUsrOff" ColumnName="PrdUsrOff" />
+          <ScalarProperty Name="PrdPriCor" ColumnName="PrdPriCor" />
+          <ScalarProperty Name="PrdNumDep" ColumnName="PrdNumDep" />
+          <ScalarProperty Name="PrdAnoDep" ColumnName="PrdAnoDep" />
+          <ScalarProperty Name="PrdObCon" ColumnName="PrdObCon" />
+          <ScalarProperty Name="PrdTelVal" ColumnName="PrdTelVal" />
+          <ScalarProperty Name="PrdPlaOri" ColumnName="PrdPlaOri" />
+          <ScalarProperty Name="PrdFecOri" ColumnName="PrdFecOri" />
+          <ScalarProperty Name="FacCodMdl" ColumnName="FacCodMdl" />
+          <ScalarProperty Name="PrdCodArt" ColumnName="PrdCodArt" />
+          <ScalarProperty Name="PrdMarMan" ColumnName="PrdMarMan" />
+          <ScalarProperty Name="PrdPuntUsr" ColumnName="PrdPuntUsr" />
+          <ScalarProperty Name="PrdPuntFch" ColumnName="PrdPuntFch" />
+          <ScalarProperty Name="PrdPuntada" ColumnName="PrdPuntada" />
+          <ScalarProperty Name="PrdOrdAct" ColumnName="PrdOrdAct" />
+          <ScalarProperty Name="PrdDevSts" ColumnName="PrdDevSts" />
+          <ScalarProperty Name="PrdAutoriz" ColumnName="PrdAutoriz" />
+          <ScalarProperty Name="PrdPriorid" ColumnName="PrdPriorid" />
+          <ScalarProperty Name="PrdSalCor" ColumnName="PrdSalCor" />
+          <ScalarProperty Name="PrdStsOrd" ColumnName="PrdStsOrd" />
+          <ScalarProperty Name="PrdTipTon" ColumnName="PrdTipTon" />
+          <ScalarProperty Name="PrdRecMar" ColumnName="PrdRecMar" />
+          <ScalarProperty Name="PrdRecTel" ColumnName="PrdRecTel" />
+          <ScalarProperty Name="PrdStsHM" ColumnName="PrdStsHM" />
+          <ScalarProperty Name="PrdDura" ColumnName="PrdDura" />
+          <ScalarProperty Name="IdealEmp" ColumnName="IdealEmp" />
+          <ScalarProperty Name="IdealLav" ColumnName="IdealLav" />
+          <ScalarProperty Name="IdealDes" ColumnName="IdealDes" />
+          <ScalarProperty Name="IdealCos" ColumnName="IdealCos" />
+          <ScalarProperty Name="IdealBor" ColumnName="IdealBor" />
+          <ScalarProperty Name="IdealCor" ColumnName="IdealCor" />
+          <ScalarProperty Name="IdealPla" ColumnName="IdealPla" />
+          <ScalarProperty Name="ConMarker" ColumnName="ConMarker" />
+          <ScalarProperty Name="PlaAPEmp" ColumnName="PlaAPEmp" />
+          <ScalarProperty Name="PlaAPLav" ColumnName="PlaAPLav" />
+          <ScalarProperty Name="PlaAPDes" ColumnName="PlaAPDes" />
+          <ScalarProperty Name="PlaAPCos" ColumnName="PlaAPCos" />
+          <ScalarProperty Name="PlaAPBor" ColumnName="PlaAPBor" />
+          <ScalarProperty Name="PlaAPCor" ColumnName="PlaAPCor" />
+          <ScalarProperty Name="PlaAPPla" ColumnName="PlaAPPla" />
+          <ScalarProperty Name="WipStsEmp" ColumnName="WipStsEmp" />
+          <ScalarProperty Name="WipStsLav" ColumnName="WipStsLav" />
+          <ScalarProperty Name="WipStsDes" ColumnName="WipStsDes" />
+          <ScalarProperty Name="WipStsCos" ColumnName="WipStsCos" />
+          <ScalarProperty Name="WipStsBor" ColumnName="WipStsBor" />
+          <ScalarProperty Name="WipStsCor" ColumnName="WipStsCor" />
+          <ScalarProperty Name="WipStsPla" ColumnName="WipStsPla" />
+          <ScalarProperty Name="AmPmEmp" ColumnName="AmPmEmp" />
+          <ScalarProperty Name="AmPmLav" ColumnName="AmPmLav" />
+          <ScalarProperty Name="AmPmDes" ColumnName="AmPmDes" />
+          <ScalarProperty Name="AmPmBor" ColumnName="AmPmBor" />
+          <ScalarProperty Name="AmPmCos" ColumnName="AmPmCos" />
+          <ScalarProperty Name="AmPmCor" ColumnName="AmPmCor" />
+          <ScalarProperty Name="AmPmPla" ColumnName="AmPmPla" />
+          <ScalarProperty Name="PrdStsPla" ColumnName="PrdStsPla" />
+          <ScalarProperty Name="PrdLiquid" ColumnName="PrdLiquid" />
+          <ScalarProperty Name="PrdFiBo" ColumnName="PrdFiBo" />
+          <ScalarProperty Name="PrdInBo" ColumnName="PrdInBo" />
+          <ScalarProperty Name="PrdBoPl" ColumnName="PrdBoPl" />
+          <ScalarProperty Name="PrdBoId" ColumnName="PrdBoId" />
+          <ScalarProperty Name="PrdFiDes" ColumnName="PrdFiDes" />
+          <ScalarProperty Name="PrdInDes" ColumnName="PrdInDes" />
+          <ScalarProperty Name="PrdDePl" ColumnName="PrdDePl" />
+          <ScalarProperty Name="PrdDeId" ColumnName="PrdDeId" />
+          <ScalarProperty Name="PrdFiLa" ColumnName="PrdFiLa" />
+          <ScalarProperty Name="PrdInLa" ColumnName="PrdInLa" />
+          <ScalarProperty Name="PrdLaPl" ColumnName="PrdLaPl" />
+          <ScalarProperty Name="PrdLaId" ColumnName="PrdLaId" />
+          <ScalarProperty Name="PrdFiEm" ColumnName="PrdFiEm" />
+          <ScalarProperty Name="PrdInEm" ColumnName="PrdInEm" />
+          <ScalarProperty Name="PrdEmPl" ColumnName="PrdEmPl" />
+          <ScalarProperty Name="PrdEmId" ColumnName="PrdEmId" />
+          <ScalarProperty Name="PrdFiCos" ColumnName="PrdFiCos" />
+          <ScalarProperty Name="PrdInCos" ColumnName="PrdInCos" />
+          <ScalarProperty Name="PrdCosPl" ColumnName="PrdCosPl" />
+          <ScalarProperty Name="PrdCosId" ColumnName="PrdCosId" />
+          <ScalarProperty Name="PrdFiCor" ColumnName="PrdFiCor" />
+          <ScalarProperty Name="PrdInCor" ColumnName="PrdInCor" />
+          <ScalarProperty Name="PrdCorPl" ColumnName="PrdCorPl" />
+          <ScalarProperty Name="PrdCorId" ColumnName="PrdCorId" />
+          <ScalarProperty Name="PrdRFPla" ColumnName="PrdRFPla" />
+          <ScalarProperty Name="PrdRIPla" ColumnName="PrdRIPla" />
+          <ScalarProperty Name="PrdFiPla" ColumnName="PrdFiPla" />
+          <ScalarProperty Name="PrdInPla" ColumnName="PrdInPla" />
+          <ScalarProperty Name="PrdPlaPl" ColumnName="PrdPlaPl" />
+          <ScalarProperty Name="PrdPlaId" ColumnName="PrdPlaId" />
+          <ScalarProperty Name="PrdLavCos" ColumnName="PrdLavCos" />
+          <ScalarProperty Name="PrdUsrReb" ColumnName="PrdUsrReb" />
+          <ScalarProperty Name="PrdHrsReb" ColumnName="PrdHrsReb" />
+          <ScalarProperty Name="PrdFchReb" ColumnName="PrdFchReb" />
+          <ScalarProperty Name="PrdStsReb" ColumnName="PrdStsReb" />
+          <ScalarProperty Name="PrdUsrPas" ColumnName="PrdUsrPas" />
+          <ScalarProperty Name="PrdHrsPas" ColumnName="PrdHrsPas" />
+          <ScalarProperty Name="PrdFchPas" ColumnName="PrdFchPas" />
+          <ScalarProperty Name="PrdSerCaj" ColumnName="PrdSerCaj" />
+          <ScalarProperty Name="PrdCodEsp" ColumnName="PrdCodEsp" />
+          <ScalarProperty Name="PrdFecOrd" ColumnName="PrdFecOrd" />
+          <ScalarProperty Name="PrdOmiNor" ColumnName="PrdOmiNor" />
+          <ScalarProperty Name="PrdTipOrd" ColumnName="PrdTipOrd" />
+          <ScalarProperty Name="PrdCodCli" ColumnName="PrdCodCli" />
+          <ScalarProperty Name="PrdFecEnt" ColumnName="PrdFecEnt" />
+          <ScalarProperty Name="PrdConFe" ColumnName="PrdConFe" />
+          <ScalarProperty Name="PrdConsu" ColumnName="PrdConsu" />
+          <ScalarProperty Name="PrdHBFe" ColumnName="PrdHBFe" />
+          <ScalarProperty Name="PrdHoBul" ColumnName="PrdHoBul" />
+          <ScalarProperty Name="PrdUsrVal" ColumnName="PrdUsrVal" />
+          <ScalarProperty Name="PrdValida2" ColumnName="PrdValida2" />
+          <ScalarProperty Name="PrdFecVal" ColumnName="PrdFecVal" />
+          <ScalarProperty Name="PrdValida" ColumnName="PrdValida" />
+          <ScalarProperty Name="PrdURepLiq" ColumnName="PrdURepLiq" />
+          <ScalarProperty Name="PrdFRepLiq" ColumnName="PrdFRepLiq" />
+          <ScalarProperty Name="PrdUSalEns" ColumnName="PrdUSalEns" />
+          <ScalarProperty Name="PrdFSalEns" ColumnName="PrdFSalEns" />
+          <ScalarProperty Name="PrdUsrRecB" ColumnName="PrdUsrRecB" />
+          <ScalarProperty Name="PrdRecBor" ColumnName="PrdRecBor" />
+          <ScalarProperty Name="PrdFecIns" ColumnName="PrdFecIns" />
+          <ScalarProperty Name="PrdPlaLiq" ColumnName="PrdPlaLiq" />
+          <ScalarProperty Name="PrdUndFac" ColumnName="PrdUndFac" />
+          <ScalarProperty Name="PrdUndSld" ColumnName="PrdUndSld" />
+          <ScalarProperty Name="PrdCodMod" ColumnName="PrdCodMod" />
+          <ScalarProperty Name="PrdCodEda" ColumnName="PrdCodEda" />
+          <ScalarProperty Name="PrdCodTpo" ColumnName="PrdCodTpo" />
+          <ScalarProperty Name="PrdFecCo" ColumnName="PrdFecCo" />
+          <ScalarProperty Name="PrdCodSem" ColumnName="PrdCodSem" />
+          <ScalarProperty Name="PrdUsrCo" ColumnName="PrdUsrCo" />
+          <ScalarProperty Name="PrdAlMac" ColumnName="PrdAlMac" />
+          <ScalarProperty Name="PrdFchLiq" ColumnName="PrdFchLiq" />
+          <ScalarProperty Name="PrdFchPre" ColumnName="PrdFchPre" />
+          <ScalarProperty Name="PrdStPrel" ColumnName="PrdStPrel" />
+          <ScalarProperty Name="PrdStsPas" ColumnName="PrdStsPas" />
+          <ScalarProperty Name="PrdStsBor" ColumnName="PrdStsBor" />
+          <ScalarProperty Name="PrdStsDgt" ColumnName="PrdStsDgt" />
+          <ScalarProperty Name="PrdStsCrt" ColumnName="PrdStsCrt" />
+          <ScalarProperty Name="PrdTckBor" ColumnName="PrdTckBor" />
+          <ScalarProperty Name="PrdTckDes" ColumnName="PrdTckDes" />
+          <ScalarProperty Name="PrdTckEmp" ColumnName="PrdTckEmp" />
+          <ScalarProperty Name="PrdTckLav" ColumnName="PrdTckLav" />
+          <ScalarProperty Name="PrdTckCos" ColumnName="PrdTckCos" />
+          <ScalarProperty Name="PrdTckCor" ColumnName="PrdTckCor" />
+          <ScalarProperty Name="PrdCanApr" ColumnName="PrdCanApr" />
+          <ScalarProperty Name="PrdAUser" ColumnName="PrdAUser" />
+          <ScalarProperty Name="PrdAjuste" ColumnName="PrdAjuste" />
+          <ScalarProperty Name="PrdPesLot" ColumnName="PrdPesLot" />
+          <ScalarProperty Name="PrdFecPrd" ColumnName="PrdFecPrd" />
+          <ScalarProperty Name="PrdFecVen" ColumnName="PrdFecVen" />
+          <ScalarProperty Name="PrdUsuPrd" ColumnName="PrdUsuPrd" />
+          <ScalarProperty Name="PrdUsuVen" ColumnName="PrdUsuVen" />
+          <ScalarProperty Name="PrdFecGra" ColumnName="PrdFecGra" />
+          <ScalarProperty Name="PrdUsuPre" ColumnName="PrdUsuPre" />
+          <ScalarProperty Name="PrdObsCor" ColumnName="PrdObsCor" />
+          <ScalarProperty Name="PrdYdsUso" ColumnName="PrdYdsUso" />
+          <ScalarProperty Name="PrdClasCo" ColumnName="PrdClasCo" />
+          <ScalarProperty Name="PrdBorFab" ColumnName="PrdBorFab" />
+          <ScalarProperty Name="PrdDesFab" ColumnName="PrdDesFab" />
+          <ScalarProperty Name="PrdEmpFab" ColumnName="PrdEmpFab" />
+          <ScalarProperty Name="PrdLavFab" ColumnName="PrdLavFab" />
+          <ScalarProperty Name="PrdCosFab" ColumnName="PrdCosFab" />
+          <ScalarProperty Name="PrdCorFab" ColumnName="PrdCorFab" />
+          <ScalarProperty Name="PrdStsDes" ColumnName="PrdStsDes" />
+          <ScalarProperty Name="PrdRecCos" ColumnName="PrdRecCos" />
+          <ScalarProperty Name="PrdEstEmp" ColumnName="PrdEstEmp" />
+          <ScalarProperty Name="PrdEstLav" ColumnName="PrdEstLav" />
+          <ScalarProperty Name="PrdEstDes" ColumnName="PrdEstDes" />
+          <ScalarProperty Name="PrdEstCos" ColumnName="PrdEstCos" />
+          <ScalarProperty Name="PrdEstBor" ColumnName="PrdEstBor" />
+          <ScalarProperty Name="PrdEstCor" ColumnName="PrdEstCor" />
+          <ScalarProperty Name="PrdFeFBor" ColumnName="PrdFeFBor" />
+          <ScalarProperty Name="PrdFeIBor" ColumnName="PrdFeIBor" />
+          <ScalarProperty Name="PrdFeFDes" ColumnName="PrdFeFDes" />
+          <ScalarProperty Name="PrdFeIDes" ColumnName="PrdFeIDes" />
+          <ScalarProperty Name="PrdLotMue" ColumnName="PrdLotMue" />
+          <ScalarProperty Name="PrdCodRep" ColumnName="PrdCodRep" />
+          <ScalarProperty Name="PrdCodPrd" ColumnName="PrdCodPrd" />
+          <ScalarProperty Name="PrdTipCor" ColumnName="PrdTipCor" />
+          <ScalarProperty Name="PrdFeFEmp" ColumnName="PrdFeFEmp" />
+          <ScalarProperty Name="PrdFeIEmp" ColumnName="PrdFeIEmp" />
+          <ScalarProperty Name="PrdFeFLav" ColumnName="PrdFeFLav" />
+          <ScalarProperty Name="PrdFeILav" ColumnName="PrdFeILav" />
+          <ScalarProperty Name="PrdStsEmp" ColumnName="PrdStsEmp" />
+          <ScalarProperty Name="PrdStsLav" ColumnName="PrdStsLav" />
+          <ScalarProperty Name="PrdStsCos" ColumnName="PrdStsCos" />
+          <ScalarProperty Name="PrdStsCor" ColumnName="PrdStsCor" />
+          <ScalarProperty Name="PrdFecEsm" ColumnName="PrdFecEsm" />
+          <ScalarProperty Name="PrdFeFCos" ColumnName="PrdFeFCos" />
+          <ScalarProperty Name="PrdFecCos" ColumnName="PrdFecCos" />
+          <ScalarProperty Name="PrdFecBul" ColumnName="PrdFecBul" />
+          <ScalarProperty Name="PrdFeFCor" ColumnName="PrdFeFCor" />
+          <ScalarProperty Name="PrdFecCor" ColumnName="PrdFecCor" />
+          <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
+          <ScalarProperty Name="FacCodTel" ColumnName="FacCodTel" />
+          <ScalarProperty Name="FacCodRef" ColumnName="FacCodRef" />
+          <ScalarProperty Name="PrdNumAli" ColumnName="PrdNumAli" />
+          <ScalarProperty Name="PrdAnoCor" ColumnName="PrdAnoCor" />
+          <ScalarProperty Name="PrdNumCor" ColumnName="PrdNumCor" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LitrosAguaOperacionSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.LitrosAguaOperacion">
+        <MappingFragment StoreEntitySet="LitrosAguaOperacion">
+          <ScalarProperty Name="LitrosAguaCargaLavadoNumero" ColumnName="LitrosAguaCargaLavadoNumero" />
+          <ScalarProperty Name="LitrosAguaOperacionProcesoId" ColumnName="LitrosAguaOperacionProcesoId" />
+          <ScalarProperty Name="LitrosAguaCantidadOperacionSubCarga" ColumnName="LitrosAguaCantidadOperacionSubCarga" />
+          <ScalarProperty Name="LitrosAguaCantidadOperacionCarga" ColumnName="LitrosAguaCantidadOperacionCarga" />
+          <ScalarProperty Name="LitrosAguaOpcionLavadoId" ColumnName="LitrosAguaOpcionLavadoId" />
+          <ScalarProperty Name="LitrosAguaLavadoId" ColumnName="LitrosAguaLavadoId" />
+          <ScalarProperty Name="LitrosAguaNumeroOrden" ColumnName="LitrosAguaNumeroOrden" />
+          <ScalarProperty Name="LitrosAguaAnio" ColumnName="LitrosAguaAnio" />
+          <ScalarProperty Name="LitrosAguaPlantaCod" ColumnName="LitrosAguaPlantaCod" />
+          <ScalarProperty Name="LitrosAguaCiaCod" ColumnName="LitrosAguaCiaCod" />
+          <ScalarProperty Name="LitrosAguaId" ColumnName="LitrosAguaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CantidadIngredientesInstruccionSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.CantidadIngredientesInstruccion">
+        <MappingFragment StoreEntitySet="CantidadIngredientesInstruccion">
+          <ScalarProperty Name="CantidadIngredienteInstruccionValor" ColumnName="CantidadIngredienteInstruccionValor" />
+          <ScalarProperty Name="CantidadIngredienteInstruccionMaterialId" ColumnName="CantidadIngredienteInstruccionMaterialId" />
+          <ScalarProperty Name="CantidadIngredienteInstruccionInstruccionId" ColumnName="CantidadIngredienteInstruccionInstruccionId" />
+          <ScalarProperty Name="CantidadIngredienteInstruccionOperacionId" ColumnName="CantidadIngredienteInstruccionOperacionId" />
+          <ScalarProperty Name="CantidadIngredienteInstruccionOpcionLavadoId" ColumnName="CantidadIngredienteInstruccionOpcionLavadoId" />
+          <ScalarProperty Name="CantidadIngredienteInstruccionLavadoId" ColumnName="CantidadIngredienteInstruccionLavadoId" />
+          <ScalarProperty Name="CantidadIngredienteInstruccionCargaLavadoNumero" ColumnName="CantidadIngredienteInstruccionCargaLavadoNumero" />
+          <ScalarProperty Name="CantidadIngredienteInstruccionNumeroOrden" ColumnName="CantidadIngredienteInstruccionNumeroOrden" />
+          <ScalarProperty Name="CantidadIngredienteInstruccionAnio" ColumnName="CantidadIngredienteInstruccionAnio" />
+          <ScalarProperty Name="CantidadIngredienteInstruccionPlantaCod" ColumnName="CantidadIngredienteInstruccionPlantaCod" />
+          <ScalarProperty Name="CantidadIngredienteInstruccionCiaCod" ColumnName="CantidadIngredienteInstruccionCiaCod" />
+          <ScalarProperty Name="CantidadIngredienteInstruccionId" ColumnName="CantidadIngredienteInstruccionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CantidadIngredientesOperacionSet">
+      <EntityTypeMapping TypeName="LavanderiaModel.CantidadIngredientesOperacion">
+        <MappingFragment StoreEntitySet="CantidadIngredientesOperacion">
+          <ScalarProperty Name="CantidadIngredienteCargaLavadoNumero" ColumnName="CantidadIngredienteCargaLavadoNumero" />
+          <ScalarProperty Name="CantidadIngredienteMaterialId" ColumnName="CantidadIngredienteMaterialId" />
+          <ScalarProperty Name="CantidadIngredienteOpcionLavadoId" ColumnName="CantidadIngredienteOpcionLavadoId" />
+          <ScalarProperty Name="CantidadIngredienteLavadoId" ColumnName="CantidadIngredienteLavadoId" />
+          <ScalarProperty Name="CantidadIngredienteValor" ColumnName="CantidadIngredienteValor" />
+          <ScalarProperty Name="CantidadIngredienteOperacionId" ColumnName="CantidadIngredienteOperacionId" />
+          <ScalarProperty Name="CantidadIngredienteNumeroOrden" ColumnName="CantidadIngredienteNumeroOrden" />
+          <ScalarProperty Name="CantidadIngredienteAnio" ColumnName="CantidadIngredienteAnio" />
+          <ScalarProperty Name="CantidadIngredientePlantaCod" ColumnName="CantidadIngredientePlantaCod" />
+          <ScalarProperty Name="CantidadIngredienteCiaCod" ColumnName="CantidadIngredienteCiaCod" />
+          <ScalarProperty Name="CantidadIngredienteId" ColumnName="CantidadIngredienteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

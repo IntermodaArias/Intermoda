@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="043d832d-2dbe-409e-901b-a62878ccaac3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/Lectura/Linea.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Linea4.xsd" MetadataType="Schema" ID="5af74998-f7d3-496e-a472-848eb2c4cf63" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Linea.svc?xsd=xsd1" />
+    <MetadataFile FileName="Linea41.xsd" MetadataType="Schema" ID="14b98b12-1bb9-4d33-b7ea-959b34d3d8e2" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Linea.svc?xsd=xsd3" />
+    <MetadataFile FileName="Linea1.wsdl" MetadataType="Wsdl" ID="9487eb28-872f-4f20-81ef-f82e1f70545c" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Linea.svc?wsdl" />
+    <MetadataFile FileName="Linea1.disco" MetadataType="Disco" ID="7d7969c4-069a-41ce-81db-664a2f7b9330" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Linea.svc?disco" />
+    <MetadataFile FileName="Linea42.xsd" MetadataType="Schema" ID="3d7e5e9e-3a4b-4c86-b848-d89b4bca9282" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Linea.svc?xsd=xsd0" />
+    <MetadataFile FileName="Linea43.xsd" MetadataType="Schema" ID="121c21bb-9f1c-4fb2-8739-cb11a15c61f0" SourceId="1" SourceUrl="http://localhost/IntermodaService/Lectura/Linea.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

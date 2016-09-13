@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="ServiceLbDatPro" />
+  <setParameter name="LBDATPROEntities-Web.config Connection String" value="metadata=res://*/LbDatProModel.csdl|res://*/LbDatProModel.ssdl|res://*/LbDatProModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;metadata=res://*/LbDatProModel.csdl|res://*/LbDatProModel.ssdl|res://*/LbDatProModel.msl;provider=System.Data.SqlClient;provider connection string=&amp;quot;data source=dataserver;initial catalog=LBDATPRO;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework&amp;quot;&quot;" />
+</parameters>

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3971C9D-3A72-4B57-9453-3CEAE1F0E43E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intermoda.Client.DataService.Crm</RootNamespace>
+    <AssemblyName>Intermoda.Client.DataService.Crm</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.JustMock">
+      <HintPath>../JustMock/Telerik.JustMock.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contratos\IAcuerdoComercialDetalleDataService.cs" />
+    <Compile Include="Contratos\IAcuerdoComercialDataService.cs" />
+    <Compile Include="Contratos\IAsesorDataService.cs" />
+    <Compile Include="Contratos\IAsesorRutaDataService.cs" />
+    <Compile Include="Contratos\IBancoDataService.cs" />
+    <Compile Include="Contratos\ICaiDataService.cs" />
+    <Compile Include="Contratos\ICarteraDocumentoDataService.cs" />
+    <Compile Include="Contratos\ICarteraDocumentoDetalleAplicacionDataService.cs" />
+    <Compile Include="Contratos\ICarteraDocumentoDetallePagoDataService.cs" />
+    <Compile Include="Contratos\ICarteraDocumentoDetalleProductoDataService.cs" />
+    <Compile Include="Contratos\ICarteraDocumentoTipoDataService.cs" />
+    <Compile Include="Contratos\ICiudadDataService.cs" />
+    <Compile Include="Contratos\IClienteDataService.cs" />
+    <Compile Include="Contratos\IEdadDataService.cs" />
+    <Compile Include="Contratos\IEmpresaDataService.cs" />
+    <Compile Include="Contratos\IGrupoEconomicoDataService.cs" />
+    <Compile Include="Contratos\IInventarioFisicoDataService.cs" />
+    <Compile Include="Contratos\IInventarioFisicoDetalleDataService.cs" />
+    <Compile Include="Contratos\IInventarioTrasladoDataService.cs" />
+    <Compile Include="Contratos\IInventarioTrasladoDetalleDataService.cs" />
+    <Compile Include="Contratos\IMonedaDataService.cs" />
+    <Compile Include="Contratos\IPagoTipoDataService.cs" />
+    <Compile Include="Contratos\IPaisDataService.cs" />
+    <Compile Include="Contratos\IPaqueteDataService.cs" />
+    <Compile Include="Contratos\IPaqueteDetalleDataService.cs" />
+    <Compile Include="Contratos\IPedidoTipoDataService.cs" />
+    <Compile Include="Contratos\IProductoCategoriaDataService.cs" />
+    <Compile Include="Contratos\IProductoDataService.cs" />
+    <Compile Include="Contratos\IProductoImagenDataService.cs" />
+    <Compile Include="Contratos\IRutaDataService.cs" />
+    <Compile Include="Contratos\ISupervisorDataService.cs" />
+    <Compile Include="Contratos\ISupervisorZonaDataService.cs" />
+    <Compile Include="Contratos\IUsuarioDataService.cs" />
+    <Compile Include="Contratos\IZonaDataService.cs" />
+    <Compile Include="Design\AcuerdoComercialDesignDataService.cs" />
+    <Compile Include="Design\AcuerdoComercialDetalleDesignDataService.cs" />
+    <Compile Include="Design\AsesorDesignDataService.cs" />
+    <Compile Include="Design\AsesorRutaDesignDataService.cs" />
+    <Compile Include="Design\CaiDesignDataService.cs" />
+    <Compile Include="Design\CarteraDocumentoDesignDataService.cs" />
+    <Compile Include="Design\CarteraDocumentoDetalleAplicacionDesignDataService.cs" />
+    <Compile Include="Design\CarteraDocumentoDetallePagoDesignDataService.cs" />
+    <Compile Include="Design\CarteraDocumentoDetalleProductoDesignDataService.cs" />
+    <Compile Include="Design\CarteraDocumentoTipoDesignDataService.cs" />
+    <Compile Include="Design\CiudadDesignDataService.cs" />
+    <Compile Include="Design\ClienteDesignDataService.cs" />
+    <Compile Include="Design\EdadDesignDataService.cs" />
+    <Compile Include="Design\EmpresaDesignDataService.cs" />
+    <Compile Include="Design\GrupoEconomicoDesignDataService.cs" />
+    <Compile Include="Design\InventarioFisicoDesignDataService.cs" />
+    <Compile Include="Design\InventarioFisicoDetalleDesignDataService.cs" />
+    <Compile Include="Design\InventarioTrasladoDesignDataService.cs" />
+    <Compile Include="Design\InventarioTrasladoDetalleDesignDataService.cs" />
+    <Compile Include="Design\MonedaDesignDataService.cs" />
+    <Compile Include="Design\PagoTipoDesignDataService.cs" />
+    <Compile Include="Design\PaqueteDesignDataService.cs" />
+    <Compile Include="Design\PaqueteDetalleDesignDataService.cs" />
+    <Compile Include="Design\PedidoTipoDesignDataService.cs" />
+    <Compile Include="Design\ProductoCategoriaDesignDataService.cs" />
+    <Compile Include="Design\ProductoDesignDataService.cs" />
+    <Compile Include="Design\ProductoImagenDesignDataService.cs" />
+    <Compile Include="Design\RutaDesignDataService.cs" />
+    <Compile Include="Design\SupervisorDesignDataService.cs" />
+    <Compile Include="Design\SupervisorZonaDesignDataService.cs" />
+    <Compile Include="Design\UsuarioDesignDataService.cs" />
+    <Compile Include="Design\ZonaDesignDataService.cs" />
+    <Compile Include="Mocks\MockData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runtime\AcuerdoComercialDataService.cs" />
+    <Compile Include="Runtime\AcuerdoComercialDetalleDataService.cs" />
+    <Compile Include="Runtime\AsesorDataService.cs" />
+    <Compile Include="Runtime\AsesorRutaDataService.cs" />
+    <Compile Include="Runtime\CaiDataService.cs" />
+    <Compile Include="Runtime\CarteraDocumentoDataService.cs" />
+    <Compile Include="Runtime\CarteraDocumentoDetalleAplicacionDataService.cs" />
+    <Compile Include="Runtime\CarteraDocumentoDetallePagoDataService.cs" />
+    <Compile Include="Runtime\CarteraDocumentoDetalleProductoDataService.cs" />
+    <Compile Include="Runtime\CarteraDocumentoTipoDataService.cs" />
+    <Compile Include="Runtime\CiudadDataService.cs" />
+    <Compile Include="Runtime\ClienteDataService.cs" />
+    <Compile Include="Runtime\EdadDataService.cs" />
+    <Compile Include="Runtime\EmpresaDataService.cs" />
+    <Compile Include="Runtime\GrupoEconomicoDataService.cs" />
+    <Compile Include="Runtime\InventarioFisicoDataService.cs" />
+    <Compile Include="Runtime\InventarioFisicoDetalleDataService.cs" />
+    <Compile Include="Runtime\InventarioTrasladoDataService.cs" />
+    <Compile Include="Runtime\InventarioTrasladoDetalleDataService.cs" />
+    <Compile Include="Runtime\MonedaDataService.cs" />
+    <Compile Include="Runtime\PagoTipoDataService.cs" />
+    <Compile Include="Runtime\PaqueteDataService.cs" />
+    <Compile Include="Runtime\PaqueteDetalleDataService.cs" />
+    <Compile Include="Runtime\PedidoTipoDataService.cs" />
+    <Compile Include="Runtime\ProductoCategoriaDataService.cs" />
+    <Compile Include="Runtime\ProductoDataService.cs" />
+    <Compile Include="Runtime\ProductoImagenDataService.cs" />
+    <Compile Include="Runtime\RutaDataService.cs" />
+    <Compile Include="Runtime\SupervisorDataService.cs" />
+    <Compile Include="Runtime\SupervisorZonaDataService.cs" />
+    <Compile Include="Runtime\UsuarioDataService.cs" />
+    <Compile Include="Runtime\ZonaDataService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Intermoda.Business.Crm.Repository\Intermoda.Business.Crm.Repository.csproj">
+      <Project>{67c283a2-4181-4859-863a-962228e1d49f}</Project>
+      <Name>Intermoda.Business.Crm.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Business.Crm\Intermoda.Business.Crm.Entities.csproj">
+      <Project>{85b67d90-e9cd-4cec-bcdd-ad3a45668dd2}</Project>
+      <Name>Intermoda.Business.Crm.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intermoda.Common\Intermoda.Common.csproj">
+      <Project>{07c1e232-8946-4295-9d30-4f9b45f10ec0}</Project>
+      <Name>Intermoda.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
