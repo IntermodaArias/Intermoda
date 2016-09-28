@@ -18,7 +18,7 @@
                            Command="{Binding Path=ConfirmCommand}">
             <telerik:RadButton.Content>
                 <StackPanel Orientation="Horizontal">
-                    <Image Margin="2" Source="/Intermoda.Produccion.Lecturas.App;component/Images/confirm.png" />
+                    <Image Margin="2" Source="../Images/confirm.png"/>
                     <Label Margin="2" FontWeight="DemiBold" Content="Confirmar"/>
                 </StackPanel>
             </telerik:RadButton.Content>

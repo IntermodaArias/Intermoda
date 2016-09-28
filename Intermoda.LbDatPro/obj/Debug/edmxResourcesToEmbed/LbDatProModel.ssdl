@@ -143,6 +143,35 @@
     <Property Name="CCCodigo" Type="smallint" />
     <Property Name="PrdCtTip" Type="char" MaxLength="1" />
     <Property Name="MOCCosto" Type="smallmoney" />
+    <Property Name="PrdSecXls" Type="smallint" />
+  </EntityType>
+  <EntityType Name="CUTARC1">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="PrdNumCor" />
+      <PropertyRef Name="PrdAnoCor" />
+      <PropertyRef Name="PrdNoBund" />
+    </Key>
+    <Property Name="CIACOD" Type="smallint" Nullable="false" />
+    <Property Name="PrdNumCor" Type="smallint" Nullable="false" />
+    <Property Name="PrdAnoCor" Type="smallint" Nullable="false" />
+    <Property Name="PrdNoBund" Type="smallint" Nullable="false" />
+    <Property Name="PrdUniPri" Type="smallint" />
+    <Property Name="PrdBulto" Type="char" MaxLength="1" />
+    <Property Name="PrdUniSeg" Type="smallint" />
+    <Property Name="PrdUniTer" Type="smallint" />
+    <Property Name="PrdUniPer" Type="smallint" />
+    <Property Name="PrdUniEli" Type="smallint" />
+    <Property Name="PrdPtoReo" Type="char" MaxLength="1" />
+    <Property Name="PrdIniCap" Type="smallint" />
+    <Property Name="PrdFinCap" Type="smallint" />
+    <Property Name="FacCTall" Type="char" MaxLength="3" />
+    <Property Name="FacCTallN" Type="smallint" />
+    <Property Name="PrdCodDim" Type="smallint" />
+    <Property Name="PrdCanBun" Type="smallint" />
+    <Property Name="PrdSeccion" Type="smallint" />
+    <Property Name="PrdTroco" Type="smallint" />
+    <Property Name="PrdCanTro" Type="smallint" />
   </EntityType>
   <EntityType Name="CUTARC3">
     <Key>
@@ -818,6 +847,9 @@
     <Property Name="ComposicionId" Type="int" />
     <Property Name="TelDesVta" Type="char" MaxLength="20" />
   </EntityType>
+  <Function Name="WIPOrdenesProduccionB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CiaCod" Type="smallint" Mode="In" />
+  </Function>
   <EntityContainer Name="LBDATPROModelStoreContainer">
     <EntitySet Name="CATALOG" EntityType="Self.CATALOG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CLASE" EntityType="Self.CLASE" Schema="dbo" store:Type="Tables" />
@@ -825,6 +857,7 @@
     <EntitySet Name="CORPLA" EntityType="Self.CORPLA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CTPLANTA" EntityType="Self.CTPLANTA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CTRABAJO" EntityType="Self.CTRABAJO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CUTARC1" EntityType="Self.CUTARC1" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CUTARC3" EntityType="Self.CUTARC3" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FACCOL" EntityType="Self.FACCOL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GRUTEL" EntityType="Self.GRUTEL" Schema="dbo" store:Type="Tables" />

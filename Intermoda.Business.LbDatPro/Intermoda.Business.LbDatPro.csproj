@@ -63,11 +63,15 @@
     <Compile Include="MateriaPrimaColorBusiness.cs" />
     <Compile Include="OrdenEstadoBusiness.cs" />
     <Compile Include="OrdenProduccionExternoBusiness.cs" />
+    <Compile Include="OrdenProduccionLecturaBusiness.cs" />
+    <Compile Include="OrdenProduccionRutaBusiness.cs" />
+    <Compile Include="OrdenProduccionSpBusiness.cs" />
     <Compile Include="PasoRutaBusiness.cs" />
     <Compile Include="PlantaBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SubClaseBusiness.cs" />
     <Compile Include="TelaBusiness.cs" />
+    <Compile Include="TrabajoEnProcesoBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

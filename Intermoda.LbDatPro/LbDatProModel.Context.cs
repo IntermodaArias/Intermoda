@@ -12,6 +12,8 @@ namespace Intermoda.LbDatPro
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class LBDATPROEntities : DbContext
     {
@@ -45,5 +47,15 @@ namespace Intermoda.LbDatPro
         public virtual DbSet<CTRABAJO> CTRABAJOSet { get; set; }
         public virtual DbSet<ORDCENTR> ORDCENTRSet { get; set; }
         public virtual DbSet<PRVMST> PRVMSTSet { get; set; }
+        public virtual DbSet<CUTARC1> CUTARC1Set { get; set; }
+    
+        public virtual ObjectResult<WIPOrdenesProduccionB_Result> WIPOrdenesProduccionB(Nullable<short> ciaCod)
+        {
+            var ciaCodParameter = ciaCod.HasValue ?
+                new ObjectParameter("CiaCod", ciaCod) :
+                new ObjectParameter("CiaCod", typeof(short));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<WIPOrdenesProduccionB_Result>("WIPOrdenesProduccionB", ciaCodParameter);
+        }
     }
 }

@@ -60,6 +60,33 @@ namespace Intermoda.Business.LbDatPro
             }
         }
 
+        public static OrdenEstadoBusiness[] GetAll()
+        {
+            try
+            {
+                using (_context = new LBDATPROEntities())
+                {
+                    return _context.PRDSTSSet
+                        .OrderBy(r => r.PrdSecSts)
+                        .Select(
+                            r => new OrdenEstadoBusiness
+                            {
+                                Id = r.PrdStsCor,
+                                Secuencia = r.PrdSecSts,
+                                Descripcion = r.PrdDesSts,
+                                Area = r.PrdAreSts,
+                                CentroCostoAlias = r.PrdAliCCos,
+                                CentroTrabajoId = r.PrdCTraba
+                            })
+                        .ToArray();
+                }
+            }
+            catch (Exception exception)
+            {
+                throw new Exception("OrdenEstadoBusiness / Get", exception);
+            }
+        }
+
         #endregion
     }
 }

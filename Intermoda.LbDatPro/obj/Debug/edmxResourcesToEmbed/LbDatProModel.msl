@@ -700,6 +700,7 @@
     <EntitySetMapping Name="CTRABAJOSet">
       <EntityTypeMapping TypeName="LBDATPROModel.CTRABAJO">
         <MappingFragment StoreEntitySet="CTRABAJO">
+          <ScalarProperty Name="PrdSecXls" ColumnName="PrdSecXls" />
           <ScalarProperty Name="MOCCosto" ColumnName="MOCCosto" />
           <ScalarProperty Name="PrdCtTip" ColumnName="PrdCtTip" />
           <ScalarProperty Name="CCCodigo" ColumnName="CCCodigo" />
@@ -802,6 +803,58 @@
           <ScalarProperty Name="PrvForPag" ColumnName="PrvForPag" />
           <ScalarProperty Name="PrvNom" ColumnName="PrvNom" />
           <ScalarProperty Name="PrvCod" ColumnName="PrvCod" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="WIPOrdenesProduccionB" FunctionName="LBDATPROModel.Store.WIPOrdenesProduccionB">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LBDATPROModel.WIPOrdenesProduccionB_Result">
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+          <ScalarProperty Name="CiaDes" ColumnName="CiaDes" />
+          <ScalarProperty Name="PrdAnoCor" ColumnName="PrdAnoCor" />
+          <ScalarProperty Name="PrdNumCor" ColumnName="PrdNumCor" />
+          <ScalarProperty Name="PrdCodArt" ColumnName="PrdCodArt" />
+          <ScalarProperty Name="FacCodMdl" ColumnName="FacCodMdl" />
+          <ScalarProperty Name="FacCodTel" ColumnName="FacCodTel" />
+          <ScalarProperty Name="FacCodRef" ColumnName="FacCodRef" />
+          <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
+          <ScalarProperty Name="PrdStsCor" ColumnName="PrdStsCor" />
+          <ScalarProperty Name="PrdUsuPrd" ColumnName="PrdUsuPrd" />
+          <ScalarProperty Name="PrdPriCor" ColumnName="PrdPriCor" />
+          <ScalarProperty Name="PrdAnoDep" ColumnName="PrdAnoDep" />
+          <ScalarProperty Name="PrdNumDep" ColumnName="PrdNumDep" />
+          <ScalarProperty Name="PrdProTel" ColumnName="PrdProTel" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="ModuloEnsamble" ColumnName="ModuloEnsamble" />
+          <ScalarProperty Name="ConTela" ColumnName="ConTela" />
+          <ScalarProperty Name="InicioProgramado" ColumnName="InicioProgramado" />
+          <ScalarProperty Name="FinalProgramado" ColumnName="FinalProgramado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="CUTARC1Set">
+      <EntityTypeMapping TypeName="LBDATPROModel.CUTARC1">
+        <MappingFragment StoreEntitySet="CUTARC1">
+          <ScalarProperty Name="PrdCanTro" ColumnName="PrdCanTro" />
+          <ScalarProperty Name="PrdTroco" ColumnName="PrdTroco" />
+          <ScalarProperty Name="PrdSeccion" ColumnName="PrdSeccion" />
+          <ScalarProperty Name="PrdCanBun" ColumnName="PrdCanBun" />
+          <ScalarProperty Name="PrdCodDim" ColumnName="PrdCodDim" />
+          <ScalarProperty Name="FacCTallN" ColumnName="FacCTallN" />
+          <ScalarProperty Name="FacCTall" ColumnName="FacCTall" />
+          <ScalarProperty Name="PrdFinCap" ColumnName="PrdFinCap" />
+          <ScalarProperty Name="PrdIniCap" ColumnName="PrdIniCap" />
+          <ScalarProperty Name="PrdPtoReo" ColumnName="PrdPtoReo" />
+          <ScalarProperty Name="PrdUniEli" ColumnName="PrdUniEli" />
+          <ScalarProperty Name="PrdUniPer" ColumnName="PrdUniPer" />
+          <ScalarProperty Name="PrdUniTer" ColumnName="PrdUniTer" />
+          <ScalarProperty Name="PrdUniSeg" ColumnName="PrdUniSeg" />
+          <ScalarProperty Name="PrdBulto" ColumnName="PrdBulto" />
+          <ScalarProperty Name="PrdUniPri" ColumnName="PrdUniPri" />
+          <ScalarProperty Name="PrdNoBund" ColumnName="PrdNoBund" />
+          <ScalarProperty Name="PrdAnoCor" ColumnName="PrdAnoCor" />
+          <ScalarProperty Name="PrdNumCor" ColumnName="PrdNumCor" />
           <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
         </MappingFragment>
       </EntityTypeMapping>

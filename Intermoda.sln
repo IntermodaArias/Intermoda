@@ -116,6 +116,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intermoda.Client.DataServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intermoda.Crm", "Intermoda.Crm\Intermoda.Crm.csproj", "{2CEB942F-6C43-4B07-ADA3-90DFD0F0A01B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intermoda.Produccion.Planeacion", "Intermoda.Produccion.Planeacion\Intermoda.Produccion.Planeacion.csproj", "{CD2671B6-6368-4CE0-B658-4399466BEA49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -278,6 +280,10 @@ Global
 		{2CEB942F-6C43-4B07-ADA3-90DFD0F0A01B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CEB942F-6C43-4B07-ADA3-90DFD0F0A01B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CEB942F-6C43-4B07-ADA3-90DFD0F0A01B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD2671B6-6368-4CE0-B658-4399466BEA49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD2671B6-6368-4CE0-B658-4399466BEA49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD2671B6-6368-4CE0-B658-4399466BEA49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD2671B6-6368-4CE0-B658-4399466BEA49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -324,5 +330,6 @@ Global
 		{F1E2F476-AC13-45C6-B9BD-BBCE79349453} = {0F3641E9-6AAF-4AAD-804E-69D20C4CC729}
 		{E3971C9D-3A72-4B57-9453-3CEAE1F0E43E} = {361A9FDE-1435-43C6-8727-D1BB5EB1DDEE}
 		{2CEB942F-6C43-4B07-ADA3-90DFD0F0A01B} = {3C61A4B1-1652-4682-AAB1-8E947E76D68E}
+		{CD2671B6-6368-4CE0-B658-4399466BEA49} = {3C61A4B1-1652-4682-AAB1-8E947E76D68E}
 	EndGlobalSection
 EndGlobal

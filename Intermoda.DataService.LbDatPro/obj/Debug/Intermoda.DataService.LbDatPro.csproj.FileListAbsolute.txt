@@ -12,3 +12,17 @@ C:\VisualStudio\Intermoda\Intermoda.DataService.LbDatPro\bin\Intermoda.LbDatPro.
 C:\VisualStudio\Intermoda\Intermoda.DataService.LbDatPro\obj\Debug\Intermoda.DataService.LbDatPro.csprojResolveAssemblyReference.cache
 C:\VisualStudio\Intermoda\Intermoda.DataService.LbDatPro\obj\Debug\Intermoda.DataService.LbDatPro.dll
 C:\VisualStudio\Intermoda\Intermoda.DataService.LbDatPro\obj\Debug\Intermoda.DataService.LbDatPro.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.LbDatPro\bin\Intermoda.DataService.LbDatPro.dll.config
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.LbDatPro\bin\Intermoda.DataService.LbDatPro.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.LbDatPro\bin\Intermoda.DataService.LbDatPro.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.LbDatPro\bin\EntityFramework.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.LbDatPro\bin\EntityFramework.SqlServer.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.LbDatPro\bin\Intermoda.Business.LbDatPro.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.LbDatPro\bin\Intermoda.LbDatPro.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.LbDatPro\bin\Intermoda.Business.LbDatPro.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.LbDatPro\bin\EntityFramework.xml
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.LbDatPro\bin\EntityFramework.SqlServer.xml
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.LbDatPro\bin\Intermoda.LbDatPro.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.LbDatPro\obj\Debug\Intermoda.DataService.LbDatPro.csprojResolveAssemblyReference.cache
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.LbDatPro\obj\Debug\Intermoda.DataService.LbDatPro.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.LbDatPro\obj\Debug\Intermoda.DataService.LbDatPro.pdb

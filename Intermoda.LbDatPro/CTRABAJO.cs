@@ -41,5 +41,6 @@ namespace Intermoda.LbDatPro
         public Nullable<short> CCCodigo { get; set; }
         public string PrdCtTip { get; set; }
         public Nullable<decimal> MOCCosto { get; set; }
+        public Nullable<short> PrdSecXls { get; set; }
     }
 }

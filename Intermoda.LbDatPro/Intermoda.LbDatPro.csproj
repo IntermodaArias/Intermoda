@@ -69,6 +69,9 @@
     <Compile Include="CTRABAJO.cs">
       <DependentUpon>LbDatProModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="CUTARC1.cs">
+      <DependentUpon>LbDatProModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="CUTARC3.cs">
       <DependentUpon>LbDatProModel.tt</DependentUpon>
     </Compile>
@@ -125,6 +128,9 @@
       <DependentUpon>LbDatProModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TELAR5.cs">
+      <DependentUpon>LbDatProModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WIPOrdenesProduccionB_Result.cs">
       <DependentUpon>LbDatProModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
