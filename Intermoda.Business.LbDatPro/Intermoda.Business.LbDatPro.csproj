@@ -59,17 +59,22 @@
     <Compile Include="EstadoOrdenProduccion.cs" />
     <Compile Include="GrupoTelaBusiness.cs" />
     <Compile Include="InasistenciaBusiness.cs" />
+    <Compile Include="MaquiladoCajaBusiness.cs" />
+    <Compile Include="MaquiladoCajaDetalleBusiness.cs" />
     <Compile Include="MaterialBusiness.cs" />
     <Compile Include="MateriaPrimaColorBusiness.cs" />
     <Compile Include="OrdenEstadoBusiness.cs" />
+    <Compile Include="OrdenProduccionBultoBusiness.cs" />
     <Compile Include="OrdenProduccionExternoBusiness.cs" />
     <Compile Include="OrdenProduccionLecturaBusiness.cs" />
     <Compile Include="OrdenProduccionRutaBusiness.cs" />
     <Compile Include="OrdenProduccionSpBusiness.cs" />
+    <Compile Include="OrdenProduccionTallaBusiness.cs" />
     <Compile Include="PasoRutaBusiness.cs" />
     <Compile Include="PlantaBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SubClaseBusiness.cs" />
+    <Compile Include="TallaBusiness.cs" />
     <Compile Include="TelaBusiness.cs" />
     <Compile Include="TrabajoEnProcesoBusiness.cs" />
   </ItemGroup>

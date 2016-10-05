@@ -72,6 +72,133 @@ namespace Intermoda.Client.DataService.LbDatPro
 
         #endregion
 
+        #region MaquiladoCaja
+
+        public void MaquiladoCajaUpdate(MaquiladoCaja maquiladoCaja, Action<MaquiladoCaja, Exception> action)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void MaquiladoCajaDelete(int maquiladoCajaId, Action<Exception> action)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void MaquiladoCajaGet(int maquiladoCajaId, Action<MaquiladoCaja, Exception> action)
+        {
+            action(GetMaquiladoCaja(1), null);
+        }
+
+        public void MaquiladoCajaGetByOrden(short companiaId, short ordenAno, short ordenNumero,
+            Action<List<MaquiladoCaja>, Exception> action)
+        {
+            var lista = new List<MaquiladoCaja>();
+            for (var i = 1; i < 21; i++)
+            {
+                lista.Add(GetMaquiladoCaja(i));
+            }
+            action(lista, null);
+        }
+
+        private MaquiladoCaja GetMaquiladoCaja(int i)
+        {
+            return new MaquiladoCaja
+            {
+                Id = i,
+                CompaniaId = 1,
+                OrdenAno = 16,
+                OrdenNumero = (short)(1000 + i),
+                Numero = i
+            };
+        }
+
+        #endregion
+
+        #region MaquiladoCajaDetalle
+
+        public void MaquiladoCajaDetalleUpdate(MaquiladoCajaDetalle maquiladoCajaDetalle, Action<MaquiladoCajaDetalle, Exception> action)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void MaquiladoCajaDetalleDelete(int maquiladoCajaDetalleId, Action<Exception> action)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void MaquiladoCajaDetalleGet(int maquiladoCajaDetalleId, Action<MaquiladoCajaDetalle, Exception> action)
+        {
+            action(GetMaquiladoCajaDetalle(1), null);
+        }
+
+        public void MaquiladoCajaDetalleGetByMaquiladoCaja(int maquiladoCajaId, short ordenAno, short ordenNumero,
+            Action<List<MaquiladoCajaDetalle>, Exception> action)
+        {
+            var lista = new List<MaquiladoCajaDetalle>();
+            for (var i = 1; i < 21; i++)
+            {
+                lista.Add(GetMaquiladoCajaDetalle(i));
+            }
+        }
+
+        private MaquiladoCajaDetalle GetMaquiladoCajaDetalle(int i)
+        {
+            return new MaquiladoCajaDetalle
+            {
+                Id = i,
+                MaquiladoCajaId = 1000,
+                CompaniaId = 1,
+                TallaId = "030",
+                Talla = new Talla {CompaniaId = 1, Codigo = "030", Nombre = "30", Secuencia = 4},
+                Cantidad = i + 8
+            };
+        }
+
+        #endregion
+
+        #region OrdenProduccionDetalle
+
+        public void OrdenProduccionDetalleGetBultos(short companiaId, short ordenAno, short ordenNumero,
+            Action<List<OrdenProduccionBulto>, Exception> action)
+        {
+            var lista = new List<OrdenProduccionBulto>();
+            for (var i = 1; i < 21; i++)
+            {
+                lista.Add(new OrdenProduccionBulto
+                {
+                    CompaniaId = 1,
+                    OrdenAno = 16,
+                    OrdenNumero = (short)(2000 + i),
+                    Numero = (short)i,
+                    TallaCodigo = "030",
+                    Talla = new Talla { CompaniaId = 1, Codigo = "030", Nombre = "30", Secuencia = 4 },
+                    Cantidad = (short)(7+i)
+                });
+            }
+            action(lista, null);
+        }
+
+        public void OrdenProduccionDetalleGetTallas(short companiaId, short ordenAno, short ordenNumero,
+            Action<List<OrdenProduccionTalla>, Exception> action)
+        {
+            var lista = new List<OrdenProduccionTalla>();
+            for (var i = 1; i < 21; i++)
+            {
+                lista.Add(new OrdenProduccionTalla
+                {
+                    CompaniaId = 1,
+                    OrdenAno = 16,
+                    OrdenNumero = (short)(2000 + i),
+                    TallaCodigo = "030",
+                    Talla = new Talla { CompaniaId = 1, Codigo = "030", Nombre = "30", Secuencia = 4 },
+                    Cantidad = (short)(7 + i)
+                });
+            }
+            action(lista, null);
+        }
+
+        #endregion
+
         #region OrdenProduccionExterno
 
         public void OrdenProduccionExternoGetByUsuarioPlanta(string usuario,

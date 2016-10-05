@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a54faa0f-26b6-4d13-931c-c353be871cf2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/LbDatPro/OrdenProduccionDetalle.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OrdenProduccionDetalle.xsd" MetadataType="Schema" ID="c60a8d4a-4a71-4f6d-949a-41e030f05b6c" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/OrdenProduccionDetalle.svc?xsd=xsd0" />
+    <MetadataFile FileName="OrdenProduccionDetalle.disco" MetadataType="Disco" ID="ee816b78-44e6-4c7c-ac2f-955057917b56" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/OrdenProduccionDetalle.svc?disco" />
+    <MetadataFile FileName="OrdenProduccionDetalle1.xsd" MetadataType="Schema" ID="a0a1bbeb-9cfa-4c3d-8227-1273667025d2" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/OrdenProduccionDetalle.svc?xsd=xsd1" />
+    <MetadataFile FileName="OrdenProduccionDetalle.wsdl" MetadataType="Wsdl" ID="82cb59c4-9ed2-4ba9-b0f6-44d51a411f38" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/OrdenProduccionDetalle.svc?wsdl" />
+    <MetadataFile FileName="OrdenProduccionDetalle2.xsd" MetadataType="Schema" ID="cb527b70-1915-4c83-9381-b4c7ce73b8f6" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/OrdenProduccionDetalle.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

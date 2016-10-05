@@ -48,6 +48,9 @@ namespace Intermoda.LbDatPro
         public virtual DbSet<ORDCENTR> ORDCENTRSet { get; set; }
         public virtual DbSet<PRVMST> PRVMSTSet { get; set; }
         public virtual DbSet<CUTARC1> CUTARC1Set { get; set; }
+        public virtual DbSet<FACTALL> FACTALLSet { get; set; }
+        public virtual DbSet<MaquiladoCaja> MaquiladoCajaSet { get; set; }
+        public virtual DbSet<MaquiladoCajaDetalle> MaquiladoCajaDetalleSet { get; set; }
     
         public virtual ObjectResult<WIPOrdenesProduccionB_Result> WIPOrdenesProduccionB(Nullable<short> ciaCod)
         {

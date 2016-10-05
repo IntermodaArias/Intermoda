@@ -1,0 +1,137 @@
+﻿<Window xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  
+        x:Class="Intermoda.Maquilado.View.MaquiladoEmpaqueView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Title="Empaque de Orden de Producción" Height="768" Width="1024">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Margin="2" Padding="2" HorizontalAlignment="Left" BorderThickness="2" BorderBrush="LightGray">
+            <StackPanel Orientation="Horizontal">
+                <Label Margin="2" Content="Orden No.:" />
+                <TextBlock Margin="2" VerticalAlignment="Center" HorizontalAlignment="Left"
+                           FontWeight="DemiBold" Text="2541-16" />
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="0" Margin="2" Padding="2" HorizontalAlignment="Right" BorderThickness="2" BorderBrush="LightGray">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Margin="2" Content="Referencia:" />
+                <TextBlock Margin="2" VerticalAlignment="Center" HorizontalAlignment="Left"
+                           FontWeight="DemiBold" Text="VI812-VAR-TEL-LAV-CO" />
+            </StackPanel>
+        </Border>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" Margin="2" Padding="2" HorizontalAlignment="Stretch" BorderThickness="2" BorderBrush="LightGray">
+                <StackPanel Margin="2" Orientation="Vertical">
+                    <Label HorizontalAlignment="Center" Content="Total" />
+                    <TextBlock HorizontalAlignment="Center" FontWeight="DemiBold" Text="9,999" />
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="1" Margin="2" Padding="2" HorizontalAlignment="Stretch" BorderThickness="2" BorderBrush="LightGray">
+                <StackPanel Margin="2" Orientation="Vertical">
+                    <Label HorizontalAlignment="Center" Content="Empacado" />
+                    <TextBlock HorizontalAlignment="Center" FontWeight="DemiBold" Text="9,999" />
+                </StackPanel></Border>
+            <Border Grid.Column="2" Margin="2" Padding="2" HorizontalAlignment="Stretch" BorderThickness="2" BorderBrush="LightGray">
+                <StackPanel Margin="2" Orientation="Vertical">
+                    <Label HorizontalAlignment="Center" Content="Pendiente" />
+                    <TextBlock HorizontalAlignment="Center" FontWeight="DemiBold" Text="9,999" />
+                </StackPanel></Border>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" Margin="2" BorderThickness="2" BorderBrush="LightGray">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Margin="2" Orientation="Horizontal">
+                        <telerik:RadButton Margin="2" Width="120" Content="Nueva Caja" />
+                        <telerik:RadButton Margin="2" Width="120" Content="Cerrar Caja" />
+                        <telerik:RadButton Margin="2" Width="120" Content="Cerrar Orden" />
+                    </StackPanel>
+                    <Grid Grid.Row="1" Margin="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Label Margin="2" FontWeight="DemiBold" FontSize="16" Content="Caja No.:" />
+                            <TextBlock Margin="2" FontWeight="DemiBold" FontSize="16" HorizontalAlignment="Left"
+                                       VerticalAlignment="Center"
+                                       Text="5" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Label Margin="2" FontWeight="DemiBold" FontSize="16" Content="Lectura:" />
+                            <TextBox Margin="2" FontWeight="DemiBold" FontSize="16" HorizontalAlignment="Left"
+                                     VerticalAlignment="Center"
+                                     Text="01234567890123" />
+                        </StackPanel>
+                    </Grid>
+                    <telerik:RadGridView Grid.Row="2" Margin="2" AutoGenerateColumns="False" IsReadOnly="True"
+                                         ShowGroupPanel="False">
+                        <telerik:RadGridView.Columns>
+                            <telerik:GridViewDataColumn Width="*" Header="Talla" TextAlignment="Center"
+                                                        HeaderTextAlignment="Center" />
+                            <telerik:GridViewDataColumn Width="*" Header="Cantidad  " TextAlignment="Right"
+                                                        HeaderTextAlignment="Right" />
+                        </telerik:RadGridView.Columns>
+                    </telerik:RadGridView>
+                </Grid>
+            </Border>
+            <Border Grid.Column="1" Margin="2" BorderThickness="2" BorderBrush="LightGray">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Margin="2" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                           Content="Cajas" FontWeight="DemiBold" />
+                    <telerik:RadButton Grid.Row="0" Margin="2" HorizontalAlignment="Right" Width="120"
+                                       Content="Reabrir Caja" />
+                    <telerik:RadGridView Grid.Row="1" Margin="2" AutoGenerateColumns="False" IsReadOnly="True"
+                                         ShowGroupPanel="False">
+                        <telerik:RadGridView.Columns>
+                            <telerik:GridViewDataColumn Width="*" Header="No." TextAlignment="Center"
+                                                        HeaderTextAlignment="Center" />
+                            <telerik:GridViewDataColumn Width="*" Header="Cantidad  " TextAlignment="Right"
+                                                        HeaderTextAlignment="Right" />
+                        </telerik:RadGridView.Columns>
+                    </telerik:RadGridView>
+                    <Label Grid.Row="2" Margin="2,10,2,2" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                           Content="Tallas" FontWeight="DemiBold" />
+                    <telerik:RadGridView Grid.Row="3" Margin="2" AutoGenerateColumns="False" IsReadOnly="True"
+                                         ShowGroupPanel="False">
+                        <telerik:RadGridView.Columns>
+                            <telerik:GridViewDataColumn Width="*" Header="Talla" TextAlignment="Center"
+                                                        HeaderTextAlignment="Center" />
+                            <telerik:GridViewDataColumn Width="*" Header="Total  " TextAlignment="Right"
+                                                        HeaderTextAlignment="Right" />
+                            <telerik:GridViewDataColumn Width="*" Header="Empacadas  " TextAlignment="Right"
+                                                        HeaderTextAlignment="Right" />
+                            <telerik:GridViewDataColumn Width="*" Header="Pendientes  " TextAlignment="Right"
+                                                        HeaderTextAlignment="Right" />
+                        </telerik:RadGridView.Columns>
+                    </telerik:RadGridView>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

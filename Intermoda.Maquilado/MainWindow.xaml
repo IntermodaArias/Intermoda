@@ -7,11 +7,6 @@
         mc:Ignorable="d" Title="Control de Avance de Producción" d:DesignHeight="768" d:DesignWidth="1024"
         WindowStartupLocation="CenterOwner" WindowState="Normal" 
         DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
-    <Window.Resources>
-        <DataTemplate x:Key="GroupFooterTemplate">
-            <TextBlock Text="Total"/>
-        </DataTemplate>
-    </Window.Resources>
     <Grid>
         <Grid.Resources>
             <converter:OrdenEstadoToColorConverter x:Key="EstadoConverter"/>

@@ -223,6 +223,13 @@
       <Parameter Name="CiaCod" Mode="In" Type="Int16" />
     </FunctionImport>
     <EntitySet Name="CUTARC1Set" EntityType="LBDATPROModel.CUTARC1" />
+    <EntitySet Name="FACTALLSet" EntityType="LBDATPROModel.FACTALL" />
+    <EntitySet Name="MaquiladoCajaSet" EntityType="LBDATPROModel.MaquiladoCaja" />
+    <EntitySet Name="MaquiladoCajaDetalleSet" EntityType="LBDATPROModel.MaquiladoCajaDetalle" />
+    <AssociationSet Name="FK_MaquiladoCajaDetalle_MaquiladoCaja" Association="LBDATPROModel.FK_MaquiladoCajaDetalle_MaquiladoCaja">
+      <End Role="MaquiladoCaja" EntitySet="MaquiladoCajaSet" />
+      <End Role="MaquiladoCajaDetalle" EntitySet="MaquiladoCajaDetalleSet" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="CNTPERIO">
     <Key>
@@ -895,4 +902,48 @@
     <Property Name="PrdTroco" Type="Int16" />
     <Property Name="PrdCanTro" Type="Int16" />
   </EntityType>
+  <EntityType Name="FACTALL">
+    <Key>
+      <PropertyRef Name="CiaCod" />
+      <PropertyRef Name="FacCTall" />
+    </Key>
+    <Property Name="CiaCod" Type="Int16" Nullable="false" />
+    <Property Name="FacCTall" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="FacDTall" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="FacSecTal" Type="Int16" />
+  </EntityType>
+  <EntityType Name="MaquiladoCaja">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompaniaId" Type="Int16" Nullable="false" />
+    <Property Name="OrdenAno" Type="Int16" Nullable="false" />
+    <Property Name="OrdenNumero" Type="Int16" Nullable="false" />
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="MaquiladoCajaDetalle" Relationship="LBDATPROModel.FK_MaquiladoCajaDetalle_MaquiladoCaja" FromRole="MaquiladoCaja" ToRole="MaquiladoCajaDetalle" />
+  </EntityType>
+  <EntityType Name="MaquiladoCajaDetalle">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaquiladoCajaId" Type="Int32" Nullable="false" />
+    <Property Name="CompaniaId" Type="Int16" Nullable="false" />
+    <Property Name="TallaId" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="MaquiladoCaja" Relationship="LBDATPROModel.FK_MaquiladoCajaDetalle_MaquiladoCaja" FromRole="MaquiladoCajaDetalle" ToRole="MaquiladoCaja" />
+  </EntityType>
+  <Association Name="FK_MaquiladoCajaDetalle_MaquiladoCaja">
+    <End Type="LBDATPROModel.MaquiladoCaja" Role="MaquiladoCaja" Multiplicity="1" />
+    <End Type="LBDATPROModel.MaquiladoCajaDetalle" Role="MaquiladoCajaDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaquiladoCaja">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MaquiladoCajaDetalle">
+        <PropertyRef Name="MaquiladoCajaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

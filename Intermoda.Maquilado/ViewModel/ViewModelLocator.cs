@@ -25,12 +25,16 @@ namespace Intermoda.Maquilado.ViewModel
 
             SimpleIoc.Default.Register<LoginViewModel>();
             SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<MaquiladoEmpaqueViewModel>();
             SimpleIoc.Default.Register<MessageWindowViewModel>();
         }
 
         public LoginViewModel LoginViewModel => ServiceLocator.Current.GetInstance<LoginViewModel>();
 
         public MainViewModel Main => ServiceLocator.Current.GetInstance<MainViewModel>();
+
+        public MaquiladoEmpaqueViewModel MaquiladoEmpaqueViewModel
+            => ServiceLocator.Current.GetInstance<MaquiladoEmpaqueViewModel>();
 
         public MessageWindowViewModel MessageWindowViewModel
             => ServiceLocator.Current.GetInstance<MessageWindowViewModel>();

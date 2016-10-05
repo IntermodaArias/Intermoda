@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="135067eb-d68d-4c65-8e43-28a1f16b0fcc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/IntermodaService/LbDatPro/MaquiladoCajaDetalle.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MaquiladoCajaDetalle.disco" MetadataType="Disco" ID="02fe8a0e-4605-4fcc-8c91-5c4d79b45380" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/MaquiladoCajaDetalle.svc?disco" />
+    <MetadataFile FileName="MaquiladoCajaDetalle.xsd" MetadataType="Schema" ID="6a03c259-1dfa-4ae9-94fc-5027edb39fd1" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/MaquiladoCajaDetalle.svc?xsd=xsd0" />
+    <MetadataFile FileName="MaquiladoCajaDetalle1.xsd" MetadataType="Schema" ID="1fa35d9c-ac1e-4340-aa36-96c671746703" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/MaquiladoCajaDetalle.svc?xsd=xsd2" />
+    <MetadataFile FileName="MaquiladoCajaDetalle.wsdl" MetadataType="Wsdl" ID="a7e2bc4d-b5c2-4b87-8947-c83d04c3703f" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/MaquiladoCajaDetalle.svc?wsdl" />
+    <MetadataFile FileName="MaquiladoCajaDetalle2.xsd" MetadataType="Schema" ID="ad119acf-580e-4e49-ac36-daf9965d7fef" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/MaquiladoCajaDetalle.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

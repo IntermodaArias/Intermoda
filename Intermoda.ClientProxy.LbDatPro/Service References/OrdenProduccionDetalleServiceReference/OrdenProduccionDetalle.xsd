@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/IntermodaService/LbDatPro/OrdenProduccionDetalle.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Intermoda.Business.LbDatPro" />
+  <xs:element name="GetBultos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companiaId" type="xs:short" />
+        <xs:element minOccurs="0" name="ordenAno" type="xs:short" />
+        <xs:element minOccurs="0" name="ordenNumero" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBultosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Intermoda.Business.LbDatPro" minOccurs="0" name="GetBultosResult" nillable="true" type="q1:ArrayOfOrdenProduccionBultoBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTallas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companiaId" type="xs:short" />
+        <xs:element minOccurs="0" name="ordenAno" type="xs:short" />
+        <xs:element minOccurs="0" name="ordenNumero" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTallasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Intermoda.Business.LbDatPro" minOccurs="0" name="GetTallasResult" nillable="true" type="q2:ArrayOfOrdenProduccionTallaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -78,6 +78,9 @@
     <Compile Include="FACCOL.cs">
       <DependentUpon>LbDatProModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="FACTALL.cs">
+      <DependentUpon>LbDatProModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="GRUTEL.cs">
       <DependentUpon>LbDatProModel.tt</DependentUpon>
     </Compile>
@@ -100,6 +103,12 @@
       <DependentUpon>LbDatProModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MAEAUS.cs">
+      <DependentUpon>LbDatProModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaquiladoCaja.cs">
+      <DependentUpon>LbDatProModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaquiladoCajaDetalle.cs">
       <DependentUpon>LbDatProModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MATMST.cs">

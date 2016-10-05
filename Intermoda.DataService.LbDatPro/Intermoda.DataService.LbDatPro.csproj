@@ -71,8 +71,11 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MaquiladoCaja.svc" />
     <Content Include="Empleado.svc" />
     <Content Include="Inasistencia.svc" />
+    <Content Include="MaquiladoCajaDetalle.svc" />
+    <Content Include="OrdenProduccionDetalle.svc" />
     <Content Include="OrdenProduccionExterno.svc" />
     <Content Include="Planta.svc" />
     <Content Include="Web.config">
@@ -80,6 +83,11 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IMaquiladoCaja.cs" />
+    <Compile Include="Contracts\IMaquiladoCajaDetalle.cs" />
+    <Compile Include="MaquiladoCaja.svc.cs">
+      <DependentUpon>MaquiladoCaja.svc</DependentUpon>
+    </Compile>
     <Compile Include="Empleado.svc.cs">
       <DependentUpon>Empleado.svc</DependentUpon>
     </Compile>
@@ -90,6 +98,13 @@
     </Compile>
     <Compile Include="Contracts\IPlanta.cs" />
     <Compile Include="Contracts\IOrdenProduccionExterno.cs" />
+    <Compile Include="Contracts\IOrdenProduccionDetalle.cs" />
+    <Compile Include="MaquiladoCajaDetalle.svc.cs">
+      <DependentUpon>MaquiladoCajaDetalle.svc</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenProduccionDetalle.svc.cs">
+      <DependentUpon>OrdenProduccionDetalle.svc</DependentUpon>
+    </Compile>
     <Compile Include="OrdenProduccionExterno.svc.cs">
       <DependentUpon>OrdenProduccionExterno.svc</DependentUpon>
     </Compile>

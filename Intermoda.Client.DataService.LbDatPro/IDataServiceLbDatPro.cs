@@ -22,6 +22,35 @@ namespace Intermoda.Client.DataService.LbDatPro
 
         #endregion
 
+        #region MaquiladoCaja
+
+        void MaquiladoCajaUpdate(MaquiladoCaja maquiladoCaja, Action<MaquiladoCaja, Exception> action);
+        void MaquiladoCajaDelete(int maquiladoCajaId, Action<Exception> action);
+        void MaquiladoCajaGet(int maquiladoCajaId, Action<MaquiladoCaja, Exception> action);
+        void MaquiladoCajaGetByOrden(short companiaId, short ordenAno, short ordenNumero,
+            Action<List<MaquiladoCaja>, Exception> action);
+
+        #endregion
+
+        #region MaquiladoCajaDetalle
+
+        void MaquiladoCajaDetalleUpdate(MaquiladoCajaDetalle maquiladoCajaDetalle, Action<MaquiladoCajaDetalle, Exception> action);
+        void MaquiladoCajaDetalleDelete(int maquiladoCajaDetalleId, Action<Exception> action);
+        void MaquiladoCajaDetalleGet(int maquiladoCajaDetalleId, Action<MaquiladoCajaDetalle, Exception> action);
+        void MaquiladoCajaDetalleGetByMaquiladoCaja(int maquiladoCajaId, short ordenAno, short ordenNumero,
+            Action<List<MaquiladoCajaDetalle>, Exception> action);
+
+        #endregion
+
+        #region OrdenProduccionDetalle
+
+        void OrdenProduccionDetalleGetBultos(short companiaId, short ordenAno, short ordenNumero,
+            Action<List<OrdenProduccionBulto>, Exception> action);
+        void OrdenProduccionDetalleGetTallas(short companiaId, short ordenAno, short ordenNumero,
+            Action<List<OrdenProduccionTalla>, Exception> action);
+
+        #endregion
+
         #region OrdenProduccionExterno
 
         void OrdenProduccionExternoGetByUsuarioPlanta(string usuario,

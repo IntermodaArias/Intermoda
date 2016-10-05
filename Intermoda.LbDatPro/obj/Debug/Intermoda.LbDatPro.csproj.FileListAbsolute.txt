@@ -14,6 +14,5 @@ C:\Users\arias\Source\Repos\Intermoda\Intermoda.LbDatPro\bin\Debug\EntityFramewo
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.LbDatPro\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.LbDatPro\bin\Debug\EntityFramework.xml
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.LbDatPro\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\arias\Source\Repos\Intermoda\Intermoda.LbDatPro\obj\Debug\Intermoda.LbDatPro.csprojResolveAssemblyReference.cache
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.LbDatPro\obj\Debug\Intermoda.LbDatPro.dll
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.LbDatPro\obj\Debug\Intermoda.LbDatPro.pdb
