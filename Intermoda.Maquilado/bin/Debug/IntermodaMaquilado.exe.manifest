@@ -44,18 +44,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AutoMapper.dll" size="295936">
-      <assemblyIdentity name="AutoMapper" version="5.1.1.0" publicKeyToken="BE96CD2C38EF1005" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Q0CixstbVovfEZmCcsw2pSq0wiLVYYl39DGtcOxLkGM=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.dll" size="5196496">
       <assemblyIdentity name="EntityFramework" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -104,50 +92,50 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Intermoda.Business.LbDatPro.dll" size="142336">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Intermoda.Business.LbDatPro.dll" size="160256">
       <assemblyIdentity name="Intermoda.Business.LbDatPro" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>u302+xV2F5RDbszUg0PDr3qFhN4maTSYzQ2qXrQ+8Ng=</dsig:DigestValue>
+        <dsig:DigestValue>uDqnhO6IrdKNN5k4dNHL/fTtq9Q65sAG+TXoPuuxvu4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Intermoda.Client.DataService.LbDatPro.dll" size="24576">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Intermoda.Client.DataService.LbDatPro.dll" size="28160">
       <assemblyIdentity name="Intermoda.Client.DataService.LbDatPro" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NgAJzaq5cJ/FbcrUfb2nWtXDCzBUR8HcGk060wH3ofY=</dsig:DigestValue>
+        <dsig:DigestValue>GMXXiefkxQ1ICCXK0m6T/zVTVKG8I+vlGuK1R1xl+O4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Intermoda.Client.LbDatPro.dll" size="38912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Intermoda.Client.LbDatPro.dll" size="39936">
       <assemblyIdentity name="Intermoda.Client.LbDatPro" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NPzGwGI4nHS1jT15i+s1DWL+xSHdsfvYAYP7sgKD5rg=</dsig:DigestValue>
+        <dsig:DigestValue>aNdq29lFY2O/a933XVHoJwSIZpXsLkzQsvIstDrGaHs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Intermoda.ClientProxy.LbDatPro.dll" size="42496">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Intermoda.ClientProxy.LbDatPro.dll" size="47104">
       <assemblyIdentity name="Intermoda.ClientProxy.LbDatPro" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VomlCf+E2uD2YDUYJwfS/OIZuvuUqGX0IMbfFN0vpc8=</dsig:DigestValue>
+        <dsig:DigestValue>pto7eNPw3a9yx4mo17h4nz96BgakaTWsVIr+pHBojqs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -159,43 +147,43 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4cHs5hiWCVrPfnFLQUtXwyR6cHFKrfGLtfHuU/bUiM0=</dsig:DigestValue>
+        <dsig:DigestValue>JzeDk/O/PzDZnV3AIDWCTe6T6CSjos0pZEd4xAyVVNs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Intermoda.DataService.LbDatPro.dll" size="10752">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Intermoda.DataService.LbDatPro.dll" size="11264">
       <assemblyIdentity name="Intermoda.DataService.LbDatPro" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jXojQ1My89aodrsvS6lurnuv/kfE7YQwb7sM0PfcGNs=</dsig:DigestValue>
+        <dsig:DigestValue>9kt4815KUt6xAZ6EKsQLHEDapCiLnqpoepKfd2ycPLc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Intermoda.LbDatPro.dll" size="294400">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Intermoda.LbDatPro.dll" size="304128">
       <assemblyIdentity name="Intermoda.LbDatPro" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dbFWOtPSkDYbKLrqE72RNBVfi/poBLHbJSp1Kmjz0NE=</dsig:DigestValue>
+        <dsig:DigestValue>9mauSGlUpUoPeJ1B2RrFhdWZfcbzbBssXSqBwo6fxdU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IntermodaMaquilado.exe" size="92608">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IntermodaMaquilado.exe" size="100800">
       <assemblyIdentity name="IntermodaMaquilado" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6z2T8mP3EyK2WN+VxIImYHQsc+hwOeh7rRTUD0latiA=</dsig:DigestValue>
+        <dsig:DigestValue>2kVGSSud9HurVVRquS8+tmHq6sejncZzxrJYN4SGQfM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -319,13 +307,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="IntermodaMaquilado.exe.config" size="3274">
+  <file name="IntermodaMaquilado.exe.config" size="5332">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>9ddJiDGyTWYTZV6PYojk3IqABGGybcvkiiL7ujyBZYo=</dsig:DigestValue>
+      <dsig:DigestValue>wVcnElfMCnSGbOzRWlKtPI4Clec/3nuhngvDA94Fz9M=</dsig:DigestValue>
     </hash>
   </file>
   <file name="settings.ico" size="1150">

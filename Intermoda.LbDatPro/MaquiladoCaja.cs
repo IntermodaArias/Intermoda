@@ -25,6 +25,9 @@ namespace Intermoda.LbDatPro
         public short OrdenAno { get; set; }
         public short OrdenNumero { get; set; }
         public int Numero { get; set; }
+        public System.DateTime FechaApertura { get; set; }
+        public System.DateTime FechaCierre { get; set; }
+        public bool Estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MaquiladoCajaDetalle> MaquiladoCajaDetalle { get; set; }

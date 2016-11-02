@@ -257,6 +257,9 @@ namespace Intermoda.ClientProxy.LbDatPro.OrdenProduccionDetalleServiceReference 
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BarrasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int CantidadField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -281,6 +284,19 @@ namespace Intermoda.ClientProxy.LbDatPro.OrdenProduccionDetalleServiceReference 
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Barras {
+            get {
+                return this.BarrasField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BarrasField, value) != true)) {
+                    this.BarrasField = value;
+                    this.RaisePropertyChanged("Barras");
+                }
             }
         }
         

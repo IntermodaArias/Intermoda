@@ -418,6 +418,38 @@
     <Property Name="AxColorId02" Type="char" MaxLength="8" />
     <Property Name="FacIDCol" Type="char" MaxLength="20" />
   </EntityType>
+  <EntityType Name="FACMST21">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="FacArtCod" />
+      <PropertyRef Name="FacCodMdl" />
+      <PropertyRef Name="FacCodRef" />
+      <PropertyRef Name="FacCodTel" />
+      <PropertyRef Name="FacCCol" />
+      <PropertyRef Name="FacCTall" />
+      <PropertyRef Name="PrdCodDim" />
+    </Key>
+    <Property Name="CIACOD" Type="smallint" Nullable="false" />
+    <Property Name="FacArtCod" Type="char" MaxLength="12" Nullable="false" />
+    <Property Name="FacCodMdl" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="FacCodRef" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="FacCodTel" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="FacCCol" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="FacCTall" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="PrdCodDim" Type="smallint" Nullable="false" />
+    <Property Name="FacArtBar2" Type="decimal" Precision="15" Scale="0" />
+    <Property Name="FacCodAlt" Type="int" />
+    <Property Name="FacExiIde" Type="int" />
+    <Property Name="FacArtBarB" Type="decimal" Precision="15" Scale="0" />
+    <Property Name="FacOrdTall" Type="smallint" Nullable="false" />
+    <Property Name="FacCnt6Pre" Type="smallint" />
+    <Property Name="FacCnt12Pr" Type="smallint" />
+    <Property Name="Usuario" Type="char" MaxLength="20" />
+    <Property Name="FechaCreacion" Type="smalldatetime" />
+    <Property Name="FacArtBarT" Type="decimal" Precision="15" Scale="0" />
+    <Property Name="CBarraConDigitoVer" Type="varchar" MaxLength="61" StoreGeneratedPattern="Computed" />
+    <Property Name="FacMaxArt" Type="int" />
+  </EntityType>
   <EntityType Name="FACTALL">
     <Key>
       <PropertyRef Name="CiaCod" />
@@ -611,6 +643,9 @@
     <Property Name="OrdenAno" Type="smallint" Nullable="false" />
     <Property Name="OrdenNumero" Type="smallint" Nullable="false" />
     <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="FechaApertura" Type="datetime" Nullable="false" />
+    <Property Name="FechaCierre" Type="datetime" Nullable="false" />
+    <Property Name="Estado" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="MaquiladoCajaDetalle">
     <Key>
@@ -902,6 +937,7 @@
     <EntitySet Name="CUTARC1" EntityType="Self.CUTARC1" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CUTARC3" EntityType="Self.CUTARC3" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FACCOL" EntityType="Self.FACCOL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FACMST21" EntityType="Self.FACMST21" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FACTALL" EntityType="Self.FACTALL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GRUTEL" EntityType="Self.GRUTEL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MAEAR6" EntityType="Self.MAEAR6" Schema="dbo" store:Type="Tables" />

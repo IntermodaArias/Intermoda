@@ -14,14 +14,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="IntermodaMaquilado.exe.manifest" size="19511">
+    <dependentAssembly dependencyType="install" codebase="IntermodaMaquilado.exe.manifest" size="18839">
       <assemblyIdentity name="IntermodaMaquilado.exe" version="1.0.0.15" publicKeyToken="0000000000000000" language="es-HN" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fNqZllkaP6d6KgumI4+3rbyn+LZ3KeSENcYSTctSBKw=</dsig:DigestValue>
+        <dsig:DigestValue>tm7IZLgdwzch3ga4hqxVi3miiu3TDWnFYhtnr4xFpTQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

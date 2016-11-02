@@ -54,5 +54,19 @@ namespace Intermoda.DataService.LbDatPro
                 throw new Exception("WebService MaquiladoCaja / GetByOrden", exception);
             }
         }
+
+        //
+
+        public MaquiladoEmpaqueBusiness[] GetDetalleByOrden(short companiaId, short ordenAno, short ordenNumero)
+        {
+            try
+            {
+                return MaquiladoCajaBusiness.GetDetalleByOrden(companiaId, ordenAno, ordenNumero);
+            }
+            catch (Exception exception)
+            {
+                throw new Exception("WebService MaquiladoCaja / GetDetalleByOrden", exception);
+            }
+        }
     }
 }

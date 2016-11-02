@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Intermoda.Client.LbDatPro;
 
 namespace Intermoda.Client.DataService.LbDatPro
@@ -96,6 +97,24 @@ namespace Intermoda.Client.DataService.LbDatPro
             for (var i = 1; i < 21; i++)
             {
                 lista.Add(GetMaquiladoCaja(i));
+            }
+            action(lista, null);
+        }
+
+        public void MaquiladoEmpaqueGet(short companiaId, short ordenAno, short ordenNumero,
+            Action<List<MaquiladoCaja>, Exception> action)
+        {
+            var lista = new List<MaquiladoCaja>();
+            for (var i = 1; i < 21; i++)
+            {
+                var detalle = new List<MaquiladoCajaDetalle>();
+                for (var j = 1; j < 11; j++)
+                {
+                    detalle.Add(GetMaquiladoCajaDetalle(j));
+                }
+                var item = GetMaquiladoCaja(i);
+                item.Detalle = new ObservableCollection<MaquiladoCajaDetalle>(detalle);
+                lista.Add(item);
             }
             action(lista, null);
         }
@@ -200,6 +219,68 @@ namespace Intermoda.Client.DataService.LbDatPro
         #endregion
 
         #region OrdenProduccionExterno
+
+        public void OrdenProduccionExternoGet(short companiaCodigo, short ordenAno, short ordenNumero,
+            Action<OrdenProduccionExterno, Exception> action)
+        {
+            var i = 1;
+            var reg = new OrdenProduccionExterno
+            {
+                CompaniaId = 1,
+                Ano = 16,
+                Numero = (short) i,
+                Patron = "PR001",
+                Variante = "VAR",
+                Tela = "TEL",
+                Lavado = "LAV",
+                Color = "CO",
+                EstadoId = "X",
+                EstadoLeyenda = "En Espera",
+                Cantidad = 500,
+                OrdenProduccion = $"{i.ToString("0000")}-16",
+                Referencia = "PR001-VAR-TEL-LAV-CO",
+                Estado = new OrdenEstado
+                {
+                    Id = "X",
+                    Secuencia = 10,
+                    Descripcion = "Estado de la Orden",
+                    Area = "Area",
+                    CentroCostoAlias = "Centro de Costo",
+                    CentroTrabajoId = "03"
+                },
+                Ruta = new List<PasoRuta>
+                {
+                    new PasoRuta
+                    {
+                        CompaniaId = 1,
+                        Ano = 16,
+                        Numero = (short) i,
+                        CentroTrabajoId = "02",
+                        PlantaId = "XX",
+                        Secuencia = 10
+                    },
+                    new PasoRuta
+                    {
+                        CompaniaId = 1,
+                        Ano = 16,
+                        Numero = (short) i,
+                        CentroTrabajoId = "03",
+                        PlantaId = "YY",
+                        Secuencia = 20
+                    },
+                    new PasoRuta
+                    {
+                        CompaniaId = 1,
+                        Ano = 16,
+                        Numero = (short) i,
+                        CentroTrabajoId = "04",
+                        PlantaId = "ZZ",
+                        Secuencia = 30
+                    }
+                }
+            };
+            action(reg, null);
+        }
 
         public void OrdenProduccionExternoGetByUsuarioPlanta(string usuario,
             Action<List<OrdenProduccionExterno>, Exception> action)

@@ -45,6 +45,8 @@
             <TextBlock Margin="5,5,5,5" VerticalAlignment="Center" Text="Color:" FontSize="15" FontFamily="Segoe UI"/>
             <TextBox Margin="5,5,15,5" VerticalAlignment="Center" Width="175" FontSize="15" FontFamily="Segoe UI"
                      Text="{Binding Path=Color, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <telerik:RadButton Margin="15,5,5,5" HorizontalAlignment="Left" VerticalAlignment="Center" Height="50" Width="75"
+                               Content="Empacar" Command="{Binding Path=EmpacarCommand}"/>
         </StackPanel>
         <telerik:RadButton Grid.Row="1" Grid.Column="1" Margin="5" Command="{Binding Path=RefreshCommand}"
                            telerik:StyleManager.Theme="Windows8Touch">
@@ -71,7 +73,7 @@
                              SelectedItem="{Binding Path=OrdenSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
             <telerik:RadGridView.Columns>
                 <telerik:GridViewDataColumn Header="Orden" Width="1*" DataMemberBinding="{Binding OrdenProduccion}" IsFilterable="False" IsGroupable="False"
-                                            GroupFooterTemplate="{StaticResource GroupFooterTemplate}"/>
+                                            GroupFooterTemplate="{StaticResource MainWindowGroupFooterTemplate}"/>
                 <telerik:GridViewDataColumn Header="Referencia" Width="2*" DataMemberBinding="{Binding Referencia}" IsFilterable="False"/>
                 <telerik:GridViewDataColumn Header="Color" Width="1*" DataMemberBinding="{Binding Color}" IsFilterable="False"/>
                 <telerik:GridViewDataColumn Header="Cantidad" Width="1*" DataMemberBinding="{Binding Cantidad, StringFormat='{}{0:#,0  }'}" IsFilterable="False"

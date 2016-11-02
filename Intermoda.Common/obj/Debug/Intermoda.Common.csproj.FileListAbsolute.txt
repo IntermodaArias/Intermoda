@@ -6,3 +6,4 @@ C:\Users\arias\Source\Repos\Intermoda\Intermoda.Common\bin\Debug\Intermoda.Commo
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Common\bin\Debug\Intermoda.Common.pdb
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Common\obj\Debug\Intermoda.Common.dll
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Common\obj\Debug\Intermoda.Common.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Common\obj\Debug\Intermoda.Common.csprojResolveAssemblyReference.cache

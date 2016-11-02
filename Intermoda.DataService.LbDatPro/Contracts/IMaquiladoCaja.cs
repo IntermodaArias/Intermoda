@@ -17,5 +17,10 @@ namespace Intermoda.DataService.LbDatPro
 
         [OperationContract]
         MaquiladoCajaBusiness[] GetByOrden(short companiaId, short ordenAno, short ordenNumero);
+
+        //
+
+        [OperationContract]
+        MaquiladoEmpaqueBusiness[] GetDetalleByOrden(short companiaId, short ordenAno, short ordenNumero);
     }
 }

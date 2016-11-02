@@ -8,27 +8,28 @@
         <EntityTypeShape EntityType="LBDATPROModel.CATALOG" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="false" />
         <EntityTypeShape EntityType="LBDATPROModel.CLASE" Width="1.5" PointX="2.625" PointY="0.75" IsExpanded="false" />
         <EntityTypeShape EntityType="LBDATPROModel.FACCOL" Width="1.5" PointX="2.625" PointY="1.375" IsExpanded="false" />
-        <EntityTypeShape EntityType="LBDATPROModel.GRUTEL" Width="1.5" PointX="6.375" PointY="1.375" IsExpanded="false" />
-        <EntityTypeShape EntityType="LBDATPROModel.MATMST" Width="1.5" PointX="0.75" PointY="2" IsExpanded="false" />
-        <EntityTypeShape EntityType="LBDATPROModel.MATMST1" Width="1.5" PointX="12" PointY="1.375" IsExpanded="false" />
-        <EntityTypeShape EntityType="LBDATPROModel.MPRCOLOR" Width="1.5" PointX="2.625" PointY="2" IsExpanded="false" />
-        <EntityTypeShape EntityType="LBDATPROModel.SUBCLASE" Width="1.5" PointX="12" PointY="2" IsExpanded="false" />
-        <EntityTypeShape EntityType="LBDATPROModel.TELAR5" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="false" />
+        <EntityTypeShape EntityType="LBDATPROModel.GRUTEL" Width="1.5" PointX="8.25" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="LBDATPROModel.MATMST" Width="1.5" PointX="2.625" PointY="2" IsExpanded="false" />
+        <EntityTypeShape EntityType="LBDATPROModel.MATMST1" Width="1.5" PointX="0.75" PointY="2" IsExpanded="false" />
+        <EntityTypeShape EntityType="LBDATPROModel.MPRCOLOR" Width="1.5" PointX="4.5" PointY="2" IsExpanded="false" />
+        <EntityTypeShape EntityType="LBDATPROModel.SUBCLASE" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="false" />
+        <EntityTypeShape EntityType="LBDATPROModel.TELAR5" Width="1.5" PointX="2.625" PointY="2.625" IsExpanded="false" />
         <EntityTypeShape EntityType="LBDATPROModel.CNTPERIO" Width="1.5" PointX="4.5" PointY="0.75" IsExpanded="false" />
-        <EntityTypeShape EntityType="LBDATPROModel.MAEAR6" Width="1.5" PointX="8.25" PointY="1.375" IsExpanded="false" />
-        <EntityTypeShape EntityType="LBDATPROModel.MAEAUS" Width="1.5" PointX="10.125" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="LBDATPROModel.MAEAR6" Width="1.5" PointX="10.125" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="LBDATPROModel.MAEAUS" Width="1.5" PointX="12" PointY="1.375" IsExpanded="false" />
         <EntityTypeShape EntityType="LBDATPROModel.CORPLA" Width="1.5" PointX="6.375" PointY="0.75" IsExpanded="false" />
         <EntityTypeShape EntityType="LBDATPROModel.CTPLANTA" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="false" />
         <EntityTypeShape EntityType="LBDATPROModel.CUTARC3" Width="1.5" PointX="12" PointY="0.75" IsExpanded="false" />
-        <EntityTypeShape EntityType="LBDATPROModel.PATRON" Width="1.5" PointX="6.375" PointY="2" IsExpanded="false" />
-        <EntityTypeShape EntityType="LBDATPROModel.PRDSTS" Width="1.5" PointX="8.25" PointY="2" IsExpanded="false" />
+        <EntityTypeShape EntityType="LBDATPROModel.PATRON" Width="1.5" PointX="8.25" PointY="2" IsExpanded="false" />
+        <EntityTypeShape EntityType="LBDATPROModel.PRDSTS" Width="1.5" PointX="10.125" PointY="2" IsExpanded="false" />
         <EntityTypeShape EntityType="LBDATPROModel.CTRABAJO" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="false" />
-        <EntityTypeShape EntityType="LBDATPROModel.ORDCENTR" Width="1.5" PointX="4.5" PointY="2" IsExpanded="false" />
-        <EntityTypeShape EntityType="LBDATPROModel.PRVMST" Width="1.5" PointX="10.125" PointY="2" IsExpanded="false" />
+        <EntityTypeShape EntityType="LBDATPROModel.ORDCENTR" Width="1.5" PointX="6.375" PointY="2" IsExpanded="false" />
+        <EntityTypeShape EntityType="LBDATPROModel.PRVMST" Width="1.5" PointX="12" PointY="2" IsExpanded="false" />
         <EntityTypeShape EntityType="LBDATPROModel.CUTARC1" Width="1.5" PointX="10.125" PointY="0.75" IsExpanded="false" />
-        <EntityTypeShape EntityType="LBDATPROModel.FACTALL" Width="1.5" PointX="4.5" PointY="1.375" IsExpanded="false" />
-        <EntityTypeShape EntityType="LBDATPROModel.MaquiladoCaja" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="LBDATPROModel.FACTALL" Width="1.5" PointX="6.375" PointY="1.375" IsExpanded="false" />
         <EntityTypeShape EntityType="LBDATPROModel.MaquiladoCajaDetalle" Width="1.5" PointX="2.625" PointY="5.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="LBDATPROModel.FACMST21" Width="1.5" PointX="4.5" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="LBDATPROModel.MaquiladoCaja" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="false" />
         <AssociationConnector Association="LBDATPROModel.FK_MaquiladoCajaDetalle_MaquiladoCaja" />
       </Diagram>
     </edmx:Diagrams>

@@ -90,7 +90,6 @@ C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\bin\Debug\Intermoda.Da
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\bin\Debug\System.Windows.Interactivity.dll
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\bin\Debug\Telerik.Windows.Controls.Navigation.dll
-C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\bin\Debug\AutoMapper.dll
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\bin\Debug\Intermoda.Business.LbDatPro.dll
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\bin\Debug\Intermoda.LbDatPro.dll
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\bin\Debug\EntityFramework.dll
@@ -108,7 +107,6 @@ C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\bin\Debug\GalaSoft.Mvv
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\bin\Debug\Microsoft.Practices.ServiceLocation.xml
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\bin\Debug\Telerik.Windows.Controls.Navigation.xml
-C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\bin\Debug\AutoMapper.xml
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\bin\Debug\Intermoda.Business.LbDatPro.pdb
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\bin\Debug\Intermoda.LbDatPro.pdb
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Maquilado\bin\Debug\EntityFramework.xml

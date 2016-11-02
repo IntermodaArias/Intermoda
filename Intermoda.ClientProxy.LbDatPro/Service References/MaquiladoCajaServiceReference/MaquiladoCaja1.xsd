@@ -57,4 +57,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetDetalleByOrden">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companiaId" type="xs:short" />
+        <xs:element minOccurs="0" name="ordenAno" type="xs:short" />
+        <xs:element minOccurs="0" name="ordenNumero" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetalleByOrdenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Intermoda.Business.LbDatPro" minOccurs="0" name="GetDetalleByOrdenResult" nillable="true" type="q5:ArrayOfMaquiladoEmpaqueBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

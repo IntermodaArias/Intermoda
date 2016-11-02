@@ -138,6 +138,7 @@
     <Compile Include="Helpers\IDialogService.cs" />
     <Compile Include="Helpers\ResultFromLogin.cs" />
     <Compile Include="Messages\LoginMessage.cs" />
+    <Compile Include="Model\TallaModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\MaquiladoEmpaqueViewModel.cs" />

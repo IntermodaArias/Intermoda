@@ -135,13 +135,13 @@ namespace Intermoda.Client.LbDatPro
         /// </summary>
         public const string CantidadPropertyName = "Cantidad";
 
-        private short _cantidad;
+        private int _cantidad;
 
         /// <summary>
         /// Sets and gets the Cantidad property.
         /// Changes to that property's value raise the PropertyChanged event. 
         /// </summary>
-        public short Cantidad
+        public int Cantidad
         {
             get { return _cantidad; }
 

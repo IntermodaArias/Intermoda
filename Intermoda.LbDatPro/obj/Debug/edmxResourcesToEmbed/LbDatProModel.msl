@@ -869,17 +869,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MaquiladoCajaSet">
-      <EntityTypeMapping TypeName="LBDATPROModel.MaquiladoCaja">
-        <MappingFragment StoreEntitySet="MaquiladoCaja">
-          <ScalarProperty Name="Numero" ColumnName="Numero" />
-          <ScalarProperty Name="OrdenNumero" ColumnName="OrdenNumero" />
-          <ScalarProperty Name="OrdenAno" ColumnName="OrdenAno" />
-          <ScalarProperty Name="CompaniaId" ColumnName="CompaniaId" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="MaquiladoCajaDetalleSet">
       <EntityTypeMapping TypeName="LBDATPROModel.MaquiladoCajaDetalle">
         <MappingFragment StoreEntitySet="MaquiladoCajaDetalle">
@@ -887,6 +876,46 @@
           <ScalarProperty Name="TallaId" ColumnName="TallaId" />
           <ScalarProperty Name="CompaniaId" ColumnName="CompaniaId" />
           <ScalarProperty Name="MaquiladoCajaId" ColumnName="MaquiladoCajaId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FACMST21Set">
+      <EntityTypeMapping TypeName="LBDATPROModel.FACMST21">
+        <MappingFragment StoreEntitySet="FACMST21">
+          <ScalarProperty Name="FacMaxArt" ColumnName="FacMaxArt" />
+          <ScalarProperty Name="CBarraConDigitoVer" ColumnName="CBarraConDigitoVer" />
+          <ScalarProperty Name="FacArtBarT" ColumnName="FacArtBarT" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="FacCnt12Pr" ColumnName="FacCnt12Pr" />
+          <ScalarProperty Name="FacCnt6Pre" ColumnName="FacCnt6Pre" />
+          <ScalarProperty Name="FacOrdTall" ColumnName="FacOrdTall" />
+          <ScalarProperty Name="FacArtBarB" ColumnName="FacArtBarB" />
+          <ScalarProperty Name="FacExiIde" ColumnName="FacExiIde" />
+          <ScalarProperty Name="FacCodAlt" ColumnName="FacCodAlt" />
+          <ScalarProperty Name="FacArtBar2" ColumnName="FacArtBar2" />
+          <ScalarProperty Name="PrdCodDim" ColumnName="PrdCodDim" />
+          <ScalarProperty Name="FacCTall" ColumnName="FacCTall" />
+          <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
+          <ScalarProperty Name="FacCodTel" ColumnName="FacCodTel" />
+          <ScalarProperty Name="FacCodRef" ColumnName="FacCodRef" />
+          <ScalarProperty Name="FacCodMdl" ColumnName="FacCodMdl" />
+          <ScalarProperty Name="FacArtCod" ColumnName="FacArtCod" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaquiladoCajaSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.MaquiladoCaja">
+        <MappingFragment StoreEntitySet="MaquiladoCaja">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaCierre" ColumnName="FechaCierre" />
+          <ScalarProperty Name="FechaApertura" ColumnName="FechaApertura" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="OrdenNumero" ColumnName="OrdenNumero" />
+          <ScalarProperty Name="OrdenAno" ColumnName="OrdenAno" />
+          <ScalarProperty Name="CompaniaId" ColumnName="CompaniaId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>

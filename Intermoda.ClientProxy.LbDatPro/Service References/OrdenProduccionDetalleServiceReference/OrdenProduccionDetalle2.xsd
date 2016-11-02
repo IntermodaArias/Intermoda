@@ -35,6 +35,7 @@
   <xs:element name="ArrayOfOrdenProduccionTallaBusiness" nillable="true" type="tns:ArrayOfOrdenProduccionTallaBusiness" />
   <xs:complexType name="OrdenProduccionTallaBusiness">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Barras" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Cantidad" type="xs:int" />
       <xs:element minOccurs="0" name="CompaniaId" type="xs:short" />
       <xs:element minOccurs="0" name="OrdenAno" type="xs:short" />

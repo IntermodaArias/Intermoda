@@ -3,6 +3,9 @@
   <xs:complexType name="MaquiladoCajaBusiness">
     <xs:sequence>
       <xs:element minOccurs="0" name="CompaniaId" type="xs:short" />
+      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FechaApertura" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaCierre" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Numero" type="xs:int" />
       <xs:element minOccurs="0" name="OrdenAno" type="xs:short" />
@@ -16,4 +19,43 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfMaquiladoCajaBusiness" nillable="true" type="tns:ArrayOfMaquiladoCajaBusiness" />
+  <xs:complexType name="ArrayOfMaquiladoEmpaqueBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MaquiladoEmpaqueBusiness" nillable="true" type="tns:MaquiladoEmpaqueBusiness" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMaquiladoEmpaqueBusiness" nillable="true" type="tns:ArrayOfMaquiladoEmpaqueBusiness" />
+  <xs:complexType name="MaquiladoEmpaqueBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Caja" nillable="true" type="tns:MaquiladoCajaBusiness" />
+      <xs:element minOccurs="0" name="Detalle" nillable="true" type="tns:ArrayOfMaquiladoCajaDetalleBusiness" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MaquiladoEmpaqueBusiness" nillable="true" type="tns:MaquiladoEmpaqueBusiness" />
+  <xs:complexType name="ArrayOfMaquiladoCajaDetalleBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MaquiladoCajaDetalleBusiness" nillable="true" type="tns:MaquiladoCajaDetalleBusiness" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMaquiladoCajaDetalleBusiness" nillable="true" type="tns:ArrayOfMaquiladoCajaDetalleBusiness" />
+  <xs:complexType name="MaquiladoCajaDetalleBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="CompaniaId" type="xs:short" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="MaquiladoCajaId" type="xs:int" />
+      <xs:element minOccurs="0" name="Talla" nillable="true" type="tns:TallaBusiness" />
+      <xs:element minOccurs="0" name="TallaId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MaquiladoCajaDetalleBusiness" nillable="true" type="tns:MaquiladoCajaDetalleBusiness" />
+  <xs:complexType name="TallaBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompaniaId" type="xs:short" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secuencia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TallaBusiness" nillable="true" type="tns:TallaBusiness" />
 </xs:schema>

@@ -8,3 +8,4 @@ C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.LbDatPro\bin\Debug\I
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.LbDatPro\bin\Debug\Intermoda.ClientProxy.LbDatPro.pdb
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.LbDatPro\obj\Debug\Intermoda.ClientProxy.LbDatPro.dll
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.LbDatPro\obj\Debug\Intermoda.ClientProxy.LbDatPro.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.LbDatPro\obj\Debug\Intermoda.ClientProxy.LbDatPro.csprojResolveAssemblyReference.cache

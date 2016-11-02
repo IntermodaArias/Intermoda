@@ -26,6 +26,15 @@ namespace Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference {
         private short CompaniaIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FechaAperturaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FechaCierreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -56,6 +65,45 @@ namespace Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference {
                 if ((this.CompaniaIdField.Equals(value) != true)) {
                     this.CompaniaIdField = value;
                     this.RaisePropertyChanged("CompaniaId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime FechaApertura {
+            get {
+                return this.FechaAperturaField;
+            }
+            set {
+                if ((this.FechaAperturaField.Equals(value) != true)) {
+                    this.FechaAperturaField = value;
+                    this.RaisePropertyChanged("FechaApertura");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime FechaCierre {
+            get {
+                return this.FechaCierreField;
+            }
+            set {
+                if ((this.FechaCierreField.Equals(value) != true)) {
+                    this.FechaCierreField = value;
+                    this.RaisePropertyChanged("FechaCierre");
                 }
             }
         }
@@ -122,6 +170,285 @@ namespace Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MaquiladoEmpaqueBusiness", Namespace="http://schemas.datacontract.org/2004/07/Intermoda.Business.LbDatPro")]
+    [System.SerializableAttribute()]
+    public partial class MaquiladoEmpaqueBusiness : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference.MaquiladoCajaBusiness CajaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference.MaquiladoCajaDetalleBusiness[] DetalleField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference.MaquiladoCajaBusiness Caja {
+            get {
+                return this.CajaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CajaField, value) != true)) {
+                    this.CajaField = value;
+                    this.RaisePropertyChanged("Caja");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference.MaquiladoCajaDetalleBusiness[] Detalle {
+            get {
+                return this.DetalleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DetalleField, value) != true)) {
+                    this.DetalleField = value;
+                    this.RaisePropertyChanged("Detalle");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MaquiladoCajaDetalleBusiness", Namespace="http://schemas.datacontract.org/2004/07/Intermoda.Business.LbDatPro")]
+    [System.SerializableAttribute()]
+    public partial class MaquiladoCajaDetalleBusiness : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CantidadField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short CompaniaIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int MaquiladoCajaIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference.TallaBusiness TallaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TallaIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Cantidad {
+            get {
+                return this.CantidadField;
+            }
+            set {
+                if ((this.CantidadField.Equals(value) != true)) {
+                    this.CantidadField = value;
+                    this.RaisePropertyChanged("Cantidad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short CompaniaId {
+            get {
+                return this.CompaniaIdField;
+            }
+            set {
+                if ((this.CompaniaIdField.Equals(value) != true)) {
+                    this.CompaniaIdField = value;
+                    this.RaisePropertyChanged("CompaniaId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int MaquiladoCajaId {
+            get {
+                return this.MaquiladoCajaIdField;
+            }
+            set {
+                if ((this.MaquiladoCajaIdField.Equals(value) != true)) {
+                    this.MaquiladoCajaIdField = value;
+                    this.RaisePropertyChanged("MaquiladoCajaId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference.TallaBusiness Talla {
+            get {
+                return this.TallaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TallaField, value) != true)) {
+                    this.TallaField = value;
+                    this.RaisePropertyChanged("Talla");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TallaId {
+            get {
+                return this.TallaIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TallaIdField, value) != true)) {
+                    this.TallaIdField = value;
+                    this.RaisePropertyChanged("TallaId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TallaBusiness", Namespace="http://schemas.datacontract.org/2004/07/Intermoda.Business.LbDatPro")]
+    [System.SerializableAttribute()]
+    public partial class TallaBusiness : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short CompaniaIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SecuenciaField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Codigo {
+            get {
+                return this.CodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodigoField, value) != true)) {
+                    this.CodigoField = value;
+                    this.RaisePropertyChanged("Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short CompaniaId {
+            get {
+                return this.CompaniaIdField;
+            }
+            set {
+                if ((this.CompaniaIdField.Equals(value) != true)) {
+                    this.CompaniaIdField = value;
+                    this.RaisePropertyChanged("CompaniaId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Secuencia {
+            get {
+                return this.SecuenciaField;
+            }
+            set {
+                if ((this.SecuenciaField.Equals(value) != true)) {
+                    this.SecuenciaField = value;
+                    this.RaisePropertyChanged("Secuencia");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MaquiladoCajaServiceReference.IMaquiladoCaja")]
     public interface IMaquiladoCaja {
@@ -149,6 +476,12 @@ namespace Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaquiladoCaja/GetByOrden", ReplyAction="http://tempuri.org/IMaquiladoCaja/GetByOrdenResponse")]
         System.Threading.Tasks.Task<Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference.MaquiladoCajaBusiness[]> GetByOrdenAsync(short companiaId, short ordenAno, short ordenNumero);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaquiladoCaja/GetDetalleByOrden", ReplyAction="http://tempuri.org/IMaquiladoCaja/GetDetalleByOrdenResponse")]
+        Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference.MaquiladoEmpaqueBusiness[] GetDetalleByOrden(short companiaId, short ordenAno, short ordenNumero);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMaquiladoCaja/GetDetalleByOrden", ReplyAction="http://tempuri.org/IMaquiladoCaja/GetDetalleByOrdenResponse")]
+        System.Threading.Tasks.Task<Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference.MaquiladoEmpaqueBusiness[]> GetDetalleByOrdenAsync(short companiaId, short ordenAno, short ordenNumero);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -208,6 +541,14 @@ namespace Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference {
         
         public System.Threading.Tasks.Task<Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference.MaquiladoCajaBusiness[]> GetByOrdenAsync(short companiaId, short ordenAno, short ordenNumero) {
             return base.Channel.GetByOrdenAsync(companiaId, ordenAno, ordenNumero);
+        }
+        
+        public Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference.MaquiladoEmpaqueBusiness[] GetDetalleByOrden(short companiaId, short ordenAno, short ordenNumero) {
+            return base.Channel.GetDetalleByOrden(companiaId, ordenAno, ordenNumero);
+        }
+        
+        public System.Threading.Tasks.Task<Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference.MaquiladoEmpaqueBusiness[]> GetDetalleByOrdenAsync(short companiaId, short ordenAno, short ordenNumero) {
+            return base.Channel.GetDetalleByOrdenAsync(companiaId, ordenAno, ordenNumero);
         }
     }
 }

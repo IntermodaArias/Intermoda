@@ -5,7 +5,7 @@
              xmlns:d1P1="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
              d1P1:Ignorable="d" 
-             StartupUri="View/MaquiladoEmpaqueView.xaml">
+             StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" xmlns:vm="clr-namespace:Intermoda.Maquilado.ViewModel" />

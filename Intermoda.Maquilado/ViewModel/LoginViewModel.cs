@@ -3,11 +3,9 @@ using System.Runtime.InteropServices;
 using System.Security;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using GalaSoft.MvvmLight.Messaging;
 using Intermoda.Client.DataService.LbDatPro;
 using Intermoda.Client.LbDatPro;
 using Intermoda.Common;
-using Intermoda.Maquilado.Messages;
 
 namespace Intermoda.Maquilado.ViewModel
 {

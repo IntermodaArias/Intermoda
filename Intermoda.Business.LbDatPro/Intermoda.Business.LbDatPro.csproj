@@ -61,6 +61,7 @@
     <Compile Include="InasistenciaBusiness.cs" />
     <Compile Include="MaquiladoCajaBusiness.cs" />
     <Compile Include="MaquiladoCajaDetalleBusiness.cs" />
+    <Compile Include="MaquiladoEmpaqueBusiness.cs" />
     <Compile Include="MaterialBusiness.cs" />
     <Compile Include="MateriaPrimaColorBusiness.cs" />
     <Compile Include="OrdenEstadoBusiness.cs" />

@@ -29,6 +29,8 @@ namespace Intermoda.Client.DataService.LbDatPro
         void MaquiladoCajaGet(int maquiladoCajaId, Action<MaquiladoCaja, Exception> action);
         void MaquiladoCajaGetByOrden(short companiaId, short ordenAno, short ordenNumero,
             Action<List<MaquiladoCaja>, Exception> action);
+        void MaquiladoEmpaqueGet(short companiaId, short ordenAno, short ordenNumero,
+            Action<List<MaquiladoCaja>, Exception> action);
 
         #endregion
 
@@ -52,6 +54,9 @@ namespace Intermoda.Client.DataService.LbDatPro
         #endregion
 
         #region OrdenProduccionExterno
+
+        void OrdenProduccionExternoGet(short companiaCodigo, short ordenAno, short ordenNumero,
+            Action<OrdenProduccionExterno, Exception> action);
 
         void OrdenProduccionExternoGetByUsuarioPlanta(string usuario,
             Action<List<OrdenProduccionExterno>, Exception> action);

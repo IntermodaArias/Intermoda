@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using Intermoda.Client.DataService.LbDatPro;
 using Intermoda.Client.LbDatPro;
 
 namespace Intermoda.Maquilado.Helpers
@@ -17,5 +18,7 @@ namespace Intermoda.Maquilado.Helpers
         #endregion
 
         Planta Login();
+
+        void EmpaqueDialog(IDataServiceLbDatPro dataService, IDialogService dialogService, OrdenProduccionExterno orden);
     }
 }

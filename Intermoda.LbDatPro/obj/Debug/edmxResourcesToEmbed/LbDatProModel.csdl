@@ -224,8 +224,9 @@
     </FunctionImport>
     <EntitySet Name="CUTARC1Set" EntityType="LBDATPROModel.CUTARC1" />
     <EntitySet Name="FACTALLSet" EntityType="LBDATPROModel.FACTALL" />
-    <EntitySet Name="MaquiladoCajaSet" EntityType="LBDATPROModel.MaquiladoCaja" />
     <EntitySet Name="MaquiladoCajaDetalleSet" EntityType="LBDATPROModel.MaquiladoCajaDetalle" />
+    <EntitySet Name="FACMST21Set" EntityType="LBDATPROModel.FACMST21" />
+    <EntitySet Name="MaquiladoCajaSet" EntityType="LBDATPROModel.MaquiladoCaja" />
     <AssociationSet Name="FK_MaquiladoCajaDetalle_MaquiladoCaja" Association="LBDATPROModel.FK_MaquiladoCajaDetalle_MaquiladoCaja">
       <End Role="MaquiladoCaja" EntitySet="MaquiladoCajaSet" />
       <End Role="MaquiladoCajaDetalle" EntitySet="MaquiladoCajaDetalleSet" />
@@ -912,17 +913,6 @@
     <Property Name="FacDTall" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
     <Property Name="FacSecTal" Type="Int16" />
   </EntityType>
-  <EntityType Name="MaquiladoCaja">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="CompaniaId" Type="Int16" Nullable="false" />
-    <Property Name="OrdenAno" Type="Int16" Nullable="false" />
-    <Property Name="OrdenNumero" Type="Int16" Nullable="false" />
-    <Property Name="Numero" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="MaquiladoCajaDetalle" Relationship="LBDATPROModel.FK_MaquiladoCajaDetalle_MaquiladoCaja" FromRole="MaquiladoCaja" ToRole="MaquiladoCajaDetalle" />
-  </EntityType>
   <EntityType Name="MaquiladoCajaDetalle">
     <Key>
       <PropertyRef Name="Id" />
@@ -933,6 +923,52 @@
     <Property Name="TallaId" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
     <Property Name="Cantidad" Type="Int32" Nullable="false" />
     <NavigationProperty Name="MaquiladoCaja" Relationship="LBDATPROModel.FK_MaquiladoCajaDetalle_MaquiladoCaja" FromRole="MaquiladoCajaDetalle" ToRole="MaquiladoCaja" />
+  </EntityType>
+  <EntityType Name="FACMST21">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="FacArtCod" />
+      <PropertyRef Name="FacCodMdl" />
+      <PropertyRef Name="FacCodRef" />
+      <PropertyRef Name="FacCodTel" />
+      <PropertyRef Name="FacCCol" />
+      <PropertyRef Name="FacCTall" />
+      <PropertyRef Name="PrdCodDim" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="FacArtCod" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="FacCodMdl" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="FacCodRef" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="FacCodTel" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="FacCCol" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="FacCTall" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodDim" Type="Int16" Nullable="false" />
+    <Property Name="FacArtBar2" Type="Decimal" Precision="15" Scale="0" />
+    <Property Name="FacCodAlt" Type="Int32" />
+    <Property Name="FacExiIde" Type="Int32" />
+    <Property Name="FacArtBarB" Type="Decimal" Precision="15" Scale="0" />
+    <Property Name="FacOrdTall" Type="Int16" Nullable="false" />
+    <Property Name="FacCnt6Pre" Type="Int16" />
+    <Property Name="FacCnt12Pr" Type="Int16" />
+    <Property Name="Usuario" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Precision="0" />
+    <Property Name="FacArtBarT" Type="Decimal" Precision="15" Scale="0" />
+    <Property Name="CBarraConDigitoVer" Type="String" MaxLength="61" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="FacMaxArt" Type="Int32" />
+  </EntityType>
+  <EntityType Name="MaquiladoCaja">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompaniaId" Type="Int16" Nullable="false" />
+    <Property Name="OrdenAno" Type="Int16" Nullable="false" />
+    <Property Name="OrdenNumero" Type="Int16" Nullable="false" />
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="MaquiladoCajaDetalle" Relationship="LBDATPROModel.FK_MaquiladoCajaDetalle_MaquiladoCaja" FromRole="MaquiladoCaja" ToRole="MaquiladoCajaDetalle" />
+    <Property Name="FechaApertura" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FechaCierre" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
   </EntityType>
   <Association Name="FK_MaquiladoCajaDetalle_MaquiladoCaja">
     <End Type="LBDATPROModel.MaquiladoCaja" Role="MaquiladoCaja" Multiplicity="1" />

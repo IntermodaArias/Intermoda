@@ -443,6 +443,7 @@ namespace Intermoda.Maquilado.ViewModel
         public RelayCommand RefreshCommand { get; set; }
         public RelayCommand IniciarCentroTrabajoCommand { get; set; }
         public RelayCommand FinalizarCentroTrabajoCommand { get; set; }
+        public RelayCommand EmpacarCommand { get; set; }
         public RelayCommand EnviarIntermodaCommand { get; set; }
 
         #endregion
@@ -499,6 +500,7 @@ namespace Intermoda.Maquilado.ViewModel
             RefreshCommand = new RelayCommand(LoadData);
             IniciarCentroTrabajoCommand = new RelayCommand(LecturaEntrada);
             FinalizarCentroTrabajoCommand = new RelayCommand(LecturaSalida);
+            EmpacarCommand = new RelayCommand(Empacar);
             EnviarIntermodaCommand = new RelayCommand(EnviarIntermoda);
         }
 
@@ -615,6 +617,12 @@ namespace Intermoda.Maquilado.ViewModel
                    }
                    LoadData();
                });
+        }
+
+        private void Empacar()
+        {
+            _dialogService.EmpaqueDialog(_dataService, _dialogService, OrdenSelected);
+
         }
 
         private void EnviarIntermoda()

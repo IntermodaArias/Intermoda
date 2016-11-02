@@ -1,4 +1,6 @@
-﻿using GalaSoft.MvvmLight;
+﻿using System;
+using System.Collections.ObjectModel;
+using GalaSoft.MvvmLight;
 
 namespace Intermoda.Client.LbDatPro
 {
@@ -169,6 +171,142 @@ namespace Intermoda.Client.LbDatPro
 
                 _numero = value;
                 RaisePropertyChanged(NumeroPropertyName);
+            }
+        }
+
+        #endregion
+
+        #region FechaApertura
+
+        /// <summary>
+        /// The <see cref="FechaApertura" /> property's name.
+        /// </summary>
+        public const string FechaAperturaPropertyName = "FechaApertura";
+
+        private DateTime _fechaApertura;
+
+        /// <summary>
+        /// Sets and gets the FechaApertura property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public DateTime FechaApertura
+        {
+            get
+            {
+                return _fechaApertura;
+            }
+
+            set
+            {
+                if (_fechaApertura == value)
+                {
+                    return;
+                }
+
+                _fechaApertura = value;
+                RaisePropertyChanged(FechaAperturaPropertyName);
+            }
+        }
+
+        #endregion
+
+        #region FechaCierre
+
+        /// <summary>
+        /// The <see cref="FechaCierre" /> property's name.
+        /// </summary>
+        public const string FechaCierrePropertyName = "FechaCierre";
+
+        private DateTime _fechaCierre;
+
+        /// <summary>
+        /// Sets and gets the FechaCierre property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public DateTime FechaCierre
+        {
+            get
+            {
+                return _fechaCierre;
+            }
+
+            set
+            {
+                if (_fechaCierre == value)
+                {
+                    return;
+                }
+
+                _fechaCierre = value;
+                RaisePropertyChanged(FechaCierrePropertyName);
+            }
+        }
+
+        #endregion
+
+        #region Estado
+
+        /// <summary>
+        /// The <see cref="Estado" /> property's name.
+        /// </summary>
+        public const string EstadoPropertyName = "Estado";
+
+        private bool _estado;
+
+        /// <summary>
+        /// Sets and gets the Estado property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public bool Estado
+        {
+            get
+            {
+                return _estado;
+            }
+
+            set
+            {
+                if (_estado == value)
+                {
+                    return;
+                }
+
+                _estado = value;
+                RaisePropertyChanged(EstadoPropertyName);
+            }
+        }
+
+        #endregion
+
+        #region Detalle
+
+        /// <summary>
+        /// The <see cref="Detalle" /> property's name.
+        /// </summary>
+        public const string DetallePropertyName = "Detalle";
+
+        private ObservableCollection<MaquiladoCajaDetalle> _detalle;
+
+        /// <summary>
+        /// Sets and gets the Detalle property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public ObservableCollection<MaquiladoCajaDetalle> Detalle
+        {
+            get
+            {
+                return _detalle;
+            }
+
+            set
+            {
+                if (_detalle == value)
+                {
+                    return;
+                }
+
+                _detalle = value;
+                RaisePropertyChanged(DetallePropertyName);
             }
         }
 

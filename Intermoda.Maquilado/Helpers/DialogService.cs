@@ -65,6 +65,17 @@ namespace Intermoda.Maquilado.Helpers
             return planta;
         }
 
+        public void EmpaqueDialog(IDataServiceLbDatPro dataService, IDialogService dialogService, OrdenProduccionExterno orden)
+        {
+            var vm = new MaquiladoEmpaqueViewModel(dataService, dialogService, orden);
+            var dlg = new MaquiladoEmpaqueView {DataContext = vm};
+
+            if (vm.CloseAction == null) vm.CloseAction = dlg.Close;
+            vm.OnRequestClose += (s, e) => dlg.Close();
+
+            dlg.ShowDialog();
+        }
+
         private void HandleLogin(LoginMessage obj)
         {
             _planta = obj.Planta;

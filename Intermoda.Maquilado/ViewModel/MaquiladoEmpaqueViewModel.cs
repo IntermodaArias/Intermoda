@@ -1,52 +1,24 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using Intermoda.Client.DataService.LbDatPro;
 using Intermoda.Client.LbDatPro;
 using Intermoda.Maquilado.Helpers;
+using Intermoda.Maquilado.Model;
 
 namespace Intermoda.Maquilado.ViewModel
 {
     public class MaquiladoEmpaqueViewModel : ViewModelBase
     {
-        private IDataServiceLbDatPro _dataService;
-        private IDialogService _dialogService;
+        private readonly IDataServiceLbDatPro _dataService;
+        private readonly IDialogService _dialogService;
 
         #region Properties
 
-        #region OrdenProduccion
-
-        /// <summary>
-        /// The <see cref="OrdenProduccion" /> property's name.
-        /// </summary>
-        public const string OrdenProduccionPropertyName = "OrdenProduccion";
-
-        private OrdenProduccionExterno _ordenProduccion;
-
-        /// <summary>
-        /// Sets and gets the OrdenProduccion property.
-        /// Changes to that property's value raise the PropertyChanged event. 
-        /// </summary>
-        public OrdenProduccionExterno OrdenProduccion
-        {
-            get
-            {
-                return _ordenProduccion;
-            }
-
-            set
-            {
-                if (_ordenProduccion == value)
-                {
-                    return;
-                }
-
-                _ordenProduccion = value;
-                RaisePropertyChanged(OrdenProduccionPropertyName);
-            }
-        }
-
-        #endregion
+        public OrdenProduccionExterno OrdenProduccion { get; set; }
 
         #region CantidadTotal
 
@@ -150,40 +122,6 @@ namespace Intermoda.Maquilado.ViewModel
 
         #endregion
 
-        #region CajaActualNumero
-
-        /// <summary>
-        /// The <see cref="CajaActualNumero" /> property's name.
-        /// </summary>
-        public const string CajaActualNumeroPropertyName = "CajaActualNumero";
-
-        private int _cajaActualNumero;
-
-        /// <summary>
-        /// Sets and gets the CajaActualNumero property.
-        /// Changes to that property's value raise the PropertyChanged event. 
-        /// </summary>
-        public int CajaActualNumero
-        {
-            get
-            {
-                return _cajaActualNumero;
-            }
-
-            set
-            {
-                if (_cajaActualNumero == value)
-                {
-                    return;
-                }
-
-                _cajaActualNumero = value;
-                RaisePropertyChanged(CajaActualNumeroPropertyName);
-            }
-        }
-
-        #endregion
-
         #region Lectura
 
         /// <summary>
@@ -259,13 +197,13 @@ namespace Intermoda.Maquilado.ViewModel
         /// </summary>
         public const string CajaListPropertyName = "CajaList";
 
-        private MaquiladoCaja _cajaList;
+        private ObservableCollection<MaquiladoCaja> _cajaList;
 
         /// <summary>
         /// Sets and gets the CajaList property.
         /// Changes to that property's value raise the PropertyChanged event. 
         /// </summary>
-        public MaquiladoCaja CajaList
+        public ObservableCollection<MaquiladoCaja> CajaList
         {
             get
             {
@@ -286,6 +224,40 @@ namespace Intermoda.Maquilado.ViewModel
 
         #endregion
 
+        #region CajaActualSelected
+
+        /// <summary>
+        /// The <see cref="CajaActualSelected" /> property's name.
+        /// </summary>
+        public const string CajaActualSelectedPropertyName = "CajaActualSelected";
+
+        private MaquiladoCaja _cajaActualSelected;
+
+        /// <summary>
+        /// Sets and gets the CajaActualSelected property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public MaquiladoCaja CajaActualSelected
+        {
+            get
+            {
+                return _cajaActualSelected;
+            }
+
+            set
+            {
+                if (_cajaActualSelected == value)
+                {
+                    return;
+                }
+
+                _cajaActualSelected = value;
+                RaisePropertyChanged(CajaActualSelectedPropertyName);
+            }
+        }
+
+        #endregion
+
         #region TallaList
 
         /// <summary>
@@ -293,13 +265,13 @@ namespace Intermoda.Maquilado.ViewModel
         /// </summary>
         public const string TallaListPropertyName = "TallaList";
 
-        private OrdenProduccionTalla _tallaList;
+        private ObservableCollection<TallaModel> _tallaList;
 
         /// <summary>
         /// Sets and gets the TallaList property.
         /// Changes to that property's value raise the PropertyChanged event. 
         /// </summary>
-        public OrdenProduccionTalla TallaList
+        public ObservableCollection<TallaModel> TallaList
         {
             get
             {
@@ -320,11 +292,158 @@ namespace Intermoda.Maquilado.ViewModel
 
         #endregion
 
+        public List<OrdenProduccionTalla> OrdenProduccionTallaList { get; set; }
+
+        public Action CloseAction { get; set; }
+
+        public EventHandler OnRequestClose { get; set; }
+
         #endregion
 
         #region Commands
 
-        public RelayCommand Type { get; set; }
+        public RelayCommand CajaNuevaCommand { get; set; }
+        public RelayCommand CajaCerrarCommand { get; set; }
+        public RelayCommand OrdenCerrarCommand { get; set; }
+        public RelayCommand CajaReAbrirCommand { get; set; }
+
+        #endregion
+
+        #region Constructor
+
+        public MaquiladoEmpaqueViewModel(IDataServiceLbDatPro dataService, IDialogService dialogService, OrdenProduccionExterno ordenProduccion)
+        {
+            _dataService = dataService;
+            _dialogService = dialogService;
+
+            if (IsInDesignMode)
+            {
+                _dataService.OrdenProduccionExternoGet(1, 1, 1,
+                    (reg, error) =>
+                    {
+                        if (error != null)
+                        {
+                            _dialogService.ShowException(error);
+                            return;
+                        }
+                        OrdenProduccion = reg;
+                    });
+            }
+            else
+            {
+                OrdenProduccion = ordenProduccion;
+            }
+
+            CantidadTotal = OrdenProduccion.Cantidad;
+
+            RegisterCommand();
+            LoadOrdenProduccionData();
+        }
+
+        #endregion
+
+        #region Methods
+
+        private void RegisterCommand()
+        {
+            CajaNuevaCommand = new RelayCommand(CajaNueva, CanCajaNueva);
+            CajaCerrarCommand = new RelayCommand(CajaCerrar, CanCajaCerrar);
+            CajaReAbrirCommand = new RelayCommand(CajaReabrir, CanCajaReabrir);
+            OrdenCerrarCommand = new RelayCommand(OrdenCerrar, CanOrdenCerrar);
+        }
+
+        private void LoadOrdenProduccionData()
+        {
+            _dataService.OrdenProduccionDetalleGetTallas(OrdenProduccion.CompaniaId, OrdenProduccion.Ano, OrdenProduccion.Numero,
+                (lista, error) =>
+                {
+                    if (error != null)
+                    {
+                        _dialogService.ShowException(error);
+                        return;
+                    }
+                    OrdenProduccionTallaList = new List<OrdenProduccionTalla>(lista);
+                    LoadCajas();
+                });
+        }
+
+        private void LoadCajas()
+        {
+            _dataService.MaquiladoEmpaqueGet(OrdenProduccion.CompaniaId, OrdenProduccion.Ano, OrdenProduccion.Numero,
+                (lista, error) =>
+                {
+                    if (error != null)
+                    {
+                        _dialogService.ShowException(error);
+                        return;
+                    }
+                    CajaList = new ObservableCollection<MaquiladoCaja>(lista);
+                    CalculaResumen();
+                });
+        }
+
+        private void CalculaResumen()
+        {
+            TallaList = new ObservableCollection<TallaModel>();
+            foreach (var talla in OrdenProduccionTallaList.OrderBy(r=>r.Talla.Secuencia))
+            {
+                var empacado = TotalEmpacadoTalla(talla.TallaCodigo);
+                TallaList.Add(new TallaModel
+                {
+                    Codigo = talla.TallaCodigo,
+                    Nombre = talla.Talla.Nombre,
+                    Total = talla.Cantidad,
+                    Empacado = empacado,
+                    Pendiente = talla.Cantidad - empacado
+                });
+            }
+        }
+
+        private int TotalEmpacadoTalla(string tallaCodigo)
+        {
+            return CajaList.Sum(caja => caja.Detalle.Where(r => r.TallaId == tallaCodigo).Sum(r => r.Cantidad));
+        }
+
+        private void CajaNueva()
+        {
+            
+        }
+
+        private bool CanCajaNueva()
+        {
+            return true;
+        }
+
+        private void CajaCerrar()
+        {
+            
+        }
+
+        private bool CanCajaCerrar()
+        {
+            return true;
+        }
+
+        private void CajaReabrir()
+        {
+            
+        }
+
+        private bool CanCajaReabrir()
+        {
+            return true;
+        }
+
+        private void OrdenCerrar()
+        {
+            
+        }
+
+        private bool CanOrdenCerrar()
+        {
+            return true;
+        }
+
         #endregion
     }
 }

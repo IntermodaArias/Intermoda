@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using Intermoda.LbDatPro;
@@ -29,6 +30,15 @@ namespace Intermoda.Business.LbDatPro
         [DataMember]
         public int Numero { get; set; }
 
+        [DataMember]
+        public DateTime FechaApertura { get; set; }
+
+        [DataMember]
+        public DateTime FechaCierre { get; set; }
+
+        [DataMember]
+        public bool Estado { get; set; }
+
         #endregion
 
         #region Methods
@@ -44,7 +54,10 @@ namespace Intermoda.Business.LbDatPro
                         CompaniaId = model.CompaniaId,
                         OrdenAno = model.OrdenAno,
                         OrdenNumero = model.OrdenNumero,
-                        Numero = model.Numero
+                        Numero = model.Numero,
+                        FechaApertura = model.FechaApertura,
+                        FechaCierre = model.FechaCierre,
+                        Estado = model.Estado
                     };
                     _context.MaquiladoCajaSet.Add(reg);
                     _context.SaveChanges();
@@ -75,6 +88,9 @@ namespace Intermoda.Business.LbDatPro
                         reg.OrdenAno = model.OrdenAno;
                         reg.OrdenNumero = model.OrdenNumero;
                         reg.Numero = model.Numero;
+                        reg.FechaApertura = model.FechaApertura;
+                        reg.FechaCierre = model.FechaCierre;
+                        reg.Estado = model.Estado;
 
                         _context.SaveChanges();
 
@@ -153,7 +169,10 @@ namespace Intermoda.Business.LbDatPro
                             CompaniaId = r.CompaniaId,
                             OrdenAno = r.OrdenAno,
                             OrdenNumero = r.OrdenNumero,
-                            Numero = r.Numero
+                            Numero = r.Numero,
+                            FechaApertura = r.FechaApertura,
+                            FechaCierre = r.FechaCierre,
+                            Estado = r.Estado
                         }).FirstOrDefault();
                     if (model != null)
                     {
@@ -182,7 +201,10 @@ namespace Intermoda.Business.LbDatPro
                             CompaniaId = r.CompaniaId,
                             OrdenAno = r.OrdenAno,
                             OrdenNumero = r.OrdenNumero,
-                            Numero = r.Numero
+                            Numero = r.Numero,
+                            FechaApertura = r.FechaApertura,
+                            FechaCierre = r.FechaCierre,
+                            Estado = r.Estado
                         }).ToArray();
                 }
             }
@@ -209,13 +231,99 @@ namespace Intermoda.Business.LbDatPro
                             CompaniaId = r.CompaniaId,
                             OrdenAno = r.OrdenAno,
                             OrdenNumero = r.OrdenNumero,
-                            Numero = r.Numero
+                            Numero = r.Numero,
+                            FechaApertura = r.FechaApertura,
+                            FechaCierre = r.FechaCierre,
+                            Estado = r.Estado
                         }).ToArray();
                 }
             }
             catch (Exception exception)
             {
                 throw new Exception("MaquiladoCajaBusiness / GetAll", exception);
+            }
+        }
+
+        //
+
+        public static MaquiladoEmpaqueBusiness[] GetDetalleByOrden(short companiaId, short ordenAno, short ordenNumero)
+        {
+            try
+            {
+                using (_context = new LBDATPROEntities())
+                {
+                    var lista = new List<MaquiladoEmpaqueBusiness>();
+
+                    var cajas = (from r in _context.MaquiladoCajaSet
+                        where r.CompaniaId == companiaId &&
+                              r.OrdenAno == ordenAno &&
+                              r.OrdenNumero == ordenNumero
+                        orderby r.CompaniaId, r.OrdenAno, r.OrdenNumero, r.Numero
+                        select new MaquiladoCajaBusiness
+                        {
+                            Id = r.Id,
+                            CompaniaId = r.CompaniaId,
+                            OrdenAno = r.OrdenAno,
+                            OrdenNumero = r.OrdenNumero,
+                            Numero = r.Numero,
+                            FechaApertura = r.FechaApertura,
+                            FechaCierre = r.FechaCierre,
+                            Estado = r.Estado
+                        }).ToList();
+                    var detalle = (from r in _context.MaquiladoCajaDetalleSet
+                                   join t in _context.FACTALLSet on
+                                   new {a=r.CompaniaId, b=r.TallaId} equals 
+                                   new {a=t.CiaCod, b=t.FacCTall}
+                        where r.MaquiladoCaja.CompaniaId == companiaId &&
+                              r.MaquiladoCaja.OrdenAno == ordenAno &&
+                              r.MaquiladoCaja.OrdenNumero == ordenNumero
+                        orderby r.MaquiladoCaja.CompaniaId,
+                            r.MaquiladoCaja.OrdenAno,
+                            r.MaquiladoCaja.OrdenNumero,
+                            r.MaquiladoCaja.Numero
+                        select new
+                        {
+                            r.Id,
+                            r.MaquiladoCajaId,
+                            r.MaquiladoCaja.Numero,
+                            r.CompaniaId,
+                            r.TallaId,
+                            t.FacDTall,
+                            t.FacSecTal,
+                            r.Cantidad
+                        }).ToList();
+                    foreach (var caja in cajas)
+                    {
+                        lista.Add(new MaquiladoEmpaqueBusiness
+                        {
+                            Caja = caja,
+                            Detalle = detalle
+                                .Where(r => r.MaquiladoCajaId == caja.Id)
+                                .OrderBy(r => r.MaquiladoCajaId)
+                                .ThenBy(r => r.FacSecTal)
+                                .Select(r => new MaquiladoCajaDetalleBusiness
+                                {
+                                    Id = r.Id,
+                                    MaquiladoCajaId = r.MaquiladoCajaId,
+                                    CompaniaId = r.CompaniaId,
+                                    TallaId = r.TallaId,
+                                    Cantidad = r.Cantidad,
+                                    Talla = new TallaBusiness
+                                    {
+                                        CompaniaId = r.CompaniaId,
+                                        Codigo = r.TallaId,
+                                        Nombre = r.FacDTall,
+                                        Secuencia = r.FacSecTal ?? 0
+                                    }
+                                }).ToArray()
+                        });
+                    }
+                    return lista.ToArray();
+                }
+            }
+            catch (Exception exception)
+            {
+                throw new Exception("MaquiladoCajaBusiness / GetDetalleByOrden", exception);
             }
         }
 

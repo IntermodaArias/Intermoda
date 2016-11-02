@@ -18,6 +18,9 @@ namespace Intermoda.Business.LbDatPro
         public string TallaCodigo { get; set; }
 
         [DataMember]
+        public string Barras { get; set; }
+
+        [DataMember]
         public int Cantidad { get; set; }
 
         [DataMember]

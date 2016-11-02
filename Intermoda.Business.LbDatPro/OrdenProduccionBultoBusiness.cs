@@ -99,6 +99,35 @@ namespace Intermoda.Business.LbDatPro
             {
                 using (_context = new LBDATPROEntities())
                 {
+                    var orden = _context.CUTARC3Set
+                        .FirstOrDefault(r =>
+                            r.CIACOD == companiaId &&
+                            r.PrdAnoCor == ordenAno &&
+                            r.PrdNumCor == ordenNumero);
+                    if (orden == null)
+                    {
+                        throw new Exception("No se ha encontrado orden de producción");
+                    }
+
+                    var tallas = (from r in _context.CUTARC1Set
+                                  join o in _context.CUTARC3Set on
+                                      new { a = r.CIACOD, b = r.PrdAnoCor, c = r.PrdNumCor } equals
+                                      new { a = o.CIACOD, b = o.PrdAnoCor, c = o.PrdNumCor }
+                                  join t in _context.FACTALLSet on
+                                      new { a = r.CIACOD, b = r.FacCTall } equals
+                                      new { a = t.CiaCod, b = t.FacCTall }
+                                  join s in _context.FACMST21Set on
+                                      new { a = o.PrdCodArt, b = o.FacCodMdl, c = o.FacCodTel, d = o.FacCodRef, e = o.FacCCol, f = r.FacCTall} equals
+                                      new { a = s.FacArtCod, b = s.FacCodMdl, c = s.FacCodTel, d = s.FacCodRef, e = s.FacCCol, f = s.FacCTall }
+                                  select new
+                                  {
+                                      r.CIACOD,
+                                      r.FacCTall,
+                                      t.FacDTall,
+                                      t.FacSecTal,
+                                      s.CBarraConDigitoVer
+                                  }).ToList();
+
                     var bultos = _context.CUTARC1Set
                         .Where(r => r.CIACOD == companiaId)
                         .Where(r => r.PrdAnoCor == ordenAno)
@@ -120,17 +149,10 @@ namespace Intermoda.Business.LbDatPro
                             r.TallaCodigo == bulto.FacCTall);
                         if (reg == null)
                         {
-                            var talla = _context.FACTALLSet
-                                .Where(r => r.CiaCod == bulto.CIACOD)
-                                .Where(r => r.FacCTall == bulto.FacCTall)
-                                .Select(r => new TallaBusiness
-                                {
-                                    CompaniaId = r.CiaCod,
-                                    Codigo = r.FacCTall,
-                                    Nombre = r.FacDTall,
-                                    Secuencia = r.FacSecTal ?? 0
-                                })
-                                .FirstOrDefault();
+                            var talla = tallas
+                                .FirstOrDefault(r =>
+                                    r.CIACOD == bulto.CIACOD &&
+                                    r.FacCTall == bulto.FacCTall);
 
                             lista.Add(new OrdenProduccionTallaBusiness
                             {
@@ -139,7 +161,18 @@ namespace Intermoda.Business.LbDatPro
                                 OrdenNumero = bulto.PrdNumCor,
                                 TallaCodigo = bulto.FacCTall,
                                 Cantidad = bulto.PrdCanBun ?? 0,
-                                Talla = talla
+                                Barras = talla == null
+                                    ? ""
+                                    : talla.CBarraConDigitoVer,
+                                Talla = talla == null
+                                    ? null
+                                    : new TallaBusiness
+                                    {
+                                        CompaniaId = talla.CIACOD,
+                                        Codigo = talla.FacCTall,
+                                        Nombre = talla.FacDTall,
+                                        Secuencia = talla.FacSecTal ?? 0
+                                    }
                             });
                         }
                         else
