@@ -7,7 +7,6 @@
       <Diagram DiagramId="10afbb6116f34934b7fee8a2f146878c" Name="Diagram1">
         <EntityTypeShape EntityType="LBDATPROModel.CATALOG" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="false" />
         <EntityTypeShape EntityType="LBDATPROModel.CLASE" Width="1.5" PointX="2.625" PointY="0.75" IsExpanded="false" />
-        <EntityTypeShape EntityType="LBDATPROModel.FACCOL" Width="1.5" PointX="2.625" PointY="1.375" IsExpanded="false" />
         <EntityTypeShape EntityType="LBDATPROModel.GRUTEL" Width="1.5" PointX="8.25" PointY="1.375" IsExpanded="false" />
         <EntityTypeShape EntityType="LBDATPROModel.MATMST" Width="1.5" PointX="2.625" PointY="2" IsExpanded="false" />
         <EntityTypeShape EntityType="LBDATPROModel.MATMST1" Width="1.5" PointX="0.75" PointY="2" IsExpanded="false" />
@@ -31,6 +30,7 @@
         <EntityTypeShape EntityType="LBDATPROModel.FACMST21" Width="1.5" PointX="4.5" PointY="1.375" IsExpanded="false" />
         <EntityTypeShape EntityType="LBDATPROModel.MaquiladoCaja" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="false" />
         <AssociationConnector Association="LBDATPROModel.FK_MaquiladoCajaDetalle_MaquiladoCaja" />
+        <EntityTypeShape EntityType="LBDATPROModel.FACCOL" Width="1.5" PointX="2.625" PointY="1.375" IsExpanded="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

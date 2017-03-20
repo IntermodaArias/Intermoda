@@ -7,3 +7,13 @@ C:\VisualStudio\Intermoda\Intermoda.Produccion.Lavanderia\bin\Release\EntityFram
 C:\VisualStudio\Intermoda\Intermoda.Produccion.Lavanderia\bin\Release\EntityFramework.SqlServer.xml
 C:\VisualStudio\Intermoda\Intermoda.Produccion.Lavanderia\obj\Release\Intermoda.Produccion.Lavanderia.dll
 C:\VisualStudio\Intermoda\Intermoda.Produccion.Lavanderia\obj\Release\Intermoda.Produccion.Lavanderia.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lavanderia\bin\Release\Intermoda.Produccion.Lavanderia.dll.config
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lavanderia\bin\Release\Intermoda.Produccion.Lavanderia.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lavanderia\bin\Release\Intermoda.Produccion.Lavanderia.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lavanderia\bin\Release\EntityFramework.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lavanderia\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lavanderia\bin\Release\EntityFramework.xml
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lavanderia\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lavanderia\obj\Release\Intermoda.Produccion.Lavanderia.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lavanderia\obj\Release\Intermoda.Produccion.Lavanderia.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lavanderia\obj\Release\Intermoda.Produccion.Lavanderia.csprojResolveAssemblyReference.cache

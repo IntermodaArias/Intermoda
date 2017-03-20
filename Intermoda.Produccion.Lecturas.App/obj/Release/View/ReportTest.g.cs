@@ -10,6 +10,8 @@
 //------------------------------------------------------------------------------
 
 using Intermoda.Produccion.Lecturas.App.View;
+using Intermoda.Produccion.Lecturas.App.View.Lavanderia;
+using Intermoda.Wpf.Controls;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -32,6 +34,42 @@ using System.Windows.Shapes;
 using System.Windows.Shell;
 using Telerik.ReportViewer.Wpf;
 using Telerik.Reporting;
+using Telerik.Windows.Controls;
+using Telerik.Windows.Controls.Animation;
+using Telerik.Windows.Controls.Book;
+using Telerik.Windows.Controls.Breadcrumb;
+using Telerik.Windows.Controls.Calculator;
+using Telerik.Windows.Controls.Calendar;
+using Telerik.Windows.Controls.Carousel;
+using Telerik.Windows.Controls.Chromes;
+using Telerik.Windows.Controls.ColorEditor;
+using Telerik.Windows.Controls.ColorEditor.Converters;
+using Telerik.Windows.Controls.ColorEditor.Effects;
+using Telerik.Windows.Controls.ColorEditor.Helpers;
+using Telerik.Windows.Controls.ColorEditor.Mode;
+using Telerik.Windows.Controls.ColorEditor.Pad;
+using Telerik.Windows.Controls.ColorPicker.Converters;
+using Telerik.Windows.Controls.DragDrop;
+using Telerik.Windows.Controls.Expander;
+using Telerik.Windows.Controls.Filtering.Editors;
+using Telerik.Windows.Controls.Legend;
+using Telerik.Windows.Controls.Localization;
+using Telerik.Windows.Controls.MaskedInput;
+using Telerik.Windows.Controls.Navigation;
+using Telerik.Windows.Controls.OutlookBar;
+using Telerik.Windows.Controls.Primitives;
+using Telerik.Windows.Controls.RadialMenu;
+using Telerik.Windows.Controls.Rating;
+using Telerik.Windows.Controls.TabControl;
+using Telerik.Windows.Controls.TileView;
+using Telerik.Windows.Controls.ToolBar;
+using Telerik.Windows.Controls.TransitionControl;
+using Telerik.Windows.Controls.TransitionEffects;
+using Telerik.Windows.Controls.TreeView;
+using Telerik.Windows.Controls.Wizard;
+using Telerik.Windows.DragDrop;
+using Telerik.Windows.Input.Touch;
+using Telerik.Windows.Shapes;
 
 
 namespace Intermoda.Produccion.Lecturas.App.View {

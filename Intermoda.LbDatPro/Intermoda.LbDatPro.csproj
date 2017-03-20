@@ -114,6 +114,9 @@
     <Compile Include="MaquiladoCajaDetalle.cs">
       <DependentUpon>LbDatProModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="MaquiladoTrabajoEnProceso_Result.cs">
+      <DependentUpon>LbDatProModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MATMST.cs">
       <DependentUpon>LbDatProModel.tt</DependentUpon>
     </Compile>

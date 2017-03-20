@@ -3,3 +3,7 @@ C:\VisualStudio\Intermoda\Intermoda.Common\bin\Release\Intermoda.Common.pdb
 C:\VisualStudio\Intermoda\Intermoda.Common\obj\Release\Intermoda.Common.dll
 C:\VisualStudio\Intermoda\Intermoda.Common\obj\Release\Intermoda.Common.pdb
 C:\VisualStudio\Intermoda\Intermoda.Common\obj\Release\Intermoda.Common.csprojResolveAssemblyReference.cache
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Common\bin\Release\Intermoda.Common.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Common\bin\Release\Intermoda.Common.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Common\obj\Release\Intermoda.Common.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Common\obj\Release\Intermoda.Common.pdb

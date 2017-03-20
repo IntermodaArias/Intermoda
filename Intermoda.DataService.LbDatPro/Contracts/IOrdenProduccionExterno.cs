@@ -10,10 +10,16 @@ namespace Intermoda.DataService.LbDatPro
         OrdenProduccionExternoBusiness[] GetByUsuarioPlanta(string usuario);
 
         [OperationContract]
+        OrdenProduccionExternoBusiness[] Get();
+
+        [OperationContract]
+        MaquiladoTrabajoEnProceso[] GetMaquiladoTrabajoEnProceso();
+
+        [OperationContract]
         void SetEstado(short companiaId, short ordenAno, short ordenNumero, string estadoId);
 
         [OperationContract]
-        void GrabarLectura(short companiaId, short ordenAno, short ordenNumero, string centroTrabajoId, string tipo,
+        OrdenProduccionExternoBusiness GrabarLectura(short companiaId, short ordenAno, short ordenNumero, string centroTrabajoId, string tipo,
             string usuario);
 
         [OperationContract]

@@ -17,6 +17,30 @@ namespace Intermoda.DataService.LbDatPro
             }
         }
 
+        public OrdenProduccionExternoBusiness[] Get()
+        {
+            try
+            {
+                return OrdenProduccionExternoBusiness.Get();
+            }
+            catch (Exception exception)
+            {
+                throw new Exception("OrdenProduccionExterno Service / Get", exception);
+            }
+        }
+
+        public MaquiladoTrabajoEnProceso[] GetMaquiladoTrabajoEnProceso()
+        {
+            try
+            {
+                return OrdenProduccionExternoBusiness.GetMaquiladoTrabajoEnProceso();
+            }
+            catch (Exception exception)
+            {
+                throw new Exception("OrdenProduccionExterno Service / GetMaquiladoTrabajoEnProceso", exception);
+            }
+        }
+
         public void SetEstado(short companiaId, short ordenAno, short ordenNumero, string estadoId)
         {
             try
@@ -29,12 +53,12 @@ namespace Intermoda.DataService.LbDatPro
             }
         }
 
-        public void GrabarLectura(short companiaId, short ordenAno, short ordenNumero, string centroTrabajoId, string tipo,
+        public OrdenProduccionExternoBusiness GrabarLectura(short companiaId, short ordenAno, short ordenNumero, string centroTrabajoId, string tipo,
             string usuario)
         {
             try
             {
-                OrdenProduccionExternoBusiness.GrabarLectura(companiaId,ordenAno,ordenNumero,centroTrabajoId, tipo, usuario);
+                return OrdenProduccionExternoBusiness.GrabarLectura(companiaId,ordenAno,ordenNumero,centroTrabajoId, tipo, usuario);
             }
             catch (Exception exception)
             {

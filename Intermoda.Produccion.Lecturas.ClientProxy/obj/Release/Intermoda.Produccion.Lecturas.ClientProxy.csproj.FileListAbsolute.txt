@@ -4,3 +4,9 @@ C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.ClientProxy\bin\Release\
 C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.ClientProxy\obj\Release\Intermoda.Produccion.Lecturas.ClientProxy.csprojResolveAssemblyReference.cache
 C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.ClientProxy\obj\Release\Intermoda.Produccion.Lecturas.ClientProxy.dll
 C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.ClientProxy\obj\Release\Intermoda.Produccion.Lecturas.ClientProxy.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.ClientProxy\bin\Release\Intermoda.Produccion.Lecturas.ClientProxy.dll.config
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.ClientProxy\bin\Release\Intermoda.Produccion.Lecturas.ClientProxy.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.ClientProxy\bin\Release\Intermoda.Produccion.Lecturas.ClientProxy.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.ClientProxy\obj\Release\Intermoda.Produccion.Lecturas.ClientProxy.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.ClientProxy\obj\Release\Intermoda.Produccion.Lecturas.ClientProxy.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.ClientProxy\obj\Release\Intermoda.Produccion.Lecturas.ClientProxy.csprojResolveAssemblyReference.cache

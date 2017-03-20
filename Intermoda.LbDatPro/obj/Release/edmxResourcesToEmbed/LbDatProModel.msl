@@ -43,18 +43,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="FACCOLSet">
-      <EntityTypeMapping TypeName="LBDATPROModel.FACCOL">
-        <MappingFragment StoreEntitySet="FACCOL">
-          <ScalarProperty Name="FacIDCol" ColumnName="FacIDCol" />
-          <ScalarProperty Name="CiaCod" ColumnName="CiaCod" />
-          <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
-          <ScalarProperty Name="FacDCol" ColumnName="FacDCol" />
-          <ScalarProperty Name="AxColorId01" ColumnName="AxColorId01" />
-          <ScalarProperty Name="AxColorId02" ColumnName="AxColorId02" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="GRUTELSet">
       <EntityTypeMapping TypeName="LBDATPROModel.GRUTEL">
         <MappingFragment StoreEntitySet="GRUTEL">
@@ -69,6 +57,8 @@
     <EntitySetMapping Name="MATMSTSet">
       <EntityTypeMapping TypeName="LBDATPROModel.MATMST">
         <MappingFragment StoreEntitySet="MATMST">
+          <ScalarProperty Name="CatMatCod" ColumnName="CatMatCod" />
+          <ScalarProperty Name="CmpTelCol" ColumnName="CmpTelCol" />
           <ScalarProperty Name="MprSubCod" ColumnName="MprSubCod" />
           <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
           <ScalarProperty Name="MapCodMat" ColumnName="MapCodMat" />
@@ -700,6 +690,9 @@
     <EntitySetMapping Name="CTRABAJOSet">
       <EntityTypeMapping TypeName="LBDATPROModel.CTRABAJO">
         <MappingFragment StoreEntitySet="CTRABAJO">
+          <ScalarProperty Name="CtSalidaAu" ColumnName="CtSalidaAu" />
+          <ScalarProperty Name="CtFrmRevis" ColumnName="CtFrmRevis" />
+          <ScalarProperty Name="PrdSecXls" ColumnName="PrdSecXls" />
           <ScalarProperty Name="MOCCosto" ColumnName="MOCCosto" />
           <ScalarProperty Name="PrdCtTip" ColumnName="PrdCtTip" />
           <ScalarProperty Name="CCCodigo" ColumnName="CCCodigo" />
@@ -806,5 +799,161 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="WIPOrdenesProduccionB" FunctionName="LBDATPROModel.Store.WIPOrdenesProduccionB">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LBDATPROModel.WIPOrdenesProduccionB_Result">
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+          <ScalarProperty Name="CiaDes" ColumnName="CiaDes" />
+          <ScalarProperty Name="PrdAnoCor" ColumnName="PrdAnoCor" />
+          <ScalarProperty Name="PrdNumCor" ColumnName="PrdNumCor" />
+          <ScalarProperty Name="PrdCodArt" ColumnName="PrdCodArt" />
+          <ScalarProperty Name="FacCodMdl" ColumnName="FacCodMdl" />
+          <ScalarProperty Name="FacCodTel" ColumnName="FacCodTel" />
+          <ScalarProperty Name="FacCodRef" ColumnName="FacCodRef" />
+          <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
+          <ScalarProperty Name="PrdStsCor" ColumnName="PrdStsCor" />
+          <ScalarProperty Name="PrdUsuPrd" ColumnName="PrdUsuPrd" />
+          <ScalarProperty Name="PrdPriCor" ColumnName="PrdPriCor" />
+          <ScalarProperty Name="PrdAnoDep" ColumnName="PrdAnoDep" />
+          <ScalarProperty Name="PrdNumDep" ColumnName="PrdNumDep" />
+          <ScalarProperty Name="PrdProTel" ColumnName="PrdProTel" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="ModuloEnsamble" ColumnName="ModuloEnsamble" />
+          <ScalarProperty Name="ConTela" ColumnName="ConTela" />
+          <ScalarProperty Name="InicioProgramado" ColumnName="InicioProgramado" />
+          <ScalarProperty Name="FinalProgramado" ColumnName="FinalProgramado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="CUTARC1Set">
+      <EntityTypeMapping TypeName="LBDATPROModel.CUTARC1">
+        <MappingFragment StoreEntitySet="CUTARC1">
+          <ScalarProperty Name="PrdCanTro" ColumnName="PrdCanTro" />
+          <ScalarProperty Name="PrdTroco" ColumnName="PrdTroco" />
+          <ScalarProperty Name="PrdSeccion" ColumnName="PrdSeccion" />
+          <ScalarProperty Name="PrdCanBun" ColumnName="PrdCanBun" />
+          <ScalarProperty Name="PrdCodDim" ColumnName="PrdCodDim" />
+          <ScalarProperty Name="FacCTallN" ColumnName="FacCTallN" />
+          <ScalarProperty Name="FacCTall" ColumnName="FacCTall" />
+          <ScalarProperty Name="PrdFinCap" ColumnName="PrdFinCap" />
+          <ScalarProperty Name="PrdIniCap" ColumnName="PrdIniCap" />
+          <ScalarProperty Name="PrdPtoReo" ColumnName="PrdPtoReo" />
+          <ScalarProperty Name="PrdUniEli" ColumnName="PrdUniEli" />
+          <ScalarProperty Name="PrdUniPer" ColumnName="PrdUniPer" />
+          <ScalarProperty Name="PrdUniTer" ColumnName="PrdUniTer" />
+          <ScalarProperty Name="PrdUniSeg" ColumnName="PrdUniSeg" />
+          <ScalarProperty Name="PrdBulto" ColumnName="PrdBulto" />
+          <ScalarProperty Name="PrdUniPri" ColumnName="PrdUniPri" />
+          <ScalarProperty Name="PrdNoBund" ColumnName="PrdNoBund" />
+          <ScalarProperty Name="PrdAnoCor" ColumnName="PrdAnoCor" />
+          <ScalarProperty Name="PrdNumCor" ColumnName="PrdNumCor" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FACTALLSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.FACTALL">
+        <MappingFragment StoreEntitySet="FACTALL">
+          <ScalarProperty Name="FacSecTal" ColumnName="FacSecTal" />
+          <ScalarProperty Name="FacDTall" ColumnName="FacDTall" />
+          <ScalarProperty Name="FacCTall" ColumnName="FacCTall" />
+          <ScalarProperty Name="CiaCod" ColumnName="CiaCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaquiladoCajaDetalleSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.MaquiladoCajaDetalle">
+        <MappingFragment StoreEntitySet="MaquiladoCajaDetalle">
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="TallaId" ColumnName="TallaId" />
+          <ScalarProperty Name="CompaniaId" ColumnName="CompaniaId" />
+          <ScalarProperty Name="MaquiladoCajaId" ColumnName="MaquiladoCajaId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FACMST21Set">
+      <EntityTypeMapping TypeName="LBDATPROModel.FACMST21">
+        <MappingFragment StoreEntitySet="FACMST21">
+          <ScalarProperty Name="FacMaxArt" ColumnName="FacMaxArt" />
+          <ScalarProperty Name="CBarraConDigitoVer" ColumnName="CBarraConDigitoVer" />
+          <ScalarProperty Name="FacArtBarT" ColumnName="FacArtBarT" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="FacCnt12Pr" ColumnName="FacCnt12Pr" />
+          <ScalarProperty Name="FacCnt6Pre" ColumnName="FacCnt6Pre" />
+          <ScalarProperty Name="FacOrdTall" ColumnName="FacOrdTall" />
+          <ScalarProperty Name="FacArtBarB" ColumnName="FacArtBarB" />
+          <ScalarProperty Name="FacExiIde" ColumnName="FacExiIde" />
+          <ScalarProperty Name="FacCodAlt" ColumnName="FacCodAlt" />
+          <ScalarProperty Name="FacArtBar2" ColumnName="FacArtBar2" />
+          <ScalarProperty Name="PrdCodDim" ColumnName="PrdCodDim" />
+          <ScalarProperty Name="FacCTall" ColumnName="FacCTall" />
+          <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
+          <ScalarProperty Name="FacCodTel" ColumnName="FacCodTel" />
+          <ScalarProperty Name="FacCodRef" ColumnName="FacCodRef" />
+          <ScalarProperty Name="FacCodMdl" ColumnName="FacCodMdl" />
+          <ScalarProperty Name="FacArtCod" ColumnName="FacArtCod" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaquiladoCajaSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.MaquiladoCaja">
+        <MappingFragment StoreEntitySet="MaquiladoCaja">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaCierre" ColumnName="FechaCierre" />
+          <ScalarProperty Name="FechaApertura" ColumnName="FechaApertura" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="OrdenNumero" ColumnName="OrdenNumero" />
+          <ScalarProperty Name="OrdenAno" ColumnName="OrdenAno" />
+          <ScalarProperty Name="CompaniaId" ColumnName="CompaniaId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FACCOLSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.FACCOL">
+        <MappingFragment StoreEntitySet="FACCOL">
+          <ScalarProperty Name="AxColorId01" ColumnName="AxColorId01" />
+          <ScalarProperty Name="FacIDCol" ColumnName="FacIDCol" />
+          <ScalarProperty Name="FacDCol" ColumnName="FacDCol" />
+          <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="MaquiladoTrabajoEnProceso" FunctionName="LBDATPROModel.Store.MaquiladoTrabajoEnProceso">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LBDATPROModel.MaquiladoTrabajoEnProceso_Result">
+          <ScalarProperty Name="CompaniaId" ColumnName="CompaniaId" />
+          <ScalarProperty Name="OrdenAno" ColumnName="OrdenAno" />
+          <ScalarProperty Name="OrdenNumero" ColumnName="OrdenNumero" />
+          <ScalarProperty Name="PlantaId" ColumnName="PlantaId" />
+          <ScalarProperty Name="PlantaNombre" ColumnName="PlantaNombre" />
+          <ScalarProperty Name="PlantaIniciales" ColumnName="PlantaIniciales" />
+          <ScalarProperty Name="BultoNumero" ColumnName="BultoNumero" />
+          <ScalarProperty Name="CentroTrabajoId" ColumnName="CentroTrabajoId" />
+          <ScalarProperty Name="CentroTrabajoNombre" ColumnName="CentroTrabajoNombre" />
+          <ScalarProperty Name="CentroTrabajoSecuencia" ColumnName="CentroTrabajoSecuencia" />
+          <ScalarProperty Name="FechaEntrada" ColumnName="FechaEntrada" />
+          <ScalarProperty Name="FechaSalida" ColumnName="FechaSalida" />
+          <ScalarProperty Name="Patron" ColumnName="Patron" />
+          <ScalarProperty Name="Variante" ColumnName="Variante" />
+          <ScalarProperty Name="Tela" ColumnName="Tela" />
+          <ScalarProperty Name="Lavado" ColumnName="Lavado" />
+          <ScalarProperty Name="ColorId" ColumnName="ColorId" />
+          <ScalarProperty Name="ColorNombre" ColumnName="ColorNombre" />
+          <ScalarProperty Name="EstadoId" ColumnName="EstadoId" />
+          <ScalarProperty Name="EstadoNombre" ColumnName="EstadoNombre" />
+          <ScalarProperty Name="EstadoSecuencia" ColumnName="EstadoSecuencia" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="EnvioContratista" ColumnName="EnvioContratista" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRD_LecturaCuponGX" FunctionName="LBDATPROModel.Store.PRD_LecturaCuponGX" />
+    <FunctionImportMapping FunctionImportName="PRD_UsuarioLecturaCupon" FunctionName="LBDATPROModel.Store.PRD_UsuarioLecturaCupon" />
+    <FunctionImportMapping FunctionImportName="PRD_UsuarioLecturaCuponGX" FunctionName="LBDATPROModel.Store.PRD_UsuarioLecturaCuponGX" />
   </EntityContainerMapping>
 </Mapping>

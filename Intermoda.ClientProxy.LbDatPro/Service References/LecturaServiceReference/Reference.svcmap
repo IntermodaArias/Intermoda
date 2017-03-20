@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="96c60e27-2041-4706-bee1-286f69ac3b04" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://190.5.95.110/ImDataServiceLb/Lecturas.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Lecturas.wsdl" MetadataType="Wsdl" ID="a37ec7a0-d1e8-4227-92d1-060ab55fa076" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/Lecturas.svc?wsdl" />
+    <MetadataFile FileName="Lecturas.xsd" MetadataType="Schema" ID="0b6246a9-11ba-43c2-8d30-739ed867b0d6" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/Lecturas.svc?xsd=xsd2" />
+    <MetadataFile FileName="Lecturas.disco" MetadataType="Disco" ID="db7563a9-107a-4cce-9947-f53cf9d3cf1a" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/Lecturas.svc?disco" />
+    <MetadataFile FileName="Lecturas1.xsd" MetadataType="Schema" ID="7abf9175-d93b-4961-8874-350a0dc74407" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/Lecturas.svc?xsd=xsd0" />
+    <MetadataFile FileName="Lecturas2.xsd" MetadataType="Schema" ID="ce3bda21-9077-4d17-88d8-7adde3be67b2" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/Lecturas.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

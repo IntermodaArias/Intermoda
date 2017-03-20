@@ -4703,6 +4703,19 @@
             <param name="propertyNamesStack">The stack containing the property names.</param>
             <returns>The property value.</returns>
         </member>
+        <member name="T:Telerik.Windows.Data.Extensions.DataRowViewExtensions">
+            <summary>
+            This static class defines the DataRowView extension methods.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Data.Extensions.DataRowViewExtensions.Field``1(System.Data.DataRowView,System.String)">
+            <summary>
+            This method provides access to the values in each of the columns in a given rowView. 
+            </summary>
+            <param name="rowView">The input DataRowView.</param>
+            <param name="columnName">The input column name specify which rowView value to retrieve.</param>
+            <returns>The DataRowView value for the column specified.</returns>
+        </member>
         <member name="P:Telerik.Windows.Data.Expressions.ExpressionBuilderOptions.LiftMemberAccessToNull">
             <summary>
             Gets or sets a value indicating whether member access expression used

@@ -144,6 +144,8 @@
     <Property Name="PrdCtTip" Type="char" MaxLength="1" />
     <Property Name="MOCCosto" Type="smallmoney" />
     <Property Name="PrdSecXls" Type="smallint" />
+    <Property Name="CtFrmRevis" Type="char" MaxLength="100" />
+    <Property Name="CtSalidaAu" Type="smallint" />
   </EntityType>
   <EntityType Name="CUTARC1">
     <Key>
@@ -408,15 +410,14 @@
   </EntityType>
   <EntityType Name="FACCOL">
     <Key>
-      <PropertyRef Name="CiaCod" />
+      <PropertyRef Name="CIACOD" />
       <PropertyRef Name="FacCCol" />
     </Key>
-    <Property Name="CiaCod" Type="smallint" Nullable="false" />
+    <Property Name="CIACOD" Type="smallint" Nullable="false" />
     <Property Name="FacCCol" Type="char" MaxLength="2" Nullable="false" />
     <Property Name="FacDCol" Type="char" MaxLength="20" />
-    <Property Name="AxColorId01" Type="char" MaxLength="8" />
-    <Property Name="AxColorId02" Type="char" MaxLength="8" />
     <Property Name="FacIDCol" Type="char" MaxLength="20" />
+    <Property Name="AxColorId01" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="FACMST21">
     <Key>
@@ -737,11 +738,13 @@
     <Property Name="MprEtgCon" Type="char" MaxLength="1" />
     <Property Name="MprCodUbi" Type="smallint" />
     <Property Name="MprCtCod" Type="char" MaxLength="2" />
-    <Property Name="MatCntRes" Type="smallmoney" />
     <Property Name="MprExcCmp" Type="smallint" />
     <Property Name="MatUltMov" Type="date" />
     <Property Name="FacCCol" Type="char" MaxLength="2" />
     <Property Name="MprSubCod" Type="smallint" />
+    <Property Name="CmpTelCol" Type="char" MaxLength="10" />
+    <Property Name="MatCntRes" Type="smallmoney" />
+    <Property Name="CatMatCod" Type="smallint" />
   </EntityType>
   <EntityType Name="MATMST1">
     <Key>
@@ -924,6 +927,23 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="MaquiladoTrabajoEnProceso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="PRD_LecturaCuponGX" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CiaCod" Type="int" Mode="InOut" />
+    <Parameter Name="StrCupon" Type="varchar" Mode="InOut" />
+    <Parameter Name="Usuario" Type="varchar" Mode="InOut" />
+    <Parameter Name="StrError" Type="varchar(max)" Mode="InOut" />
+    <Parameter Name="IntError" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="PRD_UsuarioLecturaCupon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StrUsuario" Type="varchar" Mode="InOut" />
+    <Parameter Name="Compania" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="PRD_UsuarioLecturaCuponGX" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StrUsuario" Type="varchar" Mode="InOut" />
+    <Parameter Name="Compania" Type="int" Mode="InOut" />
+    <Parameter Name="StrError" Type="varchar" Mode="InOut" />
+  </Function>
   <Function Name="WIPOrdenesProduccionB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="CiaCod" Type="smallint" Mode="In" />
   </Function>

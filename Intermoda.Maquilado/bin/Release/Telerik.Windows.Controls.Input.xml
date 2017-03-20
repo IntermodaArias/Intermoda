@@ -573,9 +573,15 @@
              </summary>
         </member>
         <member name="M:Telerik.Windows.Controls.IFilteringBehavior.FindMatchingItems(System.String,System.Collections.IList,System.Collections.Generic.IEnumerable{System.Object},System.String,Telerik.Windows.Controls.TextSearchMode)">
-             <summary>
-            
-             </summary>
+            <summary>
+            Find matching items using given criteria.
+            </summary>
+            <param name="searchText">Text for search.</param>
+            <param name="items">The items for search.</param>
+            <param name="escapedItems">Items which will be escaped when searching.</param>
+            <param name="textSearchPath">The path for applying search.</param>
+            <param name="textSearchMode">The text search mode.</param>
+            <returns></returns>
         </member>
         <member name="M:Telerik.Windows.Controls.AsyncFilteringBehavior.FindMatchingItems(System.String,System.Collections.IList,System.Collections.Generic.IEnumerable{System.Object},System.String,Telerik.Windows.Controls.TextSearchMode)">
             <summary>
@@ -617,9 +623,15 @@
              </summary>
         </member>
         <member name="M:Telerik.Windows.Controls.FilteringBehavior.FindMatchingItems(System.String,System.Collections.IList,System.Collections.Generic.IEnumerable{System.Object},System.String,Telerik.Windows.Controls.TextSearchMode)">
-             <summary>
-            
-             </summary>
+            <summary>
+            Find matching items using given criteria.
+            </summary>
+            <param name="searchText">Text for search.</param>
+            <param name="items">The items for search.</param>
+            <param name="escapedItems">Items which will be escaped when searching.</param>
+            <param name="textSearchPath">The path for applying search.</param>
+            <param name="textSearchMode">The text search mode.</param>
+            <returns></returns>
         </member>
         <member name="T:Telerik.Windows.Controls.HighlightBehavior">
             <summary>
@@ -962,12 +974,25 @@
             </summary>
             <param name="searchText"></param>
         </member>
+        <member name="M:Telerik.Windows.Controls.RadAutoCompleteBox.HandleKeyDown(System.Windows.Input.Key)">
+            <summary>
+            Contains the keyboard navigation logic of RadAutoCompleteBox.
+            </summary>
+            <param name="systemKey">The key that has been pressed.</param>
+            <returns>True if the KeyDown event should be handled, otherwise false.</returns>
+        </member>
         <member name="M:Telerik.Windows.Controls.RadAutoCompleteBox.OnInitialized(System.EventArgs)">
             <summary>
             Raises the <see cref="E:System.Windows.FrameworkElement.Initialized"/> event.
             This method is invoked whenever <see cref="P:System.Windows.FrameworkElement.IsInitialized"/> is set to true internally.
             </summary>
             <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadAutoCompleteBox.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseWheel"/> event occurs to provide handling for the event in a derived class without attaching a delegate.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Input.MouseWheelEventArgs"/> that contains the event data.</param>
         </member>
         <member name="M:Telerik.Windows.Controls.RadAutoCompleteBox.OnTextSearchPathChanged">
             <summary>
@@ -12240,11 +12265,6 @@
         <member name="M:Telerik.Windows.Controls.RadMaskedCurrencyInput.ReplaceChar(System.Text.StringBuilder,System.Int32@)">
             <inheritdoc />
         </member>
-        <member name="M:Telerik.Windows.Controls.RadMaskedCurrencyInput.IsZeroValidForInsertNoMask">
-            <summary>
-            Returns whether zero digit is valid input in no masked scenario.
-            </summary>
-        </member>
         <member name="P:Telerik.Windows.Controls.RadMaskedCurrencyInput.AllowSkipPlaceholders">
             <summary>
             Gets or sets whether input can skip placeholders.
@@ -12846,11 +12866,6 @@
         </member>
         <member name="M:Telerik.Windows.Controls.RadMaskedNumericInput.ClearSelectionNoMask">
             <inheritdoc />
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadMaskedNumericInput.IsZeroValidForInsertNoMask">
-            <summary>
-            Returns whether zero digit is valid input in no masked scenario.
-            </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.RadMaskedNumericInput.AllowSkipPlaceholders">
             <summary>

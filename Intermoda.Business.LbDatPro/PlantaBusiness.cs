@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
+using Intermoda.Common;
 using Intermoda.LbDatPro;
 
 namespace Intermoda.Business.LbDatPro
@@ -300,7 +302,7 @@ namespace Intermoda.Business.LbDatPro
 
                     //var claveDesencriptada = Tools.Desencriptar(clave);
 
-                    //if (claveDesencriptada != model.Clave)
+                    //if (clave != model.Clave)
                     //{
                     //    throw new Exception($"La clave para el usuario: {usuario} es inválida.");
                     //}
@@ -314,6 +316,62 @@ namespace Intermoda.Business.LbDatPro
                         Estado = model.Estado,
                         Usuario = model.Usuario
                     };
+                }
+            }
+            catch (Exception exception)
+            {
+                throw new Exception("PlantaBusiness / GetByUsuario", exception);
+            }
+        }
+
+        public static PlantaBusiness[] GetContratistas()
+        {
+            try
+            {
+                using (_context = new LBDATPROEntities())
+                {
+
+                    var model = (from r in _context.CORPLASet
+                        where r.PrdCorFab != "01" &&
+                              r.PrdFabSts == "A"
+                        select new PlantaBusiness
+                        {
+                            Id = r.PrdCorFab,
+                            Iniciales = r.PrdCorIni,
+                            Descripcion = r.PrdCorDes,
+                            GeneraTicket = r.PrdCorTck,
+                            Tipo = r.PrdCorTip,
+                            BodegaId = r.MprCodBod,
+                            Estado = r.PrdFabSts,
+                            Habilitar = r.PrdHabilit,
+                            NuevoId = r.PrdFabNew,
+                            CompaniaId = r.PrdCiaCod,
+                            ProveedorId = r.PrdCodPrv,
+                            ProveedorNombre = "",
+                            Usuario = r.PrdPrvUsu
+                        }).ToList();
+
+                    foreach (var item in model)
+                    {
+                        if (item.CompaniaId == null || item.ProveedorId == null) continue;
+
+                        var ciaCod = item.CompaniaId.Value;
+                        var prvCod = item.ProveedorId.Value;
+                        var prv = _context.PRVMSTSet
+                            .FirstOrDefault(r => r.CIACOD == ciaCod &&
+                                                 r.PrvCod == prvCod);
+                        item.ProveedorNombre = prv != null ? prv.PrvNom : "";
+                    }
+
+                    return model.Select(r => new PlantaBusiness
+                    {
+                        Id = r.Id,
+                        Iniciales = r.Iniciales,
+                        Descripcion = r.Descripcion,
+                        Tipo = r.Tipo,
+                        Estado = r.Estado,
+                        Usuario = r.Usuario
+                    }).ToArray();
                 }
             }
             catch (Exception exception)

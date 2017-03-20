@@ -14,11 +14,10 @@ namespace Intermoda.LbDatPro
     
     public partial class FACCOL
     {
-        public short CiaCod { get; set; }
+        public short CIACOD { get; set; }
         public string FacCCol { get; set; }
         public string FacDCol { get; set; }
-        public string AxColorId01 { get; set; }
-        public string AxColorId02 { get; set; }
         public string FacIDCol { get; set; }
+        public string AxColorId01 { get; set; }
     }
 }

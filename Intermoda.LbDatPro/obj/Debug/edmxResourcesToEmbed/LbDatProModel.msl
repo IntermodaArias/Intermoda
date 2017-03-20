@@ -43,18 +43,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="FACCOLSet">
-      <EntityTypeMapping TypeName="LBDATPROModel.FACCOL">
-        <MappingFragment StoreEntitySet="FACCOL">
-          <ScalarProperty Name="FacIDCol" ColumnName="FacIDCol" />
-          <ScalarProperty Name="CiaCod" ColumnName="CiaCod" />
-          <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
-          <ScalarProperty Name="FacDCol" ColumnName="FacDCol" />
-          <ScalarProperty Name="AxColorId01" ColumnName="AxColorId01" />
-          <ScalarProperty Name="AxColorId02" ColumnName="AxColorId02" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="GRUTELSet">
       <EntityTypeMapping TypeName="LBDATPROModel.GRUTEL">
         <MappingFragment StoreEntitySet="GRUTEL">
@@ -69,6 +57,8 @@
     <EntitySetMapping Name="MATMSTSet">
       <EntityTypeMapping TypeName="LBDATPROModel.MATMST">
         <MappingFragment StoreEntitySet="MATMST">
+          <ScalarProperty Name="CatMatCod" ColumnName="CatMatCod" />
+          <ScalarProperty Name="CmpTelCol" ColumnName="CmpTelCol" />
           <ScalarProperty Name="MprSubCod" ColumnName="MprSubCod" />
           <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
           <ScalarProperty Name="MapCodMat" ColumnName="MapCodMat" />
@@ -700,6 +690,8 @@
     <EntitySetMapping Name="CTRABAJOSet">
       <EntityTypeMapping TypeName="LBDATPROModel.CTRABAJO">
         <MappingFragment StoreEntitySet="CTRABAJO">
+          <ScalarProperty Name="CtSalidaAu" ColumnName="CtSalidaAu" />
+          <ScalarProperty Name="CtFrmRevis" ColumnName="CtFrmRevis" />
           <ScalarProperty Name="PrdSecXls" ColumnName="PrdSecXls" />
           <ScalarProperty Name="MOCCosto" ColumnName="MOCCosto" />
           <ScalarProperty Name="PrdCtTip" ColumnName="PrdCtTip" />
@@ -920,5 +912,48 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="FACCOLSet">
+      <EntityTypeMapping TypeName="LBDATPROModel.FACCOL">
+        <MappingFragment StoreEntitySet="FACCOL">
+          <ScalarProperty Name="AxColorId01" ColumnName="AxColorId01" />
+          <ScalarProperty Name="FacIDCol" ColumnName="FacIDCol" />
+          <ScalarProperty Name="FacDCol" ColumnName="FacDCol" />
+          <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
+          <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="MaquiladoTrabajoEnProceso" FunctionName="LBDATPROModel.Store.MaquiladoTrabajoEnProceso">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LBDATPROModel.MaquiladoTrabajoEnProceso_Result">
+          <ScalarProperty Name="CompaniaId" ColumnName="CompaniaId" />
+          <ScalarProperty Name="OrdenAno" ColumnName="OrdenAno" />
+          <ScalarProperty Name="OrdenNumero" ColumnName="OrdenNumero" />
+          <ScalarProperty Name="PlantaId" ColumnName="PlantaId" />
+          <ScalarProperty Name="PlantaNombre" ColumnName="PlantaNombre" />
+          <ScalarProperty Name="PlantaIniciales" ColumnName="PlantaIniciales" />
+          <ScalarProperty Name="BultoNumero" ColumnName="BultoNumero" />
+          <ScalarProperty Name="CentroTrabajoId" ColumnName="CentroTrabajoId" />
+          <ScalarProperty Name="CentroTrabajoNombre" ColumnName="CentroTrabajoNombre" />
+          <ScalarProperty Name="CentroTrabajoSecuencia" ColumnName="CentroTrabajoSecuencia" />
+          <ScalarProperty Name="FechaEntrada" ColumnName="FechaEntrada" />
+          <ScalarProperty Name="FechaSalida" ColumnName="FechaSalida" />
+          <ScalarProperty Name="Patron" ColumnName="Patron" />
+          <ScalarProperty Name="Variante" ColumnName="Variante" />
+          <ScalarProperty Name="Tela" ColumnName="Tela" />
+          <ScalarProperty Name="Lavado" ColumnName="Lavado" />
+          <ScalarProperty Name="ColorId" ColumnName="ColorId" />
+          <ScalarProperty Name="ColorNombre" ColumnName="ColorNombre" />
+          <ScalarProperty Name="EstadoId" ColumnName="EstadoId" />
+          <ScalarProperty Name="EstadoNombre" ColumnName="EstadoNombre" />
+          <ScalarProperty Name="EstadoSecuencia" ColumnName="EstadoSecuencia" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="EnvioContratista" ColumnName="EnvioContratista" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRD_LecturaCuponGX" FunctionName="LBDATPROModel.Store.PRD_LecturaCuponGX" />
+    <FunctionImportMapping FunctionImportName="PRD_UsuarioLecturaCupon" FunctionName="LBDATPROModel.Store.PRD_UsuarioLecturaCupon" />
+    <FunctionImportMapping FunctionImportName="PRD_UsuarioLecturaCuponGX" FunctionName="LBDATPROModel.Store.PRD_UsuarioLecturaCuponGX" />
   </EntityContainerMapping>
 </Mapping>

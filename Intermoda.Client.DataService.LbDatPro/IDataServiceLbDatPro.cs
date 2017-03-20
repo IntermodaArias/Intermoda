@@ -55,9 +55,8 @@ namespace Intermoda.Client.DataService.LbDatPro
 
         #region OrdenProduccionExterno
 
-        void OrdenProduccionExternoGet(short companiaCodigo, short ordenAno, short ordenNumero,
-            Action<OrdenProduccionExterno, Exception> action);
-
+        void OrdenProduccionExternoGet(Action<List<MaquiladoTeP>, Exception> action);
+        
         void OrdenProduccionExternoGetByUsuarioPlanta(string usuario,
             Action<List<OrdenProduccionExterno>, Exception> action);
 
@@ -65,7 +64,7 @@ namespace Intermoda.Client.DataService.LbDatPro
             Action<Exception> action);
 
         void OrdenProduccionExternoGrabarLectura(short companiaId, short ordenAno, short ordenNumero,
-            string centroTrabajoId, string tipo, string usuario, Action<Exception> action);
+            string centroTrabajoId, string tipo, string usuario, Action<OrdenProduccionExterno, Exception> action);
 
         void OrdenProduccionExternoSerEstadoEnviarIntermoda(short companiaId, short ordenAno, short ordenNumero,
             Action<Exception> action);
@@ -75,6 +74,8 @@ namespace Intermoda.Client.DataService.LbDatPro
         #region Planta
 
         void PlantaGetByUsuario(string usuario, string clave, Action<Planta, Exception> action);
+
+        void PlantaGetContratistas(Action<List<Planta>, Exception> action);
 
         void PlantaUpdateClave(string plantaId, string claveOld, string claveNew, Action<Exception> action);
 

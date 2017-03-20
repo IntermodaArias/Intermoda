@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost/IntermodaService/LbDatPro/OrdenProduccionDetalle.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://190.5.95.110/ImDataServiceLb/OrdenProduccionDetalle.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="OrdenProduccionDetalle.xsd" MetadataType="Schema" ID="c60a8d4a-4a71-4f6d-949a-41e030f05b6c" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/OrdenProduccionDetalle.svc?xsd=xsd0" />
-    <MetadataFile FileName="OrdenProduccionDetalle.disco" MetadataType="Disco" ID="ee816b78-44e6-4c7c-ac2f-955057917b56" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/OrdenProduccionDetalle.svc?disco" />
-    <MetadataFile FileName="OrdenProduccionDetalle1.xsd" MetadataType="Schema" ID="a0a1bbeb-9cfa-4c3d-8227-1273667025d2" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/OrdenProduccionDetalle.svc?xsd=xsd1" />
-    <MetadataFile FileName="OrdenProduccionDetalle.wsdl" MetadataType="Wsdl" ID="82cb59c4-9ed2-4ba9-b0f6-44d51a411f38" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/OrdenProduccionDetalle.svc?wsdl" />
-    <MetadataFile FileName="OrdenProduccionDetalle2.xsd" MetadataType="Schema" ID="cb527b70-1915-4c83-9381-b4c7ce73b8f6" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/OrdenProduccionDetalle.svc?xsd=xsd2" />
+    <MetadataFile FileName="OrdenProduccionDetalle1.wsdl" MetadataType="Wsdl" ID="600392cb-1ebe-4ec2-b62c-b609af543692" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/OrdenProduccionDetalle.svc?wsdl" />
+    <MetadataFile FileName="OrdenProduccionDetalle3.xsd" MetadataType="Schema" ID="f3f6809b-8464-4c1c-809c-70e72f6fb0c8" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/OrdenProduccionDetalle.svc?xsd=xsd0" />
+    <MetadataFile FileName="OrdenProduccionDetalle1.disco" MetadataType="Disco" ID="56d4e7cb-4990-4b14-9e50-7abcfc1128cf" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/OrdenProduccionDetalle.svc?disco" />
+    <MetadataFile FileName="OrdenProduccionDetalle31.xsd" MetadataType="Schema" ID="4a317475-a6e5-4476-a49a-00807ea5b38e" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/OrdenProduccionDetalle.svc?xsd=xsd2" />
+    <MetadataFile FileName="OrdenProduccionDetalle32.xsd" MetadataType="Schema" ID="4ae2f390-1803-4401-bb4a-21077578db37" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/OrdenProduccionDetalle.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

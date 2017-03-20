@@ -3,3 +3,8 @@ C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Lavanderia\bin\Release\Intermoda
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Lavanderia\bin\Release\Intermoda.ClientProxy.Lavanderia.pdb
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Lavanderia\obj\Release\Intermoda.ClientProxy.Lavanderia.dll
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Lavanderia\obj\Release\Intermoda.ClientProxy.Lavanderia.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Lavanderia\bin\Release\Intermoda.ClientProxy.Lavanderia.dll.config
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Lavanderia\bin\Release\Intermoda.ClientProxy.Lavanderia.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Lavanderia\bin\Release\Intermoda.ClientProxy.Lavanderia.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Lavanderia\obj\Release\Intermoda.ClientProxy.Lavanderia.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Lavanderia\obj\Release\Intermoda.ClientProxy.Lavanderia.pdb

@@ -16,6 +16,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetContratistas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContratistasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Intermoda.Business.LbDatPro" minOccurs="0" name="GetContratistasResult" nillable="true" type="q2:ArrayOfPlantaBusiness" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="UpdateClave">
     <xs:complexType>
       <xs:sequence>

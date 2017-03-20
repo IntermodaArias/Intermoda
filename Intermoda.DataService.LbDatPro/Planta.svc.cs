@@ -17,6 +17,18 @@ namespace Intermoda.DataService.LbDatPro
             }
         }
 
+        public PlantaBusiness[] GetContratistas()
+        {
+            try
+            {
+                return PlantaBusiness.GetContratistas();
+            }
+            catch (Exception exception)
+            {
+                throw new Exception("Planta / GetContratistas", exception);
+            }
+        }
+
         public void UpdateClave(string plantaId, string claveOld, string claveNew)
         {
             try

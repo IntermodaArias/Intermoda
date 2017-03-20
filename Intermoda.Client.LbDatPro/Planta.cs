@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
 using GalaSoft.MvvmLight;
 using Intermoda.ClientProxy.LbDatPro.PlantaServiceReference;
 
@@ -499,6 +500,22 @@ namespace Intermoda.Client.LbDatPro
                 {
                     var reg = _client.GetByUsuario(usuario, clave);
                     return BusinessToClient(reg);
+                }
+            }
+            catch (Exception exception)
+            {
+                throw new Exception("Planta / GetByUsuario", exception);
+            }
+        }
+
+        public static List<Planta> GetContratistas()
+        {
+            try
+            {
+                using (_client = new PlantaClient())
+                {
+                    var lista = _client.GetContratistas();
+                    return lista.Select(BusinessToClient).ToList();
                 }
             }
             catch (Exception exception)

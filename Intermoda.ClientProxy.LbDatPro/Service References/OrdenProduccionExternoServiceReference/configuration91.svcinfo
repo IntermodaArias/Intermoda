@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="brS3DMUcHh41zMZ5Sq3o/el/7jY=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="xCcpDnGLnnPxAM1d2gGXOfxVLAs=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IOrdenProduccionExterno">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IOrdenProduccionExterno" contract="OrdenProduccionExternoServiceReference.IOrdenProduccionExterno" bindingType="basicHttpBinding" address="http://190.5.95.110/ImDataServiceLb/OrdenProduccionExterno.svc" bindingConfiguration="BasicHttpBinding_IOrdenProduccionExterno">
+    <endpoint name="BasicHttpBinding_IOrdenProduccionExterno" contract="OrdenProduccionExternoServiceReference.IOrdenProduccionExterno" bindingType="basicHttpBinding" address="http://localhost/Intermoda.DataService.LbDatPro/OrdenProduccionExterno.svc" bindingConfiguration="BasicHttpBinding_IOrdenProduccionExterno">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://190.5.95.110/ImDataServiceLb/OrdenProduccionExterno.svc</serializedValue>
+          <serializedValue>http://localhost/Intermoda.DataService.LbDatPro/OrdenProduccionExterno.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

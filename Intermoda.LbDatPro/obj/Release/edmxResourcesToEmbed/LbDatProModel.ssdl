@@ -143,6 +143,37 @@
     <Property Name="CCCodigo" Type="smallint" />
     <Property Name="PrdCtTip" Type="char" MaxLength="1" />
     <Property Name="MOCCosto" Type="smallmoney" />
+    <Property Name="PrdSecXls" Type="smallint" />
+    <Property Name="CtFrmRevis" Type="char" MaxLength="100" />
+    <Property Name="CtSalidaAu" Type="smallint" />
+  </EntityType>
+  <EntityType Name="CUTARC1">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="PrdNumCor" />
+      <PropertyRef Name="PrdAnoCor" />
+      <PropertyRef Name="PrdNoBund" />
+    </Key>
+    <Property Name="CIACOD" Type="smallint" Nullable="false" />
+    <Property Name="PrdNumCor" Type="smallint" Nullable="false" />
+    <Property Name="PrdAnoCor" Type="smallint" Nullable="false" />
+    <Property Name="PrdNoBund" Type="smallint" Nullable="false" />
+    <Property Name="PrdUniPri" Type="smallint" />
+    <Property Name="PrdBulto" Type="char" MaxLength="1" />
+    <Property Name="PrdUniSeg" Type="smallint" />
+    <Property Name="PrdUniTer" Type="smallint" />
+    <Property Name="PrdUniPer" Type="smallint" />
+    <Property Name="PrdUniEli" Type="smallint" />
+    <Property Name="PrdPtoReo" Type="char" MaxLength="1" />
+    <Property Name="PrdIniCap" Type="smallint" />
+    <Property Name="PrdFinCap" Type="smallint" />
+    <Property Name="FacCTall" Type="char" MaxLength="3" />
+    <Property Name="FacCTallN" Type="smallint" />
+    <Property Name="PrdCodDim" Type="smallint" />
+    <Property Name="PrdCanBun" Type="smallint" />
+    <Property Name="PrdSeccion" Type="smallint" />
+    <Property Name="PrdTroco" Type="smallint" />
+    <Property Name="PrdCanTro" Type="smallint" />
   </EntityType>
   <EntityType Name="CUTARC3">
     <Key>
@@ -379,15 +410,56 @@
   </EntityType>
   <EntityType Name="FACCOL">
     <Key>
-      <PropertyRef Name="CiaCod" />
+      <PropertyRef Name="CIACOD" />
       <PropertyRef Name="FacCCol" />
     </Key>
-    <Property Name="CiaCod" Type="smallint" Nullable="false" />
+    <Property Name="CIACOD" Type="smallint" Nullable="false" />
     <Property Name="FacCCol" Type="char" MaxLength="2" Nullable="false" />
     <Property Name="FacDCol" Type="char" MaxLength="20" />
-    <Property Name="AxColorId01" Type="char" MaxLength="8" />
-    <Property Name="AxColorId02" Type="char" MaxLength="8" />
     <Property Name="FacIDCol" Type="char" MaxLength="20" />
+    <Property Name="AxColorId01" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FACMST21">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="FacArtCod" />
+      <PropertyRef Name="FacCodMdl" />
+      <PropertyRef Name="FacCodRef" />
+      <PropertyRef Name="FacCodTel" />
+      <PropertyRef Name="FacCCol" />
+      <PropertyRef Name="FacCTall" />
+      <PropertyRef Name="PrdCodDim" />
+    </Key>
+    <Property Name="CIACOD" Type="smallint" Nullable="false" />
+    <Property Name="FacArtCod" Type="char" MaxLength="12" Nullable="false" />
+    <Property Name="FacCodMdl" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="FacCodRef" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="FacCodTel" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="FacCCol" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="FacCTall" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="PrdCodDim" Type="smallint" Nullable="false" />
+    <Property Name="FacArtBar2" Type="decimal" Precision="15" Scale="0" />
+    <Property Name="FacCodAlt" Type="int" />
+    <Property Name="FacExiIde" Type="int" />
+    <Property Name="FacArtBarB" Type="decimal" Precision="15" Scale="0" />
+    <Property Name="FacOrdTall" Type="smallint" Nullable="false" />
+    <Property Name="FacCnt6Pre" Type="smallint" />
+    <Property Name="FacCnt12Pr" Type="smallint" />
+    <Property Name="Usuario" Type="char" MaxLength="20" />
+    <Property Name="FechaCreacion" Type="smalldatetime" />
+    <Property Name="FacArtBarT" Type="decimal" Precision="15" Scale="0" />
+    <Property Name="CBarraConDigitoVer" Type="varchar" MaxLength="61" StoreGeneratedPattern="Computed" />
+    <Property Name="FacMaxArt" Type="int" />
+  </EntityType>
+  <EntityType Name="FACTALL">
+    <Key>
+      <PropertyRef Name="CiaCod" />
+      <PropertyRef Name="FacCTall" />
+    </Key>
+    <Property Name="CiaCod" Type="smallint" Nullable="false" />
+    <Property Name="FacCTall" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="FacDTall" Type="char" MaxLength="20" />
+    <Property Name="FacSecTal" Type="smallint" />
   </EntityType>
   <EntityType Name="GRUTEL">
     <Key>
@@ -563,6 +635,29 @@
     <Property Name="PlsValTem" Type="smallmoney" />
     <Property Name="PlsTipIng" Type="char" MaxLength="1" />
   </EntityType>
+  <EntityType Name="MaquiladoCaja">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompaniaId" Type="smallint" Nullable="false" />
+    <Property Name="OrdenAno" Type="smallint" Nullable="false" />
+    <Property Name="OrdenNumero" Type="smallint" Nullable="false" />
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="FechaApertura" Type="datetime" Nullable="false" />
+    <Property Name="FechaCierre" Type="datetime" Nullable="false" />
+    <Property Name="Estado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MaquiladoCajaDetalle">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaquiladoCajaId" Type="int" Nullable="false" />
+    <Property Name="CompaniaId" Type="smallint" Nullable="false" />
+    <Property Name="TallaId" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="MATMST">
     <Key>
       <PropertyRef Name="CIACOD" />
@@ -643,11 +738,13 @@
     <Property Name="MprEtgCon" Type="char" MaxLength="1" />
     <Property Name="MprCodUbi" Type="smallint" />
     <Property Name="MprCtCod" Type="char" MaxLength="2" />
-    <Property Name="MatCntRes" Type="smallmoney" />
     <Property Name="MprExcCmp" Type="smallint" />
     <Property Name="MatUltMov" Type="date" />
     <Property Name="FacCCol" Type="char" MaxLength="2" />
     <Property Name="MprSubCod" Type="smallint" />
+    <Property Name="CmpTelCol" Type="char" MaxLength="10" />
+    <Property Name="MatCntRes" Type="smallmoney" />
+    <Property Name="CatMatCod" Type="smallint" />
   </EntityType>
   <EntityType Name="MATMST1">
     <Key>
@@ -818,6 +915,38 @@
     <Property Name="ComposicionId" Type="int" />
     <Property Name="TelDesVta" Type="char" MaxLength="20" />
   </EntityType>
+  <Association Name="FK_MaquiladoCajaDetalle_MaquiladoCaja">
+    <End Role="MaquiladoCaja" Type="Self.MaquiladoCaja" Multiplicity="1" />
+    <End Role="MaquiladoCajaDetalle" Type="Self.MaquiladoCajaDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaquiladoCaja">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MaquiladoCajaDetalle">
+        <PropertyRef Name="MaquiladoCajaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="MaquiladoTrabajoEnProceso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="PRD_LecturaCuponGX" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CiaCod" Type="int" Mode="InOut" />
+    <Parameter Name="StrCupon" Type="varchar" Mode="InOut" />
+    <Parameter Name="Usuario" Type="varchar" Mode="InOut" />
+    <Parameter Name="StrError" Type="varchar(max)" Mode="InOut" />
+    <Parameter Name="IntError" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="PRD_UsuarioLecturaCupon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StrUsuario" Type="varchar" Mode="InOut" />
+    <Parameter Name="Compania" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="PRD_UsuarioLecturaCuponGX" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StrUsuario" Type="varchar" Mode="InOut" />
+    <Parameter Name="Compania" Type="int" Mode="InOut" />
+    <Parameter Name="StrError" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="WIPOrdenesProduccionB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CiaCod" Type="smallint" Mode="In" />
+  </Function>
   <EntityContainer Name="LBDATPROModelStoreContainer">
     <EntitySet Name="CATALOG" EntityType="Self.CATALOG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CLASE" EntityType="Self.CLASE" Schema="dbo" store:Type="Tables" />
@@ -825,11 +954,16 @@
     <EntitySet Name="CORPLA" EntityType="Self.CORPLA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CTPLANTA" EntityType="Self.CTPLANTA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CTRABAJO" EntityType="Self.CTRABAJO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CUTARC1" EntityType="Self.CUTARC1" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CUTARC3" EntityType="Self.CUTARC3" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FACCOL" EntityType="Self.FACCOL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FACMST21" EntityType="Self.FACMST21" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FACTALL" EntityType="Self.FACTALL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GRUTEL" EntityType="Self.GRUTEL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MAEAR6" EntityType="Self.MAEAR6" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MAEAUS" EntityType="Self.MAEAUS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MaquiladoCaja" EntityType="Self.MaquiladoCaja" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MaquiladoCajaDetalle" EntityType="Self.MaquiladoCajaDetalle" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MATMST" EntityType="Self.MATMST" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MATMST1" EntityType="Self.MATMST1" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MPRCOLOR" EntityType="Self.MPRCOLOR" Schema="dbo" store:Type="Tables" />
@@ -839,5 +973,9 @@
     <EntitySet Name="PRVMST" EntityType="Self.PRVMST" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SUBCLASE" EntityType="Self.SUBCLASE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TELAR5" EntityType="Self.TELAR5" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_MaquiladoCajaDetalle_MaquiladoCaja" Association="Self.FK_MaquiladoCajaDetalle_MaquiladoCaja">
+      <End Role="MaquiladoCaja" EntitySet="MaquiladoCaja" />
+      <End Role="MaquiladoCajaDetalle" EntitySet="MaquiladoCajaDetalle" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

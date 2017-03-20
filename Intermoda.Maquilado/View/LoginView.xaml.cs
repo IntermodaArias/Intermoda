@@ -28,6 +28,7 @@ namespace Intermoda.Maquilado.View
         {
             try
             {
+                var pass = Tools.Encriptar(Clave.Password);
                 var planta = Planta.GetByUsuario(Usuario.Text, Clave.Password);
 
                 Messenger.Default.Send(new LoginMessage { Planta = planta });

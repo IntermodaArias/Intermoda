@@ -1,0 +1,8 @@
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Crm\bin\Release\Intermoda.Business.Crm.Entities.dll.config
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Crm\bin\Release\Intermoda.Business.Crm.Entities.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Crm\bin\Release\Intermoda.Business.Crm.Entities.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Crm\bin\Release\Intermoda.Common.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Crm\bin\Release\Intermoda.Common.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Crm\obj\Release\Intermoda.Business.Crm.Entities.csprojResolveAssemblyReference.cache
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Crm\obj\Release\Intermoda.Business.Crm.Entities.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Crm\obj\Release\Intermoda.Business.Crm.Entities.pdb

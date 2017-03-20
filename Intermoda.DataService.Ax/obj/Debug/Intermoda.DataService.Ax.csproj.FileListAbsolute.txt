@@ -10,3 +10,15 @@ C:\VisualStudio\Intermoda\Intermoda.DataService.Ax\bin\EntityFramework.SqlServer
 C:\VisualStudio\Intermoda\Intermoda.DataService.Ax\obj\Debug\Intermoda.DataService.Ax.csprojResolveAssemblyReference.cache
 C:\VisualStudio\Intermoda\Intermoda.DataService.Ax\obj\Debug\Intermoda.DataService.Ax.dll
 C:\VisualStudio\Intermoda\Intermoda.DataService.Ax\obj\Debug\Intermoda.DataService.Ax.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.Ax\bin\Intermoda.DataService.Ax.dll.config
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.Ax\bin\Intermoda.DataService.Ax.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.Ax\bin\Intermoda.DataService.Ax.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.Ax\bin\EntityFramework.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.Ax\bin\EntityFramework.SqlServer.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.Ax\bin\Intermoda.AX.Data.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.Ax\bin\Intermoda.AX.Data.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.Ax\bin\EntityFramework.xml
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.Ax\bin\EntityFramework.SqlServer.xml
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.Ax\obj\Debug\Intermoda.DataService.Ax.csprojResolveAssemblyReference.cache
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.Ax\obj\Debug\Intermoda.DataService.Ax.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.DataService.Ax\obj\Debug\Intermoda.DataService.Ax.pdb

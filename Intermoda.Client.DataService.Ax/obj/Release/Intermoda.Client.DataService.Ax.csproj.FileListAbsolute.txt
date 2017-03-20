@@ -2,3 +2,7 @@ C:\VisualStudio\Intermoda\Intermoda.Client.DataService.Ax\bin\Release\Intermoda.
 C:\VisualStudio\Intermoda\Intermoda.Client.DataService.Ax\bin\Release\Intermoda.Client.DataService.Ax.pdb
 C:\VisualStudio\Intermoda\Intermoda.Client.DataService.Ax\obj\Release\Intermoda.Client.DataService.Ax.dll
 C:\VisualStudio\Intermoda\Intermoda.Client.DataService.Ax\obj\Release\Intermoda.Client.DataService.Ax.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Client.DataService.Ax\bin\Release\Intermoda.Client.DataService.Ax.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Client.DataService.Ax\bin\Release\Intermoda.Client.DataService.Ax.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Client.DataService.Ax\obj\Release\Intermoda.Client.DataService.Ax.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Client.DataService.Ax\obj\Release\Intermoda.Client.DataService.Ax.pdb

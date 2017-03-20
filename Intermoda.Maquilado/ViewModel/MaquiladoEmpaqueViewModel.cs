@@ -318,16 +318,16 @@ namespace Intermoda.Maquilado.ViewModel
 
             if (IsInDesignMode)
             {
-                _dataService.OrdenProduccionExternoGet(1, 1, 1,
-                    (reg, error) =>
-                    {
-                        if (error != null)
-                        {
-                            _dialogService.ShowException(error);
-                            return;
-                        }
-                        OrdenProduccion = reg;
-                    });
+                //_dataService.OrdenProduccionExternoGet(1, 1, 1,
+                //    (reg, error) =>
+                //    {
+                //        if (error != null)
+                //        {
+                //            _dialogService.ShowException(error);
+                //            return;
+                //        }
+                //        OrdenProduccion = reg;
+                //    });
             }
             else
             {

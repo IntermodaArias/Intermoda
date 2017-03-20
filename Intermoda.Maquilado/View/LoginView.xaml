@@ -3,8 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        WindowStartupLocation="CenterScreen" WindowState="Normal" WindowStyle="ToolWindow"
-        mc:Ignorable="d" Title="Acceso" Height="150" Width="270">
+        WindowStartupLocation="CenterScreen" WindowState="Normal" WindowStyle="None"
+        mc:Ignorable="d" Title="Acceso" Height="170" Width="270"
+        d:DataContext="{Binding Source={StaticResource Locator}, Path=LoginViewModel}">
     <Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid.RowDefinitions>
@@ -29,9 +30,8 @@
                 <PasswordBox Grid.Row="1" Grid.Column="1" Margin="2" Width="160" PasswordChanged="PasswordBox_OnPasswordChanged" 
                              x:Name="Clave" FontFamily="Segoe UI" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             </Grid>
-            <telerik:RadButton Grid.Row="1" Margin="5" HorizontalAlignment="Right" Height="36" Width="100" 
-                               Click="ButtonBase_OnClick"
-                               IsDefault="True">
+            <telerik:RadButton Grid.Row="1" Margin="5" HorizontalAlignment="Right" Height="40" Width="125" 
+                               Click="ButtonBase_OnClick" IsDefault="True">
                 <telerik:RadButton.Content>
                     <StackPanel Orientation="Horizontal">
                         <Image Margin="2" Source="../Images/confirm.png" />

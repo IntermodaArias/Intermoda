@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Intermoda.Business.LbDatPro" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Intermoda.Business.LbDatPro" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Intermoda.DataService.LbDatPro/OrdenProduccionExterno.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfOrdenProduccionExternoBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrdenProduccionExternoBusiness" nillable="true" type="tns:OrdenProduccionExternoBusiness" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrdenProduccionExternoBusiness" nillable="true" type="tns:ArrayOfOrdenProduccionExternoBusiness" />
+  <xs:complexType name="OrdenProduccionExternoBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ano" type="xs:short" />
+      <xs:element minOccurs="0" name="Cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="CentroTrabajoSiguiente" nillable="true" type="tns:CentroTrabajoBusiness" />
+      <xs:element minOccurs="0" name="CentroTrabajoSiguienteId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CentroTrabajoUltimaLectura" nillable="true" type="tns:CentroTrabajoBusiness" />
+      <xs:element minOccurs="0" name="CentroTrabajoUltimaLecturaId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ColorDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompaniaId" type="xs:short" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="tns:OrdenEstadoBusiness" />
+      <xs:element minOccurs="0" name="EstadoId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstadoLeyenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lavado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero" type="xs:short" />
+      <xs:element minOccurs="0" name="OrdenProduccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patron" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Referencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ruta" nillable="true" type="tns:ArrayOfPasoRutaBusiness" />
+      <xs:element minOccurs="0" name="SiguienteLecturaTipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tela" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Variante" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrdenProduccionExternoBusiness" nillable="true" type="tns:OrdenProduccionExternoBusiness" />
+  <xs:complexType name="CentroTrabajoBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompaniaId" type="xs:short" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secuencia" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CentroTrabajoBusiness" nillable="true" type="tns:CentroTrabajoBusiness" />
+  <xs:complexType name="OrdenEstadoBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CentroCostoAlias" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CentroTrabajoId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secuencia" nillable="true" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrdenEstadoBusiness" nillable="true" type="tns:OrdenEstadoBusiness" />
+  <xs:complexType name="ArrayOfPasoRutaBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PasoRutaBusiness" nillable="true" type="tns:PasoRutaBusiness" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPasoRutaBusiness" nillable="true" type="tns:ArrayOfPasoRutaBusiness" />
+  <xs:complexType name="PasoRutaBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ano" type="xs:short" />
+      <xs:element minOccurs="0" name="CentroTrabajo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CentroTrabajoId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompaniaId" type="xs:short" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LecturaEntrada" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LecturaSalida" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Numero" type="xs:short" />
+      <xs:element minOccurs="0" name="Planta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlantaId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secuencia" type="xs:short" />
+      <xs:element minOccurs="0" name="TiempoEnPlanta" nillable="true" type="ser:duration" />
+      <xs:element minOccurs="0" name="TiempoEnProceso" nillable="true" type="ser:duration" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PasoRutaBusiness" nillable="true" type="tns:PasoRutaBusiness" />
+  <xs:complexType name="ArrayOfMaquiladoTrabajoEnProceso">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MaquiladoTrabajoEnProceso" nillable="true" type="tns:MaquiladoTrabajoEnProceso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMaquiladoTrabajoEnProceso" nillable="true" type="tns:ArrayOfMaquiladoTrabajoEnProceso" />
+  <xs:complexType name="MaquiladoTrabajoEnProceso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="CentroTrabajo" nillable="true" type="tns:CentroTrabajoBusiness" />
+      <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ColorNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Entrada" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lavado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrdenAno" type="xs:short" />
+      <xs:element minOccurs="0" name="OrdenNumero" type="xs:short" />
+      <xs:element minOccurs="0" name="Patron" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Planta" nillable="true" type="tns:PlantaBusiness" />
+      <xs:element minOccurs="0" name="Salida" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Tela" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TiempoPlanta" type="ser:duration" />
+      <xs:element minOccurs="0" name="TiempoProceso" type="ser:duration" />
+      <xs:element minOccurs="0" name="Variante" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MaquiladoTrabajoEnProceso" nillable="true" type="tns:MaquiladoTrabajoEnProceso" />
+  <xs:complexType name="PlantaBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BodegaId" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompaniaId" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GeneraTicket" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Habilitar" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Iniciales" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NuevoId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProveedorId" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="ProveedorNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlantaBusiness" nillable="true" type="tns:PlantaBusiness" />
+</xs:schema>

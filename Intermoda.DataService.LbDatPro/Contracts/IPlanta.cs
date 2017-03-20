@@ -10,6 +10,9 @@ namespace Intermoda.DataService.LbDatPro
         PlantaBusiness GetByUsuario(string usuario, string clave);
 
         [OperationContract]
+        PlantaBusiness[] GetContratistas();
+
+        [OperationContract]
         void UpdateClave(string plantaId, string claveOld, string claveNew);
     }
 }

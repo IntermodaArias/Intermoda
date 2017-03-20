@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4a44e260-9f65-4f81-8d4c-34677a14f050" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c4d922b6-5eaf-48e9-a7dd-d93c485fe2e3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://190.5.95.110/ImDataServiceLb/OrdenProduccionExterno.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost/Intermoda.DataService.LbDatPro/OrdenProduccionExterno.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="OrdenProduccionExterno1.disco" MetadataType="Disco" ID="e9812d8c-7149-4ee7-b0cb-3611bf7655eb" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/OrdenProduccionExterno.svc?disco" />
-    <MetadataFile FileName="OrdenProduccionExterno3.xsd" MetadataType="Schema" ID="5c6dc221-381e-4032-94be-90233ae2f5d9" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/OrdenProduccionExterno.svc?xsd=xsd0" />
-    <MetadataFile FileName="OrdenProduccionExterno31.xsd" MetadataType="Schema" ID="12fd53a8-a7e6-4250-9bb5-d6e6226effd1" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/OrdenProduccionExterno.svc?xsd=xsd2" />
-    <MetadataFile FileName="OrdenProduccionExterno32.xsd" MetadataType="Schema" ID="67cb4eda-eba0-4922-99c9-c375cec3ab0a" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/OrdenProduccionExterno.svc?xsd=xsd1" />
-    <MetadataFile FileName="OrdenProduccionExterno1.wsdl" MetadataType="Wsdl" ID="5761877d-57e1-4e33-9ee2-5f62bc6ae508" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/OrdenProduccionExterno.svc?wsdl" />
+    <MetadataFile FileName="OrdenProduccionExterno.wsdl" MetadataType="Wsdl" ID="249a575c-84d2-4674-afcd-3883393cb147" SourceId="1" SourceUrl="http://localhost/Intermoda.DataService.LbDatPro/OrdenProduccionExterno.svc?wsdl" />
+    <MetadataFile FileName="OrdenProduccionExterno.xsd" MetadataType="Schema" ID="048761a4-4b44-484e-8c56-3a2e4f44b453" SourceId="1" SourceUrl="http://localhost/Intermoda.DataService.LbDatPro/OrdenProduccionExterno.svc?xsd=xsd0" />
+    <MetadataFile FileName="OrdenProduccionExterno.disco" MetadataType="Disco" ID="34bd4acd-4f18-4803-86d9-e5db2e1d97a0" SourceId="1" SourceUrl="http://localhost/Intermoda.DataService.LbDatPro/OrdenProduccionExterno.svc?disco" />
+    <MetadataFile FileName="OrdenProduccionExterno1.xsd" MetadataType="Schema" ID="b5699eb5-222e-4635-9a40-99925ff5e8bd" SourceId="1" SourceUrl="http://localhost/Intermoda.DataService.LbDatPro/OrdenProduccionExterno.svc?xsd=xsd2" />
+    <MetadataFile FileName="OrdenProduccionExterno2.xsd" MetadataType="Schema" ID="434cf939-c14b-4014-9d39-9463546455dc" SourceId="1" SourceUrl="http://localhost/Intermoda.DataService.LbDatPro/OrdenProduccionExterno.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

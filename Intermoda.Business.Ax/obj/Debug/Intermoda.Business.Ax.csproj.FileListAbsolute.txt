@@ -10,3 +10,15 @@ C:\VisualStudio\Intermoda\Intermoda.Business.Ax\bin\Debug\EntityFramework.SqlSer
 C:\VisualStudio\Intermoda\Intermoda.Business.Ax\obj\Debug\Intermoda.Business.Ax.csprojResolveAssemblyReference.cache
 C:\VisualStudio\Intermoda\Intermoda.Business.Ax\obj\Debug\Intermoda.Business.Ax.dll
 C:\VisualStudio\Intermoda\Intermoda.Business.Ax\obj\Debug\Intermoda.Business.Ax.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Ax\bin\Debug\Intermoda.Business.Ax.dll.config
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Ax\bin\Debug\Intermoda.Business.Ax.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Ax\bin\Debug\Intermoda.Business.Ax.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Ax\bin\Debug\EntityFramework.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Ax\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Ax\bin\Debug\Intermoda.AX.Data.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Ax\bin\Debug\Intermoda.AX.Data.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Ax\bin\Debug\EntityFramework.xml
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Ax\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Ax\obj\Debug\Intermoda.Business.Ax.csprojResolveAssemblyReference.cache
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Ax\obj\Debug\Intermoda.Business.Ax.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Ax\obj\Debug\Intermoda.Business.Ax.pdb

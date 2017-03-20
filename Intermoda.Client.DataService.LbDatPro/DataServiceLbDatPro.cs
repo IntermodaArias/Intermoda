@@ -316,10 +316,17 @@ namespace Intermoda.Client.DataService.LbDatPro
 
         #region OrdenProduccionExterno
 
-        public void OrdenProduccionExternoGet(short companiaCodigo, short ordenAno, short ordenNumero,
-            Action<OrdenProduccionExterno, Exception> action)
+        public async void OrdenProduccionExternoGet(Action<List<MaquiladoTeP>, Exception> action)
         {
-            action(null, new NotImplementedException());
+            try
+            {
+                var lista = await OrdenProduccionExterno.GetMaquiladoTrabajoEnProceso();
+                action(lista, null);
+            }
+            catch (Exception exception)
+            {
+                action(null, exception);
+            }
         }
 
         public async void OrdenProduccionExternoGetByUsuarioPlanta(string usuario,
@@ -351,17 +358,16 @@ namespace Intermoda.Client.DataService.LbDatPro
         }
 
         public async void OrdenProduccionExternoGrabarLectura(short companiaId, short ordenAno, short ordenNumero, string centroTrabajoId,
-            string tipo, string usuario, Action<Exception> action)
+            string tipo, string usuario, Action<OrdenProduccionExterno, Exception> action)
         {
             try
             {
-                await OrdenProduccionExterno.GrabarLectura(companiaId, ordenAno, ordenNumero, centroTrabajoId, tipo,
-                    usuario);
-                action(null);
+                var reg = await OrdenProduccionExterno.GrabarLectura(companiaId, ordenAno, ordenNumero, centroTrabajoId, tipo, usuario);
+                action(reg, null);
             }
             catch (Exception exception)
             {
-                action(exception);
+                action(null, exception);
             }
         }
 
@@ -387,6 +393,19 @@ namespace Intermoda.Client.DataService.LbDatPro
             try
             {
                 var reg = Planta.GetByUsuario(usuario, clave);
+                action(reg, null);
+            }
+            catch (Exception exception)
+            {
+                action(null, exception);
+            }
+        }
+
+        public async void PlantaGetContratistas(Action<List<Planta>, Exception> action)
+        {
+            try
+            {
+                var reg = Planta.GetContratistas();
                 action(reg, null);
             }
             catch (Exception exception)

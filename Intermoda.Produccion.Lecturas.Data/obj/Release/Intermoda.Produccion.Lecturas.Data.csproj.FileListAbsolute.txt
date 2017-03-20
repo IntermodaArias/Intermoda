@@ -8,3 +8,13 @@ C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.Data\bin\Release\EntityF
 C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.Data\obj\Release\Intermoda.Produccion.Lecturas.Data.csprojResolveAssemblyReference.cache
 C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.Data\obj\Release\Intermoda.Produccion.Lecturas.Data.dll
 C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.Data\obj\Release\Intermoda.Produccion.Lecturas.Data.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.Data\bin\Release\Intermoda.Produccion.Lecturas.Data.dll.config
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.Data\bin\Release\Intermoda.Produccion.Lecturas.Data.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.Data\bin\Release\Intermoda.Produccion.Lecturas.Data.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.Data\bin\Release\EntityFramework.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.Data\bin\Release\EntityFramework.xml
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.Data\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.Data\obj\Release\Intermoda.Produccion.Lecturas.Data.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.Data\obj\Release\Intermoda.Produccion.Lecturas.Data.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.Data\obj\Release\Intermoda.Produccion.Lecturas.Data.csprojResolveAssemblyReference.cache

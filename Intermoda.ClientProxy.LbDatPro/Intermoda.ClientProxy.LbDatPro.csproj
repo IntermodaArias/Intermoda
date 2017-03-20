@@ -54,6 +54,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\LecturaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\MaquiladoCajaDetalleServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -113,17 +118,30 @@
     <None Include="Service References\InasistenciaServiceReference\Intermoda.ClientProxy.LbDatPro.InasistenciaServiceReference.InasistenciaBusiness.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\LecturaServiceReference\Intermoda.ClientProxy.LbDatPro.LecturaServiceReference.LecturaCuponBusiness.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LecturaServiceReference\Lecturas.wsdl" />
+    <None Include="Service References\LecturaServiceReference\Lecturas.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LecturaServiceReference\Lecturas1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LecturaServiceReference\Lecturas2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\MaquiladoCajaDetalleServiceReference\Intermoda.ClientProxy.LbDatPro.MaquiladoCajaDetalleServiceReference.MaquiladoCajaDetalleBusiness.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\MaquiladoCajaDetalleServiceReference\MaquiladoCajaDetalle.wsdl" />
-    <None Include="Service References\MaquiladoCajaDetalleServiceReference\MaquiladoCajaDetalle.xsd">
+    <None Include="Service References\MaquiladoCajaDetalleServiceReference\MaquiladoCajaDetalle1.wsdl" />
+    <None Include="Service References\MaquiladoCajaDetalleServiceReference\MaquiladoCajaDetalle3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\MaquiladoCajaDetalleServiceReference\MaquiladoCajaDetalle1.xsd">
+    <None Include="Service References\MaquiladoCajaDetalleServiceReference\MaquiladoCajaDetalle31.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\MaquiladoCajaDetalleServiceReference\MaquiladoCajaDetalle2.xsd">
+    <None Include="Service References\MaquiladoCajaDetalleServiceReference\MaquiladoCajaDetalle32.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\MaquiladoCajaServiceReference\Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference.MaquiladoCajaBusiness.datasource">
@@ -132,14 +150,14 @@
     <None Include="Service References\MaquiladoCajaServiceReference\Intermoda.ClientProxy.LbDatPro.MaquiladoCajaServiceReference.MaquiladoEmpaqueBusiness.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\MaquiladoCajaServiceReference\MaquiladoCaja.wsdl" />
-    <None Include="Service References\MaquiladoCajaServiceReference\MaquiladoCaja.xsd">
+    <None Include="Service References\MaquiladoCajaServiceReference\MaquiladoCaja1.wsdl" />
+    <None Include="Service References\MaquiladoCajaServiceReference\MaquiladoCaja3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\MaquiladoCajaServiceReference\MaquiladoCaja1.xsd">
+    <None Include="Service References\MaquiladoCajaServiceReference\MaquiladoCaja31.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\MaquiladoCajaServiceReference\MaquiladoCaja2.xsd">
+    <None Include="Service References\MaquiladoCajaServiceReference\MaquiladoCaja32.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\OrdenProduccionDetalleServiceReference\Intermoda.ClientProxy.LbDatPro.OrdenProduccionDetalleServiceReference.OrdenProduccionBultoBusiness.datasource">
@@ -148,27 +166,30 @@
     <None Include="Service References\OrdenProduccionDetalleServiceReference\Intermoda.ClientProxy.LbDatPro.OrdenProduccionDetalleServiceReference.OrdenProduccionTallaBusiness.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\OrdenProduccionDetalleServiceReference\OrdenProduccionDetalle.wsdl" />
-    <None Include="Service References\OrdenProduccionDetalleServiceReference\OrdenProduccionDetalle.xsd">
+    <None Include="Service References\OrdenProduccionDetalleServiceReference\OrdenProduccionDetalle1.wsdl" />
+    <None Include="Service References\OrdenProduccionDetalleServiceReference\OrdenProduccionDetalle3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\OrdenProduccionDetalleServiceReference\OrdenProduccionDetalle1.xsd">
+    <None Include="Service References\OrdenProduccionDetalleServiceReference\OrdenProduccionDetalle31.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\OrdenProduccionDetalleServiceReference\OrdenProduccionDetalle2.xsd">
+    <None Include="Service References\OrdenProduccionDetalleServiceReference\OrdenProduccionDetalle32.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrdenProduccionExternoServiceReference\Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.MaquiladoTrabajoEnProceso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\OrdenProduccionExternoServiceReference\Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.OrdenProduccionExternoBusiness.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\OrdenProduccionExternoServiceReference\OrdenProduccionExterno1.wsdl" />
-    <None Include="Service References\OrdenProduccionExternoServiceReference\OrdenProduccionExterno3.xsd">
+    <None Include="Service References\OrdenProduccionExternoServiceReference\OrdenProduccionExterno.wsdl" />
+    <None Include="Service References\OrdenProduccionExternoServiceReference\OrdenProduccionExterno.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\OrdenProduccionExternoServiceReference\OrdenProduccionExterno31.xsd">
+    <None Include="Service References\OrdenProduccionExternoServiceReference\OrdenProduccionExterno1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\OrdenProduccionExternoServiceReference\OrdenProduccionExterno32.xsd">
+    <None Include="Service References\OrdenProduccionExternoServiceReference\OrdenProduccionExterno2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\PlantaServiceReference\Intermoda.ClientProxy.LbDatPro.PlantaServiceReference.PlantaBusiness.datasource">
@@ -178,6 +199,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\EmpleadoServiceReference\" />
     <WCFMetadataStorage Include="Service References\InasistenciaServiceReference\" />
+    <WCFMetadataStorage Include="Service References\LecturaServiceReference\" />
     <WCFMetadataStorage Include="Service References\MaquiladoCajaDetalleServiceReference\" />
     <WCFMetadataStorage Include="Service References\MaquiladoCajaServiceReference\" />
     <WCFMetadataStorage Include="Service References\OrdenProduccionDetalleServiceReference\" />
@@ -204,18 +226,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\InasistenciaServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\OrdenProduccionExternoServiceReference\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\OrdenProduccionExternoServiceReference\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\OrdenProduccionExternoServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -249,13 +259,7 @@
     <None Include="Service References\InasistenciaServiceReference\Inasistencia1.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\OrdenProduccionExternoServiceReference\OrdenProduccionExterno1.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\PlantaServiceReference\Planta1.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\MaquiladoCajaDetalleServiceReference\MaquiladoCajaDetalle.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\MaquiladoCajaDetalleServiceReference\configuration91.svcinfo" />
@@ -270,9 +274,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\OrdenProduccionDetalleServiceReference\OrdenProduccionDetalle.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\OrdenProduccionDetalleServiceReference\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -285,9 +286,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\MaquiladoCajaServiceReference\MaquiladoCaja.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\MaquiladoCajaServiceReference\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -295,6 +293,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\MaquiladoCajaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MaquiladoCajaDetalleServiceReference\MaquiladoCajaDetalle1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MaquiladoCajaServiceReference\MaquiladoCaja1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrdenProduccionDetalleServiceReference\OrdenProduccionDetalle1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrdenProduccionExternoServiceReference\OrdenProduccionExterno.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrdenProduccionExternoServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrdenProduccionExternoServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrdenProduccionExternoServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LecturaServiceReference\Lecturas.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LecturaServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LecturaServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LecturaServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

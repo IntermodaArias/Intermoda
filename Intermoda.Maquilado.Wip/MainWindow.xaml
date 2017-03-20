@@ -1,0 +1,67 @@
+﻿<Window x:Class="Intermoda.Maquilado.Wip.MainWindow"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:converter="clr-namespace:Intermoda.Maquilado.Wip"
+        mc:Ignorable="d" Title="Trabajo en Proceso - Contratistas" Height="350" Width="1024"
+        WindowState="Maximized" DataContext="{Binding Source={StaticResource Locator}, Path=Main2}">
+    <Grid>
+        <Grid.Resources>
+            <converter:TimeToColorConverter x:Key="TimeConverter"/>
+            <Style TargetType="telerik:GridViewCell" x:Key="TimeCell">
+                <Setter Property="Background" Value="{Binding TiempoPlanta, Converter={StaticResource TimeConverter}}"/>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left">
+            <Label Margin="5" FontSize="16" Content="Planta: "/>
+            <telerik:RadComboBox Margin="5" FontSize="16" Width="250" ItemsSource="{Binding Path=PlantaList, Mode=TwoWay}"
+                                 SelectedItem="{Binding Path=PlantaSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 DisplayMemberPath="Descripcion" SelectedValuePath="Id"/>
+            <telerik:RadButton Margin="50,5,5,5" Command="{Binding Path=RefreshCommand}" ToolTip="Renovar">
+                <telerik:RadButton.Content>
+                    <Image Margin="2" Width="36" Source="Images/refresh.png"/>
+                </telerik:RadButton.Content>
+            </telerik:RadButton>
+        </StackPanel>
+        <telerik:RadGridView Grid.Row="1" Margin="5" AutoGenerateColumns="False" IsReadOnly="True" AutoExpandGroups="True" GroupRenderMode="Nested"
+                             ItemsSource="{Binding Path=Data, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <telerik:RadGridView.ChildTableDefinitions>
+                <telerik:GridViewTableDefinition>
+                    <telerik:GridViewTableDefinition.Relation>
+                        <telerik:PropertyRelation ParentPropertyName="Detalle"/>
+                    </telerik:GridViewTableDefinition.Relation>
+                </telerik:GridViewTableDefinition>
+            </telerik:RadGridView.ChildTableDefinitions>
+            <telerik:RadGridView.HierarchyChildTemplate>
+                <DataTemplate>
+                    <telerik:RadGridView ShowGroupPanel="False" AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding Detalle}">
+                        <telerik:RadGridView.Columns>
+                            <telerik:GridViewDataColumn Header="Centro de Trabajo" DataMemberBinding="{Binding CentroTrabajo}"/>
+                            <telerik:GridViewDataColumn Header="Entrada" DataMemberBinding="{Binding Entrada, StringFormat='{}{0:dd/MM/yyyy HH:mm:ss}'}"/>
+                            <telerik:GridViewDataColumn Header="Salida" DataMemberBinding="{Binding Salida, StringFormat='{}{0:dd/MM/yyyy HH:mm:ss}'}"/>
+                            <telerik:GridViewDataColumn Header="Tiempo del Proceso" DataMemberBinding="{Binding TiempoProceso, StringFormat='{}{0:dd\\ hh\\:mm\\:ss}'}"/>
+                        </telerik:RadGridView.Columns>
+                    </telerik:RadGridView>
+                </DataTemplate>
+            </telerik:RadGridView.HierarchyChildTemplate>
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn Width="2*" Header="Orden de Producción" DataMemberBinding="{Binding OrdenProduccion}"
+                                            CellStyle="{StaticResource TimeCell}"/>
+                <telerik:GridViewDataColumn Width="2*" Header="Referencia" DataMemberBinding="{Binding Referencia}"
+                                            CellStyle="{StaticResource TimeCell}"/>
+                <telerik:GridViewDataColumn Width="1*" Header="Cantidad" DataMemberBinding="{Binding Cantidad}"
+                                            CellStyle="{StaticResource TimeCell}"/>
+                <telerik:GridViewDataColumn Width="1*" Header="T. Planta" DataMemberBinding="{Binding TiempoPlanta, StringFormat='{}{0:dd\\ hh\\:mm\\:ss}'}"
+                                            CellStyle="{StaticResource TimeCell}"/>
+                <telerik:GridViewDataColumn Width="1*" Header="Estado" DataMemberBinding="{Binding Estado}"
+                                            CellStyle="{StaticResource TimeCell}"/>
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+    </Grid>
+</Window>

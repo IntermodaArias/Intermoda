@@ -5906,6 +5906,23 @@
             A <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
             </returns>
         </member>
+        <member name="T:Telerik.Windows.Controls.VisibilityChangedEventArgs">
+            <summary>
+            Provides data for an event raised when the visibility of the element has changed.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.VisibilityChangedEventArgs.#ctor(System.Nullable{System.Windows.Visibility})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.VisibilityChangedEventArgs"/> class.
+            </summary>
+            <param name="newVisibility">The new visibility.</param>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisibilityChangedEventArgs.NewVisibility">
+            <summary>
+            Gets the new visibility.
+            </summary>
+            <value>The new visibility.</value>
+        </member>
         <member name="T:Telerik.Windows.Controls.UIElementExtensions">
             <summary>
             Contains helper extension methods for the UIElement class.
@@ -9318,71 +9335,6 @@
             The state of TouchSelector when it is in the cell selection mode.
             </summary>
         </member>
-        <member name="T:Telerik.Windows.Input.Touch.ScrollViewerSwipeMode">
-            <summary>
-            Represents the additional swipe logic for a ScrollViewer or an element in a ScrollViewer.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Input.Touch.ScrollViewerSwipeMode.None">
-            <summary>
-            The element does not have additional logic for swiping.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Input.Touch.ScrollViewerSwipeMode.Self">
-            <summary>
-            The element is expected to be a ScrollViewer and if an unhandled swipe gesture occurs, the ScrollViewer will get panned.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Input.Touch.ScrollViewerSwipeMode.Parent">
-            <summary>
-            If an unhandled swipe gesture occurs for this element, the first ScrollViewer parent will get panned.
-            </summary>
-        </member>
-        <member name="T:Telerik.Windows.Input.Touch.TouchMode">
-            <summary>
-            Represents the touch mode of a control.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Input.Touch.TouchMode.HitTestVisible">
-            <summary>
-            The element is visible for touch input and events will route normally.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Input.Touch.TouchMode.HitTestHidden">
-            <summary>
-            The element is not visible for touch input. Touch events will be raised for the element's parents as if this element is not in the visual tree.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Input.Touch.TouchMode.Locked">
-            <summary>
-            The element is visible for touch input and it will capture the touch device on touch down and will mark all touch events as handled, thus preventing event routing.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Input.Touch.TouchMode.None">
-            <summary>
-            The element will suppress all touch events. No touch events will be raised for touch input within the boundaries of the element.
-            </summary>
-        </member>
-        <member name="T:Telerik.Windows.Input.Touch.TouchDragStartTrigger">
-            <summary>
-            Represents the touch action which triggers a drag operation.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Input.Touch.TouchDragStartTrigger.TapHoldAndMove">
-            <summary>
-            A drag operation will be triggered during a TouchMove event after a TapAndHold event.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Input.Touch.TouchDragStartTrigger.TouchMove">
-            <summary>
-            A drag operation will be triggered during a TouchMove, regardless of whether or not a TapAndHold event has occurred.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Input.Touch.TouchDragStartTrigger.TapAndHold">
-            <summary>
-            A drag operation will be triggered during a TapAndHold event.
-            </summary>
-        </member>
         <member name="T:Telerik.Windows.Input.Touch.TouchManager">
             <summary>
             A utility class that exposes methods that enable touch management.
@@ -9396,6 +9348,11 @@
         <member name="F:Telerik.Windows.Input.Touch.TouchManager.ScrollViewerSwipeModeProperty">
             <summary>
             Identifies the ScrollViewerSwipeMode dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Input.Touch.TouchManager.ShouldSuspendMousePromotionProperty">
+            <summary>
+            Identifies the ShouldSuspendMousePromotion dependency property.
             </summary>
         </member>
         <member name="M:Telerik.Windows.Input.Touch.TouchManager.GetDragStartTrigger(System.Windows.DependencyObject)">
@@ -9416,6 +9373,16 @@
         <member name="M:Telerik.Windows.Input.Touch.TouchManager.SetScrollViewerSwipeMode(System.Windows.DependencyObject,Telerik.Windows.Input.Touch.ScrollViewerSwipeMode)">
             <summary>
             Sets the scroll viewer swipe mode.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Input.Touch.TouchManager.GetShouldSuspendMousePromotion(System.Windows.DependencyObject)">
+            <summary>
+            Gets a value indicating whether mouse events should be suspended during touch input.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Input.Touch.TouchManager.SetShouldSuspendMousePromotion(System.Windows.DependencyObject,System.Boolean)">
+            <summary>
+            Sets a value indicating whether mouse events should be suspended during touch input.
             </summary>
         </member>
         <member name="M:Telerik.Windows.Input.Touch.TouchManager.AddDragStartedEventHandler(System.Windows.UIElement,Telerik.Windows.Input.Touch.TouchEventHandler,System.Boolean)">
@@ -9681,6 +9648,111 @@
         <member name="P:Telerik.Windows.Input.Touch.TouchManager.IsTouchEnabled">
             <summary>
             Gets or sets a value indicating whether the <see cref="T:Telerik.Windows.Input.Touch.TouchManager"/> responds to any touch events.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Input.Touch.TouchManager.DragStartDistance">
+            <summary>
+            Gets or sets the minimum distance a touch point has to move before the action is considered a drag.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Input.Touch.TouchManager.PinchStartDistance">
+            <summary>
+            Gets or sets the minimum distance a touch point has to move before the action is considered a pinch.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Input.Touch.TouchManager.SwipeStartDistance">
+            <summary>
+            Gets or sets the minimum distance a touch point has to move before the action is considered a swipe.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Input.Touch.TouchManager.SwipeInertiaDuration">
+            <summary>
+            Gets or sets the duration of the swipe inertia, in milliseconds. 
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Input.Touch.TouchManager.TapVicinity">
+            <summary>
+            Gets or sets the maximum distance a touch point can move for the action to be considered a tap.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Input.Touch.TouchManager.TapTime">
+            <summary>
+            Gets or sets the time, in milliseconds, that can elapse between a touch down and a touch up for the action to be considered a tap. 
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Input.Touch.TouchManager.MultiTapVicinity">
+            <summary>
+            Gets or sets the maximum distance between two successive tap actions for the TouchManager to consider them multiple-taps.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Input.Touch.TouchManager.MultiTapTime">
+            <summary>
+            Gets or sets the time, in milliseconds, that can elapse between two successive tap actions for the TouchManager to consider them multiple-taps.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Input.Touch.ScrollViewerSwipeMode">
+            <summary>
+            Represents the additional swipe logic for a ScrollViewer or an element in a ScrollViewer.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Input.Touch.ScrollViewerSwipeMode.None">
+            <summary>
+            The element does not have additional logic for swiping.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Input.Touch.ScrollViewerSwipeMode.Self">
+            <summary>
+            The element is expected to be a ScrollViewer and if an unhandled swipe gesture occurs, the ScrollViewer will get panned.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Input.Touch.ScrollViewerSwipeMode.Parent">
+            <summary>
+            If an unhandled swipe gesture occurs for this element, the first ScrollViewer parent will get panned.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Input.Touch.TouchMode">
+            <summary>
+            Represents the touch mode of a control.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Input.Touch.TouchMode.HitTestVisible">
+            <summary>
+            The element is visible for touch input and events will route normally.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Input.Touch.TouchMode.HitTestHidden">
+            <summary>
+            The element is not visible for touch input. Touch events will be raised for the element's parents as if this element is not in the visual tree.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Input.Touch.TouchMode.Locked">
+            <summary>
+            The element is visible for touch input and it will capture the touch device on touch down and will mark all touch events as handled, thus preventing event routing.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Input.Touch.TouchMode.None">
+            <summary>
+            The element will suppress all touch events. No touch events will be raised for touch input within the boundaries of the element.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Input.Touch.TouchDragStartTrigger">
+            <summary>
+            Represents the touch action which triggers a drag operation.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Input.Touch.TouchDragStartTrigger.TapHoldAndMove">
+            <summary>
+            A drag operation will be triggered during a TouchMove event after a TapAndHold event.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Input.Touch.TouchDragStartTrigger.TouchMove">
+            <summary>
+            A drag operation will be triggered during a TouchMove, regardless of whether or not a TapAndHold event has occurred.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Input.Touch.TouchDragStartTrigger.TapAndHold">
+            <summary>
+            A drag operation will be triggered during a TapAndHold event.
             </summary>
         </member>
         <member name="T:Telerik.Windows.Input.Touch.TouchEventHandler">
@@ -10253,7 +10325,8 @@
         </member>
         <member name="T:Telerik.Licensing.TelerikLicenseProvider">
             <summary>
-            A License provider for Telerik UI for WPF.
+            A License provider for Telerik UI for WPF. In Silverlight this class does not have 
+            anything to do with licensing, it exists only to be able to have the same code in WPF and SL.
             </summary>
         </member>
         <member name="T:Telerik.Windows.Controls.Behaviors.ListBoxSelectedItemsBehavior">
@@ -10415,6 +10488,16 @@
         <member name="P:Telerik.Windows.DragDrop.Behaviors.ListBoxDragVisualProvider.DataContext">
             <summary>
             Gets the DataContext property.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Internal.StackPanelHelper.Telerik#Windows#Controls#Internal#IPanelKeyboardHelper#GetVerticalOffsetForTouch">
+            <summary>
+            Since the returned value should be in pixels, if the stackPanel is scrolling by items, their size is included in the calculations.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Internal.StackPanelHelper.Telerik#Windows#Controls#Internal#IPanelKeyboardHelper#GetHorizontalOffsetForTouch">
+            <summary>
+            Since the returned value should be in pixels, if the stackPanel is scrolling by items, their size is included in the calculations.
             </summary>
         </member>
         <member name="T:Telerik.Windows.Controls.RadListBox">
@@ -12147,9 +12230,6 @@
         <member name="M:Telerik.Windows.Automation.Peers.StringFilterEditorAutomationPeer.GetItemStatusCore">
             <inheritdoc />
         </member>
-        <member name="M:Telerik.Windows.Automation.Peers.StringFilterEditorAutomationPeer.GetChildrenCore">
-            <inheritdoc />
-        </member>
         <member name="M:Telerik.Windows.Automation.Peers.StringFilterEditorAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)">
             <inheritdoc />
         </member>
@@ -13221,16 +13301,6 @@
             Tries to execute all enqueued selection actions.
             </summary>
             <returns>Returns true if the actions can be executed, otherwise returns false.</returns>
-        </member>
-        <member name="M:Telerik.Windows.Controls.Internal.StackPanelHelper.Telerik#Windows#Controls#Internal#IPanelKeyboardHelper#GetVerticalOffsetForTouch">
-            <summary>
-            Since the returned value should be in pixels, if the stackPanel is scrolling by items, their size is included in the calculations.
-            </summary>
-        </member>
-        <member name="M:Telerik.Windows.Controls.Internal.StackPanelHelper.Telerik#Windows#Controls#Internal#IPanelKeyboardHelper#GetHorizontalOffsetForTouch">
-            <summary>
-            Since the returned value should be in pixels, if the stackPanel is scrolling by items, their size is included in the calculations.
-            </summary>
         </member>
         <member name="M:Telerik.Windows.Controls.Internal.VirtualizingStackPanelHelper.Telerik#Windows#Controls#Internal#IPanelKeyboardHelper#GetVerticalOffsetForTouch">
             <summary>
@@ -20509,6 +20579,11 @@
             Identifies the <see cref="P:Telerik.Windows.Controls.GreenPalette.FixedColor"/> dependency property. 
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.GreenPalette.ReadOnlyBackgroundColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.GreenPalette.ReadOnlyBackgroundColor"/> dependency property. 
+            </summary>
+        </member>
         <member name="F:Telerik.Windows.Controls.GreenPalette.FontSizeXSProperty">
             <summary>
             Identifies the <see cref="P:Telerik.Windows.Controls.GreenPalette.FontSizeXS"/> dependency property.
@@ -20676,6 +20751,11 @@
         <member name="P:Telerik.Windows.Controls.GreenPalette.FixedColor">
             <summary>
             Gets or sets the validation foreground color of the GreenTheme's elements.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GreenPalette.ReadOnlyBackgroundColor">
+            <summary>
+            Gets or sets the ReadOnly background color of the GreenTheme's elements.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.GreenPalette.FontSizeXS">
@@ -20878,6 +20958,11 @@
             The key for the <see cref="T:Telerik.Windows.Controls.GreenPalette"/>'s FixedBrush.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.GreenResourceKeyID.ReadOnlyBackgroundBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.GreenPalette"/>'s ReadOnlyBackgroundBrush.
+            </summary>
+        </member>
         <member name="F:Telerik.Windows.Controls.GreenResourceKeyID.QualityPoorBrush">
             <summary>
             The key for the <see cref="T:Telerik.Windows.Controls.GreenPalette"/>'s QualityPoorBrush. 
@@ -21046,6 +21131,11 @@
         <member name="F:Telerik.Windows.Controls.GreenResourceKey.FixedBrush">
             <summary>
             The key for the <see cref="T:Telerik.Windows.Controls.GreenPalette"/>'s FixedBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GreenResourceKey.ReadOnlyBackgroundBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.GreenPalette"/>'s ReadOnlyBackgroundBrush.
             </summary>
         </member>
         <member name="F:Telerik.Windows.Controls.GreenResourceKey.QualityPoorBrush">
@@ -26499,6 +26589,11 @@
               Looks up a localized string similar to Are you sure you want to close this dialog without saving the changes?.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.Strings.CloseSearchPanel">
+            <summary>
+              Looks up a localized string similar to Closes the search panel.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.Strings.CloudUpload_AddFiles">
             <summary>
               Looks up a localized string similar to Add Files.
@@ -27394,6 +27489,11 @@
               Looks up a localized string similar to Flow Direction.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Documents_Commands_ChangeSectionColumnsCommand_Name">
+            <summary>
+              Looks up a localized string similar to Columns.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.Strings.Documents_Commands_ChangeSpanStyleCommand_Name">
             <summary>
               Looks up a localized string similar to Font Formatting.
@@ -27622,6 +27722,11 @@
         <member name="P:Telerik.Windows.Controls.Strings.Documents_Commands_InsertHyperlinkCommand_Name">
             <summary>
               Looks up a localized string similar to Insert Hyperlink.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Documents_Commands_InsertionCommand_Name">
+            <summary>
+              Looks up a localized string similar to Insertion.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.Strings.Documents_Commands_InsertPageBreak_Name">
@@ -29695,6 +29800,11 @@
               Looks up a localized string similar to Reenter password to confirm:.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Documents_RadRichTextBox_ColumnBreak">
+            <summary>
+              Looks up a localized string similar to ‧‧‧‧‧‧‧ Column Break ‧‧‧‧‧‧‧.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.Strings.Documents_RadRichTextBox_ContinueToNextCommentFromBeginningOfDocument">
             <summary>
               Looks up a localized string similar to Do you want to continue searching from the beginning of the document?.
@@ -30539,6 +30649,11 @@
         <member name="P:Telerik.Windows.Controls.Strings.Documents_TablePropertiesDialog_Header">
             <summary>
               Looks up a localized string similar to Table Properties.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Documents_TablePropertiesDialog_Row">
+            <summary>
+              Looks up a localized string similar to Row.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.Strings.Documents_TablePropertiesDialog_Table">
@@ -31476,6 +31591,11 @@
               Looks up a localized string similar to Grouped by:.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.Strings.GridViewSearchPanelTopText">
+            <summary>
+              Looks up a localized string similar to Full Text Search.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.Strings.HeaderContentControl_Header_Description">
             <summary>
               Looks up a localized string similar to Gets or sets the header of the control..
@@ -31924,6 +32044,51 @@
         <member name="P:Telerik.Windows.Controls.Strings.LayoutCategory">
             <summary>
               Looks up a localized string similar to Layout.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.LayoutControl_HorizontalAlignment_Center">
+            <summary>
+              Looks up a localized string similar to Center.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.LayoutControl_HorizontalAlignment_Left">
+            <summary>
+              Looks up a localized string similar to Left.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.LayoutControl_HorizontalAlignment_Right">
+            <summary>
+              Looks up a localized string similar to Right.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.LayoutControl_HorizontalAlignment_Stretch">
+            <summary>
+              Looks up a localized string similar to Stretch.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.LayoutControl_SelectParent">
+            <summary>
+              Looks up a localized string similar to Select Parent.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.LayoutControl_VerticalAlignment_Bottom">
+            <summary>
+              Looks up a localized string similar to Bottom.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.LayoutControl_VerticalAlignment_Center">
+            <summary>
+              Looks up a localized string similar to Center.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.LayoutControl_VerticalAlignment_Stretch">
+            <summary>
+              Looks up a localized string similar to Stretch.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.LayoutControl_VerticalAlignment_Top">
+            <summary>
+              Looks up a localized string similar to Top.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.Strings.LowImportance">
@@ -39044,6 +39209,131 @@
               Looks up a localized string similar to Insert Function....
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooter_NoSectionIsSelected">
+            <summary>
+              Looks up a localized string similar to No section is selected. Select left, center or right section box before performing this action..
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_CenterSection">
+            <summary>
+              Looks up a localized string similar to Center section:.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_EvenPageFooter">
+            <summary>
+              Looks up a localized string similar to Even Page Footer.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_EvenPageHeader">
+            <summary>
+              Looks up a localized string similar to Even Page Header.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_FirstPageFooter">
+            <summary>
+              Looks up a localized string similar to First Page Footer.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_FirstPageHeader">
+            <summary>
+              Looks up a localized string similar to First Page Header.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_Footer">
+            <summary>
+              Looks up a localized string similar to Footer.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_FormatPicture">
+            <summary>
+              Looks up a localized string similar to Format Picture.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_FormatText">
+            <summary>
+              Looks up a localized string similar to Format Text.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_Header">
+            <summary>
+              Looks up a localized string similar to Header.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_InsertDate">
+            <summary>
+              Looks up a localized string similar to Insert Date.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_InsertFileName">
+            <summary>
+              Looks up a localized string similar to Insert File Name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_InsertFilePath">
+            <summary>
+              Looks up a localized string similar to Insert File Path.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_InsertNumberOfPages">
+            <summary>
+              Looks up a localized string similar to Insert Number of Pages.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_InsertPageNumber">
+            <summary>
+              Looks up a localized string similar to Insert Page Number.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_InsertPicture">
+            <summary>
+              Looks up a localized string similar to Insert Picture.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_InsertSheetName">
+            <summary>
+              Looks up a localized string similar to Insert Sheet Name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_InsertTime">
+            <summary>
+              Looks up a localized string similar to Insert Time.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_LeftSection">
+            <summary>
+              Looks up a localized string similar to Left section:.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_OddPageFooter">
+            <summary>
+              Looks up a localized string similar to Odd Page Footer.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_OddPageHeader">
+            <summary>
+              Looks up a localized string similar to Odd Page Header.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_RightSection">
+            <summary>
+              Looks up a localized string similar to Right section:.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_ToFormatText">
+            <summary>
+              Looks up a localized string similar to To format text: select the text, then choose the Format Text button..
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_ToInsertField">
+            <summary>
+              Looks up a localized string similar to To insert a page number, date, time, file path, file name, or tab name: position the insertion point in the edit box, then choose the appropriate button..
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_HeaderFooterDialog_ToInsertPicture">
+            <summary>
+              Looks up a localized string similar to To insert picture: press the Insert Picture button. To format your picture, place the cursor in the edit box and press the Format Picture button..
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertCellsDialog_EntireColumn">
             <summary>
               Looks up a localized string similar to Entire column.
@@ -39382,6 +39672,11 @@
               Looks up a localized string similar to Adjust to:.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_AlignWithPageMargins">
+            <summary>
+              Looks up a localized string similar to Align with page margins.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_BlackAndWhite">
             <summary>
               Looks up a localized string similar to Black and white.
@@ -39395,6 +39690,26 @@
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_CenterOnPage">
             <summary>
               Looks up a localized string similar to Center on page.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_CustomFooter">
+            <summary>
+              Looks up a localized string similar to Custom Footer....
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_CustomHeader">
+            <summary>
+              Looks up a localized string similar to Custom Header....
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_DifferentFirstPage">
+            <summary>
+              Looks up a localized string similar to Different first page.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_DifferentOddAndEvenPages">
+            <summary>
+              Looks up a localized string similar to Different odd and even pages.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_DownThenOver">
@@ -39432,6 +39747,16 @@
               Looks up a localized string similar to Header:.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_HeaderFooterContentTextIsTooLong">
+            <summary>
+              Looks up a localized string similar to The text string you entered is too long. Reduce the number of characters used..
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_HeaderFooterTabHeader">
+            <summary>
+              Looks up a localized string similar to Header/Footer.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_Horizontally">
             <summary>
               Looks up a localized string similar to Horizontally.
@@ -39462,6 +39787,11 @@
               Looks up a localized string similar to Margin values must be positive integer or decimal numbers!.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_none">
+            <summary>
+              Looks up a localized string similar to (none).
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_Orientation">
             <summary>
               Looks up a localized string similar to Orientation.
@@ -39470,6 +39800,11 @@
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_OverThenDown">
             <summary>
               Looks up a localized string similar to Over, then down.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_Page">
+            <summary>
+              Looks up a localized string similar to Page.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_PageOrder">
@@ -39512,6 +39847,11 @@
               Looks up a localized string similar to Row and column headings.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_ScaleWithDocument">
+            <summary>
+              Looks up a localized string similar to Scale with document.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_Scaling">
             <summary>
               Looks up a localized string similar to Scaling.
@@ -39535,6 +39875,11 @@
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_Vertically">
             <summary>
               Looks up a localized string similar to Vertically.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_PageSetupDialog_оf">
+            <summary>
+              Looks up a localized string similar to of.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_Printing_PageSetup">
@@ -40693,6 +41038,16 @@
         <member name="P:Telerik.Windows.Controls.Strings.TimeSpanPicker_SelectTimeSpan">
             <summary>
               Looks up a localized string similar to Select time span.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Today">
+            <summary>
+              Looks up a localized string similar to Today.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.TogglePinnedRowState">
+            <summary>
+              Looks up a localized string similar to Toggles the pinned state of the row..
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.Strings.Toolbox_ViewGalleries">

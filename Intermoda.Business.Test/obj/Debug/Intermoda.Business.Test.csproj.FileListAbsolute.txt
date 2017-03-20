@@ -1,0 +1,14 @@
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Test\bin\Debug\Intermoda.Business.Test.exe.config
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Test\bin\Debug\Intermoda.Business.Test.exe
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Test\bin\Debug\Intermoda.Business.Test.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Test\bin\Debug\Intermoda.Business.LbDatPro.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Test\bin\Debug\Intermoda.LbDatPro.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Test\bin\Debug\EntityFramework.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Test\bin\Debug\Intermoda.Business.LbDatPro.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Test\bin\Debug\Intermoda.LbDatPro.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Test\bin\Debug\EntityFramework.xml
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Test\obj\Debug\Intermoda.Business.Test.exe
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Test\obj\Debug\Intermoda.Business.Test.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Test\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Test\obj\Debug\Intermoda.Business.Test.csprojResolveAssemblyReference.cache

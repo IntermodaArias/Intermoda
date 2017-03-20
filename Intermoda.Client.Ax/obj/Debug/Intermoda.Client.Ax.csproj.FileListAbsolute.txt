@@ -2,3 +2,7 @@ C:\VisualStudio\Intermoda\Intermoda.Client.Ax\bin\Debug\Intermoda.Client.Ax.dll
 C:\VisualStudio\Intermoda\Intermoda.Client.Ax\bin\Debug\Intermoda.Client.Ax.pdb
 C:\VisualStudio\Intermoda\Intermoda.Client.Ax\obj\Debug\Intermoda.Client.Ax.dll
 C:\VisualStudio\Intermoda\Intermoda.Client.Ax\obj\Debug\Intermoda.Client.Ax.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Client.Ax\bin\Debug\Intermoda.Client.Ax.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Client.Ax\bin\Debug\Intermoda.Client.Ax.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Client.Ax\obj\Debug\Intermoda.Client.Ax.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Client.Ax\obj\Debug\Intermoda.Client.Ax.pdb

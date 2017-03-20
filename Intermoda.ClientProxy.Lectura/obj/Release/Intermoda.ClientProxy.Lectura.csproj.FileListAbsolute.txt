@@ -3,3 +3,8 @@ C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Lectura\bin\Release\Intermoda.Cl
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Lectura\bin\Release\Intermoda.ClientProxy.Lectura.pdb
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Lectura\obj\Release\Intermoda.ClientProxy.Lectura.dll
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Lectura\obj\Release\Intermoda.ClientProxy.Lectura.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Lectura\bin\Release\Intermoda.ClientProxy.Lectura.dll.config
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Lectura\bin\Release\Intermoda.ClientProxy.Lectura.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Lectura\bin\Release\Intermoda.ClientProxy.Lectura.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Lectura\obj\Release\Intermoda.ClientProxy.Lectura.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Lectura\obj\Release\Intermoda.ClientProxy.Lectura.pdb

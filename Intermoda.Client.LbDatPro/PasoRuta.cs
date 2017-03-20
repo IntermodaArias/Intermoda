@@ -1,4 +1,5 @@
-﻿using GalaSoft.MvvmLight;
+﻿using System;
+using GalaSoft.MvvmLight;
 
 namespace Intermoda.Client.LbDatPro
 {
@@ -37,6 +38,40 @@ namespace Intermoda.Client.LbDatPro
 
                 _companiaId = value;
                 RaisePropertyChanged(CompaniaIdPropertyName);
+            }
+        }
+
+        #endregion
+
+        #region Planta
+
+        /// <summary>
+        /// The <see cref="Planta" /> property's name.
+        /// </summary>
+        public const string PlantaPropertyName = "Planta";
+
+        private string _planta;
+
+        /// <summary>
+        /// Sets and gets the Planta property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public string Planta
+        {
+            get
+            {
+                return _planta;
+            }
+
+            set
+            {
+                if (_planta == value)
+                {
+                    return;
+                }
+
+                _planta = value;
+                RaisePropertyChanged(PlantaPropertyName);
             }
         }
 
@@ -207,6 +242,176 @@ namespace Intermoda.Client.LbDatPro
 
                 _secuencia = value;
                 RaisePropertyChanged(SecuenciaPropertyName);
+            }
+        }
+
+        #endregion
+
+        #region Estado
+
+        /// <summary>
+        /// The <see cref="Estado" /> property's name.
+        /// </summary>
+        public const string EstadoPropertyName = "Estado";
+
+        private string _estado;
+
+        /// <summary>
+        /// Sets and gets the Estado property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public string Estado
+        {
+            get
+            {
+                return _estado;
+            }
+
+            set
+            {
+                if (_estado == value)
+                {
+                    return;
+                }
+
+                _estado = value;
+                RaisePropertyChanged(EstadoPropertyName);
+            }
+        }
+
+        #endregion
+
+        #region LecturaEntrada
+
+        /// <summary>
+        /// The <see cref="LecturaEntrada" /> property's name.
+        /// </summary>
+        public const string LecturaEntradaPropertyName = "LecturaEntrada";
+
+        private DateTime? _lecturaEntrada;
+
+        /// <summary>
+        /// Sets and gets the LecturaEntrada property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public DateTime? LecturaEntrada
+        {
+            get
+            {
+                return _lecturaEntrada;
+            }
+
+            set
+            {
+                if (_lecturaEntrada == value)
+                {
+                    return;
+                }
+
+                _lecturaEntrada = value;
+                RaisePropertyChanged(LecturaEntradaPropertyName);
+            }
+        }
+
+        #endregion
+
+        #region LecturaSalida
+
+        /// <summary>
+        /// The <see cref="LecturaSalida" /> property's name.
+        /// </summary>
+        public const string LecturaSalidaPropertyName = "LecturaSalida";
+
+        private DateTime? _lecturaSalida;
+
+        /// <summary>
+        /// Sets and gets the LecturaSalida property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public DateTime? LecturaSalida
+        {
+            get
+            {
+                return _lecturaSalida;
+            }
+
+            set
+            {
+                if (_lecturaSalida == value)
+                {
+                    return;
+                }
+
+                _lecturaSalida = value;
+                RaisePropertyChanged(LecturaSalidaPropertyName);
+            }
+        }
+
+        #endregion
+
+        #region TiempoEnProceso
+
+        /// <summary>
+        /// The <see cref="TiempoEnProceso" /> property's name.
+        /// </summary>
+        public const string TiempoEnProcesoPropertyName = "TiempoEnProceso";
+
+        private TimeSpan? _tiempoEnProceso;
+
+        /// <summary>
+        /// Sets and gets the TiempoEnProceso property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public TimeSpan? TiempoEnProceso
+        {
+            get
+            {
+                return _tiempoEnProceso;
+            }
+
+            set
+            {
+                if (_tiempoEnProceso == value)
+                {
+                    return;
+                }
+
+                _tiempoEnProceso = value;
+                RaisePropertyChanged(TiempoEnProcesoPropertyName);
+            }
+        }
+
+        #endregion
+
+        #region TiempoEnPlanta
+
+        /// <summary>
+        /// The <see cref="TiempoEnPlanta" /> property's name.
+        /// </summary>
+        public const string TiempoEnPlantaPropertyName = "TiempoEnPlanta";
+
+        private TimeSpan? _tiempoEnPlanta;
+
+        /// <summary>
+        /// Sets and gets the TiempoEnPlanta property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public TimeSpan? TiempoEnPlanta
+        {
+            get
+            {
+                return _tiempoEnPlanta;
+            }
+
+            set
+            {
+                if (_tiempoEnPlanta == value)
+                {
+                    return;
+                }
+
+                _tiempoEnPlanta = value;
+                RaisePropertyChanged(TiempoEnPlantaPropertyName);
             }
         }
 

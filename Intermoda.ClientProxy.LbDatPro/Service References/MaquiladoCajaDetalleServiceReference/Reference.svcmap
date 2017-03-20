@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost/IntermodaService/LbDatPro/MaquiladoCajaDetalle.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://190.5.95.110/ImDataServiceLb/MaquiladoCajaDetalle.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MaquiladoCajaDetalle.disco" MetadataType="Disco" ID="02fe8a0e-4605-4fcc-8c91-5c4d79b45380" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/MaquiladoCajaDetalle.svc?disco" />
-    <MetadataFile FileName="MaquiladoCajaDetalle.xsd" MetadataType="Schema" ID="6a03c259-1dfa-4ae9-94fc-5027edb39fd1" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/MaquiladoCajaDetalle.svc?xsd=xsd0" />
-    <MetadataFile FileName="MaquiladoCajaDetalle1.xsd" MetadataType="Schema" ID="1fa35d9c-ac1e-4340-aa36-96c671746703" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/MaquiladoCajaDetalle.svc?xsd=xsd2" />
-    <MetadataFile FileName="MaquiladoCajaDetalle.wsdl" MetadataType="Wsdl" ID="a7e2bc4d-b5c2-4b87-8947-c83d04c3703f" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/MaquiladoCajaDetalle.svc?wsdl" />
-    <MetadataFile FileName="MaquiladoCajaDetalle2.xsd" MetadataType="Schema" ID="ad119acf-580e-4e49-ac36-daf9965d7fef" SourceId="1" SourceUrl="http://localhost/IntermodaService/LbDatPro/MaquiladoCajaDetalle.svc?xsd=xsd1" />
+    <MetadataFile FileName="MaquiladoCajaDetalle1.disco" MetadataType="Disco" ID="036db162-0904-4bc9-bdd3-b09a1c864a8c" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/MaquiladoCajaDetalle.svc?disco" />
+    <MetadataFile FileName="MaquiladoCajaDetalle3.xsd" MetadataType="Schema" ID="86b4b64c-8462-4648-86b8-585054ec63f8" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/MaquiladoCajaDetalle.svc?xsd=xsd2" />
+    <MetadataFile FileName="MaquiladoCajaDetalle31.xsd" MetadataType="Schema" ID="cdb65582-4de2-4ff0-8514-d52b492f955f" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/MaquiladoCajaDetalle.svc?xsd=xsd0" />
+    <MetadataFile FileName="MaquiladoCajaDetalle1.wsdl" MetadataType="Wsdl" ID="76e8a45b-1a80-4b9c-9558-7886c12681e4" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/MaquiladoCajaDetalle.svc?wsdl" />
+    <MetadataFile FileName="MaquiladoCajaDetalle32.xsd" MetadataType="Schema" ID="fed8b75c-f566-41a4-b785-ea98bf66f9b1" SourceId="1" SourceUrl="http://190.5.95.110/ImDataServiceLb/MaquiladoCajaDetalle.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

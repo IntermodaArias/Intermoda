@@ -3,3 +3,7 @@ C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Ax\bin\Release\Intermoda.ClientP
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Ax\obj\Release\Intermoda.ClientProxy.Ax.csprojResolveAssemblyReference.cache
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Ax\obj\Release\Intermoda.ClientProxy.Ax.dll
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Ax\obj\Release\Intermoda.ClientProxy.Ax.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Ax\bin\Release\Intermoda.ClientProxy.Ax.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Ax\bin\Release\Intermoda.ClientProxy.Ax.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Ax\obj\Release\Intermoda.ClientProxy.Ax.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Ax\obj\Release\Intermoda.ClientProxy.Ax.pdb

@@ -85,6 +85,10 @@
             <Style TargetType="Label">
                 <Setter Property="FontSize" Value="16"/>
             </Style>
+            <Style BasedOn="{StaticResource {x:Type Label}}" x:Key="Titulo" TargetType="Label">
+                <Setter Property="FontSize" Value="38"/>
+                <Setter Property="FontWeight" Value="DemiBold"/>
+            </Style>
             
             <DataTemplate x:Key="MainWindowGroupFooterTemplate">
                 <TextBlock Text="Total"/>

@@ -5,10 +5,11 @@ using System.Linq;
 using System.Windows;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
 using Intermoda.Client.DataService.LbDatPro;
 using Intermoda.Client.LbDatPro;
 using Intermoda.Maquilado.Helpers;
-using Telerik.Windows.Documents.Utils;
+using Intermoda.Maquilado.Messages;
 
 namespace Intermoda.Maquilado.ViewModel
 {
@@ -435,6 +436,40 @@ namespace Intermoda.Maquilado.ViewModel
 
         #endregion
 
+        #region ReversarVisibility
+
+        /// <summary>
+        /// The <see cref="ReversarVisibility" /> property's name.
+        /// </summary>
+        public const string ReversarVisibilityPropertyName = "ReversarVisibility";
+
+        private Visibility _reversarVisibility;
+
+        /// <summary>
+        /// Sets and gets the ReversarVisibility property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public Visibility ReversarVisibility
+        {
+            get
+            {
+                return _reversarVisibility;
+            }
+
+            set
+            {
+                if (_reversarVisibility == value)
+                {
+                    return;
+                }
+
+                _reversarVisibility = value;
+                RaisePropertyChanged(ReversarVisibilityPropertyName);
+            }
+        }
+
+        #endregion
+
         #endregion
 
         #region Commands
@@ -445,6 +480,7 @@ namespace Intermoda.Maquilado.ViewModel
         public RelayCommand FinalizarCentroTrabajoCommand { get; set; }
         public RelayCommand EmpacarCommand { get; set; }
         public RelayCommand EnviarIntermodaCommand { get; set; }
+        public RelayCommand ReversarUltimaAccionCommand { get; set; }
 
         #endregion
 
@@ -453,6 +489,8 @@ namespace Intermoda.Maquilado.ViewModel
         public MainViewModel()
         {
             _dialogService = new DialogService();
+
+            Messenger.Default.Register<OrderChangeMessage>(this, OrdenChange);
 
             if (IsInDesignMode)
             {
@@ -498,10 +536,30 @@ namespace Intermoda.Maquilado.ViewModel
         {
             LoginCommand = new RelayCommand(Login);
             RefreshCommand = new RelayCommand(LoadData);
-            IniciarCentroTrabajoCommand = new RelayCommand(LecturaEntrada);
-            FinalizarCentroTrabajoCommand = new RelayCommand(LecturaSalida);
+            IniciarCentroTrabajoCommand = new RelayCommand(LecturaEntrada, CanLectura);
+            FinalizarCentroTrabajoCommand = new RelayCommand(LecturaSalida, CanLectura);
             EmpacarCommand = new RelayCommand(Empacar);
             EnviarIntermodaCommand = new RelayCommand(EnviarIntermoda);
+        }
+
+        private void OrdenChange(OrderChangeMessage msg)
+        {
+            var orden = OrdenList.FirstOrDefault(r =>
+                r.CompaniaId == msg.Orden.CompaniaId &&
+                r.Ano == msg.Orden.Ano &&
+                r.Numero == msg.Orden.Numero);
+            if (orden != null)
+            {
+                orden.CentroTrabajoSiguiente = msg.Orden.CentroTrabajoSiguiente;
+                orden.CentroTrabajoSiguienteId = msg.Orden.CentroTrabajoSiguienteId;
+                orden.SiguienteLecturaTipo = msg.Orden.SiguienteLecturaTipo;
+                orden.EstadoLeyenda = msg.Orden.EstadoLeyenda;
+                orden.Editable = msg.Orden.Editable;
+                orden.Estado = msg.Orden.Estado;
+                orden.CentroTrabajoUltimaLectura = msg.Orden.CentroTrabajoUltimaLectura;
+                orden.CentroTrabajoUltimaLecturaId = msg.Orden.CentroTrabajoUltimaLecturaId;
+                orden.Ruta = msg.Orden.Ruta;
+            }
         }
 
         private void Login()
@@ -559,6 +617,9 @@ namespace Intermoda.Maquilado.ViewModel
                     EnviarVisibility = Visibility.Visible;
                     break;
             }
+            IniciarCentroTrabajoCommand.RaiseCanExecuteChanged();
+            FinalizarCentroTrabajoCommand.RaiseCanExecuteChanged();
+            EnviarIntermodaCommand.RaiseCanExecuteChanged();
         }
 
         private void BusquedaChanged()
@@ -591,32 +652,45 @@ namespace Intermoda.Maquilado.ViewModel
 
         private void LecturaEntrada()
         {
-            _dataService.OrdenProduccionExternoGrabarLectura(OrdenSelected.CompaniaId, OrdenSelected.Ano,
-                OrdenSelected.Numero, OrdenSelected.CentroTrabajoSiguienteId, OrdenSelected.SiguienteLecturaTipo,
-                Planta.Usuario.Trim(), error =>
-                {
-                    if (error != null)
-                    {
-                        _dialogService.ShowException(error);
-                        return;
-                    }
-                    LoadData();
-                });
+            OrdenSelected.Editable = false;
+            OrdenSelected.EstadoLeyenda = "Procesando";
+
+            LecturaEntradaThread();
+
+            IniciarCentroTrabajoCommand.RaiseCanExecuteChanged();
+            FinalizarCentroTrabajoCommand.RaiseCanExecuteChanged();
+
+            //var thread = new Thread(LecturaEntradaThread);
+            //thread.SetApartmentState(ApartmentState.STA);
+            //thread.Start();
         }
 
         private void LecturaSalida()
         {
-            _dataService.OrdenProduccionExternoGrabarLectura(OrdenSelected.CompaniaId, OrdenSelected.Ano,
-               OrdenSelected.Numero, OrdenSelected.CentroTrabajoSiguienteId, OrdenSelected.SiguienteLecturaTipo,
-               Planta.Usuario.Trim(), error =>
-               {
-                   if (error != null)
-                   {
-                       _dialogService.ShowException(error);
-                       return;
-                   }
-                   LoadData();
-               });
+            try
+            {
+                OrdenSelected.Editable = false;
+                OrdenSelected.EstadoLeyenda = "Procesando";
+
+                LecturaSalidaThread();
+
+                IniciarCentroTrabajoCommand.RaiseCanExecuteChanged();
+                FinalizarCentroTrabajoCommand.RaiseCanExecuteChanged();
+
+                //var thread = new Thread(LecturaSalidaThread);
+                //thread.SetApartmentState(ApartmentState.STA);
+                //thread.Start();
+            }
+
+            catch (Exception exception)
+            {
+                _dialogService.ShowException(exception);
+            }
+        }
+
+        private bool CanLectura()
+        {
+            return OrdenSelected != null && OrdenSelected.Editable;
         }
 
         private void Empacar()
@@ -627,15 +701,74 @@ namespace Intermoda.Maquilado.ViewModel
 
         private void EnviarIntermoda()
         {
-            _dataService.OrdenProduccionExternoSerEstadoEnviarIntermoda(OrdenSelected.CompaniaId, OrdenSelected.Ano,
-                OrdenSelected.Numero, error =>
+            OrdenSelected.Editable = false;
+            OrdenSelected.EstadoLeyenda = "Procesando";
+
+            EnviarIntermodaThread();
+
+            IniciarCentroTrabajoCommand.RaiseCanExecuteChanged();
+            FinalizarCentroTrabajoCommand.RaiseCanExecuteChanged();
+
+            //var thread = new Thread(EnviarIntermodaThread);
+            //thread.SetApartmentState(ApartmentState.STA);
+            //thread.Start();
+        }
+
+        private void LecturaEntradaThread()
+        {
+            _dataService.OrdenProduccionExternoGrabarLectura(OrdenSelected.CompaniaId, OrdenSelected.Ano,
+                OrdenSelected.Numero, OrdenSelected.CentroTrabajoSiguienteId, OrdenSelected.SiguienteLecturaTipo,
+                Planta.Usuario.Trim(), (reg, error) =>
                 {
                     if (error != null)
                     {
                         _dialogService.ShowException(error);
                         return;
                     }
-                    LoadData();
+                    
+                    Messenger.Default.Send(new OrderChangeMessage { Orden = reg });
+                    //LoadData();
+                });
+        }
+
+        private void LecturaSalidaThread()
+        {
+            _dataService.OrdenProduccionExternoGrabarLectura(OrdenSelected.CompaniaId, OrdenSelected.Ano,
+                OrdenSelected.Numero, OrdenSelected.CentroTrabajoSiguienteId, OrdenSelected.SiguienteLecturaTipo,
+                Planta.Usuario.Trim(), (reg, error) =>
+                {
+                    if (error != null)
+                    {
+                        _dialogService.ShowException(error);
+                        return;
+                    }
+
+                    Messenger.Default.Send(new OrderChangeMessage { Orden = reg });
+                    //LoadData();
+                });
+        }
+
+        private void EnviarIntermodaThread()
+        {
+            var companiaId = OrdenSelected.CompaniaId;
+            var ano = OrdenSelected.Ano;
+            var numero = OrdenSelected.Numero;
+
+            _dataService.OrdenProduccionExternoSerEstadoEnviarIntermoda(companiaId, ano, numero,
+                error =>
+                {
+                    if (error != null)
+                    {
+                        _dialogService.ShowException(error);
+                        return;
+                    }
+                    OrdenList.Remove(OrdenList.FirstOrDefault(r =>
+                        r.CompaniaId == companiaId &&
+                        r.Ano == ano &&
+                        r.Numero == numero));
+
+                    //Messenger.Default.Send(new OrderChangeMessage { Orden = reg });
+                    //LoadData();
                 });
         }
 

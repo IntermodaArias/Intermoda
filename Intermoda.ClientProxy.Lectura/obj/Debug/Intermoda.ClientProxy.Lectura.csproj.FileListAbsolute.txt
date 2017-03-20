@@ -3,3 +3,9 @@ C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Lectura\bin\Debug\Intermoda.Clie
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Lectura\bin\Debug\Intermoda.ClientProxy.Lectura.pdb
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Lectura\obj\Debug\Intermoda.ClientProxy.Lectura.dll
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Lectura\obj\Debug\Intermoda.ClientProxy.Lectura.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Lectura\bin\Debug\Intermoda.ClientProxy.Lectura.dll.config
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Lectura\bin\Debug\Intermoda.ClientProxy.Lectura.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Lectura\bin\Debug\Intermoda.ClientProxy.Lectura.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Lectura\obj\Debug\Intermoda.ClientProxy.Lectura.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Lectura\obj\Debug\Intermoda.ClientProxy.Lectura.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Lectura\obj\Debug\Intermoda.ClientProxy.Lectura.csprojResolveAssemblyReference.cache

@@ -276,6 +276,12 @@ namespace Intermoda.ClientProxy.LbDatPro.PlantaServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPlanta/GetByUsuario", ReplyAction="http://tempuri.org/IPlanta/GetByUsuarioResponse")]
         System.Threading.Tasks.Task<Intermoda.ClientProxy.LbDatPro.PlantaServiceReference.PlantaBusiness> GetByUsuarioAsync(string usuario, string clave);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPlanta/GetContratistas", ReplyAction="http://tempuri.org/IPlanta/GetContratistasResponse")]
+        Intermoda.ClientProxy.LbDatPro.PlantaServiceReference.PlantaBusiness[] GetContratistas();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPlanta/GetContratistas", ReplyAction="http://tempuri.org/IPlanta/GetContratistasResponse")]
+        System.Threading.Tasks.Task<Intermoda.ClientProxy.LbDatPro.PlantaServiceReference.PlantaBusiness[]> GetContratistasAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPlanta/UpdateClave", ReplyAction="http://tempuri.org/IPlanta/UpdateClaveResponse")]
         void UpdateClave(string plantaId, string claveOld, string claveNew);
         
@@ -316,6 +322,14 @@ namespace Intermoda.ClientProxy.LbDatPro.PlantaServiceReference {
         
         public System.Threading.Tasks.Task<Intermoda.ClientProxy.LbDatPro.PlantaServiceReference.PlantaBusiness> GetByUsuarioAsync(string usuario, string clave) {
             return base.Channel.GetByUsuarioAsync(usuario, clave);
+        }
+        
+        public Intermoda.ClientProxy.LbDatPro.PlantaServiceReference.PlantaBusiness[] GetContratistas() {
+            return base.Channel.GetContratistas();
+        }
+        
+        public System.Threading.Tasks.Task<Intermoda.ClientProxy.LbDatPro.PlantaServiceReference.PlantaBusiness[]> GetContratistasAsync() {
+            return base.Channel.GetContratistasAsync();
         }
         
         public void UpdateClave(string plantaId, string claveOld, string claveNew) {

@@ -8,3 +8,13 @@ C:\VisualStudio\Intermoda\Intermoda.LbDatPro\bin\Release\EntityFramework.SqlServ
 C:\VisualStudio\Intermoda\Intermoda.LbDatPro\obj\Release\Intermoda.LbDatPro.csprojResolveAssemblyReference.cache
 C:\VisualStudio\Intermoda\Intermoda.LbDatPro\obj\Release\Intermoda.LbDatPro.dll
 C:\VisualStudio\Intermoda\Intermoda.LbDatPro\obj\Release\Intermoda.LbDatPro.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.LbDatPro\bin\Release\Intermoda.LbDatPro.dll.config
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.LbDatPro\bin\Release\Intermoda.LbDatPro.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.LbDatPro\bin\Release\Intermoda.LbDatPro.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.LbDatPro\bin\Release\EntityFramework.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.LbDatPro\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.LbDatPro\bin\Release\EntityFramework.xml
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.LbDatPro\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.LbDatPro\obj\Release\Intermoda.LbDatPro.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.LbDatPro\obj\Release\Intermoda.LbDatPro.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.LbDatPro\obj\Release\Intermoda.LbDatPro.csprojResolveAssemblyReference.cache

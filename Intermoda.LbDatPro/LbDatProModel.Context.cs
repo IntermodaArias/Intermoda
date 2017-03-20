@@ -29,7 +29,6 @@ namespace Intermoda.LbDatPro
     
         public virtual DbSet<CATALOG> CATALOGSet { get; set; }
         public virtual DbSet<CLASE> CLASESet { get; set; }
-        public virtual DbSet<FACCOL> FACCOLSet { get; set; }
         public virtual DbSet<GRUTEL> GRUTELSet { get; set; }
         public virtual DbSet<MATMST> MATMSTSet { get; set; }
         public virtual DbSet<MATMST1> MATMST1Set { get; set; }
@@ -52,6 +51,7 @@ namespace Intermoda.LbDatPro
         public virtual DbSet<MaquiladoCajaDetalle> MaquiladoCajaDetalleSet { get; set; }
         public virtual DbSet<FACMST21> FACMST21Set { get; set; }
         public virtual DbSet<MaquiladoCaja> MaquiladoCajaSet { get; set; }
+        public virtual DbSet<FACCOL> FACCOLSet { get; set; }
     
         public virtual ObjectResult<WIPOrdenesProduccionB_Result> WIPOrdenesProduccionB(Nullable<short> ciaCod)
         {
@@ -60,6 +60,26 @@ namespace Intermoda.LbDatPro
                 new ObjectParameter("CiaCod", typeof(short));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<WIPOrdenesProduccionB_Result>("WIPOrdenesProduccionB", ciaCodParameter);
+        }
+    
+        public virtual ObjectResult<MaquiladoTrabajoEnProceso_Result> MaquiladoTrabajoEnProceso()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<MaquiladoTrabajoEnProceso_Result>("MaquiladoTrabajoEnProceso");
+        }
+    
+        public virtual int PRD_LecturaCuponGX(ObjectParameter ciaCod, ObjectParameter strCupon, ObjectParameter usuario, ObjectParameter strError, ObjectParameter intError)
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("PRD_LecturaCuponGX", ciaCod, strCupon, usuario, strError, intError);
+        }
+    
+        public virtual int PRD_UsuarioLecturaCupon(ObjectParameter strUsuario, ObjectParameter compania)
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("PRD_UsuarioLecturaCupon", strUsuario, compania);
+        }
+    
+        public virtual int PRD_UsuarioLecturaCuponGX(ObjectParameter strUsuario, ObjectParameter compania, ObjectParameter strError)
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("PRD_UsuarioLecturaCuponGX", strUsuario, compania, strError);
         }
     }
 }

@@ -41,18 +41,6 @@
     <Property Name="MprClaAX" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Name="MprClaDL" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
   </EntityType>
-  <EntityType Name="FACCOL">
-    <Key>
-      <PropertyRef Name="CiaCod" />
-      <PropertyRef Name="FacCCol" />
-    </Key>
-    <Property Name="CiaCod" Type="Int16" Nullable="false" />
-    <Property Name="FacCCol" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="FacDCol" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
-    <Property Name="AxColorId01" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
-    <Property Name="AxColorId02" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
-    <Property Name="FacIDCol" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
-  </EntityType>
   <EntityType Name="GRUTEL">
     <Key>
       <PropertyRef Name="FacCodGrut" />
@@ -148,6 +136,8 @@
     <Property Name="MatUltMov" Type="DateTime" Precision="0" />
     <Property Name="FacCCol" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
     <Property Name="MprSubCod" Type="Int16" />
+    <Property Name="CmpTelCol" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="CatMatCod" Type="Int16" />
   </EntityType>
   <EntityType Name="MATMST1">
     <Key>
@@ -201,7 +191,6 @@
   <EntityContainer Name="LBDATPROEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="CATALOGSet" EntityType="Self.CATALOG" />
     <EntitySet Name="CLASESet" EntityType="Self.CLASE" />
-    <EntitySet Name="FACCOLSet" EntityType="Self.FACCOL" />
     <EntitySet Name="GRUTELSet" EntityType="Self.GRUTEL" />
     <EntitySet Name="MATMSTSet" EntityType="Self.MATMST" />
     <EntitySet Name="MATMST1Set" EntityType="Self.MATMST1" />
@@ -219,6 +208,36 @@
     <EntitySet Name="CTRABAJOSet" EntityType="LBDATPROModel.CTRABAJO" />
     <EntitySet Name="ORDCENTRSet" EntityType="LBDATPROModel.ORDCENTR" />
     <EntitySet Name="PRVMSTSet" EntityType="LBDATPROModel.PRVMST" />
+    <FunctionImport Name="WIPOrdenesProduccionB" ReturnType="Collection(LBDATPROModel.WIPOrdenesProduccionB_Result)">
+      <Parameter Name="CiaCod" Mode="In" Type="Int16" />
+    </FunctionImport>
+    <EntitySet Name="CUTARC1Set" EntityType="LBDATPROModel.CUTARC1" />
+    <EntitySet Name="FACTALLSet" EntityType="LBDATPROModel.FACTALL" />
+    <EntitySet Name="MaquiladoCajaDetalleSet" EntityType="LBDATPROModel.MaquiladoCajaDetalle" />
+    <EntitySet Name="FACMST21Set" EntityType="LBDATPROModel.FACMST21" />
+    <EntitySet Name="MaquiladoCajaSet" EntityType="LBDATPROModel.MaquiladoCaja" />
+    <AssociationSet Name="FK_MaquiladoCajaDetalle_MaquiladoCaja" Association="LBDATPROModel.FK_MaquiladoCajaDetalle_MaquiladoCaja">
+      <End Role="MaquiladoCaja" EntitySet="MaquiladoCajaSet" />
+      <End Role="MaquiladoCajaDetalle" EntitySet="MaquiladoCajaDetalleSet" />
+    </AssociationSet>
+    <EntitySet Name="FACCOLSet" EntityType="LBDATPROModel.FACCOL" />
+    <FunctionImport Name="MaquiladoTrabajoEnProceso" ReturnType="Collection(LBDATPROModel.MaquiladoTrabajoEnProceso_Result)" />
+    <FunctionImport Name="PRD_LecturaCuponGX">
+      <Parameter Name="CiaCod" Mode="InOut" Type="Int32" />
+      <Parameter Name="StrCupon" Mode="InOut" Type="String" />
+      <Parameter Name="Usuario" Mode="InOut" Type="String" />
+      <Parameter Name="StrError" Mode="InOut" Type="String" />
+      <Parameter Name="IntError" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PRD_UsuarioLecturaCupon">
+      <Parameter Name="StrUsuario" Mode="InOut" Type="String" />
+      <Parameter Name="Compania" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PRD_UsuarioLecturaCuponGX">
+      <Parameter Name="StrUsuario" Mode="InOut" Type="String" />
+      <Parameter Name="Compania" Mode="InOut" Type="Int32" />
+      <Parameter Name="StrError" Mode="InOut" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="CNTPERIO">
     <Key>
@@ -759,6 +778,9 @@
     <Property Name="CCCodigo" Type="Int16" />
     <Property Name="PrdCtTip" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
     <Property Name="MOCCosto" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="PrdSecXls" Type="Int16" />
+    <Property Name="CtFrmRevis" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="CtSalidaAu" Type="Int16" />
   </EntityType>
   <EntityType Name="ORDCENTR">
     <Key>
@@ -840,4 +862,169 @@
     <Property Name="PrvResExo" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
     <Property Name="PrvCtaPro" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
   </EntityType>
+  <ComplexType Name="WIPOrdenesProduccionB_Result">
+    <Property Type="Int16" Name="CIACOD" Nullable="false" />
+    <Property Type="String" Name="CiaDes" Nullable="true" MaxLength="40" />
+    <Property Type="Int16" Name="PrdAnoCor" Nullable="false" />
+    <Property Type="Int16" Name="PrdNumCor" Nullable="false" />
+    <Property Type="String" Name="PrdCodArt" Nullable="true" MaxLength="6" />
+    <Property Type="String" Name="FacCodMdl" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="FacCodTel" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="FacCodRef" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="FacCCol" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="PrdStsCor" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="PrdUsuPrd" Nullable="true" MaxLength="10" />
+    <Property Type="Int16" Name="PrdPriCor" Nullable="true" />
+    <Property Type="Int16" Name="PrdAnoDep" Nullable="true" />
+    <Property Type="Int16" Name="PrdNumDep" Nullable="true" />
+    <Property Type="String" Name="PrdProTel" Nullable="true" MaxLength="2" />
+    <Property Type="Int32" Name="Cantidad" Nullable="true" />
+    <Property Type="Int16" Name="ModuloEnsamble" Nullable="true" />
+    <Property Type="Boolean" Name="ConTela" Nullable="true" />
+    <Property Type="DateTime" Name="InicioProgramado" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FinalProgramado" Nullable="true" Precision="23" />
+  </ComplexType>
+  <EntityType Name="CUTARC1">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="PrdNumCor" />
+      <PropertyRef Name="PrdAnoCor" />
+      <PropertyRef Name="PrdNoBund" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="PrdNumCor" Type="Int16" Nullable="false" />
+    <Property Name="PrdAnoCor" Type="Int16" Nullable="false" />
+    <Property Name="PrdNoBund" Type="Int16" Nullable="false" />
+    <Property Name="PrdUniPri" Type="Int16" />
+    <Property Name="PrdBulto" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdUniSeg" Type="Int16" />
+    <Property Name="PrdUniTer" Type="Int16" />
+    <Property Name="PrdUniPer" Type="Int16" />
+    <Property Name="PrdUniEli" Type="Int16" />
+    <Property Name="PrdPtoReo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PrdIniCap" Type="Int16" />
+    <Property Name="PrdFinCap" Type="Int16" />
+    <Property Name="FacCTall" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="FacCTallN" Type="Int16" />
+    <Property Name="PrdCodDim" Type="Int16" />
+    <Property Name="PrdCanBun" Type="Int16" />
+    <Property Name="PrdSeccion" Type="Int16" />
+    <Property Name="PrdTroco" Type="Int16" />
+    <Property Name="PrdCanTro" Type="Int16" />
+  </EntityType>
+  <EntityType Name="FACTALL">
+    <Key>
+      <PropertyRef Name="CiaCod" />
+      <PropertyRef Name="FacCTall" />
+    </Key>
+    <Property Name="CiaCod" Type="Int16" Nullable="false" />
+    <Property Name="FacCTall" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="FacDTall" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="FacSecTal" Type="Int16" />
+  </EntityType>
+  <EntityType Name="MaquiladoCajaDetalle">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaquiladoCajaId" Type="Int32" Nullable="false" />
+    <Property Name="CompaniaId" Type="Int16" Nullable="false" />
+    <Property Name="TallaId" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="MaquiladoCaja" Relationship="LBDATPROModel.FK_MaquiladoCajaDetalle_MaquiladoCaja" FromRole="MaquiladoCajaDetalle" ToRole="MaquiladoCaja" />
+  </EntityType>
+  <EntityType Name="FACMST21">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="FacArtCod" />
+      <PropertyRef Name="FacCodMdl" />
+      <PropertyRef Name="FacCodRef" />
+      <PropertyRef Name="FacCodTel" />
+      <PropertyRef Name="FacCCol" />
+      <PropertyRef Name="FacCTall" />
+      <PropertyRef Name="PrdCodDim" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="FacArtCod" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="FacCodMdl" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="FacCodRef" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="FacCodTel" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="FacCCol" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="FacCTall" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="PrdCodDim" Type="Int16" Nullable="false" />
+    <Property Name="FacArtBar2" Type="Decimal" Precision="15" Scale="0" />
+    <Property Name="FacCodAlt" Type="Int32" />
+    <Property Name="FacExiIde" Type="Int32" />
+    <Property Name="FacArtBarB" Type="Decimal" Precision="15" Scale="0" />
+    <Property Name="FacOrdTall" Type="Int16" Nullable="false" />
+    <Property Name="FacCnt6Pre" Type="Int16" />
+    <Property Name="FacCnt12Pr" Type="Int16" />
+    <Property Name="Usuario" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Precision="0" />
+    <Property Name="FacArtBarT" Type="Decimal" Precision="15" Scale="0" />
+    <Property Name="CBarraConDigitoVer" Type="String" MaxLength="61" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="FacMaxArt" Type="Int32" />
+  </EntityType>
+  <EntityType Name="MaquiladoCaja">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompaniaId" Type="Int16" Nullable="false" />
+    <Property Name="OrdenAno" Type="Int16" Nullable="false" />
+    <Property Name="OrdenNumero" Type="Int16" Nullable="false" />
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="MaquiladoCajaDetalle" Relationship="LBDATPROModel.FK_MaquiladoCajaDetalle_MaquiladoCaja" FromRole="MaquiladoCaja" ToRole="MaquiladoCajaDetalle" />
+    <Property Name="FechaApertura" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FechaCierre" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_MaquiladoCajaDetalle_MaquiladoCaja">
+    <End Type="LBDATPROModel.MaquiladoCaja" Role="MaquiladoCaja" Multiplicity="1" />
+    <End Type="LBDATPROModel.MaquiladoCajaDetalle" Role="MaquiladoCajaDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaquiladoCaja">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MaquiladoCajaDetalle">
+        <PropertyRef Name="MaquiladoCajaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="FACCOL">
+    <Key>
+      <PropertyRef Name="CIACOD" />
+      <PropertyRef Name="FacCCol" />
+    </Key>
+    <Property Name="CIACOD" Type="Int16" Nullable="false" />
+    <Property Name="FacCCol" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="FacDCol" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="FacIDCol" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="AxColorId01" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="MaquiladoTrabajoEnProceso_Result">
+    <Property Type="Int16" Name="CompaniaId" Nullable="false" />
+    <Property Type="Int16" Name="OrdenAno" Nullable="false" />
+    <Property Type="Int16" Name="OrdenNumero" Nullable="false" />
+    <Property Type="String" Name="PlantaId" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="PlantaNombre" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="PlantaIniciales" Nullable="true" MaxLength="2" />
+    <Property Type="Int16" Name="BultoNumero" Nullable="false" />
+    <Property Type="String" Name="CentroTrabajoId" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="CentroTrabajoNombre" Nullable="false" MaxLength="20" />
+    <Property Type="Int16" Name="CentroTrabajoSecuencia" Nullable="true" />
+    <Property Type="DateTime" Name="FechaEntrada" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FechaSalida" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Patron" Nullable="true" MaxLength="6" />
+    <Property Type="String" Name="Variante" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="Tela" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="Lavado" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="ColorId" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="ColorNombre" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="EstadoId" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="EstadoNombre" Nullable="true" MaxLength="20" />
+    <Property Type="Int16" Name="EstadoSecuencia" Nullable="true" />
+    <Property Type="Int16" Name="Cantidad" Nullable="true" />
+    <Property Type="DateTime" Name="EnvioContratista" Nullable="true" Precision="23" />
+  </ComplexType>
 </Schema>

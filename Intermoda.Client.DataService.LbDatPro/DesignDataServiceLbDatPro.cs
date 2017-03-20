@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using Intermoda.Client.LbDatPro;
+using Intermoda.Client.LbDatPro; 
 
 namespace Intermoda.Client.DataService.LbDatPro
 {
@@ -220,66 +220,9 @@ namespace Intermoda.Client.DataService.LbDatPro
 
         #region OrdenProduccionExterno
 
-        public void OrdenProduccionExternoGet(short companiaCodigo, short ordenAno, short ordenNumero,
-            Action<OrdenProduccionExterno, Exception> action)
+        public void OrdenProduccionExternoGet(Action<List<MaquiladoTeP>, Exception> action)
         {
-            var i = 1;
-            var reg = new OrdenProduccionExterno
-            {
-                CompaniaId = 1,
-                Ano = 16,
-                Numero = (short) i,
-                Patron = "PR001",
-                Variante = "VAR",
-                Tela = "TEL",
-                Lavado = "LAV",
-                Color = "CO",
-                EstadoId = "X",
-                EstadoLeyenda = "En Espera",
-                Cantidad = 500,
-                OrdenProduccion = $"{i.ToString("0000")}-16",
-                Referencia = "PR001-VAR-TEL-LAV-CO",
-                Estado = new OrdenEstado
-                {
-                    Id = "X",
-                    Secuencia = 10,
-                    Descripcion = "Estado de la Orden",
-                    Area = "Area",
-                    CentroCostoAlias = "Centro de Costo",
-                    CentroTrabajoId = "03"
-                },
-                Ruta = new List<PasoRuta>
-                {
-                    new PasoRuta
-                    {
-                        CompaniaId = 1,
-                        Ano = 16,
-                        Numero = (short) i,
-                        CentroTrabajoId = "02",
-                        PlantaId = "XX",
-                        Secuencia = 10
-                    },
-                    new PasoRuta
-                    {
-                        CompaniaId = 1,
-                        Ano = 16,
-                        Numero = (short) i,
-                        CentroTrabajoId = "03",
-                        PlantaId = "YY",
-                        Secuencia = 20
-                    },
-                    new PasoRuta
-                    {
-                        CompaniaId = 1,
-                        Ano = 16,
-                        Numero = (short) i,
-                        CentroTrabajoId = "04",
-                        PlantaId = "ZZ",
-                        Secuencia = 30
-                    }
-                }
-            };
-            action(reg, null);
+            throw new NotImplementedException();
         }
 
         public void OrdenProduccionExternoGetByUsuarioPlanta(string usuario,
@@ -370,7 +313,7 @@ namespace Intermoda.Client.DataService.LbDatPro
         }
 
         public void OrdenProduccionExternoGrabarLectura(short companiaId, short ordenAno, short ordenNumero, string centroTrabajoId,
-            string tipo, string usuario, Action<Exception> action)
+            string tipo, string usuario, Action<OrdenProduccionExterno, Exception> action)
         {
             throw new NotImplementedException();
         }
@@ -402,6 +345,11 @@ namespace Intermoda.Client.DataService.LbDatPro
                 Clave = "*********"
             };
             action(reg, null);
+        }
+
+        public void PlantaGetContratistas(Action<List<Planta>, Exception> action)
+        {
+            throw new NotImplementedException();
         }
 
         public void PlantaUpdateClave(string plantaId, string claveOld, string claveNew, Action<Exception> action)

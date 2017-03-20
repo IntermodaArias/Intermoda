@@ -71,6 +71,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Lecturas.svc" />
     <Content Include="MaquiladoCaja.svc" />
     <Content Include="Empleado.svc" />
     <Content Include="Inasistencia.svc" />
@@ -85,6 +86,10 @@
   <ItemGroup>
     <Compile Include="Contracts\IMaquiladoCaja.cs" />
     <Compile Include="Contracts\IMaquiladoCajaDetalle.cs" />
+    <Compile Include="Contracts\ILecturas.cs" />
+    <Compile Include="Lecturas.svc.cs">
+      <DependentUpon>Lecturas.svc</DependentUpon>
+    </Compile>
     <Compile Include="MaquiladoCaja.svc.cs">
       <DependentUpon>MaquiladoCaja.svc</DependentUpon>
     </Compile>
@@ -149,7 +154,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>52297</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/IntermodaService/LbDatPro</IISUrl>
+          <IISUrl>http://localhost/Intermoda.DataService.LbDatPro</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

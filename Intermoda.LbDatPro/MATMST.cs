@@ -94,5 +94,7 @@ namespace Intermoda.LbDatPro
         public Nullable<System.DateTime> MatUltMov { get; set; }
         public string FacCCol { get; set; }
         public Nullable<short> MprSubCod { get; set; }
+        public string CmpTelCol { get; set; }
+        public Nullable<short> CatMatCod { get; set; }
     }
 }

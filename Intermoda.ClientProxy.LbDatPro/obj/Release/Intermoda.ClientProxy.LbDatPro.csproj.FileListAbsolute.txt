@@ -3,3 +3,9 @@ C:\VisualStudio\Intermoda\Intermoda.ClientProxy.LbDatPro\bin\Release\Intermoda.C
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.LbDatPro\bin\Release\Intermoda.ClientProxy.LbDatPro.pdb
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.LbDatPro\obj\Release\Intermoda.ClientProxy.LbDatPro.dll
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.LbDatPro\obj\Release\Intermoda.ClientProxy.LbDatPro.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.LbDatPro\bin\Release\Intermoda.ClientProxy.LbDatPro.dll.config
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.LbDatPro\bin\Release\Intermoda.ClientProxy.LbDatPro.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.LbDatPro\bin\Release\Intermoda.ClientProxy.LbDatPro.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.LbDatPro\obj\Release\Intermoda.ClientProxy.LbDatPro.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.LbDatPro\obj\Release\Intermoda.ClientProxy.LbDatPro.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.LbDatPro\obj\Release\Intermoda.ClientProxy.LbDatPro.csprojResolveAssemblyReference.cache

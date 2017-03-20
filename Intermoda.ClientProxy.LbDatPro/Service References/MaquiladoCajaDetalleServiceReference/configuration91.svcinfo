@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="JdmnjZNv2dNrRJItBnrWQwbm/6U=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="p57EvOdvOQws5vV1K4+2SWHBDag=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IMaquiladoCajaDetalle">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IMaquiladoCajaDetalle" contract="MaquiladoCajaDetalleServiceReference.IMaquiladoCajaDetalle" bindingType="basicHttpBinding" address="http://localhost/IntermodaService/LbDatPro/MaquiladoCajaDetalle.svc" bindingConfiguration="BasicHttpBinding_IMaquiladoCajaDetalle">
+    <endpoint name="BasicHttpBinding_IMaquiladoCajaDetalle" contract="MaquiladoCajaDetalleServiceReference.IMaquiladoCajaDetalle" bindingType="basicHttpBinding" address="http://190.5.95.110/ImDataServiceLb/MaquiladoCajaDetalle.svc" bindingConfiguration="BasicHttpBinding_IMaquiladoCajaDetalle">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost/IntermodaService/LbDatPro/MaquiladoCajaDetalle.svc</serializedValue>
+          <serializedValue>http://190.5.95.110/ImDataServiceLb/MaquiladoCajaDetalle.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

@@ -149,6 +149,8 @@
           <Property Name="PrdCtTip" Type="char" MaxLength="1" />
           <Property Name="MOCCosto" Type="smallmoney" />
           <Property Name="PrdSecXls" Type="smallint" />
+          <Property Name="CtFrmRevis" Type="char" MaxLength="100" />
+          <Property Name="CtSalidaAu" Type="smallint" />
         </EntityType>
         <EntityType Name="CUTARC1">
           <Key>
@@ -413,15 +415,14 @@
         </EntityType>
         <EntityType Name="FACCOL">
           <Key>
-            <PropertyRef Name="CiaCod" />
+            <PropertyRef Name="CIACOD" />
             <PropertyRef Name="FacCCol" />
           </Key>
-          <Property Name="CiaCod" Type="smallint" Nullable="false" />
+          <Property Name="CIACOD" Type="smallint" Nullable="false" />
           <Property Name="FacCCol" Type="char" MaxLength="2" Nullable="false" />
           <Property Name="FacDCol" Type="char" MaxLength="20" />
-          <Property Name="AxColorId01" Type="char" MaxLength="8" />
-          <Property Name="AxColorId02" Type="char" MaxLength="8" />
           <Property Name="FacIDCol" Type="char" MaxLength="20" />
+          <Property Name="AxColorId01" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="FACMST21">
           <Key>
@@ -742,11 +743,13 @@
           <Property Name="MprEtgCon" Type="char" MaxLength="1" />
           <Property Name="MprCodUbi" Type="smallint" />
           <Property Name="MprCtCod" Type="char" MaxLength="2" />
-          <Property Name="MatCntRes" Type="smallmoney" />
           <Property Name="MprExcCmp" Type="smallint" />
           <Property Name="MatUltMov" Type="date" />
           <Property Name="FacCCol" Type="char" MaxLength="2" />
           <Property Name="MprSubCod" Type="smallint" />
+          <Property Name="CmpTelCol" Type="char" MaxLength="10" />
+          <Property Name="MatCntRes" Type="smallmoney" />
+          <Property Name="CatMatCod" Type="smallint" />
         </EntityType>
         <EntityType Name="MATMST1">
           <Key>
@@ -929,6 +932,23 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="MaquiladoTrabajoEnProceso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="PRD_LecturaCuponGX" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CiaCod" Type="int" Mode="InOut" />
+          <Parameter Name="StrCupon" Type="varchar" Mode="InOut" />
+          <Parameter Name="Usuario" Type="varchar" Mode="InOut" />
+          <Parameter Name="StrError" Type="varchar(max)" Mode="InOut" />
+          <Parameter Name="IntError" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="PRD_UsuarioLecturaCupon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="StrUsuario" Type="varchar" Mode="InOut" />
+          <Parameter Name="Compania" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="PRD_UsuarioLecturaCuponGX" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="StrUsuario" Type="varchar" Mode="InOut" />
+          <Parameter Name="Compania" Type="int" Mode="InOut" />
+          <Parameter Name="StrError" Type="varchar" Mode="InOut" />
+        </Function>
         <Function Name="WIPOrdenesProduccionB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="CiaCod" Type="smallint" Mode="In" />
         </Function>
@@ -1007,18 +1027,6 @@
           <Property Name="MprGrpCla" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
           <Property Name="MprClaAX" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
           <Property Name="MprClaDL" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
-        </EntityType>
-        <EntityType Name="FACCOL">
-          <Key>
-            <PropertyRef Name="CiaCod" />
-            <PropertyRef Name="FacCCol" />
-          </Key>
-          <Property Name="CiaCod" Type="Int16" Nullable="false" />
-          <Property Name="FacCCol" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="FacDCol" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
-          <Property Name="AxColorId01" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
-          <Property Name="AxColorId02" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
-          <Property Name="FacIDCol" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
         </EntityType>
         <EntityType Name="GRUTEL">
           <Key>
@@ -1115,6 +1123,8 @@
           <Property Name="MatUltMov" Type="DateTime" Precision="0" />
           <Property Name="FacCCol" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
           <Property Name="MprSubCod" Type="Int16" />
+          <Property Name="CmpTelCol" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="CatMatCod" Type="Int16" />
         </EntityType>
         <EntityType Name="MATMST1">
           <Key>
@@ -1168,7 +1178,6 @@
         <EntityContainer Name="LBDATPROEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CATALOGSet" EntityType="Self.CATALOG" />
           <EntitySet Name="CLASESet" EntityType="Self.CLASE" />
-          <EntitySet Name="FACCOLSet" EntityType="Self.FACCOL" />
           <EntitySet Name="GRUTELSet" EntityType="Self.GRUTEL" />
           <EntitySet Name="MATMSTSet" EntityType="Self.MATMST" />
           <EntitySet Name="MATMST1Set" EntityType="Self.MATMST1" />
@@ -1198,6 +1207,24 @@
             <End Role="MaquiladoCaja" EntitySet="MaquiladoCajaSet" />
             <End Role="MaquiladoCajaDetalle" EntitySet="MaquiladoCajaDetalleSet" />
           </AssociationSet>
+          <EntitySet Name="FACCOLSet" EntityType="LBDATPROModel.FACCOL" />
+          <FunctionImport Name="MaquiladoTrabajoEnProceso" ReturnType="Collection(LBDATPROModel.MaquiladoTrabajoEnProceso_Result)" />
+          <FunctionImport Name="PRD_LecturaCuponGX">
+            <Parameter Name="CiaCod" Mode="InOut" Type="Int32" />
+            <Parameter Name="StrCupon" Mode="InOut" Type="String" />
+            <Parameter Name="Usuario" Mode="InOut" Type="String" />
+            <Parameter Name="StrError" Mode="InOut" Type="String" />
+            <Parameter Name="IntError" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PRD_UsuarioLecturaCupon">
+            <Parameter Name="StrUsuario" Mode="InOut" Type="String" />
+            <Parameter Name="Compania" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PRD_UsuarioLecturaCuponGX">
+            <Parameter Name="StrUsuario" Mode="InOut" Type="String" />
+            <Parameter Name="Compania" Mode="InOut" Type="Int32" />
+            <Parameter Name="StrError" Mode="InOut" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="CNTPERIO">
           <Key>
@@ -1739,6 +1766,8 @@
           <Property Name="PrdCtTip" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Name="MOCCosto" Type="Decimal" Precision="10" Scale="4" />
           <Property Name="PrdSecXls" Type="Int16" />
+          <Property Name="CtFrmRevis" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="CtSalidaAu" Type="Int16" />
         </EntityType>
         <EntityType Name="ORDCENTR">
           <Key>
@@ -1949,6 +1978,42 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="FACCOL">
+          <Key>
+            <PropertyRef Name="CIACOD" />
+            <PropertyRef Name="FacCCol" />
+          </Key>
+          <Property Name="CIACOD" Type="Int16" Nullable="false" />
+          <Property Name="FacCCol" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="FacDCol" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="FacIDCol" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="AxColorId01" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <ComplexType Name="MaquiladoTrabajoEnProceso_Result">
+          <Property Type="Int16" Name="CompaniaId" Nullable="false" />
+          <Property Type="Int16" Name="OrdenAno" Nullable="false" />
+          <Property Type="Int16" Name="OrdenNumero" Nullable="false" />
+          <Property Type="String" Name="PlantaId" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="PlantaNombre" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="PlantaIniciales" Nullable="true" MaxLength="2" />
+          <Property Type="Int16" Name="BultoNumero" Nullable="false" />
+          <Property Type="String" Name="CentroTrabajoId" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="CentroTrabajoNombre" Nullable="false" MaxLength="20" />
+          <Property Type="Int16" Name="CentroTrabajoSecuencia" Nullable="true" />
+          <Property Type="DateTime" Name="FechaEntrada" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaSalida" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Patron" Nullable="true" MaxLength="6" />
+          <Property Type="String" Name="Variante" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="Tela" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="Lavado" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="ColorId" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="ColorNombre" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="EstadoId" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="EstadoNombre" Nullable="true" MaxLength="20" />
+          <Property Type="Int16" Name="EstadoSecuencia" Nullable="true" />
+          <Property Type="Int16" Name="Cantidad" Nullable="true" />
+          <Property Type="DateTime" Name="EnvioContratista" Nullable="true" Precision="23" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1997,18 +2062,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="FACCOLSet">
-            <EntityTypeMapping TypeName="LBDATPROModel.FACCOL">
-              <MappingFragment StoreEntitySet="FACCOL">
-                <ScalarProperty Name="FacIDCol" ColumnName="FacIDCol" />
-                <ScalarProperty Name="CiaCod" ColumnName="CiaCod" />
-                <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
-                <ScalarProperty Name="FacDCol" ColumnName="FacDCol" />
-                <ScalarProperty Name="AxColorId01" ColumnName="AxColorId01" />
-                <ScalarProperty Name="AxColorId02" ColumnName="AxColorId02" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="GRUTELSet">
             <EntityTypeMapping TypeName="LBDATPROModel.GRUTEL">
               <MappingFragment StoreEntitySet="GRUTEL">
@@ -2023,6 +2076,8 @@
           <EntitySetMapping Name="MATMSTSet">
             <EntityTypeMapping TypeName="LBDATPROModel.MATMST">
               <MappingFragment StoreEntitySet="MATMST">
+                <ScalarProperty Name="CatMatCod" ColumnName="CatMatCod" />
+                <ScalarProperty Name="CmpTelCol" ColumnName="CmpTelCol" />
                 <ScalarProperty Name="MprSubCod" ColumnName="MprSubCod" />
                 <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
                 <ScalarProperty Name="MapCodMat" ColumnName="MapCodMat" />
@@ -2654,6 +2709,8 @@
           <EntitySetMapping Name="CTRABAJOSet">
             <EntityTypeMapping TypeName="LBDATPROModel.CTRABAJO">
               <MappingFragment StoreEntitySet="CTRABAJO">
+                <ScalarProperty Name="CtSalidaAu" ColumnName="CtSalidaAu" />
+                <ScalarProperty Name="CtFrmRevis" ColumnName="CtFrmRevis" />
                 <ScalarProperty Name="PrdSecXls" ColumnName="PrdSecXls" />
                 <ScalarProperty Name="MOCCosto" ColumnName="MOCCosto" />
                 <ScalarProperty Name="PrdCtTip" ColumnName="PrdCtTip" />
@@ -2874,6 +2931,49 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="FACCOLSet">
+            <EntityTypeMapping TypeName="LBDATPROModel.FACCOL">
+              <MappingFragment StoreEntitySet="FACCOL">
+                <ScalarProperty Name="AxColorId01" ColumnName="AxColorId01" />
+                <ScalarProperty Name="FacIDCol" ColumnName="FacIDCol" />
+                <ScalarProperty Name="FacDCol" ColumnName="FacDCol" />
+                <ScalarProperty Name="FacCCol" ColumnName="FacCCol" />
+                <ScalarProperty Name="CIACOD" ColumnName="CIACOD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="MaquiladoTrabajoEnProceso" FunctionName="LBDATPROModel.Store.MaquiladoTrabajoEnProceso">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LBDATPROModel.MaquiladoTrabajoEnProceso_Result">
+                <ScalarProperty Name="CompaniaId" ColumnName="CompaniaId" />
+                <ScalarProperty Name="OrdenAno" ColumnName="OrdenAno" />
+                <ScalarProperty Name="OrdenNumero" ColumnName="OrdenNumero" />
+                <ScalarProperty Name="PlantaId" ColumnName="PlantaId" />
+                <ScalarProperty Name="PlantaNombre" ColumnName="PlantaNombre" />
+                <ScalarProperty Name="PlantaIniciales" ColumnName="PlantaIniciales" />
+                <ScalarProperty Name="BultoNumero" ColumnName="BultoNumero" />
+                <ScalarProperty Name="CentroTrabajoId" ColumnName="CentroTrabajoId" />
+                <ScalarProperty Name="CentroTrabajoNombre" ColumnName="CentroTrabajoNombre" />
+                <ScalarProperty Name="CentroTrabajoSecuencia" ColumnName="CentroTrabajoSecuencia" />
+                <ScalarProperty Name="FechaEntrada" ColumnName="FechaEntrada" />
+                <ScalarProperty Name="FechaSalida" ColumnName="FechaSalida" />
+                <ScalarProperty Name="Patron" ColumnName="Patron" />
+                <ScalarProperty Name="Variante" ColumnName="Variante" />
+                <ScalarProperty Name="Tela" ColumnName="Tela" />
+                <ScalarProperty Name="Lavado" ColumnName="Lavado" />
+                <ScalarProperty Name="ColorId" ColumnName="ColorId" />
+                <ScalarProperty Name="ColorNombre" ColumnName="ColorNombre" />
+                <ScalarProperty Name="EstadoId" ColumnName="EstadoId" />
+                <ScalarProperty Name="EstadoNombre" ColumnName="EstadoNombre" />
+                <ScalarProperty Name="EstadoSecuencia" ColumnName="EstadoSecuencia" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="EnvioContratista" ColumnName="EnvioContratista" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PRD_LecturaCuponGX" FunctionName="LBDATPROModel.Store.PRD_LecturaCuponGX" />
+          <FunctionImportMapping FunctionImportName="PRD_UsuarioLecturaCupon" FunctionName="LBDATPROModel.Store.PRD_UsuarioLecturaCupon" />
+          <FunctionImportMapping FunctionImportName="PRD_UsuarioLecturaCuponGX" FunctionName="LBDATPROModel.Store.PRD_UsuarioLecturaCuponGX" />
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

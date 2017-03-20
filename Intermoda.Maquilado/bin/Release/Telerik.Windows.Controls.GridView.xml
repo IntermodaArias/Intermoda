@@ -214,14 +214,6 @@
         <member name="M:Telerik.Windows.Automation.Peers.DataItemAutomationPeer.GetAutomationControlTypeCore">
             <inheritdoc />
         </member>
-        <member name="M:Telerik.Windows.Automation.Peers.DataItemAutomationPeer.CreateCellAutomationPeer(System.Windows.UIElement,System.Int32)">
-            <summary>
-            Creates the cell automation peer.
-            </summary>
-            <param name="owner">The owner.</param>
-            <param name="column">The column index.</param>
-            <returns></returns>
-        </member>
         <member name="M:Telerik.Windows.Automation.Peers.DataItemAutomationPeer.GetParentElementPeer">
             <summary>
             Gets the peer of the corresponding parent.
@@ -410,6 +402,11 @@
             <param name="dataItem">The data item.</param>
             <returns></returns>
         </member>
+        <member name="M:Telerik.Windows.Automation.Peers.GridViewDataControlAutomationPeer.CreateDataItemAutomationPeer(System.Object,System.Int32)">
+            <summary>
+            Creates automation peer for the specified data item.
+            </summary>
+        </member>
         <member name="M:Telerik.Windows.Automation.Peers.GridViewDataControlAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)">
             <inheritdoc />
         </member>
@@ -442,12 +439,28 @@
             Automation peer that represents a single data item in RadGridView.
             </summary>
         </member>
+        <member name="M:Telerik.Windows.Automation.Peers.GridViewDataItemAutomationPeer.#ctor(System.Object,Telerik.Windows.Automation.Peers.GridViewDataControlAutomationPeer,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Automation.Peers.GridViewDataItemAutomationPeer"/> class.
+            </summary>
+            <param name="dataItem">The data item.</param>
+            <param name="dataControlAutomationPeer">The data control automation peer.</param>
+            <param name="index">The index.</param>
+        </member>
         <member name="M:Telerik.Windows.Automation.Peers.GridViewDataItemAutomationPeer.#ctor(System.Object,Telerik.Windows.Automation.Peers.GridViewDataControlAutomationPeer)">
             <summary>
             Initializes a new instance of the <see cref="T:Telerik.Windows.Automation.Peers.GridViewDataItemAutomationPeer"/> class.
             </summary>
             <param name="dataItem">The data item.</param>
             <param name="dataControlAutomationPeer">The data control automation peer.</param>
+        </member>
+        <member name="M:Telerik.Windows.Automation.Peers.GridViewDataItemAutomationPeer.CreateCellAutomationPeer(System.Windows.UIElement,System.Int32)">
+            <summary>
+            Creates the cell automation peer.
+            </summary>
+            <param name="owner">The owner.</param>
+            <param name="column">The column index.</param>
+            <returns></returns>
         </member>
         <member name="M:Telerik.Windows.Automation.Peers.GridViewDataItemAutomationPeer.GetAutomationControlTypeCore">
             <inheritdoc />
@@ -1101,6 +1114,9 @@
         <member name="M:Telerik.Windows.Automation.Peers.RadGridViewAutomationPeer.CreateDataItemAutomationPeer(System.Object)">
             <inheritdoc />
         </member>
+        <member name="M:Telerik.Windows.Automation.Peers.RadGridViewAutomationPeer.CreateDataItemAutomationPeer(System.Object,System.Int32)">
+            <inheritdoc />
+        </member>
         <member name="T:Telerik.Windows.Controls.GridView.AggregatesToGroupFooterAggregatesConverter">
             <summary>
             Filters aggregates per column.
@@ -1463,6 +1479,9 @@
             <summary>
                 General notification for DependencyProperty changes from the grid or from columns.
             </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridView.GridViewCell.PrepareCellProperties">
+            <inheritdoc />
         </member>
         <member name="M:Telerik.Windows.Controls.GridView.GridViewCell.BeginEdit">
             <summary>
@@ -1972,6 +1991,31 @@
             Identifies the <see cref="P:Telerik.Windows.Controls.GridView.GridViewHeaderCell.FieldFilterControlVisibility"/> dependency property.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.GridView.GridViewHeaderCell.TextAlignmentProperty">
+            <summary>
+            Gets or sets a value that indicates the horizontal alignment of text content
+            Affects all the header cell in the column.
+            </summary>
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.GridView.GridViewHeaderCell.TextAlignment"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridView.GridViewHeaderCell.TextWrappingProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.GridView.GridViewHeaderCell.TextWrapping"/> property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridView.GridViewHeaderCell.TextDecorationsProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.GridView.GridViewHeaderCell.TextDecorations"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridView.GridViewHeaderCell.TextTrimmingProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.GridView.GridViewHeaderCell.TextTrimming"/> property.
+            </summary>
+            <returns>The identifier for the <see cref="P:Telerik.Windows.Controls.GridView.GridViewHeaderCell.TextTrimming"/> property.</returns>
+        </member>
         <member name="F:Telerik.Windows.Controls.GridView.GridViewHeaderCell.DropMarkPenProperty">
             <summary>
             Identifies the <see cref="P:Telerik.Windows.Controls.GridView.GridViewHeaderCell.DropMarkPen"/> dependency property.
@@ -2100,6 +2144,42 @@
             <value>
             	<c>true</c> if the filtering funnel is displayed; otherwise, <c>false</c>.
             </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridView.GridViewHeaderCell.TextAlignment">
+            <summary>
+            Gets or sets a value that indicates the horizontal alignment of text content
+            for the header cell. This is a dependency property.
+            </summary>
+            <returns>
+            TextAlignment that will be used to align the text in the header cell.
+            The default value is <see cref="F:System.Windows.TextAlignment.Left"/> 
+            </returns>  
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridView.GridViewHeaderCell.TextWrapping">
+            <summary>
+            Gets or sets TextWrapping that will be used to wrap the text in this 
+            header cell. This is a dependency property.
+            </summary>
+            <returns>
+            TextWrapping that will be used to wrap the text in the header cell.
+            The default value is <see cref="F:System.Windows.TextWrapping.NoWrap"/> 
+            </returns>  
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridView.GridViewHeaderCell.TextTrimming">
+            <summary>
+            Gets or sets TextTrimming that will be used to trim the text in the
+            header cell. This is a dependency property.
+            </summary>
+            <returns>
+            TextTrimming that will be used to trim the text in the header cell element.
+            The default value is <see cref="F:System.Windows.TextTrimming.None"/> 
+            </returns>  
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridView.GridViewHeaderCell.TextDecorations">
+            <summary>
+            Gets or sets the text decoration. Affects the header cell element.
+            This is a dependency property.
+            </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.GridView.GridViewHeaderCell.FieldFilterControlVisibility">
             <summary>
@@ -2351,6 +2431,12 @@
             </summary> 
             <param name="element">The element on which to set the value.</param> 
             <param name="value">True if virtualizing, false otherwise.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridView.GridViewVirtualizingPanel.TryCoerceOffset(System.Double,System.Double,System.Double)">
+            <summary>
+            Fix for Bug #226463
+            If GroupRenderMode is Flat and the viewport value is Infinity, the offset should coerce only if it is negative value.
+            </summary>
         </member>
         <member name="M:Telerik.Windows.Controls.GridView.GridViewVirtualizingPanel.OnCleanUpVirtualizedItem(Telerik.Windows.Controls.GridView.CleanUpVirtualizedItemEventArgs)">
             <summary> 
@@ -3796,6 +3882,12 @@
             </summary>
             <returns>The identifier for the <see cref="P:Telerik.Windows.Controls.GridViewColumn.TextWrapping"/> property.</returns>
         </member>
+        <member name="F:Telerik.Windows.Controls.GridViewColumn.HeaderTextWrappingProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.GridViewColumn.HeaderTextWrapping"/> property.
+            </summary>
+            <returns>The identifier for the <see cref="P:Telerik.Windows.Controls.GridViewColumn.HeaderTextWrapping"/> property.</returns>
+        </member>
         <member name="F:Telerik.Windows.Controls.GridViewColumn.FooterProperty">
             <summary>
             Identifies the <see cref="P:Telerik.Windows.Controls.GridViewColumn.Footer"/> dependency property.
@@ -3809,6 +3901,11 @@
         <member name="F:Telerik.Windows.Controls.GridViewColumn.TextDecorationsProperty">
             <summary>
             Identifies the <see cref="P:Telerik.Windows.Controls.GridViewColumn.TextDecorations"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridViewColumn.HeaderTextDecorationsProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.GridViewColumn.HeaderTextDecorations"/> dependency property.
             </summary>
         </member>
         <member name="F:Telerik.Windows.Controls.GridViewColumn.IsCustomSortingEnabledProperty">
@@ -3837,6 +3934,12 @@
             Identifies the <see cref="P:Telerik.Windows.Controls.GridViewColumn.TextTrimming"/> property.
             </summary>
             <returns>The identifier for the <see cref="P:Telerik.Windows.Controls.GridViewColumn.TextTrimming"/> property.</returns>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridViewColumn.HeaderTextTrimmingProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.GridViewColumn.HeaderTextTrimming"/> property.
+            </summary>
+            <returns>The identifier for the <see cref="P:Telerik.Windows.Controls.GridViewColumn.HeaderTextTrimming"/> property.</returns>
         </member>
         <member name="M:Telerik.Windows.Controls.GridViewColumn.GetGridViewColumn(Telerik.Windows.Data.IFieldDescriptor)">
             <summary>
@@ -4173,6 +4276,12 @@
             This is a dependency property.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.GridViewColumn.HeaderTextDecorations">
+            <summary>
+            Gets or sets the text decoration. Affects the header cell of the column.
+            This is a dependency property.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.GridViewColumn.SortingState">
             <summary>
             Gets or sets a Column sorting state depending on executed sorted command,
@@ -4270,6 +4379,16 @@
             this column. The default value is <see cref="F:System.Windows.TextWrapping.NoWrap"/> 
             </returns>  
         </member>
+        <member name="P:Telerik.Windows.Controls.GridViewColumn.HeaderTextWrapping">
+            <summary>
+            Gets or sets HeaderTextWrapping that will be used to wrap the text in this column
+            header cell. This is a dependency property.
+            </summary>
+            <returns>
+            HeaderTextWrapping that will be used to wrap the inner text in the header cell for
+            this column. The default value is <see cref="F:System.Windows.TextWrapping.NoWrap"/> 
+            </returns>  
+        </member>
         <member name="P:Telerik.Windows.Controls.GridViewColumn.TextTrimming">
             <summary>
             Gets or sets TextTrimming that will be used to trim the text in this column
@@ -4277,6 +4396,16 @@
             </summary>
             <returns>
             TextTrimming that will be used to trim the inner text in each cell for
+            this column. The default value is <see cref="F:System.Windows.TextTrimming.None"/> 
+            </returns>  
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridViewColumn.HeaderTextTrimming">
+            <summary>
+            Gets or sets TextTrimming that will be used to trim the text in this column
+            header cell. This is a dependency property.
+            </summary>
+            <returns>
+            TextTrimming that will be used to trim the inner text in the header cell for
             this column. The default value is <see cref="F:System.Windows.TextTrimming.None"/> 
             </returns>  
         </member>
@@ -4616,6 +4745,110 @@
             Gets or sets the style to be applied for the common column header in  that group.
             </summary>
             <value>The cell style.</value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.GridViewComboBoxColumn">
+            <summary>
+            GridViewComboBoxColumn provides an easy and fast way to display and 
+            edit lookup data. The key properties to set are : valueMemberPath, DisplayMemberPath and ItemsSource.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridViewComboBoxColumn.CopyPropertiesFrom(Telerik.Windows.Controls.GridViewColumn)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridViewComboBoxColumn.CreateCellElement(Telerik.Windows.Controls.GridView.GridViewCell,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridViewComboBoxColumn.IsComboBoxEditableProperty">
+            <summary>
+            Represents the IsComboBoxEditable dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridViewComboBoxColumn.SelectedValueMemberPathProperty">
+            <summary>
+            Represents the ValueMemberPath dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridViewComboBoxColumn.ItemsSourceProperty">
+            <summary>
+            Represents the ItemsSource dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridViewComboBoxColumn.DisplayMemberPathProperty">
+            <summary>
+            Represents the DisplayMemberPath dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridViewComboBoxColumn.IsLightweightModeEnabledProperty">
+            <summary>
+            Represents the IsLightweightModeEnabled dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridViewComboBoxColumn.ItemTemplateProperty">
+            <summary>
+            Represents the ItemTemplate dependency property.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridViewComboBoxColumn.CreateCellEditElement(Telerik.Windows.Controls.GridView.GridViewCell,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridViewComboBoxColumn.GetCellContent(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridViewComboBoxColumn.OnPastingCellClipboardContent(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridViewComboBoxColumn.PrepareCellForEdit(System.Windows.FrameworkElement,System.Windows.RoutedEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridViewComboBoxColumn.SortDistinctValues(System.Linq.IQueryable)">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridViewComboBoxColumn.ItemsSourceBinding">
+            <summary> 
+            Gets or sets the Binding for the ComboBoxEditor ItemsSource. This is a dependency property. 
+            </summary> 
+            <returns> The default value is null</returns>   
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridViewComboBoxColumn.IsLightweightModeEnabled">
+            <summary>
+            Gets or sets a value indicating whether .
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridViewComboBoxColumn.IsComboBoxEditable">
+            <summary>
+            Gets or sets a value indicating whether the user can edit text in the text box portion of the ComboBox editor.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridViewComboBoxColumn.SelectedValueMemberPath">
+            <summary>
+            Gets or sets the value member path.
+            </summary>
+            <value>The value member path.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridViewComboBoxColumn.ItemTemplate">
+            <summary>
+            Gets or sets the item template used to represent the selected item in cells.
+            </summary>
+            <value>The item template.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridViewComboBoxColumn.ItemsSource">
+            <summary>
+            Gets or sets the the list of items used in the column to display lookup data.
+            The ComboBox editor will also attach to this ItemsSource.
+            </summary>
+            <value>The items source.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridViewComboBoxColumn.DisplayMemberPath">
+            <summary>
+            Gets or sets the path to the property containing the data to display.
+            </summary>
+            <value>The display member path.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridViewComboBoxColumn.LookupValueConverter">
+            <summary>
+            Gets or sets the lookup value converter used to convert value member value to display value.
+            </summary>
+            <value>The lookup value converter.</value>
         </member>
         <member name="T:Telerik.Windows.Controls.GridViewExpressionColumn">
             <summary>
@@ -5048,100 +5281,6 @@
                 GridViewColumn that the GridViewColumnEventArgs refers to.
             </summary>
         </member>
-        <member name="T:Telerik.Windows.Controls.GridViewComboBoxColumn">
-            <summary>
-            GridViewComboBoxColumn provides an easy and fast way to display and 
-            edit lookup data. The key properties to set are : valueMemberPath, DisplayMemberPath and ItemsSource.
-            </summary>
-        </member>
-        <member name="M:Telerik.Windows.Controls.GridViewComboBoxColumn.CopyPropertiesFrom(Telerik.Windows.Controls.GridViewColumn)">
-            <inheritdoc />
-        </member>
-        <member name="M:Telerik.Windows.Controls.GridViewComboBoxColumn.CreateCellElement(Telerik.Windows.Controls.GridView.GridViewCell,System.Object)">
-            <inheritdoc />
-        </member>
-        <member name="F:Telerik.Windows.Controls.GridViewComboBoxColumn.IsComboBoxEditableProperty">
-            <summary>
-            Represents the IsComboBoxEditable dependency property.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Controls.GridViewComboBoxColumn.SelectedValueMemberPathProperty">
-            <summary>
-            Represents the ValueMemberPath dependency property.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Controls.GridViewComboBoxColumn.ItemsSourceProperty">
-            <summary>
-            Represents the ItemsSource dependency property.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Controls.GridViewComboBoxColumn.DisplayMemberPathProperty">
-            <summary>
-            Represents the DisplayMemberPath dependency property.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Controls.GridViewComboBoxColumn.ItemTemplateProperty">
-            <summary>
-            Represents the ItemTemplate dependency property.
-            </summary>
-        </member>
-        <member name="M:Telerik.Windows.Controls.GridViewComboBoxColumn.CreateCellEditElement(Telerik.Windows.Controls.GridView.GridViewCell,System.Object)">
-            <inheritdoc />
-        </member>
-        <member name="M:Telerik.Windows.Controls.GridViewComboBoxColumn.GetCellContent(System.Object)">
-            <inheritdoc />
-        </member>
-        <member name="M:Telerik.Windows.Controls.GridViewComboBoxColumn.OnPastingCellClipboardContent(System.Object,System.Object)">
-            <inheritdoc />
-        </member>
-        <member name="M:Telerik.Windows.Controls.GridViewComboBoxColumn.PrepareCellForEdit(System.Windows.FrameworkElement,System.Windows.RoutedEventArgs)">
-            <inheritdoc />
-        </member>
-        <member name="M:Telerik.Windows.Controls.GridViewComboBoxColumn.SortDistinctValues(System.Linq.IQueryable)">
-            <inheritdoc />
-        </member>
-        <member name="P:Telerik.Windows.Controls.GridViewComboBoxColumn.ItemsSourceBinding">
-            <summary> 
-            Gets or sets the Binding for the ComboBoxEditor ItemsSource. This is a dependency property. 
-            </summary> 
-            <returns> The default value is null</returns>   
-        </member>
-        <member name="P:Telerik.Windows.Controls.GridViewComboBoxColumn.IsComboBoxEditable">
-            <summary>
-            Gets or sets a value indicating whether the user can edit text in the text box portion of the ComboBox editor.
-            </summary>
-        </member>
-        <member name="P:Telerik.Windows.Controls.GridViewComboBoxColumn.SelectedValueMemberPath">
-            <summary>
-            Gets or sets the value member path.
-            </summary>
-            <value>The value member path.</value>
-        </member>
-        <member name="P:Telerik.Windows.Controls.GridViewComboBoxColumn.ItemTemplate">
-            <summary>
-            Gets or sets the item template used to represent the selected item in cells.
-            </summary>
-            <value>The item template.</value>
-        </member>
-        <member name="P:Telerik.Windows.Controls.GridViewComboBoxColumn.ItemsSource">
-            <summary>
-            Gets or sets the the list of items used in the column to display lookup data.
-            The ComboBox editor will also attach to this ItemsSource.
-            </summary>
-            <value>The items source.</value>
-        </member>
-        <member name="P:Telerik.Windows.Controls.GridViewComboBoxColumn.DisplayMemberPath">
-            <summary>
-            Gets or sets the path to the property containing the data to display.
-            </summary>
-            <value>The display member path.</value>
-        </member>
-        <member name="P:Telerik.Windows.Controls.GridViewComboBoxColumn.LookupValueConverter">
-            <summary>
-            Gets or sets the lookup value converter used to convert value member value to display value.
-            </summary>
-            <value>The lookup value converter.</value>
-        </member>
         <member name="T:Telerik.Windows.Controls.GridViewDataColumn">
             <summary>
             This class inherits from <see cref="T:Telerik.Windows.Controls.GridViewBoundColumnBase"/> and 
@@ -5328,6 +5467,31 @@
             </summary>
             <value>The mask type.</value>
         </member>
+        <member name="T:Telerik.Windows.Controls.GridViewPinRowColumn">
+            <summary>
+            GridViewPinRowColumn provides an easy and fast way to pin/freeze rows in RadGridView. 
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridViewPinRowColumn.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.GridViewPinRowColumn"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridViewPinRowColumn.CanEdit(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridViewPinRowColumn.CanFilter">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridViewPinRowColumn.CanSort">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridViewPinRowColumn.CanGroup">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridViewPinRowColumn.CreateCellElement(Telerik.Windows.Controls.GridView.GridViewCell,System.Object)">
+            <inheritdoc />
+        </member>
         <member name="T:Telerik.Windows.Controls.GridViewSelectColumn">
             <summary>
             GridViewSelectColumn provides an easy and fast way to select rows in RadGridView. 
@@ -5471,6 +5635,41 @@
             The user can expand only one row details at a time. 
             </summary>
         </member>
+        <member name="T:Telerik.Windows.Controls.LookupValueConverter">
+            <summary>
+            Converts data member value to display value for the needs of lookup (ComboBox columns).
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.LookupValueConverter.#ctor(Telerik.Windows.Controls.GridViewComboBoxColumn)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.LookupValueConverter"/> class.
+            </summary>
+            <param name="column">The column.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.LookupValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the data member value to the display member value for the lookup column.
+            </summary>
+            <param name="value">The source data being passed to the target.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the target dependency property.</param>
+            <param name="parameter">The data model.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The converted value to be displayed in the lookup column.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.LookupValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the display member value to the data member value for the lookup column.
+            </summary>
+            <param name="value">The target data being passed to the source.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the source object.</param>
+            <param name="parameter">Contains the row data context.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the source object.
+            </returns>
+        </member>
         <member name="T:Telerik.Windows.Controls.GridView.LookupElement">
             <summary>
             A control used to display the cell value in GridViewComboBoxColumn when the cell is in display mode.
@@ -5559,41 +5758,6 @@
             Gets or sets the selected value.
             </summary>
             <value>The selected value.</value>
-        </member>
-        <member name="T:Telerik.Windows.Controls.LookupValueConverter">
-            <summary>
-            Converts data member value to display value for the needs of lookup (ComboBox columns).
-            </summary>
-        </member>
-        <member name="M:Telerik.Windows.Controls.LookupValueConverter.#ctor(Telerik.Windows.Controls.GridViewComboBoxColumn)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.LookupValueConverter"/> class.
-            </summary>
-            <param name="column">The column.</param>
-        </member>
-        <member name="M:Telerik.Windows.Controls.LookupValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
-            <summary>
-            Converts the data member value to the display member value for the lookup column.
-            </summary>
-            <param name="value">The source data being passed to the target.</param>
-            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the target dependency property.</param>
-            <param name="parameter">The data model.</param>
-            <param name="culture">The culture of the conversion.</param>
-            <returns>
-            The converted value to be displayed in the lookup column.
-            </returns>
-        </member>
-        <member name="M:Telerik.Windows.Controls.LookupValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
-            <summary>
-            Converts the display member value to the data member value for the lookup column.
-            </summary>
-            <param name="value">The target data being passed to the source.</param>
-            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the source object.</param>
-            <param name="parameter">Contains the row data context.</param>
-            <param name="culture">The culture of the conversion.</param>
-            <returns>
-            The value to be passed to the source object.
-            </returns>
         </member>
         <member name="T:Telerik.Windows.Controls.GridView.ControlPanelItem">
             <summary>
@@ -6247,6 +6411,36 @@
             Gets the editing element.
             </summary>
             <value>The editing element.</value>
+        </member>
+        <member name="T:Telerik.Windows.Controls.GridViewValidationType">
+            <summary>
+            Defines what validation types should be processed by RadGridView.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridViewValidationType.None">
+            <summary>
+            Specifies none validation type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridViewValidationType.DataAnnotations">
+            <summary>
+            Specifies DataAnnotations validation type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridViewValidationType.IDataErrorInfo">
+            <summary>
+            Specifies IDataErrorInfo validation type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridViewValidationType.INotifyDataErrorInfo">
+            <summary>
+            Specifies INotifyDataErrorInfo validation type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridViewValidationType.Default">
+            <summary>
+            Combines default values.
+            </summary>
         </member>
         <member name="T:Telerik.Windows.Controls.GridViewRowEditEndedEventArgs">
             <summary>
@@ -7570,6 +7764,11 @@
             Identifies the <see cref="P:Telerik.Windows.Controls.GridView.GridViewDataControl.CurrentColumn"/> dependency property.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.GridView.GridViewDataControl.PinnedRowsPositionProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.GridView.GridViewDataControl.PinnedRowsPosition"/> dependency property.
+            </summary>
+        </member>
         <member name="M:Telerik.Windows.Controls.GridView.GridViewDataControl.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.GridView.GridViewDataControl"/> class.
@@ -7589,6 +7788,11 @@
         <member name="F:Telerik.Windows.Controls.GridView.GridViewDataControl.ValidatesOnDataErrorsProperty">
             <summary>
             Identifies the <see cref="P:Telerik.Windows.Controls.GridView.GridViewDataControl.ValidatesOnDataErrors"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridView.GridViewDataControl.ValidationTypeProperty">
+            <summary>
+            Identifies the <see cref="F:Telerik.Windows.Controls.GridView.GridViewDataControl.ValidationTypeProperty"/> dependency property.
             </summary>
         </member>
         <member name="F:Telerik.Windows.Controls.GridView.GridViewDataControl.CellUnloadedEvent">
@@ -7697,6 +7901,16 @@
         <member name="F:Telerik.Windows.Controls.GridView.GridViewDataControl.GroupFooterRowStyleSelectorProperty">
             <summary>
             Identifies the <see cref="P:Telerik.Windows.Controls.GridView.GridViewDataControl.GroupFooterRowStyleSelector"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridView.GridViewDataControl.MergedCellsStyleSelectorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.GridView.GridViewDataControl.MergedCellsStyleSelector"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridView.GridViewDataControl.MergedCellsStyleProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.GridView.GridViewDataControl.MergedCellsStyle"/> dependency property.
             </summary>
         </member>
         <member name="F:Telerik.Windows.Controls.GridView.GridViewDataControl.RowStyleProperty">
@@ -7886,6 +8100,11 @@
             </summary>
             <param name="item"></param>
             <returns>The row for the corresponding item.</returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridView.GridViewDataControl.OnPinnedRowsPositionChanged">
+            <summary>
+            Called when property PinnedRowsPosition changes.
+            </summary>
         </member>
         <member name="M:Telerik.Windows.Controls.GridView.GridViewDataControl.OnItemsSourceChanged(System.Object,System.Object)">
             <inheritdoc />
@@ -8460,6 +8679,11 @@
             <param name="oldValue">Old property value.</param>
             <param name="newValue">New property value.</param>
         </member>
+        <member name="M:Telerik.Windows.Controls.GridView.GridViewDataControl.OnSearchPanelVisibilityChanged(Telerik.Windows.Controls.VisibilityChangedEventArgs)">
+            <summary>
+            Raises the SearchPanelVisibilityChanged event.
+            </summary>
+        </member>
         <member name="M:Telerik.Windows.Controls.GridView.GridViewDataControl.UpdateSearchPanelReference(System.Collections.IList,System.Boolean)">
             <summary>
                 Updates the reference to this GridViewSearchPanel on the list of columns.
@@ -8522,6 +8746,11 @@
         <member name="F:Telerik.Windows.Controls.GridView.GridViewDataControl.MergedCellsDirectionProperty">
             <summary>
             Represents the MergedCellsDirection dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridView.GridViewDataControl.ShouldCloseFilteringPopupOnKeyboardFocusChangedProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.GridView.GridViewDataControl.ShouldCloseFilteringPopupOnKeyboardFocusChanged"/> dependency property.
             </summary>
         </member>
         <member name="F:Telerik.Windows.Controls.GridView.GridViewDataControl.IsFilteringAllowedProperty">
@@ -9049,6 +9278,11 @@
             Gets or sets the control panel items.
             </summary>
         </member>
+        <member name="E:Telerik.Windows.Controls.GridView.GridViewDataControl.SearchPanelVisibilityChanged">
+            <summary>
+            Occurs when the search panel changes its Visibility.
+            </summary>
+        </member>
         <member name="E:Telerik.Windows.Controls.GridView.GridViewDataControl.Deleting">
             <summary>
             Occurs before deletion is performed.
@@ -9119,6 +9353,12 @@
             <remarks>
             This property will checks for errors that are raised by the IDataErrorInfo and INotifyDataErrorInfo implementation of the source object.
             </remarks>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridView.GridViewDataControl.ValidationType">
+            <summary>
+            Gets or sets a value indicating what validation type should be processed by RadGridView.
+            </summary>
+            <value>The default value is a combination between all types (DataAnnotations, IDataErrorInfo and INotifyDataErrorInfo).</value>
         </member>
         <member name="E:Telerik.Windows.Controls.GridView.GridViewDataControl.RowLoaded">
             <summary>
@@ -9241,6 +9481,16 @@
             Gets or sets the group footer row style selector.
             </summary>
             <value>The group footer row style selector.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridView.GridViewDataControl.MergedCellsStyleSelector">
+            <summary>
+            Gets or sets the StyleSelector for MergedCells.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridView.GridViewDataControl.MergedCellsStyle">
+            <summary>
+            Gets or sets Style for MergedCells.
+            </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.GridView.GridViewDataControl.RowStyle">
             <summary>
@@ -9581,6 +9831,11 @@
             </summary>
             <value>The parent row.</value>
         </member>
+        <member name="P:Telerik.Windows.Controls.GridView.GridViewDataControl.PinnedRowsPosition">
+            <summary>
+            Gets or sets a value indicating where to show pinned rows.
+            </summary>
+        </member>
         <member name="E:Telerik.Windows.Controls.GridView.GridViewDataControl.AutoGeneratingColumn">
             <summary>
             Occurs one time for each public, non-static property in the bound data type when the ItemsSource property is changed and the AutoGenerateColumns property is true.
@@ -9878,6 +10133,11 @@
             Gets or sets the merged cells direction.
             </summary>
             <value>The merged cells direction.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridView.GridViewDataControl.ShouldCloseFilteringPopupOnKeyboardFocusChanged">
+            <summary>
+            Gets or sets a value indicating whether column's filtering control should be closed automatically when keyboard focus is changed.
+            </summary>		
         </member>
         <member name="E:Telerik.Windows.Controls.GridView.GridViewDataControl.FieldFilterEditorCreated">
             <summary>
@@ -12168,6 +12428,11 @@
             </summary>
             <value>The is selected.</value>
         </member>
+        <member name="T:Telerik.Windows.Controls.GridView.MergedCellInfo">
+            <summary>
+            Class that describes the backing data behind an instance of GridViewMergedCell.
+            </summary>
+        </member>
         <member name="M:Telerik.Windows.Controls.GridView.MergedCellInfo.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Object)">
             <summary>
             Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.GridView.MergedCellInfo"/> class.
@@ -12177,6 +12442,73 @@
             <param name="height">The height.</param>
             <param name="width">The width.</param>
             <param name="value">The value.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridView.MergedCellInfo.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>A hash code for the current <see cref="T:System.Object" />.</returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridView.MergedCellInfo.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal
+            to the current <see cref="T:System.Object" />.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with the current
+            <see cref="T:System.Object" />.</param>
+            <returns>
+            True if the specified <see cref="T:System.Object" /> is equal to the
+            current <see cref="T:System.Object" />; otherwise, False.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridView.MergedCellInfo.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents the current
+            <see cref="T:System.Object" />.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents the current <see cref="T:System.Object" />.
+            </returns>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridView.MergedCellInfo.Height">
+            <summary>
+            Gets the height of the underlying GridMergedCell.
+            </summary>
+            <value>The height.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridView.MergedCellInfo.Width">
+            <summary>
+            Gets the width of the underlying GridMergedCell.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridView.MergedCellInfo.VerticalStart">
+            <summary>
+            Gets the vertical start of the underlying GridMergedCell.
+            </summary>
+            <value>The vertical start.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridView.MergedCellInfo.HorizontalStart">
+            <summary>
+            Gets the horizontal start of the underlying GridMergedCell.
+            </summary>
+            <value>The horizontal start.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridView.MergedCellInfo.Value">
+            <summary>
+            Gets the value of the underlying GridMergedCell.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridView.MergedCellInfo.IsCurrent">
+            <summary>
+            Gets a value that indicates whether the underlying GridViewMergedCell is the current one.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridView.MergedCellInfo.IsInEditMode">
+            <summary>
+            Gets a value that indicates whether the underlying GridViewMergedCell is in edit mode.
+            </summary>
         </member>
         <member name="T:Telerik.Windows.Controls.GridView.MergedCellsLogicalCoordinatesManager">
             <summary>
@@ -12215,6 +12547,45 @@
             <summary>
             Merged cells visual elements cache.
             </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.GridView.GridViewPinnedRowsPosition">
+            <summary>
+            Specifies the position of RadGridView's pinned rows.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridView.GridViewPinnedRowsPosition.Top">
+            <summary>
+            Display the pinned rows on top.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridView.GridViewPinnedRowsPosition.Bottom">
+            <summary>
+            Display the pinned rows at the bottom after the last standard row.
+            </summary>		
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridView.GridViewPinnedRowsPosition.None">
+            <summary>
+            Do not display the pinned rows.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.GridView.GridViewPinButton">
+            <summary>
+            GridViewPinButton is an user interface (UI) element used to freeze its corresponding row on scrolling.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.GridView.GridViewPinButton.OnInitialized(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridView.GridViewPinButton.IsPinnedProperty">
+            <summary>
+            Identifies the <see cref="F:Telerik.Windows.Controls.GridView.GridViewPinButton.IsPinnedProperty"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridView.GridViewPinButton.IsPinned">
+            <summary>
+            Gets or sets a value that indicates whether the button is pinned or not.
+            </summary>
+            <value><c>true</c> if the button is pinned; otherwise, <c>false</c>. The registered default is <c>false</c>.</value>
         </member>
         <member name="T:Telerik.Windows.Controls.GridView.RowDetailsVisibilityChangingEventArgs">
             <summary>
@@ -13549,6 +13920,12 @@
             </summary>
             <value>The close search panel command.</value>
         </member>
+        <member name="P:Telerik.Windows.Controls.RadGridViewCommands.TogglePinnedRowState">
+            <summary>
+            Gets value that represents the toggle pinned row command.
+            </summary>
+            <value>The toggle pinned row state command.</value>
+        </member>
         <member name="P:Telerik.Windows.Controls.RadGridViewCommands.SelectCurrentItem">
             <summary>
             Gets value that represents the select current item command.
@@ -13718,6 +14095,11 @@
         <member name="F:Telerik.Windows.Controls.RadGridViewCommands.CommandId.SelectCurrentUnit">
             <summary>
             SelectCurrentUnit.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadGridViewCommands.CommandId.TogglePinnedRowState">
+            <summary>
+            TogglePinnedRowState.
             </summary>
         </member>
         <member name="F:Telerik.Windows.Controls.RadGridViewCommands.CommandId.ExtendSelectionToCurrentUnit">
@@ -14516,6 +14898,11 @@
         <member name="F:Telerik.Windows.Controls.GridView.GridViewRow.IsInEditModeProperty">
             <inheritdoc />
         </member>
+        <member name="F:Telerik.Windows.Controls.GridView.GridViewRow.IsPinnedProperty">
+            <summary>
+            Identifies the <see cref="F:Telerik.Windows.Controls.GridView.GridViewRow.IsPinnedProperty"/> dependency property.
+            </summary>
+        </member>
         <member name="F:Telerik.Windows.Controls.GridView.GridViewRow.IsExpandableProperty">
             <summary>
             Identifies the <see cref="P:Telerik.Windows.Controls.GridView.GridViewRow.IsExpandable"/> dependency property.
@@ -14708,6 +15095,12 @@
         </member>
         <member name="P:Telerik.Windows.Controls.GridView.GridViewRow.IsInEditMode">
             <inheritdoc />
+        </member>
+        <member name="P:Telerik.Windows.Controls.GridView.GridViewRow.IsPinned">
+            <summary>
+            Gets or sets a value that indicates whether the row is pinned or not. If true, the row will stay at the top or bottom while scrolling. 
+            </summary>
+            <value><c>true</c> if the row is pinned and stays on top or bottom on scrolling; otherwise, <c>false</c>. The registered default is <c>false</c>.</value>
         </member>
         <member name="P:Telerik.Windows.Controls.GridView.GridViewRow.IsExpandable">
             <summary>
@@ -15336,6 +15729,9 @@
             <inheritdoc />
         </member>
         <member name="M:Telerik.Windows.Automation.Peers.RadTreeListViewAutomationPeer.CreateDataItemAutomationPeer(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Automation.Peers.RadTreeListViewAutomationPeer.CreateDataItemAutomationPeer(System.Object,System.Int32)">
             <inheritdoc />
         </member>
         <member name="M:Telerik.Windows.Automation.Peers.RadTreeListViewAutomationPeer.GetAutomationControlTypeCore">

@@ -2,3 +2,7 @@ C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Ax\bin\Debug\Intermoda.ClientPro
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Ax\bin\Debug\Intermoda.ClientProxy.Ax.pdb
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Ax\obj\Debug\Intermoda.ClientProxy.Ax.dll
 C:\VisualStudio\Intermoda\Intermoda.ClientProxy.Ax\obj\Debug\Intermoda.ClientProxy.Ax.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Ax\bin\Debug\Intermoda.ClientProxy.Ax.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Ax\bin\Debug\Intermoda.ClientProxy.Ax.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Ax\obj\Debug\Intermoda.ClientProxy.Ax.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.ClientProxy.Ax\obj\Debug\Intermoda.ClientProxy.Ax.pdb

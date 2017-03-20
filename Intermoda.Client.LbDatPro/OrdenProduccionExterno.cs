@@ -591,6 +591,40 @@ namespace Intermoda.Client.LbDatPro
 
         #endregion
 
+        #region Editable
+
+        /// <summary>
+        /// The <see cref="Editable" /> property's name.
+        /// </summary>
+        public const string EditablePropertyName = "Editable";
+
+        private bool _editable;
+
+        /// <summary>
+        /// Sets and gets the Editable property.
+        /// Changes to that property's value raise the PropertyChanged event. 
+        /// </summary>
+        public bool Editable
+        {
+            get
+            {
+                return _editable;
+            }
+
+            set
+            {
+                if (_editable == value)
+                {
+                    return;
+                }
+
+                _editable = value;
+                RaisePropertyChanged(EditablePropertyName);
+            }
+        }
+
+        #endregion
+
         public OrdenEstado Estado { get; set; }
         public List<PasoRuta> Ruta { get; set; }
         public CentroTrabajo CentroTrabajoUltimaLectura { get; set; }
@@ -616,6 +650,68 @@ namespace Intermoda.Client.LbDatPro
             }
         }
 
+        public static async Task<List<MaquiladoLeadTime>> Get()
+        {
+            try
+            {
+                using (_client = new OrdenProduccionExternoClient())
+                {
+                    var lista = new List<MaquiladoLeadTime>();
+                    //var ordenes = await _client.GetAsync();
+                    var ordenes = _client.Get();
+
+                    foreach (var orden in ordenes)
+                    {
+                        lista.AddRange(orden.Ruta.Select(paso => new MaquiladoLeadTime
+                        {
+                            Planta = paso.Planta,
+                            CentroTrabajo = paso.CentroTrabajo,
+                            OrdenProduccion = orden.OrdenProduccion,
+                            Referencia = orden.Referencia,
+                            Cantidad = orden.Cantidad,
+                            TiempoEnProceso = paso.TiempoEnProceso,
+                            TiempoEnPlanta = paso.TiempoEnPlanta,
+                            Entrada = paso.LecturaEntrada,
+                            Salida = paso.LecturaSalida,
+                            Estado = paso.Estado
+                        }));
+                    }
+
+                    return lista.OrderBy(r => r.Planta)
+                        .ThenBy(r => r.Secuencia)
+                        .ThenBy(r => r.OrdenProduccion)
+                        .ToList();
+                }
+            }
+            catch (Exception exception)
+            {
+                throw new Exception("OrdenProduccionExterno / Get", exception);
+            }
+        }
+
+        public static async Task<List<MaquiladoTeP>> GetMaquiladoTrabajoEnProceso()
+        {
+            try
+            {
+                using (_client = new OrdenProduccionExternoClient())
+                {
+                    var ordenes = await _client.GetMaquiladoTrabajoEnProcesoAsync();
+
+                    var lista = ordenes.Select(TePBusinessToClient).ToList();
+
+                    return lista;
+                        //.OrderBy(r => r.Planta)
+                        //.ThenBy(r => r.OrdenAno)
+                        //.ThenBy(r => r.OrdenNumero)
+                        //.ToList();
+                }
+            }
+            catch (Exception exception)
+            {
+                throw new Exception("OrdenProduccionExterno / GetMaquiladoTrabajoEnProceso", exception);
+            }
+        }
+
         public static async Task SetEstado(short companiaId, short ordenAno, short ordenNumero, string estadoId)
         {
             try
@@ -631,14 +727,15 @@ namespace Intermoda.Client.LbDatPro
             }
         }
 
-        public static async Task GrabarLectura(short companiaId, short ordenAno, short ordenNumero,
+        public static async Task<OrdenProduccionExterno> GrabarLectura(short companiaId, short ordenAno, short ordenNumero,
             string centroTrabajoId, string tipo, string usuario)
         {
             try
             {
                 using (_client = new OrdenProduccionExternoClient())
                 {
-                    await _client.GrabarLecturaAsync(companiaId, ordenAno, ordenNumero, centroTrabajoId, tipo, usuario);
+                    var reg = await _client.GrabarLecturaAsync(companiaId, ordenAno, ordenNumero, centroTrabajoId, tipo, usuario);
+                    return BusinessToClient(reg);
                 }
             }
             catch (Exception exception)
@@ -712,7 +809,11 @@ namespace Intermoda.Client.LbDatPro
                 Numero = paso.Numero,
                 CentroTrabajoId = paso.CentroTrabajoId,
                 PlantaId = paso.PlantaId,
-                Secuencia = paso.Secuencia
+                Secuencia = paso.Secuencia,
+                LecturaEntrada = paso.LecturaEntrada,
+                LecturaSalida = paso.LecturaSalida,
+                TiempoEnProceso = paso.TiempoEnProceso,
+                TiempoEnPlanta = paso.TiempoEnPlanta
             }).ToList();
             reg.Ruta = ruta.ToArray();
 
@@ -755,10 +856,15 @@ namespace Intermoda.Client.LbDatPro
                 {
                     CompaniaId = paso.CompaniaId,
                     Ano = paso.Ano,
+                    Planta = paso.Planta,
                     Numero = paso.Numero,
                     CentroTrabajoId = paso.CentroTrabajoId,
                     PlantaId = paso.PlantaId,
-                    Secuencia = paso.Secuencia
+                    Secuencia = paso.Secuencia,
+                    LecturaEntrada = paso.LecturaEntrada,
+                    LecturaSalida = paso.LecturaSalida,
+                    TiempoEnProceso = paso.TiempoEnProceso,
+                    TiempoEnPlanta = paso.TiempoEnPlanta
                 }).ToList()
                 : null;
 
@@ -784,10 +890,79 @@ namespace Intermoda.Client.LbDatPro
                 Estado = estado,
                 CentroTrabajoUltimaLectura = centroTrabajoUltimaLectura,
                 CentroTrabajoSiguiente = centroTrabajoSiguiente,
-                Ruta = ruta
+                Ruta = ruta,
+                Editable = true
             };
 
             return reg;
+        }
+
+        private static MaquiladoTrabajoEnProceso TePClientToBusiness(MaquiladoTeP input)
+        {
+            return new MaquiladoTrabajoEnProceso
+            {
+                Planta = new PlantaBusiness
+                {
+                    Id = input.Planta.Id,
+                    Descripcion = input.Planta.Descripcion,
+                    Iniciales = input.Planta.Iniciales
+                },
+                CentroTrabajo = new CentroTrabajoBusiness
+                {
+                    CompaniaId = input.CentroTrabajo.CompaniaId,
+                    Id = input.CentroTrabajo.Id,
+                    Nombre = input.CentroTrabajo.Nombre
+                },
+                OrdenAno = input.OrdenAno,
+                OrdenNumero = input.OrdenNumero,
+                Patron = input.Patron,
+                Variante = input.Variante,
+                Tela = input.Tela,
+                Lavado = input.Lavado,
+                Color = input.Color,
+                ColorNombre = input.ColorNombre,
+                Cantidad = input.Cantidad,
+                TiempoProceso = input.TiempoProceso,
+                TiempoPlanta = input.TiempoPlanta,
+                Entrada = input.Entrada,
+                Salida = input.Salida,
+                Estado = input.Estado
+            };
+        }
+
+        private static MaquiladoTeP TePBusinessToClient(MaquiladoTrabajoEnProceso input)
+        {
+            return new MaquiladoTeP
+            {
+                Planta = new Planta
+                {
+                    Id = input.Planta.Id,
+                    Descripcion = input.Planta.Descripcion,
+                    Iniciales = input.Planta.Iniciales
+                },
+                CentroTrabajo = new CentroTrabajo
+                {
+                    CompaniaId = input.CentroTrabajo.CompaniaId,
+                    Id = input.CentroTrabajo.Id,
+                    Nombre = input.CentroTrabajo.Nombre
+                },
+                OrdenAno = input.OrdenAno,
+                OrdenNumero = input.OrdenNumero,
+                //OrdenProduccion = input.OrdenProduccion,
+                Patron = input.Patron,
+                Variante = input.Variante,
+                Tela = input.Tela,
+                Lavado = input.Lavado,
+                Color = input.Color,
+                //Referencia = input.Referencia,
+                ColorNombre = input.ColorNombre,
+                Cantidad = input.Cantidad,
+                TiempoProceso = input.TiempoProceso,
+                TiempoPlanta = input.TiempoPlanta,
+                Entrada = input.Entrada,
+                Salida = input.Salida,
+                Estado = input.Estado
+            };
         }
 
         #endregion

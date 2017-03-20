@@ -59,9 +59,12 @@
     <Compile Include="EstadoOrdenProduccion.cs" />
     <Compile Include="GrupoTelaBusiness.cs" />
     <Compile Include="InasistenciaBusiness.cs" />
+    <Compile Include="LecturaCuponBusiness.cs" />
     <Compile Include="MaquiladoCajaBusiness.cs" />
     <Compile Include="MaquiladoCajaDetalleBusiness.cs" />
     <Compile Include="MaquiladoEmpaqueBusiness.cs" />
+    <Compile Include="MaquiladoLecturaBusiness.cs" />
+    <Compile Include="MaquiladoTrabajoEnProceso.cs" />
     <Compile Include="MaterialBusiness.cs" />
     <Compile Include="MateriaPrimaColorBusiness.cs" />
     <Compile Include="OrdenEstadoBusiness.cs" />

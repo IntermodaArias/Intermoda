@@ -396,6 +396,9 @@ namespace Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference 
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NombreField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short SecuenciaField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -441,6 +444,19 @@ namespace Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference 
                 if ((object.ReferenceEquals(this.NombreField, value) != true)) {
                     this.NombreField = value;
                     this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short Secuencia {
+            get {
+                return this.SecuenciaField;
+            }
+            set {
+                if ((this.SecuenciaField.Equals(value) != true)) {
+                    this.SecuenciaField = value;
+                    this.RaisePropertyChanged("Secuencia");
                 }
             }
         }
@@ -593,19 +609,40 @@ namespace Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference 
         private short AnoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CentroTrabajoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CentroTrabajoIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private short CompaniaIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> LecturaEntradaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> LecturaSalidaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private short NumeroField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PlantaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PlantaIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private short SecuenciaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.TimeSpan> TiempoEnPlantaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.TimeSpan> TiempoEnProcesoField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -626,6 +663,19 @@ namespace Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference 
                 if ((this.AnoField.Equals(value) != true)) {
                     this.AnoField = value;
                     this.RaisePropertyChanged("Ano");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CentroTrabajo {
+            get {
+                return this.CentroTrabajoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CentroTrabajoField, value) != true)) {
+                    this.CentroTrabajoField = value;
+                    this.RaisePropertyChanged("CentroTrabajo");
                 }
             }
         }
@@ -657,6 +707,45 @@ namespace Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference 
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EstadoField, value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> LecturaEntrada {
+            get {
+                return this.LecturaEntradaField;
+            }
+            set {
+                if ((this.LecturaEntradaField.Equals(value) != true)) {
+                    this.LecturaEntradaField = value;
+                    this.RaisePropertyChanged("LecturaEntrada");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> LecturaSalida {
+            get {
+                return this.LecturaSalidaField;
+            }
+            set {
+                if ((this.LecturaSalidaField.Equals(value) != true)) {
+                    this.LecturaSalidaField = value;
+                    this.RaisePropertyChanged("LecturaSalida");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public short Numero {
             get {
                 return this.NumeroField;
@@ -665,6 +754,19 @@ namespace Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference 
                 if ((this.NumeroField.Equals(value) != true)) {
                     this.NumeroField = value;
                     this.RaisePropertyChanged("Numero");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Planta {
+            get {
+                return this.PlantaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PlantaField, value) != true)) {
+                    this.PlantaField = value;
+                    this.RaisePropertyChanged("Planta");
                 }
             }
         }
@@ -695,6 +797,570 @@ namespace Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference 
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.TimeSpan> TiempoEnPlanta {
+            get {
+                return this.TiempoEnPlantaField;
+            }
+            set {
+                if ((this.TiempoEnPlantaField.Equals(value) != true)) {
+                    this.TiempoEnPlantaField = value;
+                    this.RaisePropertyChanged("TiempoEnPlanta");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.TimeSpan> TiempoEnProceso {
+            get {
+                return this.TiempoEnProcesoField;
+            }
+            set {
+                if ((this.TiempoEnProcesoField.Equals(value) != true)) {
+                    this.TiempoEnProcesoField = value;
+                    this.RaisePropertyChanged("TiempoEnProceso");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MaquiladoTrabajoEnProceso", Namespace="http://schemas.datacontract.org/2004/07/Intermoda.Business.LbDatPro")]
+    [System.SerializableAttribute()]
+    public partial class MaquiladoTrabajoEnProceso : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CantidadField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.CentroTrabajoBusiness CentroTrabajoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ColorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ColorNombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> EntradaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LavadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short OrdenAnoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short OrdenNumeroField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PatronField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.PlantaBusiness PlantaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> SalidaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TelaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.TimeSpan TiempoPlantaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.TimeSpan TiempoProcesoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VarianteField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Cantidad {
+            get {
+                return this.CantidadField;
+            }
+            set {
+                if ((this.CantidadField.Equals(value) != true)) {
+                    this.CantidadField = value;
+                    this.RaisePropertyChanged("Cantidad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.CentroTrabajoBusiness CentroTrabajo {
+            get {
+                return this.CentroTrabajoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CentroTrabajoField, value) != true)) {
+                    this.CentroTrabajoField = value;
+                    this.RaisePropertyChanged("CentroTrabajo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Color {
+            get {
+                return this.ColorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ColorField, value) != true)) {
+                    this.ColorField = value;
+                    this.RaisePropertyChanged("Color");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ColorNombre {
+            get {
+                return this.ColorNombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ColorNombreField, value) != true)) {
+                    this.ColorNombreField = value;
+                    this.RaisePropertyChanged("ColorNombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Entrada {
+            get {
+                return this.EntradaField;
+            }
+            set {
+                if ((this.EntradaField.Equals(value) != true)) {
+                    this.EntradaField = value;
+                    this.RaisePropertyChanged("Entrada");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EstadoField, value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Lavado {
+            get {
+                return this.LavadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LavadoField, value) != true)) {
+                    this.LavadoField = value;
+                    this.RaisePropertyChanged("Lavado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short OrdenAno {
+            get {
+                return this.OrdenAnoField;
+            }
+            set {
+                if ((this.OrdenAnoField.Equals(value) != true)) {
+                    this.OrdenAnoField = value;
+                    this.RaisePropertyChanged("OrdenAno");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short OrdenNumero {
+            get {
+                return this.OrdenNumeroField;
+            }
+            set {
+                if ((this.OrdenNumeroField.Equals(value) != true)) {
+                    this.OrdenNumeroField = value;
+                    this.RaisePropertyChanged("OrdenNumero");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Patron {
+            get {
+                return this.PatronField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PatronField, value) != true)) {
+                    this.PatronField = value;
+                    this.RaisePropertyChanged("Patron");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.PlantaBusiness Planta {
+            get {
+                return this.PlantaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PlantaField, value) != true)) {
+                    this.PlantaField = value;
+                    this.RaisePropertyChanged("Planta");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Salida {
+            get {
+                return this.SalidaField;
+            }
+            set {
+                if ((this.SalidaField.Equals(value) != true)) {
+                    this.SalidaField = value;
+                    this.RaisePropertyChanged("Salida");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Tela {
+            get {
+                return this.TelaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TelaField, value) != true)) {
+                    this.TelaField = value;
+                    this.RaisePropertyChanged("Tela");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.TimeSpan TiempoPlanta {
+            get {
+                return this.TiempoPlantaField;
+            }
+            set {
+                if ((this.TiempoPlantaField.Equals(value) != true)) {
+                    this.TiempoPlantaField = value;
+                    this.RaisePropertyChanged("TiempoPlanta");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.TimeSpan TiempoProceso {
+            get {
+                return this.TiempoProcesoField;
+            }
+            set {
+                if ((this.TiempoProcesoField.Equals(value) != true)) {
+                    this.TiempoProcesoField = value;
+                    this.RaisePropertyChanged("TiempoProceso");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Variante {
+            get {
+                return this.VarianteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VarianteField, value) != true)) {
+                    this.VarianteField = value;
+                    this.RaisePropertyChanged("Variante");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PlantaBusiness", Namespace="http://schemas.datacontract.org/2004/07/Intermoda.Business.LbDatPro")]
+    [System.SerializableAttribute()]
+    public partial class PlantaBusiness : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> BodegaIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ClaveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> CompaniaIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GeneraTicketField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> HabilitarField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string InicialesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> NuevoIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> ProveedorIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProveedorNombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TipoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> BodegaId {
+            get {
+                return this.BodegaIdField;
+            }
+            set {
+                if ((this.BodegaIdField.Equals(value) != true)) {
+                    this.BodegaIdField = value;
+                    this.RaisePropertyChanged("BodegaId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Clave {
+            get {
+                return this.ClaveField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ClaveField, value) != true)) {
+                    this.ClaveField = value;
+                    this.RaisePropertyChanged("Clave");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> CompaniaId {
+            get {
+                return this.CompaniaIdField;
+            }
+            set {
+                if ((this.CompaniaIdField.Equals(value) != true)) {
+                    this.CompaniaIdField = value;
+                    this.RaisePropertyChanged("CompaniaId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EstadoField, value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string GeneraTicket {
+            get {
+                return this.GeneraTicketField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GeneraTicketField, value) != true)) {
+                    this.GeneraTicketField = value;
+                    this.RaisePropertyChanged("GeneraTicket");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> Habilitar {
+            get {
+                return this.HabilitarField;
+            }
+            set {
+                if ((this.HabilitarField.Equals(value) != true)) {
+                    this.HabilitarField = value;
+                    this.RaisePropertyChanged("Habilitar");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdField, value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Iniciales {
+            get {
+                return this.InicialesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InicialesField, value) != true)) {
+                    this.InicialesField = value;
+                    this.RaisePropertyChanged("Iniciales");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> NuevoId {
+            get {
+                return this.NuevoIdField;
+            }
+            set {
+                if ((this.NuevoIdField.Equals(value) != true)) {
+                    this.NuevoIdField = value;
+                    this.RaisePropertyChanged("NuevoId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> ProveedorId {
+            get {
+                return this.ProveedorIdField;
+            }
+            set {
+                if ((this.ProveedorIdField.Equals(value) != true)) {
+                    this.ProveedorIdField = value;
+                    this.RaisePropertyChanged("ProveedorId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProveedorNombre {
+            get {
+                return this.ProveedorNombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProveedorNombreField, value) != true)) {
+                    this.ProveedorNombreField = value;
+                    this.RaisePropertyChanged("ProveedorNombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Tipo {
+            get {
+                return this.TipoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoField, value) != true)) {
+                    this.TipoField = value;
+                    this.RaisePropertyChanged("Tipo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Usuario {
+            get {
+                return this.UsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioField, value) != true)) {
+                    this.UsuarioField = value;
+                    this.RaisePropertyChanged("Usuario");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -715,6 +1381,18 @@ namespace Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference 
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOrdenProduccionExterno/GetByUsuarioPlanta", ReplyAction="http://tempuri.org/IOrdenProduccionExterno/GetByUsuarioPlantaResponse")]
         System.Threading.Tasks.Task<Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.OrdenProduccionExternoBusiness[]> GetByUsuarioPlantaAsync(string usuario);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOrdenProduccionExterno/Get", ReplyAction="http://tempuri.org/IOrdenProduccionExterno/GetResponse")]
+        Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.OrdenProduccionExternoBusiness[] Get();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOrdenProduccionExterno/Get", ReplyAction="http://tempuri.org/IOrdenProduccionExterno/GetResponse")]
+        System.Threading.Tasks.Task<Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.OrdenProduccionExternoBusiness[]> GetAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOrdenProduccionExterno/GetMaquiladoTrabajoEnProceso", ReplyAction="http://tempuri.org/IOrdenProduccionExterno/GetMaquiladoTrabajoEnProcesoResponse")]
+        Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.MaquiladoTrabajoEnProceso[] GetMaquiladoTrabajoEnProceso();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOrdenProduccionExterno/GetMaquiladoTrabajoEnProceso", ReplyAction="http://tempuri.org/IOrdenProduccionExterno/GetMaquiladoTrabajoEnProcesoResponse")]
+        System.Threading.Tasks.Task<Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.MaquiladoTrabajoEnProceso[]> GetMaquiladoTrabajoEnProcesoAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOrdenProduccionExterno/SetEstado", ReplyAction="http://tempuri.org/IOrdenProduccionExterno/SetEstadoResponse")]
         void SetEstado(short companiaId, short ordenAno, short ordenNumero, string estadoId);
         
@@ -722,10 +1400,10 @@ namespace Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference 
         System.Threading.Tasks.Task SetEstadoAsync(short companiaId, short ordenAno, short ordenNumero, string estadoId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOrdenProduccionExterno/GrabarLectura", ReplyAction="http://tempuri.org/IOrdenProduccionExterno/GrabarLecturaResponse")]
-        void GrabarLectura(short companiaId, short ordenAno, short ordenNumero, string centroTrabajoId, string tipo, string usuario);
+        Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.OrdenProduccionExternoBusiness GrabarLectura(short companiaId, short ordenAno, short ordenNumero, string centroTrabajoId, string tipo, string usuario);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOrdenProduccionExterno/GrabarLectura", ReplyAction="http://tempuri.org/IOrdenProduccionExterno/GrabarLecturaResponse")]
-        System.Threading.Tasks.Task GrabarLecturaAsync(short companiaId, short ordenAno, short ordenNumero, string centroTrabajoId, string tipo, string usuario);
+        System.Threading.Tasks.Task<Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.OrdenProduccionExternoBusiness> GrabarLecturaAsync(short companiaId, short ordenAno, short ordenNumero, string centroTrabajoId, string tipo, string usuario);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOrdenProduccionExterno/SetEstadoEnviarIntermoda", ReplyAction="http://tempuri.org/IOrdenProduccionExterno/SetEstadoEnviarIntermodaResponse")]
         void SetEstadoEnviarIntermoda(short companiaId, short ordenAno, short ordenNumero);
@@ -769,6 +1447,22 @@ namespace Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference 
             return base.Channel.GetByUsuarioPlantaAsync(usuario);
         }
         
+        public Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.OrdenProduccionExternoBusiness[] Get() {
+            return base.Channel.Get();
+        }
+        
+        public System.Threading.Tasks.Task<Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.OrdenProduccionExternoBusiness[]> GetAsync() {
+            return base.Channel.GetAsync();
+        }
+        
+        public Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.MaquiladoTrabajoEnProceso[] GetMaquiladoTrabajoEnProceso() {
+            return base.Channel.GetMaquiladoTrabajoEnProceso();
+        }
+        
+        public System.Threading.Tasks.Task<Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.MaquiladoTrabajoEnProceso[]> GetMaquiladoTrabajoEnProcesoAsync() {
+            return base.Channel.GetMaquiladoTrabajoEnProcesoAsync();
+        }
+        
         public void SetEstado(short companiaId, short ordenAno, short ordenNumero, string estadoId) {
             base.Channel.SetEstado(companiaId, ordenAno, ordenNumero, estadoId);
         }
@@ -777,11 +1471,11 @@ namespace Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference 
             return base.Channel.SetEstadoAsync(companiaId, ordenAno, ordenNumero, estadoId);
         }
         
-        public void GrabarLectura(short companiaId, short ordenAno, short ordenNumero, string centroTrabajoId, string tipo, string usuario) {
-            base.Channel.GrabarLectura(companiaId, ordenAno, ordenNumero, centroTrabajoId, tipo, usuario);
+        public Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.OrdenProduccionExternoBusiness GrabarLectura(short companiaId, short ordenAno, short ordenNumero, string centroTrabajoId, string tipo, string usuario) {
+            return base.Channel.GrabarLectura(companiaId, ordenAno, ordenNumero, centroTrabajoId, tipo, usuario);
         }
         
-        public System.Threading.Tasks.Task GrabarLecturaAsync(short companiaId, short ordenAno, short ordenNumero, string centroTrabajoId, string tipo, string usuario) {
+        public System.Threading.Tasks.Task<Intermoda.ClientProxy.LbDatPro.OrdenProduccionExternoServiceReference.OrdenProduccionExternoBusiness> GrabarLecturaAsync(short companiaId, short ordenAno, short ordenNumero, string centroTrabajoId, string tipo, string usuario) {
             return base.Channel.GrabarLecturaAsync(companiaId, ordenAno, ordenNumero, centroTrabajoId, tipo, usuario);
         }
         

@@ -6,3 +6,11 @@ C:\VisualStudio\Intermoda\Intermoda.Business.Crm\bin\Debug\Intermoda.Common.pdb
 C:\VisualStudio\Intermoda\Intermoda.Business.Crm\obj\Debug\Intermoda.Business.Crm.Entities.csprojResolveAssemblyReference.cache
 C:\VisualStudio\Intermoda\Intermoda.Business.Crm\obj\Debug\Intermoda.Business.Crm.Entities.dll
 C:\VisualStudio\Intermoda\Intermoda.Business.Crm\obj\Debug\Intermoda.Business.Crm.Entities.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Crm\bin\Debug\Intermoda.Business.Crm.Entities.dll.config
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Crm\bin\Debug\Intermoda.Business.Crm.Entities.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Crm\bin\Debug\Intermoda.Business.Crm.Entities.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Crm\bin\Debug\Intermoda.Common.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Crm\bin\Debug\Intermoda.Common.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Crm\obj\Debug\Intermoda.Business.Crm.Entities.csprojResolveAssemblyReference.cache
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Crm\obj\Debug\Intermoda.Business.Crm.Entities.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Business.Crm\obj\Debug\Intermoda.Business.Crm.Entities.pdb

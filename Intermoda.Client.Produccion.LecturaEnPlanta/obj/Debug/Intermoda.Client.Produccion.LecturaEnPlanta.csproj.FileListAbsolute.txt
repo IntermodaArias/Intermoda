@@ -1,0 +1,7 @@
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Client.Produccion.LecturaEnPlanta\bin\Debug\Intermoda.Client.Produccion.LecturaEnPlanta.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Client.Produccion.LecturaEnPlanta\bin\Debug\Intermoda.Client.Produccion.LecturaEnPlanta.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Client.Produccion.LecturaEnPlanta\bin\Debug\Intermoda.ClientProxy.LbDatPro.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Client.Produccion.LecturaEnPlanta\bin\Debug\Intermoda.ClientProxy.LbDatPro.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Client.Produccion.LecturaEnPlanta\obj\Debug\Intermoda.Client.Produccion.LecturaEnPlanta.csprojResolveAssemblyReference.cache
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Client.Produccion.LecturaEnPlanta\obj\Debug\Intermoda.Client.Produccion.LecturaEnPlanta.dll
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Client.Produccion.LecturaEnPlanta\obj\Debug\Intermoda.Client.Produccion.LecturaEnPlanta.pdb

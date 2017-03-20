@@ -19,6 +19,8 @@ namespace Intermoda.Maquilado.Converter
                     return new SolidColorBrush(Colors.LightGreen);
                 case "En Espera de enviar":
                     return new SolidColorBrush(Colors.LightBlue);
+                case "Procesando":
+                    return new SolidColorBrush(Colors.Salmon);
                 default:
                     return new SolidColorBrush(Colors.White);
             }

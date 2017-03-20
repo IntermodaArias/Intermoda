@@ -137,14 +137,13 @@ namespace Intermoda.Produccion.Lecturas.Business.LbDatPro
                 using (_context = new LBDATPROEntities())
                 {
                     var model = (from r in _context.FACCOLSet
-                                 where r.CiaCod == Compania &&
+                                 where r.CIACOD == Compania &&
                                  r.FacCCol == colorCodigo
                                  select new ColorBusiness
                                  {
                                      Codigo = r.FacCCol,
                                      Descripcion = r.FacDCol,
-                                     ColorAx1 = r.AxColorId01,
-                                     ColorAx2 = r.AxColorId02
+                                     ColorAx1 = r.AxColorId01
                                  }).FirstOrDefault();
                     if (model != null)
                     {
@@ -166,13 +165,12 @@ namespace Intermoda.Produccion.Lecturas.Business.LbDatPro
                 using (_context = new LBDATPROEntities())
                 {
                     return (from r in _context.FACCOLSet
-                            where r.CiaCod == Compania
+                            where r.CIACOD == Compania
                             select new ColorBusiness
                             {
                                 Codigo = r.FacCCol,
                                 Descripcion = r.FacDCol,
-                                ColorAx1 = r.AxColorId01,
-                                ColorAx2 = r.AxColorId02
+                                ColorAx1 = r.AxColorId01
                             }).ToArray();
                 }
             }

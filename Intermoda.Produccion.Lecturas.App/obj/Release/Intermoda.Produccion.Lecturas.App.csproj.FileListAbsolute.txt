@@ -208,3 +208,9 @@ C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.App\obj\Release\Intermod
 C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.App\obj\Release\Intermoda.exe.licenses
 C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.App\obj\Release\Intermoda.exe
 C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.App\obj\Release\Intermoda.pdb
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.App\obj\Release\Intermoda.Produccion.Lecturas.App.csprojResolveAssemblyReference.cache
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.App\obj\Release\View\ReportTest.g.cs
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.App\obj\Release\App.g.cs
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.App\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.App\obj\Release\Intermoda_MarkupCompile.cache
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.App\obj\Release\Intermoda_MarkupCompile.lref

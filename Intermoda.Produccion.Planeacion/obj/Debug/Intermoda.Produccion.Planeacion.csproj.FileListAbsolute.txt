@@ -26,7 +26,6 @@ C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Planeacion\bin\Debug\
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Planeacion\bin\Debug\EntityFramework.xml
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Planeacion\obj\Debug\Intermoda.Produccion.Planeacion.csprojResolveAssemblyReference.cache
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Planeacion\obj\Debug\View\CentroEstado.baml
-C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Planeacion\obj\Debug\View\TePItem.baml
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Planeacion\obj\Debug\MainWindow.g.cs
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Planeacion\obj\Debug\View\CentroEstado.g.cs
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Planeacion\obj\Debug\View\TePItem.g.cs
@@ -36,6 +35,7 @@ C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Planeacion\obj\Debug\
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Planeacion\obj\Debug\Intermoda.Produccion.Planeacion_MarkupCompile.lref
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Planeacion\obj\Debug\App.baml
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Planeacion\obj\Debug\MainWindow.baml
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Planeacion\obj\Debug\View\TePItem.baml
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Planeacion\obj\Debug\Intermoda.Produccion.Planeacion.g.resources
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Planeacion\obj\Debug\Intermoda.Produccion.Planeacion.Properties.Resources.resources
 C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Planeacion\obj\Debug\Intermoda.Produccion.Planeacion.csproj.GenerateResource.Cache
