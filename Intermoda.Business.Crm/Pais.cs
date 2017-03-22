@@ -18,5 +18,8 @@ namespace Intermoda.Business.Crm.Entities
         public virtual ICollection<Ciudad> CiudadSet { get; set; } = new HashSet<Ciudad>();
 
         public virtual ICollection<Cliente> ClienteSet { get; set; } = new HashSet<Cliente>();
+
+        public virtual ICollection<ClienteDireccion> ClienteDireccionSet { get; set; } = 
+            new HashSet<ClienteDireccion>();
     }
 }

@@ -128,6 +128,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intermoda.Client.DataServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intermoda.Client.Produccion.LecturaEnPlanta", "Intermoda.Client.Produccion.LecturaEnPlanta\Intermoda.Client.Produccion.LecturaEnPlanta.csproj", "{22E96F31-00EC-4BE1-8869-2AAF3B43A01A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{9A28BF21-9286-49D6-90F1-85A04495E61E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intermoda.WebApi.LbDatPro", "Intermoda.WebApi.LbDatPro\Intermoda.WebApi.LbDatPro.csproj", "{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Android = Debug|Android
@@ -1738,6 +1742,42 @@ Global
 		{22E96F31-00EC-4BE1-8869-2AAF3B43A01A}.Release|Windows-x64.Build.0 = Release|Any CPU
 		{22E96F31-00EC-4BE1-8869-2AAF3B43A01A}.Release|Windows-x86.ActiveCfg = Release|Any CPU
 		{22E96F31-00EC-4BE1-8869-2AAF3B43A01A}.Release|Windows-x86.Build.0 = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|Android.ActiveCfg = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|Android.Build.0 = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|iOS.ActiveCfg = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|iOS.Build.0 = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|Windows Phone (Universal).ActiveCfg = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|Windows Phone (Universal).Build.0 = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|Windows Phone 8.ActiveCfg = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|Windows Phone 8.Build.0 = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|Windows-AnyCPU.ActiveCfg = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|Windows-AnyCPU.Build.0 = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|Windows-ARM.ActiveCfg = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|Windows-ARM.Build.0 = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|Windows-x64.ActiveCfg = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|Windows-x64.Build.0 = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|Windows-x86.ActiveCfg = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Debug|Windows-x86.Build.0 = Debug|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|Android.ActiveCfg = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|Android.Build.0 = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|iOS.ActiveCfg = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|iOS.Build.0 = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|Windows Phone (Universal).ActiveCfg = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|Windows Phone (Universal).Build.0 = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|Windows Phone 8.ActiveCfg = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|Windows Phone 8.Build.0 = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|Windows-AnyCPU.ActiveCfg = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|Windows-AnyCPU.Build.0 = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|Windows-ARM.ActiveCfg = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|Windows-ARM.Build.0 = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|Windows-x64.ActiveCfg = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|Windows-x64.Build.0 = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|Windows-x86.ActiveCfg = Release|Any CPU
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5}.Release|Windows-x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1790,5 +1830,6 @@ Global
 		{ED934455-692E-49E1-A87F-33FB2DD40550} = {3C61A4B1-1652-4682-AAB1-8E947E76D68E}
 		{B64AF897-CDCF-4E5D-81BE-19AABE3428BF} = {361A9FDE-1435-43C6-8727-D1BB5EB1DDEE}
 		{22E96F31-00EC-4BE1-8869-2AAF3B43A01A} = {CD365C71-25DC-4936-98FC-E070808D3026}
+		{649C2ED8-1ACE-4C2B-BC85-52DD6565A7E5} = {9A28BF21-9286-49D6-90F1-85A04495E61E}
 	EndGlobalSection
 EndGlobal

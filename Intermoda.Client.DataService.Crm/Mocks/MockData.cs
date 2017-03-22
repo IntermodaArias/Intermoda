@@ -126,7 +126,7 @@ namespace Intermoda.Client.DataService.Crm
                 Iva = 1500,
                 Total = 22000,
                 Saldo = 22000,
-                Sincronizado = false
+                SincronizadoProxy = false
             };
         }
 

@@ -59,7 +59,7 @@ namespace Intermoda.Produccion.LecturaEnPlanta {
             
             #line default
             #line hidden
-            System.Uri resourceLocater = new System.Uri("/Intermoda.Produccion.LecturaEnPlanta;component/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Lecturas En Planta;component/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

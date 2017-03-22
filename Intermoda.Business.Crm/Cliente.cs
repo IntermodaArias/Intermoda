@@ -28,6 +28,10 @@ namespace Intermoda.Business.Crm.Entities
         public string Telefono { get; set; }
 
         [DataMember]
+        [StringLength(256)]
+        public string Email { get; set; }
+
+        [DataMember]
         public int InventarioDias { get; set; }
 
         [DataMember]
@@ -81,5 +85,8 @@ namespace Intermoda.Business.Crm.Entities
 
         public virtual ICollection<CarteraDocumento> CarteraDocumentoSet { get; set; } = 
             new HashSet<CarteraDocumento>();
+
+        public virtual ICollection<ClienteDireccion> ClienteDireccionSet { get; set; } = 
+            new HashSet<ClienteDireccion>();
     }
 }

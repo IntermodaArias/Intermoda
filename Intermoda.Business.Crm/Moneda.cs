@@ -31,5 +31,7 @@ namespace Intermoda.Business.Crm.Entities
             new HashSet<CarteraDocumentoDetallePago>();
 
         public virtual ICollection<Empresa> EmpresaSet { get; set; } = new HashSet<Empresa>();
+
+        public virtual ICollection<BancoCuenta> BancoCuentaSet { get; set; } = new HashSet<BancoCuenta>();
     }
 }

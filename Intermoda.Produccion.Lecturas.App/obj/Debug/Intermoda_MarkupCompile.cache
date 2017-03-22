@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.App\obj\Debug\
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.App\obj\Debug\
 Intermoda.Produccion.Lecturas.App
 none
 false
 DEBUG;TRACE
-C:\VisualStudio\Intermoda\Intermoda.Produccion.Lecturas.App\App.xaml
+C:\Users\arias\Source\Repos\Intermoda\Intermoda.Produccion.Lecturas.App\App.xaml
 67-494625698
 
 136121783327
-98805550083
+98-1944518950
 Dialog\MessageWindow.xaml;MainWindow.xaml;Themes\System.Windows.xaml;Themes\Telerik.ReportViewer.Wpf.xaml;Themes\Telerik.Windows.Controls.Input.xaml;Themes\Telerik.Windows.Controls.Navigation.xaml;Themes\Telerik.Windows.Controls.xaml;View\DialogView\CentroTrabajoClasificacionEditView.xaml;View\CentroTrabajoClasificacionView.xaml;View\DialogView\CentroTrabajoEditView.xaml;View\CentroTrabajoView.xaml;View\DialogView\GrupoCopiarSemanaView.xaml;View\DialogView\GrupoEditView.xaml;View\DialogView\JornadaDetalleEditView.xaml;View\DialogView\JornadaEditView.xaml;View\DialogView\Lavanderia\LavanderiaCentroTrabajoEditView.xaml;View\DialogView\Lavanderia\LavanderiaCentroTrabajoOpcionEditView.xaml;View\DialogView\Lavanderia\LavanderiaColoresEditView.xaml;View\DialogView\Lavanderia\LavanderiaIngredienteInstruccionEditView.xaml;View\DialogView\Lavanderia\LavanderiaIngredientePredefinidoEditView.xaml;View\DialogView\Lavanderia\LavanderiaIngredientePredefinidoView.xaml;View\DialogView\Lavanderia\LavanderiaInstruccionOperacionEditView.xaml;View\DialogView\Lavanderia\LavanderiaInstruccionPredefinidaEditView.xaml;View\DialogView\Lavanderia\LavanderiaLavadoEditView.xaml;View\DialogView\Lavanderia\LavanderiaLavadoraCapacidadEditView.xaml;View\DialogView\Lavanderia\LavanderiaLavadoraEditView.xaml;View\DialogView\Lavanderia\LavanderiaObservacionOperacionEditView.xaml;View\DialogView\Lavanderia\LavanderiaOpcionLavadoEditView.xaml;View\DialogView\Lavanderia\LavanderiaOperacionCentroTrabajoEditView.xaml;View\DialogView\Lavanderia\LavanderiaOperacionObservacionEditView.xaml;View\DialogView\Lavanderia\LavanderiaOperacionProcesoEditView.xaml;View\DialogView\Lavanderia\LavanderiaProcesoCentroTrabajoEditView.xaml;View\DialogView\Lavanderia\LavanderiaProcesoEditView.xaml;View\DialogView\Lavanderia\LavanderiaSecadoraCapacidadEditView.xaml;View\DialogView\Lavanderia\LavanderiaSecadoraEditView.xaml;View\DialogView\Lavanderia\LavanderiaTelaColorIntermodaEditView.xaml;View\DialogView\LineaDetalleEditView.xaml;View\DialogView\LineaEditView.xaml;View\DialogView\ModuloEditView.xaml;View\DialogView\TurnoDetalleEditView.xaml;View\DialogView\TurnoEditView.xaml;View\GrupoView.xaml;View\JornadaDetalleView.xaml;View\JornadaView.xaml;View\Lavanderia\LavanderiaCentroTrabajoView.xaml;View\DialogView\Lavanderia\LavanderiaOperacionEditView.xaml;View\Lavanderia\LavanderiaColoresView.xaml;View\Lavanderia\LavanderiaIngredientePredefinidoView.xaml;View\Lavanderia\LavanderiaLavadoraCapacidadView.xaml;View\Lavanderia\LavanderiaLavadoraView.xaml;View\Lavanderia\LavanderiaLavadoRecetaView.xaml;View\Lavanderia\LavanderiaLavadoView.xaml;View\Lavanderia\LavanderiaOpcionLavadoView.xaml;View\Lavanderia\LavanderiaOperacionCentroTrabajoView.xaml;View\Lavanderia\LavanderiaOperacionInstruccionView.xaml;View\Lavanderia\LavanderiaOperacionObservacionView.xaml;View\Lavanderia\LavanderiaOperacionView.xaml;View\Lavanderia\LavanderiaProcesoView.xaml;View\Lavanderia\LavanderiaSecadoraCapacidadView.xaml;View\Lavanderia\LavanderiaSecadoraView.xaml;View\Lavanderia\LavanderiaTelaColorView.xaml;View\LineaDetalleView.xaml;View\LineaView.xaml;View\ModuloView.xaml;View\ReportTest.xaml;View\TurnoDetalleView.xaml;View\TurnoView.xaml;
 
-False
+True
 

@@ -18,6 +18,12 @@ namespace Intermoda.Business.Crm.Entities
         public int ClienteId { get; set; }
 
         [DataMember]
+        public int? DireccionFacturacionId { get; set; }
+
+        [DataMember]
+        public int? DireccionEntregaId { get; set; }
+
+        [DataMember]
         public int? PaqueteId { get; set; }
 
         [DataMember]
@@ -60,7 +66,19 @@ namespace Intermoda.Business.Crm.Entities
         public decimal Saldo { get; set; }
 
         [DataMember]
-        public bool Sincronizado { get; set; }
+        public bool SincronizadoProxy { get; set; }
+
+        [DataMember]
+        public DateTime SincronizadoProxyDate { get; set; }
+
+        [DataMember]
+        public bool SincronizadoCentral { get; set; }
+        
+        [DataMember]
+        public DateTime SincronizadoCentralDate { get; set; }
+
+        [DataMember]
+        public int? BancoId { get; set; }
 
         [DataMember]
         public virtual CarteraDocumentoTipo CarteraDocumentoTipo { get; set; }
@@ -80,6 +98,12 @@ namespace Intermoda.Business.Crm.Entities
         [DataMember]
         public virtual PedidoTipo PedidoTipo { get; set; }
 
+        [DataMember]
+        public virtual ClienteDireccion DireccionFacturacion { get; set; }
+
+        [DataMember]
+        public virtual ClienteDireccion DireccionEntrega { get; set; }
+
         public virtual ICollection<CarteraDocumentoDetalleProducto> CarteraDocumentoDetalleProductoSet { get; set; }
 
         public virtual ICollection<CarteraDocumentoDetallePago> CarteraDocumentoDetallePagoSet { get; set; }
@@ -89,18 +113,27 @@ namespace Intermoda.Business.Crm.Entities
         public virtual ICollection<CarteraDocumentoDetalleAplicacion> CarteraDocumentoDetallePagoCreditoSet { get; set; }
 
         [DataMember]
-        public virtual DebitoCredito Tipo => CarteraDocumentoTipo.Tipo;
+        public virtual DebitoCredito TipoCxC => CarteraDocumentoTipo.TipoCxC;
 
         [DataMember]
-        public virtual decimal TotalDebito => Tipo == DebitoCredito.Debito ? Total : 0;
+        public virtual DebitoCredito TipoCaja => CarteraDocumentoTipo.TipoCaja;
 
         [DataMember]
-        public virtual decimal TotalCredito => Tipo == DebitoCredito.Credito ? Total : 0;
+        public virtual DebitoCredito TipoInventario => CarteraDocumentoTipo.TipoInventario;
 
         [DataMember]
-        public virtual decimal SaldoDebito => Tipo == DebitoCredito.Debito ? Saldo : 0;
+        public virtual Banco Banco { get; set; }
 
-        [DataMember]
-        public virtual decimal SaldoCredito => Tipo == DebitoCredito.Credito ? Saldo : 0;
+        //[DataMember]
+        //public virtual decimal CxCTotalDebito => TipoCxC == DebitoCredito.Debito ? Total : 0;
+
+        //[DataMember]
+        //public virtual decimal CxCTotalCredito => TipoCxC == DebitoCredito.Credito ? Total : 0;
+
+        //[DataMember]
+        //public virtual decimal CxCSaldoDebito => TipoCxC == DebitoCredito.Debito ? Saldo : 0;
+
+        //[DataMember]
+        //public virtual decimal CxCSaldoCredito => TipoCxC == DebitoCredito.Credito ? Saldo : 0;
     }
 }

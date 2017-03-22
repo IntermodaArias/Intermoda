@@ -22,5 +22,8 @@ namespace Intermoda.Business.Crm.Entities
         public virtual Pais Pais { get; set; }
 
         public virtual ICollection<Cliente> ClienteSet { get; set; } = new HashSet<Cliente>();
+
+        public virtual ICollection<ClienteDireccion> ClienteDireccionSet { get; set; } = 
+            new HashSet<ClienteDireccion>();
     }
 }

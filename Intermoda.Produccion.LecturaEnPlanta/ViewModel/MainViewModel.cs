@@ -4,7 +4,7 @@ using System.Windows;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using Intermoda.Client.DataService.LecturaEnPlanta;
-using Intermoda.Produccion.LecturaEnPlanta.Classes;
+using Intermoda.Produccion.LecturaEnPlanta.Classes; 
 
 namespace Intermoda.Produccion.LecturaEnPlanta.ViewModel
 {
@@ -438,6 +438,7 @@ namespace Intermoda.Produccion.LecturaEnPlanta.ViewModel
         {
             UsuarioIsReadOnly = true;
             Usuario = Usuario.ToUpper();
+            ConnectingVisibility = Visibility.Visible;
             _dataService.ValidaUsuario(Usuario.Trim(),
                 (vrf, error) =>
                 {
@@ -446,6 +447,7 @@ namespace Intermoda.Produccion.LecturaEnPlanta.ViewModel
                         ErrorMensajeVisibility = Visibility.Visible;
                         ErrorMensaje = error.Message;
                         UsuarioIsReadOnly = false;
+                        ConnectingVisibility = Visibility.Hidden;
                         return;
                     }
                     ErrorMensajeVisibility = Visibility.Hidden;
@@ -453,6 +455,7 @@ namespace Intermoda.Produccion.LecturaEnPlanta.ViewModel
                     LoginButtonVisibility = Visibility.Collapsed;
                     LogoutButtonVisibility = Visibility.Visible;
                     CuponIsReadOnly = false;
+                    ConnectingVisibility = Visibility.Hidden;
                 });
         }
 
@@ -473,10 +476,15 @@ namespace Intermoda.Produccion.LecturaEnPlanta.ViewModel
                 return;
             }
 
-            if (Cupon.Trim().Length < 13)
+            if (Cupon.Trim().Length < 12)
             {
                 ErrorMensajeVisibility = Visibility.Visible;
                 ErrorMensaje = $"El Cupón solo tiene {Cupon.Trim().Length} caracteres.";
+            }
+            else if (Cupon.Trim().Length > 12)
+            {
+                ErrorMensajeVisibility = Visibility.Visible;
+                ErrorMensaje = $"El Cupón no debe tener más de 12 caracteres y se ingresaron {Cupon.Trim().Length} caracteres.";
             }
             else
             {

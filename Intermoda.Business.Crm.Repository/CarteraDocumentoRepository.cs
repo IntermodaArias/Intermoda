@@ -64,7 +64,7 @@ namespace Intermoda.Business.Crm.Repository
                         reg.Iva = model.Iva;
                         reg.Total = model.Total;
                         reg.Saldo = model.Saldo;
-                        reg.Sincronizado = model.Sincronizado;
+                        reg.Sincronizado = model.SincronizadoProxy;
 
                         _context.SaveChanges();
 

@@ -65,7 +65,7 @@ namespace Intermoda.Produccion.LecturaEnPlanta.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Intermoda.Produccion.LecturaEnPlanta;component/view/messagewindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Lecturas En Planta;component/view/messagewindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\View\MessageWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

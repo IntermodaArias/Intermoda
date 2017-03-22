@@ -48,12 +48,14 @@
     <Compile Include="Asesor.cs" />
     <Compile Include="AsesorRuta.cs" />
     <Compile Include="Banco.cs" />
+    <Compile Include="BancoCuenta.cs" />
     <Compile Include="Cai.cs" />
     <Compile Include="CarteraDocumentoDetalleAplicacion.cs" />
     <Compile Include="CarteraDocumentoDetallePago.cs" />
     <Compile Include="CarteraDocumentoTipo.cs" />
     <Compile Include="Ciudad.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="ClienteDireccion.cs" />
     <Compile Include="Edad.cs" />
     <Compile Include="Empresa.cs" />
     <Compile Include="CarteraDocumento.cs" />
@@ -68,6 +70,7 @@
     <Compile Include="Pais.cs" />
     <Compile Include="Paquete.cs" />
     <Compile Include="PaqueteDetalle.cs" />
+    <Compile Include="Parametro.cs" />
     <Compile Include="PedidoTipo.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="ProductoCategoria.cs" />

@@ -20,7 +20,13 @@ namespace Intermoda.Business.Crm.Entities
         public string Nombre { get; set; }
 
         [DataMember]
-        public DebitoCredito Tipo { get; set; }
+        public DebitoCredito TipoCxC { get; set; }
+
+        [DataMember]
+        public DebitoCredito TipoCaja { get; set; }
+
+        [DataMember]
+        public DebitoCredito TipoInventario { get; set; }
 
         public virtual ICollection<CarteraDocumento> CarteraDocumentoSet { get; set; }
 

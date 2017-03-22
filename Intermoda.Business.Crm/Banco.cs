@@ -18,6 +18,12 @@ namespace Intermoda.Business.Crm.Entities
         [StringLength(64, MinimumLength = 6)]
         public string Nombre { get; set; }
 
-        public virtual ICollection<CarteraDocumentoDetallePago> CarteraDocumentoDetallePagoSet { get; set; }
+        public virtual ICollection<CarteraDocumentoDetallePago> CarteraDocumentoDetallePagoSet { get; set; } =
+            new HashSet<CarteraDocumentoDetallePago>();
+
+        public virtual ICollection<CarteraDocumento> CarteraDocumentoSet { get; set; } =
+            new HashSet<CarteraDocumento>();
+
+        public virtual ICollection<BancoCuenta> BancoCuentaSet { get; set; } = new HashSet<BancoCuenta>();
     }
 }
